@@ -21,9 +21,9 @@ deshalb ehrlich und schützt vor Glückstreffern.
 | KI (Claude) | Monat 1 nur feste Regeln. KI-Zweitmeinung (Claude-API) ab Monat 2 als Option |
 | Dazulernen | Varianten an alten Tagen testen und auf ungesehenen Tagen bestätigen; nur was dort hält, wird übernommen |
 | Backtest | ja, mit den letzten ~60 Tagen 5-Minuten-Daten |
-| Phasen | Labor → Simulator → Echt |
-| Labor | Spielgeld ohne Limit, alle Strategien und Varianten, Lernen |
-| Simulator | 100 € wie echtes Geld: Grenzen 3 € pro Trade / 8 € pro Tag / 30 € pro Monat, Gebühren, Spread |
+| Phasen | Testphase (Labor) → Simulator → Echt |
+| Testphase (Labor) | komplette Testphase: Spielgeld ohne jedes Limit und Verbot, alle Strategien und Varianten, alle Zahlen sichtbar, Lernen |
+| Simulator | Vorbereitung auf echtes Geld, 100 € so, als wären sie echt: Grenzen 3 € pro Trade / 8 € pro Tag / 30 € pro Monat, Gebühren, Spread |
 | Echt | erst nach 2 Simulator-Monaten am Stück im Plus, ≥ 40 Trades, Grenzen nie gerissen, nach Gebühren positiv, dann Lukas' Ja |
 | Broker später | gemeinsam prüfen (Schnittstelle, Gebühren, Bruchstücke, deutsche Steuer). Trade Republic hat keine Schnittstelle |
 | Kosten | 0 € im Monat (Yahoo-Daten, GitHub, ntfy) |
@@ -67,8 +67,7 @@ iPhone: ntfy-Pushes mit Ja/Nein-Buttons + Webseite als Home-Bildschirm-App
   bleibt sie auf dem iPhone entsperrt.
 - **Ehrliche Messung:** Jeder Trade wird mit Zeitstempel und Daten-Stand gespeichert und nie nachträglich
   geändert. Kennzahlen: Trefferquote, durchschnittliches R, Ergebnis nach Gebühren, größter Rückgang,
-  Anzahl Trades. Gewinnzahlen gibt es nur für Spielgeld und Simulator, als gemessene Vergangenheit und
-  nie als Versprechen.
+  Anzahl Trades. Beim Spielgeld werden alle Gewinn- und Verlustzahlen gezeigt.
 - **Lernen ohne Selbstbetrug:** 60 Tage werden geteilt: rund 40 Tage zum Lernen, 20 ungesehene Tage zum
   Prüfen. Dazu kommen live die neuen Tage. Übernommen wird nur eine Variante, die auf den ungesehenen
   Tagen nach Gebühren positiv ist und genug Trades hat (≥ 30).

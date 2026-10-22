@@ -11,5 +11,7 @@
 - Typografische Anführungszeichen („…“).
 
 ## Trader-Skills
-- Die Sicherheitsregeln der Skills gelten unverändert: „passt zu einer Regel“, nie „Kauf“ oder „Gewinner“,
-  keine Gewinnzahlen, keine Kaufempfehlung.
+- **Spielgeld (Testphase und Simulator): nichts verboten, kein Limit.** Gewinn- und Verlustzahlen, Renditen,
+  Ranglisten der Strategien sind erlaubt und erwünscht.
+- **Echtes Geld:** Sicherheitsregeln der Skills gelten unverändert (jede Order nur mit Lukas' Ja über
+  trader-risk und trader-broker, keine Kaufempfehlung, keine Gewinnversprechen).

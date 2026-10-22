@@ -28,7 +28,9 @@ jobs:
         with:
           python-version: "3.12"
       - name: Universe
-        run: python3 tools/trader-scanner/scan.py universe 2>&1 | tee trader/scan-log.txt
+        run: |
+          mkdir -p trader
+          python3 tools/trader-scanner/scan.py universe 2>&1 | tee trader/scan-log.txt
       - name: Daily scan
         run: |
           set +e

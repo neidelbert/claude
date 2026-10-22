@@ -25,6 +25,13 @@
 - Fazit: Noch hat keine Regel bewiesen, dass sie Geld verdient. Das ist nach einem Tag normal. Die Live-Tage ab heute
   zeigen, ob sich etwas hält.
 
+## In der Nacht noch behoben
+- Eine Änderung hatte die Workflow-Datei ungültig gemacht (ein Doppelpunkt im Schritt-Namen), dadurch lief kurz kein
+  Zeitplan. Das ist repariert. Neu prüft ein Workflow „Prüfen“ jede Änderung automatisch, damit so etwas sofort auffällt.
+- Neue Varianten „Ausbruch mit Volumen-Rangliste“ (jetzt 56), „Lohnt sich bis X € Gebühr“ je Variante,
+  Karte „Weg zum Ziel“ auf der Startseite.
+- Pushes öffnen vorerst die Übersicht auf GitHub, bis die Webseite online ist.
+
 ## Offene Fragen an dich
 1. **Webseite einschalten (dringend):** Hast du schon
    (a) das Secret `SITE_PASSWORD` angelegt und

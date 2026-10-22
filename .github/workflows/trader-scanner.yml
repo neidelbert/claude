@@ -1,0 +1,44 @@
+# Daily-Scan auf GitHub-Servern (dort ist Yahoo/Nasdaq Trader erreichbar).
+# Ergebnis: trader/universe.txt, trader/watchlist.json, trader/scan-log.txt
+name: trader-scanner daily
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["claude/trader-scanner-actions"]
+    paths: ["tools/trader-scanner/**", ".github/workflows/trader-scanner.yml"]
+  schedule:
+    # Mo–Fr 12:40 UTC = 8:40 Uhr ET (Sommerzeit) / 7:40 Uhr ET (Winterzeit), vor der Eröffnung
+    - cron: "40 12 * * 1-5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trader-scanner
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Universe
+        run: python3 tools/trader-scanner/scan.py universe 2>&1 | tee trader/scan-log.txt
+      - name: Daily scan
+        run: |
+          set +e
+          python3 tools/trader-scanner/scan.py daily --show 15 2>&1 | tee -a trader/scan-log.txt
+          echo "exit code: ${PIPESTATUS[0]}" >> trader/scan-log.txt
+      - name: Ergebnis committen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add trader/
+          git diff --cached --quiet && exit 0
+          git commit -m "trader-scanner: daily $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+          git push

@@ -87,6 +87,9 @@ def variants():
         for stop in ("daylow", "pct1.5"):
             for tgt in (1.0, 2.0):
                 out.append({"strategy": "bounce", "trigger": trig, "stop": stop, "target_r": tgt})
+    for top in (20, 10):                                # Ausbruch 30 Min., nur die Aktien mit dem höchsten Startvolumen
+        for tgt in (1.5, 2.0):
+            out.append({"strategy": "orbrank", "or_min": 30, "stop": "low", "target_r": tgt, "top": top})
     for top in (20, 10):
         for atr_stop in (0.1, 0.2):
             for tgt in (0.0, 2.0):
@@ -102,6 +105,8 @@ def vid(v):
         return "orb-%d-%s-%sR-v%s" % (v["or_min"], v["stop"], fmt(v["target_r"]), fmt(v["rvol"]))
     if v["strategy"] == "gap":
         return "gap-%s-v%s-%sR" % (fmt(v["gap"]), fmt(v["rvol"]), fmt(v["target_r"]))
+    if v["strategy"] == "orbrank":
+        return "orbrank-top%d-%sR" % (v["top"], fmt(v["target_r"]))
     if v["strategy"] == "sip":
         return "sip-top%d-atr%s-%s" % (v["top"], fmt(v["atr_stop"]), "%sR" % fmt(v["target_r"]) if v["target_r"] else "eod")
     return "bounce-%s-%s-%sR" % (v["trigger"], v["stop"], fmt(v["target_r"]))
@@ -120,6 +125,8 @@ def label(v):
         return "Opening-Range-Ausbruch %d Min · %s · Ziel %sR%s" % (
             v["or_min"], ORB_STOPS[v["stop"]], de(v["target_r"]),
             " · Volumen ≥ %s×" % de(v["rvol"]) if v["rvol"] else "")
+    if v["strategy"] == "orbrank":
+        return "Ausbruch 30 Min · nur Top %d nach Volumen · Stopp Tief der Spanne · Ziel %sR" % (v["top"], de(v["target_r"]))
     if v["strategy"] == "sip":
         return "Stocks in Play (Studie): Top %d nach Startvolumen · Stopp %s %% ATR · %s" % (
             v["top"], de(v["atr_stop"] * 100), "Ziel %sR" % de(v["target_r"]) if v["target_r"] else "bis Schluss")
@@ -139,6 +146,8 @@ STRATEGY_DE = {
            "Umsatz in den ersten 5 Minuten. Ist die erste 5-Minuten-Kerze grün, wird über ihrem Hoch gekauft. Der Stopp "
            "liegt eng (10 oder 20 % der durchschnittlichen Tagesschwankung ATR), verkauft wird spätestens zum Schluss. "
            "Die Studie handelte auch Leerverkäufe und mit Hebel – hier nur Kauf, ohne Hebel.",
+    "orbrank": "Ausbruch mit Volumen-Rangliste: wie der 30-Minuten-Ausbruch, aber nur bei den 10 oder 20 Aktien mit "
+               "dem ungewöhnlichsten Volumen in den ersten 30 Minuten – so wählen Profis ihre „Stocks in Play“.",
     "bounce": "Erholung: Eine stark gefallene Aktie (RSI unter 30 oder Lücke nach unten) steigt wieder über "
               "ihren Tagesdurchschnittspreis (VWAP).",
 }
@@ -387,6 +396,24 @@ def rank_sip(day_ctx):
         day_ctx[sym][1]["sip_rank"] = rank
 
 
+def rank_orb30(day_ctx):
+    """Rangliste nach Volumen der ersten 30 Minuten im Vergleich zu den Tagen davor (ab 5 $)."""
+    cands = []
+    for sym, (bars, c) in day_ctx.items():
+        if len(bars) < 6 or [b[0] for b in bars[:6]] != list(range(6)) or not c.get("vol6") or bars[0][1] < 5:
+            continue
+        cands.append((sum(b[5] for b in bars[:6]) / c["vol6"], sym))
+    for rank, (_, sym) in enumerate(sorted(cands, reverse=True), 1):
+        day_ctx[sym][1]["orb30_rank"] = rank
+
+
+def signal_orbrank(v, bars, c):
+    rank = c.get("orb30_rank")
+    if not rank or rank > v["top"]:
+        return None
+    return signal_orb({"or_min": 30, "stop": v["stop"], "rvol": 0}, bars, c)
+
+
 def signal_sip(v, bars, c):
     rank = c.get("sip_rank")
     if not rank or rank > v["top"] or not c.get("atr"):
@@ -402,7 +429,7 @@ def signal_sip(v, bars, c):
     return None
 
 
-SIGNALS = {"orb": signal_orb, "gap": signal_gap, "bounce": signal_bounce, "sip": signal_sip}
+SIGNALS = {"orb": signal_orb, "gap": signal_gap, "bounce": signal_bounce, "sip": signal_sip, "orbrank": signal_orbrank}
 
 
 def simulate(bars, i, stop, target_r, end_k, fill=None):
@@ -469,7 +496,7 @@ def stats(trades):
     mean = sum(t["pct"] for t in trades) / n
     sd = math.sqrt(sum((t["pct"] - mean) ** 2 for t in trades) / (n - 1)) if n > 1 else 0.0
     tval = mean / (sd / math.sqrt(n)) if sd else 0.0   # ab etwa 2 ist Zufall unwahrscheinlich
-    return {"n": n, "t": round(tval, 2), "win_rate": round(wins / n * 100, 1), "avg_r": round(sum(t["r"] for t in trades) / n, 3),
+    return {"n": n, "t": round(tval, 2), "be_fee": round(sum(eur) / (2 * n), 3), "win_rate": round(wins / n * 100, 1), "avg_r": round(sum(t["r"] for t in trades) / n, 3),
             "avg_pct": round(sum(t["pct"] for t in trades) / n, 3), "eur": round(sum(eur), 2),
             "eur_after_fees": round(sum(eur) - fee_total, 2), "profit_factor": round(gross_win / gross_loss, 2)
             if gross_loss else None, "max_dd_eur": round(dd, 2), "stops": sum(1 for t in trades if t["why"] == "Stopp"),
@@ -498,7 +525,9 @@ def cmd_run(a):
     trades = {v["id"]: [] for v in vs}
     ctxs = {sym: contexts(days) for sym, days in data.items()}
     for d in all_days:
-        rank_sip({sym: (data[sym][d], ctxs[sym][d]) for sym in data if d in data[sym]})
+        dc = {sym: (data[sym][d], ctxs[sym][d]) for sym in data if d in data[sym]}
+        rank_sip(dc)
+        rank_orb30(dc)
     for sym, days in data.items():
         ctx = ctxs[sym]
         for d, bars in days.items():
@@ -625,6 +654,7 @@ def cmd_live(a):
         hist[day] = bars
         day_ctx[sym] = (bars, contexts(hist)[day])
     rank_sip(day_ctx)
+    rank_orb30(day_ctx)
     for sym, (bars, ctx) in day_ctx.items():
         for v in vs:
             sig = SIGNALS[v["strategy"]](v, bars, ctx)
@@ -808,8 +838,8 @@ def cmd_selftest(a):
     assert ts["why"] == "Schluss" and ts["target"] is None and ts["out_k"] == 76, ts
     assert signal_sip(sv, bg, {"sip_rank": 21, "atr": 2.0}) is None
     n = len(variants())
-    assert n == 52 and len({v["id"] for v in variants()}) == n, n
-    print("Selbsttest ok: Einstieg, Ziel, Stopp vor Ziel, Ausstieg zum Schluss, offener Live-Trade, 52 Varianten (mit Stocks in Play).")
+    assert n == 56 and len({v["id"] for v in variants()}) == n, n
+    print("Selbsttest ok: Einstieg, Ziel, Stopp vor Ziel, Ausstieg zum Schluss, offener Live-Trade, 56 Varianten (mit Stocks in Play und Volumen-Rangliste).")
     return 0
 
 

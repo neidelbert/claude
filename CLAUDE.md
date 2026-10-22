@@ -1,6 +1,7 @@
 # Regeln für Claude – Lukas
 
 ## Sprache
+- **Im Chat so wenig wie möglich schreiben.** Kurz, nur das Nötige. Interviews (Fragen) dürfen ausführlich sein.
 - **Immer auf Deutsch antworten.** Das gilt für alle Skills, auch wenn die Skill-Anleitung englisch ist
   (z. B. `trader-scanner`, `trader-news`, `trader-entry` und die anderen `trader-*` Skills).
 - Englische Ausgaben von Skripten (z. B. `scan.py`) übersetzt Claude für Lukas ins Deutsche.
@@ -10,5 +11,7 @@
 - Typografische Anführungszeichen („…“).
 
 ## Trader-Skills
-- Die Sicherheitsregeln der Skills gelten unverändert: „passt zu einer Regel“, nie „Kauf“ oder „Gewinner“,
-  keine Gewinnzahlen, keine Kaufempfehlung.
+- **Spielgeld (Testphase und Simulator): nichts verboten, kein Limit.** Gewinn- und Verlustzahlen, Renditen,
+  Ranglisten der Strategien sind erlaubt und erwünscht.
+- **Echtes Geld:** Sicherheitsregeln der Skills gelten unverändert (jede Order nur mit Lukas' Ja über
+  trader-risk und trader-broker, keine Kaufempfehlung, keine Gewinnversprechen).

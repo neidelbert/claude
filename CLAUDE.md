@@ -1,6 +1,7 @@
 # Regeln für Claude – Lukas
 
 ## Sprache
+- **Im Chat so wenig wie möglich schreiben.** Kurz, nur das Nötige. Interviews (Fragen) dürfen ausführlich sein.
 - **Immer auf Deutsch antworten.** Das gilt für alle Skills, auch wenn die Skill-Anleitung englisch ist
   (z. B. `trader-scanner`, `trader-news`, `trader-entry` und die anderen `trader-*` Skills).
 - Englische Ausgaben von Skripten (z. B. `scan.py`) übersetzt Claude für Lukas ins Deutsche.

@@ -1,0 +1,6080 @@
+{
+ "created_at": "2026-10-22T23:15:44Z",
+ "symbols": 178,
+ "days": 60,
+ "train": [
+  "2026-07-30",
+  "2026-09-24"
+ ],
+ "test": [
+  "2026-09-25",
+  "2026-10-22"
+ ],
+ "n_train_days": 40,
+ "n_test_days": 20,
+ "settings": {
+  "slip_pct": 0.05,
+  "stake_eur": 100.0,
+  "fee_eur": 1.0,
+  "min_test_trades": 30
+ },
+ "strategies": {
+  "orb": "Opening-Range-Ausbruch: Die ersten 15 oder 30 Minuten bilden eine Spanne. Schließt eine 5-Minuten-Kerze über ihrem Hoch, wird gekauft.",
+  "gap": "News-Sprung: Die Aktie öffnet deutlich über dem Vortag (meist wegen einer Nachricht) und mit viel Umsatz. Gekauft wird, wenn sie über das Hoch der ersten 5 Minuten steigt.",
+  "bounce": "Erholung: Eine stark gefallene Aktie (RSI unter 30 oder Lücke nach unten) steigt wieder über ihren Tagesdurchschnittspreis (VWAP)."
+ },
+ "best_per_strategy": {
+  "orb": "orb-30-low-2R-v1.5",
+  "bounce": "bounce-gapdown3-daylow-2R",
+  "gap": "gap-4-v2-3R"
+ },
+ "variants": [
+  {
+   "strategy": "orb",
+   "or_min": 30,
+   "stop": "low",
+   "target_r": 2.0,
+   "rvol": 1.5,
+   "id": "orb-30-low-2R-v1.5",
+   "label": "Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5×",
+   "train": {
+    "n": 310,
+    "t": 0.54,
+    "win_rate": 45.2,
+    "avg_r": -0.03,
+    "avg_pct": 0.064,
+    "eur": 19.76,
+    "eur_after_fees": -600.24,
+    "profit_factor": 1.1,
+    "max_dd_eur": -28.28,
+    "stops": 27,
+    "targets": 8
+   },
+   "test": {
+    "n": 179,
+    "t": 0.41,
+    "win_rate": 46.4,
+    "avg_r": -0.007,
+    "avg_pct": 0.056,
+    "eur": 10.06,
+    "eur_after_fees": -347.94,
+    "profit_factor": 1.09,
+    "max_dd_eur": -24.19,
+    "stops": 23,
+    "targets": 4
+   },
+   "all": {
+    "n": 489,
+    "t": 0.68,
+    "win_rate": 45.6,
+    "avg_r": -0.022,
+    "avg_pct": 0.061,
+    "eur": 29.82,
+    "eur_after_fees": -948.18,
+    "profit_factor": 1.1,
+    "max_dd_eur": -36.27,
+    "stops": 50,
+    "targets": 12
+   },
+   "passed": true,
+   "score": 0.056
+  },
+  {
+   "strategy": "orb",
+   "or_min": 30,
+   "stop": "low",
+   "target_r": 1.5,
+   "rvol": 1.5,
+   "id": "orb-30-low-1.5R-v1.5",
+   "label": "Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1,5R · Volumen ≥ 1,5×",
+   "train": {
+    "n": 310,
+    "t": 0.33,
+    "win_rate": 45.2,
+    "avg_r": -0.04,
+    "avg_pct": 0.037,
+    "eur": 11.53,
+    "eur_after_fees": -608.47,
+    "profit_factor": 1.06,
+    "max_dd_eur": -27.97,
+    "stops": 27,
+    "targets": 10
+   },
+   "test": {
+    "n": 179,
+    "t": 0.29,
+    "win_rate": 46.4,
+    "avg_r": -0.013,
+    "avg_pct": 0.037,
+    "eur": 6.68,
+    "eur_after_fees": -351.32,
+    "profit_factor": 1.06,
+    "max_dd_eur": -24.68,
+    "stops": 23,
+    "targets": 11
+   },
+   "all": {
+    "n": 489,
+    "t": 0.43,
+    "win_rate": 45.6,
+    "avg_r": -0.03,
+    "avg_pct": 0.037,
+    "eur": 18.21,
+    "eur_after_fees": -959.79,
+    "profit_factor": 1.06,
+    "max_dd_eur": -35.13,
+    "stops": 50,
+    "targets": 21
+   },
+   "passed": true,
+   "score": 0.037
+  },
+  {
+   "strategy": "orb",
+   "or_min": 30,
+   "stop": "mid",
+   "target_r": 2.0,
+   "rvol": 1.5,
+   "id": "orb-30-mid-2R-v1.5",
+   "label": "Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 2R · Volumen ≥ 1,5×",
+   "train": {
+    "n": 310,
+    "t": 0.83,
+    "win_rate": 42.9,
+    "avg_r": -0.035,
+    "avg_pct": 0.09,
+    "eur": 27.77,
+    "eur_after_fees": -592.23,
+    "profit_factor": 1.16,
+    "max_dd_eur": -18.26,
+    "stops": 93,
+    "targets": 27
+   },
+   "test": {
+    "n": 179,
+    "t": 0.12,
+    "win_rate": 43.6,
+    "avg_r": -0.039,
+    "avg_pct": 0.015,
+    "eur": 2.63,
+    "eur_after_fees": -355.38,
+    "profit_factor": 1.03,
+    "max_dd_eur": -26.57,
+    "stops": 66,
+    "targets": 17
+   },
+   "all": {
+    "n": 489,
+    "t": 0.77,
+    "win_rate": 43.1,
+    "avg_r": -0.037,
+    "avg_pct": 0.062,
+    "eur": 30.39,
+    "eur_after_fees": -947.61,
+    "profit_factor": 1.11,
+    "max_dd_eur": -29.9,
+    "stops": 159,
+    "targets": 44
+   },
+   "passed": true,
+   "score": 0.015
+  },
+  {
+   "strategy": "bounce",
+   "trigger": "gapdown3",
+   "stop": "daylow",
+   "target_r": 2.0,
+   "id": "bounce-gapdown3-daylow-2R",
+   "label": "Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R",
+   "train": {
+    "n": 136,
+    "t": -2.79,
+    "win_rate": 36.0,
+    "avg_r": -0.143,
+    "avg_pct": -0.428,
+    "eur": -58.16,
+    "eur_after_fees": -330.16,
+    "profit_factor": 0.55,
+    "max_dd_eur": -64.48,
+    "stops": 43,
+    "targets": 12
+   },
+   "test": {
+    "n": 94,
+    "t": 2.8,
+    "win_rate": 52.1,
+    "avg_r": 0.25,
+    "avg_pct": 0.711,
+    "eur": 66.88,
+    "eur_after_fees": -121.12,
+    "profit_factor": 2.09,
+    "max_dd_eur": -5.09,
+    "stops": 29,
+    "targets": 19
+   },
+   "all": {
+    "n": 230,
+    "t": 0.27,
+    "win_rate": 42.6,
+    "avg_r": 0.017,
+    "avg_pct": 0.038,
+    "eur": 8.72,
+    "eur_after_fees": -451.28,
+    "profit_factor": 1.05,
+    "max_dd_eur": -24.18,
+    "stops": 72,
+    "targets": 31
+   },
+   "passed": false,
+   "score": 0.711
+  },
+  {
+   "strategy": "bounce",
+   "trigger": "gapdown3",
+   "stop": "pct1.5",
+   "target_r": 2.0,
+   "id": "bounce-gapdown3-pct1.5-2R",
+   "label": "Erholung: Lücke nach unten ≥ 3 % · Stopp 1,5 % darunter · Ziel 2R",
+   "train": {
+    "n": 136,
+    "t": -1.74,
+    "win_rate": 36.8,
+    "avg_r": -0.147,
+    "avg_pct": -0.228,
+    "eur": -31.03,
+    "eur_after_fees": -303.03,
+    "profit_factor": 0.71,
+    "max_dd_eur": -39.31,
+    "stops": 52,
+    "targets": 13
+   },
+   "test": {
+    "n": 94,
+    "t": 2.35,
+    "win_rate": 52.1,
+    "avg_r": 0.304,
+    "avg_pct": 0.471,
+    "eur": 44.25,
+    "eur_after_fees": -143.75,
+    "profit_factor": 1.74,
+    "max_dd_eur": -6.37,
+    "stops": 33,
+    "targets": 25
+   },
+   "all": {
+    "n": 230,
+    "t": 0.5,
+    "win_rate": 43.0,
+    "avg_r": 0.037,
+    "avg_pct": 0.057,
+    "eur": 13.22,
+    "eur_after_fees": -446.78,
+    "profit_factor": 1.08,
+    "max_dd_eur": -16.34,
+    "stops": 85,
+    "targets": 38
+   },
+   "passed": false,
+   "score": 0.471
+  },
+  {
+   "strategy": "bounce",
+   "trigger": "gapdown3",
+   "stop": "daylow",
+   "target_r": 1.0,
+   "id": "bounce-gapdown3-daylow-1R",
+   "label": "Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 1R",
+   "train": {
+    "n": 136,
+    "t": -2.54,
+    "win_rate": 41.2,
+    "avg_r": -0.131,
+    "avg_pct": -0.37,
+    "eur": -50.28,
+    "eur_after_fees": -322.28,
+    "profit_factor": 0.59,
+    "max_dd_eur": -52.9,
+    "stops": 42,
+    "targets": 37
+   },
+   "test": {
+    "n": 94,
+    "t": 1.48,
+    "win_rate": 53.2,
+    "avg_r": 0.051,
+    "avg_pct": 0.267,
+    "eur": 25.13,
+    "eur_after_fees": -162.87,
+    "profit_factor": 1.42,
+    "max_dd_eur": -5.0,
+    "stops": 28,
+    "targets": 36
+   },
+   "all": {
+    "n": 230,
+    "t": -0.95,
+    "win_rate": 46.1,
+    "avg_r": -0.057,
+    "avg_pct": -0.109,
+    "eur": -25.14,
+    "eur_after_fees": -485.14,
+    "profit_factor": 0.86,
+    "max_dd_eur": -37.18,
+    "stops": 70,
+    "targets": 73
+   },
+   "passed": false,
+   "score": 0.267
+  },
+  {
+   "strategy": "bounce",
+   "trigger": "rsi30",
+   "stop": "pct1.5",
+   "target_r": 2.0,
+   "id": "bounce-rsi30-pct1.5-2R",
+   "label": "Erholung: RSI unter 30 · Stopp 1,5 % darunter · Ziel 2R",
+   "train": {
+    "n": 164,
+    "t": -1.29,
+    "win_rate": 41.5,
+    "avg_r": -0.079,
+    "avg_pct": -0.122,
+    "eur": -20.05,
+    "eur_after_fees": -348.05,
+    "profit_factor": 0.77,
+    "max_dd_eur": -23.6,
+    "stops": 38,
+    "targets": 9
+   },
+   "test": {
+    "n": 199,
+    "t": 1.48,
+    "win_rate": 47.7,
+    "avg_r": 0.091,
+    "avg_pct": 0.141,
+    "eur": 28.14,
+    "eur_after_fees": -369.86,
+    "profit_factor": 1.31,
+    "max_dd_eur": -9.56,
+    "stops": 36,
+    "targets": 18
+   },
+   "all": {
+    "n": 363,
+    "t": 0.33,
+    "win_rate": 44.9,
+    "avg_r": 0.014,
+    "avg_pct": 0.022,
+    "eur": 8.09,
+    "eur_after_fees": -717.91,
+    "profit_factor": 1.05,
+    "max_dd_eur": -16.52,
+    "stops": 74,
+    "targets": 27
+   },
+   "passed": false,
+   "score": 0.141
+  },
+  {
+   "strategy": "bounce",
+   "trigger": "rsi30",
+   "stop": "daylow",
+   "target_r": 2.0,
+   "id": "bounce-rsi30-daylow-2R",
+   "label": "Erholung: RSI unter 30 · Stopp Tagestief · Ziel 2R",
+   "train": {
+    "n": 164,
+    "t": -1.72,
+    "win_rate": 38.4,
+    "avg_r": -0.088,
+    "avg_pct": -0.146,
+    "eur": -23.91,
+    "eur_after_fees": -351.91,
+    "profit_factor": 0.71,
+    "max_dd_eur": -30.08,
+    "stops": 62,
+    "targets": 20
+   },
+   "test": {
+    "n": 199,
+    "t": 1.28,
+    "win_rate": 44.2,
+    "avg_r": 0.057,
+    "avg_pct": 0.134,
+    "eur": 26.72,
+    "eur_after_fees": -371.28,
+    "profit_factor": 1.29,
+    "max_dd_eur": -10.61,
+    "stops": 74,
+    "targets": 31
+   },
+   "all": {
+    "n": 363,
+    "t": 0.11,
+    "win_rate": 41.6,
+    "avg_r": -0.009,
+    "avg_pct": 0.008,
+    "eur": 2.81,
+    "eur_after_fees": -723.19,
+    "profit_factor": 1.02,
+    "max_dd_eur": -22.14,
+    "stops": 136,
+    "targets": 51
+   },
+   "passed": false,
+   "score": 0.134
+  },
+  {
+   "strategy": "bounce",
+   "trigger": "gapdown3",
+   "stop": "pct1.5",
+   "target_r": 1.0,
+   "id": "bounce-gapdown3-pct1.5-1R",
+   "label": "Erholung: Lücke nach unten ≥ 3 % · Stopp 1,5 % darunter · Ziel 1R",
+   "train": {
+    "n": 136,
+    "t": -0.49,
+    "win_rate": 47.1,
+    "avg_r": -0.037,
+    "avg_pct": -0.057,
+    "eur": -7.79,
+    "eur_after_fees": -279.79,
+    "profit_factor": 0.91,
+    "max_dd_eur": -24.43,
+    "stops": 46,
+    "targets": 48
+   },
+   "test": {
+    "n": 94,
+    "t": 0.68,
+    "win_rate": 54.3,
+    "avg_r": 0.062,
+    "avg_pct": 0.097,
+    "eur": 9.12,
+    "eur_after_fees": -178.88,
+    "profit_factor": 1.16,
+    "max_dd_eur": -8.77,
+    "stops": 31,
+    "targets": 41
+   },
+   "all": {
+    "n": 230,
+    "t": 0.06,
+    "win_rate": 50.0,
+    "avg_r": 0.004,
+    "avg_pct": 0.006,
+    "eur": 1.33,
+    "eur_after_fees": -458.67,
+    "profit_factor": 1.01,
+    "max_dd_eur": -19.27,
+    "stops": 77,
+    "targets": 89
+   },
+   "passed": false,
+   "score": 0.097
+  },
+  {
+   "strategy": "bounce",
+   "trigger": "rsi30",
+   "stop": "pct1.5",
+   "target_r": 1.0,
+   "id": "bounce-rsi30-pct1.5-1R",
+   "label": "Erholung: RSI unter 30 · Stopp 1,5 % darunter · Ziel 1R",
+   "train": {
+    "n": 164,
+    "t": -0.77,
+    "win_rate": 45.7,
+    "avg_r": -0.042,
+    "avg_pct": -0.065,
+    "eur": -10.66,
+    "eur_after_fees": -338.66,
+    "profit_factor": 0.87,
+    "max_dd_eur": -18.36,
+    "stops": 34,
+    "targets": 31
+   },
+   "test": {
+    "n": 199,
+    "t": 1.1,
+    "win_rate": 50.3,
+    "avg_r": 0.055,
+    "avg_pct": 0.086,
+    "eur": 17.1,
+    "eur_after_fees": -380.9,
+    "profit_factor": 1.2,
+    "max_dd_eur": -9.58,
+    "stops": 33,
+    "targets": 47
+   },
+   "all": {
+    "n": 363,
+    "t": 0.31,
+    "win_rate": 48.2,
+    "avg_r": 0.011,
+    "avg_pct": 0.018,
+    "eur": 6.44,
+    "eur_after_fees": -719.56,
+    "profit_factor": 1.04,
+    "max_dd_eur": -17.39,
+    "stops": 67,
+    "targets": 78
+   },
+   "passed": false,
+   "score": 0.086
+  },
+  {
+   "strategy": "orb",
+   "or_min": 30,
+   "stop": "mid",
+   "target_r": 1.5,
+   "rvol": 0.0,
+   "id": "orb-30-mid-1.5R-v0",
+   "label": "Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 1,5R",
+   "train": {
+    "n": 2624,
+    "t": -3.04,
+    "win_rate": 41.3,
+    "avg_r": -0.13,
+    "avg_pct": -0.078,
+    "eur": -205.28,
+    "eur_after_fees": -5453.28,
+    "profit_factor": 0.85,
+    "max_dd_eur": -217.75,
+    "stops": 1023,
+    "targets": 437
+   },
+   "test": {
+    "n": 1315,
+    "t": 0.55,
+    "win_rate": 45.4,
+    "avg_r": -0.034,
+    "avg_pct": 0.019,
+    "eur": 24.89,
+    "eur_after_fees": -2605.11,
+    "profit_factor": 1.04,
+    "max_dd_eur": -36.23,
+    "stops": 492,
+    "targets": 279
+   },
+   "all": {
+    "n": 3939,
+    "t": -2.22,
+    "win_rate": 42.7,
+    "avg_r": -0.098,
+    "avg_pct": -0.046,
+    "eur": -180.4,
+    "eur_after_fees": -8058.4,
+    "profit_factor": 0.91,
+    "max_dd_eur": -203.58,
+    "stops": 1515,
+    "targets": 716
+   },
+   "passed": false,
+   "score": 0.019
+  },
+  {
+   "strategy": "orb",
+   "or_min": 30,
+   "stop": "mid",
+   "target_r": 2.0,
+   "rvol": 0.0,
+   "id": "orb-30-mid-2R-v0",
+   "label": "Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 2R",
+   "train": {
+    "n": 2624,
+    "t": -3.34,
+    "win_rate": 40.2,
+    "avg_r": -0.139,
+    "avg_pct": -0.088,
+    "eur": -231.98,
+    "eur_after_fees": -5479.98,
+    "profit_factor": 0.84,
+    "max_dd_eur": -247.29,
+    "stops": 1036,
+    "targets": 219
+   },
+   "test": {
+    "n": 1315,
+    "t": 0.47,
+    "win_rate": 43.8,
+    "avg_r": -0.035,
+    "avg_pct": 0.017,
+    "eur": 22.43,
+    "eur_after_fees": -2607.57,
+    "profit_factor": 1.03,
+    "max_dd_eur": -44.63,
+    "stops": 501,
+    "targets": 154
+   },
+   "all": {
+    "n": 3939,
+    "t": -2.49,
+    "win_rate": 41.4,
+    "avg_r": -0.104,
+    "avg_pct": -0.053,
+    "eur": -209.55,
+    "eur_after_fees": -8087.55,
+    "profit_factor": 0.9,
+    "max_dd_eur": -241.37,
+    "stops": 1537,
+    "targets": 373
+   },
+   "passed": false,
+   "score": 0.017
+  },
+  {
+   "strategy": "orb",
+   "or_min": 30,
+   "stop": "low",
+   "target_r": 1.5,
+   "rvol": 0.0,
+   "id": "orb-30-low-1.5R-v0",
+   "label": "Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1,5R",
+   "train": {
+    "n": 2624,
+    "t": -3.12,
+    "win_rate": 43.6,
+    "avg_r": -0.084,
+    "avg_pct": -0.092,
+    "eur": -240.2,
+    "eur_after_fees": -5488.2,
+    "profit_factor": 0.84,
+    "max_dd_eur": -263.04,
+    "stops": 359,
+    "targets": 111
+   },
+   "test": {
+    "n": 1315,
+    "t": 0.37,
+    "win_rate": 47.8,
+    "avg_r": -0.026,
+    "avg_pct": 0.015,
+    "eur": 20.26,
+    "eur_after_fees": -2609.74,
+    "profit_factor": 1.03,
+    "max_dd_eur": -34.75,
+    "stops": 216,
+    "targets": 77
+   },
+   "all": {
+    "n": 3939,
+    "t": -2.33,
+    "win_rate": 45.0,
+    "avg_r": -0.064,
+    "avg_pct": -0.056,
+    "eur": -219.94,
+    "eur_after_fees": -8097.94,
+    "profit_factor": 0.9,
+    "max_dd_eur": -255.87,
+    "stops": 575,
+    "targets": 188
+   },
+   "passed": false,
+   "score": 0.015
+  },
+  {
+   "strategy": "orb",
+   "or_min": 30,
+   "stop": "low",
+   "target_r": 2.0,
+   "rvol": 0.0,
+   "id": "orb-30-low-2R-v0",
+   "label": "Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R",
+   "train": {
+    "n": 2624,
+    "t": -3.06,
+    "win_rate": 43.4,
+    "avg_r": -0.084,
+    "avg_pct": -0.091,
+    "eur": -239.24,
+    "eur_after_fees": -5487.24,
+    "profit_factor": 0.84,
+    "max_dd_eur": -255.87,
+    "stops": 360,
+    "targets": 43
+   },
+   "test": {
+    "n": 1315,
+    "t": 0.28,
+    "win_rate": 47.5,
+    "avg_r": -0.03,
+    "avg_pct": 0.012,
+    "eur": 15.59,
+    "eur_after_fees": -2614.41,
+    "profit_factor": 1.02,
+    "max_dd_eur": -34.71,
+    "stops": 219,
+    "targets": 24
+   },
+   "all": {
+    "n": 3939,
+    "t": -2.33,
+    "win_rate": 44.8,
+    "avg_r": -0.066,
+    "avg_pct": -0.057,
+    "eur": -223.65,
+    "eur_after_fees": -8101.65,
+    "profit_factor": 0.9,
+    "max_dd_eur": -255.25,
+    "stops": 579,
+    "targets": 67
+   },
+   "passed": false,
+   "score": 0.012
+  },
+  {
+   "strategy": "bounce",
+   "trigger": "rsi30",
+   "stop": "daylow",
+   "target_r": 1.0,
+   "id": "bounce-rsi30-daylow-1R",
+   "label": "Erholung: RSI unter 30 · Stopp Tagestief · Ziel 1R",
+   "train": {
+    "n": 164,
+    "t": -1.18,
+    "win_rate": 45.7,
+    "avg_r": -0.093,
+    "avg_pct": -0.09,
+    "eur": -14.77,
+    "eur_after_fees": -342.77,
+    "profit_factor": 0.8,
+    "max_dd_eur": -21.26,
+    "stops": 59,
+    "targets": 57
+   },
+   "test": {
+    "n": 199,
+    "t": 0.11,
+    "win_rate": 46.7,
+    "avg_r": -0.041,
+    "avg_pct": 0.009,
+    "eur": 1.71,
+    "eur_after_fees": -396.29,
+    "profit_factor": 1.02,
+    "max_dd_eur": -10.57,
+    "stops": 70,
+    "targets": 75
+   },
+   "all": {
+    "n": 363,
+    "t": -0.65,
+    "win_rate": 46.3,
+    "avg_r": -0.065,
+    "avg_pct": -0.036,
+    "eur": -13.06,
+    "eur_after_fees": -739.06,
+    "profit_factor": 0.92,
+    "max_dd_eur": -19.27,
+    "stops": 129,
+    "targets": 132
+   },
+   "passed": false,
+   "score": 0.009
+  },
+  {
+   "strategy": "orb",
+   "or_min": 30,
+   "stop": "low",
+   "target_r": 1.0,
+   "rvol": 0.0,
+   "id": "orb-30-low-1R-v0",
+   "label": "Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1R",
+   "train": {
+    "n": 2624,
+    "t": -3.33,
+    "win_rate": 44.1,
+    "avg_r": -0.084,
+    "avg_pct": -0.095,
+    "eur": -248.15,
+    "eur_after_fees": -5496.15,
+    "profit_factor": 0.84,
+    "max_dd_eur": -263.82,
+    "stops": 355,
+    "targets": 299
+   },
+   "test": {
+    "n": 1315,
+    "t": 0.09,
+    "win_rate": 48.4,
+    "avg_r": -0.031,
+    "avg_pct": 0.003,
+    "eur": 4.5,
+    "eur_after_fees": -2625.5,
+    "profit_factor": 1.01,
+    "max_dd_eur": -38.77,
+    "stops": 214,
+    "targets": 209
+   },
+   "all": {
+    "n": 3939,
+    "t": -2.69,
+    "win_rate": 45.5,
+    "avg_r": -0.066,
+    "avg_pct": -0.062,
+    "eur": -243.65,
+    "eur_after_fees": -8121.65,
+    "profit_factor": 0.89,
+    "max_dd_eur": -265.03,
+    "stops": 569,
+    "targets": 508
+   },
+   "passed": false,
+   "score": 0.003
+  },
+  {
+   "strategy": "orb",
+   "or_min": 30,
+   "stop": "low",
+   "target_r": 1.0,
+   "rvol": 1.5,
+   "id": "orb-30-low-1R-v1.5",
+   "label": "Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1R · Volumen ≥ 1,5×",
+   "train": {
+    "n": 310,
+    "t": 0.53,
+    "win_rate": 45.8,
+    "avg_r": -0.03,
+    "avg_pct": 0.059,
+    "eur": 18.35,
+    "eur_after_fees": -601.65,
+    "profit_factor": 1.1,
+    "max_dd_eur": -20.99,
+    "stops": 27,
+    "targets": 34
+   },
+   "test": {
+    "n": 179,
+    "t": 0.0,
+    "win_rate": 46.4,
+    "avg_r": -0.033,
+    "avg_pct": 0.0,
+    "eur": 0.05,
+    "eur_after_fees": -357.95,
+    "profit_factor": 1.0,
+    "max_dd_eur": -27.48,
+    "stops": 23,
+    "targets": 20
+   },
+   "all": {
+    "n": 489,
+    "t": 0.44,
+    "win_rate": 46.0,
+    "avg_r": -0.031,
+    "avg_pct": 0.038,
+    "eur": 18.4,
+    "eur_after_fees": -959.6,
+    "profit_factor": 1.06,
+    "max_dd_eur": -32.65,
+    "stops": 50,
+    "targets": 54
+   },
+   "passed": false,
+   "score": 0.0
+  },
+  {
+   "strategy": "orb",
+   "or_min": 30,
+   "stop": "mid",
+   "target_r": 1.0,
+   "rvol": 0.0,
+   "id": "orb-30-mid-1R-v0",
+   "label": "Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 1R",
+   "train": {
+    "n": 2624,
+    "t": -3.3,
+    "win_rate": 45.2,
+    "avg_r": -0.124,
+    "avg_pct": -0.077,
+    "eur": -202.16,
+    "eur_after_fees": -5450.16,
+    "profit_factor": 0.85,
+    "max_dd_eur": -210.93,
+    "stops": 981,
+    "targets": 825
+   },
+   "test": {
+    "n": 1315,
+    "t": -0.2,
+    "win_rate": 48.6,
+    "avg_r": -0.062,
+    "avg_pct": -0.006,
+    "eur": -8.14,
+    "eur_after_fees": -2638.14,
+    "profit_factor": 0.99,
+    "max_dd_eur": -37.05,
+    "stops": 473,
+    "targets": 482
+   },
+   "all": {
+    "n": 3939,
+    "t": -2.88,
+    "win_rate": 46.3,
+    "avg_r": -0.104,
+    "avg_pct": -0.053,
+    "eur": -210.31,
+    "eur_after_fees": -8088.31,
+    "profit_factor": 0.89,
+    "max_dd_eur": -220.51,
+    "stops": 1454,
+    "targets": 1307
+   },
+   "passed": false,
+   "score": -0.006
+  },
+  {
+   "strategy": "orb",
+   "or_min": 30,
+   "stop": "mid",
+   "target_r": 1.5,
+   "rvol": 1.5,
+   "id": "orb-30-mid-1.5R-v1.5",
+   "label": "Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 1,5R · Volumen ≥ 1,5×",
+   "train": {
+    "n": 310,
+    "t": 0.7,
+    "win_rate": 43.9,
+    "avg_r": -0.045,
+    "avg_pct": 0.073,
+    "eur": 22.51,
+    "eur_after_fees": -597.49,
+    "profit_factor": 1.13,
+    "max_dd_eur": -19.33,
+    "stops": 91,
+    "targets": 47
+   },
+   "test": {
+    "n": 179,
+    "t": -0.07,
+    "win_rate": 45.3,
+    "avg_r": -0.042,
+    "avg_pct": -0.007,
+    "eur": -1.31,
+    "eur_after_fees": -359.31,
+    "profit_factor": 0.99,
+    "max_dd_eur": -25.74,
+    "stops": 65,
+    "targets": 28
+   },
+   "all": {
+    "n": 489,
+    "t": 0.56,
+    "win_rate": 44.4,
+    "avg_r": -0.044,
+    "avg_pct": 0.043,
+    "eur": 21.2,
+    "eur_after_fees": -956.8,
+    "profit_factor": 1.08,
+    "max_dd_eur": -35.02,
+    "stops": 156,
+    "targets": 75
+   },
+   "passed": false,
+   "score": -0.007
+  },
+  {
+   "strategy": "orb",
+   "or_min": 15,
+   "stop": "mid",
+   "target_r": 2.0,
+   "rvol": 0.0,
+   "id": "orb-15-mid-2R-v0",
+   "label": "Opening-Range-Ausbruch 15 Min · Stopp Mitte der Spanne · Ziel 2R",
+   "train": {
+    "n": 3186,
+    "t": -3.18,
+    "win_rate": 39.0,
+    "avg_r": -0.129,
+    "avg_pct": -0.078,
+    "eur": -249.21,
+    "eur_after_fees": -6621.21,
+    "profit_factor": 0.86,
+    "max_dd_eur": -259.76,
+    "stops": 1448,
+    "targets": 395
+   },
+   "test": {
+    "n": 1632,
+    "t": -0.25,
+    "win_rate": 41.3,
+    "avg_r": -0.07,
+    "avg_pct": -0.008,
+    "eur": -12.74,
+    "eur_after_fees": -3276.74,
+    "profit_factor": 0.98,
+    "max_dd_eur": -54.32,
+    "stops": 761,
+    "targets": 250
+   },
+   "all": {
+    "n": 4818,
+    "t": -2.79,
+    "win_rate": 39.8,
+    "avg_r": -0.109,
+    "avg_pct": -0.054,
+    "eur": -261.95,
+    "eur_after_fees": -9897.95,
+    "profit_factor": 0.9,
+    "max_dd_eur": -282.17,
+    "stops": 2209,
+    "targets": 645
+   },
+   "passed": false,
+   "score": -0.008
+  },
+  {
+   "strategy": "orb",
+   "or_min": 15,
+   "stop": "low",
+   "target_r": 1.5,
+   "rvol": 0.0,
+   "id": "orb-15-low-1.5R-v0",
+   "label": "Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 1,5R",
+   "train": {
+    "n": 3186,
+    "t": -3.03,
+    "win_rate": 43.4,
+    "avg_r": -0.085,
+    "avg_pct": -0.087,
+    "eur": -277.12,
+    "eur_after_fees": -6649.12,
+    "profit_factor": 0.86,
+    "max_dd_eur": -304.15,
+    "stops": 651,
+    "targets": 232
+   },
+   "test": {
+    "n": 1632,
+    "t": -0.25,
+    "win_rate": 46.5,
+    "avg_r": -0.038,
+    "avg_pct": -0.009,
+    "eur": -15.37,
+    "eur_after_fees": -3279.37,
+    "profit_factor": 0.98,
+    "max_dd_eur": -55.31,
+    "stops": 380,
+    "targets": 161
+   },
+   "all": {
+    "n": 4818,
+    "t": -2.66,
+    "win_rate": 44.5,
+    "avg_r": -0.069,
+    "avg_pct": -0.061,
+    "eur": -292.49,
+    "eur_after_fees": -9928.49,
+    "profit_factor": 0.9,
+    "max_dd_eur": -338.4,
+    "stops": 1031,
+    "targets": 393
+   },
+   "passed": false,
+   "score": -0.009
+  },
+  {
+   "strategy": "orb",
+   "or_min": 15,
+   "stop": "low",
+   "target_r": 2.0,
+   "rvol": 0.0,
+   "id": "orb-15-low-2R-v0",
+   "label": "Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 2R",
+   "train": {
+    "n": 3186,
+    "t": -2.98,
+    "win_rate": 43.1,
+    "avg_r": -0.088,
+    "avg_pct": -0.088,
+    "eur": -281.38,
+    "eur_after_fees": -6653.38,
+    "profit_factor": 0.86,
+    "max_dd_eur": -307.42,
+    "stops": 653,
+    "targets": 94
+   },
+   "test": {
+    "n": 1632,
+    "t": -0.41,
+    "win_rate": 45.9,
+    "avg_r": -0.045,
+    "avg_pct": -0.016,
+    "eur": -25.47,
+    "eur_after_fees": -3289.47,
+    "profit_factor": 0.97,
+    "max_dd_eur": -70.24,
+    "stops": 387,
+    "targets": 63
+   },
+   "all": {
+    "n": 4818,
+    "t": -2.71,
+    "win_rate": 44.0,
+    "avg_r": -0.073,
+    "avg_pct": -0.064,
+    "eur": -306.85,
+    "eur_after_fees": -9942.85,
+    "profit_factor": 0.9,
+    "max_dd_eur": -348.3,
+    "stops": 1040,
+    "targets": 157
+   },
+   "passed": false,
+   "score": -0.016
+  },
+  {
+   "strategy": "orb",
+   "or_min": 15,
+   "stop": "mid",
+   "target_r": 1.5,
+   "rvol": 0.0,
+   "id": "orb-15-mid-1.5R-v0",
+   "label": "Opening-Range-Ausbruch 15 Min · Stopp Mitte der Spanne · Ziel 1,5R",
+   "train": {
+    "n": 3186,
+    "t": -2.86,
+    "win_rate": 41.0,
+    "avg_r": -0.117,
+    "avg_pct": -0.067,
+    "eur": -212.23,
+    "eur_after_fees": -6584.23,
+    "profit_factor": 0.88,
+    "max_dd_eur": -226.75,
+    "stops": 1417,
+    "targets": 705
+   },
+   "test": {
+    "n": 1632,
+    "t": -0.67,
+    "win_rate": 43.1,
+    "avg_r": -0.075,
+    "avg_pct": -0.02,
+    "eur": -32.1,
+    "eur_after_fees": -3296.1,
+    "profit_factor": 0.96,
+    "max_dd_eur": -66.5,
+    "stops": 745,
+    "targets": 412
+   },
+   "all": {
+    "n": 4818,
+    "t": -2.76,
+    "win_rate": 41.7,
+    "avg_r": -0.103,
+    "avg_pct": -0.051,
+    "eur": -244.33,
+    "eur_after_fees": -9880.33,
+    "profit_factor": 0.91,
+    "max_dd_eur": -261.7,
+    "stops": 2162,
+    "targets": 1117
+   },
+   "passed": false,
+   "score": -0.02
+  },
+  {
+   "strategy": "orb",
+   "or_min": 15,
+   "stop": "low",
+   "target_r": 1.0,
+   "rvol": 0.0,
+   "id": "orb-15-low-1R-v0",
+   "label": "Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 1R",
+   "train": {
+    "n": 3186,
+    "t": -3.38,
+    "win_rate": 44.9,
+    "avg_r": -0.079,
+    "avg_pct": -0.091,
+    "eur": -289.07,
+    "eur_after_fees": -6661.07,
+    "profit_factor": 0.85,
+    "max_dd_eur": -308.64,
+    "stops": 636,
+    "targets": 566
+   },
+   "test": {
+    "n": 1632,
+    "t": -0.7,
+    "win_rate": 47.7,
+    "avg_r": -0.046,
+    "avg_pct": -0.025,
+    "eur": -39.99,
+    "eur_after_fees": -3303.99,
+    "profit_factor": 0.96,
+    "max_dd_eur": -75.11,
+    "stops": 376,
+    "targets": 364
+   },
+   "all": {
+    "n": 4818,
+    "t": -3.21,
+    "win_rate": 45.9,
+    "avg_r": -0.068,
+    "avg_pct": -0.068,
+    "eur": -329.06,
+    "eur_after_fees": -9965.06,
+    "profit_factor": 0.89,
+    "max_dd_eur": -364.88,
+    "stops": 1012,
+    "targets": 930
+   },
+   "passed": false,
+   "score": -0.025
+  },
+  {
+   "strategy": "orb",
+   "or_min": 30,
+   "stop": "mid",
+   "target_r": 1.0,
+   "rvol": 1.5,
+   "id": "orb-30-mid-1R-v1.5",
+   "label": "Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 1R · Volumen ≥ 1,5×",
+   "train": {
+    "n": 310,
+    "t": 0.44,
+    "win_rate": 45.8,
+    "avg_r": -0.072,
+    "avg_pct": 0.042,
+    "eur": 12.87,
+    "eur_after_fees": -607.13,
+    "profit_factor": 1.07,
+    "max_dd_eur": -19.76,
+    "stops": 91,
+    "targets": 89
+   },
+   "test": {
+    "n": 179,
+    "t": -0.38,
+    "win_rate": 46.9,
+    "avg_r": -0.066,
+    "avg_pct": -0.037,
+    "eur": -6.7,
+    "eur_after_fees": -364.7,
+    "profit_factor": 0.93,
+    "max_dd_eur": -26.27,
+    "stops": 62,
+    "targets": 58
+   },
+   "all": {
+    "n": 489,
+    "t": 0.18,
+    "win_rate": 46.2,
+    "avg_r": -0.07,
+    "avg_pct": 0.013,
+    "eur": 6.17,
+    "eur_after_fees": -971.83,
+    "profit_factor": 1.02,
+    "max_dd_eur": -39.87,
+    "stops": 153,
+    "targets": 147
+   },
+   "passed": false,
+   "score": -0.037
+  },
+  {
+   "strategy": "orb",
+   "or_min": 15,
+   "stop": "mid",
+   "target_r": 2.0,
+   "rvol": 1.5,
+   "id": "orb-15-mid-2R-v1.5",
+   "label": "Opening-Range-Ausbruch 15 Min · Stopp Mitte der Spanne · Ziel 2R · Volumen ≥ 1,5×",
+   "train": {
+    "n": 388,
+    "t": -0.52,
+    "win_rate": 40.5,
+    "avg_r": -0.097,
+    "avg_pct": -0.043,
+    "eur": -16.84,
+    "eur_after_fees": -792.84,
+    "profit_factor": 0.93,
+    "max_dd_eur": -37.15,
+    "stops": 158,
+    "targets": 46
+   },
+   "test": {
+    "n": 234,
+    "t": -0.54,
+    "win_rate": 40.6,
+    "avg_r": -0.1,
+    "avg_pct": -0.052,
+    "eur": -12.21,
+    "eur_after_fees": -480.21,
+    "profit_factor": 0.91,
+    "max_dd_eur": -24.36,
+    "stops": 109,
+    "targets": 29
+   },
+   "all": {
+    "n": 622,
+    "t": -0.73,
+    "win_rate": 40.5,
+    "avg_r": -0.098,
+    "avg_pct": -0.047,
+    "eur": -29.05,
+    "eur_after_fees": -1273.05,
+    "profit_factor": 0.92,
+    "max_dd_eur": -52.92,
+    "stops": 267,
+    "targets": 75
+   },
+   "passed": false,
+   "score": -0.052
+  },
+  {
+   "strategy": "orb",
+   "or_min": 15,
+   "stop": "mid",
+   "target_r": 1.0,
+   "rvol": 0.0,
+   "id": "orb-15-mid-1R-v0",
+   "label": "Opening-Range-Ausbruch 15 Min · Stopp Mitte der Spanne · Ziel 1R",
+   "train": {
+    "n": 3186,
+    "t": -3.94,
+    "win_rate": 45.4,
+    "avg_r": -0.13,
+    "avg_pct": -0.082,
+    "eur": -260.56,
+    "eur_after_fees": -6632.56,
+    "profit_factor": 0.84,
+    "max_dd_eur": -266.18,
+    "stops": 1347,
+    "targets": 1137
+   },
+   "test": {
+    "n": 1632,
+    "t": -2.15,
+    "win_rate": 47.2,
+    "avg_r": -0.11,
+    "avg_pct": -0.055,
+    "eur": -90.33,
+    "eur_after_fees": -3354.33,
+    "profit_factor": 0.88,
+    "max_dd_eur": -99.95,
+    "stops": 701,
+    "targets": 629
+   },
+   "all": {
+    "n": 4818,
+    "t": -4.48,
+    "win_rate": 46.0,
+    "avg_r": -0.123,
+    "avg_pct": -0.073,
+    "eur": -350.9,
+    "eur_after_fees": -9986.9,
+    "profit_factor": 0.86,
+    "max_dd_eur": -360.72,
+    "stops": 2048,
+    "targets": 1766
+   },
+   "passed": false,
+   "score": -0.055
+  },
+  {
+   "strategy": "orb",
+   "or_min": 15,
+   "stop": "mid",
+   "target_r": 1.5,
+   "rvol": 1.5,
+   "id": "orb-15-mid-1.5R-v1.5",
+   "label": "Opening-Range-Ausbruch 15 Min · Stopp Mitte der Spanne · Ziel 1,5R · Volumen ≥ 1,5×",
+   "train": {
+    "n": 388,
+    "t": -0.24,
+    "win_rate": 42.8,
+    "avg_r": -0.08,
+    "avg_pct": -0.019,
+    "eur": -7.45,
+    "eur_after_fees": -783.45,
+    "profit_factor": 0.97,
+    "max_dd_eur": -30.02,
+    "stops": 153,
+    "targets": 77
+   },
+   "test": {
+    "n": 234,
+    "t": -0.7,
+    "win_rate": 42.7,
+    "avg_r": -0.108,
+    "avg_pct": -0.063,
+    "eur": -14.85,
+    "eur_after_fees": -482.85,
+    "profit_factor": 0.89,
+    "max_dd_eur": -23.63,
+    "stops": 108,
+    "targets": 47
+   },
+   "all": {
+    "n": 622,
+    "t": -0.6,
+    "win_rate": 42.8,
+    "avg_r": -0.09,
+    "avg_pct": -0.036,
+    "eur": -22.3,
+    "eur_after_fees": -1266.3,
+    "profit_factor": 0.94,
+    "max_dd_eur": -43.25,
+    "stops": 261,
+    "targets": 124
+   },
+   "passed": false,
+   "score": -0.063
+  },
+  {
+   "strategy": "orb",
+   "or_min": 15,
+   "stop": "mid",
+   "target_r": 1.0,
+   "rvol": 1.5,
+   "id": "orb-15-mid-1R-v1.5",
+   "label": "Opening-Range-Ausbruch 15 Min · Stopp Mitte der Spanne · Ziel 1R · Volumen ≥ 1,5×",
+   "train": {
+    "n": 388,
+    "t": -0.57,
+    "win_rate": 45.6,
+    "avg_r": -0.114,
+    "avg_pct": -0.041,
+    "eur": -16.02,
+    "eur_after_fees": -792.02,
+    "profit_factor": 0.93,
+    "max_dd_eur": -30.57,
+    "stops": 149,
+    "targets": 126
+   },
+   "test": {
+    "n": 234,
+    "t": -0.89,
+    "win_rate": 47.0,
+    "avg_r": -0.115,
+    "avg_pct": -0.072,
+    "eur": -16.85,
+    "eur_after_fees": -484.86,
+    "profit_factor": 0.87,
+    "max_dd_eur": -24.37,
+    "stops": 99,
+    "targets": 80
+   },
+   "all": {
+    "n": 622,
+    "t": -0.97,
+    "win_rate": 46.1,
+    "avg_r": -0.115,
+    "avg_pct": -0.053,
+    "eur": -32.87,
+    "eur_after_fees": -1276.87,
+    "profit_factor": 0.91,
+    "max_dd_eur": -49.97,
+    "stops": 248,
+    "targets": 206
+   },
+   "passed": false,
+   "score": -0.072
+  },
+  {
+   "strategy": "orb",
+   "or_min": 15,
+   "stop": "low",
+   "target_r": 1.5,
+   "rvol": 1.5,
+   "id": "orb-15-low-1.5R-v1.5",
+   "label": "Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 1,5R · Volumen ≥ 1,5×",
+   "train": {
+    "n": 388,
+    "t": -0.56,
+    "win_rate": 43.3,
+    "avg_r": -0.069,
+    "avg_pct": -0.056,
+    "eur": -21.87,
+    "eur_after_fees": -797.87,
+    "profit_factor": 0.92,
+    "max_dd_eur": -49.31,
+    "stops": 59,
+    "targets": 25
+   },
+   "test": {
+    "n": 234,
+    "t": -0.99,
+    "win_rate": 44.4,
+    "avg_r": -0.098,
+    "avg_pct": -0.111,
+    "eur": -26.08,
+    "eur_after_fees": -494.08,
+    "profit_factor": 0.84,
+    "max_dd_eur": -36.32,
+    "stops": 52,
+    "targets": 16
+   },
+   "all": {
+    "n": 622,
+    "t": -1.02,
+    "win_rate": 43.7,
+    "avg_r": -0.08,
+    "avg_pct": -0.077,
+    "eur": -47.96,
+    "eur_after_fees": -1291.95,
+    "profit_factor": 0.89,
+    "max_dd_eur": -70.23,
+    "stops": 111,
+    "targets": 41
+   },
+   "passed": false,
+   "score": -0.111
+  },
+  {
+   "strategy": "orb",
+   "or_min": 15,
+   "stop": "low",
+   "target_r": 1.0,
+   "rvol": 1.5,
+   "id": "orb-15-low-1R-v1.5",
+   "label": "Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 1R · Volumen ≥ 1,5×",
+   "train": {
+    "n": 388,
+    "t": -0.97,
+    "win_rate": 44.3,
+    "avg_r": -0.071,
+    "avg_pct": -0.087,
+    "eur": -33.58,
+    "eur_after_fees": -809.58,
+    "profit_factor": 0.87,
+    "max_dd_eur": -51.45,
+    "stops": 59,
+    "targets": 57
+   },
+   "test": {
+    "n": 234,
+    "t": -1.11,
+    "win_rate": 45.7,
+    "avg_r": -0.102,
+    "avg_pct": -0.119,
+    "eur": -27.85,
+    "eur_after_fees": -495.85,
+    "profit_factor": 0.83,
+    "max_dd_eur": -38.0,
+    "stops": 51,
+    "targets": 35
+   },
+   "all": {
+    "n": 622,
+    "t": -1.44,
+    "win_rate": 44.9,
+    "avg_r": -0.083,
+    "avg_pct": -0.099,
+    "eur": -61.42,
+    "eur_after_fees": -1305.42,
+    "profit_factor": 0.86,
+    "max_dd_eur": -82.68,
+    "stops": 110,
+    "targets": 92
+   },
+   "passed": false,
+   "score": -0.119
+  },
+  {
+   "strategy": "orb",
+   "or_min": 15,
+   "stop": "low",
+   "target_r": 2.0,
+   "rvol": 1.5,
+   "id": "orb-15-low-2R-v1.5",
+   "label": "Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5×",
+   "train": {
+    "n": 388,
+    "t": -0.24,
+    "win_rate": 43.3,
+    "avg_r": -0.065,
+    "avg_pct": -0.026,
+    "eur": -10.25,
+    "eur_after_fees": -786.25,
+    "profit_factor": 0.96,
+    "max_dd_eur": -45.49,
+    "stops": 59,
+    "targets": 12
+   },
+   "test": {
+    "n": 234,
+    "t": -1.11,
+    "win_rate": 44.4,
+    "avg_r": -0.097,
+    "avg_pct": -0.123,
+    "eur": -28.8,
+    "eur_after_fees": -496.8,
+    "profit_factor": 0.82,
+    "max_dd_eur": -37.75,
+    "stops": 52,
+    "targets": 7
+   },
+   "all": {
+    "n": 622,
+    "t": -0.78,
+    "win_rate": 43.7,
+    "avg_r": -0.077,
+    "avg_pct": -0.063,
+    "eur": -39.06,
+    "eur_after_fees": -1283.06,
+    "profit_factor": 0.91,
+    "max_dd_eur": -73.02,
+    "stops": 111,
+    "targets": 19
+   },
+   "passed": false,
+   "score": -0.123
+  },
+  {
+   "strategy": "gap",
+   "gap": 4.0,
+   "rvol": 2.0,
+   "target_r": 3.0,
+   "id": "gap-4-v2-3R",
+   "label": "News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 3R",
+   "train": {
+    "n": 34,
+    "t": 2.21,
+    "win_rate": 64.7,
+    "avg_r": 0.454,
+    "avg_pct": 2.276,
+    "eur": 77.39,
+    "eur_after_fees": 9.39,
+    "profit_factor": 3.39,
+    "max_dd_eur": -8.6,
+    "stops": 8,
+    "targets": 3
+   },
+   "test": {
+    "n": 4,
+    "t": -1.63,
+    "win_rate": 25.0,
+    "avg_r": -0.476,
+    "avg_pct": -1.925,
+    "eur": -7.7,
+    "eur_after_fees": -15.7,
+    "profit_factor": 0.08,
+    "max_dd_eur": -7.7,
+    "stops": 1,
+    "targets": 0
+   },
+   "all": {
+    "n": 38,
+    "t": 1.93,
+    "win_rate": 60.5,
+    "avg_r": 0.356,
+    "avg_pct": 1.834,
+    "eur": 69.68,
+    "eur_after_fees": -6.32,
+    "profit_factor": 2.71,
+    "max_dd_eur": -12.01,
+    "stops": 9,
+    "targets": 3
+   },
+   "passed": false,
+   "score": -99
+  },
+  {
+   "strategy": "gap",
+   "gap": 2.0,
+   "rvol": 2.0,
+   "target_r": 3.0,
+   "id": "gap-2-v2-3R",
+   "label": "News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 3R",
+   "train": {
+    "n": 54,
+    "t": 2.3,
+    "win_rate": 57.4,
+    "avg_r": 0.327,
+    "avg_pct": 1.61,
+    "eur": 86.96,
+    "eur_after_fees": -21.04,
+    "profit_factor": 2.67,
+    "max_dd_eur": -9.78,
+    "stops": 13,
+    "targets": 3
+   },
+   "test": {
+    "n": 16,
+    "t": -2.96,
+    "win_rate": 25.0,
+    "avg_r": -0.372,
+    "avg_pct": -1.167,
+    "eur": -18.67,
+    "eur_after_fees": -50.67,
+    "profit_factor": 0.12,
+    "max_dd_eur": -18.67,
+    "stops": 3,
+    "targets": 0
+   },
+   "all": {
+    "n": 70,
+    "t": 1.73,
+    "win_rate": 50.0,
+    "avg_r": 0.168,
+    "avg_pct": 0.976,
+    "eur": 68.29,
+    "eur_after_fees": -71.71,
+    "profit_factor": 1.93,
+    "max_dd_eur": -12.01,
+    "stops": 16,
+    "targets": 3
+   },
+   "passed": false,
+   "score": -99
+  },
+  {
+   "strategy": "gap",
+   "gap": 2.0,
+   "rvol": 2.0,
+   "target_r": 2.0,
+   "id": "gap-2-v2-2R",
+   "label": "News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 2R",
+   "train": {
+    "n": 54,
+    "t": 2.34,
+    "win_rate": 57.4,
+    "avg_r": 0.266,
+    "avg_pct": 1.315,
+    "eur": 71.0,
+    "eur_after_fees": -37.0,
+    "profit_factor": 2.36,
+    "max_dd_eur": -9.78,
+    "stops": 13,
+    "targets": 7
+   },
+   "test": {
+    "n": 16,
+    "t": -2.22,
+    "win_rate": 31.2,
+    "avg_r": -0.22,
+    "avg_pct": -0.994,
+    "eur": -15.9,
+    "eur_after_fees": -47.9,
+    "profit_factor": 0.23,
+    "max_dd_eur": -15.9,
+    "stops": 3,
+    "targets": 1
+   },
+   "all": {
+    "n": 70,
+    "t": 1.71,
+    "win_rate": 51.4,
+    "avg_r": 0.155,
+    "avg_pct": 0.787,
+    "eur": 55.1,
+    "eur_after_fees": -84.9,
+    "profit_factor": 1.76,
+    "max_dd_eur": -12.01,
+    "stops": 16,
+    "targets": 8
+   },
+   "passed": false,
+   "score": -99
+  },
+  {
+   "strategy": "gap",
+   "gap": 4.0,
+   "rvol": 2.0,
+   "target_r": 2.0,
+   "id": "gap-4-v2-2R",
+   "label": "News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 2R",
+   "train": {
+    "n": 34,
+    "t": 2.28,
+    "win_rate": 64.7,
+    "avg_r": 0.365,
+    "avg_pct": 1.818,
+    "eur": 61.81,
+    "eur_after_fees": -6.19,
+    "profit_factor": 2.91,
+    "max_dd_eur": -8.6,
+    "stops": 8,
+    "targets": 4
+   },
+   "test": {
+    "n": 4,
+    "t": -1.63,
+    "win_rate": 25.0,
+    "avg_r": -0.476,
+    "avg_pct": -1.925,
+    "eur": -7.7,
+    "eur_after_fees": -15.7,
+    "profit_factor": 0.08,
+    "max_dd_eur": -7.7,
+    "stops": 1,
+    "targets": 0
+   },
+   "all": {
+    "n": 38,
+    "t": 1.91,
+    "win_rate": 60.5,
+    "avg_r": 0.276,
+    "avg_pct": 1.424,
+    "eur": 54.11,
+    "eur_after_fees": -21.89,
+    "profit_factor": 2.33,
+    "max_dd_eur": -12.01,
+    "stops": 9,
+    "targets": 4
+   },
+   "passed": false,
+   "score": -99
+  },
+  {
+   "strategy": "gap",
+   "gap": 4.0,
+   "rvol": 3.0,
+   "target_r": 3.0,
+   "id": "gap-4-v3-3R",
+   "label": "News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R",
+   "train": {
+    "n": 22,
+    "t": 1.8,
+    "win_rate": 68.2,
+    "avg_r": 0.415,
+    "avg_pct": 2.579,
+    "eur": 56.73,
+    "eur_after_fees": 12.73,
+    "profit_factor": 3.89,
+    "max_dd_eur": -4.62,
+    "stops": 4,
+    "targets": 1
+   },
+   "test": {
+    "n": 4,
+    "t": -1.63,
+    "win_rate": 25.0,
+    "avg_r": -0.476,
+    "avg_pct": -1.925,
+    "eur": -7.7,
+    "eur_after_fees": -15.7,
+    "profit_factor": 0.08,
+    "max_dd_eur": -7.7,
+    "stops": 1,
+    "targets": 0
+   },
+   "all": {
+    "n": 26,
+    "t": 1.49,
+    "win_rate": 61.5,
+    "avg_r": 0.278,
+    "avg_pct": 1.886,
+    "eur": 49.03,
+    "eur_after_fees": -2.97,
+    "profit_factor": 2.75,
+    "max_dd_eur": -6.97,
+    "stops": 5,
+    "targets": 1
+   },
+   "passed": false,
+   "score": -99
+  },
+  {
+   "strategy": "gap",
+   "gap": 4.0,
+   "rvol": 2.0,
+   "target_r": 1.5,
+   "id": "gap-4-v2-1.5R",
+   "label": "News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 1,5R",
+   "train": {
+    "n": 34,
+    "t": 2.24,
+    "win_rate": 64.7,
+    "avg_r": 0.308,
+    "avg_pct": 1.544,
+    "eur": 52.51,
+    "eur_after_fees": -15.49,
+    "profit_factor": 2.62,
+    "max_dd_eur": -8.6,
+    "stops": 8,
+    "targets": 8
+   },
+   "test": {
+    "n": 4,
+    "t": -1.63,
+    "win_rate": 25.0,
+    "avg_r": -0.476,
+    "avg_pct": -1.925,
+    "eur": -7.7,
+    "eur_after_fees": -15.7,
+    "profit_factor": 0.08,
+    "max_dd_eur": -7.7,
+    "stops": 1,
+    "targets": 0
+   },
+   "all": {
+    "n": 38,
+    "t": 1.81,
+    "win_rate": 60.5,
+    "avg_r": 0.225,
+    "avg_pct": 1.179,
+    "eur": 44.81,
+    "eur_after_fees": -31.19,
+    "profit_factor": 2.1,
+    "max_dd_eur": -12.01,
+    "stops": 9,
+    "targets": 8
+   },
+   "passed": false,
+   "score": -99
+  },
+  {
+   "strategy": "gap",
+   "gap": 2.0,
+   "rvol": 3.0,
+   "target_r": 3.0,
+   "id": "gap-2-v3-3R",
+   "label": "News-Sprung: Lücke ≥ 2 % · Volumen ≥ 3× · Ziel 3R",
+   "train": {
+    "n": 24,
+    "t": 1.8,
+    "win_rate": 66.7,
+    "avg_r": 0.384,
+    "avg_pct": 2.405,
+    "eur": 57.73,
+    "eur_after_fees": 9.73,
+    "profit_factor": 3.57,
+    "max_dd_eur": -4.62,
+    "stops": 4,
+    "targets": 1
+   },
+   "test": {
+    "n": 11,
+    "t": -2.93,
+    "win_rate": 18.2,
+    "avg_r": -0.424,
+    "avg_pct": -1.48,
+    "eur": -16.28,
+    "eur_after_fees": -38.28,
+    "profit_factor": 0.07,
+    "max_dd_eur": -16.28,
+    "stops": 1,
+    "targets": 0
+   },
+   "all": {
+    "n": 35,
+    "t": 1.22,
+    "win_rate": 51.4,
+    "avg_r": 0.13,
+    "avg_pct": 1.184,
+    "eur": 41.45,
+    "eur_after_fees": -28.55,
+    "profit_factor": 2.04,
+    "max_dd_eur": -7.61,
+    "stops": 5,
+    "targets": 1
+   },
+   "passed": false,
+   "score": -99
+  },
+  {
+   "strategy": "gap",
+   "gap": 2.0,
+   "rvol": 2.0,
+   "target_r": 1.5,
+   "id": "gap-2-v2-1.5R",
+   "label": "News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 1,5R",
+   "train": {
+    "n": 54,
+    "t": 2.18,
+    "win_rate": 57.4,
+    "avg_r": 0.208,
+    "avg_pct": 1.067,
+    "eur": 57.59,
+    "eur_after_fees": -50.41,
+    "profit_factor": 2.11,
+    "max_dd_eur": -9.78,
+    "stops": 13,
+    "targets": 12
+   },
+   "test": {
+    "n": 16,
+    "t": -2.39,
+    "win_rate": 31.2,
+    "avg_r": -0.251,
+    "avg_pct": -1.029,
+    "eur": -16.47,
+    "eur_after_fees": -48.47,
+    "profit_factor": 0.2,
+    "max_dd_eur": -16.47,
+    "stops": 3,
+    "targets": 1
+   },
+   "all": {
+    "n": 70,
+    "t": 1.46,
+    "win_rate": 51.4,
+    "avg_r": 0.103,
+    "avg_pct": 0.587,
+    "eur": 41.12,
+    "eur_after_fees": -98.88,
+    "profit_factor": 1.57,
+    "max_dd_eur": -12.01,
+    "stops": 16,
+    "targets": 13
+   },
+   "passed": false,
+   "score": -99
+  },
+  {
+   "strategy": "gap",
+   "gap": 4.0,
+   "rvol": 3.0,
+   "target_r": 2.0,
+   "id": "gap-4-v3-2R",
+   "label": "News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R",
+   "train": {
+    "n": 22,
+    "t": 1.96,
+    "win_rate": 68.2,
+    "avg_r": 0.367,
+    "avg_pct": 2.141,
+    "eur": 47.1,
+    "eur_after_fees": 3.1,
+    "profit_factor": 3.4,
+    "max_dd_eur": -4.62,
+    "stops": 4,
+    "targets": 2
+   },
+   "test": {
+    "n": 4,
+    "t": -1.63,
+    "win_rate": 25.0,
+    "avg_r": -0.476,
+    "avg_pct": -1.925,
+    "eur": -7.7,
+    "eur_after_fees": -15.7,
+    "profit_factor": 0.08,
+    "max_dd_eur": -7.7,
+    "stops": 1,
+    "targets": 0
+   },
+   "all": {
+    "n": 26,
+    "t": 1.55,
+    "win_rate": 61.5,
+    "avg_r": 0.237,
+    "avg_pct": 1.515,
+    "eur": 39.4,
+    "eur_after_fees": -12.6,
+    "profit_factor": 2.41,
+    "max_dd_eur": -6.97,
+    "stops": 5,
+    "targets": 2
+   },
+   "passed": false,
+   "score": -99
+  },
+  {
+   "strategy": "gap",
+   "gap": 4.0,
+   "rvol": 3.0,
+   "target_r": 1.5,
+   "id": "gap-4-v3-1.5R",
+   "label": "News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R",
+   "train": {
+    "n": 22,
+    "t": 1.96,
+    "win_rate": 68.2,
+    "avg_r": 0.312,
+    "avg_pct": 1.806,
+    "eur": 39.73,
+    "eur_after_fees": -4.27,
+    "profit_factor": 3.03,
+    "max_dd_eur": -4.62,
+    "stops": 4,
+    "targets": 4
+   },
+   "test": {
+    "n": 4,
+    "t": -1.63,
+    "win_rate": 25.0,
+    "avg_r": -0.476,
+    "avg_pct": -1.925,
+    "eur": -7.7,
+    "eur_after_fees": -15.7,
+    "profit_factor": 0.08,
+    "max_dd_eur": -7.7,
+    "stops": 1,
+    "targets": 0
+   },
+   "all": {
+    "n": 26,
+    "t": 1.47,
+    "win_rate": 61.5,
+    "avg_r": 0.191,
+    "avg_pct": 1.232,
+    "eur": 32.02,
+    "eur_after_fees": -19.98,
+    "profit_factor": 2.15,
+    "max_dd_eur": -6.97,
+    "stops": 5,
+    "targets": 4
+   },
+   "passed": false,
+   "score": -99
+  },
+  {
+   "strategy": "gap",
+   "gap": 2.0,
+   "rvol": 3.0,
+   "target_r": 2.0,
+   "id": "gap-2-v3-2R",
+   "label": "News-Sprung: Lücke ≥ 2 % · Volumen ≥ 3× · Ziel 2R",
+   "train": {
+    "n": 24,
+    "t": 1.96,
+    "win_rate": 66.7,
+    "avg_r": 0.34,
+    "avg_pct": 2.004,
+    "eur": 48.1,
+    "eur_after_fees": 0.1,
+    "profit_factor": 3.14,
+    "max_dd_eur": -4.62,
+    "stops": 4,
+    "targets": 2
+   },
+   "test": {
+    "n": 11,
+    "t": -2.93,
+    "win_rate": 18.2,
+    "avg_r": -0.424,
+    "avg_pct": -1.48,
+    "eur": -16.28,
+    "eur_after_fees": -38.28,
+    "profit_factor": 0.07,
+    "max_dd_eur": -16.28,
+    "stops": 1,
+    "targets": 0
+   },
+   "all": {
+    "n": 35,
+    "t": 1.19,
+    "win_rate": 51.4,
+    "avg_r": 0.1,
+    "avg_pct": 0.909,
+    "eur": 31.82,
+    "eur_after_fees": -38.18,
+    "profit_factor": 1.8,
+    "max_dd_eur": -7.61,
+    "stops": 5,
+    "targets": 2
+   },
+   "passed": false,
+   "score": -99
+  },
+  {
+   "strategy": "gap",
+   "gap": 2.0,
+   "rvol": 3.0,
+   "target_r": 1.5,
+   "id": "gap-2-v3-1.5R",
+   "label": "News-Sprung: Lücke ≥ 2 % · Volumen ≥ 3× · Ziel 1,5R",
+   "train": {
+    "n": 24,
+    "t": 1.95,
+    "win_rate": 66.7,
+    "avg_r": 0.29,
+    "avg_pct": 1.697,
+    "eur": 40.72,
+    "eur_after_fees": -7.28,
+    "profit_factor": 2.81,
+    "max_dd_eur": -4.62,
+    "stops": 4,
+    "targets": 4
+   },
+   "test": {
+    "n": 11,
+    "t": -2.93,
+    "win_rate": 18.2,
+    "avg_r": -0.424,
+    "avg_pct": -1.48,
+    "eur": -16.28,
+    "eur_after_fees": -38.28,
+    "profit_factor": 0.07,
+    "max_dd_eur": -16.28,
+    "stops": 1,
+    "targets": 0
+   },
+   "all": {
+    "n": 35,
+    "t": 1.06,
+    "win_rate": 51.4,
+    "avg_r": 0.065,
+    "avg_pct": 0.698,
+    "eur": 24.44,
+    "eur_after_fees": -45.56,
+    "profit_factor": 1.61,
+    "max_dd_eur": -7.61,
+    "stops": 5,
+    "targets": 4
+   },
+   "passed": false,
+   "score": -99
+  }
+ ],
+ "curves": {
+  "orb-30-low-2R-v1.5": [
+   [
+    "2026-07-30",
+    0.0
+   ],
+   [
+    "2026-07-31",
+    0.0
+   ],
+   [
+    "2026-08-03",
+    0.0
+   ],
+   [
+    "2026-08-04",
+    0.0
+   ],
+   [
+    "2026-08-05",
+    0.0
+   ],
+   [
+    "2026-08-06",
+    -2.85
+   ],
+   [
+    "2026-08-07",
+    -6.22
+   ],
+   [
+    "2026-08-10",
+    -8.03
+   ],
+   [
+    "2026-08-11",
+    -7.28
+   ],
+   [
+    "2026-08-12",
+    -3.74
+   ],
+   [
+    "2026-08-13",
+    -0.74
+   ],
+   [
+    "2026-08-14",
+    0.39
+   ],
+   [
+    "2026-08-17",
+    0.75
+   ],
+   [
+    "2026-08-18",
+    -5.96
+   ],
+   [
+    "2026-08-19",
+    15.13
+   ],
+   [
+    "2026-08-20",
+    16.04
+   ],
+   [
+    "2026-08-21",
+    14.06
+   ],
+   [
+    "2026-08-24",
+    6.07
+   ],
+   [
+    "2026-08-25",
+    3.64
+   ],
+   [
+    "2026-08-26",
+    3.11
+   ],
+   [
+    "2026-08-27",
+    16.3
+   ],
+   [
+    "2026-08-28",
+    15.42
+   ],
+   [
+    "2026-08-31",
+    17.27
+   ],
+   [
+    "2026-09-01",
+    8.5
+   ],
+   [
+    "2026-09-02",
+    1.09
+   ],
+   [
+    "2026-09-03",
+    1.91
+   ],
+   [
+    "2026-09-04",
+    2.38
+   ],
+   [
+    "2026-09-08",
+    8.32
+   ],
+   [
+    "2026-09-09",
+    11.73
+   ],
+   [
+    "2026-09-10",
+    10.27
+   ],
+   [
+    "2026-09-11",
+    5.98
+   ],
+   [
+    "2026-09-14",
+    19.32
+   ],
+   [
+    "2026-09-15",
+    21.24
+   ],
+   [
+    "2026-09-16",
+    17.58
+   ],
+   [
+    "2026-09-17",
+    5.21
+   ],
+   [
+    "2026-09-18",
+    13.71
+   ],
+   [
+    "2026-09-21",
+    24.15
+   ],
+   [
+    "2026-09-22",
+    24.16
+   ],
+   [
+    "2026-09-23",
+    19.38
+   ],
+   [
+    "2026-09-24",
+    19.76
+   ],
+   [
+    "2026-09-25",
+    24.65
+   ],
+   [
+    "2026-09-28",
+    35.23
+   ],
+   [
+    "2026-09-29",
+    31.38
+   ],
+   [
+    "2026-09-30",
+    21.12
+   ],
+   [
+    "2026-10-01",
+    21.12
+   ],
+   [
+    "2026-10-02",
+    17.05
+   ],
+   [
+    "2026-10-05",
+    15.18
+   ],
+   [
+    "2026-10-06",
+    15.44
+   ],
+   [
+    "2026-10-07",
+    15.39
+   ],
+   [
+    "2026-10-08",
+    17.85
+   ],
+   [
+    "2026-10-09",
+    19.75
+   ],
+   [
+    "2026-10-12",
+    15.87
+   ],
+   [
+    "2026-10-13",
+    17.5
+   ],
+   [
+    "2026-10-14",
+    13.43
+   ],
+   [
+    "2026-10-15",
+    59.36
+   ],
+   [
+    "2026-10-16",
+    45.73
+   ],
+   [
+    "2026-10-19",
+    44.17
+   ],
+   [
+    "2026-10-20",
+    39.93
+   ],
+   [
+    "2026-10-21",
+    34.52
+   ],
+   [
+    "2026-10-22",
+    29.82
+   ]
+  ],
+  "orb-30-low-1.5R-v1.5": [
+   [
+    "2026-07-30",
+    0.0
+   ],
+   [
+    "2026-07-31",
+    0.0
+   ],
+   [
+    "2026-08-03",
+    0.0
+   ],
+   [
+    "2026-08-04",
+    0.0
+   ],
+   [
+    "2026-08-05",
+    0.0
+   ],
+   [
+    "2026-08-06",
+    -2.85
+   ],
+   [
+    "2026-08-07",
+    -6.22
+   ],
+   [
+    "2026-08-10",
+    -8.03
+   ],
+   [
+    "2026-08-11",
+    -8.01
+   ],
+   [
+    "2026-08-12",
+    -4.48
+   ],
+   [
+    "2026-08-13",
+    -2.13
+   ],
+   [
+    "2026-08-14",
+    -1.0
+   ],
+   [
+    "2026-08-17",
+    -0.63
+   ],
+   [
+    "2026-08-18",
+    -7.34
+   ],
+   [
+    "2026-08-19",
+    10.19
+   ],
+   [
+    "2026-08-20",
+    11.09
+   ],
+   [
+    "2026-08-21",
+    9.12
+   ],
+   [
+    "2026-08-24",
+    1.13
+   ],
+   [
+    "2026-08-25",
+    -1.3
+   ],
+   [
+    "2026-08-26",
+    -1.83
+   ],
+   [
+    "2026-08-27",
+    11.37
+   ],
+   [
+    "2026-08-28",
+    10.48
+   ],
+   [
+    "2026-08-31",
+    12.33
+   ],
+   [
+    "2026-09-01",
+    3.56
+   ],
+   [
+    "2026-09-02",
+    -3.85
+   ],
+   [
+    "2026-09-03",
+    -3.03
+   ],
+   [
+    "2026-09-04",
+    -2.56
+   ],
+   [
+    "2026-09-08",
+    0.67
+   ],
+   [
+    "2026-09-09",
+    4.83
+   ],
+   [
+    "2026-09-10",
+    3.36
+   ],
+   [
+    "2026-09-11",
+    -0.92
+   ],
+   [
+    "2026-09-14",
+    12.73
+   ],
+   [
+    "2026-09-15",
+    14.65
+   ],
+   [
+    "2026-09-16",
+    10.98
+   ],
+   [
+    "2026-09-17",
+    -1.39
+   ],
+   [
+    "2026-09-18",
+    6.68
+   ],
+   [
+    "2026-09-21",
+    17.12
+   ],
+   [
+    "2026-09-22",
+    15.92
+   ],
+   [
+    "2026-09-23",
+    11.15
+   ],
+   [
+    "2026-09-24",
+    11.53
+   ],
+   [
+    "2026-09-25",
+    16.38
+   ],
+   [
+    "2026-09-28",
+    25.76
+   ],
+   [
+    "2026-09-29",
+    21.92
+   ],
+   [
+    "2026-09-30",
+    11.66
+   ],
+   [
+    "2026-10-01",
+    11.66
+   ],
+   [
+    "2026-10-02",
+    8.31
+   ],
+   [
+    "2026-10-05",
+    6.45
+   ],
+   [
+    "2026-10-06",
+    6.02
+   ],
+   [
+    "2026-10-07",
+    5.97
+   ],
+   [
+    "2026-10-08",
+    8.43
+   ],
+   [
+    "2026-10-09",
+    10.31
+   ],
+   [
+    "2026-10-12",
+    6.43
+   ],
+   [
+    "2026-10-13",
+    8.06
+   ],
+   [
+    "2026-10-14",
+    3.99
+   ],
+   [
+    "2026-10-15",
+    46.95
+   ],
+   [
+    "2026-10-16",
+    33.33
+   ],
+   [
+    "2026-10-19",
+    31.77
+   ],
+   [
+    "2026-10-20",
+    28.32
+   ],
+   [
+    "2026-10-21",
+    22.9
+   ],
+   [
+    "2026-10-22",
+    18.21
+   ]
+  ],
+  "orb-30-mid-2R-v1.5": [
+   [
+    "2026-07-30",
+    0.0
+   ],
+   [
+    "2026-07-31",
+    0.0
+   ],
+   [
+    "2026-08-03",
+    0.0
+   ],
+   [
+    "2026-08-04",
+    0.0
+   ],
+   [
+    "2026-08-05",
+    0.0
+   ],
+   [
+    "2026-08-06",
+    -1.85
+   ],
+   [
+    "2026-08-07",
+    -3.31
+   ],
+   [
+    "2026-08-10",
+    -4.78
+   ],
+   [
+    "2026-08-11",
+    -6.56
+   ],
+   [
+    "2026-08-12",
+    -3.03
+   ],
+   [
+    "2026-08-13",
+    1.89
+   ],
+   [
+    "2026-08-14",
+    3.02
+   ],
+   [
+    "2026-08-17",
+    3.38
+   ],
+   [
+    "2026-08-18",
+    -4.45
+   ],
+   [
+    "2026-08-19",
+    10.73
+   ],
+   [
+    "2026-08-20",
+    12.32
+   ],
+   [
+    "2026-08-21",
+    4.07
+   ],
+   [
+    "2026-08-24",
+    -2.37
+   ],
+   [
+    "2026-08-25",
+    -2.56
+   ],
+   [
+    "2026-08-26",
+    -2.56
+   ],
+   [
+    "2026-08-27",
+    11.53
+   ],
+   [
+    "2026-08-28",
+    10.54
+   ],
+   [
+    "2026-08-31",
+    12.4
+   ],
+   [
+    "2026-09-01",
+    7.66
+   ],
+   [
+    "2026-09-02",
+    4.06
+   ],
+   [
+    "2026-09-03",
+    5.46
+   ],
+   [
+    "2026-09-04",
+    7.55
+   ],
+   [
+    "2026-09-08",
+    10.68
+   ],
+   [
+    "2026-09-09",
+    16.9
+   ],
+   [
+    "2026-09-10",
+    16.25
+   ],
+   [
+    "2026-09-11",
+    11.73
+   ],
+   [
+    "2026-09-14",
+    24.97
+   ],
+   [
+    "2026-09-15",
+    26.89
+   ],
+   [
+    "2026-09-16",
+    24.9
+   ],
+   [
+    "2026-09-17",
+    14.44
+   ],
+   [
+    "2026-09-18",
+    24.24
+   ],
+   [
+    "2026-09-21",
+    35.95
+   ],
+   [
+    "2026-09-22",
+    31.25
+   ],
+   [
+    "2026-09-23",
+    26.89
+   ],
+   [
+    "2026-09-24",
+    27.77
+   ],
+   [
+    "2026-09-25",
+    30.32
+   ],
+   [
+    "2026-09-28",
+    41.66
+   ],
+   [
+    "2026-09-29",
+    37.08
+   ],
+   [
+    "2026-09-30",
+    31.14
+   ],
+   [
+    "2026-10-01",
+    31.14
+   ],
+   [
+    "2026-10-02",
+    28.84
+   ],
+   [
+    "2026-10-05",
+    26.36
+   ],
+   [
+    "2026-10-06",
+    26.37
+   ],
+   [
+    "2026-10-07",
+    25.66
+   ],
+   [
+    "2026-10-08",
+    28.12
+   ],
+   [
+    "2026-10-09",
+    27.78
+   ],
+   [
+    "2026-10-12",
+    22.87
+   ],
+   [
+    "2026-10-13",
+    24.5
+   ],
+   [
+    "2026-10-14",
+    22.36
+   ],
+   [
+    "2026-10-15",
+    51.69
+   ],
+   [
+    "2026-10-16",
+    41.87
+   ],
+   [
+    "2026-10-19",
+    40.41
+   ],
+   [
+    "2026-10-20",
+    38.67
+   ],
+   [
+    "2026-10-21",
+    33.17
+   ],
+   [
+    "2026-10-22",
+    30.39
+   ]
+  ],
+  "bounce-gapdown3-daylow-2R": [
+   [
+    "2026-07-30",
+    0.0
+   ],
+   [
+    "2026-07-31",
+    2.15
+   ],
+   [
+    "2026-08-03",
+    1.61
+   ],
+   [
+    "2026-08-04",
+    4.72
+   ],
+   [
+    "2026-08-05",
+    -10.19
+   ],
+   [
+    "2026-08-06",
+    -11.34
+   ],
+   [
+    "2026-08-07",
+    -11.34
+   ],
+   [
+    "2026-08-10",
+    -11.36
+   ],
+   [
+    "2026-08-11",
+    -11.16
+   ],
+   [
+    "2026-08-12",
+    -10.61
+   ],
+   [
+    "2026-08-13",
+    -11.74
+   ],
+   [
+    "2026-08-14",
+    -13.05
+   ],
+   [
+    "2026-08-17",
+    -14.01
+   ],
+   [
+    "2026-08-18",
+    -27.69
+   ],
+   [
+    "2026-08-19",
+    -27.69
+   ],
+   [
+    "2026-08-20",
+    -34.55
+   ],
+   [
+    "2026-08-21",
+    -36.02
+   ],
+   [
+    "2026-08-24",
+    -29.93
+   ],
+   [
+    "2026-08-25",
+    -31.11
+   ],
+   [
+    "2026-08-26",
+    -28.76
+   ],
+   [
+    "2026-08-27",
+    -31.01
+   ],
+   [
+    "2026-08-28",
+    -33.11
+   ],
+   [
+    "2026-08-31",
+    -33.11
+   ],
+   [
+    "2026-09-01",
+    -35.76
+   ],
+   [
+    "2026-09-02",
+    -40.58
+   ],
+   [
+    "2026-09-03",
+    -39.69
+   ],
+   [
+    "2026-09-04",
+    -43.0
+   ],
+   [
+    "2026-09-08",
+    -47.07
+   ],
+   [
+    "2026-09-09",
+    -50.77
+   ],
+   [
+    "2026-09-10",
+    -46.91
+   ],
+   [
+    "2026-09-11",
+    -46.91
+   ],
+   [
+    "2026-09-14",
+    -58.7
+   ],
+   [
+    "2026-09-15",
+    -62.85
+   ],
+   [
+    "2026-09-16",
+    -63.91
+   ],
+   [
+    "2026-09-17",
+    -63.91
+   ],
+   [
+    "2026-09-18",
+    -63.91
+   ],
+   [
+    "2026-09-21",
+    -63.91
+   ],
+   [
+    "2026-09-22",
+    -65.29
+   ],
+   [
+    "2026-09-23",
+    -66.32
+   ],
+   [
+    "2026-09-24",
+    -58.16
+   ],
+   [
+    "2026-09-25",
+    -58.16
+   ],
+   [
+    "2026-09-28",
+    -59.1
+   ],
+   [
+    "2026-09-29",
+    -60.43
+   ],
+   [
+    "2026-09-30",
+    -62.03
+   ],
+   [
+    "2026-10-01",
+    -62.03
+   ],
+   [
+    "2026-10-02",
+    -59.91
+   ],
+   [
+    "2026-10-05",
+    -60.52
+   ],
+   [
+    "2026-10-06",
+    -60.52
+   ],
+   [
+    "2026-10-07",
+    -63.07
+   ],
+   [
+    "2026-10-08",
+    -67.63
+   ],
+   [
+    "2026-10-09",
+    -70.46
+   ],
+   [
+    "2026-10-12",
+    -71.02
+   ],
+   [
+    "2026-10-13",
+    -54.17
+   ],
+   [
+    "2026-10-14",
+    -57.13
+   ],
+   [
+    "2026-10-15",
+    27.45
+   ],
+   [
+    "2026-10-16",
+    20.94
+   ],
+   [
+    "2026-10-19",
+    20.94
+   ],
+   [
+    "2026-10-20",
+    18.61
+   ],
+   [
+    "2026-10-21",
+    20.72
+   ],
+   [
+    "2026-10-22",
+    8.72
+   ]
+  ],
+  "bounce-gapdown3-pct1.5-2R": [
+   [
+    "2026-07-30",
+    0.0
+   ],
+   [
+    "2026-07-31",
+    5.09
+   ],
+   [
+    "2026-08-03",
+    4.56
+   ],
+   [
+    "2026-08-04",
+    6.03
+   ],
+   [
+    "2026-08-05",
+    -1.62
+   ],
+   [
+    "2026-08-06",
+    -4.55
+   ],
+   [
+    "2026-08-07",
+    -4.55
+   ],
+   [
+    "2026-08-10",
+    -4.57
+   ],
+   [
+    "2026-08-11",
+    -3.8
+   ],
+   [
+    "2026-08-12",
+    -3.25
+   ],
+   [
+    "2026-08-13",
+    -4.74
+   ],
+   [
+    "2026-08-14",
+    -6.33
+   ],
+   [
+    "2026-08-17",
+    -7.29
+   ],
+   [
+    "2026-08-18",
+    -20.31
+   ],
+   [
+    "2026-08-19",
+    -20.31
+   ],
+   [
+    "2026-08-20",
+    -21.91
+   ],
+   [
+    "2026-08-21",
+    -23.51
+   ],
+   [
+    "2026-08-24",
+    -16.61
+   ],
+   [
+    "2026-08-25",
+    -13.57
+   ],
+   [
+    "2026-08-26",
+    -12.05
+   ],
+   [
+    "2026-08-27",
+    -13.65
+   ],
+   [
+    "2026-08-28",
+    -15.02
+   ],
+   [
+    "2026-08-31",
+    -15.02
+   ],
+   [
+    "2026-09-01",
+    -15.8
+   ],
+   [
+    "2026-09-02",
+    -19.0
+   ],
+   [
+    "2026-09-03",
+    -17.55
+   ],
+   [
+    "2026-09-04",
+    -21.97
+   ],
+   [
+    "2026-09-08",
+    -25.4
+   ],
+   [
+    "2026-09-09",
+    -26.99
+   ],
+   [
+    "2026-09-10",
+    -24.95
+   ],
+   [
+    "2026-09-11",
+    -24.95
+   ],
+   [
+    "2026-09-14",
+    -29.99
+   ],
+   [
+    "2026-09-15",
+    -33.19
+   ],
+   [
+    "2026-09-16",
+    -34.79
+   ],
+   [
+    "2026-09-17",
+    -34.79
+   ],
+   [
+    "2026-09-18",
+    -34.79
+   ],
+   [
+    "2026-09-21",
+    -34.79
+   ],
+   [
+    "2026-09-22",
+    -36.39
+   ],
+   [
+    "2026-09-23",
+    -37.29
+   ],
+   [
+    "2026-09-24",
+    -31.03
+   ],
+   [
+    "2026-09-25",
+    -31.03
+   ],
+   [
+    "2026-09-28",
+    -32.15
+   ],
+   [
+    "2026-09-29",
+    -33.48
+   ],
+   [
+    "2026-09-30",
+    -36.6
+   ],
+   [
+    "2026-10-01",
+    -36.6
+   ],
+   [
+    "2026-10-02",
+    -34.48
+   ],
+   [
+    "2026-10-05",
+    -35.09
+   ],
+   [
+    "2026-10-06",
+    -35.09
+   ],
+   [
+    "2026-10-07",
+    -34.82
+   ],
+   [
+    "2026-10-08",
+    -39.61
+   ],
+   [
+    "2026-10-09",
+    -40.54
+   ],
+   [
+    "2026-10-12",
+    -41.1
+   ],
+   [
+    "2026-10-13",
+    -28.0
+   ],
+   [
+    "2026-10-14",
+    -30.79
+   ],
+   [
+    "2026-10-15",
+    30.71
+   ],
+   [
+    "2026-10-16",
+    24.32
+   ],
+   [
+    "2026-10-19",
+    24.32
+   ],
+   [
+    "2026-10-20",
+    22.75
+   ],
+   [
+    "2026-10-21",
+    24.86
+   ],
+   [
+    "2026-10-22",
+    13.22
+   ]
+  ],
+  "bounce-gapdown3-daylow-1R": [
+   [
+    "2026-07-30",
+    0.0
+   ],
+   [
+    "2026-07-31",
+    2.06
+   ],
+   [
+    "2026-08-03",
+    1.52
+   ],
+   [
+    "2026-08-04",
+    2.8
+   ],
+   [
+    "2026-08-05",
+    -12.11
+   ],
+   [
+    "2026-08-06",
+    -16.44
+   ],
+   [
+    "2026-08-07",
+    -16.44
+   ],
+   [
+    "2026-08-10",
+    -14.94
+   ],
+   [
+    "2026-08-11",
+    -14.56
+   ],
+   [
+    "2026-08-12",
+    -14.01
+   ],
+   [
+    "2026-08-13",
+    -15.2
+   ],
+   [
+    "2026-08-14",
+    -16.51
+   ],
+   [
+    "2026-08-17",
+    -17.47
+   ],
+   [
+    "2026-08-18",
+    -31.16
+   ],
+   [
+    "2026-08-19",
+    -31.16
+   ],
+   [
+    "2026-08-20",
+    -38.01
+   ],
+   [
+    "2026-08-21",
+    -39.49
+   ],
+   [
+    "2026-08-24",
+    -33.1
+   ],
+   [
+    "2026-08-25",
+    -34.28
+   ],
+   [
+    "2026-08-26",
+    -31.93
+   ],
+   [
+    "2026-08-27",
+    -34.18
+   ],
+   [
+    "2026-08-28",
+    -36.28
+   ],
+   [
+    "2026-08-31",
+    -36.28
+   ],
+   [
+    "2026-09-01",
+    -39.94
+   ],
+   [
+    "2026-09-02",
+    -39.15
+   ],
+   [
+    "2026-09-03",
+    -39.54
+   ],
+   [
+    "2026-09-04",
+    -42.51
+   ],
+   [
+    "2026-09-08",
+    -46.58
+   ],
+   [
+    "2026-09-09",
+    -50.27
+   ],
+   [
+    "2026-09-10",
+    -42.52
+   ],
+   [
+    "2026-09-11",
+    -42.52
+   ],
+   [
+    "2026-09-14",
+    -48.5
+   ],
+   [
+    "2026-09-15",
+    -52.65
+   ],
+   [
+    "2026-09-16",
+    -53.71
+   ],
+   [
+    "2026-09-17",
+    -53.71
+   ],
+   [
+    "2026-09-18",
+    -53.71
+   ],
+   [
+    "2026-09-21",
+    -53.71
+   ],
+   [
+    "2026-09-22",
+    -55.09
+   ],
+   [
+    "2026-09-23",
+    -56.12
+   ],
+   [
+    "2026-09-24",
+    -50.28
+   ],
+   [
+    "2026-09-25",
+    -50.28
+   ],
+   [
+    "2026-09-28",
+    -47.64
+   ],
+   [
+    "2026-09-29",
+    -48.97
+   ],
+   [
+    "2026-09-30",
+    -50.57
+   ],
+   [
+    "2026-10-01",
+    -50.57
+   ],
+   [
+    "2026-10-02",
+    -48.45
+   ],
+   [
+    "2026-10-05",
+    -49.06
+   ],
+   [
+    "2026-10-06",
+    -49.06
+   ],
+   [
+    "2026-10-07",
+    -51.49
+   ],
+   [
+    "2026-10-08",
+    -56.05
+   ],
+   [
+    "2026-10-09",
+    -59.79
+   ],
+   [
+    "2026-10-12",
+    -60.35
+   ],
+   [
+    "2026-10-13",
+    -49.58
+   ],
+   [
+    "2026-10-14",
+    -55.61
+   ],
+   [
+    "2026-10-15",
+    -6.41
+   ],
+   [
+    "2026-10-16",
+    -12.93
+   ],
+   [
+    "2026-10-19",
+    -12.93
+   ],
+   [
+    "2026-10-20",
+    -15.25
+   ],
+   [
+    "2026-10-21",
+    -13.14
+   ],
+   [
+    "2026-10-22",
+    -25.14
+   ]
+  ],
+  "bounce-rsi30-pct1.5-2R": [
+   [
+    "2026-07-30",
+    0.0
+   ],
+   [
+    "2026-07-31",
+    0.0
+   ],
+   [
+    "2026-08-03",
+    0.0
+   ],
+   [
+    "2026-08-04",
+    0.0
+   ],
+   [
+    "2026-08-05",
+    0.0
+   ],
+   [
+    "2026-08-06",
+    0.0
+   ],
+   [
+    "2026-08-07",
+    0.0
+   ],
+   [
+    "2026-08-10",
+    0.0
+   ],
+   [
+    "2026-08-11",
+    0.0
+   ],
+   [
+    "2026-08-12",
+    0.0
+   ],
+   [
+    "2026-08-13",
+    0.0
+   ],
+   [
+    "2026-08-14",
+    0.0
+   ],
+   [
+    "2026-08-17",
+    0.0
+   ],
+   [
+    "2026-08-18",
+    0.0
+   ],
+   [
+    "2026-08-19",
+    0.0
+   ],
+   [
+    "2026-08-20",
+    -0.94
+   ],
+   [
+    "2026-08-21",
+    -5.39
+   ],
+   [
+    "2026-08-24",
+    -6.86
+   ],
+   [
+    "2026-08-25",
+    -8.51
+   ],
+   [
+    "2026-08-26",
+    -5.61
+   ],
+   [
+    "2026-08-27",
+    -1.99
+   ],
+   [
+    "2026-08-28",
+    -5.53
+   ],
+   [
+    "2026-08-31",
+    -10.98
+   ],
+   [
+    "2026-09-01",
+    -14.15
+   ],
+   [
+    "2026-09-02",
+    -15.02
+   ],
+   [
+    "2026-09-03",
+    -11.69
+   ],
+   [
+    "2026-09-04",
+    -11.63
+   ],
+   [
+    "2026-09-08",
+    -12.95
+   ],
+   [
+    "2026-09-09",
+    -15.72
+   ],
+   [
+    "2026-09-10",
+    -17.25
+   ],
+   [
+    "2026-09-11",
+    -21.73
+   ],
+   [
+    "2026-09-14",
+    -17.4
+   ],
+   [
+    "2026-09-15",
+    -17.96
+   ],
+   [
+    "2026-09-16",
+    -25.8
+   ],
+   [
+    "2026-09-17",
+    -26.99
+   ],
+   [
+    "2026-09-18",
+    -30.17
+   ],
+   [
+    "2026-09-21",
+    -23.53
+   ],
+   [
+    "2026-09-22",
+    -22.27
+   ],
+   [
+    "2026-09-23",
+    -21.66
+   ],
+   [
+    "2026-09-24",
+    -20.05
+   ],
+   [
+    "2026-09-25",
+    -12.26
+   ],
+   [
+    "2026-09-28",
+    -10.2
+   ],
+   [
+    "2026-09-29",
+    -9.74
+   ],
+   [
+    "2026-09-30",
+    -20.06
+   ],
+   [
+    "2026-10-01",
+    -8.62
+   ],
+   [
+    "2026-10-02",
+    -14.33
+   ],
+   [
+    "2026-10-05",
+    -7.18
+   ],
+   [
+    "2026-10-06",
+    -5.02
+   ],
+   [
+    "2026-10-07",
+    -6.96
+   ],
+   [
+    "2026-10-08",
+    1.53
+   ],
+   [
+    "2026-10-09",
+    2.68
+   ],
+   [
+    "2026-10-12",
+    2.26
+   ],
+   [
+    "2026-10-13",
+    1.94
+   ],
+   [
+    "2026-10-14",
+    4.92
+   ],
+   [
+    "2026-10-15",
+    33.8
+   ],
+   [
+    "2026-10-16",
+    25.79
+   ],
+   [
+    "2026-10-19",
+    5.07
+   ],
+   [
+    "2026-10-20",
+    4.77
+   ],
+   [
+    "2026-10-21",
+    12.26
+   ],
+   [
+    "2026-10-22",
+    8.09
+   ]
+  ],
+  "bounce-rsi30-daylow-2R": [
+   [
+    "2026-07-30",
+    0.0
+   ],
+   [
+    "2026-07-31",
+    0.0
+   ],
+   [
+    "2026-08-03",
+    0.0
+   ],
+   [
+    "2026-08-04",
+    0.0
+   ],
+   [
+    "2026-08-05",
+    0.0
+   ],
+   [
+    "2026-08-06",
+    0.0
+   ],
+   [
+    "2026-08-07",
+    0.0
+   ],
+   [
+    "2026-08-10",
+    0.0
+   ],
+   [
+    "2026-08-11",
+    0.0
+   ],
+   [
+    "2026-08-12",
+    0.0
+   ],
+   [
+    "2026-08-13",
+    0.0
+   ],
+   [
+    "2026-08-14",
+    0.0
+   ],
+   [
+    "2026-08-17",
+    0.0
+   ],
+   [
+    "2026-08-18",
+    0.0
+   ],
+   [
+    "2026-08-19",
+    0.0
+   ],
+   [
+    "2026-08-20",
+    -0.23
+   ],
+   [
+    "2026-08-21",
+    -3.28
+   ],
+   [
+    "2026-08-24",
+    -5.19
+   ],
+   [
+    "2026-08-25",
+    -6.22
+   ],
+   [
+    "2026-08-26",
+    -6.47
+   ],
+   [
+    "2026-08-27",
+    -3.1
+   ],
+   [
+    "2026-08-28",
+    -4.47
+   ],
+   [
+    "2026-08-31",
+    -9.19
+   ],
+   [
+    "2026-09-01",
+    -12.99
+   ],
+   [
+    "2026-09-02",
+    -12.82
+   ],
+   [
+    "2026-09-03",
+    -12.24
+   ],
+   [
+    "2026-09-04",
+    -12.22
+   ],
+   [
+    "2026-09-08",
+    -12.31
+   ],
+   [
+    "2026-09-09",
+    -14.32
+   ],
+   [
+    "2026-09-10",
+    -18.93
+   ],
+   [
+    "2026-09-11",
+    -23.52
+   ],
+   [
+    "2026-09-14",
+    -20.38
+   ],
+   [
+    "2026-09-15",
+    -20.65
+   ],
+   [
+    "2026-09-16",
+    -26.29
+   ],
+   [
+    "2026-09-17",
+    -28.42
+   ],
+   [
+    "2026-09-18",
+    -32.14
+   ],
+   [
+    "2026-09-21",
+    -23.35
+   ],
+   [
+    "2026-09-22",
+    -22.97
+   ],
+   [
+    "2026-09-23",
+    -22.66
+   ],
+   [
+    "2026-09-24",
+    -23.91
+   ],
+   [
+    "2026-09-25",
+    -18.58
+   ],
+   [
+    "2026-09-28",
+    -16.3
+   ],
+   [
+    "2026-09-29",
+    -17.2
+   ],
+   [
+    "2026-09-30",
+    -25.48
+   ],
+   [
+    "2026-10-01",
+    -15.79
+   ],
+   [
+    "2026-10-02",
+    -22.54
+   ],
+   [
+    "2026-10-05",
+    -16.46
+   ],
+   [
+    "2026-10-06",
+    -18.83
+   ],
+   [
+    "2026-10-07",
+    -19.8
+   ],
+   [
+    "2026-10-08",
+    -12.27
+   ],
+   [
+    "2026-10-09",
+    -9.66
+   ],
+   [
+    "2026-10-12",
+    -10.09
+   ],
+   [
+    "2026-10-13",
+    -10.4
+   ],
+   [
+    "2026-10-14",
+    -7.65
+   ],
+   [
+    "2026-10-15",
+    28.18
+   ],
+   [
+    "2026-10-16",
+    20.68
+   ],
+   [
+    "2026-10-19",
+    1.66
+   ],
+   [
+    "2026-10-20",
+    1.35
+   ],
+   [
+    "2026-10-21",
+    6.22
+   ],
+   [
+    "2026-10-22",
+    2.81
+   ]
+  ]
+ },
+ "samples": {
+  "orb-30-low-2R-v1.5": [
+   {
+    "entry": 85.7979,
+    "stop": 84.15,
+    "target": 89.0936,
+    "exit": 84.1079,
+    "why": "Stopp",
+    "r": -1.026,
+    "pct": -1.97,
+    "in_k": 20,
+    "out_k": 42,
+    "symbol": "GM",
+    "date": "2026-10-16",
+    "test": true,
+    "in_at": "11:15",
+    "out_at": "13:05"
+   },
+   {
+    "entry": 74.9675,
+    "stop": 74.495,
+    "target": 75.9124,
+    "exit": 75.1124,
+    "why": "Schluss",
+    "r": 0.307,
+    "pct": 0.193,
+    "in_k": 29,
+    "out_k": 76,
+    "symbol": "MO",
+    "date": "2026-10-16",
+    "test": true,
+    "in_at": "12:00",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 431.7958,
+    "stop": 426.7,
+    "target": 441.9873,
+    "exit": 433.2833,
+    "why": "Schluss",
+    "r": 0.292,
+    "pct": 0.344,
+    "in_k": 8,
+    "out_k": 76,
+    "symbol": "ISRG",
+    "date": "2026-10-19",
+    "test": true,
+    "in_at": "10:15",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 265.0775,
+    "stop": 256.14,
+    "target": 282.9524,
+    "exit": 260.0299,
+    "why": "Schluss",
+    "r": -0.565,
+    "pct": -1.904,
+    "in_k": 23,
+    "out_k": 76,
+    "symbol": "DDOG",
+    "date": "2026-10-19",
+    "test": true,
+    "in_at": "11:30",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 549.2395,
+    "stop": 523.64,
+    "target": 600.4385,
+    "exit": 534.4177,
+    "why": "Schluss",
+    "r": -0.579,
+    "pct": -2.699,
+    "in_k": 6,
+    "out_k": 76,
+    "symbol": "NOC",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 60.1451,
+    "stop": 57.235,
+    "target": 65.9652,
+    "exit": 62.1789,
+    "why": "Schluss",
+    "r": 0.699,
+    "pct": 3.382,
+    "in_k": 7,
+    "out_k": 76,
+    "symbol": "CRWV",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:10",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 12.0949,
+    "stop": 11.81,
+    "target": 12.6648,
+    "exit": 12.1189,
+    "why": "Schluss",
+    "r": 0.084,
+    "pct": 0.198,
+    "in_k": 7,
+    "out_k": 76,
+    "symbol": "F",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:10",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 1025.0122,
+    "stop": 1005.64,
+    "target": 1063.7567,
+    "exit": 1045.3971,
+    "why": "Schluss",
+    "r": 1.052,
+    "pct": 1.989,
+    "in_k": 7,
+    "out_k": 76,
+    "symbol": "URI",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:10",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 1308.0337,
+    "stop": 1260.17,
+    "target": 1403.761,
+    "exit": 1284.7623,
+    "why": "Schluss",
+    "r": -0.486,
+    "pct": -1.779,
+    "in_k": 9,
+    "out_k": 76,
+    "symbol": "LLY",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:20",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 302.4011,
+    "stop": 294.22,
+    "target": 318.7634,
+    "exit": 299.5252,
+    "why": "Schluss",
+    "r": -0.352,
+    "pct": -0.951,
+    "in_k": 10,
+    "out_k": 76,
+    "symbol": "GE",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:25",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 26.2131,
+    "stop": 25.3,
+    "target": 28.0393,
+    "exit": 26.2751,
+    "why": "Schluss",
+    "r": 0.068,
+    "pct": 0.236,
+    "in_k": 12,
+    "out_k": 76,
+    "symbol": "GME",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:35",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 408.6142,
+    "stop": 403.39,
+    "target": 419.0626,
+    "exit": 406.6766,
+    "why": "Schluss",
+    "r": -0.371,
+    "pct": -0.474,
+    "in_k": 13,
+    "out_k": 76,
+    "symbol": "V",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:40",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 203.2916,
+    "stop": 198.7,
+    "target": 212.4748,
+    "exit": 201.1494,
+    "why": "Schluss",
+    "r": -0.467,
+    "pct": -1.054,
+    "in_k": 16,
+    "out_k": 76,
+    "symbol": "COF",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:55",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 78.9495,
+    "stop": 76.55,
+    "target": 83.7484,
+    "exit": 76.5117,
+    "why": "Stopp",
+    "r": -1.016,
+    "pct": -3.088,
+    "in_k": 19,
+    "out_k": 33,
+    "symbol": "GM",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "11:10",
+    "out_at": "12:20"
+   },
+   {
+    "entry": 442.4161,
+    "stop": 429.88,
+    "target": 467.4883,
+    "exit": 442.7885,
+    "why": "Schluss",
+    "r": 0.03,
+    "pct": 0.084,
+    "in_k": 9,
+    "out_k": 76,
+    "symbol": "SPGI",
+    "date": "2026-10-21",
+    "test": true,
+    "in_at": "10:20",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 210.9304,
+    "stop": 205.2442,
+    "target": 222.3028,
+    "exit": 206.6766,
+    "why": "Schluss",
+    "r": -0.748,
+    "pct": -2.017,
+    "in_k": 11,
+    "out_k": 76,
+    "symbol": "COF",
+    "date": "2026-10-21",
+    "test": true,
+    "in_at": "10:30",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 197.3586,
+    "stop": 184.0,
+    "target": 224.0759,
+    "exit": 197.0114,
+    "why": "Schluss",
+    "r": -0.026,
+    "pct": -0.176,
+    "in_k": 19,
+    "out_k": 76,
+    "symbol": "PM",
+    "date": "2026-10-21",
+    "test": true,
+    "in_at": "11:10",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 232.4662,
+    "stop": 217.55,
+    "target": 262.2985,
+    "exit": 233.6431,
+    "why": "Schluss",
+    "r": 0.079,
+    "pct": 0.506,
+    "in_k": 20,
+    "out_k": 76,
+    "symbol": "DHR",
+    "date": "2026-10-21",
+    "test": true,
+    "in_at": "11:15",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 12.5012,
+    "stop": 12.02,
+    "target": 13.4637,
+    "exit": 12.2639,
+    "why": "Schluss",
+    "r": -0.493,
+    "pct": -1.899,
+    "in_k": 23,
+    "out_k": 76,
+    "symbol": "AAL",
+    "date": "2026-10-21",
+    "test": true,
+    "in_at": "11:30",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 234.097,
+    "stop": 229.67,
+    "target": 242.951,
+    "exit": 232.6636,
+    "why": "Schluss",
+    "r": -0.324,
+    "pct": -0.612,
+    "in_k": 23,
+    "out_k": 76,
+    "symbol": "SAP",
+    "date": "2026-10-21",
+    "test": true,
+    "in_at": "11:30",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 702.341,
+    "stop": 661.3,
+    "target": 784.423,
+    "exit": 696.3216,
+    "why": "Schluss",
+    "r": -0.147,
+    "pct": -0.857,
+    "in_k": 23,
+    "out_k": 76,
+    "symbol": "TMO",
+    "date": "2026-10-21",
+    "test": true,
+    "in_at": "11:30",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 102.1661,
+    "stop": 96.26,
+    "target": 113.9782,
+    "exit": 101.7091,
+    "why": "Schluss",
+    "r": -0.077,
+    "pct": -0.447,
+    "in_k": 23,
+    "out_k": 76,
+    "symbol": "UAL",
+    "date": "2026-10-21",
+    "test": true,
+    "in_at": "11:30",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 74.107,
+    "stop": 72.48,
+    "target": 77.3611,
+    "exit": 72.4438,
+    "why": "Stopp",
+    "r": -1.022,
+    "pct": -2.244,
+    "in_k": 6,
+    "out_k": 13,
+    "symbol": "AFRM",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "10:40"
+   },
+   {
+    "entry": 446.7232,
+    "stop": 437.1944,
+    "target": 465.781,
+    "exit": 447.0064,
+    "why": "Schluss",
+    "r": 0.03,
+    "pct": 0.063,
+    "in_k": 6,
+    "out_k": 76,
+    "symbol": "AMGN",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 114.3822,
+    "stop": 105.5,
+    "target": 132.1465,
+    "exit": 118.5407,
+    "why": "Schluss",
+    "r": 0.468,
+    "pct": 3.636,
+    "in_k": 6,
+    "out_k": 76,
+    "symbol": "BX",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 22.8964,
+    "stop": 22.0,
+    "target": 24.6893,
+    "exit": 22.7506,
+    "why": "Schluss",
+    "r": -0.163,
+    "pct": -0.637,
+    "in_k": 6,
+    "out_k": 76,
+    "symbol": "CMCSA",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 51.6708,
+    "stop": 49.515,
+    "target": 55.9825,
+    "exit": 51.8091,
+    "why": "Schluss",
+    "r": 0.064,
+    "pct": 0.268,
+    "in_k": 6,
+    "out_k": 76,
+    "symbol": "CSX",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 79.1896,
+    "stop": 75.38,
+    "target": 86.8087,
+    "exit": 79.1304,
+    "why": "Schluss",
+    "r": -0.016,
+    "pct": -0.075,
+    "in_k": 6,
+    "out_k": 76,
+    "symbol": "DAL",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 80.2201,
+    "stop": 78.64,
+    "target": 83.3803,
+    "exit": 81.879,
+    "why": "Schluss",
+    "r": 1.05,
+    "pct": 2.068,
+    "in_k": 6,
+    "out_k": 76,
+    "symbol": "NEE",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 178.4292,
+    "stop": 172.1966,
+    "target": 190.8943,
+    "exit": 172.1105,
+    "why": "Stopp",
+    "r": -1.014,
+    "pct": -3.541,
+    "in_k": 6,
+    "out_k": 40,
+    "symbol": "QCOM",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "12:55"
+   },
+   {
+    "entry": 9.2546,
+    "stop": 9.01,
+    "target": 9.7439,
+    "exit": 9.0955,
+    "why": "Schluss",
+    "r": -0.651,
+    "pct": -1.72,
+    "in_k": 6,
+    "out_k": 76,
+    "symbol": "XPEV",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 12.5613,
+    "stop": 11.7,
+    "target": 14.2838,
+    "exit": 12.6087,
+    "why": "Schluss",
+    "r": 0.055,
+    "pct": 0.377,
+    "in_k": 7,
+    "out_k": 76,
+    "symbol": "AAL",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:10",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 1307.0632,
+    "stop": 1275.1,
+    "target": 1370.9898,
+    "exit": 1304.4274,
+    "why": "Schluss",
+    "r": -0.082,
+    "pct": -0.202,
+    "in_k": 7,
+    "out_k": 76,
+    "symbol": "LLY",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:10",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 3.3417,
+    "stop": 3.24,
+    "target": 3.545,
+    "exit": 3.3083,
+    "why": "Schluss",
+    "r": -0.328,
+    "pct": -0.997,
+    "in_k": 7,
+    "out_k": 76,
+    "symbol": "NIO",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:10",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 79.6748,
+    "stop": 77.23,
+    "target": 84.5645,
+    "exit": 79.0804,
+    "why": "Schluss",
+    "r": -0.243,
+    "pct": -0.746,
+    "in_k": 7,
+    "out_k": 76,
+    "symbol": "PDD",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:10",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 103.0814,
+    "stop": 100.71,
+    "target": 107.8242,
+    "exit": 101.5692,
+    "why": "Schluss",
+    "r": -0.638,
+    "pct": -1.467,
+    "in_k": 8,
+    "out_k": 76,
+    "symbol": "BABA",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:15",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 159.7298,
+    "stop": 156.78,
+    "target": 165.6295,
+    "exit": 159.7401,
+    "why": "Schluss",
+    "r": 0.003,
+    "pct": 0.006,
+    "in_k": 9,
+    "out_k": 76,
+    "symbol": "ROKU",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:20",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 237.8889,
+    "stop": 233.0,
+    "target": 247.6667,
+    "exit": 237.7061,
+    "why": "Schluss",
+    "r": -0.037,
+    "pct": -0.077,
+    "in_k": 17,
+    "out_k": 76,
+    "symbol": "ZS",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "11:00",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 241.8108,
+    "stop": 236.29,
+    "target": 252.8526,
+    "exit": 241.0794,
+    "why": "Schluss",
+    "r": -0.132,
+    "pct": -0.302,
+    "in_k": 18,
+    "out_k": 76,
+    "symbol": "SAP",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "11:05",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 296.168,
+    "stop": 278.5854,
+    "target": 331.3332,
+    "exit": 298.8205,
+    "why": "Schluss",
+    "r": 0.151,
+    "pct": 0.896,
+    "in_k": 20,
+    "out_k": 76,
+    "symbol": "UNP",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "11:15",
+    "out_at": "15:55"
+   }
+  ],
+  "orb-30-low-1.5R-v1.5": [
+   {
+    "entry": 85.7979,
+    "stop": 84.15,
+    "target": 88.2697,
+    "exit": 84.1079,
+    "why": "Stopp",
+    "r": -1.026,
+    "pct": -1.97,
+    "in_k": 20,
+    "out_k": 42,
+    "symbol": "GM",
+    "date": "2026-10-16",
+    "test": true,
+    "in_at": "11:15",
+    "out_at": "13:05"
+   },
+   {
+    "entry": 74.9675,
+    "stop": 74.495,
+    "target": 75.6762,
+    "exit": 75.1124,
+    "why": "Schluss",
+    "r": 0.307,
+    "pct": 0.193,
+    "in_k": 29,
+    "out_k": 76,
+    "symbol": "MO",
+    "date": "2026-10-16",
+    "test": true,
+    "in_at": "12:00",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 431.7958,
+    "stop": 426.7,
+    "target": 439.4394,
+    "exit": 433.2833,
+    "why": "Schluss",
+    "r": 0.292,
+    "pct": 0.344,
+    "in_k": 8,
+    "out_k": 76,
+    "symbol": "ISRG",
+    "date": "2026-10-19",
+    "test": true,
+    "in_at": "10:15",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 265.0775,
+    "stop": 256.14,
+    "target": 278.4837,
+    "exit": 260.0299,
+    "why": "Schluss",
+    "r": -0.565,
+    "pct": -1.904,
+    "in_k": 23,
+    "out_k": 76,
+    "symbol": "DDOG",
+    "date": "2026-10-19",
+    "test": true,
+    "in_at": "11:30",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 549.2395,
+    "stop": 523.64,
+    "target": 587.6388,
+    "exit": 534.4177,
+    "why": "Schluss",
+    "r": -0.579,
+    "pct": -2.699,
+    "in_k": 6,
+    "out_k": 76,
+    "symbol": "NOC",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 60.1451,
+    "stop": 57.235,
+    "target": 64.5101,
+    "exit": 62.1789,
+    "why": "Schluss",
+    "r": 0.699,
+    "pct": 3.382,
+    "in_k": 7,
+    "out_k": 76,
+    "symbol": "CRWV",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:10",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 12.0949,
+    "stop": 11.81,
+    "target": 12.5224,
+    "exit": 12.1189,
+    "why": "Schluss",
+    "r": 0.084,
+    "pct": 0.198,
+    "in_k": 7,
+    "out_k": 76,
+    "symbol": "F",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:10",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 1025.0122,
+    "stop": 1005.64,
+    "target": 1054.0706,
+    "exit": 1053.5436,
+    "why": "Ziel",
+    "r": 1.473,
+    "pct": 2.784,
+    "in_k": 7,
+    "out_k": 60,
+    "symbol": "URI",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:10",
+    "out_at": "14:35"
+   },
+   {
+    "entry": 1308.0337,
+    "stop": 1260.17,
+    "target": 1379.8292,
+    "exit": 1284.7623,
+    "why": "Schluss",
+    "r": -0.486,
+    "pct": -1.779,
+    "in_k": 9,
+    "out_k": 76,
+    "symbol": "LLY",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:20",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 302.4011,
+    "stop": 294.22,
+    "target": 314.6728,
+    "exit": 299.5252,
+    "why": "Schluss",
+    "r": -0.352,
+    "pct": -0.951,
+    "in_k": 10,
+    "out_k": 76,
+    "symbol": "GE",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:25",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 26.2131,
+    "stop": 25.3,
+    "target": 27.5828,
+    "exit": 26.2751,
+    "why": "Schluss",
+    "r": 0.068,
+    "pct": 0.236,
+    "in_k": 12,
+    "out_k": 76,
+    "symbol": "GME",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:35",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 408.6142,
+    "stop": 403.39,
+    "target": 416.4505,
+    "exit": 406.6766,
+    "why": "Schluss",
+    "r": -0.371,
+    "pct": -0.474,
+    "in_k": 13,
+    "out_k": 76,
+    "symbol": "V",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:40",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 203.2916,
+    "stop": 198.7,
+    "target": 210.179,
+    "exit": 201.1494,
+    "why": "Schluss",
+    "r": -0.467,
+    "pct": -1.054,
+    "in_k": 16,
+    "out_k": 76,
+    "symbol": "COF",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:55",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 78.9495,
+    "stop": 76.55,
+    "target": 82.5486,
+    "exit": 76.5117,
+    "why": "Stopp",
+    "r": -1.016,
+    "pct": -3.088,
+    "in_k": 19,
+    "out_k": 33,
+    "symbol": "GM",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "11:10",
+    "out_at": "12:20"
+   },
+   {
+    "entry": 442.4161,
+    "stop": 429.88,
+    "target": 461.2203,
+    "exit": 442.7885,
+    "why": "Schluss",
+    "r": 0.03,
+    "pct": 0.084,
+    "in_k": 9,
+    "out_k": 76,
+    "symbol": "SPGI",
+    "date": "2026-10-21",
+    "test": true,
+    "in_at": "10:20",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 210.9304,
+    "stop": 205.2442,
+    "target": 219.4597,
+    "exit": 206.6766,
+    "why": "Schluss",
+    "r": -0.748,
+    "pct": -2.017,
+    "in_k": 11,
+    "out_k": 76,
+    "symbol": "COF",
+    "date": "2026-10-21",
+    "test": true,
+    "in_at": "10:30",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 197.3586,
+    "stop": 184.0,
+    "target": 217.3966,
+    "exit": 197.0114,
+    "why": "Schluss",
+    "r": -0.026,
+    "pct": -0.176,
+    "in_k": 19,
+    "out_k": 76,
+    "symbol": "PM",
+    "date": "2026-10-21",
+    "test": true,
+    "in_at": "11:10",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 232.4662,
+    "stop": 217.55,
+    "target": 254.8404,
+    "exit": 233.6431,
+    "why": "Schluss",
+    "r": 0.079,
+    "pct": 0.506,
+    "in_k": 20,
+    "out_k": 76,
+    "symbol": "DHR",
+    "date": "2026-10-21",
+    "test": true,
+    "in_at": "11:15",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 12.5012,
+    "stop": 12.02,
+    "target": 13.2231,
+    "exit": 12.2639,
+    "why": "Schluss",
+    "r": -0.493,
+    "pct": -1.899,
+    "in_k": 23,
+    "out_k": 76,
+    "symbol": "AAL",
+    "date": "2026-10-21",
+    "test": true,
+    "in_at": "11:30",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 234.097,
+    "stop": 229.67,
+    "target": 240.7375,
+    "exit": 232.6636,
+    "why": "Schluss",
+    "r": -0.324,
+    "pct": -0.612,
+    "in_k": 23,
+    "out_k": 76,
+    "symbol": "SAP",
+    "date": "2026-10-21",
+    "test": true,
+    "in_at": "11:30",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 702.341,
+    "stop": 661.3,
+    "target": 763.9025,
+    "exit": 696.3216,
+    "why": "Schluss",
+    "r": -0.147,
+    "pct": -0.857,
+    "in_k": 23,
+    "out_k": 76,
+    "symbol": "TMO",
+    "date": "2026-10-21",
+    "test": true,
+    "in_at": "11:30",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 102.1661,
+    "stop": 96.26,
+    "target": 111.0251,
+    "exit": 101.7091,
+    "why": "Schluss",
+    "r": -0.077,
+    "pct": -0.447,
+    "in_k": 23,
+    "out_k": 76,
+    "symbol": "UAL",
+    "date": "2026-10-21",
+    "test": true,
+    "in_at": "11:30",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 74.107,
+    "stop": 72.48,
+    "target": 76.5476,
+    "exit": 72.4438,
+    "why": "Stopp",
+    "r": -1.022,
+    "pct": -2.244,
+    "in_k": 6,
+    "out_k": 13,
+    "symbol": "AFRM",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "10:40"
+   },
+   {
+    "entry": 446.7232,
+    "stop": 437.1944,
+    "target": 461.0165,
+    "exit": 447.0064,
+    "why": "Schluss",
+    "r": 0.03,
+    "pct": 0.063,
+    "in_k": 6,
+    "out_k": 76,
+    "symbol": "AMGN",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 114.3822,
+    "stop": 105.5,
+    "target": 127.7054,
+    "exit": 118.5407,
+    "why": "Schluss",
+    "r": 0.468,
+    "pct": 3.636,
+    "in_k": 6,
+    "out_k": 76,
+    "symbol": "BX",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 22.8964,
+    "stop": 22.0,
+    "target": 24.2411,
+    "exit": 22.7506,
+    "why": "Schluss",
+    "r": -0.163,
+    "pct": -0.637,
+    "in_k": 6,
+    "out_k": 76,
+    "symbol": "CMCSA",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 51.6708,
+    "stop": 49.515,
+    "target": 54.9046,
+    "exit": 51.8091,
+    "why": "Schluss",
+    "r": 0.064,
+    "pct": 0.268,
+    "in_k": 6,
+    "out_k": 76,
+    "symbol": "CSX",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 79.1896,
+    "stop": 75.38,
+    "target": 84.9039,
+    "exit": 79.1304,
+    "why": "Schluss",
+    "r": -0.016,
+    "pct": -0.075,
+    "in_k": 6,
+    "out_k": 76,
+    "symbol": "DAL",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 80.2201,
+    "stop": 78.64,
+    "target": 82.5902,
+    "exit": 81.879,
+    "why": "Schluss",
+    "r": 1.05,
+    "pct": 2.068,
+    "in_k": 6,
+    "out_k": 76,
+    "symbol": "NEE",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 178.4292,
+    "stop": 172.1966,
+    "target": 187.778,
+    "exit": 172.1105,
+    "why": "Stopp",
+    "r": -1.014,
+    "pct": -3.541,
+    "in_k": 6,
+    "out_k": 40,
+    "symbol": "QCOM",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "12:55"
+   },
+   {
+    "entry": 9.2546,
+    "stop": 9.01,
+    "target": 9.6216,
+    "exit": 9.0955,
+    "why": "Schluss",
+    "r": -0.651,
+    "pct": -1.72,
+    "in_k": 6,
+    "out_k": 76,
+    "symbol": "XPEV",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 12.5613,
+    "stop": 11.7,
+    "target": 13.8532,
+    "exit": 12.6087,
+    "why": "Schluss",
+    "r": 0.055,
+    "pct": 0.377,
+    "in_k": 7,
+    "out_k": 76,
+    "symbol": "AAL",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:10",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 1307.0632,
+    "stop": 1275.1,
+    "target": 1355.0081,
+    "exit": 1304.4274,
+    "why": "Schluss",
+    "r": -0.082,
+    "pct": -0.202,
+    "in_k": 7,
+    "out_k": 76,
+    "symbol": "LLY",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:10",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 3.3417,
+    "stop": 3.24,
+    "target": 3.4942,
+    "exit": 3.3083,
+    "why": "Schluss",
+    "r": -0.328,
+    "pct": -0.997,
+    "in_k": 7,
+    "out_k": 76,
+    "symbol": "NIO",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:10",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 79.6748,
+    "stop": 77.23,
+    "target": 83.342,
+    "exit": 79.0804,
+    "why": "Schluss",
+    "r": -0.243,
+    "pct": -0.746,
+    "in_k": 7,
+    "out_k": 76,
+    "symbol": "PDD",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:10",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 103.0814,
+    "stop": 100.71,
+    "target": 106.6385,
+    "exit": 101.5692,
+    "why": "Schluss",
+    "r": -0.638,
+    "pct": -1.467,
+    "in_k": 8,
+    "out_k": 76,
+    "symbol": "BABA",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:15",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 159.7298,
+    "stop": 156.78,
+    "target": 164.1545,
+    "exit": 159.7401,
+    "why": "Schluss",
+    "r": 0.003,
+    "pct": 0.006,
+    "in_k": 9,
+    "out_k": 76,
+    "symbol": "ROKU",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:20",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 237.8889,
+    "stop": 233.0,
+    "target": 245.2222,
+    "exit": 237.7061,
+    "why": "Schluss",
+    "r": -0.037,
+    "pct": -0.077,
+    "in_k": 17,
+    "out_k": 76,
+    "symbol": "ZS",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "11:00",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 241.8108,
+    "stop": 236.29,
+    "target": 250.0921,
+    "exit": 241.0794,
+    "why": "Schluss",
+    "r": -0.132,
+    "pct": -0.302,
+    "in_k": 18,
+    "out_k": 76,
+    "symbol": "SAP",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "11:05",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 296.168,
+    "stop": 278.5854,
+    "target": 322.5419,
+    "exit": 298.8205,
+    "why": "Schluss",
+    "r": 0.151,
+    "pct": 0.896,
+    "in_k": 20,
+    "out_k": 76,
+    "symbol": "UNP",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "11:15",
+    "out_at": "15:55"
+   }
+  ],
+  "orb-30-mid-2R-v1.5": [
+   {
+    "entry": 85.7979,
+    "stop": 84.94,
+    "target": 87.5136,
+    "exit": 84.8975,
+    "why": "Stopp",
+    "r": -1.05,
+    "pct": -1.049,
+    "in_k": 20,
+    "out_k": 29,
+    "symbol": "GM",
+    "date": "2026-10-16",
+    "test": true,
+    "in_at": "11:15",
+    "out_at": "12:00"
+   },
+   {
+    "entry": 74.9675,
+    "stop": 74.705,
+    "target": 75.4924,
+    "exit": 74.6676,
+    "why": "Stopp",
+    "r": -1.142,
+    "pct": -0.4,
+    "in_k": 29,
+    "out_k": 32,
+    "symbol": "MO",
+    "date": "2026-10-16",
+    "test": true,
+    "in_at": "12:00",
+    "out_at": "12:15"
+   },
+   {
+    "entry": 431.7958,
+    "stop": 428.85,
+    "target": 437.6873,
+    "exit": 433.2833,
+    "why": "Schluss",
+    "r": 0.505,
+    "pct": 0.344,
+    "in_k": 8,
+    "out_k": 76,
+    "symbol": "ISRG",
+    "date": "2026-10-19",
+    "test": true,
+    "in_at": "10:15",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 265.0775,
+    "stop": 260.425,
+    "target": 274.3824,
+    "exit": 260.2948,
+    "why": "Stopp",
+    "r": -1.028,
+    "pct": -1.804,
+    "in_k": 23,
+    "out_k": 75,
+    "symbol": "DDOG",
+    "date": "2026-10-19",
+    "test": true,
+    "in_at": "11:30",
+    "out_at": "15:50"
+   },
+   {
+    "entry": 549.2395,
+    "stop": 535.815,
+    "target": 576.0885,
+    "exit": 535.5471,
+    "why": "Stopp",
+    "r": -1.02,
+    "pct": -2.493,
+    "in_k": 6,
+    "out_k": 19,
+    "symbol": "NOC",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "11:10"
+   },
+   {
+    "entry": 60.1451,
+    "stop": 58.5675,
+    "target": 63.3002,
+    "exit": 63.2685,
+    "why": "Ziel",
+    "r": 1.98,
+    "pct": 5.193,
+    "in_k": 7,
+    "out_k": 13,
+    "symbol": "CRWV",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:10",
+    "out_at": "10:40"
+   },
+   {
+    "entry": 12.0949,
+    "stop": 11.945,
+    "target": 12.3948,
+    "exit": 12.1189,
+    "why": "Schluss",
+    "r": 0.16,
+    "pct": 0.198,
+    "in_k": 7,
+    "out_k": 76,
+    "symbol": "F",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:10",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 1025.0122,
+    "stop": 1014.475,
+    "target": 1046.0867,
+    "exit": 1045.5637,
+    "why": "Ziel",
+    "r": 1.95,
+    "pct": 2.005,
+    "in_k": 7,
+    "out_k": 16,
+    "symbol": "URI",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:10",
+    "out_at": "10:55"
+   },
+   {
+    "entry": 1308.0337,
+    "stop": 1282.2401,
+    "target": 1359.621,
+    "exit": 1281.5989,
+    "why": "Stopp",
+    "r": -1.025,
+    "pct": -2.021,
+    "in_k": 9,
+    "out_k": 62,
+    "symbol": "LLY",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:20",
+    "out_at": "14:45"
+   },
+   {
+    "entry": 302.4011,
+    "stop": 298.225,
+    "target": 310.7534,
+    "exit": 298.0759,
+    "why": "Stopp",
+    "r": -1.036,
+    "pct": -1.43,
+    "in_k": 10,
+    "out_k": 25,
+    "symbol": "GE",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:25",
+    "out_at": "11:40"
+   },
+   {
+    "entry": 26.2131,
+    "stop": 25.735,
+    "target": 27.1693,
+    "exit": 26.2751,
+    "why": "Schluss",
+    "r": 0.13,
+    "pct": 0.236,
+    "in_k": 12,
+    "out_k": 76,
+    "symbol": "GME",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:35",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 408.6142,
+    "stop": 405.84,
+    "target": 414.1626,
+    "exit": 406.6766,
+    "why": "Schluss",
+    "r": -0.698,
+    "pct": -0.474,
+    "in_k": 13,
+    "out_k": 76,
+    "symbol": "V",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:40",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 203.2916,
+    "stop": 200.78,
+    "target": 208.3148,
+    "exit": 200.6796,
+    "why": "Stopp",
+    "r": -1.04,
+    "pct": -1.285,
+    "in_k": 16,
+    "out_k": 58,
+    "symbol": "COF",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "10:55",
+    "out_at": "14:25"
+   },
+   {
+    "entry": 78.9495,
+    "stop": 77.674,
+    "target": 81.5004,
+    "exit": 77.6352,
+    "why": "Stopp",
+    "r": -1.03,
+    "pct": -1.665,
+    "in_k": 19,
+    "out_k": 24,
+    "symbol": "GM",
+    "date": "2026-10-20",
+    "test": true,
+    "in_at": "11:10",
+    "out_at": "11:35"
+   },
+   {
+    "entry": 442.4161,
+    "stop": 435.935,
+    "target": 455.3783,
+    "exit": 442.7885,
+    "why": "Schluss",
+    "r": 0.057,
+    "pct": 0.084,
+    "in_k": 9,
+    "out_k": 76,
+    "symbol": "SPGI",
+    "date": "2026-10-21",
+    "test": true,
+    "in_at": "10:20",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 210.9304,
+    "stop": 207.8721,
+    "target": 217.047,
+    "exit": 207.7682,
+    "why": "Stopp",
+    "r": -1.034,
+    "pct": -1.499,
+    "in_k": 11,
+    "out_k": 63,
+    "symbol": "COF",
+    "date": "2026-10-21",
+    "test": true,
+    "in_at": "10:30",
+    "out_at": "14:50"
+   },
+   {
+    "entry": 197.3586,
+    "stop": 190.615,
+    "target": 210.8459,
+    "exit": 197.0114,
+    "why": "Schluss",
+    "r": -0.051,
+    "pct": -0.176,
+    "in_k": 19,
+    "out_k": 76,
+    "symbol": "PM",
+    "date": "2026-10-21",
+    "test": true,
+    "in_at": "11:10",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 232.4662,
+    "stop": 224.905,
+    "target": 247.5885,
+    "exit": 233.6431,
+    "why": "Schluss",
+    "r": 0.156,
+    "pct": 0.506,
+    "in_k": 20,
+    "out_k": 76,
+    "symbol": "DHR",
+    "date": "2026-10-21",
+    "test": true,
+    "in_at": "11:15",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 12.5012,
+    "stop": 12.255,
+    "target": 12.9937,
+    "exit": 12.2489,
+    "why": "Stopp",
+    "r": -1.025,
+    "pct": -2.019,
+    "in_k": 23,
+    "out_k": 66,
+    "symbol": "AAL",
+    "date": "2026-10-21",
+    "test": true,
+    "in_at": "11:30",
+    "out_at": "15:05"
+   },
+   {
+    "entry": 234.097,
+    "stop": 231.66,
+    "target": 238.971,
+    "exit": 231.5442,
+    "why": "Stopp",
+    "r": -1.048,
+    "pct": -1.09,
+    "in_k": 23,
+    "out_k": 42,
+    "symbol": "SAP",
+    "date": "2026-10-21",
+    "test": true,
+    "in_at": "11:30",
+    "out_at": "13:05"
+   },
+   {
+    "entry": 702.341,
+    "stop": 681.51,
+    "target": 744.003,
+    "exit": 696.3216,
+    "why": "Schluss",
+    "r": -0.289,
+    "pct": -0.857,
+    "in_k": 23,
+    "out_k": 76,
+    "symbol": "TMO",
+    "date": "2026-10-21",
+    "test": true,
+    "in_at": "11:30",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 102.1661,
+    "stop": 99.055,
+    "target": 108.3882,
+    "exit": 101.7091,
+    "why": "Schluss",
+    "r": -0.147,
+    "pct": -0.447,
+    "in_k": 23,
+    "out_k": 76,
+    "symbol": "UAL",
+    "date": "2026-10-21",
+    "test": true,
+    "in_at": "11:30",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 74.107,
+    "stop": 73.23,
+    "target": 75.8611,
+    "exit": 73.1934,
+    "why": "Stopp",
+    "r": -1.042,
+    "pct": -1.233,
+    "in_k": 6,
+    "out_k": 11,
+    "symbol": "AFRM",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "10:30"
+   },
+   {
+    "entry": 446.7232,
+    "stop": 441.7472,
+    "target": 456.6754,
+    "exit": 447.0064,
+    "why": "Schluss",
+    "r": 0.057,
+    "pct": 0.063,
+    "in_k": 6,
+    "out_k": 76,
+    "symbol": "AMGN",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 114.3822,
+    "stop": 109.68,
+    "target": 123.7865,
+    "exit": 118.5407,
+    "why": "Schluss",
+    "r": 0.884,
+    "pct": 3.636,
+    "in_k": 6,
+    "out_k": 76,
+    "symbol": "BX",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 22.8964,
+    "stop": 22.4375,
+    "target": 23.8143,
+    "exit": 22.7506,
+    "why": "Schluss",
+    "r": -0.318,
+    "pct": -0.637,
+    "in_k": 6,
+    "out_k": 76,
+    "symbol": "CMCSA",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 51.6708,
+    "stop": 50.545,
+    "target": 53.9225,
+    "exit": 51.8091,
+    "why": "Schluss",
+    "r": 0.123,
+    "pct": 0.268,
+    "in_k": 6,
+    "out_k": 76,
+    "symbol": "CSX",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 79.1896,
+    "stop": 77.145,
+    "target": 83.2787,
+    "exit": 79.1304,
+    "why": "Schluss",
+    "r": -0.029,
+    "pct": -0.075,
+    "in_k": 6,
+    "out_k": 76,
+    "symbol": "DAL",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 80.2201,
+    "stop": 79.355,
+    "target": 81.9503,
+    "exit": 81.9093,
+    "why": "Ziel",
+    "r": 1.953,
+    "pct": 2.106,
+    "in_k": 6,
+    "out_k": 64,
+    "symbol": "NEE",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "14:55"
+   },
+   {
+    "entry": 178.4292,
+    "stop": 174.8383,
+    "target": 185.6109,
+    "exit": 174.7509,
+    "why": "Stopp",
+    "r": -1.024,
+    "pct": -2.061,
+    "in_k": 6,
+    "out_k": 15,
+    "symbol": "QCOM",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "10:50"
+   },
+   {
+    "entry": 9.2546,
+    "stop": 9.1225,
+    "target": 9.5189,
+    "exit": 9.1179,
+    "why": "Stopp",
+    "r": -1.035,
+    "pct": -1.477,
+    "in_k": 6,
+    "out_k": 54,
+    "symbol": "XPEV",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:05",
+    "out_at": "14:05"
+   },
+   {
+    "entry": 12.5613,
+    "stop": 12.115,
+    "target": 13.4538,
+    "exit": 12.6087,
+    "why": "Schluss",
+    "r": 0.106,
+    "pct": 0.377,
+    "in_k": 7,
+    "out_k": 76,
+    "symbol": "AAL",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:10",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 1307.0632,
+    "stop": 1289.05,
+    "target": 1343.0897,
+    "exit": 1304.4274,
+    "why": "Schluss",
+    "r": -0.146,
+    "pct": -0.202,
+    "in_k": 7,
+    "out_k": 76,
+    "symbol": "LLY",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:10",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 3.3417,
+    "stop": 3.285,
+    "target": 3.455,
+    "exit": 3.3083,
+    "why": "Schluss",
+    "r": -0.588,
+    "pct": -0.997,
+    "in_k": 7,
+    "out_k": 76,
+    "symbol": "NIO",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:10",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 79.6748,
+    "stop": 78.315,
+    "target": 82.3945,
+    "exit": 79.0804,
+    "why": "Schluss",
+    "r": -0.437,
+    "pct": -0.746,
+    "in_k": 7,
+    "out_k": 76,
+    "symbol": "PDD",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:10",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 103.0814,
+    "stop": 101.845,
+    "target": 105.5542,
+    "exit": 101.7941,
+    "why": "Stopp",
+    "r": -1.041,
+    "pct": -1.249,
+    "in_k": 8,
+    "out_k": 39,
+    "symbol": "BABA",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:15",
+    "out_at": "12:50"
+   },
+   {
+    "entry": 159.7298,
+    "stop": 157.99,
+    "target": 163.2095,
+    "exit": 159.7401,
+    "why": "Schluss",
+    "r": 0.006,
+    "pct": 0.006,
+    "in_k": 9,
+    "out_k": 76,
+    "symbol": "ROKU",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "10:20",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 237.8889,
+    "stop": 235.265,
+    "target": 243.1367,
+    "exit": 235.1474,
+    "why": "Stopp",
+    "r": -1.045,
+    "pct": -1.152,
+    "in_k": 17,
+    "out_k": 54,
+    "symbol": "ZS",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "11:00",
+    "out_at": "14:05"
+   },
+   {
+    "entry": 241.8108,
+    "stop": 238.82,
+    "target": 247.7925,
+    "exit": 241.0794,
+    "why": "Schluss",
+    "r": -0.245,
+    "pct": -0.302,
+    "in_k": 18,
+    "out_k": 76,
+    "symbol": "SAP",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "11:05",
+    "out_at": "15:55"
+   },
+   {
+    "entry": 296.168,
+    "stop": 287.2426,
+    "target": 314.0187,
+    "exit": 298.8205,
+    "why": "Schluss",
+    "r": 0.297,
+    "pct": 0.896,
+    "in_k": 20,
+    "out_k": 76,
+    "symbol": "UNP",
+    "date": "2026-10-22",
+    "test": true,
+    "in_at": "11:15",
+    "out_at": "15:55"
+   }
+  ]
+ },
+ "seconds": 7.3
+}

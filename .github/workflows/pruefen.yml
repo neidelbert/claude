@@ -1,0 +1,24 @@
+# Prüft jede Änderung: Workflow-Dateien gültig, Python kompiliert, Selbsttest des Labors grün.
+name: Prüfen
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  pruefen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Workflow-Dateien lesbar
+        run: |
+          pip install -q pyyaml
+          python3 -c "import glob,yaml; [yaml.safe_load(open(f)) for f in glob.glob('.github/workflows/*.yml')]; print('ok')"
+      - name: Python kompiliert
+        run: python3 -m py_compile tools/trader/*.py
+      - name: Selbsttest Labor
+        run: python3 tools/trader/lab.py selftest

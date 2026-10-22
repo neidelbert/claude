@@ -109,7 +109,7 @@ const TABS = [
 ];
 const STRAT = {orb:"Opening-Range-Ausbruch", gap:"News-Sprung", bounce:"Erholung"};
 const CHIP = {alle:"Alle", Regel:"Regel", "Ja-Trades":"Deine Ja-Trades", orb:"Ausbruch", gap:"News-Sprung", bounce:"Erholung", sip:"Stocks in Play"};
-STRAT.sip = "Stocks in Play";
+STRAT.sip = "Stocks in Play"; STRAT.orbrank = "Ausbruch mit Volumen-Rangliste"; CHIP.orbrank = "Volumen-Rang";
 
 // ------------------------------------------------------------ Formate
 const nf2 = new Intl.NumberFormat("de-DE",{minimumFractionDigits:2,maximumFractionDigits:2});
@@ -279,6 +279,7 @@ function renderHeute(onlyClock){
   const bad = D.status.filter(s=>s.ok===false);
   let h = head("Heute", window.__DATA__ ? '<span class="small">Stand '+hmDE(D.generated_at)+' Uhr</span>' : '<button class="btn ghost" style="padding:8px 12px" onclick="refresh()">Neu laden</button>');
   h += '<div class="card" id="clock">'+clockHtml(ck)+'</div>';
+  h += goalCard();
   h += '<div class="card"><div class="small">Nächster Schritt</div><div class="next">'+esc(nextStep(ck))+'</div></div>';
   const S = D.sim||{}, KS = S.live || S.vorschau;
   if(KS){ const R = KS.fee; h += '<button class="card" style="display:block;width:calc(100% - 32px);text-align:left;border:0;color:inherit;font:inherit;cursor:pointer" onclick="go(\'konto\')"><div class="row"><span class="small">'+(S.live?"Simulator-Konto":"Simulator-Vorschau (Backtest)")+'</span><span class="sub">›</span></div><div class="row"><span class="big" style="font-size:28px">'+nf2.format(R.equity)+' €</span><b class="num '+cls(R.pnl)+'">'+eur(R.pnl)+'</b></div><div class="small">mit 1 € Gebühr je Order · ohne Gebühr: '+nf2.format(KS.no_fee.equity)+' €</div></button>'; }
@@ -336,7 +337,7 @@ function renderTrades(){
   if(!days.length){ $("#app").innerHTML = h+'<div class="card sub">Noch keine Live-Trades. Ab dem nächsten Börsentag erscheinen sie hier – mit Erklärung zu jedem Trade.</div>'; return; }
   const cur = days.find(d=>d.date===DAY) || days[0];
   h += '<div class="chips">'+days.slice(0,10).map(d=>'<button class="chip '+(d===cur?"on":"")+'" onclick="DAY=\''+d.date+'\';render()">'+(d.today?"Heute":dateDE(d.date).slice(0,6))+'</button>').join("")+'</div>';
-  h += '<div class="chips">'+["alle","Regel","Ja-Trades","orb","gap","bounce","sip"].map(f=>'<button class="chip '+(FILTER===f?"on":"")+'" onclick="FILTER=\''+f+'\';render()">'+CHIP[f]+'</button>').join("")+'</div>';
+  h += '<div class="chips">'+["alle","Regel","Ja-Trades","orb","orbrank","gap","bounce","sip"].map(f=>'<button class="chip '+(FILTER===f?"on":"")+'" onclick="FILTER=\''+f+'\';render()">'+CHIP[f]+'</button>').join("")+'</div>';
   let rows = [];
   if(FILTER!=="Ja-Trades") rows = cur.trades.filter(t => FILTER==="alle"||FILTER==="Regel"||t.strategy===FILTER).map(t=>[t,"Regel"]);
   if(FILTER==="alle"||FILTER==="Ja-Trades") rows = rows.concat((cur.lukas||[]).map(t=>[Object.assign({open:t.status==="offen"},t),"Du"]));
@@ -362,12 +363,13 @@ function renderLabor(){
   h += '<div class="card"><div class="row"><span>Bestanden</span><span class="big num">'+passed+'<span class="sub" style="font-size:18px"> / '+L.variants.length+'</span></span></div>'+
        '<p class="small">'+int(L.symbols)+' Aktien · '+int(L.days)+' Tage: '+int(L.n_train_days)+' '+g("Lerntage")+' + '+int(L.n_test_days)+' '+g("Prüftage")+' ('+dateDE(L.test[0])+' bis '+dateDE(L.test[1])+'). Eine '+g("Variante")+' besteht, wenn sie an Lern- und Prüftagen im Plus ist und mindestens '+int(L.settings.min_test_trades)+' Trades hat.</p></div>';
   h += '<div class="card small">Wichtig: Mit 1 € '+g("Gebühr")+' je Order wären alle Varianten im Minus. Darum zeigt jede Karte beide Zahlen.</div>';
-  h += '<h2>Rangliste</h2><div class="chips">'+["alle","orb","gap","bounce","sip"].map(f=>'<button class="chip '+(LABF===f?"on":"")+'" onclick="LABF=\''+f+'\';render()">'+CHIP[f]+'</button>').join("")+'</div>';
+  h += '<h2>Rangliste</h2><div class="chips">'+["alle","orb","orbrank","gap","bounce","sip"].map(f=>'<button class="chip '+(LABF===f?"on":"")+'" onclick="LABF=\''+f+'\';render()">'+CHIP[f]+'</button>').join("")+'</div>';
   L.variants.map((v,i)=>[v,i]).filter(([v])=>LABF==="alle"||v.strategy===LABF).slice(0,15).forEach(([v,i]) => { const t=v.test||{};
     h += '<div class="card"><div class="row"><span class="badge '+(v.passed?"b-green":"")+'">'+(v.passed?"bestanden":"nicht bestanden")+'</span><span class="small">#'+(i+1)+'</span></div>'+
       '<h3 style="margin-top:6px">'+esc(v.label)+'</h3>'+
       (t.n ? '<div class="grid2" style="margin:8px 0 0"><div><div class="small">Prüftage, bei 100 €/Trade</div><div class="val num '+cls(t.eur)+'" style="font-size:22px;font-weight:800">'+eur(t.eur)+'</div></div><div><div class="small">nach Gebühren</div><div class="num '+cls(t.eur_after_fees)+'" style="font-size:22px;font-weight:800">'+eur(t.eur_after_fees)+'</div></div></div>'+
-      '<div class="small" style="margin-top:6px">'+int(t.n)+' Trades · '+g("Trefferquote")+' '+nf0.format(t.win_rate)+' % · Ø '+pct(t.avg_pct)+' · '+g("Zufallswert")+' '+nf1.format(t.t||0)+(Math.abs(t.t||0)>=2?" (kaum Zufall)":" (Zufall möglich)")+'</div>' : '<div class="small">Auf den Prüftagen kein Trade.</div>')+
+      '<div class="small" style="margin-top:6px">'+int(t.n)+' Trades · '+g("Trefferquote")+' '+nf0.format(t.win_rate)+' % · Ø '+pct(t.avg_pct)+' · '+g("Zufallswert")+' '+nf1.format(t.t||0)+(Math.abs(t.t||0)>=2?" (kaum Zufall)":" (Zufall möglich)")+'</div>'+
+      '<div class="small" style="margin-top:4px">'+(t.eur>0?'Lohnt sich bis <b>'+nf2.format(t.be_fee!=null?t.be_fee:t.eur/(2*t.n))+' €</b> '+g("Gebühr")+' je Order (bei 100 € pro Trade).':'Schon ohne Gebühr im Minus.')+'</div>' : '<div class="small">Auf den Prüftagen kein Trade.</div>')+
       curve(v.id)+'<div class="btns"><button class="btn ghost" onclick="variantSheet(\''+v.id+'\')">Details</button></div></div>'; });
   h += '<h2>Die Strategien</h2>'+Object.entries(L.strategies||{}).map(([k,v])=>'<div class="card"><h3>'+esc(STRAT[k]||k)+'</h3><div class="small">'+esc(v)+'</div></div>').join("");
   h += '<div class="card small">Rangliste vom '+dayDE(L.created_at)+', '+hmDE(L.created_at)+' Uhr. Spread '+nf2.format(L.settings.slip_pct)+' % je Seite ist eingerechnet.</div>';
@@ -406,7 +408,7 @@ function renderLernen(){
   h += '<h2>Lektion des Tages</h2><div class="card">'+esc(D.learn.lesson)+'</div>';
   h += '<h2>So funktioniert das System</h2><div class="card">'+D.learn.how.map(([t,x],i)=>'<div class="step" style="margin:'+(i?"12px":"0")+' 0 0"><div class="n">'+(i+1)+'</div><div><b>'+esc(t)+'</b><div class="small">'+esc(x)+'</div></div></div>').join("")+'</div>';
   h += '<h2>Die drei Phasen</h2><div class="list">'+
-    '<div class="item"><div class="row"><b>1. Testphase</b><span class="badge b-blue">jetzt</span></div><div class="small">Spielgeld ohne Limit. 52 Varianten laufen parallel, das System misst und lernt.</div></div>'+
+    '<div class="item"><div class="row"><b>1. Testphase</b><span class="badge b-blue">jetzt</span></div><div class="small">Spielgeld ohne Limit. 56 Varianten laufen parallel, das System misst und lernt.</div></div>'+
     '<div class="item"><div class="row"><b>2. Simulator</b><span class="badge">später</span></div><div class="small">100 € Spielgeld wie echt: höchstens 3 € Verlust pro Trade, 8 € pro Tag, 30 € pro Monat, mit Gebühren.</div></div>'+
     '<div class="item"><div class="row"><b>3. Echtes Geld</b><span class="badge">frühestens nach 2 Monaten</span></div><div class="small">Nur wenn der Simulator 2 Monate am Stück im Plus war – und nur mit deinem Ja zu jeder Order.</div></div></div>';
   h += '<h2>Alle Lektionen</h2><div class="list">'+D.learn.lessons.map(l=>'<div class="item small">'+esc(l)+'</div>').join("")+'</div>';
@@ -563,6 +565,24 @@ function introStep(){
   $("#sheet").innerHTML = '<div class="small">'+(INTRO_I+1)+' von '+INTRO.length+'</div><h3 style="font-size:20px;margin-top:6px">'+esc(t)+'</h3><p>'+esc(x)+'</p><div class="btns">'+
     (last?'<button class="btn" onclick="closeSheet();try{localStorage.setItem(\'trader-intro\',\'1\')}catch(e){}">Los geht’s</button>':'<button class="btn ghost" onclick="closeSheet();try{localStorage.setItem(\'trader-intro\',\'1\')}catch(e){}">Überspringen</button><button class="btn" onclick="INTRO_I++;introStep()">Weiter</button>')+'</div>';
   $("#sheetwrap").classList.add("open");
+}
+
+function goalCard(){
+  const S = D.sim||{}, checks = S.checks||[], liveDays = (D.history||[]).length, passed = ((D.lab||{}).variants||[]).filter(v=>v.passed).length;
+  const simMonths = S.live ? Math.max(0,(S.live.fee.months||[]).length-1) : 0;
+  const stages = [
+    {name:"Testphase", done: !!S.live, p: Math.min(1, liveDays/20), txt: liveDays+" von 20 Live-Tagen · "+passed+" Varianten bestanden",
+     now:"Jetzt zählt: jeden Handelstag messen. Nach 20 Live-Tagen siehst du, ob eine Variante auch an echten neuen Tagen hält."},
+    {name:"Simulator", done: simMonths>=2 && checks.slice(0,5).every(c=>c.ok), p: S.live ? Math.min(1, simMonths/2) : 0, txt: S.live ? simMonths+" von 2 vollen Monaten" : "startet nach der Testphase",
+     now:"Jetzt zählt: 100 € wie echt, mit Gebühren und Grenzen, zwei Monate am Stück im Plus."},
+    {name:"Echtes Geld", done:false, p: checks.length ? checks.filter(c=>c.ok).length/checks.length : 0, txt: checks.filter(c=>c.ok).length+" von "+checks.length+" Prüfpunkten",
+     now:"Jetzt zählt: Broker mit kleinen Gebühren, Steuern klären, dann entscheidest du."},
+  ];
+  const cur = stages.findIndex(s=>!s.done);
+  return '<div class="card"><div class="row"><span class="small">Weg zum Ziel</span><button class="term small" onclick="go(\'mehr\');sub(\'echt\')">Prüfung ansehen</button></div>'+
+    stages.map((s,i)=>'<div style="margin-top:10px'+(i>cur?';opacity:.55':'')+'"><div class="row"><b>'+(i+1)+'. '+s.name+'</b><span class="small">'+(s.done?"erledigt":i===cur?"jetzt":"später")+'</span></div>'+
+      '<div class="bar"><div class="fill" style="left:0;width:'+Math.round((s.done?1:s.p)*100)+'%;background:'+(s.done?"var(--green)":"var(--blue)")+'"></div></div><div class="small">'+esc(s.txt)+'</div></div>').join("")+
+    '<p class="small" style="margin-top:10px">'+esc((stages[cur]||stages[2]).now)+'</p></div>';
 }
 
 load();

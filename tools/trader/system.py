@@ -580,11 +580,13 @@ def do_lab(cfg, now, force):
     return True, "%d von %d bestanden" % (len(passed), len(rows)), steps, data, owned
 
 
-STRAT_SHORT = {"orb": "Opening-Range-Ausbruch", "gap": "News-Sprung", "bounce": "Erholung", "sip": "Stocks in Play"}
+STRAT_SHORT = {"orb": "Opening-Range-Ausbruch", "gap": "News-Sprung", "bounce": "Erholung", "sip": "Stocks in Play",
+               "orbrank": "Ausbruch mit Volumen-Rangliste"}
 WHY_IN = {
     "orb": "Der Kurs hat über dem Hoch der ersten Minuten geschlossen. Der Stopp liegt dort, wo die Idee falsch wäre.",
     "gap": "Die Aktie ist mit viel Umsatz über dem Vortag gestartet und steigt weiter über ihr erstes Hoch.",
     "bounce": "Die stark gefallene Aktie steigt wieder über ihren Tagesdurchschnittspreis (VWAP).",
+    "orbrank": "Eine der Aktien mit dem ungewöhnlichsten Volumen hat über dem Hoch der ersten 30 Minuten geschlossen.",
     "sip": "Ungewöhnlich viel Umsatz in den ersten 5 Minuten und eine grüne erste Kerze: gekauft über ihrem Hoch, "
            "mit engem Stopp (nach einer Studie zu profitablem Daytrading).",
 }

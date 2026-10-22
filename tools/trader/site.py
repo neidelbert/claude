@@ -37,6 +37,7 @@ def _load(name, path):
 
 
 scan = _load("trader_scan", os.path.join(HERE, "scan.py"))
+sim = _load("trader_sim", os.path.join(HERE, "sim.py"))
 lab = _load("trader_lab", os.path.join(HERE, "lab.py"))
 system = _load("trader_system", os.path.join(HERE, "system.py"))
 
@@ -54,7 +55,7 @@ GLOSSARY = {
     "Spielgeld": "Virtuelles Geld. Alles wird so gerechnet, als wäre es echt, aber kein Euro verlässt dein Konto.",
     "Testphase": "Die erste Phase: Spielgeld ohne jedes Limit. Viele Regeln laufen parallel, das System misst und lernt.",
     "Simulator": "Die zweite Phase: 100 € Spielgeld, als wären sie echt, mit Verlustgrenzen und Gebühren.",
-    "Variante": "Eine Regel mit festen Einstellungen, z. B. „Ausbruch nach 15 Minuten, Ziel 2R“. Das Labor testet 44 davon.",
+    "Variante": "Eine Regel mit festen Einstellungen, z. B. „Ausbruch nach 15 Minuten, Ziel 2R“. Das Labor testet 52 davon.",
     "Opening Range": "Die Spanne aus Hoch und Tief der ersten 15 oder 30 Minuten nach Börsenstart (9:30 Uhr New York).",
     "Ausbruch": "Der Kurs schließt über dem Hoch einer Spanne. Das deutet an, dass Käufer gerade stärker sind.",
     "News-Sprung": "Eine Aktie startet wegen einer Nachricht deutlich höher als am Vortag, mit viel Umsatz.",
@@ -79,12 +80,33 @@ GLOSSARY = {
 
 HOW = [
     ["Morgens", "Vor Börsenstart scannt das System rund 6.000 US-Aktien und sucht Charts, die zu einer Regel passen. Dazu holt es News."],
-    ["Börsenstart", "Ab 15:30 Uhr deutscher Zeit prüft das Labor alle 10 Minuten 44 Varianten an rund 180 viel gehandelten Aktien."],
+    ["Börsenstart", "Ab 15:30 Uhr deutscher Zeit prüft das Labor alle 10 Minuten 52 Varianten an rund 180 viel gehandelten Aktien."],
     ["Vorschlag", "Löst eine Top-Variante aus, kommt ein Push mit Ja/Nein. Ohne Antwort zählt nur die Regel. Mit Ja zählt der Trade auch für dich."],
     ["Ausstieg", "Jeder Trade endet am Stopp, am Ziel oder spätestens um 15:55 Uhr New York (21:55 Uhr bei uns)."],
     ["Abends", "Tagesbilanz als Push. Danach rechnet das Labor alle Varianten an den letzten 60 Tagen neu und erstellt die Rangliste."],
     ["Lernen", "Eine Variante zählt nur, wenn sie auch an ungesehenen Prüftagen im Plus ist. So fallen Glückstreffer heraus."],
 ]
+
+
+PRO_RULES = [
+    ["Nur Aktien, die „im Spiel“ sind", "Profis handeln Aktien mit ungewöhnlich viel Umsatz und einem Grund (News, Zahlen). "
+     "Das Labor testet das mit „Stocks in Play“."],
+    ["Risiko vorher festlegen", "Vor jedem Trade steht fest, wo der Stopp liegt und wie viel höchstens verloren geht. "
+     "Üblich sind 0,25 bis 1 % des Kontos je Trade; im Simulator sind es 3 € von 100 €."],
+    ["Tagesgrenze", "Ist die Tagesgrenze erreicht, ist Schluss für heute. Verluste nie „zurückholen“ wollen."],
+    ["Wenige, gute Trades", "Lieber 1 bis 3 Trades nach Plan als viele aus dem Bauch. Gebühren fressen sonst alles."],
+    ["Nichts über Nacht", "Daytrades werden vor Börsenschluss verkauft."],
+    ["Tagebuch führen", "Jeder Trade wird aufgeschrieben und ausgewertet. Das macht dieses System automatisch."],
+    ["Ehrlich messen", "Eine Regel zählt erst, wenn sie an vielen ungesehenen Tagen nach Kosten im Plus ist."],
+]
+
+
+def latest_weekly():
+    d = os.path.join(T, "lab", "weekly")
+    if not os.path.isdir(d):
+        return None
+    files = sorted(f for f in os.listdir(d) if f.endswith(".json"))
+    return rj("lab", "weekly", files[-1]) if files else None
 
 
 def market_info(now):
@@ -181,6 +203,10 @@ def build_data(cfg):
         "learn": {"lesson": system.lesson(scan.to_eastern(now).date().isoformat()), "lessons": system.LESSONS,
                   "glossary": GLOSSARY, "how": HOW, "setups": system.SETUP_DE,
                   "strategies": res.get("strategies") or lab.STRATEGY_DE},
+        "sim": sim.compute(),
+        "changes": (rj("lab", "changes.json", default=[]) or [])[-30:][::-1],
+        "weekly": latest_weekly(),
+        "rules": PRO_RULES,
         "reply": {"server": cfg["ntfy_server"], "topic": system.reply_topic(cfg)},
         "push_topic": os.environ.get("NTFY_TOPIC") or cfg.get("ntfy_topic"),
     }

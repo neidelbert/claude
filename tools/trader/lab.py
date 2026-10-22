@@ -87,6 +87,10 @@ def variants():
         for stop in ("daylow", "pct1.5"):
             for tgt in (1.0, 2.0):
                 out.append({"strategy": "bounce", "trigger": trig, "stop": stop, "target_r": tgt})
+    for top in (20, 10):
+        for atr_stop in (0.1, 0.2):
+            for tgt in (0.0, 2.0):
+                out.append({"strategy": "sip", "top": top, "atr_stop": atr_stop, "target_r": tgt})
     for v in out:
         v["id"] = vid(v)
         v["label"] = label(v)
@@ -98,6 +102,8 @@ def vid(v):
         return "orb-%d-%s-%sR-v%s" % (v["or_min"], v["stop"], fmt(v["target_r"]), fmt(v["rvol"]))
     if v["strategy"] == "gap":
         return "gap-%s-v%s-%sR" % (fmt(v["gap"]), fmt(v["rvol"]), fmt(v["target_r"]))
+    if v["strategy"] == "sip":
+        return "sip-top%d-atr%s-%s" % (v["top"], fmt(v["atr_stop"]), "%sR" % fmt(v["target_r"]) if v["target_r"] else "eod")
     return "bounce-%s-%s-%sR" % (v["trigger"], v["stop"], fmt(v["target_r"]))
 
 
@@ -114,6 +120,9 @@ def label(v):
         return "Opening-Range-Ausbruch %d Min · %s · Ziel %sR%s" % (
             v["or_min"], ORB_STOPS[v["stop"]], de(v["target_r"]),
             " · Volumen ≥ %s×" % de(v["rvol"]) if v["rvol"] else "")
+    if v["strategy"] == "sip":
+        return "Stocks in Play (Studie): Top %d nach Startvolumen · Stopp %s %% ATR · %s" % (
+            v["top"], de(v["atr_stop"] * 100), "Ziel %sR" % de(v["target_r"]) if v["target_r"] else "bis Schluss")
     if v["strategy"] == "gap":
         return "News-Sprung: Lücke ≥ %s %% · Volumen ≥ %s× · Ziel %sR" % (de(v["gap"]), de(v["rvol"]), de(v["target_r"]))
     trig = "RSI unter 30" if v["trigger"] == "rsi30" else "Lücke nach unten ≥ 3 %"
@@ -126,6 +135,10 @@ STRATEGY_DE = {
            "5-Minuten-Kerze über ihrem Hoch, wird gekauft.",
     "gap": "News-Sprung: Die Aktie öffnet deutlich über dem Vortag (meist wegen einer Nachricht) und mit viel "
            "Umsatz. Gekauft wird, wenn sie über das Hoch der ersten 5 Minuten steigt.",
+    "sip": "Stocks in Play (nach der Studie von Zarattini, Barbon und Aziz, 2024): Nur Aktien mit ungewöhnlich viel "
+           "Umsatz in den ersten 5 Minuten. Ist die erste 5-Minuten-Kerze grün, wird über ihrem Hoch gekauft. Der Stopp "
+           "liegt eng (10 oder 20 % der durchschnittlichen Tagesschwankung ATR), verkauft wird spätestens zum Schluss. "
+           "Die Studie handelte auch Leerverkäufe und mit Hebel – hier nur Kauf, ohne Hebel.",
     "bounce": "Erholung: Eine stark gefallene Aktie (RSI unter 30 oder Lücke nach unten) steigt wieder über "
               "ihren Tagesdurchschnittspreis (VWAP).",
 }
@@ -266,6 +279,7 @@ def contexts(days):
     dates = sorted(days)
     ctx = {}
     closes = []
+    trs = []
     first = {1: [], 3: [], 6: []}
     for d in dates:
         bars = days[d]
@@ -273,7 +287,16 @@ def contexts(days):
         for n in first:
             hist = first[n][-10:]
             c["vol%d" % n] = (sum(hist) / len(hist)) if len(hist) >= 5 else None
+        h14 = first[1][-14:]
+        c["vol1_14"] = (sum(h14) / len(h14)) if len(h14) >= 10 else None
+        c["atr"] = (sum(trs[-14:]) / 14) if len(trs) >= 14 else None
+        if bars and bars[0][0] == 0 and c["vol1_14"]:
+            c["rvol1"] = bars[0][5] / c["vol1_14"]
         ctx[d] = c
+        if bars:
+            hi, lo = max(b[2] for b in bars), min(b[3] for b in bars)
+            pc = closes[-1] if closes else None
+            trs.append(max(hi - lo, abs(hi - pc), abs(lo - pc)) if pc else hi - lo)
         full = len(bars) >= last_k(d) + 1 and bars[0][0] == 0
         if bars:
             closes.append(bars[-1][4])
@@ -350,18 +373,51 @@ def signal_bounce(v, bars, c):
     return None
 
 
-SIGNALS = {"orb": signal_orb, "gap": signal_gap, "bounce": signal_bounce}
+def rank_sip(day_ctx):
+    """day_ctx = {sym: (bars, ctx)} eines Tages -> setzt ctx["sip_rank"] (1 = höchstes Startvolumen) für Aktien
+    mit grüner erster Kerze, Eröffnung ab 5 $, ATR ab 0,50 $ und mindestens normalem Startvolumen (RVOL ≥ 1)."""
+    cands = []
+    for sym, (bars, c) in day_ctx.items():
+        if not bars or bars[0][0] != 0:
+            continue
+        b0 = bars[0]
+        if b0[4] > b0[1] and b0[1] >= 5 and (c.get("atr") or 0) >= 0.5 and (c.get("rvol1") or 0) >= 1:
+            cands.append((c["rvol1"], sym))
+    for rank, (_, sym) in enumerate(sorted(cands, reverse=True), 1):
+        day_ctx[sym][1]["sip_rank"] = rank
 
 
-def simulate(bars, i, stop, target_r, end_k):
-    """Trade ab Kerze i. -> dict oder None (Risiko zu klein)."""
-    entry = bars[i][4] * (1 + SLIP)
+def signal_sip(v, bars, c):
+    rank = c.get("sip_rank")
+    if not rank or rank > v["top"] or not c.get("atr"):
+        return None
+    level = bars[0][2]
+    latest = 90 // BAR                                  # Kauforder gilt bis 11:00 Uhr ET
+    for i in range(1, len(bars)):
+        if bars[i][0] >= latest:
+            return None
+        if bars[i][2] > level:
+            fill = max(bars[i][1], level)               # Stop-Kauforder: Ausführung am Hoch oder beim Öffnen darüber
+            return i, fill * (1 + SLIP) - v["atr_stop"] * c["atr"], fill
+    return None
+
+
+SIGNALS = {"orb": signal_orb, "gap": signal_gap, "bounce": signal_bounce, "sip": signal_sip}
+
+
+def simulate(bars, i, stop, target_r, end_k, fill=None):
+    """Trade ab Kerze i. -> dict oder None (Risiko zu klein).
+    fill: Einstiegspreis einer Stop-Kauforder innerhalb der Kerze i (sonst Schlusskurs der Kerze).
+    target_r 0: kein Ziel, nur Stopp oder Schluss."""
+    entry = (fill if fill is not None else bars[i][4]) * (1 + SLIP)
     risk = entry - stop
     if risk <= entry * MIN_RISK:
         return None
-    target = entry + target_r * risk
+    target = entry + target_r * risk if target_r else math.inf
     exit_p, why, exit_k, hit = None, "Schluss", bars[i][0], False
-    for b in bars[i + 1:]:
+    if fill is not None and bars[i][4] <= stop:          # schon in der Einstiegskerze unter den Stopp geschlossen
+        exit_p, why, hit = bars[i][4], "Stopp", True
+    for b in ([] if hit else bars[i + 1:]):
         k, o, h, l, c, _ = b
         if k > end_k:
             break
@@ -383,7 +439,8 @@ def simulate(bars, i, stop, target_r, end_k):
         exit_p = bars[i][4]
     exit_p *= (1 - SLIP)
     pct = exit_p / entry - 1
-    return {"entry": round(entry, 4), "stop": round(stop, 4), "target": round(target, 4), "exit": round(exit_p, 4),
+    return {"entry": round(entry, 4), "stop": round(stop, 4), "target": round(target, 4) if target_r else None,
+            "exit": round(exit_p, 4),
             "why": why, "r": round((exit_p - entry) / risk, 3), "pct": round(pct * 100, 3),
             "in_k": bars[i][0], "out_k": exit_k, "open": not hit and exit_k < end_k}
 
@@ -439,8 +496,11 @@ def cmd_run(a):
     test_days = set(all_days[-n_test:])
     vs = variants()
     trades = {v["id"]: [] for v in vs}
+    ctxs = {sym: contexts(days) for sym, days in data.items()}
+    for d in all_days:
+        rank_sip({sym: (data[sym][d], ctxs[sym][d]) for sym in data if d in data[sym]})
     for sym, days in data.items():
-        ctx = contexts(days)
+        ctx = ctxs[sym]
         for d, bars in days.items():
             if len(bars) < 10:
                 continue
@@ -449,7 +509,7 @@ def cmd_run(a):
                 sig = SIGNALS[v["strategy"]](v, bars, ctx[d])
                 if not sig:
                     continue
-                t = simulate(bars, sig[0], sig[1], v["target_r"], end_k)
+                t = simulate(bars, sig[0], sig[1], v["target_r"], end_k, *sig[2:])
                 if t:
                     t.update(symbol=sym, date=d, test=d in test_days)
                     trades[v["id"]].append(t)
@@ -475,6 +535,7 @@ def cmd_run(a):
     for r in rows[:TRADES_TOP]:
         last = sorted(trades[r["id"]], key=lambda t: (t["date"], t["in_k"]))[-40:]
         samples[r["id"]] = [dict(t, in_at=clock(t["in_k"]), out_at=clock(t["out_k"])) for t in last]
+    champ = sorted(trades[rows[0]["id"]], key=lambda t: (t["date"], t["in_k"])) if rows else []
     best_per = {}
     for r in rows:
         best_per.setdefault(r["strategy"], r["id"])
@@ -485,7 +546,10 @@ def cmd_run(a):
            "settings": {"slip_pct": SLIP * 100, "stake_eur": STAKE, "fee_eur": FEE,
                         "min_test_trades": MIN_TEST_TRADES},
            "strategies": STRATEGY_DE, "best_per_strategy": best_per,
-           "variants": rows, "curves": curves, "samples": samples, "seconds": round(time.time() - t0, 1)}
+           "variants": rows, "curves": curves, "samples": samples,
+           "champion": rows[0]["id"] if rows else None,
+           "champion_trades": [{k: t[k] for k in ("date", "symbol", "entry", "stop", "target", "exit", "why", "pct",
+                                                  "in_k", "out_k", "test")} for t in champ], "seconds": round(time.time() - t0, 1)}
     out = a.out or OUT
     os.makedirs(os.path.dirname(out), exist_ok=True)
     with open(out, "w", encoding="utf-8") as fh:
@@ -549,6 +613,7 @@ def cmd_live(a):
     end_k = last_k(day)
     trades = []
     today_bars = {}
+    day_ctx = {}
     for sym, ser in today.items():
         bars = split_days(ser, now_ts).get(day)
         if not bars:
@@ -558,12 +623,14 @@ def cmd_live(a):
         hist = split_days(load_series(hist_path)) if os.path.exists(hist_path) else {}
         hist = {d: b for d, b in hist.items() if d < day}
         hist[day] = bars
-        ctx = contexts(hist)[day]
+        day_ctx[sym] = (bars, contexts(hist)[day])
+    rank_sip(day_ctx)
+    for sym, (bars, ctx) in day_ctx.items():
         for v in vs:
             sig = SIGNALS[v["strategy"]](v, bars, ctx)
             if not sig:
                 continue
-            t = simulate(bars, sig[0], sig[1], v["target_r"], end_k)
+            t = simulate(bars, sig[0], sig[1], v["target_r"], end_k, *sig[2:])
             if not t:
                 continue
             t.update(variant=v["id"], strategy=v["strategy"], symbol=sym, in_at=clock(t["in_k"]),
@@ -648,12 +715,13 @@ def lukas_trades(day, trades, today_bars, focus, end_k):
             out.append(row)
             continue
         price = bars[j][4] * (1 + SLIP)
-        if price <= rule["stop"] or price >= rule["target"] or bars[j][0] > end_k:
+        tgt = rule["target"] if rule["target"] is not None else math.inf
+        if price <= rule["stop"] or price >= tgt or bars[j][0] > end_k:
             row.update(status="verpasst", entry=round(price, 4))
             out.append(row)
             continue
         risk = price - rule["stop"]
-        t = simulate(bars, j, rule["stop"], (rule["target"] - price) / risk, end_k)
+        t = simulate(bars, j, rule["stop"], (tgt - price) / risk if tgt != math.inf else 0, end_k)
         if not t:
             row.update(status="verpasst", entry=round(price, 4))
         else:
@@ -730,8 +798,18 @@ def cmd_selftest(a):
     assert len(b4) == 6, len(b4)
     t4 = simulate(b4, 3, 100.0, 2.0, 76)
     assert t4["open"] is True and t4["out_k"] == 5, t4
-    assert len(variants()) == 44 and len({v["id"] for v in variants()}) == 44
-    print("Selbsttest ok: Einstieg, Ziel, Stopp vor Ziel, Ausstieg zum Schluss, offener Live-Trade, 44 Varianten.")
+    # Stocks in Play: Stop-Kauforder über dem Hoch der grünen ersten Kerze, Stopp 10 % ATR, bis Schluss
+    sv = {"strategy": "sip", "top": 20, "atr_stop": 0.1, "target_r": 0.0}
+    g = [(100, 101, 99.8, 100.9, 5000)] + [(100.9, 101.5, 100.8, 101.4, 1000)] + [(101.4, 101.6, 101.3, 101.5, 1000)] * 76
+    bg = split_days(_series(day, g))[day.isoformat()]
+    sig = signal_sip(sv, bg, {"sip_rank": 1, "atr": 2.0})
+    assert sig[0] == 1 and abs(sig[2] - 101) < 1e-9 and abs(sig[1] - (101 * (1 + SLIP) - 0.2)) < 1e-9, sig
+    ts = simulate(bg, sig[0], sig[1], 0.0, 76, sig[2])
+    assert ts["why"] == "Schluss" and ts["target"] is None and ts["out_k"] == 76, ts
+    assert signal_sip(sv, bg, {"sip_rank": 21, "atr": 2.0}) is None
+    n = len(variants())
+    assert n == 52 and len({v["id"] for v in variants()}) == n, n
+    print("Selbsttest ok: Einstieg, Ziel, Stopp vor Ziel, Ausstieg zum Schluss, offener Live-Trade, 52 Varianten (mit Stocks in Play).")
     return 0
 
 

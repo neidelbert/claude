@@ -91,6 +91,14 @@ iPhone: ntfy-Pushes mit Ja/Nein-Buttons + Webseite als Home-Bildschirm-App
 - Tagesbilanz (ca. 22:15 Uhr) mit Tageslektion · Wochen-Rückblick (Freitag)
 - Fehler im System (einmal pro Tag und Fehler)
 
+## Neu nach der Recherche (23.10.2026)
+- **Stocks in Play** als vierte Strategie (8 Varianten), nach Zarattini, Barbon und Aziz (2024), „A Profitable Day
+  Trading Strategy For The U.S. Equity Market“. Der Opening-Range-Ausbruch der ersten 5 Minuten wird nur bei den
+  Aktien mit dem höchsten Startvolumen gehandelt (RVOL ≥ 1, Kurs ≥ 5 $, ATR ≥ 0,50 $). Der Stopp liegt bei 10 oder 20 %
+  der ATR, verkauft wird zum Schluss. Abweichung von der Studie: nur Kauf, ohne Hebel, ~230 statt 7.000 Aktien.
+- Regeln erfahrener Daytrader als eigene Seite: kleines Risiko je Trade, Tagesgrenze, wenige Trades, Tagebuch.
+- Die Oberfläche ist wie eine Broker-App aufgebaut: Heute, Konto (Simulator), Trades, Labor, Mehr.
+
 ## Fahrplan bis „fertig“
 | Schritt | Inhalt | fertig, wenn |
 |---|---|---|
@@ -99,10 +107,10 @@ iPhone: ntfy-Pushes mit Ja/Nein-Buttons + Webseite als Home-Bildschirm-App
 | 3 ✓ | **Live-Labor:** alle 5 Min. im Handel Signale prüfen, Spielgeld-Trades öffnen und schließen, Pushes mit Erklärung | ein Handelstag läuft komplett allein |
 | 4 ✓ (gebaut, wartet auf deinen ersten Test) | **Ja/Nein:** Vorschlags-Pushes mit Buttons, Antwortkanal, Spalte „Lukas“ | Lukas hat per Push zugestimmt und abgelehnt |
 | 5 ✓ (gebaut, wartet auf Passwort + Pages) | **Webseite:** iPhone-App-Design, alle Tabs, Glossar, verschlüsselt, GitHub Pages, Home-Bildschirm-Symbol | Lukas öffnet sie auf dem iPhone mit Passwort |
-| 6 | **Texte:** Tageslektion, Tagesbilanz, Wochen-Rückblick | ein Freitag mit Rückblick ist gelaufen |
-| 7 | **Lernen:** wöchentliches Nachtraining mit Bestätigung auf ungesehenen Tagen, Änderungsprotokoll | erste übernommene oder abgelehnte Variante mit Begründung |
-| 8 | **Simulator:** 100 € wie echt, Grenzen 3/8/30 €, Gebühren, Spread. Startet, sobald eine Labor-Strategie die Prüfung besteht | erster Simulator-Monat läuft |
-| 9 | **Echtgeld-Prüfung:** Checkliste mit Ampel auf der Webseite | automatisch grün oder rot |
+| 6 ✓ | **Texte:** Tageslektion, Tagesbilanz, Wochen-Rückblick | ein Freitag mit Rückblick ist gelaufen |
+| 7 ✓ | **Lernen:** wöchentliches Nachtraining mit Bestätigung auf ungesehenen Tagen, Änderungsprotokoll | erste übernommene oder abgelehnte Variante mit Begründung |
+| 8 ✓ (Vorschau läuft, Start entscheidet Lukas) | **Simulator:** 100 € wie echt, Grenzen 3/8/30 €, Gebühren, Spread. Startet, sobald eine Labor-Strategie die Prüfung besteht | erster Simulator-Monat läuft |
+| 9 ✓ | **Echtgeld-Prüfung:** Checkliste mit Ampel auf der Webseite | automatisch grün oder rot |
 | 10 | **KI-Zweitmeinung (optional, ab Monat 2):** Claude liest News und bewertet Vorschläge, getrennt gemessen | nur wenn Lukas Kosten bis ca. 10 €/Monat freigibt |
 | 11 | **Echt (frühestens nach 2 Simulator-Monaten im Plus):** Broker gemeinsam wählen, Steuern klären, jede Order mit Ja | Lukas entscheidet |
 

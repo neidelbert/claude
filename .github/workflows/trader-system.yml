@@ -17,9 +17,13 @@ on:
         description: "Was soll laufen?"
         type: choice
         default: morning
-        options: [morning, orb, live, lab, ticker, alerts, test, auto]
+        options: [morning, orb, live, lab, ticker, alerts, test, nachricht, auto]
       ticker:
         description: "Nur bei „ticker“: Symbol, z. B. TSLA"
+        required: false
+        default: ""
+      nachricht:
+        description: "Nur bei „nachricht“: Text des Pushes"
         required: false
         default: ""
       alarme:
@@ -64,6 +68,9 @@ jobs:
           TEIL: ${{ github.event_name == 'schedule' && 'auto' || inputs.teil }}
           TICKER: ${{ inputs.ticker }}
           ALARME: ${{ inputs.alarme }}
+          NACHRICHT: ${{ inputs.nachricht }}
+          NACHRICHT_TITEL: "Auswertung von Claude"
+          NACHRICHT_LINK: "https://github.com/neidelbert/claude/blob/main/docs/AUSWERTUNG.md"
         run: |
           set -euo pipefail
           args=("$TEIL")
@@ -71,7 +78,8 @@ jobs:
             args+=("$TICKER")
             if [ "$ALARME" = "true" ]; then args+=("--alerts"); fi
           fi
-          if [ "$TEIL" != "auto" ] && [ "$TEIL" != "ticker" ] && [ "$TEIL" != "test" ]; then args+=("--force"); fi
+          if [ "$TEIL" = "nachricht" ]; then args=("message"); fi
+          if [ "$TEIL" != "auto" ] && [ "$TEIL" != "ticker" ] && [ "$TEIL" != "test" ] && [ "$TEIL" != "nachricht" ]; then args+=("--force"); fi
           python3 tools/trader/system.py "${args[@]}"
       - name: Kerzen-Cache speichern (nur nach dem Labor)
         if: steps.system.outputs.lab_ran == 'true'

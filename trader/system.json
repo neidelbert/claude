@@ -20,5 +20,15 @@
   "_site_salt": "Fester Zufallswert für die Verschlüsselung der Webseite (nicht geheim, nicht ändern: sonst muss das Passwort neu eingegeben werden)",
   "site_salt": "8ef204ea501bf3a0a06225d118328213",
   "_site_url": "Adresse der Webseite; Pushes öffnen sie beim Antippen",
-  "site_url": "https://neidelbert.github.io/claude/"
+  "site_url": "https://neidelbert.github.io/claude/",
+  "_sim": "Simulator (Phase 2): 100 € wie echt. start_date = Tag, ab dem er zählt (JJJJ-MM-TT), null = noch Testphase",
+  "sim": {
+    "start_eur": 100.0,
+    "max_loss_trade": 3.0,
+    "max_loss_day": 8.0,
+    "max_loss_month": 30.0,
+    "fee_eur": 1.0,
+    "min_position": 20.0,
+    "start_date": null
+  }
 }

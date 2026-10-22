@@ -444,9 +444,94 @@ def lab_rank_line(r):
         r["label"], de_int(t.get("n", 0)), de_num(t.get("win_rate", 0), 0), de_num(t.get("eur", 0)))
 
 
+def lab_changes(old_res, new_res, day):
+    """Änderungsprotokoll: neue Top-Variante, neu bestanden, nicht mehr bestanden."""
+    old_rows = {r["id"]: r for r in (old_res or {}).get("variants", [])}
+    rows = new_res.get("variants", [])
+    if not rows:
+        return []
+    out = []
+    oc, nc = (old_res or {}).get("champion") or ((old_res or {}).get("variants") or [{}])[0].get("id"), rows[0]["id"]
+    if oc != nc:
+        t = rows[0]["test"]
+        out.append({"date": day, "kind": "champion", "id": nc, "old": oc,
+                    "text": "Neue Top-Variante: %s (Prüftage: %s Trades, %s € bei 100 € pro Trade). Vorher: %s." % (
+                        rows[0]["label"], de_int(t.get("n", 0)), de_num(t.get("eur", 0)),
+                        (old_rows.get(oc) or {}).get("label", oc or "keine"))})
+    for r in rows:
+        was = (old_rows.get(r["id"]) or {}).get("passed")
+        if r["passed"] and not was:
+            out.append({"date": day, "kind": "passed", "id": r["id"], "text": "Neu bestanden: %s." % r["label"]})
+        elif was and not r["passed"]:
+            out.append({"date": day, "kind": "failed", "id": r["id"],
+                        "text": "Nicht mehr bestanden: %s (an den neuen Prüftagen nicht mehr im Plus)." % r["label"]})
+    return out
+
+
+def week_review(cfg, now):
+    """Wochen-Rückblick aus den Live-Tagen dieser Woche, dem Labor und den Entscheidungen."""
+    et = scan.to_eastern(now).date()
+    monday = et - datetime.timedelta(days=et.weekday())
+    week = "%d-W%02d" % et.isocalendar()[:2]
+    lab = lab_module()
+    days = []
+    for i in range(5):
+        d = (monday + datetime.timedelta(days=i)).isoformat()
+        sm = lab.day_summary(d)
+        if sm:
+            days.append(sm)
+    res = read_json(p(T, "lab", "results.json"), {}) or {}
+    rows = res.get("variants", [])
+    focus_eur = {}
+    for sm in days:
+        for r in sm["variants"]:
+            focus_eur.setdefault(r["id"], {"label": r["label"], "eur": 0.0, "n": 0})
+            focus_eur[r["id"]]["eur"] = round(focus_eur[r["id"]]["eur"] + r["eur"], 2)
+            focus_eur[r["id"]]["n"] += r["n"]
+    ranked = sorted(focus_eur.items(), key=lambda kv: kv[1]["eur"], reverse=True)
+    dec = read_json(p(T, "lab", "decisions.json"), {}) or {}
+    wk = [k for k in dec if k[:8] >= monday.strftime("%Y%m%d") and k != "test"]
+    lk_eur, lk_n = 0.0, 0
+    for i in range(5):
+        doc = read_json(p(T, "lab", "live", "%s.json" % (monday + datetime.timedelta(days=i)).isoformat()), {}) or {}
+        for t in doc.get("lukas", []):
+            if t.get("eur") is not None:
+                lk_eur += t["eur"]
+                lk_n += 1
+    changes = [c for c in (read_json(p(T, "lab", "changes.json"), []) or []) if c["date"] >= monday.isoformat()]
+    good = [kv for kv in ranked if kv[1]["eur"] > 0]
+    doc = {"week": week, "from": monday.isoformat(), "to": et.isoformat(), "live_days": len(days),
+           "trades": sum(sm["n_trades"] for sm in days),
+           "best": [{"id": k, **v} for k, v in ranked[:3]], "worst": [{"id": k, **v} for k, v in ranked[-3:]][::-1],
+           "share_positive": round(len(good) / len(ranked) * 100) if ranked else None,
+           "champion": rows[0]["label"] if rows else None, "passed": sum(1 for r in rows if r.get("passed")),
+           "decisions": {"ja": sum(1 for k in wk if dec[k]["answer"] == "ja"),
+                         "nein": sum(1 for k in wk if dec[k]["answer"] == "nein")},
+           "lukas": {"n": lk_n, "eur": round(lk_eur, 2)}, "changes": changes[-10:],
+           "lesson": "Eine Woche ist sehr kurz. Wichtig ist nicht, ob sie im Plus war, sondern ob die Regeln eingehalten "
+                     "wurden und ob die Top-Varianten auch an neuen Tagen halten, was die Prüftage versprochen haben."}
+    write_json(p(T, "lab", "weekly", week + ".json"), doc)
+    lines = ["%d Live-Tage · %s Spielgeld-Trades aller Varianten" % (len(days), de_int(doc["trades"]))]
+    for b in doc["best"][:2]:
+        lines.append("Beste: %s: %s € (%d Trades)" % (b["label"], de_num(b["eur"]), b["n"]))
+    if doc["worst"]:
+        w = doc["worst"][0]
+        lines.append("Schwächste: %s: %s €" % (w["label"], de_num(w["eur"])))
+    if doc["share_positive"] is not None:
+        lines.append("%d %% der Varianten waren diese Woche im Plus." % doc["share_positive"])
+    lines.append("Deine Antworten: %d Ja, %d Nein · Ja-Trades %s €" % (
+        doc["decisions"]["ja"], doc["decisions"]["nein"], de_num(doc["lukas"]["eur"])))
+    for c in changes[-2:]:
+        lines.append(c["text"])
+    lines.append(doc["lesson"])
+    push(cfg, "Wochen-Rückblick %s" % week, "\n".join(lines), priority=3, tags=["calendar"])
+    return week
+
+
 def do_lab(cfg, now, force):
-    owned = ["lab/results.json", "status/lab.json"]
+    owned = ["lab/results.json", "lab/changes.json", "status/lab.json"]
     steps, data = [], {}
+    old_res = read_json(p(T, "lab", "results.json"), {}) or {}
     rc, fd, reason = run_json("lab-fetch", ["lab.py", "fetch"], timeout=1200)
     if fd is None or not fd.get("fetched"):
         step(steps, "Kerzen laden", False, reason or "keine Kerzen geladen")
@@ -472,16 +557,36 @@ def do_lab(cfg, now, force):
     lines.append("Was heißt das? Prüftage sind Tage, die das System beim Lernen nicht gesehen hat. Nur was "
                  "dort im Plus ist, zählt. „Bei 100 € pro Trade“ ist vor Gebühren; mit 1 € je Order "
                  "kosten 100 Trades 200 €.")
+    day = scan.to_eastern(now).date().isoformat()
+    ch = lab_changes(old_res, res, day)
+    if ch:
+        log = (read_json(p(T, "lab", "changes.json"), []) or []) + ch
+        write_json(p(T, "lab", "changes.json"), log[-200:])
+        lines.insert(-1, "Geändert: " + " ".join(c["text"] for c in ch[:3]))
     push(cfg, "Labor: %d von %d Varianten bestanden" % (len(passed), len(rows)), "\n".join(lines),
          priority=3, tags=["test_tube"])
+    # Wochen-Rückblick am letzten Handelstag der Woche
+    et = scan.to_eastern(now).date()
+    nxt = et + datetime.timedelta(days=1)
+    while not scan.session(nxt):
+        nxt += datetime.timedelta(days=1)
+    if nxt.isocalendar()[1] != et.isocalendar()[1]:
+        try:
+            wk = week_review(cfg, now)
+            owned.append("lab/weekly/%s.json" % wk)
+            step(steps, "Wochen-Rückblick", True, wk)
+        except Exception as e:
+            step(steps, "Wochen-Rückblick", False, str(e)[:200])
     return True, "%d von %d bestanden" % (len(passed), len(rows)), steps, data, owned
 
 
-STRAT_SHORT = {"orb": "Opening-Range-Ausbruch", "gap": "News-Sprung", "bounce": "Erholung"}
+STRAT_SHORT = {"orb": "Opening-Range-Ausbruch", "gap": "News-Sprung", "bounce": "Erholung", "sip": "Stocks in Play"}
 WHY_IN = {
     "orb": "Der Kurs hat über dem Hoch der ersten Minuten geschlossen. Der Stopp liegt dort, wo die Idee falsch wäre.",
     "gap": "Die Aktie ist mit viel Umsatz über dem Vortag gestartet und steigt weiter über ihr erstes Hoch.",
     "bounce": "Die stark gefallene Aktie steigt wieder über ihren Tagesdurchschnittspreis (VWAP).",
+    "sip": "Ungewöhnlich viel Umsatz in den ersten 5 Minuten und eine grüne erste Kerze: gekauft über ihrem Hoch, "
+           "mit engem Stopp (nach einer Studie zu profitablem Daytrading).",
 }
 WHY_OUT = {
     "Stopp": "Der Stopp hat den Verlust begrenzt. Das ist normal: viele Trades enden so, entscheidend ist die Summe.",
@@ -553,7 +658,8 @@ def do_live(cfg, now, force):
             many = " (%d Varianten)" % len(es) if len(es) > 1 else ""
             if ev == "in":
                 lines.append("Einstieg %s Uhr ET · %s %s · %s%s · Stopp %s · Ziel %s" % (
-                    e["in_at"], sym, usd(e["entry"]), STRAT_SHORT[strat], many, usd(e["stop"]), usd(e["target"])))
+                    e["in_at"], sym, usd(e["entry"]), STRAT_SHORT[strat], many, usd(e["stop"]),
+                    usd(e["target"]) if e["target"] else "bis Schluss"))
                 why.append(WHY_IN[strat])
             else:
                 res = ", ".join("%s €" % de_num(x["eur"]) for x in es)
@@ -573,7 +679,7 @@ def do_live(cfg, now, force):
             risk_eur = (e["entry"] - e["stop"]) / e["entry"] * 100
             open_now = e["open"]
             msg = ["%s %s · Einstieg %s Uhr ET · %s" % (sym, usd(e["entry"]), e["in_at"], STRAT_SHORT[strat]),
-                   "Stopp %s · Ziel %s · Risiko bei 100 €: %s €" % (usd(e["stop"]), usd(e["target"]),
+                   "Stopp %s · Ziel %s · Risiko bei 100 €: %s €" % (usd(e["stop"]), usd(e["target"]) if e["target"] else "bis Schluss",
                                                                      de_num(risk_eur)),
                    WHY_IN[strat],
                    "Ja = du hättest mitgemacht (zählt ab dem nächsten Kurs nach deiner Antwort). "
@@ -1037,7 +1143,8 @@ def publish(owned, message):
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description="Trader-System auf GitHub Actions")
-    ap.add_argument("part", choices=["auto", "morning", "orb", "live", "lab", "alerts", "ticker", "test", "render"])
+    ap.add_argument("part", choices=["auto", "morning", "orb", "live", "lab", "alerts", "ticker", "test", "message",
+                                     "render"])
     ap.add_argument("symbol", nargs="?")
     ap.add_argument("--force", action="store_true", help="Zeitfenster und „heute schon gelaufen“ ignorieren")
     ap.add_argument("--alerts", action="store_true", help="bei ticker: Alarme aus dem Plan anlegen")
@@ -1088,7 +1195,13 @@ def main(argv=None):
     for job in jobs:
         LOG.clear()
         try:
-            if job == "test":
+            if job == "message":
+                ok = push(cfg, os.environ.get("NACHRICHT_TITEL") or "Trader-System",
+                          os.environ.get("NACHRICHT") or "(leer)", priority=4, tags=["memo"],
+                          actions=[{"action": "view", "label": "Auswertung lesen",
+                                    "url": os.environ.get("NACHRICHT_LINK") or overview_url()}])
+                res = (ok, "Nachricht gesendet" if ok else "nicht gesendet", [], {}, [])
+            elif job == "test":
                 try:
                     last = read_answers(cfg).get("test")
                 except Exception:
@@ -1112,6 +1225,8 @@ def main(argv=None):
                 ["status/%s.json" % job]
         before = read_json(status_path(job), {}) or {}
         failed_before = before.get("date_et") == et.date().isoformat() and not before.get("ok")
+        if job == "message":           # nur ein Push, nichts speichern
+            continue
         if ok is None:                 # nichts zu tun, nichts speichern
             print("%s: %s" % (PART_DE[job], summary))
             continue

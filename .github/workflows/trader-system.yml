@@ -4,9 +4,11 @@ name: Trader-System
 
 on:
   schedule:
-    # alle 15 Minuten, Mo–Fr 12:00–20:45 UTC (8:00–16:45 Uhr ET Sommerzeit, 7:00–15:45 Uhr ET Winterzeit).
-    # „auto“ entscheidet nach New Yorker Zeit: Morgen-Scan, ORB-Scan, Preisalarme oder nichts.
-    - cron: "*/15 12-20 * * 1-5"
+    # Mo–Fr, alle Zeiten UTC. „auto“ entscheidet nach New Yorker Zeit, was fällig ist:
+    # Morgen-Scan, ORB-Scan, Labor live, Preisalarme, Tagesbilanz, Labor-Rangliste oder nichts.
+    - cron: "*/15 12 * * 1-5"
+    # Handelszeit (beide Zeitzonen) + Tagesbilanz: alle 10 Minuten
+    - cron: "*/10 13-21 * * 1-5"
     # nach Börsenschluss fürs Labor: 21:20/21:50/22:20/22:50 UTC (16:20–17:50 Uhr ET Winterzeit, 17:20–18:50 Sommerzeit)
     - cron: "20,50 21-22 * * 1-5"
   workflow_dispatch:
@@ -15,7 +17,7 @@ on:
         description: "Was soll laufen?"
         type: choice
         default: morning
-        options: [morning, orb, lab, ticker, alerts, test, auto]
+        options: [morning, orb, live, lab, ticker, alerts, test, auto]
       ticker:
         description: "Nur bei „ticker“: Symbol, z. B. TSLA"
         required: false
@@ -45,13 +47,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Kerzen-Cache fürs Labor
-        uses: actions/cache@v4
+      - name: Kerzen-Cache fürs Labor laden
+        uses: actions/cache/restore@v4
         with:
           path: .cache/lab
           key: lab-bars-${{ github.run_id }}
           restore-keys: lab-bars-
       - name: Trader-System
+        id: system
         env:
           TEIL: ${{ github.event_name == 'schedule' && 'auto' || inputs.teil }}
           TICKER: ${{ inputs.ticker }}
@@ -65,6 +68,12 @@ jobs:
           fi
           if [ "$TEIL" != "auto" ] && [ "$TEIL" != "ticker" ] && [ "$TEIL" != "test" ]; then args+=("--force"); fi
           python3 tools/trader/system.py "${args[@]}"
+      - name: Kerzen-Cache speichern (nur nach dem Labor)
+        if: steps.system.outputs.lab_ran == 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/lab
+          key: lab-bars-${{ github.run_id }}
       - name: Absturz melden
         if: failure()
         run: |

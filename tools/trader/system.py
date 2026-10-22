@@ -69,7 +69,7 @@ SETUP_DE = {
     "orb": "5-Minuten-Kerze schließt über dem Hoch der ersten 15 Minuten",
 }
 SETUP_ORDER = ["breakout_20d", "bull_flag", "reclaim_ma20", "oversold", "oversold_bounce"]
-PART_DE = {"morning": "Morgen-Scan", "orb": "ORB-Scan", "lab": "Labor", "alerts": "Preisalarme",
+PART_DE = {"morning": "Morgen-Scan", "orb": "ORB-Scan", "live": "Labor live", "lab": "Labor", "alerts": "Preisalarme",
            "ticker": "Ticker-Analyse", "test": "Test-Push"}
 WEEKDAY_DE = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"]
 NOTE_DE = "Eine Liste von Charts, die zu einer Regel passen, ist keine Kaufliste."
@@ -441,6 +441,133 @@ def do_lab(cfg, now, force):
     return True, "%d von %d bestanden" % (len(passed), len(rows)), steps, data, owned
 
 
+STRAT_SHORT = {"orb": "Opening-Range-Ausbruch", "gap": "News-Sprung", "bounce": "Erholung"}
+WHY_IN = {
+    "orb": "Der Kurs hat über dem Hoch der ersten Minuten geschlossen. Der Stopp liegt dort, wo die Idee falsch wäre.",
+    "gap": "Die Aktie ist mit viel Umsatz über dem Vortag gestartet und steigt weiter über ihr erstes Hoch.",
+    "bounce": "Die stark gefallene Aktie steigt wieder über ihren Tagesdurchschnittspreis (VWAP).",
+}
+WHY_OUT = {
+    "Stopp": "Der Stopp hat den Verlust begrenzt. Das ist normal: viele Trades enden so, entscheidend ist die Summe.",
+    "Ziel": "Das Ziel war ein Vielfaches des Risikos (R). Erreicht heißt: Gewinn größer als ein Stopp-Verlust.",
+    "Schluss": "Daytrades werden vor Börsenschluss verkauft, damit nichts über Nacht passiert.",
+}
+LESSONS = [
+    "R ist das Risiko eines Trades: Abstand von Einstieg zu Stopp. Ziel 2R heißt: doppelt so weit nach oben wie zum Stopp.",
+    "Trefferquote allein sagt wenig. 40 % Treffer können reichen, wenn die Gewinne größer sind als die Verluste.",
+    "Gebühren zählen: Bei 100 € Einsatz kostet 1 € je Order 2 % pro Trade. Ein Broker mit sehr kleinen Gebühren ist Pflicht.",
+    "Prüftage sind Tage, die das System beim Lernen nicht gesehen hat. Nur dort zeigt sich, ob eine Regel wirklich funktioniert.",
+    "Der Spread ist der Abstand zwischen Kauf- und Verkaufskurs. Bei viel gehandelten Aktien ist er klein.",
+    "Volumen ist die Zahl gehandelter Aktien. Viel Volumen beim Ausbruch heißt: viele machen mit, das Signal ist stärker.",
+    "Der VWAP ist der Durchschnittspreis des Tages, gewichtet nach Volumen. Viele Händler orientieren sich daran.",
+    "Ein Monat beweist wenig. Erst viele Trades über mehrere Monate zeigen, ob eine Regel mehr als Glück ist.",
+]
+
+
+def lesson(day):
+    return LESSONS[datetime.date.fromisoformat(day).toordinal() % len(LESSONS)]
+
+
+def lab_module():
+    spec = importlib.util.spec_from_file_location("trader_lab", os.path.join(HERE, "lab.py"))
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def do_live(cfg, now, force):
+    et = scan.to_eastern(now)
+    day = et.date().isoformat()
+    owned = ["lab/live/%s.json" % day, "status/live.json"]
+    steps = []
+    old = read_json(status_path("live"), {}) or {}
+    data = dict(old.get("data") or {}) if old.get("date_et") == day else {}
+    rc, ld, reason = run_json("live", ["lab.py", "live"], timeout=900)
+    if ld is None or ld.get("error"):
+        step(steps, "Labor live", False, (ld or {}).get("error") or reason)
+        return False, "Labor live fehlgeschlagen", steps, data, owned
+    step(steps, "Labor live", True, "%s Aktien, %s Spielgeld-Trades, %s offen" % (
+        de_int(ld["symbols"]), de_int(ld["trades"]), de_int(ld["open"])))
+    data.update({"date": day, "as_of": ld["as_of"], "trades": ld["trades"], "open": ld["open"],
+                 "symbols": ld["symbols"], "failed": ld["failed"]})
+    events = ld.get("events", [])
+    if events:
+        groups = {}
+        for e in events:
+            groups.setdefault((e["event"], e["symbol"], e["strategy"], e["why"] if e["event"] == "out" else ""),
+                              []).append(e)
+        n_in = sum(1 for k in groups if k[0] == "in")
+        n_out = len(groups) - n_in
+        lines, why = [], []
+        for (ev, sym, strat, _), es in sorted(groups.items(), key=lambda kv: (kv[1][0]["in_k"], kv[0][0] != "in")):
+            e = es[0]
+            many = " (%d Varianten)" % len(es) if len(es) > 1 else ""
+            if ev == "in":
+                lines.append("Einstieg %s Uhr ET · %s %s · %s%s · Stopp %s · Ziel %s" % (
+                    e["in_at"], sym, usd(e["entry"]), STRAT_SHORT[strat], many, usd(e["stop"]), usd(e["target"])))
+                why.append(WHY_IN[strat])
+            else:
+                res = ", ".join("%s €" % de_num(x["eur"]) for x in es)
+                lines.append("Ausstieg %s Uhr ET · %s %s · %s · %s bei 100 € pro Trade" % (
+                    e["out_at"], sym, usd(e["exit"]), e["why"], res))
+                why.append(WHY_OUT[e["why"]])
+        seen = []
+        for w in why:
+            if w not in seen:
+                seen.append(w)
+        lines.append("Was heißt das? " + " ".join(seen[:2]))
+        lines.append("Spielgeld (Testphase), kein echtes Geld.")
+        push(cfg, "Labor live: %d Einstieg%s, %d Ausstieg%s" % (n_in, "" if n_in == 1 else "e", n_out,
+                                                               "" if n_out == 1 else "e"),
+             "\n".join(lines), priority=3, tags=["chart_with_upwards_trend"])
+    sess = scan.session(et.date())
+    closed = sess and et.time() >= sess[1]
+    if closed and data.get("eod") != day:
+        lab = lab_module()
+        sm = lab.day_summary(day) or {}
+        data["eod"] = day
+        lines = ["%s Spielgeld-Trades heute (alle %d Varianten zusammen)" % (de_int(sm.get("n_trades", 0)),
+                                                                            len(lab.variants()))]
+        for k, s in sorted((sm.get("by_strategy") or {}).items()):
+            lines.append("%s: %s Trades, %s € bei 100 € pro Trade" % (STRAT_SHORT.get(k, k), de_int(s["n"]),
+                                                                     de_num(s["eur"])))
+        focus = [r for r in sm.get("variants", []) if r["id"] in sm.get("focus", [])]
+        for r in focus[:3]:
+            lines.append("Top-Variante %s: %s Trades, %s €" % (r["label"], de_int(r["n"]), de_num(r["eur"])))
+        lines.append("Lektion: " + lesson(day))
+        push(cfg, "Tagesbilanz Labor %s" % date_de(day), "\n".join(lines), priority=3, tags=["memo"])
+        return True, "Tagesbilanz: %s Trades" % de_int(sm.get("n_trades", 0)), steps, data, owned
+    if events or force or et.minute % 30 < 10:   # sonst kein Commit, höchstens alle 30 Minuten
+        return True, "%s Trades, %s offen" % (de_int(ld["trades"]), de_int(ld["open"])), steps, data, owned
+    return None, "keine neuen Ereignisse", steps, data, owned
+
+
+def render_live(out):
+    st = read_json(status_path("live"), None)
+    if not st:
+        return
+    day = (st.get("data") or {}).get("date")
+    doc = read_json(p(T, "lab", "live", "%s.json" % day), None) if day else None
+    if not doc:
+        return
+    labels = {v["id"]: v["label"] for v in lab_module().variants()}
+    out += ["", "## Labor live – %s, Stand %s" % (date_de(day), doc.get("as_of")), "",
+            "%s Aktien beobachtet · %s Spielgeld-Trades aller Varianten · %s offen" % (
+                de_int(doc["symbols"]), de_int(doc["n_trades"]), de_int(doc["n_open"])), "",
+            "| Top-Variante | Trades | offen | € bei 100 €/Trade |", "|---|---|---|---|"]
+    for vid in doc.get("focus", []):
+        pv = doc["per_variant"].get(vid, {"n": 0, "open": 0, "eur": 0})
+        out.append("| %s | %s | %s | %s € |" % (labels.get(vid, vid), pv["n"], pv["open"], de_num(pv["eur"])))
+    ft = [t for t in doc["trades"] if t["variant"] in doc.get("focus", [])]
+    if ft:
+        out += ["", "| Aktie | Regel | Einstieg | Stopp | Ziel | Stand | Ergebnis |", "|---|---|---|---|---|---|---|"]
+        for t in ft[-20:]:
+            state = "offen, Kurs %s" % usd(t["last"]) if t["open"] else "%s %s Uhr" % (t["why"], t["out_at"])
+            out.append("| %s | %s | %s %s | %s | %s | %s | %s € |" % (
+                t["symbol"], labels.get(t["variant"], t["variant"]).split(" · ")[0], t["in_at"], usd(t["entry"]),
+                usd(t["stop"]), usd(t["target"]), state, de_num(t["eur"])))
+
+
 def render_lab(out):
     res = read_json(p(T, "lab", "results.json"), None)
     if not res:
@@ -636,7 +763,8 @@ def render():
     if bad:
         out += ["", "**Probleme:**"] + ["- %s / %s: %s" % (a, x["name"], md_escape(x["detail"])) for a, x in bad]
     out += ["", "Zeitplan (Mo–Fr, an Handelstagen): Morgen-Scan ab ca. 8:00 Uhr ET, ORB-Scan ab ca. 10:15 Uhr ET, "
-            "Preisalarme alle 15 Minuten während der Handelszeit, Labor nach Börsenschluss (ab ca. 16:20 Uhr ET)."]
+            "Labor live und Preisalarme alle 10 Minuten während der Handelszeit, Tagesbilanz nach Schluss, "
+            "Labor-Rangliste nach Börsenschluss (ab ca. 16:20 Uhr ET)."]
 
     # Morgen-Scan
     wl = read_json(p(T, "watchlist.json"), None)
@@ -737,6 +865,7 @@ def render():
         for it in (td.get("news") or {}).get("items", [])[:8]:
             out.append("- %s · [%s](%s)" % (news_time(it.get("time")), md_escape(it.get("title")), it.get("link")))
 
+    render_live(out)
     render_lab(out)
 
     # Alarme
@@ -817,7 +946,7 @@ def publish(owned, message):
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description="Trader-System auf GitHub Actions")
-    ap.add_argument("part", choices=["auto", "morning", "orb", "lab", "alerts", "ticker", "test", "render"])
+    ap.add_argument("part", choices=["auto", "morning", "orb", "live", "lab", "alerts", "ticker", "test", "render"])
     ap.add_argument("symbol", nargs="?")
     ap.add_argument("--force", action="store_true", help="Zeitfenster und „heute schon gelaufen“ ignorieren")
     ap.add_argument("--alerts", action="store_true", help="bei ticker: Alarme aus dem Plan anlegen")
@@ -839,9 +968,17 @@ def main(argv=None):
             jobs.append("morning")
         if trading and ORB_WINDOW[0] <= t <= ORB_WINDOW[1] and not done_today("orb", et.date()):
             jobs.append("orb")
-        if trading and LAB_WINDOW[0] <= t <= LAB_WINDOW[1] and not done_today("lab", et.date()):
-            jobs.append("lab")
+        lab_due = trading and LAB_WINDOW[0] <= t <= LAB_WINDOW[1] and not done_today("lab", et.date())
         sess = scan.session(et.date())
+        if sess:
+            o_dt = datetime.datetime.combine(et.date(), sess[0]) + datetime.timedelta(minutes=5)
+            c_dt = datetime.datetime.combine(et.date(), sess[1]) + datetime.timedelta(minutes=60)
+            live_old = read_json(status_path("live"), {}) or {}
+            eod_done = (live_old.get("data") or {}).get("eod") == et.date().isoformat()
+            if o_dt.time() <= t <= c_dt.time() and not (t >= sess[1] and eod_done):
+                jobs.append("live")
+        if lab_due:
+            jobs.append("lab")
         if sess and sess[0] <= t <= (datetime.datetime.combine(et.date(), sess[1]) +
                                      datetime.timedelta(minutes=15)).time():
             jobs.append("alerts")
@@ -867,7 +1004,8 @@ def main(argv=None):
             elif job == "ticker":
                 res = do_ticker(cfg, now, a.symbol, a.alerts)
             else:
-                res = {"morning": do_morning, "orb": do_orb, "lab": do_lab, "alerts": do_alerts}[job](cfg, now, force)
+                res = {"morning": do_morning, "orb": do_orb, "live": do_live, "lab": do_lab,
+                       "alerts": do_alerts}[job](cfg, now, force)
             ok, summary, steps, data, own = res
         except Exception as e:
             traceback.print_exc()
@@ -889,11 +1027,14 @@ def main(argv=None):
             # derselbe Fehler am selben Tag nur einmal melden
             # der Morgen-Scan meldet Teilprobleme schon in seinem eigenen Push
             pushed = job == "morning" and (data or {}).get("daily")
-            if cfg["push_errors"] and job in ("morning", "orb", "lab", "alerts") and not failed_before and not pushed:
+            if cfg["push_errors"] and job in ("morning", "orb", "live", "lab", "alerts") and not failed_before and not pushed:
                 bad = [s for s in steps if not s["ok"]]
                 push(cfg, "Trader-System: Problem beim %s" % PART_DE[job],
                      "\n".join("%s: %s" % (s["name"], s["detail"]) for s in bad) or summary,
                      priority=4, tags=["warning"])
+    if "lab" in done and os.environ.get("GITHUB_OUTPUT"):
+        with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
+            fh.write("lab_ran=true\n")
     if not done:
         return 0
     if a.no_publish or not os.environ.get("GITHUB_ACTIONS"):

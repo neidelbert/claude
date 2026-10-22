@@ -1,0 +1,67 @@
+# Trader-System: läuft auf GitHub-Servern (dort sind Yahoo, Nasdaq Trader, SEC und House Clerk erreichbar).
+# Ergebnis: trader/UEBERSICHT.md + Push aufs iPhone (App „ntfy“). Steuerung: tools/trader/system.py
+name: Trader-System
+
+on:
+  schedule:
+    # alle 15 Minuten, Mo–Fr 12:00–20:45 UTC (8:00–16:45 Uhr ET Sommerzeit, 7:00–15:45 Uhr ET Winterzeit).
+    # „auto“ entscheidet nach New Yorker Zeit: Morgen-Scan, ORB-Scan, Preisalarme oder nichts.
+    - cron: "*/15 12-20 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      teil:
+        description: "Was soll laufen?"
+        type: choice
+        default: morning
+        options: [morning, orb, ticker, alerts, test, auto]
+      ticker:
+        description: "Nur bei „ticker“: Symbol, z. B. TSLA"
+        required: false
+        default: ""
+      alarme:
+        description: "Nur bei „ticker“: Stopp/Ziel-Alarme aus dem Plan anlegen"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  # Zeitplan-Läufe nacheinander; manuelle Läufe sofort (system.py führt gleichzeitige Commits zusammen)
+  group: trader-${{ github.event_name == 'schedule' && 'auto' || github.run_id }}
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+      SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Trader-System
+        env:
+          TEIL: ${{ github.event_name == 'schedule' && 'auto' || inputs.teil }}
+          TICKER: ${{ inputs.ticker }}
+          ALARME: ${{ inputs.alarme }}
+        run: |
+          set -euo pipefail
+          args=("$TEIL")
+          if [ "$TEIL" = "ticker" ]; then
+            args+=("$TICKER")
+            if [ "$ALARME" = "true" ]; then args+=("--alerts"); fi
+          fi
+          if [ "$TEIL" != "auto" ] && [ "$TEIL" != "ticker" ] && [ "$TEIL" != "test" ]; then args+=("--force"); fi
+          python3 tools/trader/system.py "${args[@]}"
+      - name: Absturz melden
+        if: failure()
+        run: |
+          TOPIC="${NTFY_TOPIC:-$(python3 -c 'import json;print(json.load(open("trader/system.json"))["ntfy_topic"])')}"
+          curl -sS -H "Title: Trader-System: Lauf fehlgeschlagen" -H "Priority: 4" -H "Tags: warning" \
+            -H "Click: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            -d "Der Lauf ist abgestürzt oder ein Teil hat einen Fehler gemeldet. Tippen öffnet das Protokoll." \
+            "https://ntfy.sh/$TOPIC" || true

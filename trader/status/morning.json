@@ -1,0 +1,815 @@
+{
+  "part": "morning",
+  "ok": true,
+  "summary": "823 Treffer",
+  "ran_at": "2026-10-22T22:31:30Z",
+  "date_et": "2026-10-22",
+  "steps": [
+    {
+      "name": "Aktienliste",
+      "ok": true,
+      "detail": "neu geladen: 5,945 Aktien"
+    },
+    {
+      "name": "Daily-Scan",
+      "ok": true,
+      "detail": "5.943 von 5.945 Charts geladen, 1.595 gescannt, 823 Treffer"
+    },
+    {
+      "name": "News",
+      "ok": true,
+      "detail": "120 neue Meldungen zu 10 Tickern"
+    },
+    {
+      "name": "Pelosi-Tracker",
+      "ok": true,
+      "detail": "1 neue Meldung"
+    }
+  ],
+  "data": {
+    "universe_date": "2026-10-22",
+    "daily": {
+      "as_of": "2026-10-22 close",
+      "universe": 5945,
+      "fetched": 5943,
+      "liquid": 1597,
+      "scanned": 1595,
+      "failed": 2,
+      "hits": 823,
+      "per_setup": {
+        "breakout_20d": 512,
+        "bull_flag": 75,
+        "reclaim_ma20": 120,
+        "oversold": 135,
+        "oversold_bounce": 41
+      }
+    },
+    "news": {
+      "tickers": [
+        "AAPL",
+        "LRCX",
+        "AMAT",
+        "CRWV",
+        "PG",
+        "LLY",
+        "WMT",
+        "SKHY",
+        "BRK.B",
+        "KLAC"
+      ],
+      "items": [
+        {
+          "id": "rss:47e878bb-824d-3243-a8e9-b86b1c3f85d3",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Dow Jones Futures: Moderna Crashes, Meta Fuels AI Meltdown, But Warren Buffett Market Thriving",
+          "summary": "The S&P 500 and Nasdaq tumbled below 50-day lines as Meta led an AI stock rout. But the Warren Buffett market is thriving.",
+          "link": "https://finance.yahoo.com/m/47e878bb-824d-3243-a8e9-b86b1c3f85d3/dow-jones-futures%3A-moderna.html?.tsrc=rss",
+          "time": "2026-10-22T22:27:52+00:00",
+          "touches": [
+            "AAPL",
+            "BRK.B"
+          ],
+          "tags": [
+            "macro"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:a2e2de32-ca63-3a0c-9366-dc239eb08b36",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "LLY",
+          "title": "Amgen vs. Eli Lilly: Does the GLP-1 Mania Make LLY Stock a Better Buy in 2026?",
+          "summary": "Amgen trades at half the valuation multiple of Eli Lilly while generating stronger free cash flow, but explosive growth in obesity drugs tells a different story.",
+          "link": "https://www.fool.com/coverage/better-buy/2026/10/22/amgen-vs-eli-lilly-does-the-glp-1-mania-make-lly-stock-a-better-buy-in-2026/?.tsrc=rss",
+          "time": "2026-10-22T22:15:02+00:00",
+          "touches": [
+            "LLY"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:415d9b98-72a7-3e5f-af3a-277e59761a19",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "PG",
+          "title": "Procter & Gamble Q1 Earnings Call Highlights",
+          "summary": "Procter & Gamble (NYSE:PG) reported a 4.0% increase in organic sales for the first quarter of fiscal 2027, led primarily by volume growth, while maintaining its full-year outlook despite rising commodity, energy and transportation costs. Chief Financial Officer Andre Schulten said organic sales gro",
+          "link": "https://www.marketbeat.com/instant-alerts/transcript-procter-gamble-q1-earnings-call-highlights-2026-10-22/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+          "time": "2026-10-22T22:04:17+00:00",
+          "touches": [
+            "PG"
+          ],
+          "tags": [
+            "earnings"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:1865b334-251a-335e-ae2e-0da837f20227",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "WMT",
+          "title": "Affirm, Sam's Club Strike Exclusive Buy Now, Pay Later Deal",
+          "summary": "Affirm is teaming up with Walmart's Sam's Club as the retailer's exclusive buy-now, pay-later partner, just weeks before the key holiday shopping season kicks off. Affirm will serve as Sam's Club's exclusive BNPL provider in a multi-year agreement, starting in that role on Sam's Club's website in the coming weeks and rolling out to stores in 2027, according to a statement Thursday that didn't disclose terms of the deal. Max Levchin, Founder & CEO of Affirm, joins Bloomberg Businessweek Daily to discuss. He speaks with Carol Massar and Tim Stenovec.",
+          "link": "https://finance.yahoo.com/video/affirm-sams-club-strike-exclusive-215624903.html?.tsrc=rss",
+          "time": "2026-10-22T21:56:24+00:00",
+          "touches": [
+            "WMT"
+          ],
+          "tags": [
+            "deal",
+            "people"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:59c6e0b3-7860-3186-b02a-f15ddc1dce78",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "CRWV",
+          "title": "Stock Market Today, Oct. 22: CoreWeave Slides on Bernstein Downgrade and Financing Worries",
+          "summary": "Bernstein cut its price target as debt concerns weigh on the AI infrastructure provider, today, Oct. 22, 2026.",
+          "link": "https://www.fool.com/coverage/stock-market-today/2026/10/22/stock-market-today-oct-22-coreweave-slides-on-bernstein-downgrade-and-financing-worries/?.tsrc=rss",
+          "time": "2026-10-22T21:51:12+00:00",
+          "touches": [
+            "CRWV"
+          ],
+          "tags": [
+            "analyst"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:d932c482-693e-3af2-833a-81a9c03cf776",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "LLY",
+          "title": "What Does Eli Lilly (LLY) Mean To Signal With Its $5 Billion Richmond Build?",
+          "summary": "Eli Lilly (NYSE:LLY) has started construction on a US$5b fully integrated manufacturing site near Richmond, Virginia, focused on next-generation cancer and autoimmune medicines. The Richmond facility is planned as Lilly's first U.S. site to house both active ingredient production and finished-dose manufacturing on one campus. Lilly has signed a major collaboration with METiS TechBio to apply AI to new lipid nanoparticle drug delivery platforms for tissue-targeted therapies. The Richmond...",
+          "link": "https://finance.yahoo.com/healthcare/articles/does-eli-lilly-lly-mean-211802614.html?.tsrc=rss",
+          "time": "2026-10-22T21:18:02+00:00",
+          "touches": [
+            "LLY"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:590849aa-2dbe-3494-8c1f-3805dca35f0b",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "LRCX",
+          "title": "Chip Stocks Tumble Despite Solid Earnings Reports",
+          "summary": "Chip stocks fell Thursday despite solid quarterly earnings reports from Texas Instruments and Lam Research.",
+          "link": "https://finance.yahoo.com/m/590849aa-2dbe-3494-8c1f-3805dca35f0b/chip-stocks-tumble-despite.html?.tsrc=rss",
+          "time": "2026-10-22T21:01:57+00:00",
+          "touches": [
+            "LRCX"
+          ],
+          "tags": [
+            "earnings"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:2ce44b5b-104c-3f00-bf25-4d883c3cd9b2",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "BRK.B",
+          "title": "Kinsale Capital Group, Inc. (KNSL) Q3 Earnings Surpass Estimates",
+          "summary": "Kinsale Capital Group (KNSL) delivered earnings and revenue surprises of +15.15% and -5.02%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/kinsale-capital-group-inc-knsl-210006034.html?.tsrc=rss",
+          "time": "2026-10-22T21:00:06+00:00",
+          "touches": [
+            "BRK.B"
+          ],
+          "tags": [
+            "earnings"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:add35572-856e-31cb-981d-91d3cc20d822",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "CRWV",
+          "title": "Tesla, SpaceX, Meta, Lockheed Martin, Lam Research, Spotify, and More Stocks That Explain Today’s Market",
+          "summary": "Tesla and Meta fail to excite the stock market.",
+          "link": "https://finance.yahoo.com/m/add35572-856e-31cb-981d-91d3cc20d822/tesla%2C-spacex%2C-meta%2C-lockheed.html?.tsrc=rss",
+          "time": "2026-10-22T20:53:00+00:00",
+          "touches": [
+            "CRWV",
+            "LRCX"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:36d5b527-2747-33b3-a5be-24e3d851d845",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "CRWV",
+          "title": "CoreWeave and Nebius Stocks Are Crashing. Time to Buy the Dip?",
+          "summary": "Both stocks are selling off due to CoreWeave's debt becoming uncertain.",
+          "link": "https://www.fool.com/investing/2026/10/22/coreweave-and-nebius-stocks-are-crashing-time-to/?.tsrc=rss",
+          "time": "2026-10-22T20:47:00+00:00",
+          "touches": [
+            "CRWV"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:5fead2af-4d0e-38c1-b07c-7d126bf5cbe3",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "WMT",
+          "title": "Walmart (WMT) Advances While Market Declines: Some Information for Investors",
+          "summary": "The latest trading day saw Walmart (WMT) settling at $121.12, representing a +2.82% change from its previous close.",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/walmart-wmt-advances-while-market-204504019.html?.tsrc=rss",
+          "time": "2026-10-22T20:45:04+00:00",
+          "touches": [
+            "WMT"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:3bbb4bd8-a982-3c76-b293-44248a86f4b3",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "BRK.B",
+          "title": "Berkshire Hathaway B (BRK.B) Increases Despite Market Slip: Here's What You Need to Know",
+          "summary": "Berkshire Hathaway B (BRK.B) closed at $546.9 in the latest trading session, marking a +1.47% move from the prior day.",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/berkshire-hathaway-b-brk-b-204502243.html?.tsrc=rss",
+          "time": "2026-10-22T20:45:02+00:00",
+          "touches": [
+            "BRK.B"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:640c88c4-a539-3735-a0ee-746427e88883",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Meta Eyes an Early Equity Deal for Its AI War Chest—and Berkshire Could Be a Buyer",
+          "summary": "Berkshire participated in Alphabet’s $85 billion equity fund deal in June that could be a model for any Meta equity raise.",
+          "link": "https://finance.yahoo.com/m/640c88c4-a539-3735-a0ee-746427e88883/meta-eyes-an-early-equity.html?.tsrc=rss",
+          "time": "2026-10-22T20:44:00+00:00",
+          "touches": [
+            "AAPL",
+            "BRK.B"
+          ],
+          "tags": [
+            "deal"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:c65b5f2b-89ea-382b-9b85-3a66addb0f01",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "PG",
+          "title": "P&G’s Boosts Q1 Beauty Sales, but Says It Can Do Better",
+          "summary": "Organic sales in the consumer product giant’s beauty business increased 5 percent to $4.4 billion.",
+          "link": "https://wwd.com/business-news/financial/procter-gamble-boosts-q1-2027-beauty-sales-1239381875/?.tsrc=rss",
+          "time": "2026-10-22T20:41:59+00:00",
+          "touches": [
+            "PG"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:a6067e2b-5ce6-3182-915b-58daa8b6d0f9",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "LRCX",
+          "title": "Stock Market Today: Nasdaq Thrashed, Dow Up; Moderna, Meta Lead Sell-Off (Live Coverage)",
+          "summary": "The Dow Jones index pulled out a small win Thursday but the Nasdaq was hit hard, with Meta sliding.",
+          "link": "https://finance.yahoo.com/m/a6067e2b-5ce6-3182-915b-58daa8b6d0f9/stock-market-today%3A-nasdaq.html?.tsrc=rss",
+          "time": "2026-10-22T20:38:05+00:00",
+          "touches": [
+            "LRCX"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:94cb0dd4-6ca3-47ed-b603-6918c036bbce",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Apple’s foldable iPhone has a $2,000 app problem",
+          "summary": "Apple's (AAPL) new foldable iPhone Duo hits stores Friday. Yahoo Finance Tech Editor Dan Howley got his hands on one and joins Brooke DiPalma on Market Domination to share his takeaways on the new device.",
+          "link": "https://finance.yahoo.com/video/apples-foldable-iphone-has-a-2000-app-problem-203418718.html?.tsrc=rss",
+          "time": "2026-10-22T20:34:18+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:0d7683ba-4385-3f2b-ba63-99e61aac4fe0",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Here Are 4 ETFs That Run an Entire Retirement Portfolio for Less Than $50 a Year on $100,000",
+          "summary": "Most retirement portfolios quietly bleed money through fees before a single stock moves. Four index ETFs exist that together cover every major asset class a retiree needs, and the math on what they actually cost per year may surprise you.",
+          "link": "https://247wallst.com/investing/etf/2026/10/22/here-are-4-etfs-that-run-an-entire-retirement-portfolio-for-less-than-50-a-year-on-100000/?.tsrc=rss",
+          "time": "2026-10-22T20:33:38+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:e5d39268-89ce-310a-a821-d3f775eacbd6",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Apple Reportedly Raised Its iPhone Duo Target 44%. Here’s What November 2 Has to Show",
+          "summary": "Key Stats for Apple StockCurrent Price: $343. 99Target Price (Mid): ~$485Street Target: ~$328Potential Total Return: ~41%Annualized IRR: ~9% / year__Now Live: Discover how much upside your favorite stocks could have using TIKR’s new Valuation Model (It’s free)__ >>> What Happened?Apple (AAPL) has reportedly raised its iPhone Duo shipment target about 44%, a day before the $1,999 foldable reaches stores on October 23.",
+          "link": "https://www.tikr.com/blog/apple-reportedly-raised-its-iphone-duo-target-44-heres-what-november-2-has-to-show?ref=yahoofinance&.tsrc=rss",
+          "time": "2026-10-22T20:32:05+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:892f1d3c-80cf-3343-9282-9a99af65dc1f",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "CRWV",
+          "title": "CoreWeave Sinks 10% as Bernstein Slashes Target to $51: “The Fundamentals Are Probably Stuck”",
+          "summary": "Key TakeawaysCoreWeave shares fell 10% today after Bernstein cut its price target to $51 from $74, as Nebius, IREN and Applied Digital also fell on renewed AI spending fears. Bernstein’s Madison Rezaei doesn’t expect CoreWeave to go to zero, citing its backlog and her view that Nvidia would step in, but she sees its fundamentals as stuck.",
+          "link": "https://www.tikr.com/blog/coreweave-sinks-10-as-bernstein-slashes-target-to-51-the-fundamentals-are-probably-stuck?ref=yahoofinance&.tsrc=rss",
+          "time": "2026-10-22T20:28:39+00:00",
+          "touches": [
+            "CRWV"
+          ],
+          "tags": [
+            "analyst"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:901193fa-8922-3df6-9417-b947a80babdc",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "What Intel, Boeing, Nike Have In Common With Each Other — And Apple",
+          "summary": "Three S&P 500 ccompanies in different stages of comebacks show why it's important to pay attention to corporate turnounds.",
+          "link": "https://finance.yahoo.com/m/901193fa-8922-3df6-9417-b947a80babdc/what-intel%2C-boeing%2C-nike-have.html?.tsrc=rss",
+          "time": "2026-10-22T20:20:09+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:67b3ecaa-a7ff-3b5c-928e-2bc0e4c812ed",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "PG",
+          "title": "Procter & Gamble Soars 6% on Earnings Beat, Shrugs Off $1.4 Billion Cost Hit: “Strong Start”",
+          "summary": "Key TakeawaysProcter & Gamble shares jumped 6% after fiscal first-quarter core EPS of $2. 00 and revenue of $23.",
+          "link": "https://www.tikr.com/blog/procter-gamble-soars-6-on-earnings-beat-shrugs-off-1-4-billion-cost-hit-strong-start?ref=yahoofinance&.tsrc=rss",
+          "time": "2026-10-22T20:13:23+00:00",
+          "touches": [
+            "PG"
+          ],
+          "tags": [
+            "earnings"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:bac0b349-6a9c-36b9-b6f5-741b2da2ea40",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "LRCX",
+          "title": "IonQ Sinks 3%, Rigetti Down 5%, D-Wave Down 4% as Quantum Stocks Slide Again in Tech Selloff",
+          "summary": "Key TakeawaysIonQ shares fell 3% today, alongside Quantinuum, Rigetti Computing and D-Wave Quantum, after Lam Research’s report set off a tech selloff. IonQ had no news of its own, and its drop shows the stock trading like a leveraged bet on the AI trade.",
+          "link": "https://www.tikr.com/blog/ionq-sinks-3-rigetti-down-5-d-wave-down-4-as-quantum-stocks-slide-again-in-tech-selloff?ref=yahoofinance&.tsrc=rss",
+          "time": "2026-10-22T20:12:09+00:00",
+          "touches": [
+            "LRCX"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:62d8ebe9-f2cd-3442-abbf-949d593a13a7",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView",
+          "summary": "Resideo Technologies (NYSE: REZI), a leading global provider of home comfort, security and safety solutions, announced plans to release a software update in the first quarter of 2027 that will enable its existing Honeywell Home ElitePROTM, X7S and X8S smart thermostats to support the new Adaptive Temperature Control and Clean Energy Guidance capabilities introduced with Apple's new HomeView offerings.",
+          "link": "https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss",
+          "time": "2026-10-22T20:11:00+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [
+            "earnings"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:3a05b00e-c09b-3c47-9901-53a2e0e27bc3",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "CRWV",
+          "title": "Companies Are Spending Billions To Build Data Centers. The Timeline For Them To Pay Off is Fuzzy.",
+          "summary": "CoreWeave and Applied Digital reported sharply higher revenue, but their latest filings show capital expenditures far exceeding the cash generated by operations.",
+          "link": "https://www.ibtimes.com/companies-are-spending-billions-build-data-centers-timeline-them-pay-off-fuzzy-3808890?.tsrc=rss",
+          "time": "2026-10-22T20:04:56+00:00",
+          "touches": [
+            "CRWV"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:8abcc1d9-6265-3276-947e-5a37db88999e",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "CRWV",
+          "title": "AI Selloff Takes These Data Center Stocks With It. How They Can Blunt the Pain.",
+          "summary": "Shares of real estate investment trusts that lease data centers to hyperscalers like Meta and Amazon were falling Thursday.",
+          "link": "https://finance.yahoo.com/m/8abcc1d9-6265-3276-947e-5a37db88999e/ai-selloff-takes-these-data.html?.tsrc=rss",
+          "time": "2026-10-22T20:03:00+00:00",
+          "touches": [
+            "CRWV"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:6fb93c9e-0aaf-3f8f-96e6-63afc272d5e8",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "How much Apple stock does CEO John Ternus actually own?",
+          "summary": "John Ternus took over as Apple’s CEO in September 2026, and he could be awarded a significant number of shares for meeting performance-based goals. Here’s how many Apple shares he owns now.",
+          "link": "https://www.thestreet.com/personalities/how-much-apple-stock-does-john-ternus-own?.tsrc=rss",
+          "time": "2026-10-22T19:51:39+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [
+            "people"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:77c59411-43f8-36ff-a1be-415a3704e729",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "CRWV",
+          "title": "Meta stock falls despite Wall Street analysts raising price targets",
+          "summary": "Meta beat third-quarter revenue estimates, but its aggressive AI spending plans raised concerns.",
+          "link": "https://www.thestreet.com/investing/stocks/meta-stock-falls-despite-wall-street-analysts-raising-price-targets?.tsrc=rss",
+          "time": "2026-10-22T19:50:53+00:00",
+          "touches": [
+            "CRWV"
+          ],
+          "tags": [
+            "analyst"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:e006d429-5adc-3af4-9e4a-7ac930fb8e5e",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "PG",
+          "title": "Sector Update: Consumer Stocks Mixed Late Afternoon",
+          "summary": "Consumer stocks were mixed late Thursday afternoon, with the State Street Consumer Staples Select Se",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/sector-consumer-stocks-mixed-afternoon-194726150.html?.tsrc=rss",
+          "time": "2026-10-22T19:47:26+00:00",
+          "touches": [
+            "PG"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:b5f30230-7372-331b-ba93-6bd5bb27e76b",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "WMT",
+          "title": "Kroger Is Spending $5 Billion to Cut Prices. Walmart and Costco Are the Target",
+          "summary": "Kroger's new CEO just admitted the grocery giant lost market share to Walmart and Costco, and the plan to win it back carries a hidden tension that Wall Street has not fully priced in.",
+          "link": "https://247wallst.com/investing/2026/10/22/kroger-will-cut-a-third-of-its-corporate-jobs-using-ai-to-fund-lower-prices/?.tsrc=rss",
+          "time": "2026-10-22T19:45:27+00:00",
+          "touches": [
+            "WMT"
+          ],
+          "tags": [
+            "people"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:fcc2aaec-9c87-3572-a2dd-aeaa435b52f2",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AMAT",
+          "title": "Even Market Bull Ed Yardeni Sees Irrational Exuberance in Chip Stocks",
+          "summary": "The bullish strategist questions long-term earnings forecasts as Lam Research’s results add to pressure on semiconductor stocks.",
+          "link": "https://finance.yahoo.com/m/fcc2aaec-9c87-3572-a2dd-aeaa435b52f2/even-market-bull-ed-yardeni.html?.tsrc=rss",
+          "time": "2026-10-22T19:41:00+00:00",
+          "touches": [
+            "AMAT",
+            "KLAC",
+            "LRCX",
+            "SKHY"
+          ],
+          "tags": [
+            "earnings"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:bc04a314-d2ea-3f1e-9635-4855ea8e410d",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Elon Musk invests $1bn in CNN-owner Skydance",
+          "summary": "Elon Musk has pumped $1bn (£746bn) into the Hollywood giant Skydance, handing the billionaire a stake in the newly formed company behind CNN.",
+          "link": "https://www.telegraph.co.uk/business/2026/10/22/elon-musk-invests-1bn-in-cnn-owner-skydance/?.tsrc=rss",
+          "time": "2026-10-22T19:35:46+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:8ee6166c-8c51-308a-8aa4-3289f861ded9",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "WMT",
+          "title": "One Number That Makes Home Depot A Buy",
+          "summary": "For questions about this article or underlying research, email help@trefis.com.",
+          "link": "https://www.trefis.com/articles/619949/one-number-that-makes-home-depot-a-buy/2026-10-22?.tsrc=rss",
+          "time": "2026-10-22T19:19:30+00:00",
+          "touches": [
+            "WMT"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:08815ab2-f145-324b-a6af-60923cae1b52",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "PG",
+          "title": "Procter & Gamble (PG) Pairs Q1 Beat With AI Focus And Fresh Product Rollout",
+          "summary": "Procter & Gamble (NYSE: PG) reported Q1 earnings that exceeded analyst expectations, while reaffirming its full-year outlook on the call. Management highlighted increased use of AI tools to study consumer shopping patterns and streamline retail execution across its global portfolio. Recent launches such as Head & Shoulders Scalp Care, Charmin Ultra Strong, Crest Sensitivity Relief, and Pampers Wipes target evolving customer preferences. The combination of stronger Q1 results, AI-focused...",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/procter-gamble-pg-pairs-q1-191703986.html?.tsrc=rss",
+          "time": "2026-10-22T19:17:03+00:00",
+          "touches": [
+            "PG"
+          ],
+          "tags": [
+            "earnings"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:f7696839-7c56-34c4-b042-c83194a013b2",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "LLY",
+          "title": "UBS portfolio manager: S&P 500 could hit 9,500 by June 2027 on AI, longevity, energy boom",
+          "summary": "A UBS portfolio manager sees three technology waves pushing stocks far beyond Wall Street's consensus, but his bullish case runs straight through two more Fed rate hikes that most investors are not pricing in.",
+          "link": "https://247wallst.com/investing/2026/10/22/ubs-portfolio-manager-sp-500-could-hit-9500-by-june-2027-on-ai-longevity-energy-boom/?.tsrc=rss",
+          "time": "2026-10-22T19:15:31+00:00",
+          "touches": [
+            "LLY"
+          ],
+          "tags": [
+            "macro"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:98679ad8-0666-3410-89dc-5e8ba5583655",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Better Buffett Stock: Alphabet vs. Apple",
+          "summary": "Apple has slow-played its AI launch, while Alphabet has accelerated its AI plans.",
+          "link": "https://www.fool.com/investing/2026/10/22/better-buffett-stock-alphabet-vs-apple/?.tsrc=rss",
+          "time": "2026-10-22T19:05:00+00:00",
+          "touches": [
+            "AAPL",
+            "BRK.B"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:8608bf18-43f5-351a-939a-ec49b9f5c9f6",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Elon Musk reportedly invests $1B in Skydance as debt mounts",
+          "summary": "Elon Musk is investing roughly $1 billion in Skydance, the studio led by David Ellison that is grappling with a heavy debt burden following its merger with Paramount and Warner Bros. Discovery, according to media reports. Unnamed sources told Semafor and CNBC on Thursday that the billionaire...",
+          "link": "https://www.proactiveinvestors.com/companies/news/1100581/elon-musk-reportedly-invests-1b-in-skydance-as-debt-mounts-1100581.html?.tsrc=rss",
+          "time": "2026-10-22T19:03:00+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [
+            "deal"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:f8f6965a-ce94-303e-ae0d-37eb7aa0f34b",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "SKHY",
+          "title": "Still Bullish Into Year-End: Thoughts on the Kospi Bottoming and Brent Topping",
+          "summary": "Despite artificial-intelligence spending worries, an Asian selloff, and higher oil prices. Barron’s senior technical analyst thinks a year-end stock rally is in the cards.",
+          "link": "https://finance.yahoo.com/m/f8f6965a-ce94-303e-ae0d-37eb7aa0f34b/still-bullish-into-year-end%3A.html?.tsrc=rss",
+          "time": "2026-10-22T19:01:00+00:00",
+          "touches": [
+            "SKHY"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:67eb7a2d-245c-33e3-835b-aecf3b4fed0c",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Quest Diagnostics: 3 Key Takeaways for Long-Term Investors",
+          "summary": "Automation and direct-to-consumer expansion are offsetting wage inflation and Medicare reimbursement pressure, the dual challenge facing diagnostics providers.",
+          "link": "https://www.fool.com/earnings/takeaways/2026/10/22/quest-diagnostics-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
+          "time": "2026-10-22T18:24:28+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [
+            "macro"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:9764ea20-f5d4-36d5-87cc-6524e0265202",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "PG",
+          "title": "P&G (PG) Q1 2027 Earnings Call Transcript",
+          "summary": "Organic sales grew 4%, but commodity costs and margin pressure temper outlook.",
+          "link": "https://www.fool.com/earnings/call-transcripts/2026/10/22/pg-pg-q1-2027-earnings-call-transcript/?.tsrc=rss",
+          "time": "2026-10-22T18:15:24+00:00",
+          "touches": [
+            "PG"
+          ],
+          "tags": [
+            "earnings"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:aa2289d0-8663-3162-9854-65d54cb4a80a",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "BRK.B",
+          "title": "What Pool (POOL) Said on Its Q3 Earnings Call",
+          "summary": "Pool (NASDAQ:POOL) reported third-quarter sales growth of 4% as pricing, maintenance demand and building-materials volumes helped offset a cautious discretionary-spending environment and continued weakness in new pool construction. Sales totaled $1.5 billion in the quarter, accelerating from 2% gro",
+          "link": "https://www.marketbeat.com/instant-alerts/transcript-what-pool-pool-said-on-its-q3-earnings-call-2026-10-22/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+          "time": "2026-10-22T18:04:37+00:00",
+          "touches": [
+            "BRK.B"
+          ],
+          "tags": [
+            "earnings"
+          ],
+          "new": true
+        }
+      ],
+      "moves": [
+        {
+          "ticker": "AAPL",
+          "price": 348.22,
+          "prev_close": 343.99,
+          "pct": 1.23,
+          "time": "2026-10-22T20:00:01+00:00",
+          "moving": false
+        },
+        {
+          "ticker": "AMAT",
+          "price": 375.58,
+          "prev_close": 408.94,
+          "pct": -8.16,
+          "time": "2026-10-22T20:00:01+00:00",
+          "moving": true
+        },
+        {
+          "ticker": "BRK.B",
+          "price": 546.97,
+          "prev_close": 538.99,
+          "pct": 1.48,
+          "time": "2026-10-22T20:03:53+00:00",
+          "moving": false
+        },
+        {
+          "ticker": "CRWV",
+          "price": 55.6,
+          "prev_close": 61.82,
+          "pct": -10.06,
+          "time": "2026-10-22T20:00:01+00:00",
+          "moving": true
+        },
+        {
+          "ticker": "KLAC",
+          "price": 147.83,
+          "prev_close": 163.43,
+          "pct": -9.55,
+          "time": "2026-10-22T20:00:01+00:00",
+          "moving": true
+        },
+        {
+          "ticker": "LLY",
+          "price": 1306.69,
+          "prev_close": 1270.75,
+          "pct": 2.83,
+          "time": "2026-10-22T20:00:02+00:00",
+          "moving": false
+        },
+        {
+          "ticker": "LRCX",
+          "price": 230.15,
+          "prev_close": 260.81,
+          "pct": -11.76,
+          "time": "2026-10-22T20:00:01+00:00",
+          "moving": true
+        },
+        {
+          "ticker": "PG",
+          "price": 165.59,
+          "prev_close": 156.84,
+          "pct": 5.58,
+          "time": "2026-10-22T20:02:30+00:00",
+          "moving": true
+        },
+        {
+          "ticker": "SKHY",
+          "price": 131.69,
+          "prev_close": 143.25,
+          "pct": -8.07,
+          "time": "2026-10-22T20:00:00+00:00",
+          "moving": true
+        },
+        {
+          "ticker": "WMT",
+          "price": 121.12,
+          "prev_close": 117.8,
+          "pct": 2.82,
+          "time": "2026-10-22T20:00:00+00:00",
+          "moving": false
+        }
+      ],
+      "notes": []
+    },
+    "pelosi": {
+      "members": [
+        "pelosi"
+      ],
+      "new": [
+        {
+          "doc_id": "20035553",
+          "type": "P",
+          "type_name": "Periodic Transaction Report",
+          "last": "Pelosi",
+          "first": "Nancy",
+          "name": "Hon. Nancy Pelosi",
+          "district": "CA11",
+          "year": 2026,
+          "filed": "2026-10-02",
+          "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035553.pdf"
+        }
+      ]
+    }
+  },
+  "run_url": "https://github.com/neidelbert/claude/actions/runs/39865573995"
+}

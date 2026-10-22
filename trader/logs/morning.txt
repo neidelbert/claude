@@ -1,0 +1,1578 @@
+Morgen-Scan – Do 22.10. 18:31 Uhr ET (00:31 Uhr MESZ)
+
+$ scan.py universe  (Exit 0, 2 s)
+Nasdaq Trader symbol directories, files of 2026-10-22 18:01 ET: 13,297 rows.
+Kept 5,945 US-listed common stocks, ordinary shares and ADRs.
+Dropped: 5,778 ETF, 377 not a plain ticker, 370 warrant, 252 unit, 171 note, 129 unit / warrant / right suffix, 103 right, 96 coupon, 37 test issue, 21 preferred, 14 depositary, 3 bond, 1 unit or right.
+Wrote trader/universe.txt (one SYMBOL|Name a line).
+
+$ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 117 s)
+{
+  "created_by": "trader-scanner",
+  "created_at": "2026-10-22T22:31:32Z",
+  "mode": "daily",
+  "as_of": "2026-10-22 close",
+  "universe": 5945,
+  "scanned": 1595,
+  "failed": 2,
+  "source": "yahoo",
+  "filters": {
+    "min_price": 5.0,
+    "min_volume": 1000000
+  },
+  "note": "A scan is a list of charts that match a rule, not a list of stocks to buy.",
+  "hits": [
+    {
+      "symbol": "AAPL",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 348.22,
+      "close_date": "2026-10-22",
+      "rsi": 64.5,
+      "volume": 46845411
+    },
+    {
+      "symbol": "LRCX",
+      "setups": [
+        "oversold"
+      ],
+      "price": 230.15,
+      "close_date": "2026-10-22",
+      "rsi": 24.6,
+      "volume": 22960509
+    },
+    {
+      "symbol": "AMAT",
+      "setups": [
+        "oversold"
+      ],
+      "price": 375.58,
+      "close_date": "2026-10-22",
+      "rsi": 25.2,
+      "volume": 13001175
+    },
+    {
+      "symbol": "CRWV",
+      "setups": [
+        "oversold"
+      ],
+      "price": 55.6,
+      "close_date": "2026-10-22",
+      "rsi": 26.8,
+      "volume": 81234057
+    },
+    {
+      "symbol": "PG",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 165.59,
+      "close_date": "2026-10-22",
+      "rsi": 74.5,
+      "volume": 22020950
+    },
+    {
+      "symbol": "LLY",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 1306.69,
+      "close_date": "2026-10-22",
+      "rsi": 70.7,
+      "volume": 2654387
+    },
+    {
+      "symbol": "WMT",
+      "setups": [
+        "breakout_20d",
+        "bull_flag"
+      ],
+      "price": 121.12,
+      "close_date": "2026-10-22",
+      "rsi": 74.7,
+      "volume": 28314309
+    },
+    {
+      "symbol": "SKHY",
+      "setups": [
+        "oversold"
+      ],
+      "price": 131.69,
+      "close_date": "2026-10-22",
+      "rsi": 29.8,
+      "volume": 24090576
+    },
+    {
+      "symbol": "BRK.B",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 546.97,
+      "close_date": "2026-10-22",
+      "rsi": 81.8,
+      "volume": 5701037
+    },
+    {
+      "symbol": "KLAC",
+      "setups": [
+        "oversold"
+      ],
+      "price": 147.83,
+      "close_date": "2026-10-22",
+      "rsi": 23.8,
+      "volume": 20726001
+    },
+    {
+      "symbol": "V",
+      "setups": [
+        "breakout_20d",
+        "bull_flag"
+      ],
+      "price": 414.34,
+      "close_date": "2026-10-22",
+      "rsi": 79.3,
+      "volume": 7088588
+    },
+    {
+      "symbol": "IBM",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 252.11,
+      "close_date": "2026-10-22",
+      "rsi": 71.2,
+      "volume": 11612741
+    },
+    {
+      "symbol": "COST",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 1018.21,
+      "close_date": "2026-10-22",
+      "rsi": 78.9,
+      "volume": 2837690
+    },
+    {
+      "symbol": "SPOT",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 583.66,
+      "close_date": "2026-10-22",
+      "rsi": 70.6,
+      "volume": 4735322
+    },
+    {
+      "symbol": "NOW",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 157.0,
+      "close_date": "2026-10-22",
+      "rsi": 69.0,
+      "volume": 17390838
+    },
+    {
+      "symbol": "JNJ",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 267.61,
+      "close_date": "2026-10-22",
+      "rsi": 57.2,
+      "volume": 10127910
+    },
+    {
+      "symbol": "COHR",
+      "setups": [
+        "oversold"
+      ],
+      "price": 207.82,
+      "close_date": "2026-10-22",
+      "rsi": 29.8,
+      "volume": 12490822
+    },
+    {
+      "symbol": "MA",
+      "setups": [
+        "breakout_20d",
+        "bull_flag"
+      ],
+      "price": 633.21,
+      "close_date": "2026-10-22",
+      "rsi": 79.8,
+      "volume": 4037141
+    },
+    {
+      "symbol": "CRM",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 250.29,
+      "close_date": "2026-10-22",
+      "rsi": 63.1,
+      "volume": 9741265
+    },
+    {
+      "symbol": "UNH",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 424.98,
+      "close_date": "2026-10-22",
+      "rsi": 72.1,
+      "volume": 5417260
+    },
+    {
+      "symbol": "CAT",
+      "setups": [
+        "oversold"
+      ],
+      "price": 704.05,
+      "close_date": "2026-10-22",
+      "rsi": 29.1,
+      "volume": 3091542
+    },
+    {
+      "symbol": "ACN",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 258.74,
+      "close_date": "2026-10-22",
+      "rsi": 81.6,
+      "volume": 8296880
+    },
+    {
+      "symbol": "QGEN",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 50.22,
+      "close_date": "2026-10-22",
+      "rsi": 74.1,
+      "volume": 40827129
+    },
+    {
+      "symbol": "BAC",
+      "setups": [
+        "oversold",
+        "oversold_bounce"
+      ],
+      "price": 51.08,
+      "close_date": "2026-10-22",
+      "rsi": 28.2,
+      "volume": 37424112
+    },
+    {
+      "symbol": "ADBE",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 270.55,
+      "close_date": "2026-10-22",
+      "rsi": 65.8,
+      "volume": 6847646
+    },
+    {
+      "symbol": "SHOP",
+      "setups": [
+        "bull_flag"
+      ],
+      "price": 168.81,
+      "close_date": "2026-10-22",
+      "rsi": 58.1,
+      "volume": 10937254
+    },
+    {
+      "symbol": "HD",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 327.73,
+      "close_date": "2026-10-22",
+      "rsi": 71.8,
+      "volume": 5466912
+    },
+    {
+      "symbol": "LMT",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 589.91,
+      "close_date": "2026-10-22",
+      "rsi": 75.2,
+      "volume": 2957699
+    },
+    {
+      "symbol": "INTU",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 354.9,
+      "close_date": "2026-10-22",
+      "rsi": 72.3,
+      "volume": 4815368
+    },
+    {
+      "symbol": "IREN",
+      "setups": [
+        "oversold"
+      ],
+      "price": 25.51,
+      "close_date": "2026-10-22",
+      "rsi": 25.2,
+      "volume": 66176624
+    },
+    {
+      "symbol": "VRT",
+      "setups": [
+        "oversold"
+      ],
+      "price": 195.59,
+      "close_date": "2026-10-22",
+      "rsi": 27.8,
+      "volume": 8412387
+    },
+    {
+      "symbol": "KO",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 95.34,
+      "close_date": "2026-10-22",
+      "rsi": 73.9,
+      "volume": 17106706
+    },
+    {
+      "symbol": "NOK",
+      "setups": [
+        "oversold"
+      ],
+      "price": 7.88,
+      "close_date": "2026-10-22",
+      "rsi": 29.4,
+      "volume": 206826972
+    },
+    {
+      "symbol": "UNP",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 298.09,
+      "close_date": "2026-10-22",
+      "rsi": 71.3,
+      "volume": 4989547
+    },
+    {
+      "symbol": "CSX",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 51.67,
+      "close_date": "2026-10-22",
+      "rsi": 72.3,
+      "volume": 28623746
+    },
+    {
+      "symbol": "NEE",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 81.9,
+      "close_date": "2026-10-22",
+      "rsi": 61.9,
+      "volume": 17552805
+    },
+    {
+      "symbol": "BX",
+      "setups": [
+        "breakout_20d",
+        "reclaim_ma20"
+      ],
+      "price": 118.75,
+      "close_date": "2026-10-22",
+      "rsi": 55.0,
+      "volume": 11846527
+    },
+    {
+      "symbol": "AMGN",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 447.28,
+      "close_date": "2026-10-22",
+      "rsi": 66.7,
+      "volume": 3103849
+    },
+    {
+      "symbol": "APH",
+      "setups": [
+        "oversold"
+      ],
+      "price": 73.07,
+      "close_date": "2026-10-22",
+      "rsi": 29.0,
+      "volume": 18416425
+    },
+    {
+      "symbol": "SPGI",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 453.1,
+      "close_date": "2026-10-22",
+      "rsi": 74.7,
+      "volume": 2933555
+    },
+    {
+      "symbol": "PEP",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 138.83,
+      "close_date": "2026-10-22",
+      "rsi": 69.0,
+      "volume": 9374285
+    },
+    {
+      "symbol": "VZ",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 45.2,
+      "close_date": "2026-10-22",
+      "rsi": 48.1,
+      "volume": 28635250
+    },
+    {
+      "symbol": "TTMI",
+      "setups": [
+        "oversold"
+      ],
+      "price": 73.89,
+      "close_date": "2026-10-22",
+      "rsi": 28.2,
+      "volume": 17469334
+    },
+    {
+      "symbol": "MCD",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 252.63,
+      "close_date": "2026-10-22",
+      "rsi": 66.3,
+      "volume": 5071355
+    },
+    {
+      "symbol": "HWM",
+      "setups": [
+        "oversold"
+      ],
+      "price": 193.29,
+      "close_date": "2026-10-22",
+      "rsi": 22.0,
+      "volume": 6608219
+    },
+    {
+      "symbol": "SAP",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 240.59,
+      "close_date": "2026-10-22",
+      "rsi": 81.5,
+      "volume": 5186561
+    },
+    {
+      "symbol": "URI",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 1111.02,
+      "close_date": "2026-10-22",
+      "rsi": 63.2,
+      "volume": 1119831
+    },
+    {
+      "symbol": "CMCSA",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 22.84,
+      "close_date": "2026-10-22",
+      "rsi": 57.0,
+      "volume": 54382542
+    },
+    {
+      "symbol": "ISRG",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 443.85,
+      "close_date": "2026-10-22",
+      "rsi": 68.6,
+      "volume": 2776287
+    },
+    {
+      "symbol": "CBRS",
+      "setups": [
+        "oversold"
+      ],
+      "price": 108.94,
+      "close_date": "2026-10-22",
+      "rsi": 22.0,
+      "volume": 11097296
+    },
+    {
+      "symbol": "MPC",
+      "setups": [
+        "bull_flag"
+      ],
+      "price": 459.28,
+      "close_date": "2026-10-22",
+      "rsi": 60.8,
+      "volume": 2596212
+    },
+    {
+      "symbol": "HON",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 218.31,
+      "close_date": "2026-10-22",
+      "rsi": 62.3,
+      "volume": 5284349
+    },
+    {
+      "symbol": "BKNG",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 161.1,
+      "close_date": "2026-10-22",
+      "rsi": 44.4,
+      "volume": 7063866
+    },
+    {
+      "symbol": "TSCO",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 34.73,
+      "close_date": "2026-10-22",
+      "rsi": 62.3,
+      "volume": 32431722
+    },
+    {
+      "symbol": "PWR",
+      "setups": [
+        "oversold"
+      ],
+      "price": 552.44,
+      "close_date": "2026-10-22",
+      "rsi": 29.2,
+      "volume": 2007115
+    },
+    {
+      "symbol": "FPS",
+      "setups": [
+        "oversold"
+      ],
+      "price": 24.92,
+      "close_date": "2026-10-22",
+      "rsi": 28.4,
+      "volume": 44342872
+    },
+    {
+      "symbol": "AXP",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 325.17,
+      "close_date": "2026-10-22",
+      "rsi": 65.3,
+      "volume": 3385423
+    },
+    {
+      "symbol": "RTX",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 194.71,
+      "close_date": "2026-10-22",
+      "rsi": 56.6,
+      "volume": 5624091
+    },
+    {
+      "symbol": "ABT",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 102.51,
+      "close_date": "2026-10-22",
+      "rsi": 50.6,
+      "volume": 10649514
+    },
+    {
+      "symbol": "NKE",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 38.32,
+      "close_date": "2026-10-22",
+      "rsi": 64.5,
+      "volume": 28081115
+    },
+    {
+      "symbol": "MMM",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 175.56,
+      "close_date": "2026-10-22",
+      "rsi": 65.1,
+      "volume": 5953320
+    },
+    {
+      "symbol": "ADP",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 307.94,
+      "close_date": "2026-10-22",
+      "rsi": 80.1,
+      "volume": 3270531
+    },
+    {
+      "symbol": "KDP",
+      "setups": [
+        "breakout_20d",
+        "bull_flag"
+      ],
+      "price": 35.19,
+      "close_date": "2026-10-22",
+      "rsi": 71.0,
+      "volume": 28532352
+    },
+    {
+      "symbol": "LIN",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 510.36,
+      "close_date": "2026-10-22",
+      "rsi": 72.8,
+      "volume": 1956913
+    },
+    {
+      "symbol": "WCN",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 184.88,
+      "close_date": "2026-10-22",
+      "rsi": 80.0,
+      "volume": 5315843
+    },
+    {
+      "symbol": "SBUX",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 101.91,
+      "close_date": "2026-10-22",
+      "rsi": 65.3,
+      "volume": 9589988
+    },
+    {
+      "symbol": "DIS",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 113.13,
+      "close_date": "2026-10-22",
+      "rsi": 69.9,
+      "volume": 8631540
+    },
+    {
+      "symbol": "ZS",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 237.76,
+      "close_date": "2026-10-22",
+      "rsi": 66.4,
+      "volume": 3739813
+    },
+    {
+      "symbol": "VRTX",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 535.17,
+      "close_date": "2026-10-22",
+      "rsi": 61.7,
+      "volume": 1641340
+    },
+    {
+      "symbol": "LOW",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 204.37,
+      "close_date": "2026-10-22",
+      "rsi": 64.7,
+      "volume": 4290194
+    },
+    {
+      "symbol": "PFE",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 30.42,
+      "close_date": "2026-10-22",
+      "rsi": 72.2,
+      "volume": 28682254
+    },
+    {
+      "symbol": "ROP",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 436.23,
+      "close_date": "2026-10-22",
+      "rsi": 80.2,
+      "volume": 1976290
+    },
+    {
+      "symbol": "SYK",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 307.08,
+      "close_date": "2026-10-22",
+      "rsi": 64.4,
+      "volume": 2804649
+    },
+    {
+      "symbol": "MDT",
+      "setups": [
+        "breakout_20d",
+        "bull_flag"
+      ],
+      "price": 96.59,
+      "close_date": "2026-10-22",
+      "rsi": 63.7,
+      "volume": 8876771
+    },
+    {
+      "symbol": "FLEX",
+      "setups": [
+        "oversold"
+      ],
+      "price": 76.69,
+      "close_date": "2026-10-22",
+      "rsi": 22.4,
+      "volume": 11005835
+    },
+    {
+      "symbol": "NU",
+      "setups": [
+        "bull_flag"
+      ],
+      "price": 14.73,
+      "close_date": "2026-10-22",
+      "rsi": 50.7,
+      "volume": 55420056
+    },
+    {
+      "symbol": "COP",
+      "setups": [
+        "bull_flag"
+      ],
+      "price": 145.63,
+      "close_date": "2026-10-22",
+      "rsi": 70.8,
+      "volume": 5575204
+    },
+    {
+      "symbol": "CRS",
+      "setups": [
+        "oversold"
+      ],
+      "price": 292.26,
+      "close_date": "2026-10-22",
+      "rsi": 11.6,
+      "volume": 2751637
+    },
+    {
+      "symbol": "ROKU",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 160.06,
+      "close_date": "2026-10-22",
+      "rsi": 72.4,
+      "volume": 4897036
+    },
+    {
+      "symbol": "TRV",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 405.44,
+      "close_date": "2026-10-22",
+      "rsi": 77.0,
+      "volume": 1918013
+    },
+    {
+      "symbol": "ICE",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 163.84,
+      "close_date": "2026-10-22",
+      "rsi": 64.5,
+      "volume": 4734872
+    },
+    {
+      "symbol": "SO",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 93.82,
+      "close_date": "2026-10-22",
+      "rsi": 72.2,
+      "volume": 8150743
+    },
+    {
+      "symbol": "HUM",
+      "setups": [
+        "bull_flag"
+      ],
+      "price": 420.97,
+      "close_date": "2026-10-22",
+      "rsi": 55.9,
+      "volume": 1811696
+    },
+    {
+      "symbol": "CMG",
+      "setups": [
+        "oversold",
+        "oversold_bounce"
+      ],
+      "price": 28.14,
+      "close_date": "2026-10-22",
+      "rsi": 27.5,
+      "volume": 26826828
+    },
+    {
+      "symbol": "BSX",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 46.01,
+      "close_date": "2026-10-22",
+      "rsi": 59.3,
+      "volume": 16390778
+    },
+    {
+      "symbol": "NDAQ",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 103.3,
+      "close_date": "2026-10-22",
+      "rsi": 74.1,
+      "volume": 7146953
+    },
+    {
+      "symbol": "AMT",
+      "setups": [
+        "bull_flag"
+      ],
+      "price": 181.57,
+      "close_date": "2026-10-22",
+      "rsi": 58.5,
+      "volume": 4046115
+    },
+    {
+      "symbol": "CTSH",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 73.72,
+      "close_date": "2026-10-22",
+      "rsi": 79.4,
+      "volume": 9931013
+    },
+    {
+      "symbol": "NVT",
+      "setups": [
+        "oversold"
+      ],
+      "price": 127.67,
+      "close_date": "2026-10-22",
+      "rsi": 29.8,
+      "volume": 5661262
+    },
+    {
+      "symbol": "LULU",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 104.06,
+      "close_date": "2026-10-22",
+      "rsi": 58.6,
+      "volume": 6804629
+    },
+    {
+      "symbol": "WM",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 239.1,
+      "close_date": "2026-10-22",
+      "rsi": 78.0,
+      "volume": 2959532
+    },
+    {
+      "symbol": "CME",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 305.98,
+      "close_date": "2026-10-22",
+      "rsi": 78.5,
+      "volume": 2294409
+    },
+    {
+      "symbol": "SE",
+      "setups": [
+        "oversold"
+      ],
+      "price": 75.69,
+      "close_date": "2026-10-22",
+      "rsi": 19.1,
+      "volume": 8836719
+    },
+    {
+      "symbol": "ASTS",
+      "setups": [
+        "oversold"
+      ],
+      "price": 38.77,
+      "close_date": "2026-10-22",
+      "rsi": 28.8,
+      "volume": 17193275
+    },
+    {
+      "symbol": "XEL",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 78.9,
+      "close_date": "2026-10-22",
+      "rsi": 70.7,
+      "volume": 8215672
+    },
+    {
+      "symbol": "TJX",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 147.38,
+      "close_date": "2026-10-22",
+      "rsi": 71.0,
+      "volume": 4350675
+    },
+    {
+      "symbol": "ELV",
+      "setups": [
+        "breakout_20d",
+        "bull_flag"
+      ],
+      "price": 445.28,
+      "close_date": "2026-10-22",
+      "rsi": 71.8,
+      "volume": 1428121
+    },
+    {
+      "symbol": "HALO",
+      "setups": [
+        "bull_flag"
+      ],
+      "price": 124.54,
+      "close_date": "2026-10-22",
+      "rsi": 72.9,
+      "volume": 5097769
+    },
+    {
+      "symbol": "TGT",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 158.11,
+      "close_date": "2026-10-22",
+      "rsi": 55.9,
+      "volume": 3984328
+    },
+    {
+      "symbol": "CB",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 363.95,
+      "close_date": "2026-10-22",
+      "rsi": 70.5,
+      "volume": 1709904
+    },
+    {
+      "symbol": "WDAY",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 209.99,
+      "close_date": "2026-10-22",
+      "rsi": 67.3,
+      "volume": 2918324
+    },
+    {
+      "symbol": "MRSH",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 199.27,
+      "close_date": "2026-10-22",
+      "rsi": 80.1,
+      "volume": 3065179
+    },
+    {
+      "symbol": "ATI",
+      "setups": [
+        "oversold"
+      ],
+      "price": 161.84,
+      "close_date": "2026-10-22",
+      "rsi": 26.8,
+      "volume": 3744707
+    },
+    {
+      "symbol": "ITW",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 279.24,
+      "close_date": "2026-10-22",
+      "rsi": 63.1,
+      "volume": 2155186
+    },
+    {
+      "symbol": "DUK",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 125.4,
+      "close_date": "2026-10-22",
+      "rsi": 69.6,
+      "volume": 47770
+…gekürzt
+
+$ news.py --tickers AAPL LRCX AMAT CRWV PG LLY WMT SKHY BRK.B KLAC --json --hours 24 --no-sec  (Exit 0, 3 s)
+{
+  "checked": "2026-10-22T22:33:29.844137+00:00",
+  "moves": [
+    {
+      "ticker": "AAPL",
+      "price": 348.22,
+      "prev_close": 343.99,
+      "pct": 1.23,
+      "time": "2026-10-22T20:00:01+00:00",
+      "moving": false
+    },
+    {
+      "ticker": "AMAT",
+      "price": 375.58,
+      "prev_close": 408.94,
+      "pct": -8.16,
+      "time": "2026-10-22T20:00:01+00:00",
+      "moving": true
+    },
+    {
+      "ticker": "BRK.B",
+      "price": 546.97,
+      "prev_close": 538.99,
+      "pct": 1.48,
+      "time": "2026-10-22T20:03:53+00:00",
+      "moving": false
+    },
+    {
+      "ticker": "CRWV",
+      "price": 55.6,
+      "prev_close": 61.82,
+      "pct": -10.06,
+      "time": "2026-10-22T20:00:01+00:00",
+      "moving": true
+    },
+    {
+      "ticker": "KLAC",
+      "price": 147.83,
+      "prev_close": 163.43,
+      "pct": -9.55,
+      "time": "2026-10-22T20:00:01+00:00",
+      "moving": true
+    },
+    {
+      "ticker": "LLY",
+      "price": 1306.69,
+      "prev_close": 1270.75,
+      "pct": 2.83,
+      "time": "2026-10-22T20:00:02+00:00",
+      "moving": false
+    },
+    {
+      "ticker": "LRCX",
+      "price": 230.15,
+      "prev_close": 260.81,
+      "pct": -11.76,
+      "time": "2026-10-22T20:00:01+00:00",
+      "moving": true
+    },
+    {
+      "ticker": "PG",
+      "price": 165.59,
+      "prev_close": 156.84,
+      "pct": 5.58,
+      "time": "2026-10-22T20:02:30+00:00",
+      "moving": true
+    },
+    {
+      "ticker": "SKHY",
+      "price": 131.69,
+      "prev_close": 143.25,
+      "pct": -8.07,
+      "time": "2026-10-22T20:00:00+00:00",
+      "moving": true
+    },
+    {
+      "ticker": "WMT",
+      "price": 121.12,
+      "prev_close": 117.8,
+      "pct": 2.82,
+      "time": "2026-10-22T20:00:00+00:00",
+      "moving": false
+    }
+  ],
+  "items": [
+    {
+      "id": "rss:47e878bb-824d-3243-a8e9-b86b1c3f85d3",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "AAPL",
+      "title": "Dow Jones Futures: Moderna Crashes, Meta Fuels AI Meltdown, But Warren Buffett Market Thriving",
+      "summary": "The S&P 500 and Nasdaq tumbled below 50-day lines as Meta led an AI stock rout. But the Warren Buffett market is thriving.",
+      "link": "https://finance.yahoo.com/m/47e878bb-824d-3243-a8e9-b86b1c3f85d3/dow-jones-futures%3A-moderna.html?.tsrc=rss",
+      "time": "2026-10-22T22:27:52+00:00",
+      "touches": [
+        "AAPL",
+        "BRK.B"
+      ],
+      "tags": [
+        "macro"
+      ],
+      "new": true
+    },
+    {
+      "id": "rss:a2e2de32-ca63-3a0c-9366-dc239eb08b36",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "LLY",
+      "title": "Amgen vs. Eli Lilly: Does the GLP-1 Mania Make LLY Stock a Better Buy in 2026?",
+      "summary": "Amgen trades at half the valuation multiple of Eli Lilly while generating stronger free cash flow, but explosive growth in obesity drugs tells a different story.",
+      "link": "https://www.fool.com/coverage/better-buy/2026/10/22/amgen-vs-eli-lilly-does-the-glp-1-mania-make-lly-stock-a-better-buy-in-2026/?.tsrc=rss",
+      "time": "2026-10-22T22:15:02+00:00",
+      "touches": [
+        "LLY"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:415d9b98-72a7-3e5f-af3a-277e59761a19",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "PG",
+      "title": "Procter & Gamble Q1 Earnings Call Highlights",
+      "summary": "Procter & Gamble (NYSE:PG) reported a 4.0% increase in organic sales for the first quarter of fiscal 2027, led primarily by volume growth, while maintaining its full-year outlook despite rising commodity, energy and transportation costs. Chief Financial Officer Andre Schulten said organic sales gro",
+      "link": "https://www.marketbeat.com/instant-alerts/transcript-procter-gamble-q1-earnings-call-highlights-2026-10-22/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+      "time": "2026-10-22T22:04:17+00:00",
+      "touches": [
+        "PG"
+      ],
+      "tags": [
+        "earnings"
+      ],
+      "new": true
+    },
+    {
+      "id": "rss:1865b334-251a-335e-ae2e-0da837f20227",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "WMT",
+      "title": "Affirm, Sam's Club Strike Exclusive Buy Now, Pay Later Deal",
+      "summary": "Affirm\u00a0is teaming up with\u00a0Walmart's Sam's Club as the retailer's exclusive buy-now, pay-later partner, just weeks before the key holiday shopping season kicks off. Affirm will serve as Sam's Club's exclusive BNPL provider in a multi-year agreement, starting in that role on Sam's Club's website in the coming weeks and rolling out to stores in 2027, according to a statement Thursday that didn't disclose terms of the deal. Max Levchin, Founder & CEO of Affirm, joins Bloomberg Businessweek Daily to discuss. He speaks with Carol Massar and Tim Stenovec.",
+      "link": "https://finance.yahoo.com/video/affirm-sams-club-strike-exclusive-215624903.html?.tsrc=rss",
+      "time": "2026-10-22T21:56:24+00:00",
+      "touches": [
+        "WMT"
+      ],
+      "tags": [
+        "deal",
+        "people"
+      ],
+      "new": true
+    },
+    {
+      "id": "rss:59c6e0b3-7860-3186-b02a-f15ddc1dce78",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "CRWV",
+      "title": "Stock Market Today, Oct. 22: CoreWeave Slides on Bernstein Downgrade and Financing Worries",
+      "summary": "Bernstein cut its price target as debt concerns weigh on the AI infrastructure provider, today, Oct. 22, 2026.",
+      "link": "https://www.fool.com/coverage/stock-market-today/2026/10/22/stock-market-today-oct-22-coreweave-slides-on-bernstein-downgrade-and-financing-worries/?.tsrc=rss",
+      "time": "2026-10-22T21:51:12+00:00",
+      "touches": [
+        "CRWV"
+      ],
+      "tags": [
+        "analyst"
+      ],
+      "new": true
+    },
+    {
+      "id": "rss:d932c482-693e-3af2-833a-81a9c03cf776",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "LLY",
+      "title": "What Does Eli Lilly (LLY) Mean To Signal With Its $5 Billion Richmond Build?",
+      "summary": "Eli Lilly (NYSE:LLY) has started construction on a US$5b fully integrated manufacturing site near Richmond, Virginia, focused on next-generation cancer and autoimmune medicines. The Richmond facility is planned as Lilly's first U.S. site to house both active ingredient production and finished-dose manufacturing on one campus. Lilly has signed a major collaboration with METiS TechBio to apply AI to new lipid nanoparticle drug delivery platforms for tissue-targeted therapies. The Richmond...",
+      "link": "https://finance.yahoo.com/healthcare/articles/does-eli-lilly-lly-mean-211802614.html?.tsrc=rss",
+      "time": "2026-10-22T21:18:02+00:00",
+      "touches": [
+        "LLY"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:590849aa-2dbe-3494-8c1f-3805dca35f0b",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "LRCX",
+      "title": "Chip Stocks Tumble Despite Solid Earnings Reports",
+      "summary": "Chip stocks fell Thursday despite solid quarterly earnings reports from Texas Instruments and Lam Research.",
+      "link": "https://finance.yahoo.com/m/590849aa-2dbe-3494-8c1f-3805dca35f0b/chip-stocks-tumble-despite.html?.tsrc=rss",
+      "time": "2026-10-22T21:01:57+00:00",
+      "touches": [
+        "LRCX"
+      ],
+      "tags": [
+        "earnings"
+      ],
+      "new": true
+    },
+    {
+      "id": "rss:2ce44b5b-104c-3f00-bf25-4d883c3cd9b2",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "BRK.B",
+      "title": "Kinsale Capital Group, Inc. (KNSL) Q3 Earnings Surpass Estimates",
+      "summary": "Kinsale Capital Group (KNSL) delivered earnings and revenue surprises of +15.15% and -5.02%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/kinsale-capital-group-inc-knsl-210006034.html?.tsrc=rss",
+      "time": "2026-10-22T21:00:06+00:00",
+      "touches": [
+        "BRK.B"
+      ],
+      "tags": [
+        "earnings"
+      ],
+      "new": true
+    },
+    {
+      "id": "rss:add35572-856e-31cb-981d-91d3cc20d822",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "CRWV",
+      "title": "Tesla, SpaceX, Meta, Lockheed Martin, Lam Research, Spotify, and More Stocks That Explain Today\u2019s Market",
+      "summary": "Tesla and Meta fail to excite the stock market.",
+      "link": "https://finance.yahoo.com/m/add35572-856e-31cb-981d-91d3cc20d822/tesla%2C-spacex%2C-meta%2C-lockheed.html?.tsrc=rss",
+      "time": "2026-10-22T20:53:00+00:00",
+      "touches": [
+        "CRWV",
+        "LRCX"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:36d5b527-2747-33b3-a5be-24e3d851d845",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "CRWV",
+      "title": "CoreWeave and Nebius Stocks Are Crashing. Time to Buy the Dip?",
+      "summary": "Both stocks are selling off due to CoreWeave's debt becoming uncertain.",
+      "link": "https://www.fool.com/investing/2026/10/22/coreweave-and-nebius-stocks-are-crashing-time-to/?.tsrc=rss",
+      "time": "2026-10-22T20:47:00+00:00",
+      "touches": [
+        "CRWV"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:5fead2af-4d0e-38c1-b07c-7d126bf5cbe3",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "WMT",
+      "title": "Walmart (WMT) Advances While Market Declines: Some Information for Investors",
+      "summary": "The latest trading day saw Walmart (WMT) settling at $121.12, representing a +2.82% change from its previous close.",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/walmart-wmt-advances-while-market-204504019.html?.tsrc=rss",
+      "time": "2026-10-22T20:45:04+00:00",
+      "touches": [
+        "WMT"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:3bbb4bd8-a982-3c76-b293-44248a86f4b3",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "BRK.B",
+      "title": "Berkshire Hathaway B (BRK.B) Increases Despite Market Slip: Here's What You Need to Know",
+      "summary": "Berkshire Hathaway B (BRK.B) closed at $546.9 in the latest trading session, marking a +1.47% move from the prior day.",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/berkshire-hathaway-b-brk-b-204502243.html?.tsrc=rss",
+      "time": "2026-10-22T20:45:02+00:00",
+      "touches": [
+        "BRK.B"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:640c88c4-a539-3735-a0ee-746427e88883",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "AAPL",
+      "title": "Meta Eyes an Early Equity Deal for Its AI War Chest\u2014and Berkshire Could Be a Buyer",
+      "summary": "Berkshire participated in Alphabet\u2019s $85 billion equity fund deal in June that could be a model for any Meta equity raise.",
+      "link": "https://finance.yahoo.com/m/640c88c4-a539-3735-a0ee-746427e88883/meta-eyes-an-early-equity.html?.tsrc=rss",
+      "time": "2026-10-22T20:44:00+00:00",
+      "touches": [
+        "AAPL",
+        "BRK.B"
+      ],
+      "tags": [
+        "deal"
+      ],
+      "new": true
+    },
+    {
+      "id": "rss:c65b5f2b-89ea-382b-9b85-3a66addb0f01",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "PG",
+      "title": "P&G\u2019s Boosts Q1 Beauty Sales, but Says It Can Do Better",
+      "summary": "Organic sales in the consumer product giant\u2019s beauty business increased 5 percent to $4.4 billion.",
+      "link": "https://wwd.com/business-news/financial/procter-gamble-boosts-q1-2027-beauty-sales-1239381875/?.tsrc=rss",
+      "time": "2026-10-22T20:41:59+00:00",
+      "touches": [
+        "PG"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:a6067e2b-5ce6-3182-915b-58daa8b6d0f9",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "LRCX",
+      "title": "Stock Market Today: Nasdaq Thrashed, Dow Up; Moderna, Meta Lead Sell-Off (Live Coverage)",
+      "summary": "The Dow Jones index pulled out a small win Thursday but the Nasdaq was hit hard, with Meta sliding.",
+      "link": "https://finance.yahoo.com/m/a6067e2b-5ce6-3182-915b-58daa8b6d0f9/stock-market-today%3A-nasdaq.html?.tsrc=rss",
+      "time": "2026-10-22T20:38:05+00:00",
+      "touches": [
+        "LRCX"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:94cb0dd4-6ca3-47ed-b603-6918c036bbce",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "AAPL",
+      "title": "Apple\u2019s foldable iPhone has a $2,000 app problem",
+      "summary": "Apple's (AAPL) new foldable iPhone Duo hits stores Friday. Yahoo Finance Tech Editor Dan Howley got his hands on one and joins Brooke DiPalma on Market Domination to share his takeaways on the new device.",
+      "link": "https://finance.yahoo.com/video/apples-foldable-iphone-has-a-2000-app-problem-203418718.html?.tsrc=rss",
+      "time": "2026-10-22T20:34:18+00:00",
+      "touches": [
+        "AAPL"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:0d7683ba-4385-3f2b-ba63-99e61aac4fe0",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "AAPL",
+      "title": "Here Are 4 ETFs That Run an Entire Retirement Portfolio for Less Than $50 a Year on $100,000",
+      "summary": "Most retirement portfolios quietly bleed money through fees before a single stock moves. Four index ETFs exist that together cover every major asset class a retiree needs, and the math on what they actually cost per year may surprise you.",
+      "link": "https://247wallst.com/investing/etf/2026/10/22/here-are-4-etfs-that-run-an-entire-retirement-portfolio-for-less-than-50-a-year-on-100000/?.tsrc=rss",
+      "time": "2026-10-22T20:33:38+00:00",
+      "touches": [
+        "AAPL"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:e5d39268-89ce-310a-a821-d3f775eacbd6",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "AAPL",
+      "title": "Apple Reportedly Raised Its iPhone Duo Target 44%. Here\u2019s What November 2 Has to Show",
+      "summary": "Key Stats for Apple StockCurrent Price: $343. 99Target Price (Mid): ~$485Street Target: ~$328Potential Total Return: ~41%Annualized IRR: ~9% / year__Now Live: Discover how much upside your favorite stocks could have using TIKR\u2019s new Valuation Model (It\u2019s free)__ >>> What Happened?Apple (AAPL) has reportedly raised its iPhone Duo shipment target about 44%, a day before the $1,999 foldable reaches stores on October 23.",
+      "link": "https://www.tikr.com/blog/apple-reportedly-raised-its-iphone-duo-target-44-heres-what-november-2-has-to-show?ref=yahoofinance&.tsrc=rss",
+      "time": "2026-10-22T20:32:05+00:00",
+      "touches": [
+        "AAPL"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:892f1d3c-80cf-3343-9282-9a99af65dc1f",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "CRWV",
+      "title": "CoreWeave Sinks 10% as Bernstein Slashes Target to $51: \u201cThe Fundamentals Are Probably Stuck\u201d",
+      "summary": "Key TakeawaysCoreWeave shares fell 10% today after Bernstein cut its price target to $51 from $74, as Nebius, IREN and Applied Digital also fell on renewed AI spending fears. Bernstein\u2019s Madison Rezaei doesn\u2019t expect CoreWeave to go to zero, citing its backlog and her view that Nvidia would step in, but she sees its fundamentals as stuck.",
+      "link": "https://www.tikr.com/blog/coreweave-sinks-10-as-bernstein-slashes-target-to-51-the-fundamentals-are-probably-stuck?ref=yahoofinance&.tsrc=rss",
+      "time": "2026-10-22T20:28:39+00:00",
+      "touches": [
+        "CRWV"
+      ],
+      "tags": [
+        "analyst"
+      ],
+      "new": true
+    },
+    {
+      "id": "rss:901193fa-8922-3df6-9417-b947a80babdc",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "AAPL",
+      "title": "What Intel, Boeing, Nike Have In Common With Each Other \u2014 And Apple",
+      "summary": "Three S&P 500 ccompanies in different stages of comebacks show why it's important to pay attention to corporate turnounds.",
+      "link": "https://finance.yahoo.com/m/901193fa-8922-3df6-9417-b947a80babdc/what-intel%2C-boeing%2C-nike-have.html?.tsrc=rss",
+      "time": "2026-10-22T20:20:09+00:00",
+      "touches": [
+        "AAPL"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:67b3ecaa-a7ff-3b5c-928e-2bc0e4c812ed",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "PG",
+      "title": "Procter & Gamble Soars 6% on Earnings Beat, Shrugs Off $1.4 Billion Cost Hit: \u201cStrong Start\u201d",
+      "summary": "Key TakeawaysProcter & Gamble shares jumped 6% after fiscal first-quarter core EPS of $2. 00 and revenue of $23.",
+      "link": "https://www.tikr.com/blog/procter-gamble-soars-6-on-earnings-beat-shrugs-off-1-4-billion-cost-hit-strong-start?ref=yahoofinance&.tsrc=rss",
+      "time": "2026-10-22T20:13:23+00:00",
+      "touches": [
+        "PG"
+      ],
+      "tags": [
+        "earnings"
+      ],
+      "new": true
+    },
+    {
+      "id": "rss:bac0b349-6a9c-36b9-b6f5-741b2da2ea40",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "LRCX",
+      "title": "IonQ Sinks 3%, Rigetti Down 5%, D-Wave Down 4% as Quantum Stocks Slide Again in Tech Selloff",
+      "summary": "Key TakeawaysIonQ shares fell 3% today, alongside Quantinuum, Rigetti Computing and D-Wave Quantum, after Lam Research\u2019s report set off a tech selloff. IonQ had no news of its own, and its drop shows the stock trading like a leveraged bet on the AI trade.",
+      "link": "https://www.tikr.com/blog/ionq-sinks-3-rigetti-down-5-d-wave-down-4-as-quantum-stocks-slide-again-in-tech-selloff?ref=yahoofinance&.tsrc=rss",
+      "time": "2026-10-22T20:12:09+00:00",
+      "touches": [
+        "LRCX"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:62d8ebe9-f2cd-3442-abbf-949d593a13a7",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "AAPL",
+      "title": "Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView",
+      "summary": "Resideo Technologies (NYSE: REZI), a leading global provider of home comfort, security and safety solutions, announced plans to release a software update in the first quarter of 2027 that will enable its existing Honeywell Home ElitePROTM, X7S and X8S smart thermostats to support the new Adaptive Temperature Control and Clean Energy Guidance capabilities introduced with Apple's new HomeView offerings.",
+      "link": "https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss",
+      "time": "2026-10-22T20:11:00+00:00",
+      "touches": [
+        "AAPL"
+      ],
+      "tags": [
+        "earnings"
+      ],
+      "new": true
+    },
+    {
+      "id": "rss:3a05b00e-c09b-3c47-9901-53a2e0e27bc3",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "CRWV",
+      "title": "Companies Are Spending Billions To Build Data Centers. The Timeline For Them To Pay Off is Fuzzy.",
+      "summary": "CoreWeave and Applied Digital reported sharply higher revenue, but their latest filings show capital expenditures far exceeding the cash generated by operations.",
+      "link": "https://www.ibtimes.com/companies-are-spending-billions-build-data-centers-timeline-them-pay-off-fuzzy-3808890?.tsrc=rss",
+      "time": "2026-10-22T20:04:56+00:00",
+      "touches": [
+        "CRWV"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:8abcc1d9-6265-3276-947e-5a37db88999e",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+…gekürzt
+
+$ ptr.py new --json --state trader/state/pelosi.json --member pelosi  (Exit 0, 0 s)
+{
+  "new": [
+    {
+      "doc_id": "20035553",
+      "type": "P",
+      "type_name": "Periodic Transaction Report",
+      "last": "Pelosi",
+      "first": "Nancy",
+      "name": "Hon. Nancy Pelosi",
+      "district": "CA11",
+      "year": 2026,
+      "filed": "2026-10-02",
+      "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035553.pdf"
+    }
+  ],
+  "reports": []
+}

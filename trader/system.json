@@ -16,5 +16,9 @@
   "push_morning": true,
   "push_orb": true,
   "push_alerts": true,
-  "push_errors": true
+  "push_errors": true,
+  "_site_salt": "Fester Zufallswert für die Verschlüsselung der Webseite (nicht geheim, nicht ändern: sonst muss das Passwort neu eingegeben werden)",
+  "site_salt": "8ef204ea501bf3a0a06225d118328213",
+  "_site_url": "Adresse der Webseite; Pushes öffnen sie beim Antippen",
+  "site_url": "https://neidelbert.github.io/claude/"
 }

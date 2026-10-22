@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Trader">
+<meta name="robots" content="noindex, nofollow">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>Trader-Labor</title>
+<style>
+:root{
+  --bg:#f2f2f7;--card:#ffffff;--card2:#f7f7fa;--text:#111114;--sub:#6b6b73;--line:#e3e3e8;
+  --blue:#0a66d8;--green:#14915a;--red:#d1342f;--orange:#c86a00;--chip:#e9e9ef;--tab:rgba(249,249,251,.92);
+  --greenbg:#e5f5ec;--redbg:#fbe9e8;--orangebg:#fdf1e0;--bluebg:#e6effc;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#000;--card:#1c1c1e;--card2:#242427;--text:#f4f4f6;--sub:#9a9aa2;--line:#2e2e32;
+  --blue:#4a9bff;--green:#35c27c;--red:#ff6b62;--orange:#ffa53d;--chip:#2c2c30;--tab:rgba(22,22,24,.92);
+  --greenbg:#123222;--redbg:#3a1614;--orangebg:#3a2810;--bluebg:#10243f;
+}}
+:root[data-theme="dark"]{
+  --bg:#000;--card:#1c1c1e;--card2:#242427;--text:#f4f4f6;--sub:#9a9aa2;--line:#2e2e32;
+  --blue:#4a9bff;--green:#35c27c;--red:#ff6b62;--orange:#ffa53d;--chip:#2c2c30;--tab:rgba(22,22,24,.92);
+  --greenbg:#123222;--redbg:#3a1614;--orangebg:#3a2810;--bluebg:#10243f;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.4 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif}
+body{padding:env(safe-area-inset-top) 0 calc(76px + env(safe-area-inset-bottom))}
+header{padding:14px 16px 4px;display:flex;align-items:flex-end;justify-content:space-between;gap:8px}
+h1{font-size:32px;line-height:1.1;margin:0;font-weight:800;letter-spacing:-.5px}
+h2{font-size:20px;margin:22px 16px 8px;font-weight:700}
+h3{font-size:16px;margin:0 0 6px}
+.sub{color:var(--sub);font-size:14px}
+.small{font-size:13px;color:var(--sub)}
+main{max-width:720px;margin:0 auto}
+.card{background:var(--card);margin:10px 16px;border-radius:16px;padding:14px 16px;overflow:hidden}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.big{font-size:34px;font-weight:800;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
+.num{font-variant-numeric:tabular-nums}
+.pos{color:var(--green)}.neg{color:var(--red)}
+.badge{display:inline-block;font-size:12px;font-weight:700;padding:3px 9px;border-radius:99px;background:var(--chip);color:var(--sub)}
+.b-green{background:var(--greenbg);color:var(--green)}.b-red{background:var(--redbg);color:var(--red)}
+.b-orange{background:var(--orangebg);color:var(--orange)}.b-blue{background:var(--bluebg);color:var(--blue)}
+.list{background:var(--card);margin:10px 16px;border-radius:16px;overflow:hidden}
+.item{padding:12px 16px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:0}
+.item .row+.row{margin-top:2px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 16px}
+.grid2 .card{margin:0}
+.kpi .label{font-size:13px;color:var(--sub)}
+.kpi .val{font-size:24px;font-weight:800;font-variant-numeric:tabular-nums}
+button{font:inherit}
+.btn{border:0;border-radius:12px;padding:11px 14px;font-weight:700;background:var(--blue);color:#fff;cursor:pointer}
+.btn.ghost{background:var(--chip);color:var(--text)}
+.btn.yes{background:var(--green)}.btn.no{background:var(--red)}
+.btns{display:flex;gap:8px;margin-top:10px}.btns .btn{flex:1}
+.term{border:0;background:none;color:var(--blue);padding:0;font:inherit;text-decoration:underline dotted;text-underline-offset:3px;cursor:pointer}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 16px 2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{border:0;border-radius:99px;padding:7px 13px;background:var(--chip);color:var(--text);font-weight:600;font-size:14px;white-space:nowrap;cursor:pointer}
+.chip.on{background:var(--blue);color:#fff}
+nav{position:fixed;left:0;right:0;bottom:0;background:var(--tab);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-top:1px solid var(--line);display:flex;padding:6px 4px calc(6px + env(safe-area-inset-bottom));z-index:5}
+nav button{flex:1;border:0;background:none;color:var(--sub);display:flex;flex-direction:column;align-items:center;gap:2px;font-size:11px;font-weight:600;padding:4px 0;cursor:pointer}
+nav button svg{width:26px;height:26px}
+nav button.on{color:var(--blue)}
+.bar{height:8px;border-radius:99px;background:var(--chip);position:relative;margin:8px 0 4px;overflow:visible}
+.bar .fill{position:absolute;top:0;bottom:0;border-radius:99px}
+.bar .dot{position:absolute;top:50%;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--text);border:2px solid var(--card)}
+.legend{display:flex;justify-content:space-between;font-size:12px;color:var(--sub)}
+svg.spark{width:100%;height:auto;display:block;margin-top:8px}
+.sheet-bg{position:fixed;inset:0;background:rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:opacity .2s;z-index:9}
+.sheet{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-radius:18px 18px 0 0;padding:18px 18px calc(24px + env(safe-area-inset-bottom));transform:translateY(100%);transition:transform .25s;z-index:10;max-width:720px;margin:0 auto}
+.open .sheet-bg{opacity:1;pointer-events:auto}.open .sheet{transform:none}
+.lock{max-width:420px;margin:12vh auto 0;padding:0 20px;text-align:center}
+.lock img{width:84px;height:84px;border-radius:20px}
+.lock input{width:100%;font:inherit;font-size:18px;padding:14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--text);margin:16px 0 10px}
+.lock .btn{width:100%;padding:14px}
+.err{color:var(--red);font-size:14px;min-height:20px}
+.next{font-size:17px;font-weight:600}
+.step{display:flex;gap:12px}
+.step .n{flex:0 0 28px;height:28px;border-radius:50%;background:var(--bluebg);color:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px}
+a{color:var(--blue)}
+.hide{display:none}
+details summary{cursor:pointer;list-style:none}
+details summary::-webkit-details-marker{display:none}
+.muted{opacity:.6}
+.search{width:calc(100% - 32px);margin:6px 16px;font:inherit;padding:10px 12px;border-radius:12px;border:0;background:var(--chip);color:var(--text)}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="sheetwrap"><div class="sheet-bg" onclick="closeSheet()"></div><div class="sheet" id="sheet"></div></div>
+<nav id="nav" class="hide"></nav>
+<script>
+"use strict";
+const $ = s => document.querySelector(s);
+const KEY_STORE = "trader-key-v1";
+let D = null, TAB = "heute", FILTER = "alle";
+const TABS = [
+  ["heute","Heute",'<path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>'],
+  ["trades","Trades",'<path d="M4 18l5-6 4 3 7-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 6h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'],
+  ["labor","Labor",'<path d="M9 3h6M10 3v6L4.5 18.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>'],
+  ["markt","Markt",'<rect x="4" y="10" width="3" height="10" rx="1" fill="currentColor"/><rect x="10.5" y="5" width="3" height="15" rx="1" fill="currentColor"/><rect x="17" y="13" width="3" height="7" rx="1" fill="currentColor"/>'],
+  ["lernen","Lernen",'<path d="M3 6.5C6 5 9 5 12 6.5 15 5 18 5 21 6.5V19c-3-1.5-6-1.5-9 0-3-1.5-6-1.5-9 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 6.5V19" stroke="currentColor" stroke-width="2"/>'],
+];
+const STRAT = {orb:"Opening-Range-Ausbruch", gap:"News-Sprung", bounce:"Erholung"};
+const CHIP = {alle:"Alle", Regel:"Regel", "Ja-Trades":"Deine Ja-Trades", orb:"Ausbruch", gap:"News-Sprung", bounce:"Erholung"};
+
+// ------------------------------------------------------------ Formate
+const nf2 = new Intl.NumberFormat("de-DE",{minimumFractionDigits:2,maximumFractionDigits:2});
+const nf0 = new Intl.NumberFormat("de-DE",{maximumFractionDigits:0});
+const nf1 = new Intl.NumberFormat("de-DE",{minimumFractionDigits:1,maximumFractionDigits:1});
+const eur = x => x==null ? "–" : (x>0?"+":"") + nf2.format(x) + " €";
+const usd = x => x==null ? "–" : nf2.format(x) + " $";
+const pct = x => x==null ? "–" : (x>0?"+":"") + nf2.format(x) + " %";
+const int = x => x==null ? "–" : nf0.format(x);
+const cls = x => x>0 ? "pos" : x<0 ? "neg" : "";
+const esc = s => String(s==null?"":s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function tz(iso, zone, opts){ try{ return new Intl.DateTimeFormat("de-DE",Object.assign({timeZone:zone},opts)).format(new Date(iso)); }catch(e){ return "–"; } }
+const hmDE = iso => tz(iso,"Europe/Berlin",{hour:"2-digit",minute:"2-digit"});
+const dayDE = iso => tz(iso,"Europe/Berlin",{weekday:"short",day:"2-digit",month:"2-digit"});
+function dateDE(d){ if(!d) return "–"; const [y,m,dd]=d.split("-"); return dd+"."+m+"."+y; }
+function ago(iso){ const m=Math.round((Date.now()-new Date(iso))/60000); return m<1?"gerade eben":m<60?"vor "+m+" Min.":m<1440?"vor "+Math.round(m/60)+" Std.":"vor "+Math.round(m/1440)+" Tagen"; }
+function etToDE(hhmm){ // "10:15" ET -> deutsche Uhrzeit am Marktdatum
+  if(!D||!D.market.open_utc||!hhmm) return "";
+  const [h,m]=hhmm.split(":").map(Number), o=new Date(D.market.open_utc);
+  return hmDE(new Date(o.getTime()+((h*60+m)-(9*60+30))*60000).toISOString());
+}
+function g(term, text){ return '<button class="term" onclick="gloss(\''+term.replace(/'/g,"")+'\')">'+esc(text||term)+'</button>'; }
+
+// ------------------------------------------------------------ Entsperren
+async function deriveKey(pw, salt, iter){
+  const base = await crypto.subtle.importKey("raw", new TextEncoder().encode(pw), "PBKDF2", false, ["deriveKey"]);
+  return crypto.subtle.deriveKey({name:"PBKDF2",salt,iterations:iter,hash:"SHA-256"}, base, {name:"AES-GCM",length:256}, true, ["decrypt"]);
+}
+const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+async function fetchEnc(){
+  const r = await fetch("data.enc?t="+Date.now(), {cache:"no-store"});
+  if(!r.ok) throw new Error("setup");
+  return r.json();
+}
+async function decrypt(enc, key){
+  const pt = await crypto.subtle.decrypt({name:"AES-GCM", iv:b64(enc.iv)}, key, b64(enc.ct));
+  return JSON.parse(new TextDecoder().decode(pt));
+}
+async function storedKey(){
+  try{ const raw = localStorage.getItem(KEY_STORE); if(!raw) return null;
+    return await crypto.subtle.importKey("raw", b64(raw), {name:"AES-GCM"}, true, ["decrypt"]); }catch(e){ return null; }
+}
+async function load(){
+  if(location.search.includes("plain=1")){ D = await (await fetch("data.json")).json(); return show(); }
+  let enc;
+  try{ enc = await fetchEnc(); }catch(e){ return setup(); }
+  const key = await storedKey();
+  if(key){ try{ D = await decrypt(enc, key); return show(); }catch(e){} }
+  lockScreen(enc);
+}
+function setup(){
+  $("#app").innerHTML = '<div class="lock"><img src="icon-180.png" alt=""><h1 style="margin-top:14px">Trader-Labor</h1>'+
+    '<p class="sub">Einrichtung fehlt: Im GitHub-Repo muss das Secret <b>SITE_PASSWORD</b> angelegt sein. Danach baut der nächste Lauf die Daten.</p></div>';
+}
+function lockScreen(enc){
+  $("#app").innerHTML = '<div class="lock"><img src="icon-180.png" alt=""><h1 style="margin-top:14px">Trader-Labor</h1>'+
+    '<p class="sub">Privat. Bitte Passwort eingeben.</p><form id="f"><input id="pw" type="password" autocomplete="current-password" placeholder="Passwort">'+
+    '<div class="err" id="err"></div><button class="btn" type="submit">Entsperren</button></form>'+
+    '<p class="small" style="margin-top:18px">Das Passwort bleibt auf diesem Gerät gespeichert, bis du dich abmeldest.</p></div>';
+  $("#f").onsubmit = async ev => {
+    ev.preventDefault(); $("#err").textContent = "Prüfe …";
+    try{
+      const key = await deriveKey($("#pw").value, b64(enc.salt), enc.iter);
+      D = await decrypt(enc, key);
+      try{ localStorage.setItem(KEY_STORE, btoa(String.fromCharCode(...new Uint8Array(await crypto.subtle.exportKey("raw", key))))); }catch(e){}
+      show();
+    }catch(e){ $("#err").textContent = "Falsches Passwort."; }
+  };
+}
+function logout(){ try{ localStorage.removeItem(KEY_STORE); }catch(e){} location.reload(); }
+async function refresh(){
+  try{ const enc = await fetchEnc(), key = await storedKey(); if(key){ D = await decrypt(enc, key); render(); } else load(); }catch(e){}
+}
+
+// ------------------------------------------------------------ Gerüst
+function show(){
+  try{ TAB = localStorage.getItem("trader-tab") || "heute"; }catch(e){}
+  const nav = $("#nav"); nav.classList.remove("hide");
+  nav.innerHTML = TABS.map(([id,label,icon]) => '<button data-t="'+id+'" onclick="go(\''+id+'\')"><svg viewBox="0 0 24 24">'+icon+'</svg>'+label+'</button>').join("");
+  render();
+  setInterval(() => { if(TAB==="heute") renderHeute(true); }, 30000);
+  setInterval(refresh, 5*60000);
+  document.addEventListener("visibilitychange", () => { if(!document.hidden) refresh(); });
+}
+function go(t){ TAB = t; try{ localStorage.setItem("trader-tab", t); }catch(e){} render(); window.scrollTo(0,0); }
+function render(){
+  document.querySelectorAll("nav button").forEach(b => b.classList.toggle("on", b.dataset.t===TAB));
+  ({heute:renderHeute, trades:renderTrades, labor:renderLabor, markt:renderMarkt, lernen:renderLernen})[TAB]();
+}
+function head(title, right){
+  return '<header><div><div class="sub">'+esc(D.phase)+' · Spielgeld</div><h1>'+title+'</h1></div>'+(right||"")+'</header>';
+}
+function openSheet(html){ $("#sheet").innerHTML = html + '<div class="btns"><button class="btn ghost" onclick="closeSheet()">Schließen</button></div>'; $("#sheetwrap").classList.add("open"); }
+function closeSheet(){ $("#sheetwrap").classList.remove("open"); }
+function gloss(t){ const txt = D.learn.glossary[t]; openSheet('<h3>'+esc(t)+'</h3><p>'+esc(txt||"Noch keine Erklärung.")+'</p>'); }
+
+// ------------------------------------------------------------ Markt-Uhr und nächster Schritt
+function clock(){
+  const m = D.market, now = Date.now();
+  if(!m.open_utc) return {state:"zu", text:"Heute geschlossen ("+esc(m.closed_reason||"")+")", next:"Nächster Börsenstart: "+dayDE(m.next_open_utc)+", "+hmDE(m.next_open_utc)+" Uhr"};
+  const o = new Date(m.open_utc).getTime(), c = new Date(m.close_utc).getTime();
+  const fmt = ms => { const mm = Math.max(0,Math.round(ms/60000)); return mm>=60 ? Math.floor(mm/60)+" Std. "+(mm%60)+" Min." : mm+" Min."; };
+  if(now < o) return {state:"vor", text:"Börsenstart in "+fmt(o-now), next:"Öffnet um "+hmDE(m.open_utc)+" Uhr (9:30 Uhr New York)"};
+  if(now < c) return {state:"offen", text:"Börse offen, noch "+fmt(c-now), next:"Schließt um "+hmDE(m.close_utc)+" Uhr"};
+  return {state:"zu", text:"Börse geschlossen", next:"Nächster Start: "+dayDE(m.next_open_utc)+", "+hmDE(m.next_open_utc)+" Uhr"};
+}
+function nextStep(ck){
+  const L = D.live, today = D.market.date;
+  if(D.proposals.length) return D.proposals.length+" Vorschlag"+(D.proposals.length>1?"e warten":" wartet")+" auf dein Ja oder Nein.";
+  if(ck.state==="vor") return "Warte auf den Börsenstart. Das System meldet sich, sobald eine Regel auslöst.";
+  if(ck.state==="offen") return L && L.date===today && L.n_open ? L.n_open+" Spielgeld-Trades laufen. Nichts zu tun – Stopp und Ziel sind gesetzt." : "Das System beobachtet ~180 Aktien. Noch kein Vorschlag offen.";
+  return "Für heute ist alles erledigt. Lies die Tagesbilanz und die Lektion unten.";
+}
+
+// ------------------------------------------------------------ Heute
+function tradeBar(t){
+  const lo = t.stop, hi = t.target, now = t.open ? t.last : t.exit;
+  const p = x => Math.max(0, Math.min(100, (x-lo)/(hi-lo)*100));
+  const e = p(t.entry), n = p(now);
+  const color = now>=t.entry ? "var(--green)" : "var(--red)";
+  return '<div class="bar"><div class="fill" style="left:'+Math.min(e,n)+'%;width:'+Math.abs(n-e)+'%;background:'+color+'"></div>'+
+    '<div class="dot" style="left:'+n+'%"></div></div><div class="legend"><span>'+g("Stopp")+' '+usd(t.stop)+'</span><span>Einstieg '+usd(t.entry)+'</span><span>'+g("Ziel")+' '+usd(t.target)+'</span></div>';
+}
+function spark(sym, t){
+  const pts = (D.live && D.live.charts && D.live.charts[sym]) || [];
+  if(pts.length < 3) return "";
+  const W=320,H=90,pad=4, ks=pts.map(p=>p[0]), cs=pts.map(p=>p[1]);
+  let lo=Math.min(...cs), hi=Math.max(...cs);
+  if(t){ lo=Math.min(lo,t.stop); hi=Math.max(hi,t.target); }
+  const x = k => pad+(k-ks[0])/Math.max(1,(ks[ks.length-1]-ks[0]))*(W-2*pad), y = v => H-pad-(v-lo)/Math.max(1e-9,hi-lo)*(H-2*pad);
+  const path = pts.map((p,i)=>(i?"L":"M")+x(p[0]).toFixed(1)+" "+y(p[1]).toFixed(1)).join(" ");
+  let lines = "";
+  if(t){ [[t.stop,"var(--red)"],[t.entry,"var(--sub)"],[t.target,"var(--green)"]].forEach(([v,c])=>{ lines += '<line x1="0" x2="'+W+'" y1="'+y(v)+'" y2="'+y(v)+'" stroke="'+c+'" stroke-dasharray="4 4" stroke-width="1"/>'; });
+    if(t.in_k!=null) lines += '<circle cx="'+x(t.in_k)+'" cy="'+y(t.entry)+'" r="4" fill="var(--blue)"/>'; if(!t.open && t.out_k!=null) lines += '<circle cx="'+x(t.out_k)+'" cy="'+y(t.exit)+'" r="4" fill="'+(t.eur>=0?"var(--green)":"var(--red)")+'"/>'; }
+  return '<svg class="spark" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Kursverlauf '+esc(sym)+'">'+lines+'<path d="'+path+'" fill="none" stroke="var(--blue)" stroke-width="2"/></svg>';
+}
+function proposalCard(t){
+  const sent = (()=>{ try{ return localStorage.getItem("ans-"+t.pid); }catch(e){ return null; } })();
+  const risk = (t.entry-t.stop)/t.entry*100;
+  return '<div class="card"><div class="row"><h3>'+esc(t.symbol)+' · '+esc(STRAT[t.strategy])+'</h3><span class="badge b-blue">Vorschlag</span></div>'+
+    '<div class="sub">Einstieg '+esc(t.in_at)+' Uhr New York ('+etToDE(t.in_at)+' Uhr bei uns) zu '+usd(t.entry)+'</div>'+
+    tradeBar(t)+'<p class="small">'+esc(D.learn.strategies[t.strategy]||"")+' Risiko bei 100 €: '+nf2.format(risk)+' €.</p>'+
+    (sent ? '<div class="badge b-green">Gesendet: „'+esc(sent)+'“ – zählt beim nächsten Lauf (≤ 10 Min.)</div>' :
+    '<div class="btns"><button class="btn yes" onclick="answer(\''+t.pid+'\',\'ja\')">Ja, mitmachen</button><button class="btn no" onclick="answer(\''+t.pid+'\',\'nein\')">Nein</button></div>')+'</div>';
+}
+async function answer(pid, a){
+  try{
+    await fetch(D.reply.server.replace(/\/$/,"")+"/"+D.reply.topic, {method:"POST", body:a+" "+pid});
+    try{ localStorage.setItem("ans-"+pid, a); }catch(e){}
+    render();
+  }catch(e){ openSheet("<h3>Nicht gesendet</h3><p>Keine Verbindung. Bitte noch einmal versuchen oder den Button im Push nutzen.</p>"); }
+}
+function renderHeute(onlyClock){
+  const ck = clock();
+  if(onlyClock && $("#clock")){ $("#clock").innerHTML = clockHtml(ck); return; }
+  const L = D.live && D.live.date===D.market.date ? D.live : null;
+  const top = L && L.focus.length ? L.per_variant[L.focus[0]] || {n:0,eur:0} : null;
+  const lk = L ? (L.lukas||[]).filter(t=>t.eur!=null) : [];
+  const lkEur = lk.reduce((s,t)=>s+t.eur,0);
+  const bad = D.status.filter(s=>s.ok===false);
+  let h = head("Heute", '<button class="btn ghost" style="padding:8px 12px" onclick="refresh()">Neu laden</button>');
+  h += '<div class="card" id="clock">'+clockHtml(ck)+'</div>';
+  h += '<div class="card"><div class="small">Nächster Schritt</div><div class="next">'+esc(nextStep(ck))+'</div></div>';
+  D.proposals.forEach(t => h += proposalCard(t));
+  h += '<div class="grid2"><div class="card kpi"><div class="label">Top-Variante heute</div><div class="val '+cls(top&&top.eur)+'">'+(top?eur(top.eur):"–")+'</div><div class="small">'+(top?int(top.n)+" Trades · bei 100 € pro Trade":"heute noch kein Lauf")+'</div></div>'+
+       '<div class="card kpi"><div class="label">Deine Ja-Trades</div><div class="val '+cls(lkEur)+'">'+(lk.length?eur(lkEur):"–")+'</div><div class="small">'+(lk.length?lk.length+" Trades":"noch keine Antwort heute")+'</div></div></div>';
+  if(L){
+    const open = L.trades.filter(t=>t.open);
+    h += '<h2>Laufende Spielgeld-Trades</h2>';
+    if(!open.length) h += '<div class="card sub">Gerade läuft kein Trade der Top-Varianten. Stand '+esc(L.as_of)+'.</div>';
+    const seen = new Set();
+    open.forEach(t => { const k=t.symbol+t.strategy; if(seen.has(k)) return; seen.add(k);
+      h += '<div class="card"><div class="row"><h3>'+esc(t.symbol)+'</h3><span class="num '+cls(t.eur)+'">'+eur(t.eur)+'</span></div><div class="sub">'+esc(STRAT[t.strategy])+' · seit '+esc(t.in_at)+' Uhr NY · Kurs '+usd(t.last)+'</div>'+tradeBar(t)+spark(t.symbol,t)+'</div>'; });
+    h += '<div class="card"><div class="row"><span>Alle Varianten heute</span><b class="num">'+int(L.n_trades)+' Trades</b></div><div class="small">'+int(L.n_open)+' offen · '+int(L.symbols)+' Aktien beobachtet · Stand '+esc(L.as_of)+'</div></div>';
+  }
+  if(D.history.length){
+    h += '<h2>Verlauf</h2><div class="list">'+D.history.slice(-10).reverse().map(r =>
+      '<div class="item"><div class="row"><span>'+dateDE(r.date)+'</span><b class="num '+cls(r.top_eur)+'">'+eur(r.top_eur)+'</b></div><div class="small">Top-Variante '+int(r.top_n)+' Trades · alle Varianten '+eur(r.all_eur)+(r.lukas_n?' · du: '+eur(r.lukas_eur):'')+'</div></div>').join("")+'</div>';
+  }
+  h += '<h2>Lektion des Tages</h2><div class="card">'+esc(D.learn.lesson)+'</div>';
+  h += '<h2>System</h2><div class="card"><div class="row"><span>'+(bad.length?'<span class="badge b-red">'+bad.length+' Problem'+(bad.length>1?'e':'')+'</span>':'<span class="badge b-green">Alles läuft</span>')+'</span><span class="small">Daten '+ago(D.generated_at)+'</span></div>'+
+       bad.map(s=>'<p class="small"><b>'+esc(s.name)+':</b> '+esc((s.steps[0]||{}).detail||s.summary)+'</p>').join("")+'<div class="btns"><button class="btn ghost" onclick="statusSheet()">Details</button></div></div>';
+  $("#app").innerHTML = h;
+}
+function clockHtml(ck){
+  const b = ck.state==="offen" ? "b-green" : ck.state==="vor" ? "b-orange" : "";
+  return '<div class="row"><span class="badge '+b+'">'+(ck.state==="offen"?"Offen":ck.state==="vor"?"Vor dem Start":"Geschlossen")+'</span><span class="small">New York '+tz(new Date().toISOString(),"America/New_York",{hour:"2-digit",minute:"2-digit"})+' Uhr</span></div>'+
+    '<div class="next" style="margin-top:6px">'+ck.text+'</div><div class="small">'+ck.next+'</div>';
+}
+function statusSheet(){
+  openSheet('<h3>Systemstatus</h3>'+D.status.map(s=>'<div class="item" style="padding:8px 0"><div class="row"><b>'+esc(s.name)+'</b><span class="badge '+(s.ok===false?"b-red":s.ok?"b-green":"")+'">'+(s.ok===false?"Fehler":s.ok?"OK":"noch nie")+'</span></div><div class="small">'+(s.ran_at?dayDE(s.ran_at)+" "+hmDE(s.ran_at)+" Uhr · ":"")+esc(s.summary||"")+'</div></div>').join("")+
+    '<p class="small">Push-Kanal in der ntfy-App: <b>'+esc(D.push_topic||"")+'</b></p><div class="btns"><button class="btn ghost" onclick="logout()">Abmelden</button></div>');
+}
+
+// ------------------------------------------------------------ Trades
+function tradeItem(t, who){
+  const lab = D.labels[t.variant] || t.variant;
+  const res = t.open ? "läuft" : t.why;
+  const expl = t.open ? "Der Trade läuft noch. Er endet am Stopp, am Ziel oder um 15:55 Uhr New York." :
+    t.why==="Stopp" ? "Der Kurs fiel auf den Stopp. Der Verlust blieb so klein wie geplant. Das passiert oft – entscheidend ist die Summe." :
+    t.why==="Ziel" ? "Der Kurs erreichte das Ziel. Der Gewinn ist ein Vielfaches des Risikos ("+g("R")+")." :
+    "Weder Stopp noch Ziel: verkauft vor Börsenschluss, wie es beim Daytrading üblich ist.";
+  return '<details class="item"><summary><div class="row"><span><b>'+esc(t.symbol)+'</b> <span class="small">'+esc(who)+'</span></span><b class="num '+cls(t.eur)+'">'+eur(t.eur)+'</b></div>'+
+    '<div class="small">'+esc(STRAT[t.strategy]||"")+' · '+esc(t.in_at||t.answer_at)+' Uhr NY · '+esc(res||t.status)+'</div></summary>'+
+    '<div style="margin-top:8px" class="small">'+esc(lab)+'</div>'+(t.stop?tradeBar(t):"")+spark(t.symbol,t)+'<p class="small">'+expl+'</p></details>';
+}
+function renderTrades(){
+  const L = D.live;
+  let h = head("Trades");
+  h += '<div class="chips">'+["alle","Regel","Ja-Trades","orb","gap","bounce"].map(f=>'<button class="chip '+(FILTER===f?"on":"")+'" onclick="FILTER=\''+f+'\';render()">'+CHIP[f]+'</button>').join("")+'</div>';
+  if(!L){ $("#app").innerHTML = h+'<div class="card sub">Noch keine Live-Trades. Ab dem nächsten Börsentag erscheinen sie hier.</div>'; return; }
+  h += '<div class="card small">'+dateDE(L.date)+' · Stand '+esc(L.as_of)+' · Spielgeld, Ergebnis jeweils bei 100 € pro Trade. Tippe auf einen Trade für die Erklärung.</div>';
+  let rows = [];
+  if(FILTER!=="Ja-Trades") rows = L.trades.filter(t => FILTER==="alle"||FILTER==="Regel"||t.strategy===FILTER).map(t=>[t,"Regel"]);
+  if(FILTER==="alle"||FILTER==="Ja-Trades") rows = rows.concat((L.lukas||[]).map(t=>[Object.assign({open:t.status==="offen"},t),"Du"]));
+  h += rows.length ? '<div class="list">'+rows.map(([t,w])=>tradeItem(t,w)).join("")+'</div>' : '<div class="card sub">Keine Trades für diesen Filter.</div>';
+  $("#app").innerHTML = h;
+}
+
+// ------------------------------------------------------------ Labor
+function curve(id){
+  const pts = (D.lab.curves||{})[id]; if(!pts||pts.length<3) return "";
+  const W=320,H=60,vs=pts.map(p=>p[1]), lo=Math.min(0,...vs), hi=Math.max(0,...vs);
+  const x=i=>i/(pts.length-1)*W, y=v=>H-3-(v-lo)/Math.max(1e-9,hi-lo)*(H-6);
+  const testStart = pts.findIndex(p=>p[0]>=D.lab.test[0]);
+  return '<svg class="spark" viewBox="0 0 '+W+' '+H+'"><rect x="'+x(testStart)+'" y="0" width="'+(W-x(testStart))+'" height="'+H+'" fill="var(--bluebg)"/><line x1="0" x2="'+W+'" y1="'+y(0)+'" y2="'+y(0)+'" stroke="var(--line)"/><path d="'+pts.map((p,i)=>(i?"L":"M")+x(i).toFixed(1)+" "+y(p[1]).toFixed(1)).join(" ")+'" fill="none" stroke="'+(vs[vs.length-1]>=0?"var(--green)":"var(--red)")+'" stroke-width="2"/></svg><div class="legend"><span>Lerntage</span><span>Prüftage (blau)</span></div>';
+}
+function renderLabor(){
+  const L = D.lab;
+  let h = head("Labor");
+  if(!L || !L.variants){ $("#app").innerHTML = h+'<div class="card sub">Noch keine Labor-Ergebnisse.</div>'; return; }
+  const passed = L.variants.filter(v=>v.passed).length;
+  h += '<div class="card"><div class="row"><span>Bestanden</span><span class="big num">'+passed+'<span class="sub" style="font-size:18px"> / '+L.variants.length+'</span></span></div>'+
+       '<p class="small">'+int(L.symbols)+' Aktien · '+int(L.days)+' Tage: '+int(L.n_train_days)+' '+g("Lerntage")+' + '+int(L.n_test_days)+' '+g("Prüftage")+' ('+dateDE(L.test[0])+' bis '+dateDE(L.test[1])+'). Eine '+g("Variante")+' besteht, wenn sie an Lern- und Prüftagen im Plus ist und mindestens '+int(L.settings.min_test_trades)+' Trades hat.</p></div>';
+  h += '<div class="card small">Wichtig: Mit 1 € '+g("Gebühr")+' je Order wären alle Varianten im Minus. Darum zeigt jede Karte beide Zahlen.</div>';
+  h += '<h2>Rangliste</h2>';
+  L.variants.slice(0,15).forEach((v,i) => { const t=v.test||{};
+    h += '<div class="card"><div class="row"><span class="badge '+(v.passed?"b-green":"")+'">'+(v.passed?"bestanden":"nicht bestanden")+'</span><span class="small">#'+(i+1)+'</span></div>'+
+      '<h3 style="margin-top:6px">'+esc(v.label)+'</h3>'+
+      (t.n ? '<div class="grid2" style="margin:8px 0 0"><div><div class="small">Prüftage, bei 100 €/Trade</div><div class="val num '+cls(t.eur)+'" style="font-size:22px;font-weight:800">'+eur(t.eur)+'</div></div><div><div class="small">nach Gebühren</div><div class="num '+cls(t.eur_after_fees)+'" style="font-size:22px;font-weight:800">'+eur(t.eur_after_fees)+'</div></div></div>'+
+      '<div class="small" style="margin-top:6px">'+int(t.n)+' Trades · '+g("Trefferquote")+' '+nf0.format(t.win_rate)+' % · Ø '+pct(t.avg_pct)+' · '+g("Zufallswert")+' '+nf1.format(t.t||0)+(Math.abs(t.t||0)>=2?" (kaum Zufall)":" (Zufall möglich)")+'</div>' : '<div class="small">Auf den Prüftagen kein Trade.</div>')+
+      curve(v.id)+'</div>'; });
+  h += '<h2>Die Strategien</h2>'+Object.entries(L.strategies||{}).map(([k,v])=>'<div class="card"><h3>'+esc(STRAT[k]||k)+'</h3><div class="small">'+esc(v)+'</div></div>').join("");
+  h += '<div class="card small">Rangliste vom '+dayDE(L.created_at)+', '+hmDE(L.created_at)+' Uhr. Spread '+nf2.format(L.settings.slip_pct)+' % je Seite ist eingerechnet.</div>';
+  $("#app").innerHTML = h;
+}
+
+// ------------------------------------------------------------ Markt
+function renderMarkt(){
+  const M = D.morning;
+  let h = head("Markt");
+  h += '<h2>Morgen-Scan</h2>';
+  if(M && M.hits.length){
+    h += '<div class="card"><div class="row"><span>Passen zu einer Regel</span><span class="big num">'+int((M.daily||{}).hits||M.hits.length)+'</span></div><div class="small">Schlusskurse vom '+esc(M.as_of||"")+' · '+int((M.daily||{}).scanned)+' Aktien gescannt</div></div>';
+    h += '<div class="list">'+Object.entries(M.counts).map(([k,n])=>'<details class="item"><summary><div class="row"><span><code>'+esc(k)+'</code></span><b class="num">'+int(n)+'</b></div><div class="small">'+esc(D.learn.setups[k]||"")+'</div></summary><div class="small" style="margin-top:6px">'+esc((M.per_setup[k]||[]).join(", "))+'</div></details>').join("")+'</div>';
+    h += '<h2>Meistgehandelte Treffer</h2><div class="list">'+M.hits.slice(0,15).map(x=>'<div class="item"><div class="row"><b>'+esc(x.symbol)+'</b><span class="num">'+usd(x.price)+'</span></div><div class="small">'+esc((x.setups||[]).join(", "))+' · '+g("RSI")+' '+(x.rsi!=null?nf1.format(x.rsi):"–")+'</div></div>').join("")+'</div>';
+  } else h += '<div class="card sub">Noch kein Morgen-Scan.</div>';
+  if(D.orb && D.orb.hits.length){
+    h += '<h2>'+g("Opening Range","Opening-Range")+'-Ausbrüche</h2><div class="card small">'+esc(D.orb.as_of)+' · '+int(D.orb.scanned)+' Charts · '+D.orb.hits.length+' über der Spanne</div><div class="list">'+
+      D.orb.hits.slice(0,15).map(x=>'<div class="item"><div class="row"><b>'+esc(x.symbol)+'</b><span class="num">'+usd(x.price)+'</span></div><div class="small">'+esc(x.at)+' NY · Spanne '+usd(x.or_low)+' bis '+usd(x.or_high)+' · '+pct(x.pct_over)+' darüber</div></div>').join("")+'</div>';
+  }
+  if(M && M.moves && M.moves.length){
+    h += '<h2>Bewegung seit gestern</h2><div class="chips" style="flex-wrap:wrap">'+M.moves.map(m=>'<span class="badge '+(m.pct>=0?"b-green":"b-red")+'">'+esc(m.ticker)+' '+pct(m.pct)+'</span>').join("")+'</div>';
+  }
+  if(M && M.news.length){
+    h += '<h2>News</h2><div class="list">'+M.news.slice(0,20).map(n=>'<a class="item" style="display:block;color:inherit;text-decoration:none" href="'+esc(n.link)+'" target="_blank" rel="noopener"><div class="small">'+esc(n.ticker)+' · '+(n.time?dayDE(n.time)+" "+hmDE(n.time)+" Uhr":"")+(n.tags&&n.tags.length?' · '+esc(n.tags.join(", ")):'')+'</div><div>'+esc(n.title)+'</div></a>').join("")+'</div><div class="card small">Schlagzeilen sind Hinweise, keine Fakten: erst den Artikel lesen.</div>';
+  }
+  if(M && M.pelosi){
+    h += '<h2>Pelosi-Tracker</h2><div class="list">'+(M.pelosi.new.length?M.pelosi.new.map(r=>'<a class="item" style="display:block;color:inherit" href="'+esc(r.url)+'" target="_blank" rel="noopener"><b>'+esc(r.name)+'</b><div class="small">gemeldet '+dateDE(r.filed)+' · PDF öffnen</div></a>').join(""):'<div class="item sub">Keine neue Meldung.</div>')+'</div><div class="card small">Abgeordnete melden Aktienkäufe erst Tage bis Wochen später, nur als Betragsspanne.</div>';
+  }
+  $("#app").innerHTML = h;
+}
+
+// ------------------------------------------------------------ Lernen
+function renderLernen(){
+  let h = head("Lernen");
+  h += '<h2>Lektion des Tages</h2><div class="card">'+esc(D.learn.lesson)+'</div>';
+  h += '<h2>So funktioniert das System</h2><div class="card">'+D.learn.how.map(([t,x],i)=>'<div class="step" style="margin:'+(i?"12px":"0")+' 0 0"><div class="n">'+(i+1)+'</div><div><b>'+esc(t)+'</b><div class="small">'+esc(x)+'</div></div></div>').join("")+'</div>';
+  h += '<h2>Die drei Phasen</h2><div class="list">'+
+    '<div class="item"><div class="row"><b>1. Testphase</b><span class="badge b-blue">jetzt</span></div><div class="small">Spielgeld ohne Limit. 44 Varianten laufen parallel, das System misst und lernt.</div></div>'+
+    '<div class="item"><div class="row"><b>2. Simulator</b><span class="badge">später</span></div><div class="small">100 € Spielgeld wie echt: höchstens 3 € Verlust pro Trade, 8 € pro Tag, 30 € pro Monat, mit Gebühren.</div></div>'+
+    '<div class="item"><div class="row"><b>3. Echtes Geld</b><span class="badge">frühestens nach 2 Monaten</span></div><div class="small">Nur wenn der Simulator 2 Monate am Stück im Plus war – und nur mit deinem Ja zu jeder Order.</div></div></div>';
+  h += '<h2>Alle Lektionen</h2><div class="list">'+D.learn.lessons.map(l=>'<div class="item small">'+esc(l)+'</div>').join("")+'</div>';
+  h += '<h2>Glossar</h2><input class="search" placeholder="Begriff suchen" oninput="filterGloss(this.value)"><div class="list" id="gl">'+glossList("")+'</div>';
+  h += '<div class="card small">Spielgeld: Alle Zahlen sind gemessen, nicht versprochen. Die meisten Daytrader verlieren Geld – genau deshalb misst dieses System ehrlich, bevor echtes Geld ins Spiel kommt.</div>';
+  $("#app").innerHTML = h;
+}
+function glossList(q){ q=q.toLowerCase(); return Object.entries(D.learn.glossary).filter(([k,v])=>!q||k.toLowerCase().includes(q)||v.toLowerCase().includes(q)).map(([k,v])=>'<div class="item"><b>'+esc(k)+'</b><div class="small">'+esc(v)+'</div></div>').join("")||'<div class="item sub">Nichts gefunden.</div>'; }
+function filterGloss(q){ $("#gl").innerHTML = glossList(q); }
+
+load();
+</script>
+</body>
+</html>

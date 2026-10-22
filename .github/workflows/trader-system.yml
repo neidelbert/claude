@@ -29,6 +29,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   # Zeitplan-Läufe nacheinander; manuelle Läufe sofort (system.py führt gleichzeitige Commits zusammen)
@@ -39,6 +41,8 @@ jobs:
   run:
     runs-on: ubuntu-latest
     timeout-minutes: 40
+    outputs:
+      published: ${{ steps.system.outputs.published }}
     env:
       NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
       NTFY_REPLY_TOPIC: ${{ secrets.NTFY_REPLY_TOPIC }}
@@ -75,6 +79,18 @@ jobs:
         with:
           path: .cache/lab
           key: lab-bars-${{ github.run_id }}
+      - name: Webseite bauen (verschlüsselt)
+        if: steps.system.outputs.published == 'true'
+        env:
+          SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
+        run: |
+          pip install -q cryptography
+          python3 tools/trader/site.py build
+      - name: Webseite hochladen
+        if: steps.system.outputs.published == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
       - name: Absturz melden
         if: failure()
         run: |
@@ -83,3 +99,16 @@ jobs:
             -H "Click: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
             -d "Der Lauf ist abgestürzt oder ein Teil hat einen Fehler gemeldet. Tippen öffnet das Protokoll." \
             "https://ntfy.sh/$TOPIC" || true
+
+  pages:
+    # veröffentlicht die Webseite (GitHub Pages, Quelle „GitHub Actions“ muss in den Settings eingeschaltet sein)
+    needs: run
+    if: needs.run.outputs.published == 'true'
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

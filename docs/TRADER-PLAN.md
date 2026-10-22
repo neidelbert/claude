@@ -98,7 +98,7 @@ iPhone: ntfy-Pushes mit Ja/Nein-Buttons + Webseite als Home-Bildschirm-App
 | 2 ✓ | **Labor-Kern:** 60-Tage-Daten holen, Strategien ORB / Erholung / News-Sprung mit Varianten, Backtest, Trade-Buch | Rangliste mit Lern- und Prüftagen steht |
 | 3 ✓ | **Live-Labor:** alle 5 Min. im Handel Signale prüfen, Spielgeld-Trades öffnen und schließen, Pushes mit Erklärung | ein Handelstag läuft komplett allein |
 | 4 ✓ (gebaut, wartet auf deinen ersten Test) | **Ja/Nein:** Vorschlags-Pushes mit Buttons, Antwortkanal, Spalte „Lukas“ | Lukas hat per Push zugestimmt und abgelehnt |
-| 5 | **Webseite:** iPhone-App-Design, alle Tabs, Glossar, verschlüsselt, GitHub Pages, Home-Bildschirm-Symbol | Lukas öffnet sie auf dem iPhone mit Passwort |
+| 5 ✓ (gebaut, wartet auf Passwort + Pages) | **Webseite:** iPhone-App-Design, alle Tabs, Glossar, verschlüsselt, GitHub Pages, Home-Bildschirm-Symbol | Lukas öffnet sie auf dem iPhone mit Passwort |
 | 6 | **Texte:** Tageslektion, Tagesbilanz, Wochen-Rückblick | ein Freitag mit Rückblick ist gelaufen |
 | 7 | **Lernen:** wöchentliches Nachtraining mit Bestätigung auf ungesehenen Tagen, Änderungsprotokoll | erste übernommene oder abgelehnte Variante mit Begründung |
 | 8 | **Simulator:** 100 € wie echt, Grenzen 3/8/30 €, Gebühren, Spread. Startet, sobald eine Labor-Strategie die Prüfung besteht | erster Simulator-Monat läuft |

@@ -185,6 +185,9 @@ def run_url():
 
 
 def overview_url():
+    site = config().get("site_url")
+    if site:
+        return site                     # die private Webseite (GitHub Pages)
     repo = os.environ.get("GITHUB_REPOSITORY", "neidelbert/claude")
     branch = os.environ.get("GITHUB_REF_NAME", "main")
     return "https://github.com/%s/blob/%s/trader/UEBERSICHT.md" % (repo, branch)
@@ -1022,6 +1025,9 @@ def publish(owned, message):
         git("commit", "-q", "-m", message + " [skip ci]")
         if git("push", "-q", "origin", "HEAD:" + branch, check=False).returncode == 0:
             print("Gepusht nach %s." % branch)
+            if os.environ.get("GITHUB_OUTPUT"):
+                with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
+                    fh.write("published=true\n")   # Workflow baut dann die Webseite neu
             return
         time.sleep(2 * (attempt + 1))
     raise RuntimeError("Push nach %s fünfmal fehlgeschlagen" % branch)

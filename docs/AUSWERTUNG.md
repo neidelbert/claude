@@ -11,6 +11,9 @@
 | Echtgeld-Prüfung | Checkliste mit 8 Punkten, alle noch offen |
 | Webseite | iPhone-App mit Tabs Heute, Konto, Trades, Labor, Mehr sowie Glossar, Profi-Regeln, Einführung und Einstellungen. Verschlüsselt, Daten nur mit Passwort |
 
+**Sofort nutzbar:** Die Oberfläche liegt als privates Artifact in deinem Claude-Konto: https://claude.ai/artifact/E5sJZ36t6nHv8xSrW5Rsc1
+(Datenstand 23.10. nachts, Ja/Nein dort bitte im Push antippen). Die Webseite mit täglichem Update kommt, sobald Pages an ist.
+
 ## Ehrliche Zahlen (Labor-Lauf von heute Nacht)
 - **3 von 52 Varianten bestanden.** Alle drei sind Opening-Range-Ausbrüche (30 Minuten, hohes Volumen).
   Die beste macht im Schnitt **+0,06 % pro Trade**, das sind +10,06 € auf 179 Trades bei je 100 €. Der Zufallswert

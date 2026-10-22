@@ -153,6 +153,7 @@ async function storedKey(){
     return await crypto.subtle.importKey("raw", b64(raw), {name:"AES-GCM"}, true, ["decrypt"]); }catch(e){ return null; }
 }
 async function load(){
+  if(window.__DATA__){ D = window.__DATA__; return show(); }   // Artifact-Version: Daten eingebettet
   if(location.search.includes("plain=1")){ D = await (await fetch("data.json")).json(); return show(); }
   let enc;
   try{ enc = await fetchEnc(); }catch(e){ return setup(); }
@@ -181,6 +182,7 @@ function lockScreen(enc){
 }
 function logout(){ try{ localStorage.removeItem(KEY_STORE); }catch(e){} location.reload(); }
 async function refresh(){
+  if(window.__DATA__) return;
   try{ const enc = await fetchEnc(), key = await storedKey(); if(key){ D = await decrypt(enc, key); render(); } else load(); }catch(e){}
 }
 
@@ -257,7 +259,7 @@ function proposalCard(t){
   return '<div class="card"><div class="row"><h3>'+esc(t.symbol)+' · '+esc(STRAT[t.strategy])+'</h3><span class="badge b-blue">Vorschlag</span></div>'+
     '<div class="sub">Einstieg '+esc(t.in_at)+' Uhr New York ('+etToDE(t.in_at)+' Uhr bei uns) zu '+usd(t.entry)+'</div>'+
     tradeBar(t)+'<p class="small">'+esc(D.learn.strategies[t.strategy]||"")+' Risiko bei 100 €: '+nf2.format(risk)+' €.</p>'+
-    (sent ? '<div class="badge b-green">Gesendet: „'+esc(sent)+'“ – zählt beim nächsten Lauf (≤ 10 Min.)</div>' :
+    (window.__DATA__ ? '<div class="small" style="margin-top:8px">Ja oder Nein bitte im Push antippen.</div>' : sent ? '<div class="badge b-green">Gesendet: „'+esc(sent)+'“ – zählt beim nächsten Lauf (≤ 10 Min.)</div>' :
     '<div class="btns"><button class="btn yes" onclick="answer(\''+t.pid+'\',\'ja\')">Ja, mitmachen</button><button class="btn no" onclick="answer(\''+t.pid+'\',\'nein\')">Nein</button></div>')+'</div>';
 }
 async function answer(pid, a){
@@ -275,7 +277,7 @@ function renderHeute(onlyClock){
   const lk = L ? (L.lukas||[]).filter(t=>t.eur!=null) : [];
   const lkEur = lk.reduce((s,t)=>s+t.eur,0);
   const bad = D.status.filter(s=>s.ok===false);
-  let h = head("Heute", '<button class="btn ghost" style="padding:8px 12px" onclick="refresh()">Neu laden</button>');
+  let h = head("Heute", window.__DATA__ ? '<span class="small">Stand '+hmDE(D.generated_at)+' Uhr</span>' : '<button class="btn ghost" style="padding:8px 12px" onclick="refresh()">Neu laden</button>');
   h += '<div class="card" id="clock">'+clockHtml(ck)+'</div>';
   h += '<div class="card"><div class="small">Nächster Schritt</div><div class="next">'+esc(nextStep(ck))+'</div></div>';
   const S = D.sim||{}, KS = S.live || S.vorschau;

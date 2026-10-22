@@ -30,6 +30,10 @@ on:
         description: "Nur bei „ticker“: Stopp/Ziel-Alarme aus dem Plan anlegen"
         type: boolean
         default: false
+      leise:
+        description: "Ohne Push (z. B. nachts)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -62,6 +66,7 @@ jobs:
         id: system
         env:
           TEIL: ${{ github.event_name == 'schedule' && 'auto' || inputs.teil }}
+          NTFY_DRY: ${{ inputs.leise && '1' || '' }}
           TICKER: ${{ inputs.ticker }}
           ALARME: ${{ inputs.alarme }}
           NACHRICHT: ${{ inputs.nachricht }}

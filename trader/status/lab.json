@@ -1,8 +1,8 @@
 {
   "part": "lab",
   "ok": true,
-  "summary": "3 von 44 bestanden",
-  "ran_at": "2026-10-22T23:21:41Z",
+  "summary": "3 von 52 bestanden",
+  "ran_at": "2026-10-22T23:39:05Z",
   "date_et": "2026-10-22",
   "steps": [
     {
@@ -13,15 +13,15 @@
     {
       "name": "Testen",
       "ok": true,
-      "detail": "44 Varianten, 62.087 Trades, 3 bestanden"
+      "detail": "52 Varianten, 66.001 Trades, 3 bestanden"
     }
   ],
   "data": {
     "days": 60,
     "symbols": 178,
-    "trades": 62087,
+    "trades": 66001,
     "passed": 3,
     "best": "orb-30-low-2R-v1.5"
   },
-  "run_url": "https://github.com/neidelbert/claude/actions/runs/39871243177"
+  "run_url": "https://github.com/neidelbert/claude/actions/runs/39873169195"
 }

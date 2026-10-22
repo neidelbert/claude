@@ -1,6 +1,6 @@
 # Trader-Übersicht
 
-Stand: Do 22.10. 19:24 Uhr ET (01:24 Uhr MESZ) · wird bei jedem Lauf neu gebaut.
+Stand: Do 22.10. 19:39 Uhr ET (01:39 Uhr MESZ) · wird bei jedem Lauf neu gebaut.
 
 NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
@@ -11,7 +11,7 @@ NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
 | Morgen-Scan | Do 22.10. 18:31 Uhr ET (00:31 Uhr MESZ) | OK – 823 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865573995)) |
 | ORB-Scan | noch nie | – |
 | Labor live | noch nie | – |
-| Labor | Do 22.10. 19:21 Uhr ET (01:21 Uhr MESZ) | OK – 3 von 44 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/39871243177)) |
+| Labor | Do 22.10. 19:39 Uhr ET (01:39 Uhr MESZ) | OK – 3 von 52 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/39873169195)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
 | Test-Push | Do 22.10. 19:24 Uhr ET (01:24 Uhr MESZ) | OK – Push gesendet ([Lauf](https://github.com/neidelbert/claude/actions/runs/39871573010)) |
@@ -109,7 +109,7 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 
 ## Labor (Testphase, Spielgeld ohne Limit)
 
-178 Aktien · 60 Handelstage · Lerntage Do 30.07.2026 bis Do 24.09.2026 · **Prüftage Fr 25.09.2026 bis Do 22.10.2026** · 44 Varianten
+178 Aktien · 60 Handelstage · Lerntage Do 30.07.2026 bis Do 24.09.2026 · **Prüftage Fr 25.09.2026 bis Do 22.10.2026** · 52 Varianten
 
 | # | Variante | Prüftage: Trades | Treffer | Ø je Trade | € bei 100 €/Trade | nach Gebühren | Zufall? | bestanden |
 |---|---|---|---|---|---|---|---|---|
@@ -130,6 +130,7 @@ So liest du das: Ein Trade ist ein Kauf und Verkauf am selben Tag. „Treffer“
 
 - **Opening-Range-Ausbruch: Die ersten 15 oder 30 Minuten bilden eine Spanne. Schließt eine 5-Minuten-Kerze über ihrem Hoch, wird gekauft.**
 - **News-Sprung: Die Aktie öffnet deutlich über dem Vortag (meist wegen einer Nachricht) und mit viel Umsatz. Gekauft wird, wenn sie über das Hoch der ersten 5 Minuten steigt.**
+- **Stocks in Play (nach der Studie von Zarattini, Barbon und Aziz, 2024): Nur Aktien mit ungewöhnlich viel Umsatz in den ersten 5 Minuten. Ist die erste 5-Minuten-Kerze grün, wird über ihrem Hoch gekauft. Der Stopp liegt eng (10 oder 20 % der durchschnittlichen Tagesschwankung ATR), verkauft wird spätestens zum Schluss. Die Studie handelte auch Leerverkäufe und mit Hebel – hier nur Kauf, ohne Hebel.**
 - **Erholung: Eine stark gefallene Aktie (RSI unter 30 oder Lücke nach unten) steigt wieder über ihren Tagesdurchschnittspreis (VWAP).**
 
 ## Preisalarme

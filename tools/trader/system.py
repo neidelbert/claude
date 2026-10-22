@@ -1083,8 +1083,16 @@ def main(argv=None):
         LOG.clear()
         try:
             if job == "test":
-                ok = push(cfg, "Trader-System: Test", "Die Push-Nachrichten kommen an. Stand: %s" % stamp(now),
-                          priority=3, tags=["white_check_mark"])
+                try:
+                    last = read_answers(cfg).get("test")
+                except Exception:
+                    last = None
+                seen = ("Deine letzte Test-Antwort ist angekommen: „%s“ um %s." % (
+                    last["answer"], stamp(datetime.datetime(1970, 1, 1) + datetime.timedelta(seconds=last["ts"])))
+                    if last else "Tippe auf Ja oder Nein und starte den Test noch einmal: dann steht hier deine Antwort.")
+                ok = push(cfg, "Trader-System: Test", "Die Push-Nachrichten kommen an. Stand: %s\n%s" % (stamp(now), seen),
+                          priority=3, tags=["white_check_mark"],
+                          actions=yes_no_actions(cfg, "test") if reply_topic(cfg) else None)
                 res = (ok, "Push gesendet" if ok else "Push nicht gesendet", [], {}, ["status/test.json"])
             elif job == "ticker":
                 res = do_ticker(cfg, now, a.symbol, a.alerts)

@@ -306,12 +306,32 @@ def cmd_build(a):
     return 0
 
 
+def cmd_artifact(a):
+    """Eine Datei mit eingebetteten Daten für ein privates Claude-Artifact (ohne Passwort, Ja/Nein nur im Push)."""
+    html = open(os.path.join(SRC, "index.html"), encoding="utf-8").read()
+    head_end = html.index("</head>")
+    style = html[html.index("<style>"):html.index("</style>") + 8]
+    body = html[html.index("<body>") + 6:html.index("</body>")]
+    doc = build_data(system.config())
+    data = json.dumps(doc, ensure_ascii=False).replace("</", "<\\/")
+    out = ("<title>Trader-Labor</title>\n" + style + "\n<script>window.__DATA__ = " + data + ";</script>\n" + body)
+    os.makedirs(os.path.dirname(os.path.abspath(a.out)), exist_ok=True)
+    with open(a.out, "w", encoding="utf-8") as fh:
+        fh.write(out)
+    print("%s gebaut (%d Bytes)." % (a.out, len(out)))
+    return 0
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description="Webseite bauen")
     sub = ap.add_subparsers(dest="cmd")
     b = sub.add_parser("build")
     b.add_argument("--plain", action="store_true")
+    ar = sub.add_parser("artifact")
+    ar.add_argument("--out", default=os.path.join(ROOT, "_site", "trader-artifact.html"))
     a = ap.parse_args(argv)
+    if a.cmd == "artifact":
+        return cmd_artifact(a)
     if a.cmd != "build":
         ap.print_help()
         return 1

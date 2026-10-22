@@ -1,6 +1,6 @@
 # Trader-Übersicht
 
-Stand: Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) · wird bei jedem Lauf neu gebaut.
+Stand: Do 22.10. 19:15 Uhr ET (01:15 Uhr MESZ) · wird bei jedem Lauf neu gebaut.
 
 NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
@@ -10,11 +10,12 @@ NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
 |---|---|---|
 | Morgen-Scan | Do 22.10. 18:31 Uhr ET (00:31 Uhr MESZ) | OK – 823 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865573995)) |
 | ORB-Scan | noch nie | – |
+| Labor | Do 22.10. 19:15 Uhr ET (01:15 Uhr MESZ) | OK – 3 von 44 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/39870522131)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
 | Test-Push | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – Push gesendet ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865970064)) |
 
-Zeitplan (Mo–Fr, an Handelstagen): Morgen-Scan ab ca. 8:00 Uhr ET, ORB-Scan ab ca. 10:15 Uhr ET, Preisalarme alle 15 Minuten während der Handelszeit.
+Zeitplan (Mo–Fr, an Handelstagen): Morgen-Scan ab ca. 8:00 Uhr ET, ORB-Scan ab ca. 10:15 Uhr ET, Preisalarme alle 15 Minuten während der Handelszeit, Labor nach Börsenschluss (ab ca. 16:20 Uhr ET).
 
 ## Morgen-Scan – Schlusskurse vom Do 22.10.2026
 
@@ -104,6 +105,31 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 - 22.10. 16:20 Uhr ET · [What Intel, Boeing, Nike Have In Common With Each Other — And Apple](https://finance.yahoo.com/m/901193fa-8922-3df6-9417-b947a80babdc/what-intel%2C-boeing%2C-nike-have.html?.tsrc=rss)
 - 22.10. 16:11 Uhr ET · [Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView](https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss)
 - 22.10. 15:51 Uhr ET · [How much Apple stock does CEO John Ternus actually own?](https://www.thestreet.com/personalities/how-much-apple-stock-does-john-ternus-own?.tsrc=rss)
+
+## Labor (Testphase, Spielgeld ohne Limit)
+
+178 Aktien · 60 Handelstage · Lerntage Do 30.07.2026 bis Do 24.09.2026 · **Prüftage Fr 25.09.2026 bis Do 22.10.2026** · 44 Varianten
+
+| # | Variante | Prüftage: Trades | Treffer | Ø je Trade | € bei 100 €/Trade | nach Gebühren | Zufall? | bestanden |
+|---|---|---|---|---|---|---|---|---|
+| 1 | Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5× | 179 | 46 % | +0,06 % | 10,06 € | -347,94 € | möglich | **ja** |
+| 2 | Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1,5R · Volumen ≥ 1,5× | 179 | 46 % | +0,04 % | 6,68 € | -351,32 € | möglich | **ja** |
+| 3 | Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 2R · Volumen ≥ 1,5× | 179 | 44 % | +0,01 % | 2,63 € | -355,38 € | möglich | **ja** |
+| 4 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R | 94 | 52 % | +0,71 % | 66,88 € | -121,12 € | unwahrscheinlich | nein |
+| 5 | Erholung: Lücke nach unten ≥ 3 % · Stopp 1,5 % darunter · Ziel 2R | 94 | 52 % | +0,47 % | 44,25 € | -143,75 € | unwahrscheinlich | nein |
+| 6 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 1R | 94 | 53 % | +0,27 % | 25,13 € | -162,87 € | möglich | nein |
+| 7 | Erholung: RSI unter 30 · Stopp 1,5 % darunter · Ziel 2R | 199 | 48 % | +0,14 % | 28,14 € | -369,86 € | möglich | nein |
+| 8 | Erholung: RSI unter 30 · Stopp Tagestief · Ziel 2R | 199 | 44 % | +0,13 % | 26,72 € | -371,28 € | möglich | nein |
+| 9 | Erholung: Lücke nach unten ≥ 3 % · Stopp 1,5 % darunter · Ziel 1R | 94 | 54 % | +0,10 % | 9,12 € | -178,88 € | möglich | nein |
+| 10 | Erholung: RSI unter 30 · Stopp 1,5 % darunter · Ziel 1R | 199 | 50 % | +0,09 % | 17,10 € | -380,90 € | möglich | nein |
+| 11 | Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 1,5R | 1.315 | 45 % | +0,02 % | 24,89 € | -2.605,11 € | möglich | nein |
+| 12 | Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 2R | 1.315 | 44 % | +0,02 % | 22,43 € | -2.607,57 € | möglich | nein |
+
+So liest du das: Ein Trade ist ein Kauf und Verkauf am selben Tag. „Treffer“ ist der Anteil der Trades mit Plus. „€ bei 100 €/Trade“ ist die Summe, wenn jeder Trade mit 100 € gemacht worden wäre. „Zufall möglich“ heißt: zu wenige oder zu schwankende Trades, das Ergebnis kann Glück sein.
+
+- **Opening-Range-Ausbruch: Die ersten 15 oder 30 Minuten bilden eine Spanne. Schließt eine 5-Minuten-Kerze über ihrem Hoch, wird gekauft.**
+- **News-Sprung: Die Aktie öffnet deutlich über dem Vortag (meist wegen einer Nachricht) und mit viel Umsatz. Gekauft wird, wenn sie über das Hoch der ersten 5 Minuten steigt.**
+- **Erholung: Eine stark gefallene Aktie (RSI unter 30 oder Lücke nach unten) steigt wieder über ihren Tagesdurchschnittspreis (VWAP).**
 
 ## Preisalarme
 

@@ -1,7 +1,7 @@
-Labor – Do 22.10. 19:15 Uhr ET (01:15 Uhr MESZ)
+Labor – Do 22.10. 19:21 Uhr ET (01:21 Uhr MESZ)
 
 $ lab.py fetch  (Exit 0, 26 s)
-{"symbols": 179, "fetched": 178, "failed": ["SQ (no data for SQ: No data found, symbol may be delisted)"], "n_failed": 1, "seconds": 25.4}
+{"symbols": 179, "fetched": 178, "failed": ["SQ (no data for SQ: No data found, symbol may be delisted)"], "n_failed": 1, "seconds": 26.0}
 
 $ lab.py run  (Exit 0, 7 s)
-{"symbols": 178, "days": 60, "variants": 44, "trades": 62087, "passed": 3, "best": "orb-30-low-2R-v1.5", "seconds": 7.3}
+{"symbols": 178, "days": 60, "variants": 44, "trades": 62087, "passed": 3, "best": "orb-30-low-2R-v1.5", "seconds": 6.8}

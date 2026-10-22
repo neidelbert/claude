@@ -1,6 +1,6 @@
 # Trader-Übersicht
 
-Stand: Do 22.10. 19:15 Uhr ET (01:15 Uhr MESZ) · wird bei jedem Lauf neu gebaut.
+Stand: Do 22.10. 19:22 Uhr ET (01:22 Uhr MESZ) · wird bei jedem Lauf neu gebaut.
 
 NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
@@ -10,12 +10,13 @@ NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
 |---|---|---|
 | Morgen-Scan | Do 22.10. 18:31 Uhr ET (00:31 Uhr MESZ) | OK – 823 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865573995)) |
 | ORB-Scan | noch nie | – |
-| Labor | Do 22.10. 19:15 Uhr ET (01:15 Uhr MESZ) | OK – 3 von 44 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/39870522131)) |
+| Labor live | noch nie | – |
+| Labor | Do 22.10. 19:21 Uhr ET (01:21 Uhr MESZ) | OK – 3 von 44 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/39871243177)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
 | Test-Push | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – Push gesendet ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865970064)) |
 
-Zeitplan (Mo–Fr, an Handelstagen): Morgen-Scan ab ca. 8:00 Uhr ET, ORB-Scan ab ca. 10:15 Uhr ET, Preisalarme alle 15 Minuten während der Handelszeit, Labor nach Börsenschluss (ab ca. 16:20 Uhr ET).
+Zeitplan (Mo–Fr, an Handelstagen): Morgen-Scan ab ca. 8:00 Uhr ET, ORB-Scan ab ca. 10:15 Uhr ET, Labor live und Preisalarme alle 10 Minuten während der Handelszeit, Tagesbilanz nach Schluss, Labor-Rangliste nach Börsenschluss (ab ca. 16:20 Uhr ET).
 
 ## Morgen-Scan – Schlusskurse vom Do 22.10.2026
 

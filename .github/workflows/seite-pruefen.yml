@@ -1,0 +1,45 @@
+# Prüft die veröffentlichte Webseite live: erreichbar, Datendatei = gh-pages, Seite lädt im Browser ohne Fehler.
+name: Webseite prüfen
+
+on:
+  workflow_dispatch:
+
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+      - name: Erreichbar und gleiche Daten wie gh-pages
+        run: |
+          URL="https://neidelbert.github.io/claude/"
+          curl -fsS "$URL" -o live.html
+          grep -q "Trader-Labor" live.html && echo "index.html: OK"
+          curl -fsS "${URL}data.enc" -o live.enc
+          echo "live:     $(sha256sum live.enc | cut -c1-16)"
+          echo "gh-pages: $(sha256sum data.enc | cut -c1-16)"
+          cmp live.enc data.enc && echo "data.enc: gleich wie gh-pages"
+          python3 -c "import json;d=json.load(open('live.enc'));print('Version',d['v'],'Bytes',len(d['ct']))"
+      - name: Im Browser laden (ohne Passwort, Sperrbildschirm muss erscheinen)
+        run: |
+          npm i -s playwright@1.48.2 >/dev/null 2>&1
+          npx playwright install chromium >/dev/null 2>&1
+          cat > t.js <<'JS'
+          const { chromium, devices } = require('playwright');
+          (async () => {
+            const b = await chromium.launch(); const ctx = await b.newContext({ ...devices['iPhone 13'] });
+            const p = await ctx.newPage(); const errs = [];
+            p.on('pageerror', e => errs.push(e.message));
+            await p.goto('https://neidelbert.github.io/claude/', { waitUntil: 'networkidle' });
+            await p.waitForSelector('#pw', { timeout: 15000 });
+            await p.fill('#pw', 'falsches-passwort'); await p.click('button[type=submit]');
+            await p.waitForFunction(() => document.querySelector('#err').textContent.includes('Falsch'), null, { timeout: 15000 });
+            console.log('Titel:', await p.title());
+            console.log('Sperrbildschirm: OK, falsches Passwort wird abgewiesen');
+            console.log('JS-Fehler:', errs.length ? errs : 'keine');
+            await b.close(); if (errs.length) process.exit(1);
+          })();
+          JS
+          node t.js

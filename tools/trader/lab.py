@@ -598,7 +598,9 @@ def cmd_live(a):
         p["eur"] = round(p["eur"] + t["eur"], 2)
         p["wins"] += t["pct"] > 0
     labels = {v["id"]: v["label"] for v in vs}
-    doc = {"date": day, "as_of": "%s Uhr ET" % et.strftime("%H:%M"), "symbols": len(today), "failed": len(failed),
+    chart_syms = {t["symbol"] for t in trades if t["variant"] in focus} | {t["symbol"] for t in lukas}
+    charts = {sym: [[b[0], round(b[4], 4)] for b in today_bars[sym]] for sym in sorted(chart_syms) if sym in today_bars}
+    doc = {"date": day, "charts": charts, "as_of": "%s Uhr ET" % et.strftime("%H:%M"), "symbols": len(today), "failed": len(failed),
            "focus": focus, "labels": {k: labels[k] for k in focus if k in labels}, "per_variant": per,
            "n_trades": len(trades), "n_open": sum(1 for t in trades if t["open"]), "lukas": lukas,
            "trades": sorted(trades, key=lambda t: (t["in_k"], t["symbol"], t["variant"]))}
@@ -657,7 +659,8 @@ def lukas_trades(day, trades, today_bars, focus, end_k):
         else:
             row.update(status="offen" if t["open"] else "beendet", entry=t["entry"], exit=t["exit"], why=t["why"],
                        pct=t["pct"], eur=round(t["pct"] / 100 * STAKE, 2), in_at=clock(t["in_k"]),
-                       out_at=None if t["open"] else clock(t["out_k"]), last=round(bars[-1][4], 4))
+                       out_at=None if t["open"] else clock(t["out_k"]), last=round(bars[-1][4], 4),
+                       in_k=t["in_k"], out_k=t["out_k"])
         out.append(row)
     return out
 

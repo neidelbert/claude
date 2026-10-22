@@ -548,10 +548,12 @@ def cmd_live(a):
     vs = variants()
     end_k = last_k(day)
     trades = []
+    today_bars = {}
     for sym, ser in today.items():
         bars = split_days(ser, now_ts).get(day)
         if not bars:
             continue
+        today_bars[sym] = bars
         hist_path = os.path.join(CACHE, sym + ".json.gz")
         hist = split_days(load_series(hist_path)) if os.path.exists(hist_path) else {}
         hist = {d: b for d, b in hist.items() if d < day}
@@ -575,6 +577,7 @@ def cmd_live(a):
     except (OSError, ValueError):
         old = {}
     focus = focus_ids()
+    lukas = lukas_trades(day, trades, today_bars, focus, end_k)
     events = []
     for t in trades:
         o = old.get(t["key"], {})
@@ -597,7 +600,7 @@ def cmd_live(a):
     labels = {v["id"]: v["label"] for v in vs}
     doc = {"date": day, "as_of": "%s Uhr ET" % et.strftime("%H:%M"), "symbols": len(today), "failed": len(failed),
            "focus": focus, "labels": {k: labels[k] for k in focus if k in labels}, "per_variant": per,
-           "n_trades": len(trades), "n_open": sum(1 for t in trades if t["open"]),
+           "n_trades": len(trades), "n_open": sum(1 for t in trades if t["open"]), "lukas": lukas,
            "trades": sorted(trades, key=lambda t: (t["in_k"], t["symbol"], t["variant"]))}
     os.makedirs(LIVE_DIR, exist_ok=True)
     with open(path, "w", encoding="utf-8") as fh:
@@ -606,6 +609,57 @@ def cmd_live(a):
                       "trades": len(trades), "open": doc["n_open"], "events": events,
                       "labels": doc["labels"], "seconds": round(time.time() - t0, 1)}, ensure_ascii=False))
     return 0
+
+
+DECISIONS = os.path.join(ROOT, "trader", "lab", "decisions.json")
+
+
+def lukas_trades(day, trades, today_bars, focus, end_k):
+    """Ja-Antworten von Lukas -> eigene Trades. Je Vorschlag (Aktie + Strategie) zählt die Top-Variante dieser
+    Strategie. Einstieg zum Schluss der ersten Kerze, die nach der Antwort schließt; Stopp und Ziel wie die Regel.
+    Liegt der Kurs dann schon am Stopp oder Ziel: „verpasst“."""
+    try:
+        with open(DECISIONS, encoding="utf-8") as fh:
+            dec = json.load(fh)
+    except (OSError, ValueError):
+        return []
+    prefix = day.replace("-", "") + "-"
+    out = []
+    for pid, d in sorted(dec.items()):
+        if not pid.startswith(prefix) or d.get("answer") != "ja":
+            continue
+        _, sym, strat = pid.split("-", 2)
+        sym = sym.replace("_", ".")
+        cands = [t for t in trades if t["symbol"] == sym and t["strategy"] == strat]
+        cands.sort(key=lambda t: focus.index(t["variant"]) if t["variant"] in focus else 99)
+        if not cands or sym not in today_bars:
+            continue
+        rule = cands[0]
+        bars = today_bars[sym]
+        answer_et = scan.ts_to_eastern(d["ts"])
+        ans_min = answer_et.hour * 60 + answer_et.minute - (9 * 60 + 30)
+        row = {"pid": pid, "symbol": sym, "strategy": strat, "variant": rule["variant"],
+               "answer_at": answer_et.strftime("%H:%M"), "stop": rule["stop"], "target": rule["target"]}
+        j = next((i for i, b in enumerate(bars) if (b[0] + 1) * BAR >= ans_min and b[0] >= rule["in_k"]), None)
+        if j is None:
+            row.update(status="wartet")       # nächste Kerze noch nicht geschlossen
+            out.append(row)
+            continue
+        price = bars[j][4] * (1 + SLIP)
+        if price <= rule["stop"] or price >= rule["target"] or bars[j][0] > end_k:
+            row.update(status="verpasst", entry=round(price, 4))
+            out.append(row)
+            continue
+        risk = price - rule["stop"]
+        t = simulate(bars, j, rule["stop"], (rule["target"] - price) / risk, end_k)
+        if not t:
+            row.update(status="verpasst", entry=round(price, 4))
+        else:
+            row.update(status="offen" if t["open"] else "beendet", entry=t["entry"], exit=t["exit"], why=t["why"],
+                       pct=t["pct"], eur=round(t["pct"] / 100 * STAKE, 2), in_at=clock(t["in_k"]),
+                       out_at=None if t["open"] else clock(t["out_k"]), last=round(bars[-1][4], 4))
+        out.append(row)
+    return out
 
 
 def day_summary(day):

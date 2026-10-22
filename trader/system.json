@@ -2,10 +2,14 @@
   "_hilfe": "Einstellungen für tools/trader/system.py. Push: App „ntfy“ auf dem iPhone, Server ntfy.sh, Kanal = ntfy_topic.",
   "ntfy_server": "https://ntfy.sh",
   "ntfy_topic": "lukas-trader-4iy8o6ly2j1x",
+  "_ntfy_reply_topic": "Privater Antwortkanal für die Ja/Nein-Buttons (muss nicht abonniert werden)",
+  "ntfy_reply_topic": "lukas-antwort-qkswmh2bsjo2",
   "_news_top": "News für die ersten N Treffer des Morgen-Scans (meistgehandelt zuerst)",
   "news_top": 10,
   "_pelosi_members": "Nachnamen für den Pelosi-Tracker (House Clerk), z. B. [\"pelosi\", \"crenshaw\"]",
-  "pelosi_members": ["pelosi"],
+  "pelosi_members": [
+    "pelosi"
+  ],
   "_orb_source": "„watchlist“ = Treffer des Morgen-Scans (alle geprüft), „universe“ = alle Aktien (die 200 meistgehandelten Kandidaten geprüft)",
   "orb_source": "watchlist",
   "universe_max_age_days": 6,

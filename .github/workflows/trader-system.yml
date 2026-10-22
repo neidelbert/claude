@@ -41,6 +41,7 @@ jobs:
     timeout-minutes: 40
     env:
       NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+      NTFY_REPLY_TOPIC: ${{ secrets.NTFY_REPLY_TOPIC }}
       SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
     steps:
       - uses: actions/checkout@v4

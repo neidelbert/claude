@@ -192,11 +192,44 @@ def overview_url():
 
 # ---------------------------------------------------------------- Push (ntfy)
 
-def push(cfg, title, message, priority=3, tags=None):
+def reply_topic(cfg):
+    return os.environ.get("NTFY_REPLY_TOPIC") or cfg.get("ntfy_reply_topic")
+
+
+def yes_no_actions(cfg, pid):
+    """Buttons Ja / Nein / Übersicht. Ja und Nein schicken „ja <id>“ an den privaten Antwortkanal."""
+    url = cfg["ntfy_server"].rstrip("/") + "/" + reply_topic(cfg)
+    return [{"action": "http", "label": "Ja", "url": url, "method": "POST", "body": "ja " + pid, "clear": True},
+            {"action": "http", "label": "Nein", "url": url, "method": "POST", "body": "nein " + pid, "clear": True},
+            {"action": "view", "label": "Übersicht", "url": overview_url()}]
+
+
+def read_answers(cfg):
+    """Antworten der letzten 24 Stunden aus dem Antwortkanal -> {id: {"answer", "ts"}} (letzte zählt)."""
+    topic = reply_topic(cfg)
+    if not topic:
+        return {}
+    url = "%s/%s/json?poll=1&since=24h" % (cfg["ntfy_server"].rstrip("/"), topic)
+    with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "trader-system"}), timeout=20) as r:
+        lines = r.read().decode("utf-8", "replace").splitlines()
+    out = {}
+    for line in lines:
+        try:
+            m = json.loads(line)
+        except ValueError:
+            continue
+        words = (m.get("message") or "").strip().lower().split()
+        if m.get("event") == "message" and len(words) == 2 and words[0] in ("ja", "nein"):
+            out[words[1]] = {"answer": words[0], "ts": int(m.get("time") or 0)}
+    return out
+
+
+def push(cfg, title, message, priority=3, tags=None, actions=None):
     topic = os.environ.get("NTFY_TOPIC") or cfg.get("ntfy_topic")
-    actions = [{"action": "view", "label": "Übersicht", "url": overview_url()}]
-    if run_url():
-        actions.append({"action": "view", "label": "Lauf ansehen", "url": run_url()})
+    if actions is None:
+        actions = [{"action": "view", "label": "Übersicht", "url": overview_url()}]
+        if run_url():
+            actions.append({"action": "view", "label": "Lauf ansehen", "url": run_url()})
     body = {"topic": topic, "title": title, "message": message, "priority": priority,
             "tags": tags or [], "click": overview_url(), "actions": actions}
     if os.environ.get("NTFY_DRY") or not topic:
@@ -478,10 +511,23 @@ def lab_module():
 def do_live(cfg, now, force):
     et = scan.to_eastern(now)
     day = et.date().isoformat()
-    owned = ["lab/live/%s.json" % day, "status/live.json"]
+    owned = ["lab/live/%s.json" % day, "lab/decisions.json", "status/live.json"]
     steps = []
     old = read_json(status_path("live"), {}) or {}
     data = dict(old.get("data") or {}) if old.get("date_et") == day else {}
+    # Ja/Nein aus dem Antwortkanal übernehmen (bleiben dauerhaft in decisions.json)
+    dec_path = p(T, "lab", "decisions.json")
+    decisions = read_json(dec_path, {}) or {}
+    new_answers = 0
+    try:
+        for pid, a in read_answers(cfg).items():
+            if decisions.get(pid, {}).get("ts") != a["ts"]:
+                decisions[pid] = a
+                new_answers += 1
+        if new_answers:
+            write_json(dec_path, decisions)
+    except Exception as e:
+        step(steps, "Antworten lesen", False, str(e)[:200])
     rc, ld, reason = run_json("live", ["lab.py", "live"], timeout=900)
     if ld is None or ld.get("error"):
         step(steps, "Labor live", False, (ld or {}).get("error") or reason)
@@ -515,11 +561,30 @@ def do_live(cfg, now, force):
         for w in why:
             if w not in seen:
                 seen.append(w)
+        # Vorschläge: ein Push je Einstieg mit Ja/Nein, damit die Buttons eindeutig sind
+        for (ev, sym, strat, _), es in groups.items():
+            if ev != "in" or not reply_topic(cfg):
+                continue
+            e = es[0]
+            pid = "%s-%s-%s" % (day.replace("-", ""), sym.replace(".", "_"), strat)
+            risk_eur = (e["entry"] - e["stop"]) / e["entry"] * 100
+            open_now = e["open"]
+            msg = ["%s %s · Einstieg %s Uhr ET · %s" % (sym, usd(e["entry"]), e["in_at"], STRAT_SHORT[strat]),
+                   "Stopp %s · Ziel %s · Risiko bei 100 €: %s €" % (usd(e["stop"]), usd(e["target"]),
+                                                                     de_num(risk_eur)),
+                   WHY_IN[strat],
+                   "Ja = du hättest mitgemacht (zählt ab dem nächsten Kurs nach deiner Antwort). "
+                   "Ohne Antwort zählt nur die Regel. Spielgeld."]
+            if not open_now:
+                msg.insert(1, "Schon beendet: %s %s Uhr ET" % (e["why"], e["out_at"]))
+            push(cfg, "Vorschlag: %s (%s)" % (sym, STRAT_SHORT[strat]), "\n".join(msg), priority=4,
+                 tags=["question"], actions=yes_no_actions(cfg, pid) if open_now else None)
         lines.append("Was heißt das? " + " ".join(seen[:2]))
         lines.append("Spielgeld (Testphase), kein echtes Geld.")
-        push(cfg, "Labor live: %d Einstieg%s, %d Ausstieg%s" % (n_in, "" if n_in == 1 else "e", n_out,
-                                                               "" if n_out == 1 else "e"),
-             "\n".join(lines), priority=3, tags=["chart_with_upwards_trend"])
+        if n_out:
+            push(cfg, "Labor live: %d Einstieg%s, %d Ausstieg%s" % (n_in, "" if n_in == 1 else "e", n_out,
+                                                                   "" if n_out == 1 else "e"),
+                 "\n".join(lines), priority=3, tags=["chart_with_upwards_trend"])
     sess = scan.session(et.date())
     closed = sess and et.time() >= sess[1]
     if closed and data.get("eod") != day:
@@ -534,10 +599,19 @@ def do_live(cfg, now, force):
         focus = [r for r in sm.get("variants", []) if r["id"] in sm.get("focus", [])]
         for r in focus[:3]:
             lines.append("Top-Variante %s: %s Trades, %s €" % (r["label"], de_int(r["n"]), de_num(r["eur"])))
+        lk = (read_json(p(T, "lab", "live", "%s.json" % day), {}) or {}).get("lukas", [])
+        if lk:
+            done_lk = [t for t in lk if t.get("status") not in ("verpasst",)]
+            lines.append("Deine Ja-Trades: %d, zusammen %s € bei 100 € pro Trade%s" % (
+                len(done_lk), de_num(sum(t.get("eur", 0) for t in done_lk)),
+                " (%d verpasst)" % (len(lk) - len(done_lk)) if len(lk) > len(done_lk) else ""))
+        nein = [k for k, v in decisions.items() if k.startswith(day.replace("-", "")) and v["answer"] == "nein"]
+        if nein:
+            lines.append("Nein gesagt: %d" % len(nein))
         lines.append("Lektion: " + lesson(day))
         push(cfg, "Tagesbilanz Labor %s" % date_de(day), "\n".join(lines), priority=3, tags=["memo"])
         return True, "Tagesbilanz: %s Trades" % de_int(sm.get("n_trades", 0)), steps, data, owned
-    if events or force or et.minute % 30 < 10:   # sonst kein Commit, höchstens alle 30 Minuten
+    if events or new_answers or force or et.minute % 30 < 10:   # sonst kein Commit, höchstens alle 30 Minuten
         return True, "%s Trades, %s offen" % (de_int(ld["trades"]), de_int(ld["open"])), steps, data, owned
     return None, "keine neuen Ereignisse", steps, data, owned
 
@@ -558,6 +632,17 @@ def render_live(out):
     for vid in doc.get("focus", []):
         pv = doc["per_variant"].get(vid, {"n": 0, "open": 0, "eur": 0})
         out.append("| %s | %s | %s | %s € |" % (labels.get(vid, vid), pv["n"], pv["open"], de_num(pv["eur"])))
+    lk = doc.get("lukas", [])
+    if lk:
+        out += ["", "**Deine Ja-Trades heute** (Einstieg zum ersten Kurs nach deiner Antwort):", "",
+                "| Aktie | Regel | Antwort | Einstieg | Stand | Ergebnis |", "|---|---|---|---|---|---|"]
+        for t in lk:
+            state = {"verpasst": "verpasst (Stopp oder Ziel schon erreicht)"}.get(t["status"]) or (
+                "offen, Kurs %s" % usd(t.get("last")) if t["status"] == "offen" else "%s %s Uhr" % (t["why"], t["out_at"]))
+            out.append("| %s | %s | %s Uhr ET | %s | %s | %s |" % (
+                t["symbol"], STRAT_SHORT.get(t["strategy"], t["strategy"]), t["answer_at"],
+                usd(t.get("entry")) if t.get("entry") else "–", state,
+                "%s €" % de_num(t["eur"]) if t.get("eur") is not None else "–"))
     ft = [t for t in doc["trades"] if t["variant"] in doc.get("focus", [])]
     if ft:
         out += ["", "| Aktie | Regel | Einstieg | Stopp | Ziel | Stand | Ergebnis |", "|---|---|---|---|---|---|---|"]
@@ -998,8 +1083,16 @@ def main(argv=None):
         LOG.clear()
         try:
             if job == "test":
-                ok = push(cfg, "Trader-System: Test", "Die Push-Nachrichten kommen an. Stand: %s" % stamp(now),
-                          priority=3, tags=["white_check_mark"])
+                try:
+                    last = read_answers(cfg).get("test")
+                except Exception:
+                    last = None
+                seen = ("Deine letzte Test-Antwort ist angekommen: „%s“ um %s." % (
+                    last["answer"], stamp(datetime.datetime(1970, 1, 1) + datetime.timedelta(seconds=last["ts"])))
+                    if last else "Tippe auf Ja oder Nein und starte den Test noch einmal: dann steht hier deine Antwort.")
+                ok = push(cfg, "Trader-System: Test", "Die Push-Nachrichten kommen an. Stand: %s\n%s" % (stamp(now), seen),
+                          priority=3, tags=["white_check_mark"],
+                          actions=yes_no_actions(cfg, "test") if reply_topic(cfg) else None)
                 res = (ok, "Push gesendet" if ok else "Push nicht gesendet", [], {}, ["status/test.json"])
             elif job == "ticker":
                 res = do_ticker(cfg, now, a.symbol, a.alerts)

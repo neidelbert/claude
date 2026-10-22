@@ -97,7 +97,7 @@ iPhone: ntfy-Pushes mit Ja/Nein-Buttons + Webseite als Home-Bildschirm-App
 | 1 | Interview, Plan | ✓ dieser Plan |
 | 2 ✓ | **Labor-Kern:** 60-Tage-Daten holen, Strategien ORB / Erholung / News-Sprung mit Varianten, Backtest, Trade-Buch | Rangliste mit Lern- und Prüftagen steht |
 | 3 ✓ | **Live-Labor:** alle 5 Min. im Handel Signale prüfen, Spielgeld-Trades öffnen und schließen, Pushes mit Erklärung | ein Handelstag läuft komplett allein |
-| 4 | **Ja/Nein:** Vorschlags-Pushes mit Buttons, Antwortkanal, Spalte „Lukas“ | Lukas hat per Push zugestimmt und abgelehnt |
+| 4 ✓ (gebaut, wartet auf deinen ersten Test) | **Ja/Nein:** Vorschlags-Pushes mit Buttons, Antwortkanal, Spalte „Lukas“ | Lukas hat per Push zugestimmt und abgelehnt |
 | 5 | **Webseite:** iPhone-App-Design, alle Tabs, Glossar, verschlüsselt, GitHub Pages, Home-Bildschirm-Symbol | Lukas öffnet sie auf dem iPhone mit Passwort |
 | 6 | **Texte:** Tageslektion, Tagesbilanz, Wochen-Rückblick | ein Freitag mit Rückblick ist gelaufen |
 | 7 | **Lernen:** wöchentliches Nachtraining mit Bestätigung auf ungesehenen Tagen, Änderungsprotokoll | erste übernommene oder abgelehnte Variante mit Begründung |
@@ -111,7 +111,7 @@ bis feststeht, ob eine Strategie den Simulator zwei Monate am Stück im Plus hä
 keine Strategie das schafft. Dann zeigt das System das ehrlich.
 
 ## Was Lukas einmalig tun muss (Anleitung kommt beim jeweiligen Schritt)
-- Schritt 4: in der ntfy-App einen zweiten, privaten Kanal abonnieren (Name kommt von Claude)
+- Schritt 4: nichts, die Ja/Nein-Buttons funktionieren ohne zweites Abo
 - Schritt 5: GitHub → Settings → Secrets → `SITE_PASSWORD` anlegen; Settings → Pages → Source „GitHub Actions“
 - Schritt 5: Webseite in Safari öffnen → Teilen → „Zum Home-Bildschirm“
 

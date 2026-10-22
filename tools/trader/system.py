@@ -58,6 +58,7 @@ DEFAULT_CONFIG = {
 # GitHub startet Zeitpläne oft 5 bis 30 Minuten zu spät, daher großzügig.
 MORNING_WINDOW = (datetime.time(7, 30), datetime.time(9, 25))
 ORB_WINDOW = (datetime.time(10, 10), datetime.time(12, 0))
+LAB_WINDOW = (datetime.time(16, 20), datetime.time(19, 30))   # nach Börsenschluss
 
 SETUP_DE = {
     "breakout_20d": "Schlusskurs über jedem Schlusskurs der 20 Tage davor",
@@ -68,7 +69,7 @@ SETUP_DE = {
     "orb": "5-Minuten-Kerze schließt über dem Hoch der ersten 15 Minuten",
 }
 SETUP_ORDER = ["breakout_20d", "bull_flag", "reclaim_ma20", "oversold", "oversold_bounce"]
-PART_DE = {"morning": "Morgen-Scan", "orb": "ORB-Scan", "alerts": "Preisalarme",
+PART_DE = {"morning": "Morgen-Scan", "orb": "ORB-Scan", "lab": "Labor", "alerts": "Preisalarme",
            "ticker": "Ticker-Analyse", "test": "Test-Push"}
 WEEKDAY_DE = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"]
 NOTE_DE = "Eine Liste von Charts, die zu einer Regel passen, ist keine Kaufliste."
@@ -399,6 +400,75 @@ def do_orb(cfg, now, force):
     return True, "%s Treffer" % de_int(len(hits)), steps, data, owned
 
 
+# ---------------------------------------------------------------- Labor (Testphase)
+
+def lab_rank_line(r):
+    t = r["test"]
+    return "%s: %s Trades, %s %% Treffer, %s € bei 100 € pro Trade" % (
+        r["label"], de_int(t.get("n", 0)), de_num(t.get("win_rate", 0), 0), de_num(t.get("eur", 0)))
+
+
+def do_lab(cfg, now, force):
+    owned = ["lab/results.json", "status/lab.json"]
+    steps, data = [], {}
+    rc, fd, reason = run_json("lab-fetch", ["lab.py", "fetch"], timeout=1200)
+    if fd is None or not fd.get("fetched"):
+        step(steps, "Kerzen laden", False, reason or "keine Kerzen geladen")
+    else:
+        step(steps, "Kerzen laden", True, "%s von %s Aktien" % (de_int(fd["fetched"]), de_int(fd["symbols"])))
+    rc, rd, reason = run_json("lab-run", ["lab.py", "run"], timeout=1800)
+    if rd is None or rd.get("error"):
+        step(steps, "Testen", False, (rd or {}).get("error") or reason)
+        return False, "Labor fehlgeschlagen", steps, data, owned
+    res = read_json(p(T, "lab", "results.json"), {}) or {}
+    rows = res.get("variants", [])
+    passed = [r for r in rows if r.get("passed")]
+    data = {"days": res.get("days"), "symbols": res.get("symbols"), "trades": rd.get("trades"),
+            "passed": len(passed), "best": rows[0]["id"] if rows else None}
+    step(steps, "Testen", True, "%s Varianten, %s Trades, %d bestanden" % (
+        de_int(len(rows)), de_int(rd.get("trades") or 0), len(passed)))
+    lines = ["%s Aktien · %s Tage (%s Lerntage, %s Prüftage) · %s Spielgeld-Trades" % (
+        de_int(res.get("symbols") or 0), de_int(res.get("days") or 0), de_int(res.get("n_train_days") or 0),
+        de_int(res.get("n_test_days") or 0), de_int(rd.get("trades") or 0))]
+    lines.append("Bestanden: %d von %d Varianten" % (len(passed), len(rows)))
+    for i, r in enumerate(rows[:3], 1):
+        lines.append("%d. %s" % (i, lab_rank_line(r)))
+    lines.append("Was heißt das? Prüftage sind Tage, die das System beim Lernen nicht gesehen hat. Nur was "
+                 "dort im Plus ist, zählt. „Bei 100 € pro Trade“ ist vor Gebühren; mit 1 € je Order "
+                 "kosten 100 Trades 200 €.")
+    push(cfg, "Labor: %d von %d Varianten bestanden" % (len(passed), len(rows)), "\n".join(lines),
+         priority=3, tags=["test_tube"])
+    return True, "%d von %d bestanden" % (len(passed), len(rows)), steps, data, owned
+
+
+def render_lab(out):
+    res = read_json(p(T, "lab", "results.json"), None)
+    if not res:
+        return
+    rows = res.get("variants", [])
+    out += ["", "## Labor (Testphase, Spielgeld ohne Limit)", "",
+            "%s Aktien · %s Handelstage · Lerntage %s bis %s · **Prüftage %s bis %s** · %s Varianten" % (
+                de_int(res.get("symbols") or 0), de_int(res.get("days") or 0),
+                date_de((res.get("train") or ["", ""])[0]), date_de((res.get("train") or ["", ""])[1]),
+                date_de(res["test"][0]), date_de(res["test"][1]), de_int(len(rows))), "",
+            "| # | Variante | Prüftage: Trades | Treffer | Ø je Trade | € bei 100 €/Trade | nach Gebühren | Zufall? | bestanden |",
+            "|---|---|---|---|---|---|---|---|---|"]
+    for i, r in enumerate(rows[:12], 1):
+        t = r["test"]
+        if not t.get("n"):
+            out.append("| %d | %s | 0 | – | – | – | – | – | nein |" % (i, r["label"]))
+            continue
+        out.append("| %d | %s | %s | %s %% | %s | %s € | %s € | %s | %s |" % (
+            i, r["label"], de_int(t["n"]), de_num(t["win_rate"], 0), pct(t["avg_pct"]), de_num(t["eur"]),
+            de_num(t["eur_after_fees"]), "unwahrscheinlich" if abs(t.get("t", 0)) >= 2 else "möglich",
+            "**ja**" if r["passed"] else "nein"))
+    out += ["", "So liest du das: Ein Trade ist ein Kauf und Verkauf am selben Tag. „Treffer“ ist der Anteil der "
+            "Trades mit Plus. „€ bei 100 €/Trade“ ist die Summe, wenn jeder Trade mit 100 € gemacht worden wäre. "
+            "„Zufall möglich“ heißt: zu wenige oder zu schwankende Trades, das Ergebnis kann Glück sein.", ""]
+    for k, txt in (res.get("strategies") or {}).items():
+        out.append("- **%s**" % txt)
+
+
 # ---------------------------------------------------------------- Preisalarme
 
 def ring_de(r, rules, quotes):
@@ -566,7 +636,7 @@ def render():
     if bad:
         out += ["", "**Probleme:**"] + ["- %s / %s: %s" % (a, x["name"], md_escape(x["detail"])) for a, x in bad]
     out += ["", "Zeitplan (Mo–Fr, an Handelstagen): Morgen-Scan ab ca. 8:00 Uhr ET, ORB-Scan ab ca. 10:15 Uhr ET, "
-            "Preisalarme alle 15 Minuten während der Handelszeit."]
+            "Preisalarme alle 15 Minuten während der Handelszeit, Labor nach Börsenschluss (ab ca. 16:20 Uhr ET)."]
 
     # Morgen-Scan
     wl = read_json(p(T, "watchlist.json"), None)
@@ -667,6 +737,8 @@ def render():
         for it in (td.get("news") or {}).get("items", [])[:8]:
             out.append("- %s · [%s](%s)" % (news_time(it.get("time")), md_escape(it.get("title")), it.get("link")))
 
+    render_lab(out)
+
     # Alarme
     rules = alert_rules()
     ad = ((st["alerts"] or {}).get("data") or {})
@@ -745,7 +817,7 @@ def publish(owned, message):
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description="Trader-System auf GitHub Actions")
-    ap.add_argument("part", choices=["auto", "morning", "orb", "alerts", "ticker", "test", "render"])
+    ap.add_argument("part", choices=["auto", "morning", "orb", "lab", "alerts", "ticker", "test", "render"])
     ap.add_argument("symbol", nargs="?")
     ap.add_argument("--force", action="store_true", help="Zeitfenster und „heute schon gelaufen“ ignorieren")
     ap.add_argument("--alerts", action="store_true", help="bei ticker: Alarme aus dem Plan anlegen")
@@ -767,6 +839,8 @@ def main(argv=None):
             jobs.append("morning")
         if trading and ORB_WINDOW[0] <= t <= ORB_WINDOW[1] and not done_today("orb", et.date()):
             jobs.append("orb")
+        if trading and LAB_WINDOW[0] <= t <= LAB_WINDOW[1] and not done_today("lab", et.date()):
+            jobs.append("lab")
         sess = scan.session(et.date())
         if sess and sess[0] <= t <= (datetime.datetime.combine(et.date(), sess[1]) +
                                      datetime.timedelta(minutes=15)).time():
@@ -793,7 +867,7 @@ def main(argv=None):
             elif job == "ticker":
                 res = do_ticker(cfg, now, a.symbol, a.alerts)
             else:
-                res = {"morning": do_morning, "orb": do_orb, "alerts": do_alerts}[job](cfg, now, force)
+                res = {"morning": do_morning, "orb": do_orb, "lab": do_lab, "alerts": do_alerts}[job](cfg, now, force)
             ok, summary, steps, data, own = res
         except Exception as e:
             traceback.print_exc()
@@ -815,7 +889,7 @@ def main(argv=None):
             # derselbe Fehler am selben Tag nur einmal melden
             # der Morgen-Scan meldet Teilprobleme schon in seinem eigenen Push
             pushed = job == "morning" and (data or {}).get("daily")
-            if cfg["push_errors"] and job in ("morning", "orb", "alerts") and not failed_before and not pushed:
+            if cfg["push_errors"] and job in ("morning", "orb", "lab", "alerts") and not failed_before and not pushed:
                 bad = [s for s in steps if not s["ok"]]
                 push(cfg, "Trader-System: Problem beim %s" % PART_DE[job],
                      "\n".join("%s: %s" % (s["name"], s["detail"]) for s in bad) or summary,

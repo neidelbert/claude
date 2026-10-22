@@ -7,13 +7,15 @@ on:
     # alle 15 Minuten, Mo–Fr 12:00–20:45 UTC (8:00–16:45 Uhr ET Sommerzeit, 7:00–15:45 Uhr ET Winterzeit).
     # „auto“ entscheidet nach New Yorker Zeit: Morgen-Scan, ORB-Scan, Preisalarme oder nichts.
     - cron: "*/15 12-20 * * 1-5"
+    # nach Börsenschluss fürs Labor: 21:20/21:50/22:20/22:50 UTC (16:20–17:50 Uhr ET Winterzeit, 17:20–18:50 Sommerzeit)
+    - cron: "20,50 21-22 * * 1-5"
   workflow_dispatch:
     inputs:
       teil:
         description: "Was soll laufen?"
         type: choice
         default: morning
-        options: [morning, orb, ticker, alerts, test, auto]
+        options: [morning, orb, lab, ticker, alerts, test, auto]
       ticker:
         description: "Nur bei „ticker“: Symbol, z. B. TSLA"
         required: false
@@ -43,6 +45,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Kerzen-Cache fürs Labor
+        uses: actions/cache@v4
+        with:
+          path: .cache/lab
+          key: lab-bars-${{ github.run_id }}
+          restore-keys: lab-bars-
       - name: Trader-System
         env:
           TEIL: ${{ github.event_name == 'schedule' && 'auto' || inputs.teil }}

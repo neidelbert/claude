@@ -95,7 +95,7 @@ iPhone: ntfy-Pushes mit Ja/Nein-Buttons + Webseite als Home-Bildschirm-App
 | Schritt | Inhalt | fertig, wenn |
 |---|---|---|
 | 1 | Interview, Plan | ✓ dieser Plan |
-| 2 | **Labor-Kern:** 60-Tage-Daten holen, Strategien ORB / Erholung / News-Sprung mit Varianten, Backtest, Trade-Buch | Rangliste mit Lern- und Prüftagen steht |
+| 2 ✓ | **Labor-Kern:** 60-Tage-Daten holen, Strategien ORB / Erholung / News-Sprung mit Varianten, Backtest, Trade-Buch | Rangliste mit Lern- und Prüftagen steht |
 | 3 | **Live-Labor:** alle 5 Min. im Handel Signale prüfen, Spielgeld-Trades öffnen und schließen, Pushes mit Erklärung | ein Handelstag läuft komplett allein |
 | 4 | **Ja/Nein:** Vorschlags-Pushes mit Buttons, Antwortkanal, Spalte „Lukas“ | Lukas hat per Push zugestimmt und abgelehnt |
 | 5 | **Webseite:** iPhone-App-Design, alle Tabs, Glossar, verschlüsselt, GitHub Pages, Home-Bildschirm-Symbol | Lukas öffnet sie auf dem iPhone mit Passwort |

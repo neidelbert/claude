@@ -33,10 +33,8 @@
 - Pushes öffnen vorerst die Übersicht auf GitHub, bis die Webseite online ist.
 
 ## Offene Fragen an dich
-1. **Webseite einschalten (dringend):** Hast du schon
-   (a) das Secret `SITE_PASSWORD` angelegt und
-   (b) unter Settings → Pages bei „Source“ **GitHub Actions** gewählt?
-   Das Veröffentlichen ist heute Nacht fehlgeschlagen, wahrscheinlich weil (b) fehlt.
+1. **Webseite:** ist online unter https://neidelbert.github.io/claude/. Das Passwort steht im Claude-Chat, nicht im Repo.
+   Ein Secret brauchst du nicht mehr. Willst du ein eigenes Passwort, sag es Claude.
 2. **Ja/Nein-Test:** Hast du im Test-Push auf „Ja“ oder „Nein“ getippt? Dann prüfe ich, ob die Antwort angekommen ist.
 3. **Simulator-Start:** Ab wann soll der echte Simulator zählen? Mein Vorschlag: sobald eine Variante 4 Wochen live im
    Plus bleibt. Oder soll er sofort parallel starten?

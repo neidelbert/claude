@@ -145,7 +145,16 @@ async function fetchEnc(){
   return r.json();
 }
 async function decrypt(enc, key){
-  const pt = await crypto.subtle.decrypt({name:"AES-GCM", iv:b64(enc.iv)}, key, b64(enc.ct));
+  // key = aus dem Passwort abgeleiteter Schlüssel. Version 2: er öffnet erst den privaten RSA-Schlüssel,
+  // der den zufälligen Datenschlüssel dieser Veröffentlichung öffnet.
+  let dk = key;
+  if(enc.v === 2){
+    const pk8 = await crypto.subtle.decrypt({name:"AES-GCM", iv:b64(enc.kiv)}, key, b64(enc.kct));
+    const priv = await crypto.subtle.importKey("pkcs8", pk8, {name:"RSA-OAEP", hash:"SHA-256"}, false, ["decrypt"]);
+    const raw = await crypto.subtle.decrypt({name:"RSA-OAEP"}, priv, b64(enc.ek));
+    dk = await crypto.subtle.importKey("raw", raw, {name:"AES-GCM"}, false, ["decrypt"]);
+  }
+  const pt = await crypto.subtle.decrypt({name:"AES-GCM", iv:b64(enc.iv)}, dk, b64(enc.ct));
   return JSON.parse(new TextDecoder().decode(pt));
 }
 async function storedKey(){
@@ -163,7 +172,7 @@ async function load(){
 }
 function setup(){
   $("#app").innerHTML = '<div class="lock"><img src="icon-180.png" alt=""><h1 style="margin-top:14px">Trader-Labor</h1>'+
-    '<p class="sub">Einrichtung fehlt: Im GitHub-Repo muss das Secret <b>SITE_PASSWORD</b> angelegt sein. Danach baut der nächste Lauf die Daten.</p></div>';
+    '<p class="sub">Noch keine Daten veröffentlicht. Der nächste Lauf des Systems baut sie.</p></div>';
 }
 function lockScreen(enc){
   $("#app").innerHTML = '<div class="lock"><img src="icon-180.png" alt=""><h1 style="margin-top:14px">Trader-Labor</h1>'+

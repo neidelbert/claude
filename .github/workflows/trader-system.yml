@@ -118,5 +118,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
+      - name: Pages einschalten (falls noch aus)
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - id: deploy
         uses: actions/deploy-pages@v4

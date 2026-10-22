@@ -99,13 +99,13 @@ details summary::-webkit-details-marker{display:none}
 "use strict";
 const $ = s => document.querySelector(s);
 const KEY_STORE = "trader-key-v1";
-let D = null, TAB = "heute", FILTER = "alle";
+let D = null, TAB = "heute", FILTER = "alle", SUB = null, FEES = true;
 const TABS = [
   ["heute","Heute",'<path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>'],
+  ["konto","Konto",'<rect x="3" y="6" width="18" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18" stroke="currentColor" stroke-width="2"/><path d="M15 15h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'],
   ["trades","Trades",'<path d="M4 18l5-6 4 3 7-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 6h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'],
   ["labor","Labor",'<path d="M9 3h6M10 3v6L4.5 18.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>'],
-  ["markt","Markt",'<rect x="4" y="10" width="3" height="10" rx="1" fill="currentColor"/><rect x="10.5" y="5" width="3" height="15" rx="1" fill="currentColor"/><rect x="17" y="13" width="3" height="7" rx="1" fill="currentColor"/>'],
-  ["lernen","Lernen",'<path d="M3 6.5C6 5 9 5 12 6.5 15 5 18 5 21 6.5V19c-3-1.5-6-1.5-9 0-3-1.5-6-1.5-9 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 6.5V19" stroke="currentColor" stroke-width="2"/>'],
+  ["mehr","Mehr",'<circle cx="5" cy="12" r="2" fill="currentColor"/><circle cx="12" cy="12" r="2" fill="currentColor"/><circle cx="19" cy="12" r="2" fill="currentColor"/>'],
 ];
 const STRAT = {orb:"Opening-Range-Ausbruch", gap:"News-Sprung", bounce:"Erholung"};
 const CHIP = {alle:"Alle", Regel:"Regel", "Ja-Trades":"Deine Ja-Trades", orb:"Ausbruch", gap:"News-Sprung", bounce:"Erholung"};
@@ -186,6 +186,7 @@ async function refresh(){
 // ------------------------------------------------------------ Gerüst
 function show(){
   try{ TAB = localStorage.getItem("trader-tab") || "heute"; }catch(e){}
+  if(!["heute","konto","trades","labor","mehr"].includes(TAB)) TAB = "heute";
   const nav = $("#nav"); nav.classList.remove("hide");
   nav.innerHTML = TABS.map(([id,label,icon]) => '<button data-t="'+id+'" onclick="go(\''+id+'\')"><svg viewBox="0 0 24 24">'+icon+'</svg>'+label+'</button>').join("");
   render();
@@ -193,14 +194,17 @@ function show(){
   setInterval(refresh, 5*60000);
   document.addEventListener("visibilitychange", () => { if(!document.hidden) refresh(); });
 }
-function go(t){ TAB = t; try{ localStorage.setItem("trader-tab", t); }catch(e){} render(); window.scrollTo(0,0); }
+function go(t){ TAB = t; SUB = null; try{ localStorage.setItem("trader-tab", t); }catch(e){} render(); window.scrollTo(0,0); }
 function render(){
   document.querySelectorAll("nav button").forEach(b => b.classList.toggle("on", b.dataset.t===TAB));
-  ({heute:renderHeute, trades:renderTrades, labor:renderLabor, markt:renderMarkt, lernen:renderLernen})[TAB]();
+  if(TAB==="mehr" && SUB) return ({markt:renderMarkt, lernen:renderLernen, woche:renderWoche, echt:renderEcht, aend:renderAend, regeln:renderRegeln, glossar:renderGlossar})[SUB]();
+  ({heute:renderHeute, konto:renderKonto, trades:renderTrades, labor:renderLabor, mehr:renderMehr})[TAB]();
 }
 function head(title, right){
-  return '<header><div><div class="sub">'+esc(D.phase)+' · Spielgeld</div><h1>'+title+'</h1></div>'+(right||"")+'</header>';
+  const back = TAB==="mehr" && SUB ? '<button class="term" style="text-decoration:none;font-weight:600" onclick="SUB=null;render();window.scrollTo(0,0)">‹ Mehr</button>' : '<div class="sub">'+esc(D.phase)+' · Spielgeld</div>';
+  return '<header><div>'+back+'<h1>'+title+'</h1></div>'+(right||"")+'</header>';
 }
+function sub(id){ SUB = id; render(); window.scrollTo(0,0); }
 function openSheet(html){ $("#sheet").innerHTML = html + '<div class="btns"><button class="btn ghost" onclick="closeSheet()">Schließen</button></div>'; $("#sheetwrap").classList.add("open"); }
 function closeSheet(){ $("#sheetwrap").classList.remove("open"); }
 function gloss(t){ const txt = D.learn.glossary[t]; openSheet('<h3>'+esc(t)+'</h3><p>'+esc(txt||"Noch keine Erklärung.")+'</p>'); }
@@ -272,6 +276,11 @@ function renderHeute(onlyClock){
   let h = head("Heute", '<button class="btn ghost" style="padding:8px 12px" onclick="refresh()">Neu laden</button>');
   h += '<div class="card" id="clock">'+clockHtml(ck)+'</div>';
   h += '<div class="card"><div class="small">Nächster Schritt</div><div class="next">'+esc(nextStep(ck))+'</div></div>';
+  const S = D.sim||{}, KS = S.live || S.vorschau;
+  if(KS){ const R = KS.fee; h += '<button class="card" style="display:block;width:calc(100% - 32px);text-align:left;border:0;color:inherit;font:inherit;cursor:pointer" onclick="go(\'konto\')"><div class="row"><span class="small">'+(S.live?"Simulator-Konto":"Simulator-Vorschau (Backtest)")+'</span><span class="sub">›</span></div><div class="row"><span class="big" style="font-size:28px">'+nf2.format(R.equity)+' €</span><b class="num '+cls(R.pnl)+'">'+eur(R.pnl)+'</b></div><div class="small">mit 1 € Gebühr je Order · ohne Gebühr: '+nf2.format(KS.no_fee.equity)+' €</div></button>'; }
+  const champ = D.lab && D.lab.variants && D.lab.variants[0];
+  if(champ) h += '<div class="card"><div class="small">Tagesplan</div><div class="next" style="font-size:16px">Top-Variante: '+esc(champ.label)+'</div>'+
+    '<div class="small" style="margin-top:6px">So gehen Profis vor – und das System auch: nur Trades nach dieser Regel, '+g("Stopp")+' immer gesetzt, nach der Tagesgrenze ist Schluss, alles vor Börsenschluss verkauft.</div></div>';
   D.proposals.forEach(t => h += proposalCard(t));
   h += '<div class="grid2"><div class="card kpi"><div class="label">Top-Variante heute</div><div class="val '+cls(top&&top.eur)+'">'+(top?eur(top.eur):"–")+'</div><div class="small">'+(top?int(top.n)+" Trades · bei 100 € pro Trade":"heute noch kein Lauf")+'</div></div>'+
        '<div class="card kpi"><div class="label">Deine Ja-Trades</div><div class="val '+cls(lkEur)+'">'+(lk.length?eur(lkEur):"–")+'</div><div class="small">'+(lk.length?lk.length+" Trades":"noch keine Antwort heute")+'</div></div></div>';
@@ -388,16 +397,110 @@ function renderLernen(){
   h += '<h2>Lektion des Tages</h2><div class="card">'+esc(D.learn.lesson)+'</div>';
   h += '<h2>So funktioniert das System</h2><div class="card">'+D.learn.how.map(([t,x],i)=>'<div class="step" style="margin:'+(i?"12px":"0")+' 0 0"><div class="n">'+(i+1)+'</div><div><b>'+esc(t)+'</b><div class="small">'+esc(x)+'</div></div></div>').join("")+'</div>';
   h += '<h2>Die drei Phasen</h2><div class="list">'+
-    '<div class="item"><div class="row"><b>1. Testphase</b><span class="badge b-blue">jetzt</span></div><div class="small">Spielgeld ohne Limit. 44 Varianten laufen parallel, das System misst und lernt.</div></div>'+
+    '<div class="item"><div class="row"><b>1. Testphase</b><span class="badge b-blue">jetzt</span></div><div class="small">Spielgeld ohne Limit. 52 Varianten laufen parallel, das System misst und lernt.</div></div>'+
     '<div class="item"><div class="row"><b>2. Simulator</b><span class="badge">später</span></div><div class="small">100 € Spielgeld wie echt: höchstens 3 € Verlust pro Trade, 8 € pro Tag, 30 € pro Monat, mit Gebühren.</div></div>'+
     '<div class="item"><div class="row"><b>3. Echtes Geld</b><span class="badge">frühestens nach 2 Monaten</span></div><div class="small">Nur wenn der Simulator 2 Monate am Stück im Plus war – und nur mit deinem Ja zu jeder Order.</div></div></div>';
   h += '<h2>Alle Lektionen</h2><div class="list">'+D.learn.lessons.map(l=>'<div class="item small">'+esc(l)+'</div>').join("")+'</div>';
-  h += '<h2>Glossar</h2><input class="search" placeholder="Begriff suchen" oninput="filterGloss(this.value)"><div class="list" id="gl">'+glossList("")+'</div>';
+  h += '<div class="btns" style="margin:10px 16px"><button class="btn ghost" onclick="sub(\'glossar\')">Glossar öffnen</button></div>';
   h += '<div class="card small">Spielgeld: Alle Zahlen sind gemessen, nicht versprochen. Die meisten Daytrader verlieren Geld – genau deshalb misst dieses System ehrlich, bevor echtes Geld ins Spiel kommt.</div>';
   $("#app").innerHTML = h;
 }
 function glossList(q){ q=q.toLowerCase(); return Object.entries(D.learn.glossary).filter(([k,v])=>!q||k.toLowerCase().includes(q)||v.toLowerCase().includes(q)).map(([k,v])=>'<div class="item"><b>'+esc(k)+'</b><div class="small">'+esc(v)+'</div></div>').join("")||'<div class="item sub">Nichts gefunden.</div>'; }
 function filterGloss(q){ $("#gl").innerHTML = glossList(q); }
+
+// ------------------------------------------------------------ Konto (Simulator)
+function lineChart(vals, base, labels){
+  if(!vals.length) return "";
+  const W=340,H=150,all=vals.concat([base]), lo=Math.min(...all), hi=Math.max(...all), pad=6;
+  const x=i=>pad+i/Math.max(1,vals.length-1)*(W-2*pad), y=v=>H-pad-(v-lo)/Math.max(1e-9,hi-lo)*(H-2*pad);
+  const up = vals[vals.length-1] >= base, col = up ? "var(--green)" : "var(--red)";
+  const path = vals.map((v,i)=>(i?"L":"M")+x(i).toFixed(1)+" "+y(v).toFixed(1)).join(" ");
+  const area = path+" L"+x(vals.length-1).toFixed(1)+" "+(H-pad)+" L"+x(0).toFixed(1)+" "+(H-pad)+" Z";
+  return '<svg class="spark" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Kontoverlauf"><path d="'+area+'" fill="'+col+'" opacity=".12"/>'+
+    '<line x1="0" x2="'+W+'" y1="'+y(base)+'" y2="'+y(base)+'" stroke="var(--sub)" stroke-dasharray="3 4" stroke-width="1"/><path d="'+path+'" fill="none" stroke="'+col+'" stroke-width="2.5" stroke-linejoin="round"/></svg>'+
+    (labels?'<div class="legend"><span>'+esc(labels[0])+'</span><span>'+esc(labels[1])+'</span></div>':'');
+}
+function renderKonto(){
+  const S = D.sim || {}, st = S.settings || {}, live = S.live, pre = S.vorschau;
+  const src = live || pre;
+  let h = head("Konto");
+  h += '<div class="chips"><button class="chip '+(FEES?"on":"")+'" onclick="FEES=true;render()">mit 1 € Gebühr je Order</button><button class="chip '+(!FEES?"on":"")+'" onclick="FEES=false;render()">ohne Gebühr</button></div>';
+  if(!src){ $("#app").innerHTML = h+'<div class="card sub">Noch keine Daten für den Simulator.</div>'; return; }
+  const R = FEES ? src.fee : src.no_fee;
+  h += '<div class="card"><div class="small">'+(live?"Simulator seit "+dateDE(live.start):"Vorschau: Top-Variante an den letzten "+int(R.days.length)+" Tagen (Backtest)")+'</div>'+
+       '<div class="big">'+nf2.format(R.equity)+' €</div><div class="num '+cls(R.pnl)+'" style="font-weight:700">'+eur(R.pnl)+' seit Start mit '+nf0.format(st.start_eur)+' €</div>'+
+       lineChart(R.days.map(d=>d.equity), st.start_eur, R.days.length?[dateDE(R.days[0].date), dateDE(R.days[R.days.length-1].date)]:null)+'</div>';
+  if(!live) h += '<div class="card small"><b>Noch Testphase.</b> Der echte Simulator startet erst, wenn du es entscheidest. Bis dahin zeigt diese Seite, wie die aktuelle Top-Variante des Labors mit 100 € und allen Grenzen gelaufen <i>wäre</i>.</div>';
+  h += '<div class="grid2"><div class="card kpi"><div class="label">Trades</div><div class="val">'+int(R.trades)+'</div><div class="small">'+g("Trefferquote")+' '+(R.win_rate!=null?nf0.format(R.win_rate)+" %":"–")+'</div></div>'+
+       '<div class="card kpi"><div class="label">Größter Rückgang</div><div class="val neg">'+nf2.format(R.max_dd)+' €</div><div class="small">vom Höchststand</div></div></div>';
+  h += '<h2>Grenzen</h2><div class="list">'+
+    '<div class="item"><div class="row"><span>Pro Trade höchstens</span><b>'+nf0.format(st.max_loss_trade)+' € Verlust</b></div><div class="small">Daraus berechnet das System, wie viel gekauft wird.</div></div>'+
+    '<div class="item"><div class="row"><span>Pro Tag höchstens</span><b>'+nf0.format(st.max_loss_day)+' €</b></div><div class="small">Erreicht an '+int(R.day_stops)+' Tagen – danach Schluss für den Tag.</div></div>'+
+    '<div class="item"><div class="row"><span>Pro Monat höchstens</span><b>'+nf0.format(st.max_loss_month)+' €</b></div><div class="small">Erreicht in '+int(R.month_stops)+' Monaten – danach Pause bis Monatsende.</div></div></div>';
+  h += '<h2>Monate</h2><div class="list">'+R.months.map(m=>'<div class="item"><div class="row"><span>'+esc(m.month)+'</span><b class="num '+cls(m.pnl)+'">'+eur(m.pnl)+'</b></div><div class="small">'+int(m.trades)+' Trades'+(m.stopped?' · <span class="neg">Monatsgrenze erreicht</span>':'')+'</div></div>').join("")+'</div>';
+  h += '<h2>Letzte Trades</h2><div class="list">'+R.book.slice(-15).reverse().map(b=>'<div class="item"><div class="row"><span><b>'+esc(b.symbol)+'</b> <span class="small">'+dateDE(b.date)+'</span></span><b class="num '+cls(b.pnl)+'">'+eur(b.pnl)+'</b></div><div class="small">Position '+nf2.format(b.value)+' € · '+esc(b.why)+(b.fees?' · Gebühren '+nf2.format(b.fees)+' €':'')+'</div></div>').join("")+'</div>';
+  if(pre && FEES && pre.no_fee) h += '<div class="card small">Vergleich: Ohne Gebühren stünde das Konto bei <b>'+nf2.format(pre.no_fee.equity)+' €</b>, mit 1 € je Order bei <b>'+nf2.format(pre.fee.equity)+' €</b>. Bei 100 € Kapital entscheidet die '+g("Gebühr")+' über Plus oder Minus.</div>';
+  $("#app").innerHTML = h;
+}
+
+// ------------------------------------------------------------ Mehr
+function renderMehr(){
+  const w = D.weekly, checks = (D.sim||{}).checks||[], ok = checks.filter(c=>c.ok).length;
+  const row = (id,t,s,badge) => '<button class="item" style="display:block;width:100%;text-align:left;border:0;background:none;color:inherit;font:inherit;cursor:pointer" onclick="sub(\''+id+'\')"><div class="row"><b>'+t+'</b><span>'+(badge||"")+' <span class="sub">›</span></span></div><div class="small">'+s+'</div></button>';
+  let h = head("Mehr");
+  h += '<div class="list">'+
+    row("markt","Markt","Morgen-Scan, Opening-Range-Ausbrüche, News, Pelosi")+
+    row("woche","Wochen-Rückblick", w?("Woche "+esc(w.week)):"kommt am Freitagabend", w?'<span class="badge b-blue">neu</span>':"")+
+    row("echt","Echtgeld-Prüfung","Wann echtes Geld überhaupt in Frage kommt",'<span class="badge '+(ok===checks.length&&checks.length?"b-green":"b-orange")+'">'+ok+'/'+checks.length+'</span>')+
+    row("aend","Was das System gelernt hat","Änderungen an der Rangliste",'<span class="badge">'+(D.changes||[]).length+'</span>')+
+    '</div><div class="list">'+
+    row("regeln","So handeln Profis","Die Grundregeln guter Daytrader")+
+    row("lernen","Lernen","Lektionen, Ablauf, die drei Phasen")+
+    row("glossar","Glossar","Alle Fachwörter einfach erklärt")+
+    '</div><div class="list">'+
+    '<button class="item" style="display:block;width:100%;text-align:left;border:0;background:none;color:inherit;font:inherit;cursor:pointer" onclick="statusSheet()"><div class="row"><b>Systemstatus</b><span class="sub">›</span></div><div class="small">Läufe, Fehler, Push-Kanal, Abmelden</div></button></div>';
+  h += '<div class="card small">Stand der Daten: '+dayDE(D.generated_at)+', '+hmDE(D.generated_at)+' Uhr. Die Seite lädt alle 5 Minuten neu.</div>';
+  $("#app").innerHTML = h;
+}
+function renderWoche(){
+  const w = D.weekly;
+  let h = head("Wochen-Rückblick");
+  if(!w){ $("#app").innerHTML = h+'<div class="card sub">Der erste Rückblick kommt am Freitagabend nach Börsenschluss.</div>'; return; }
+  h += '<div class="card"><div class="small">Woche '+esc(w.week)+' · '+dateDE(w.from)+' bis '+dateDE(w.to)+'</div><div class="big">'+int(w.trades)+'</div><div class="small">Spielgeld-Trades aller Varianten an '+int(w.live_days)+' Live-Tagen</div></div>';
+  h += '<h2>Beste Varianten der Woche</h2><div class="list">'+w.best.map(b=>'<div class="item"><div class="row"><span class="small">'+esc(b.label)+'</span><b class="num '+cls(b.eur)+'">'+eur(b.eur)+'</b></div><div class="small">'+int(b.n)+' Trades</div></div>').join("")+'</div>';
+  h += '<h2>Schwächste</h2><div class="list">'+w.worst.map(b=>'<div class="item"><div class="row"><span class="small">'+esc(b.label)+'</span><b class="num '+cls(b.eur)+'">'+eur(b.eur)+'</b></div></div>').join("")+'</div>';
+  h += '<div class="grid2"><div class="card kpi"><div class="label">Deine Antworten</div><div class="val">'+int(w.decisions.ja)+' Ja</div><div class="small">'+int(w.decisions.nein)+' Nein</div></div><div class="card kpi"><div class="label">Deine Ja-Trades</div><div class="val '+cls(w.lukas.eur)+'">'+eur(w.lukas.eur)+'</div><div class="small">'+int(w.lukas.n)+' Trades</div></div></div>';
+  if(w.share_positive!=null) h += '<div class="card">'+w.share_positive+' % der Varianten waren diese Woche im Plus. Top-Variante jetzt: <b>'+esc(w.champion||"–")+'</b> ('+int(w.passed)+' bestanden).</div>';
+  if(w.changes.length) h += '<h2>Änderungen</h2><div class="list">'+w.changes.map(c=>'<div class="item small">'+esc(c.text)+'</div>').join("")+'</div>';
+  h += '<h2>Was heißt das?</h2><div class="card">'+esc(w.lesson)+'</div>';
+  $("#app").innerHTML = h;
+}
+function renderEcht(){
+  const checks = (D.sim||{}).checks||[];
+  let h = head("Echtgeld-Prüfung");
+  h += '<div class="card small">Echtes Geld kommt erst in Frage, wenn <b>alle</b> Punkte grün sind. Dann entscheidest du. Bis dahin bleibt alles Spielgeld.</div>';
+  h += '<div class="list">'+checks.map(c=>'<div class="item"><div class="row"><span>'+esc(c.name)+'</span><span class="badge '+(c.ok?"b-green":"b-red")+'">'+(c.ok?"erfüllt":"offen")+'</span></div><div class="small">'+esc(c.detail)+'</div></div>').join("")+'</div>';
+  h += '<div class="card small">Warum so streng? Ein guter Monat kann Glück sein. Zwei Monate mit Grenzen und Gebühren im Plus sind ein echter Hinweis – aber auch dann keine Garantie.</div>';
+  $("#app").innerHTML = h;
+}
+function renderAend(){
+  let h = head("Gelernt");
+  h += '<div class="card small">Jeden Abend rechnet das Labor alle Varianten an den neuesten 60 Tagen neu. Hier steht, was sich dadurch geändert hat.</div>';
+  h += (D.changes||[]).length ? '<div class="list">'+D.changes.map(c=>'<div class="item"><div class="row"><span class="badge '+(c.kind==="failed"?"b-red":c.kind==="passed"?"b-green":"b-blue")+'">'+({champion:"Top-Variante",passed:"bestanden",failed:"durchgefallen"}[c.kind]||c.kind)+'</span><span class="small">'+dateDE(c.date)+'</span></div><div class="small" style="margin-top:4px">'+esc(c.text)+'</div></div>').join("")+'</div>' : '<div class="card sub">Noch keine Änderung seit dem Start.</div>';
+  $("#app").innerHTML = h;
+}
+function renderRegeln(){
+  let h = head("So handeln Profis");
+  h += '<div class="card small">Aus Ratgebern erfahrener Daytrader und der Studie von Zarattini, Barbon und Aziz (2024) zu Opening-Range-Ausbrüchen bei „Stocks in Play“. Das System setzt diese Regeln automatisch um.</div>';
+  h += '<div class="card">'+D.rules.map(([t,x],i)=>'<div class="step" style="margin:'+(i?"14px":"0")+' 0 0"><div class="n">'+(i+1)+'</div><div><b>'+esc(t)+'</b><div class="small">'+esc(x)+'</div></div></div>').join("")+'</div>';
+  h += '<div class="card small">Wichtig: Auch Profis verlieren oft. Was sie unterscheidet, ist Disziplin bei Stopp, Grenzen und Auswahl – nicht, dass jeder Trade klappt.</div>';
+  $("#app").innerHTML = h;
+}
+function renderGlossar(){
+  let h = head("Glossar");
+  h += '<input class="search" placeholder="Begriff suchen" oninput="filterGloss(this.value)"><div class="list" id="gl">'+glossList("")+'</div>';
+  $("#app").innerHTML = h;
+}
 
 load();
 </script>

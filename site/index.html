@@ -73,7 +73,7 @@ nav button.on{color:var(--blue)}
 .legend{display:flex;justify-content:space-between;font-size:12px;color:var(--sub)}
 svg.spark{width:100%;height:auto;display:block;margin-top:8px}
 .sheet-bg{position:fixed;inset:0;background:rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:opacity .2s;z-index:9}
-.sheet{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-radius:18px 18px 0 0;padding:18px 18px calc(24px + env(safe-area-inset-bottom));transform:translateY(100%);transition:transform .25s;z-index:10;max-width:720px;margin:0 auto}
+.sheet{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-radius:18px 18px 0 0;padding:18px 18px calc(24px + env(safe-area-inset-bottom));transform:translateY(100%);transition:transform .25s;z-index:10;max-width:720px;margin:0 auto;max-height:85vh;overflow-y:auto;-webkit-overflow-scrolling:touch}
 .open .sheet-bg{opacity:1;pointer-events:auto}.open .sheet{transform:none}
 .lock{max-width:420px;margin:12vh auto 0;padding:0 20px;text-align:center}
 .lock img{width:84px;height:84px;border-radius:20px}
@@ -99,7 +99,7 @@ details summary::-webkit-details-marker{display:none}
 "use strict";
 const $ = s => document.querySelector(s);
 const KEY_STORE = "trader-key-v1";
-let D = null, TAB = "heute", FILTER = "alle", SUB = null, FEES = true;
+let D = null, TAB = "heute", FILTER = "alle", SUB = null, FEES = true, DAY = null, LABF = "alle";
 const TABS = [
   ["heute","Heute",'<path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>'],
   ["konto","Konto",'<rect x="3" y="6" width="18" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18" stroke="currentColor" stroke-width="2"/><path d="M15 15h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'],
@@ -108,7 +108,8 @@ const TABS = [
   ["mehr","Mehr",'<circle cx="5" cy="12" r="2" fill="currentColor"/><circle cx="12" cy="12" r="2" fill="currentColor"/><circle cx="19" cy="12" r="2" fill="currentColor"/>'],
 ];
 const STRAT = {orb:"Opening-Range-Ausbruch", gap:"News-Sprung", bounce:"Erholung"};
-const CHIP = {alle:"Alle", Regel:"Regel", "Ja-Trades":"Deine Ja-Trades", orb:"Ausbruch", gap:"News-Sprung", bounce:"Erholung"};
+const CHIP = {alle:"Alle", Regel:"Regel", "Ja-Trades":"Deine Ja-Trades", orb:"Ausbruch", gap:"News-Sprung", bounce:"Erholung", sip:"Stocks in Play"};
+STRAT.sip = "Stocks in Play";
 
 // ------------------------------------------------------------ Formate
 const nf2 = new Intl.NumberFormat("de-DE",{minimumFractionDigits:2,maximumFractionDigits:2});
@@ -190,6 +191,7 @@ function show(){
   const nav = $("#nav"); nav.classList.remove("hide");
   nav.innerHTML = TABS.map(([id,label,icon]) => '<button data-t="'+id+'" onclick="go(\''+id+'\')"><svg viewBox="0 0 24 24">'+icon+'</svg>'+label+'</button>').join("");
   render();
+  try{ if(!localStorage.getItem("trader-intro")) showIntro(); }catch(e){}
   setInterval(() => { if(TAB==="heute") renderHeute(true); }, 30000);
   setInterval(refresh, 5*60000);
   document.addEventListener("visibilitychange", () => { if(!document.hidden) refresh(); });
@@ -197,7 +199,7 @@ function show(){
 function go(t){ TAB = t; SUB = null; try{ localStorage.setItem("trader-tab", t); }catch(e){} render(); window.scrollTo(0,0); }
 function render(){
   document.querySelectorAll("nav button").forEach(b => b.classList.toggle("on", b.dataset.t===TAB));
-  if(TAB==="mehr" && SUB) return ({markt:renderMarkt, lernen:renderLernen, woche:renderWoche, echt:renderEcht, aend:renderAend, regeln:renderRegeln, glossar:renderGlossar})[SUB]();
+  if(TAB==="mehr" && SUB) return ({markt:renderMarkt, lernen:renderLernen, woche:renderWoche, echt:renderEcht, aend:renderAend, regeln:renderRegeln, glossar:renderGlossar, ticker:renderTicker, einst:renderEinst})[SUB]();
   ({heute:renderHeute, konto:renderKonto, trades:renderTrades, labor:renderLabor, mehr:renderMehr})[TAB]();
 }
 function head(title, right){
@@ -325,14 +327,19 @@ function tradeItem(t, who){
     '<div style="margin-top:8px" class="small">'+esc(lab)+'</div>'+(t.stop?tradeBar(t):"")+spark(t.symbol,t)+'<p class="small">'+expl+'</p></details>';
 }
 function renderTrades(){
-  const L = D.live;
+  const days = [];
+  if(D.live) days.push({date:D.live.date, trades:D.live.trades, lukas:D.live.lukas||[], as_of:D.live.as_of, today:true});
+  (D.journal||[]).forEach(j => days.push(j));
   let h = head("Trades");
-  h += '<div class="chips">'+["alle","Regel","Ja-Trades","orb","gap","bounce"].map(f=>'<button class="chip '+(FILTER===f?"on":"")+'" onclick="FILTER=\''+f+'\';render()">'+CHIP[f]+'</button>').join("")+'</div>';
-  if(!L){ $("#app").innerHTML = h+'<div class="card sub">Noch keine Live-Trades. Ab dem nächsten Börsentag erscheinen sie hier.</div>'; return; }
-  h += '<div class="card small">'+dateDE(L.date)+' · Stand '+esc(L.as_of)+' · Spielgeld, Ergebnis jeweils bei 100 € pro Trade. Tippe auf einen Trade für die Erklärung.</div>';
+  if(!days.length){ $("#app").innerHTML = h+'<div class="card sub">Noch keine Live-Trades. Ab dem nächsten Börsentag erscheinen sie hier – mit Erklärung zu jedem Trade.</div>'; return; }
+  const cur = days.find(d=>d.date===DAY) || days[0];
+  h += '<div class="chips">'+days.slice(0,10).map(d=>'<button class="chip '+(d===cur?"on":"")+'" onclick="DAY=\''+d.date+'\';render()">'+(d.today?"Heute":dateDE(d.date).slice(0,6))+'</button>').join("")+'</div>';
+  h += '<div class="chips">'+["alle","Regel","Ja-Trades","orb","gap","bounce","sip"].map(f=>'<button class="chip '+(FILTER===f?"on":"")+'" onclick="FILTER=\''+f+'\';render()">'+CHIP[f]+'</button>').join("")+'</div>';
   let rows = [];
-  if(FILTER!=="Ja-Trades") rows = L.trades.filter(t => FILTER==="alle"||FILTER==="Regel"||t.strategy===FILTER).map(t=>[t,"Regel"]);
-  if(FILTER==="alle"||FILTER==="Ja-Trades") rows = rows.concat((L.lukas||[]).map(t=>[Object.assign({open:t.status==="offen"},t),"Du"]));
+  if(FILTER!=="Ja-Trades") rows = cur.trades.filter(t => FILTER==="alle"||FILTER==="Regel"||t.strategy===FILTER).map(t=>[t,"Regel"]);
+  if(FILTER==="alle"||FILTER==="Ja-Trades") rows = rows.concat((cur.lukas||[]).map(t=>[Object.assign({open:t.status==="offen"},t),"Du"]));
+  const sum = rows.reduce((s,[t])=>s+(t.eur||0),0);
+  h += '<div class="card"><div class="row"><span>'+dateDE(cur.date)+(cur.as_of?' · Stand '+esc(cur.as_of):'')+'</span><b class="num '+cls(sum)+'">'+eur(sum)+'</b></div><div class="small">'+rows.length+' Trades der Top-Varianten · Spielgeld, jeweils bei 100 € pro Trade. Tippe auf einen Trade für die Erklärung.</div></div>';
   h += rows.length ? '<div class="list">'+rows.map(([t,w])=>tradeItem(t,w)).join("")+'</div>' : '<div class="card sub">Keine Trades für diesen Filter.</div>';
   $("#app").innerHTML = h;
 }
@@ -353,13 +360,13 @@ function renderLabor(){
   h += '<div class="card"><div class="row"><span>Bestanden</span><span class="big num">'+passed+'<span class="sub" style="font-size:18px"> / '+L.variants.length+'</span></span></div>'+
        '<p class="small">'+int(L.symbols)+' Aktien · '+int(L.days)+' Tage: '+int(L.n_train_days)+' '+g("Lerntage")+' + '+int(L.n_test_days)+' '+g("Prüftage")+' ('+dateDE(L.test[0])+' bis '+dateDE(L.test[1])+'). Eine '+g("Variante")+' besteht, wenn sie an Lern- und Prüftagen im Plus ist und mindestens '+int(L.settings.min_test_trades)+' Trades hat.</p></div>';
   h += '<div class="card small">Wichtig: Mit 1 € '+g("Gebühr")+' je Order wären alle Varianten im Minus. Darum zeigt jede Karte beide Zahlen.</div>';
-  h += '<h2>Rangliste</h2>';
-  L.variants.slice(0,15).forEach((v,i) => { const t=v.test||{};
+  h += '<h2>Rangliste</h2><div class="chips">'+["alle","orb","gap","bounce","sip"].map(f=>'<button class="chip '+(LABF===f?"on":"")+'" onclick="LABF=\''+f+'\';render()">'+CHIP[f]+'</button>').join("")+'</div>';
+  L.variants.map((v,i)=>[v,i]).filter(([v])=>LABF==="alle"||v.strategy===LABF).slice(0,15).forEach(([v,i]) => { const t=v.test||{};
     h += '<div class="card"><div class="row"><span class="badge '+(v.passed?"b-green":"")+'">'+(v.passed?"bestanden":"nicht bestanden")+'</span><span class="small">#'+(i+1)+'</span></div>'+
       '<h3 style="margin-top:6px">'+esc(v.label)+'</h3>'+
       (t.n ? '<div class="grid2" style="margin:8px 0 0"><div><div class="small">Prüftage, bei 100 €/Trade</div><div class="val num '+cls(t.eur)+'" style="font-size:22px;font-weight:800">'+eur(t.eur)+'</div></div><div><div class="small">nach Gebühren</div><div class="num '+cls(t.eur_after_fees)+'" style="font-size:22px;font-weight:800">'+eur(t.eur_after_fees)+'</div></div></div>'+
       '<div class="small" style="margin-top:6px">'+int(t.n)+' Trades · '+g("Trefferquote")+' '+nf0.format(t.win_rate)+' % · Ø '+pct(t.avg_pct)+' · '+g("Zufallswert")+' '+nf1.format(t.t||0)+(Math.abs(t.t||0)>=2?" (kaum Zufall)":" (Zufall möglich)")+'</div>' : '<div class="small">Auf den Prüftagen kein Trade.</div>')+
-      curve(v.id)+'</div>'; });
+      curve(v.id)+'<div class="btns"><button class="btn ghost" onclick="variantSheet(\''+v.id+'\')">Details</button></div></div>'; });
   h += '<h2>Die Strategien</h2>'+Object.entries(L.strategies||{}).map(([k,v])=>'<div class="card"><h3>'+esc(STRAT[k]||k)+'</h3><div class="small">'+esc(v)+'</div></div>').join("");
   h += '<div class="card small">Rangliste vom '+dayDE(L.created_at)+', '+hmDE(L.created_at)+' Uhr. Spread '+nf2.format(L.settings.slip_pct)+' % je Seite ist eingerechnet.</div>';
   $("#app").innerHTML = h;
@@ -450,6 +457,7 @@ function renderMehr(){
   let h = head("Mehr");
   h += '<div class="list">'+
     row("markt","Markt","Morgen-Scan, Opening-Range-Ausbrüche, News, Pelosi")+
+    row("ticker","Ticker-Analyse", D.ticker&&D.ticker.symbol?"Zuletzt: "+esc(D.ticker.symbol):"Eine bestimmte Aktie prüfen lassen")+
     row("woche","Wochen-Rückblick", w?("Woche "+esc(w.week)):"kommt am Freitagabend", w?'<span class="badge b-blue">neu</span>':"")+
     row("echt","Echtgeld-Prüfung","Wann echtes Geld überhaupt in Frage kommt",'<span class="badge '+(ok===checks.length&&checks.length?"b-green":"b-orange")+'">'+ok+'/'+checks.length+'</span>')+
     row("aend","Was das System gelernt hat","Änderungen an der Rangliste",'<span class="badge">'+(D.changes||[]).length+'</span>')+
@@ -458,6 +466,7 @@ function renderMehr(){
     row("lernen","Lernen","Lektionen, Ablauf, die drei Phasen")+
     row("glossar","Glossar","Alle Fachwörter einfach erklärt")+
     '</div><div class="list">'+
+    row("einst","Einstellungen","Zeitplan, Grenzen, Push-Kanal, Einführung")+
     '<button class="item" style="display:block;width:100%;text-align:left;border:0;background:none;color:inherit;font:inherit;cursor:pointer" onclick="statusSheet()"><div class="row"><b>Systemstatus</b><span class="sub">›</span></div><div class="small">Läufe, Fehler, Push-Kanal, Abmelden</div></button></div>';
   h += '<div class="card small">Stand der Daten: '+dayDE(D.generated_at)+', '+hmDE(D.generated_at)+' Uhr. Die Seite lädt alle 5 Minuten neu.</div>';
   $("#app").innerHTML = h;
@@ -500,6 +509,58 @@ function renderGlossar(){
   let h = head("Glossar");
   h += '<input class="search" placeholder="Begriff suchen" oninput="filterGloss(this.value)"><div class="list" id="gl">'+glossList("")+'</div>';
   $("#app").innerHTML = h;
+}
+
+function variantSheet(id){
+  const v = D.lab.variants.find(x=>x.id===id); if(!v) return;
+  const col = (t,k,f) => t && t.n ? f(t[k]) : "–";
+  const rows = [["Trades","n",int],["Trefferquote","win_rate",x=>nf0.format(x)+" %"],["Ø je Trade","avg_pct",pct],["bei 100 €/Trade","eur",eur],["nach Gebühren","eur_after_fees",eur],["Zufallswert","t",x=>nf1.format(x||0)],["Stopps","stops",int],["Ziele","targets",int]];
+  openSheet('<h3>'+esc(v.label)+'</h3><p class="small">'+esc(D.lab.strategies[v.strategy]||"")+'</p>'+
+    '<div class="list" style="margin:10px 0"><div class="item"><div class="row small"><span></span><b>Lerntage</b><b>Prüftage</b></div></div>'+
+    rows.map(([n,k,f])=>'<div class="item"><div class="row"><span class="small">'+n+'</span><span class="num">'+col(v.train,k,f)+'</span><span class="num">'+col(v.test,k,f)+'</span></div></div>').join("")+'</div>'+
+    '<p class="small">'+(v.passed?"Bestanden: an Lern- und Prüftagen im Plus, genug Trades.":"Nicht bestanden: an Lern- oder Prüftagen nicht im Plus oder zu wenige Trades.")+'</p>');
+}
+function renderTicker(){
+  const t = D.ticker;
+  let h = head("Ticker-Analyse");
+  h += '<div class="card small">Du willst eine bestimmte Aktie prüfen? Schreib Claude im Chat z. B. „Analyse TSLA“. Claude startet die Prüfung: News, Einstiegsregel, Stopp und Ziel. Das Ergebnis erscheint hier und als Push.</div>';
+  if(!t || !t.symbol){ $("#app").innerHTML = h+'<div class="card sub">Noch keine Analyse.</div>'; return; }
+  const e = t.entry||{}, pl = t.plan;
+  const st = {triggered:"ausgelöst", waiting:"wartet", expired:"abgelaufen", "no-data":"keine Daten"}[e.status]||e.status||"–";
+  h += '<div class="card"><div class="row"><h3>'+esc(t.symbol)+'</h3><span class="badge '+(e.status==="triggered"?"b-green":"")+'">'+esc(st)+'</span></div>'+
+    (e.or_high!=null?'<div class="small">'+g("Opening Range","Eröffnungsspanne")+' '+usd(e.or_low)+' bis '+usd(e.or_high)+'</div>':'')+
+    (e.status==="triggered"?'<div class="small">Ausgelöst um '+esc(e.time)+' zu '+usd(e.price)+'</div>':'')+
+    (pl?'<div class="small" style="margin-top:6px">Plan: Einstieg '+usd(pl.entry)+' · '+g("Stopp")+' '+usd(pl.stop)+' · '+g("Ziel")+' '+usd(pl.target)+' · raus bis '+esc(pl.flat_by||"15:55")+' Uhr NY</div>':'')+'</div>';
+  const news = (t.news||{}).items||[];
+  if(news.length) h += '<h2>News</h2><div class="list">'+news.slice(0,10).map(n=>'<a class="item" style="display:block;color:inherit;text-decoration:none" href="'+esc(n.link)+'" target="_blank" rel="noopener"><div class="small">'+(n.time?dayDE(n.time)+" "+hmDE(n.time)+" Uhr":"")+'</div><div>'+esc(n.title)+'</div></a>').join("")+'</div>';
+  $("#app").innerHTML = h;
+}
+function renderEinst(){
+  const S = D.settings||{}, sm = S.sim||{};
+  let h = head("Einstellungen");
+  h += '<div class="card small">Ändern geht über Claude im Chat – die Werte stehen in <code>trader/system.json</code>.</div>';
+  h += '<h2>Zeitplan (deutsche Zeit, Mo–Fr)</h2><div class="list">'+(S.schedule||[]).map(([a,b])=>'<div class="item"><div class="row"><b>'+esc(a)+'</b></div><div class="small">'+esc(b)+'</div></div>').join("")+'</div>';
+  h += '<h2>Simulator</h2><div class="list">'+
+    [["Startkapital",nf0.format(sm.start_eur||0)+" €"],["Verlust pro Trade höchstens",nf0.format(sm.max_loss_trade||0)+" €"],["pro Tag höchstens",nf0.format(sm.max_loss_day||0)+" €"],["pro Monat höchstens",nf0.format(sm.max_loss_month||0)+" €"],["Gebühr je Order",nf2.format(sm.fee_eur||0)+" €"],["kleinste Position",nf0.format(sm.min_position||0)+" €"],["Start",sm.start_date?dateDE(sm.start_date):"noch Testphase"]]
+    .map(([a,b])=>'<div class="item"><div class="row"><span>'+a+'</span><b>'+b+'</b></div></div>').join("")+'</div>';
+  h += '<h2>Sonstiges</h2><div class="list"><div class="item"><div class="row"><span>News zu den ersten</span><b>'+int(S.news_top)+' Treffern</b></div></div><div class="item"><div class="row"><span>Pelosi-Tracker</span><b>'+esc((S.pelosi||[]).join(", "))+'</b></div></div><div class="item"><div class="row"><span>Push-Kanal (ntfy)</span><b class="small">'+esc(S.push_topic||"")+'</b></div></div></div>';
+  h += '<div class="btns" style="margin:10px 16px"><button class="btn ghost" onclick="showIntro()">Einführung noch einmal zeigen</button><button class="btn ghost" onclick="logout()">Abmelden</button></div>';
+  $("#app").innerHTML = h;
+}
+const INTRO = [
+  ["Willkommen im Trader-Labor","Hier testet ein Computer-System Daytrading-Regeln mit Spielgeld. Nichts kostet echtes Geld."],
+  ["Heute","Zeigt, ob die Börse offen ist, was als Nächstes passiert und welche Spielgeld-Trades gerade laufen."],
+  ["Vorschläge","Wenn eine Regel auslöst, bekommst du einen Push mit Ja und Nein. Ja heißt: Dieser Trade zählt auch für dich."],
+  ["Konto und Labor","Konto zeigt 100 € Spielgeld wie echt, mit Grenzen. Labor zeigt, welche Regeln an ungesehenen Tagen funktionieren."],
+  ["Lernen","Blaue, unterstrichene Wörter kannst du antippen. Unter „Mehr“ findest du Glossar, Profi-Regeln und den Wochen-Rückblick."],
+];
+let INTRO_I = 0;
+function showIntro(){ INTRO_I = 0; introStep(); }
+function introStep(){
+  const [t,x] = INTRO[INTRO_I], last = INTRO_I === INTRO.length-1;
+  $("#sheet").innerHTML = '<div class="small">'+(INTRO_I+1)+' von '+INTRO.length+'</div><h3 style="font-size:20px;margin-top:6px">'+esc(t)+'</h3><p>'+esc(x)+'</p><div class="btns">'+
+    (last?'<button class="btn" onclick="closeSheet();try{localStorage.setItem(\'trader-intro\',\'1\')}catch(e){}">Los geht’s</button>':'<button class="btn ghost" onclick="closeSheet();try{localStorage.setItem(\'trader-intro\',\'1\')}catch(e){}">Überspringen</button><button class="btn" onclick="INTRO_I++;introStep()">Weiter</button>')+'</div>';
+  $("#sheetwrap").classList.add("open");
 }
 
 load();

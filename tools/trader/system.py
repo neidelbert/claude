@@ -259,8 +259,8 @@ def do_morning(cfg, now, force):
         if rc == 0:
             data["universe_date"] = et.date().isoformat()
             kept = [l for l in out.splitlines() if l.startswith("Kept ")]
-            step(steps, "Aktienliste", True, "neu geladen: " + (kept[0].split(" US-")[0].replace("Kept ", "") +
-                                                                 " Aktien" if kept else "ok"))
+            n = kept[0].split(" US-")[0].replace("Kept ", "").replace(",", ".") if kept else ""
+            step(steps, "Aktienliste", True, "neu geladen: %s Aktien" % n if n else "neu geladen")
         elif os.path.exists(p(T, "universe.txt")):
             step(steps, "Aktienliste", False, "Neu laden fehlgeschlagen, alte Liste genutzt: " + (err or out).strip()[-200:])
         else:

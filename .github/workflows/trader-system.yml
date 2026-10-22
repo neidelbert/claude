@@ -22,9 +22,6 @@ on:
         description: "Nur bei „ticker“: Stopp/Ziel-Alarme aus dem Plan anlegen"
         type: boolean
         default: false
-  push:
-    branches: ["claude/trader-scanner-actions"]
-    paths: ["tools/trader/**", ".github/workflows/trader-system.yml"]
 
 permissions:
   contents: write
@@ -48,7 +45,7 @@ jobs:
           python-version: "3.12"
       - name: Trader-System
         env:
-          TEIL: ${{ github.event_name == 'schedule' && 'auto' || github.event_name == 'push' && 'morning' || inputs.teil }}
+          TEIL: ${{ github.event_name == 'schedule' && 'auto' || inputs.teil }}
           TICKER: ${{ inputs.ticker }}
           ALARME: ${{ inputs.alarme }}
         run: |

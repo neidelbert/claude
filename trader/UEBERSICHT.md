@@ -1,6 +1,6 @@
 # Trader-Übersicht
 
-Stand: Do 22.10. 18:33 Uhr ET (00:33 Uhr MESZ) · wird bei jedem Lauf neu gebaut.
+Stand: Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) · wird bei jedem Lauf neu gebaut.
 
 NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
@@ -12,6 +12,7 @@ NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
 | ORB-Scan | noch nie | – |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | noch nie | – |
+| Test-Push | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – Push gesendet ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865970064)) |
 
 Zeitplan (Mo–Fr, an Handelstagen): Morgen-Scan ab ca. 8:00 Uhr ET, ORB-Scan ab ca. 10:15 Uhr ET, Preisalarme alle 15 Minuten während der Handelszeit.
 

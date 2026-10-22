@@ -249,6 +249,25 @@ def encrypt(doc, password, salt_hex):
     return {"v": 1, "kdf": "PBKDF2-SHA256", "iter": ITERATIONS, "salt": b(salt), "iv": b(iv), "ct": b(ct)}
 
 
+def encrypt_pub(doc, keyfile):
+    """Ohne Secret: Daten mit zufälligem AES-Schlüssel verschlüsseln, diesen mit dem öffentlichen RSA-Schlüssel.
+    Den privaten Schlüssel (mit Lukas' Passwort verschlüsselt) legt die Datei bei; nur das Passwort öffnet alles."""
+    from cryptography.hazmat.primitives import hashes, serialization
+    from cryptography.hazmat.primitives.asymmetric import padding
+    from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+    with open(keyfile, encoding="utf-8") as fh:
+        kf = json.load(fh)
+    pub = serialization.load_der_public_key(base64.b64decode(kf["pub"]))
+    dk = AESGCM.generate_key(bit_length=256)
+    iv = os.urandom(12)
+    ct = AESGCM(dk).encrypt(iv, json.dumps(doc, ensure_ascii=False, separators=(",", ":")).encode("utf-8"), None)
+    ek = pub.encrypt(dk, padding.OAEP(mgf=padding.MGF1(algorithm=hashes.SHA256()), algorithm=hashes.SHA256(), label=None))
+    b = lambda x: base64.b64encode(x).decode()
+    p = kf["priv"]
+    return {"v": 2, "kdf": "PBKDF2-SHA256", "iter": p["iter"], "salt": p["salt"], "kiv": p["iv"], "kct": p["ct"],
+            "ek": b(ek), "iv": b(iv), "ct": b(ct)}
+
+
 def png(size, path):
     """App-Symbol: dunkelblaues Quadrat mit steigender grüner Linie (ohne Bildbibliothek)."""
     pts = [(0.18, 0.70), (0.38, 0.52), (0.52, 0.60), (0.80, 0.30)]
@@ -293,12 +312,19 @@ def cmd_build(a):
     png(512, os.path.join(OUT, "icon-512.png"))
     doc = build_data(cfg)
     pw = os.environ.get("SITE_PASSWORD", "")
+    keyfile = os.path.join(T, "site_key.json")
+    enc = None
     if pw:
+        enc = encrypt(doc, pw, cfg.get("site_salt") or "00" * 16)
+    elif os.path.exists(keyfile):
+        enc = encrypt_pub(doc, keyfile)
+    if enc:
         with open(os.path.join(OUT, "data.enc"), "w", encoding="utf-8") as fh:
-            json.dump(encrypt(doc, pw, cfg.get("site_salt") or "00" * 16), fh)
-        print("data.enc gebaut (%d Bytes Klartext)." % len(json.dumps(doc)))
+            json.dump(enc, fh)
+        print("data.enc gebaut (Version %d, %d Bytes Klartext)." % (enc["v"], len(json.dumps(doc))))
     else:
-        print("SITE_PASSWORD fehlt: keine Daten auf der Seite.")
+        print("Kein Passwort und kein Schlüssel: keine Daten auf der Seite.")
+    open(os.path.join(OUT, ".nojekyll"), "w").close()
     if a.plain:
         with open(os.path.join(OUT, "data.json"), "w", encoding="utf-8") as fh:
             json.dump(doc, fh, ensure_ascii=False)

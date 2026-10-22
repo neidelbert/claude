@@ -5,6 +5,7 @@ Nur Standardbibliothek. Spielgeld, Testphase: kein Limit, alle Zahlen sichtbar.
     python3 tools/trader/lab.py fetch              # 5-Minuten-Kerzen (ca. 60 Tage) laden und im Cache sammeln
     python3 tools/trader/lab.py run                # alle Varianten testen -> trader/lab/results.json
     python3 tools/trader/lab.py run --offline DIR  # Kerzen aus DIR/<SYM>.json.gz (Tests)
+    python3 tools/trader/lab.py live               # heute: Spielgeld-Trades aller Varianten bis jetzt
     python3 tools/trader/lab.py selftest           # Rechenregeln an künstlichen Kerzen prüfen
 
 Ablauf eines Trades (nur Kauf, nur innerhalb eines Tages):
@@ -200,10 +201,13 @@ def cmd_fetch(a):
     return 0 if ok else 1
 
 
-def split_days(s):
-    """Reihe -> {datum: [(k, o, h, l, c, v), ...]} nur reguläre Handelszeit, k = Kerze ab 9:30 (0, 1, 2 ...)."""
+def split_days(s, now_ts=None):
+    """Reihe -> {datum: [(k, o, h, l, c, v), ...]} nur reguläre Handelszeit, k = Kerze ab 9:30 (0, 1, 2 ...).
+    now_ts: Kerzen, die zu diesem Zeitpunkt noch nicht geschlossen sind, fallen weg (live)."""
     days = {}
     for i, ts in enumerate(s["t"]):
+        if now_ts is not None and ts + BAR * 60 > now_ts:
+            continue
         o, h, l, c, v = (s[k][i] for k in ("o", "h", "l", "c", "v"))
         if None in (o, h, l, c):
             continue
@@ -356,23 +360,23 @@ def simulate(bars, i, stop, target_r, end_k):
     if risk <= entry * MIN_RISK:
         return None
     target = entry + target_r * risk
-    exit_p, why, exit_k = None, "Schluss", bars[i][0]
+    exit_p, why, exit_k, hit = None, "Schluss", bars[i][0], False
     for b in bars[i + 1:]:
         k, o, h, l, c, _ = b
         if k > end_k:
             break
         exit_k = k
         if o <= stop:
-            exit_p, why = o, "Stopp"
+            exit_p, why, hit = o, "Stopp", True
             break
         if l <= stop:
-            exit_p, why = stop, "Stopp"
+            exit_p, why, hit = stop, "Stopp", True
             break
         if o >= target:
-            exit_p, why = o, "Ziel"
+            exit_p, why, hit = o, "Ziel", True
             break
         if h >= target:
-            exit_p, why = target, "Ziel"
+            exit_p, why, hit = target, "Ziel", True
             break
         exit_p = c
     if exit_p is None:
@@ -381,7 +385,7 @@ def simulate(bars, i, stop, target_r, end_k):
     pct = exit_p / entry - 1
     return {"entry": round(entry, 4), "stop": round(stop, 4), "target": round(target, 4), "exit": round(exit_p, 4),
             "why": why, "r": round((exit_p - entry) / risk, 3), "pct": round(pct * 100, 3),
-            "in_k": bars[i][0], "out_k": exit_k}
+            "in_k": bars[i][0], "out_k": exit_k, "open": not hit and exit_k < end_k}
 
 
 def clock(k):
@@ -492,6 +496,137 @@ def cmd_run(a):
     return 0
 
 
+# ---------------------------------------------------------------- Live (heute, alle paar Minuten)
+
+LIVE_DIR = os.path.join(ROOT, "trader", "lab", "live")
+FOCUS_TOP = 3           # Pushes für die besten N Varianten der Rangliste (+ die beste je Strategie)
+
+
+def fetch_today(sym):
+    time.sleep(FETCH_PAUSE)
+    s = scan.parse_chart(scan.yahoo_get(scan.chart_path(sym, "1d", "5m")), sym)
+    return {k: s[k] for k in ("t", "o", "h", "l", "c", "v")}
+
+
+def focus_ids():
+    try:
+        with open(OUT, encoding="utf-8") as fh:
+            res = json.load(fh)
+    except (OSError, ValueError):
+        return []
+    rows = res.get("variants", [])
+    ids = [r["id"] for r in rows[:FOCUS_TOP]]
+    for sid in (res.get("best_per_strategy") or {}).values():
+        if sid not in ids:
+            ids.append(sid)
+    return ids
+
+
+def cmd_live(a):
+    t0 = time.time()
+    now = scan.parse_now(a.now)
+    et = scan.to_eastern(now)
+    day = et.date().isoformat()
+    if not scan.session(et.date()):
+        print(json.dumps({"error": "heute kein Handelstag"}))
+        return 1
+    now_ts = int((now - datetime.datetime(1970, 1, 1)).total_seconds())
+    syms = symbols_for_run()
+    today, failed = {}, []
+    if a.offline:
+        for f in sorted(os.listdir(a.offline)):
+            if f.endswith(".json.gz"):
+                today[f[:-8]] = load_series(os.path.join(a.offline, f))
+    else:
+        with concurrent.futures.ThreadPoolExecutor(WORKERS) as ex:
+            futs = {ex.submit(fetch_today, s): s for s in syms}
+            for f in concurrent.futures.as_completed(futs):
+                try:
+                    today[futs[f]] = f.result()
+                except Exception as e:
+                    failed.append(futs[f])
+    vs = variants()
+    end_k = last_k(day)
+    trades = []
+    for sym, ser in today.items():
+        bars = split_days(ser, now_ts).get(day)
+        if not bars:
+            continue
+        hist_path = os.path.join(CACHE, sym + ".json.gz")
+        hist = split_days(load_series(hist_path)) if os.path.exists(hist_path) else {}
+        hist = {d: b for d, b in hist.items() if d < day}
+        hist[day] = bars
+        ctx = contexts(hist)[day]
+        for v in vs:
+            sig = SIGNALS[v["strategy"]](v, bars, ctx)
+            if not sig:
+                continue
+            t = simulate(bars, sig[0], sig[1], v["target_r"], end_k)
+            if not t:
+                continue
+            t.update(variant=v["id"], strategy=v["strategy"], symbol=sym, in_at=clock(t["in_k"]),
+                     out_at=None if t["open"] else clock(t["out_k"]), last=round(bars[-1][4], 4),
+                     eur=round(t["pct"] / 100 * STAKE, 2), key="%s|%s" % (v["id"], sym))
+            trades.append(t)
+    path = os.path.join(LIVE_DIR, day + ".json")
+    try:
+        with open(path, encoding="utf-8") as fh:
+            old = {t["key"]: t for t in json.load(fh).get("trades", [])}
+    except (OSError, ValueError):
+        old = {}
+    focus = focus_ids()
+    events = []
+    for t in trades:
+        o = old.get(t["key"], {})
+        t["told_in"], t["told_out"] = o.get("told_in", False), o.get("told_out", False)
+        if t["variant"] not in focus:
+            continue
+        if not t["told_in"]:
+            events.append(dict(t, event="in"))
+            t["told_in"] = True
+        if not t["open"] and not t["told_out"]:
+            events.append(dict(t, event="out"))
+            t["told_out"] = True
+    per = {}
+    for t in trades:
+        p = per.setdefault(t["variant"], {"n": 0, "open": 0, "eur": 0.0, "wins": 0})
+        p["n"] += 1
+        p["open"] += t["open"]
+        p["eur"] = round(p["eur"] + t["eur"], 2)
+        p["wins"] += t["pct"] > 0
+    labels = {v["id"]: v["label"] for v in vs}
+    doc = {"date": day, "as_of": "%s Uhr ET" % et.strftime("%H:%M"), "symbols": len(today), "failed": len(failed),
+           "focus": focus, "labels": {k: labels[k] for k in focus if k in labels}, "per_variant": per,
+           "n_trades": len(trades), "n_open": sum(1 for t in trades if t["open"]),
+           "trades": sorted(trades, key=lambda t: (t["in_k"], t["symbol"], t["variant"]))}
+    os.makedirs(LIVE_DIR, exist_ok=True)
+    with open(path, "w", encoding="utf-8") as fh:
+        json.dump(doc, fh, ensure_ascii=False, indent=1)
+    print(json.dumps({"date": day, "as_of": doc["as_of"], "symbols": len(today), "failed": len(failed),
+                      "trades": len(trades), "open": doc["n_open"], "events": events,
+                      "labels": doc["labels"], "seconds": round(time.time() - t0, 1)}, ensure_ascii=False))
+    return 0
+
+
+def day_summary(day):
+    """Tagesbilanz aus trader/lab/live/<tag>.json für Push und Übersicht."""
+    try:
+        with open(os.path.join(LIVE_DIR, day + ".json"), encoding="utf-8") as fh:
+            doc = json.load(fh)
+    except (OSError, ValueError):
+        return None
+    labels = {v["id"]: v["label"] for v in variants()}
+    rows = sorted(({"id": k, "label": labels.get(k, k), **p} for k, p in doc["per_variant"].items()),
+                  key=lambda r: r["eur"], reverse=True)
+    by_strat = {}
+    for t in doc["trades"]:
+        s = by_strat.setdefault(t["strategy"], {"n": 0, "eur": 0.0})
+        s["n"] += 1
+        s["eur"] = round(s["eur"] + t["eur"], 2)
+    return {"date": day, "n_trades": doc["n_trades"], "n_open": doc["n_open"], "variants": rows,
+            "focus": doc.get("focus", []), "by_strategy": by_strat}
+
+
 # ---------------------------------------------------------------- Selbsttest
 
 def _series(day, rows):
@@ -530,8 +665,16 @@ def cmd_selftest(a):
     t3 = simulate(b3, 3, 100.0, 2.0, 76)
     assert t3["why"] == "Schluss" and t3["out_k"] == 76, t3
     assert clock(76) == "15:55" and clock(3) == "9:50"
+    assert t3["open"] is False
+    # live: nur die ersten 6 Kerzen geschlossen -> Trade offen
+    open_utc = scan.eastern_to_utc(datetime.datetime.combine(day, datetime.time(9, 30)))
+    now_ts = int((open_utc - datetime.datetime(1970, 1, 1)).total_seconds()) + 6 * 300
+    b4 = split_days(_series(day, calm), now_ts)[day.isoformat()]
+    assert len(b4) == 6, len(b4)
+    t4 = simulate(b4, 3, 100.0, 2.0, 76)
+    assert t4["open"] is True and t4["out_k"] == 5, t4
     assert len(variants()) == 44 and len({v["id"] for v in variants()}) == 44
-    print("Selbsttest ok: Einstieg, Ziel, Stopp vor Ziel, Ausstieg zum Schluss, 44 Varianten.")
+    print("Selbsttest ok: Einstieg, Ziel, Stopp vor Ziel, Ausstieg zum Schluss, offener Live-Trade, 44 Varianten.")
     return 0
 
 
@@ -542,12 +685,15 @@ def main(argv=None):
     r = sub.add_parser("run")
     r.add_argument("--offline", metavar="DIR")
     r.add_argument("--out")
+    lv = sub.add_parser("live")
+    lv.add_argument("--now", help='New Yorker Zeit, z. B. "2026-10-22 10:40"')
+    lv.add_argument("--offline", metavar="DIR", help="heutige Kerzen aus DIR/<SYM>.json.gz")
     sub.add_parser("selftest")
     a = ap.parse_args(argv)
     if not a.cmd:
         ap.print_help()
         return 1
-    return {"fetch": cmd_fetch, "run": cmd_run, "selftest": cmd_selftest}[a.cmd](a)
+    return {"fetch": cmd_fetch, "run": cmd_run, "live": cmd_live, "selftest": cmd_selftest}[a.cmd](a)
 
 
 if __name__ == "__main__":

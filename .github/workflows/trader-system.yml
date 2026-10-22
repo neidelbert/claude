@@ -17,7 +17,7 @@ on:
         description: "Was soll laufen?"
         type: choice
         default: morning
-        options: [morning, orb, live, lab, ticker, alerts, test, nachricht, auto]
+        options: [morning, orb, live, lab, ticker, alerts, test, nachricht, seite, auto]
       ticker:
         description: "Nur bei „ticker“: Symbol, z. B. TSLA"
         required: false
@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 40
     outputs:
-      published: ${{ steps.system.outputs.published }}
+      published: ${{ steps.system.outputs.published || (inputs.teil == 'seite' && 'true') || '' }}
     env:
       NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
       NTFY_REPLY_TOPIC: ${{ secrets.NTFY_REPLY_TOPIC }}
@@ -79,6 +79,7 @@ jobs:
             if [ "$ALARME" = "true" ]; then args+=("--alerts"); fi
           fi
           if [ "$TEIL" = "nachricht" ]; then args=("message"); fi
+          if [ "$TEIL" = "seite" ]; then echo "Nur Webseite neu bauen."; exit 0; fi
           if [ "$TEIL" != "auto" ] && [ "$TEIL" != "ticker" ] && [ "$TEIL" != "test" ] && [ "$TEIL" != "nachricht" ]; then args+=("--force"); fi
           python3 tools/trader/system.py "${args[@]}"
       - name: Kerzen-Cache speichern (nur nach dem Labor)
@@ -88,14 +89,14 @@ jobs:
           path: .cache/lab
           key: lab-bars-${{ github.run_id }}
       - name: Webseite bauen (verschlüsselt)
-        if: steps.system.outputs.published == 'true'
+        if: steps.system.outputs.published == 'true' || inputs.teil == 'seite'
         env:
           SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
         run: |
           pip install -q cryptography
           python3 tools/trader/site.py build
       - name: Webseite hochladen
-        if: steps.system.outputs.published == 'true'
+        if: steps.system.outputs.published == 'true' || inputs.teil == 'seite'
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site

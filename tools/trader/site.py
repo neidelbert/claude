@@ -150,6 +150,25 @@ def history():
     return rows
 
 
+def journal(today, labels):
+    """Tagebuch der letzten Live-Tage (ohne heute): Trades der Top-Varianten und deine Ja-Trades."""
+    live_dir = os.path.join(T, "lab", "live")
+    if not os.path.isdir(live_dir):
+        return []
+    out = []
+    for f in sorted(os.listdir(live_dir))[-15:]:
+        doc = rj("lab", "live", f, default=None)
+        if not doc or doc["date"] == today:
+            continue
+        focus = doc.get("focus", [])
+        out.append({"date": doc["date"], "focus": focus,
+                    "trades": [{k: t.get(k) for k in ("variant", "strategy", "symbol", "in_at", "out_at", "entry", "stop",
+                                                      "target", "exit", "why", "eur", "open", "in_k", "out_k")}
+                               for t in doc.get("trades", []) if t["variant"] in focus[:3]],
+                    "lukas": doc.get("lukas", [])})
+    return out[::-1]
+
+
 def build_data(cfg):
     now = system.utcnow()
     st = {k: rj("status", k + ".json") for k in system.PART_DE}
@@ -204,6 +223,12 @@ def build_data(cfg):
                   "glossary": GLOSSARY, "how": HOW, "setups": system.SETUP_DE,
                   "strategies": res.get("strategies") or lab.STRATEGY_DE},
         "sim": sim.compute(),
+        "journal": journal(live_day if live else "", labels),
+        "settings": {"sim": sim.settings(), "news_top": cfg.get("news_top"), "pelosi": cfg.get("pelosi_members"),
+                     "orb_source": cfg.get("orb_source"), "push_topic": os.environ.get("NTFY_TOPIC") or cfg.get("ntfy_topic"),
+                     "schedule": [["ca. 14:00 Uhr", "Morgen-Scan, News, Pelosi"], ["15:30 bis 22:00 Uhr", "Labor live alle 10 Minuten, Vorschläge, Alarme"],
+                                  ["ca. 22:10 Uhr", "Tagesbilanz"], ["ab ca. 22:20 Uhr", "Labor rechnet die Rangliste neu"],
+                                  ["Freitagabend", "Wochen-Rückblick"]]},
         "changes": (rj("lab", "changes.json", default=[]) or [])[-30:][::-1],
         "weekly": latest_weekly(),
         "rules": PRO_RULES,

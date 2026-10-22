@@ -1,0 +1,22 @@
+{
+  "created_by": "trader-entry",
+  "symbol": "AAPL",
+  "setup": "orb",
+  "side": "buy",
+  "date": "2026-10-22",
+  "status": "expired",
+  "time": null,
+  "bar_start": null,
+  "bar_index": null,
+  "price": null,
+  "level": 347.28,
+  "interval": "5m",
+  "opening_range": {
+    "high": 347.28,
+    "low": 344.6,
+    "minutes": 15
+  },
+  "source": "yahoo",
+  "checked_at": "2026-10-22T22:34:51Z",
+  "reason": "no close above the range high $347.28 by 15:30, the last time for a new entry"
+}

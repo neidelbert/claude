@@ -1,0 +1,288 @@
+{
+  "part": "ticker",
+  "ok": true,
+  "summary": "AAPL: abgelaufen",
+  "ran_at": "2026-10-22T22:34:50Z",
+  "date_et": "2026-10-22",
+  "steps": [
+    {
+      "name": "News",
+      "ok": true,
+      "detail": "15 Meldungen der letzten 72 Stunden"
+    },
+    {
+      "name": "Einstieg",
+      "ok": true,
+      "detail": "expired"
+    }
+  ],
+  "data": {
+    "symbol": "AAPL",
+    "news": {
+      "items": [
+        {
+          "id": "rss:47e878bb-824d-3243-a8e9-b86b1c3f85d3",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Dow Jones Futures: Moderna Crashes, Meta Fuels AI Meltdown, But Warren Buffett Market Thriving",
+          "summary": "The S&P 500 and Nasdaq tumbled below 50-day lines as Meta led an AI stock rout. But the Warren Buffett market is thriving.",
+          "link": "https://finance.yahoo.com/m/47e878bb-824d-3243-a8e9-b86b1c3f85d3/dow-jones-futures%3A-moderna.html?.tsrc=rss",
+          "time": "2026-10-22T22:27:52+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [
+            "macro"
+          ],
+          "new": false
+        },
+        {
+          "id": "rss:640c88c4-a539-3735-a0ee-746427e88883",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Meta Eyes an Early Equity Deal for Its AI War Chest—and Berkshire Could Be a Buyer",
+          "summary": "Berkshire participated in Alphabet’s $85 billion equity fund deal in June that could be a model for any Meta equity raise.",
+          "link": "https://finance.yahoo.com/m/640c88c4-a539-3735-a0ee-746427e88883/meta-eyes-an-early-equity.html?.tsrc=rss",
+          "time": "2026-10-22T20:44:00+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [
+            "deal"
+          ],
+          "new": false
+        },
+        {
+          "id": "rss:94cb0dd4-6ca3-47ed-b603-6918c036bbce",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Apple’s foldable iPhone has a $2,000 app problem",
+          "summary": "Apple's (AAPL) new foldable iPhone Duo hits stores Friday. Yahoo Finance Tech Editor Dan Howley got his hands on one and joins Brooke DiPalma on Market Domination to share his takeaways on the new device.",
+          "link": "https://finance.yahoo.com/video/apples-foldable-iphone-has-a-2000-app-problem-203418718.html?.tsrc=rss",
+          "time": "2026-10-22T20:34:18+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [],
+          "new": false
+        },
+        {
+          "id": "rss:0d7683ba-4385-3f2b-ba63-99e61aac4fe0",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Here Are 4 ETFs That Run an Entire Retirement Portfolio for Less Than $50 a Year on $100,000",
+          "summary": "Most retirement portfolios quietly bleed money through fees before a single stock moves. Four index ETFs exist that together cover every major asset class a retiree needs, and the math on what they actually cost per year may surprise you.",
+          "link": "https://247wallst.com/investing/etf/2026/10/22/here-are-4-etfs-that-run-an-entire-retirement-portfolio-for-less-than-50-a-year-on-100000/?.tsrc=rss",
+          "time": "2026-10-22T20:33:38+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [],
+          "new": false
+        },
+        {
+          "id": "rss:e5d39268-89ce-310a-a821-d3f775eacbd6",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Apple Reportedly Raised Its iPhone Duo Target 44%. Here’s What November 2 Has to Show",
+          "summary": "Key Stats for Apple StockCurrent Price: $343. 99Target Price (Mid): ~$485Street Target: ~$328Potential Total Return: ~41%Annualized IRR: ~9% / year__Now Live: Discover how much upside your favorite stocks could have using TIKR’s new Valuation Model (It’s free)__ >>> What Happened?Apple (AAPL) has reportedly raised its iPhone Duo shipment target about 44%, a day before the $1,999 foldable reaches stores on October 23.",
+          "link": "https://www.tikr.com/blog/apple-reportedly-raised-its-iphone-duo-target-44-heres-what-november-2-has-to-show?ref=yahoofinance&.tsrc=rss",
+          "time": "2026-10-22T20:32:05+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [],
+          "new": false
+        },
+        {
+          "id": "rss:901193fa-8922-3df6-9417-b947a80babdc",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "What Intel, Boeing, Nike Have In Common With Each Other — And Apple",
+          "summary": "Three S&P 500 ccompanies in different stages of comebacks show why it's important to pay attention to corporate turnounds.",
+          "link": "https://finance.yahoo.com/m/901193fa-8922-3df6-9417-b947a80babdc/what-intel%2C-boeing%2C-nike-have.html?.tsrc=rss",
+          "time": "2026-10-22T20:20:09+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [],
+          "new": false
+        },
+        {
+          "id": "rss:62d8ebe9-f2cd-3442-abbf-949d593a13a7",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView",
+          "summary": "Resideo Technologies (NYSE: REZI), a leading global provider of home comfort, security and safety solutions, announced plans to release a software update in the first quarter of 2027 that will enable its existing Honeywell Home ElitePROTM, X7S and X8S smart thermostats to support the new Adaptive Temperature Control and Clean Energy Guidance capabilities introduced with Apple's new HomeView offerings.",
+          "link": "https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss",
+          "time": "2026-10-22T20:11:00+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [
+            "earnings"
+          ],
+          "new": false
+        },
+        {
+          "id": "rss:6fb93c9e-0aaf-3f8f-96e6-63afc272d5e8",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "How much Apple stock does CEO John Ternus actually own?",
+          "summary": "John Ternus took over as Apple’s CEO in September 2026, and he could be awarded a significant number of shares for meeting performance-based goals. Here’s how many Apple shares he owns now.",
+          "link": "https://www.thestreet.com/personalities/how-much-apple-stock-does-john-ternus-own?.tsrc=rss",
+          "time": "2026-10-22T19:51:39+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [
+            "people"
+          ],
+          "new": false
+        },
+        {
+          "id": "rss:bc04a314-d2ea-3f1e-9635-4855ea8e410d",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Elon Musk invests $1bn in CNN-owner Skydance",
+          "summary": "Elon Musk has pumped $1bn (£746bn) into the Hollywood giant Skydance, handing the billionaire a stake in the newly formed company behind CNN.",
+          "link": "https://www.telegraph.co.uk/business/2026/10/22/elon-musk-invests-1bn-in-cnn-owner-skydance/?.tsrc=rss",
+          "time": "2026-10-22T19:35:46+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [],
+          "new": false
+        },
+        {
+          "id": "rss:98679ad8-0666-3410-89dc-5e8ba5583655",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Better Buffett Stock: Alphabet vs. Apple",
+          "summary": "Apple has slow-played its AI launch, while Alphabet has accelerated its AI plans.",
+          "link": "https://www.fool.com/investing/2026/10/22/better-buffett-stock-alphabet-vs-apple/?.tsrc=rss",
+          "time": "2026-10-22T19:05:00+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [],
+          "new": false
+        },
+        {
+          "id": "rss:8608bf18-43f5-351a-939a-ec49b9f5c9f6",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Elon Musk reportedly invests $1B in Skydance as debt mounts",
+          "summary": "Elon Musk is investing roughly $1 billion in Skydance, the studio led by David Ellison that is grappling with a heavy debt burden following its merger with Paramount and Warner Bros. Discovery, according to media reports. Unnamed sources told Semafor and CNBC on Thursday that the billionaire...",
+          "link": "https://www.proactiveinvestors.com/companies/news/1100581/elon-musk-reportedly-invests-1b-in-skydance-as-debt-mounts-1100581.html?.tsrc=rss",
+          "time": "2026-10-22T19:03:00+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [
+            "deal"
+          ],
+          "new": false
+        },
+        {
+          "id": "rss:67eb7a2d-245c-33e3-835b-aecf3b4fed0c",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Quest Diagnostics: 3 Key Takeaways for Long-Term Investors",
+          "summary": "Automation and direct-to-consumer expansion are offsetting wage inflation and Medicare reimbursement pressure, the dual challenge facing diagnostics providers.",
+          "link": "https://www.fool.com/earnings/takeaways/2026/10/22/quest-diagnostics-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
+          "time": "2026-10-22T18:24:28+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [
+            "macro"
+          ],
+          "new": false
+        },
+        {
+          "id": "rss:271b6d30-a2bf-4aee-975a-88073a306f3f",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Investors are punishing Big Tech's biggest spenders. Meta is the latest casualty.",
+          "summary": "Meta stock is on track for its third straight drop of more than 5% after earnings, a first since its IPO.",
+          "link": "https://finance.yahoo.com/markets/article/investors-are-punishing-big-techs-biggest-spenders-meta-is-the-latest-casualty-174236447.html?.tsrc=rss",
+          "time": "2026-10-22T17:42:36+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [
+            "earnings"
+          ],
+          "new": false
+        },
+        {
+          "id": "rss:9139bc34-3daf-3621-bd9c-a5b0aec17a53",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "How much MSFT stock does Microsoft CEO Satya Nadella actually own?",
+          "summary": "Satya Nadella transformed Microsoft into a Cloud and AI powerhouse. But compared with his predecessors, his stake in the company is surprisingly small.",
+          "link": "https://www.thestreet.com/personalities/how-much-msft-stock-does-microsoft-ceo-satya-nadella-actually-own?.tsrc=rss",
+          "time": "2026-10-22T17:07:02+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [
+            "people"
+          ],
+          "new": false
+        },
+        {
+          "id": "rss:0ea971d5-c17d-3908-95aa-3dad29a5b941",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Verizon customers face monthly fee for new iPhone feature",
+          "summary": "Verizon is charging more than T-Mobile for a new iPhone feature, and some consumers aren’t happy.",
+          "link": "https://www.thestreet.com/retail/verizon-iphone-handoff-10-dollar-monthly-fee?.tsrc=rss",
+          "time": "2026-10-22T17:07:00+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [],
+          "new": false
+        }
+      ],
+      "moves": [
+        {
+          "ticker": "AAPL",
+          "price": 348.22,
+          "prev_close": 343.99,
+          "pct": 1.23,
+          "time": "2026-10-22T20:00:01+00:00",
+          "moving": false
+        }
+      ]
+    },
+    "entry": {
+      "status": "expired",
+      "phase": "after-close",
+      "reason": "no close above the range high $347.28 by 15:30, the last time for a new entry",
+      "or_high": 347.28,
+      "or_low": 344.6,
+      "time": null,
+      "price": null,
+      "date": "2026-10-22"
+    }
+  },
+  "run_url": "https://github.com/neidelbert/claude/actions/runs/39865972957"
+}

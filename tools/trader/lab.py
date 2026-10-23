@@ -47,7 +47,12 @@ TEST_SHARE = 1 / 3      # Anteil der jüngsten Tage, die nur zum Prüfen dienen
 MIN_RISK = 0.001        # Stopp mindestens 0,1 % unter dem Einstieg, sonst zu eng
 CURVE_TOP = 8           # Tageskurven für die besten N Varianten
 TRADES_TOP = 3          # Einzeltrades für die besten N Varianten
-WORKERS = 4             # gleichzeitige Downloads
+WORKERS = 6             # gleichzeitige Downloads
+WATCH_TOP = 300         # dazu die ersten N Treffer des Morgen-Scans (zusammen ~450 Aktien, ~5.000 Trades am Tag)
+ACC_START = 100.0       # Tageskonto: jeden Tag neu 100 € Spielgeld
+ACC_STAKE = 20.0        # je Trade 20 € (bis zu 5 Trades gleichzeitig)
+ACC_FEE = 1.0           # Vergleich mit 1 € Gebühr je Order
+KEEP_TRADES_TOP = 10    # live: Einzeltrades nur für die besten N Varianten speichern (Repo klein halten)
 FETCH_PAUSE = 0.2       # Sekunden Pause je Download und Faden
 
 # Viel gehandelte US-Aktien als feste Grundliste; dazu kommen die ersten Treffer des Morgen-Scans.
@@ -197,7 +202,7 @@ def symbols_for_run():
     wl = os.path.join(ROOT, "trader", "watchlist.json")
     try:
         with open(wl, encoding="utf-8") as fh:
-            for h in json.load(fh).get("hits", [])[:50]:
+            for h in json.load(fh).get("hits", [])[:WATCH_TOP]:
                 syms.append(h["symbol"])
     except (OSError, ValueError, KeyError):
         pass
@@ -508,6 +513,89 @@ def clock(k):
     return "%d:%02d" % (m // 60, m % 60)
 
 
+# ---------------------------------------------------------------- Merkmale, Tageskonto, Muster
+
+def features(bars, i, entry, stop, c, day):
+    """Umstände eines Trades beim Einstieg – daraus lernt das System, wann Regeln gewinnen."""
+    k = bars[i][0]
+    pc = c.get("prev_close")
+    first6 = bars[:6] if len(bars) >= 6 else bars
+    vol6 = sum(b[5] for b in first6)
+    spy = c.get("spy") or {}
+    return {"k": k, "gap": round((bars[0][1] / pc - 1) * 100, 2) if pc else None,
+            "rv": round(vol6 / c["vol6"], 2) if c.get("vol6") else None,
+            "mkt": (spy[k][1] > spy[k][0]) if k in spy else None,
+            "atrp": round(c["atr"] / entry * 100, 2) if c.get("atr") else None,
+            "risk": round((entry - stop) / entry * 100, 2), "price": round(entry, 2),
+            "dow": datetime.date.fromisoformat(day).weekday()}
+
+
+def day_account(trades, fee=0.0):
+    """Ein Tag mit 100 € Spielgeld: Trades in zeitlicher Reihenfolge, je 20 €, solange Geld frei ist."""
+    cash, ev = ACC_START, []
+    for n, t in enumerate(trades):
+        ev.append((t["in_k"], 1, n, t))
+        ev.append((t["out_k"], 2, n, t))
+    ev.sort(key=lambda e: (e[0], e[1], e[2]))
+    held, done = {}, 0
+    for _, kind, n, t in ev:
+        if kind == 1:
+            if cash >= ACC_STAKE + fee:
+                cash -= ACC_STAKE + fee
+                held[n] = ACC_STAKE
+        elif n in held:
+            cash += held.pop(n) * (1 + t["pct"] / 100) - fee
+            done += 1
+    cash += sum(held.values())          # offen am Ende: zum Einstand gerechnet (live, Tag noch nicht vorbei)
+    return round(cash, 2), done
+
+
+BUCKETS = [
+    ("k", "Uhrzeit des Einstiegs", [(None, 12, "bis 10:30 Uhr ET"), (12, 30, "10:30–12:00 Uhr ET"), (30, None, "ab 12:00 Uhr ET")]),
+    ("rv", "Volumen der ersten 30 Min.", [(None, 1, "weniger als normal"), (1, 2, "1–2× normal"), (2, 4, "2–4× normal"),
+                                          (4, None, "über 4× normal")]),
+    ("gap", "Lücke zum Vortag", [(None, -2, "unter −2 %"), (-2, 0, "−2 bis 0 %"), (0, 2, "0 bis +2 %"), (2, None, "über +2 %")]),
+    ("mkt", "Gesamtmarkt (SPY)", [(True, True, "im Plus"), (False, False, "im Minus")]),
+    ("atrp", "Tagesschwankung (ATR)", [(None, 2, "unter 2 %"), (2, 4, "2–4 %"), (4, None, "über 4 %")]),
+    ("risk", "Abstand zum Stopp", [(None, 0.5, "unter 0,5 %"), (0.5, 1.5, "0,5–1,5 %"), (1.5, None, "über 1,5 %")]),
+    ("price", "Aktienkurs", [(None, 20, "unter 20 $"), (20, 100, "20–100 $"), (100, None, "über 100 $")]),
+    ("dow", "Wochentag", [(0, 0, "Montag"), (1, 1, "Dienstag"), (2, 2, "Mittwoch"), (3, 3, "Donnerstag"), (4, 4, "Freitag")]),
+]
+MIN_PATTERN_TEST = 200   # so viele Trades braucht ein Muster an den Prüftagen
+
+
+def in_bucket(val, lo, hi):
+    if val is None:
+        return False
+    if isinstance(lo, bool):
+        return val is lo
+    if lo is not None and lo == hi:
+        return val == lo
+    return (lo is None or val >= lo) and (hi is None or val < hi)
+
+
+def find_patterns(all_trades, champ_trades):
+    """Für jedes Merkmal: Ø-Ergebnis je Trade an Lern- und Prüftagen. „Hält“ = an beiden Tagen im Plus mit genug Trades.
+    Dazu: Top-Regel nur unter dieser Bedingung („Kombi“)."""
+    out = []
+    for key, name, buckets in BUCKETS:
+        for lo, hi, label in buckets:
+            sel = [t for t in all_trades if in_bucket((t.get("f") or {}).get(key), lo, hi)]
+            tr = [t["pct"] for t in sel if not t["test"]]
+            te = [t["pct"] for t in sel if t["test"]]
+            if len(tr) < 50 or len(te) < 50:
+                continue
+            ch = [t["pct"] for t in champ_trades if t["test"] and in_bucket((t.get("f") or {}).get(key), lo, hi)]
+            row = {"key": key, "name": name, "label": label, "n_train": len(tr), "n_test": len(te),
+                   "avg_train": round(sum(tr) / len(tr), 3), "avg_test": round(sum(te) / len(te), 3),
+                   "champ_n": len(ch), "champ_avg": round(sum(ch) / len(ch), 3) if ch else None}
+            row["holds"] = row["avg_train"] > 0 and row["avg_test"] > 0 and len(te) >= MIN_PATTERN_TEST
+            row["avoid"] = row["avg_train"] < 0 and row["avg_test"] < 0 and len(te) >= MIN_PATTERN_TEST
+            out.append(row)
+    out.sort(key=lambda r: r["avg_test"], reverse=True)
+    return out
+
+
 # ---------------------------------------------------------------- Auswertung
 
 def stats(trades):
@@ -572,7 +660,8 @@ def cmd_run(a):
                     continue
                 t = simulate(bars, sig[0], sig[1], v["target_r"], end_k, *sig[2:])
                 if t:
-                    t.update(symbol=sym, date=d, test=d in test_days)
+                    t.update(symbol=sym, date=d, test=d in test_days,
+                             f=features(bars, sig[0], t["entry"], t["stop"], ctx[d], d))
                     trades[v["id"]].append(t)
     rows = []
     for v in vs:
@@ -597,6 +686,21 @@ def cmd_run(a):
         last = sorted(trades[r["id"]], key=lambda t: (t["date"], t["in_k"]))[-40:]
         samples[r["id"]] = [dict(t, in_at=clock(t["in_k"]), out_at=clock(t["out_k"])) for t in last]
     champ = sorted(trades[rows[0]["id"]], key=lambda t: (t["date"], t["in_k"])) if rows else []
+    accounts = {}
+    for r in rows[:KEEP_TRADES_TOP]:
+        by_day = {}
+        for t in trades[r["id"]]:
+            by_day.setdefault(t["date"], []).append(t)
+        pts = []
+        for d in all_days:
+            e0, n = day_account(by_day.get(d, []))
+            e1, _ = day_account(by_day.get(d, []), ACC_FEE)
+            pts.append([d, e0, e1, n])
+        tdays = [p for p in pts if p[0] in test_days and p[3]]
+        accounts[r["id"]] = {"days": pts, "test_up_share": round(sum(1 for p in tdays if p[1] > ACC_START) /
+                                                                   len(tdays) * 100) if tdays else None}
+    pool = [t for r in rows[:20] for t in trades[r["id"]]]
+    patterns = find_patterns(pool, champ)
     best_per = {}
     for r in rows:
         best_per.setdefault(r["strategy"], r["id"])
@@ -609,6 +713,8 @@ def cmd_run(a):
            "strategies": STRATEGY_DE, "best_per_strategy": best_per,
            "variants": rows, "curves": curves, "samples": samples,
            "champion": rows[0]["id"] if rows else None,
+           "accounts": accounts, "patterns": patterns, "account_settings": {"start": ACC_START, "stake": ACC_STAKE,
+                                                                             "fee": ACC_FEE},
            "champion_trades": [{k: t[k] for k in ("date", "symbol", "entry", "stop", "target", "exit", "why", "pct",
                                                   "in_k", "out_k", "test")} for t in champ], "seconds": round(time.time() - t0, 1)}
     out = a.out or OUT
@@ -617,6 +723,7 @@ def cmd_run(a):
         json.dump(doc, fh, ensure_ascii=False, indent=1)
     print(json.dumps({"symbols": len(data), "days": len(all_days), "variants": len(rows),
                       "trades": sum(len(t) for t in trades.values()), "passed": sum(1 for r in rows if r["passed"]),
+                      "patterns_hold": sum(1 for p in patterns if p["holds"]),
                       "best": rows[0]["id"], "seconds": doc["seconds"]}))
     return 0
 
@@ -698,7 +805,8 @@ def cmd_live(a):
                 continue
             t.update(variant=v["id"], strategy=v["strategy"], symbol=sym, in_at=clock(t["in_k"]),
                      out_at=None if t["open"] else clock(t["out_k"]), last=round(bars[-1][4], 4),
-                     eur=round(t["pct"] / 100 * STAKE, 2), key="%s|%s" % (v["id"], sym))
+                     eur=round(t["pct"] / 100 * STAKE, 2), key="%s|%s" % (v["id"], sym),
+                     f=features(bars, sig[0], t["entry"], t["stop"], ctx, day))
             trades.append(t)
     path = os.path.join(LIVE_DIR, day + ".json")
     try:
@@ -728,17 +836,29 @@ def cmd_live(a):
         p["eur"] = round(p["eur"] + t["eur"], 2)
         p["wins"] += t["pct"] > 0
     labels = {v["id"]: v["label"] for v in vs}
+    by_var = {}
+    for t in trades:
+        by_var.setdefault(t["variant"], []).append(t)
+    accounts = {vid: [day_account(ts)[0], day_account(ts, ACC_FEE)[0]] for vid, ts in by_var.items()}
+    try:
+        with open(OUT, encoding="utf-8") as fh:
+            ranked = [r["id"] for r in json.load(fh).get("variants", [])[:KEEP_TRADES_TOP]]
+    except (OSError, ValueError):
+        ranked = []
+    keep = set(focus) | set(ranked)
+    n_all, n_open_all = len(trades), sum(1 for t in trades if t["open"])
+    trades = [t for t in trades if t["variant"] in keep]      # nur diese Einzeltrades speichern
     chart_syms = {t["symbol"] for t in trades if t["variant"] in focus} | {t["symbol"] for t in lukas}
     charts = {sym: [[b[0], round(b[4], 4)] for b in today_bars[sym]] for sym in sorted(chart_syms) if sym in today_bars}
     doc = {"date": day, "charts": charts, "as_of": "%s Uhr ET" % et.strftime("%H:%M"), "symbols": len(today), "failed": len(failed),
            "focus": focus, "labels": {k: labels[k] for k in focus if k in labels}, "per_variant": per,
-           "n_trades": len(trades), "n_open": sum(1 for t in trades if t["open"]), "lukas": lukas,
+           "n_trades": n_all, "n_open": n_open_all, "lukas": lukas, "accounts": accounts,
            "trades": sorted(trades, key=lambda t: (t["in_k"], t["symbol"], t["variant"]))}
     os.makedirs(LIVE_DIR, exist_ok=True)
     with open(path, "w", encoding="utf-8") as fh:
         json.dump(doc, fh, ensure_ascii=False, indent=1)
     print(json.dumps({"date": day, "as_of": doc["as_of"], "symbols": len(today), "failed": len(failed),
-                      "trades": len(trades), "open": doc["n_open"], "events": events,
+                      "trades": n_all, "open": n_open_all, "events": events,
                       "labels": doc["labels"], "seconds": round(time.time() - t0, 1)}, ensure_ascii=False))
     return 0
 
@@ -870,6 +990,9 @@ def cmd_selftest(a):
     ts = simulate(bg, sig[0], sig[1], 0.0, 76, sig[2])
     assert ts["why"] == "Schluss" and ts["target"] is None and ts["out_k"] == 76, ts
     assert signal_sip(sv, bg, {"sip_rank": 21, "atr": 2.0}) is None
+    acc, n_done = day_account([{"in_k": 3, "out_k": 10, "pct": 10.0}, {"in_k": 4, "out_k": 12, "pct": -5.0}])
+    assert acc == 101.0 and n_done == 2, acc                 # 20 € +10 % und 20 € −5 %
+    assert day_account([{"in_k": 3, "out_k": 10, "pct": 10.0}], 1.0)[0] == 100.0   # Gewinn 2 € − 2 € Gebühr
     n = len(variants())
     assert n == 58 and len({v["id"] for v in variants()}) == n, n
     print("Selbsttest ok: Einstieg, Ziel, Stopp vor Ziel, Ausstieg zum Schluss, offener Live-Trade, 58 Varianten (mit Stocks in Play, Volumen-Rangliste und Markt-Filter).")

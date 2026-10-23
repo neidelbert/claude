@@ -52,6 +52,11 @@ DEFAULT_CONFIG = {
     "push_orb": True,
     "push_alerts": True,
     "push_errors": True,
+    "push_live_events": True,        # Einstiege/Ausstiege während des Tages
+    "push_proposals": True,          # Vorschläge mit Ja/Nein
+    "push_lab": True,                # Labor-Rangliste am Abend
+    "push_weekly": True,             # Wochen-Rückblick
+    "experiment": {"start": None, "days": 100},
 }
 
 # Zeitfenster in New Yorker Zeit, in denen „auto“ einen Teil startet.
@@ -531,7 +536,8 @@ def week_review(cfg, now):
     for c in changes[-2:]:
         lines.append(c["text"])
     lines.append(doc["lesson"])
-    push(cfg, "Wochen-Rückblick %s" % week, "\n".join(lines), priority=3, tags=["calendar"])
+    if cfg.get("push_weekly", True):
+        push(cfg, "Wochen-Rückblick %s" % week, "\n".join(lines), priority=3, tags=["calendar"])
     return week
 
 
@@ -570,8 +576,9 @@ def do_lab(cfg, now, force):
         log = (read_json(p(T, "lab", "changes.json"), []) or []) + ch
         write_json(p(T, "lab", "changes.json"), log[-200:])
         lines.insert(-1, "Geändert: " + " ".join(c["text"] for c in ch[:3]))
-    push(cfg, "Labor: %d von %d Varianten bestanden" % (len(passed), len(rows)), "\n".join(lines),
-         priority=3, tags=["test_tube"])
+    if cfg.get("push_lab", True):
+        push(cfg, "Labor: %d von %d Varianten bestanden" % (len(passed), len(rows)), "\n".join(lines),
+             priority=3, tags=["test_tube"])
     # Wochen-Rückblick am letzten Handelstag der Woche
     et = scan.to_eastern(now).date()
     nxt = et + datetime.timedelta(days=1)
@@ -645,6 +652,102 @@ def goal_line():
     except Exception:
         konto = ""
     return "Weg zum Ziel: Testphase, %d von 20 Live-Tagen · %d Varianten bestanden%s" % (min(n_days, 20), passed, konto)
+
+
+def close_report(cfg, day, sm):
+    """Kurzer, übersichtlicher Rückblick nach Börsenschluss."""
+    days = live_days(cfg)
+    today = next((d for d in days if d["date"] == day), None)
+    res = read_json(p(T, "lab", "results.json"), {}) or {}
+    labels = {r["id"]: r["label"] for r in res.get("variants", [])}
+    lines = ["%s Spielgeld-Trades heute (alle Regeln zusammen)" % de_int(sm.get("n_trades", 0))]
+    if today and today["acc"] is not None:
+        lines.append("Top-Regel: 100 € → %s € (mit 1 € Gebühr je Order: %s €)" % (de_num(today["acc"]),
+                                                                              de_num(today["acc_fee"])))
+    if today and today["best"]:
+        lines.append("Beste Regel heute: %s → %s €" % (labels.get(today["best"][0], today["best"][0]).split(" · ")[0],
+                                                       de_num(today["best"][1])))
+    accs = [d for d in days if d["acc"] is not None]
+    if accs:
+        up = sum(1 for d in accs if d["acc"] > 100)
+        lines.append("Bisher: Tageskonto der Top-Regel an %d von %d Tagen im Plus" % (up, len(accs)))
+    pats = [x for x in res.get("patterns", []) if x.get("holds")]
+    if pats:
+        lines.append("Gelernt: %d Muster halten, z. B. %s: %s" % (len(pats), pats[0]["name"], pats[0]["label"]))
+    checks = go_checks(cfg)
+    lines.append("Go-Ampel: %d von %d grün" % (sum(1 for c in checks if c["ok"]), len(checks)))
+    return lines
+
+
+def experiment_day(cfg, day):
+    """(Tag X, von N) des 100-Tage-Experiments; X zählt Handelstage ab dem Start (Start = Tag 1). None vor dem Start."""
+    ex = cfg.get("experiment") or {}
+    if not ex.get("start"):
+        return None, ex.get("days", 100)
+    d, end = datetime.date.fromisoformat(ex["start"]), datetime.date.fromisoformat(day)
+    n = 0
+    while d <= end:
+        if scan.session(d):
+            n += 1
+        d += datetime.timedelta(days=1)
+    return n, ex.get("days", 100)
+
+
+def live_days(cfg):
+    """Je Live-Tag ab Experiment-Start: Top-Regel des Tages, ihr Tageskonto (100 €), Trades."""
+    start = (cfg.get("experiment") or {}).get("start") or "0000"
+    live_dir = p(T, "lab", "live")
+    out = []
+    if not os.path.isdir(live_dir):
+        return out
+    for f in sorted(os.listdir(live_dir)):
+        if not f.endswith(".json") or f[:-5] < start:
+            continue
+        doc = read_json(os.path.join(live_dir, f), {}) or {}
+        champ = (doc.get("focus") or [None])[0]
+        acc = (doc.get("accounts") or {}).get(champ)
+        ct = [t for t in doc.get("trades", []) if t["variant"] == champ and not t.get("open")]
+        accs = doc.get("accounts") or {}
+        best = max(accs.items(), key=lambda kv: kv[1][0]) if accs else None
+        worst = min(accs.items(), key=lambda kv: kv[1][0]) if accs else None
+        out.append({"date": doc.get("date", f[:-5]), "champ": champ, "acc": acc[0] if acc else None,
+                    "acc_fee": acc[1] if acc else None, "n_all": doc.get("n_trades", 0), "champ_pcts": [t["pct"] for t in ct],
+                    "best": [best[0], best[1][0]] if best else None, "worst": [worst[0], worst[1][0]] if worst else None})
+    return out
+
+
+def go_checks(cfg):
+    """Go-Ampel: erst wenn alles grün ist, kommt „Go für den Simulator“. Prüft nur Live-Tage ab Experiment-Start."""
+    days = live_days(cfg)
+    accs = [d for d in days if d["acc"] is not None]
+    up = sum(1 for d in accs if d["acc"] > 100)
+    pcts = [x for d in days for x in d["champ_pcts"]]
+    tval = 0.0
+    if len(pcts) > 1:
+        m = sum(pcts) / len(pcts)
+        sd = (sum((x - m) ** 2 for x in pcts) / (len(pcts) - 1)) ** 0.5
+        tval = m / (sd / len(pcts) ** 0.5) if sd else 0.0
+    fee_sum = sum(d["acc_fee"] - 100 for d in accs if d["acc_fee"] is not None)
+    streak, last = 0, None
+    for d in reversed(days):
+        if last is None or d["champ"] == last:
+            streak += 1
+            last = d["champ"]
+        else:
+            break
+    res = read_json(p(T, "lab", "results.json"), {}) or {}
+    rows = res.get("variants", [])
+    share = round(up / len(accs) * 100) if accs else 0
+    return [
+        {"name": "Mindestens 40 Live-Tage", "ok": len(days) >= 40, "detail": "%d von 40" % len(days)},
+        {"name": "Tageskonto der Top-Regel an ≥ 60 % der Tage im Plus", "ok": bool(accs) and share >= 60,
+         "detail": "%d %% (%d von %d Tagen)" % (share, up, len(accs))},
+        {"name": "Kein Zufall (Zufallswert ≥ 2)", "ok": tval >= 2, "detail": de_num(tval, 1)},
+        {"name": "Nach 1 € Gebühr je Order im Plus", "ok": bool(accs) and fee_sum > 0, "detail": "%s €" % de_num(fee_sum)},
+        {"name": "Top-Regel stabil (≥ 10 Tage dieselbe)", "ok": streak >= 10, "detail": "%d Tage" % streak},
+        {"name": "Top-Regel hat die Prüftage bestanden", "ok": bool(rows) and bool(rows[0].get("passed")),
+         "detail": "ja" if rows and rows[0].get("passed") else "nein"},
+    ]
 
 
 def open_summary(cfg, day):
@@ -736,7 +839,7 @@ def do_live(cfg, now, force):
                 seen.append(w)
         # Vorschläge: ein Push je Einstieg mit Ja/Nein, damit die Buttons eindeutig sind
         for (ev, sym, strat, _), es in groups.items():
-            if ev != "in" or not reply_topic(cfg):
+            if ev != "in" or not reply_topic(cfg) or not cfg.get("push_proposals", True):
                 continue
             e = es[0]
             pid = "%s-%s-%s" % (day.replace("-", ""), sym.replace(".", "_"), strat)
@@ -754,17 +857,27 @@ def do_live(cfg, now, force):
                  tags=["question"], actions=yes_no_actions(cfg, pid) if open_now else None)
         lines.append("Was heißt das? " + " ".join(seen[:2]))
         lines.append("Spielgeld (Testphase), kein echtes Geld.")
-        if n_out:
+        if n_out and cfg.get("push_live_events", True):
             push(cfg, "Labor live: %d Einstieg%s, %d Ausstieg%s" % (n_in, "" if n_in == 1 else "e", n_out,
                                                                    "" if n_out == 1 else "e"),
                  "\n".join(lines), priority=3, tags=["chart_with_upwards_trend"])
     sess = scan.session(et.date())
     closed = sess and et.time() >= sess[1]
+    xd, xn = experiment_day(cfg, day)
+    if xd is not None and xd > xn:
+        return None, "Experiment beendet (%d Tage)" % xn, steps, data, owned
+    tag = "Tag %d von %d · " % (xd, xn) if xd else ""
     if not closed and data.get("open_push") != day:
         data["open_push"] = day
-        push(cfg, "Auswertung Börsenstart %s" % date_de(day), "\n".join(open_summary(cfg, day)), priority=3,
-             tags=["sunrise"])
-        return True, "Auswertung Börsenstart gesendet", steps, data, owned
+        checks = go_checks(cfg)
+        d0 = datetime.date.fromisoformat(day)
+        o_de, zone = berlin(scan.eastern_to_utc(datetime.datetime.combine(d0, sess[0])))
+        c_de, _ = berlin(scan.eastern_to_utc(datetime.datetime.combine(d0, sess[1])))
+        push(cfg, "%sBörse offen" % tag, "Das Labor handelt bis %s Uhr %s automatisch mit Spielgeld (alle Regeln, "
+             "jede mit 100 €). Go-Ampel: %d von %d grün. Rückblick nach Börsenschluss." % (
+                 c_de.strftime("%H:%M"), zone, sum(1 for c in checks if c["ok"]), len(checks)),
+             priority=2, tags=["sunrise"])
+        return True, "Börsenstart gemeldet", steps, data, owned
     if closed and data.get("eod") != day:
         lab = lab_module()
         sm = lab.day_summary(day) or {}
@@ -786,10 +899,18 @@ def do_live(cfg, now, force):
         nein = [k for k, v in decisions.items() if k.startswith(day.replace("-", "")) and v["answer"] == "nein"]
         if nein:
             lines.append("Nein gesagt: %d" % len(nein))
-        lines.append(goal_line())
-        lines.append("Lektion: " + lesson(day))
-        lines.append(OPEN_QUESTIONS)
-        push(cfg, "Auswertung Börsenschluss %s" % date_de(day), "\n".join(lines), priority=3, tags=["memo"])
+        lines = close_report(cfg, day, sm)
+        push(cfg, "%sRückblick %s" % (tag, date_de(day)), "\n".join(lines), priority=3, tags=["memo"])
+        checks = go_checks(cfg)
+        if all(c["ok"] for c in checks) and data.get("go_sent") is None:
+            data["go_sent"] = day
+            push(cfg, "GO für den Simulator", "Alle %d Prüfpunkte der Go-Ampel sind grün. Nächster Schritt: Simulator "
+                 "mit 100 € wie echt starten – sag Claude im Chat Bescheid." % len(checks), priority=5,
+                 tags=["green_circle"])
+        if xd == xn:
+            push(cfg, "Experiment beendet: Tag %d von %d" % (xd, xn), "Das 100-Tage-Experiment ist fertig. Go-Ampel: "
+                 "%d von %d grün. Die Auswertung steht auf der Webseite." % (sum(1 for c in checks if c["ok"]),
+                                                                            len(checks)), priority=4, tags=["checkered_flag"])
         return True, "Tagesbilanz: %s Trades" % de_int(sm.get("n_trades", 0)), steps, data, owned
     if events or new_answers or force or et.minute % 30 < 10:   # sonst kein Commit, höchstens alle 30 Minuten
         return True, "%s Trades, %s offen" % (de_int(ld["trades"]), de_int(ld["open"])), steps, data, owned
@@ -1230,6 +1351,9 @@ def main(argv=None):
         # für die Schleife im Workflow: 0 = heute ist noch etwas fällig (Handelstag, 7:25 bis 19:35 Uhr ET)
         et = scan.to_eastern(utcnow())
         ok = scan.trading_day(et.date())[0] and datetime.time(7, 25) <= et.time() <= datetime.time(19, 35)
+        xd, xn = experiment_day(config(), et.date().isoformat())
+        if xd is not None and xd > xn:
+            ok = False                     # 100-Tage-Experiment beendet
         print("Zeitfenster offen" if ok else "Zeitfenster zu")
         return 0 if ok else 1
 

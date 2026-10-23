@@ -15,17 +15,17 @@
 :root{
   --bg:#f2f2f7;--card:#ffffff;--card2:#f7f7fa;--text:#111114;--sub:#6b6b73;--line:#e3e3e8;
   --blue:#0a66d8;--green:#14915a;--red:#d1342f;--orange:#c86a00;--chip:#e9e9ef;--tab:rgba(249,249,251,.92);
-  --greenbg:#e5f5ec;--redbg:#fbe9e8;--orangebg:#fdf1e0;--bluebg:#e6effc;
+  --greenbg:#e5f5ec;--redbg:#fbe9e8;--orangebg:#fdf1e0;--bluebg:#e6effc;--s1:#2a78d6;--s2:#eb6834;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#000;--card:#1c1c1e;--card2:#242427;--text:#f4f4f6;--sub:#9a9aa2;--line:#2e2e32;
   --blue:#4a9bff;--green:#35c27c;--red:#ff6b62;--orange:#ffa53d;--chip:#2c2c30;--tab:rgba(22,22,24,.92);
-  --greenbg:#123222;--redbg:#3a1614;--orangebg:#3a2810;--bluebg:#10243f;
+  --greenbg:#123222;--redbg:#3a1614;--orangebg:#3a2810;--bluebg:#10243f;--s1:#3987e5;--s2:#d95926;
 }}
 :root[data-theme="dark"]{
   --bg:#000;--card:#1c1c1e;--card2:#242427;--text:#f4f4f6;--sub:#9a9aa2;--line:#2e2e32;
   --blue:#4a9bff;--green:#35c27c;--red:#ff6b62;--orange:#ffa53d;--chip:#2c2c30;--tab:rgba(22,22,24,.92);
-  --greenbg:#123222;--redbg:#3a1614;--orangebg:#3a2810;--bluebg:#10243f;
+  --greenbg:#123222;--redbg:#3a1614;--orangebg:#3a2810;--bluebg:#10243f;--s1:#3987e5;--s2:#d95926;
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.4 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif}
@@ -72,6 +72,10 @@ nav button.on{color:var(--blue)}
 .bar .dot{position:absolute;top:50%;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--text);border:2px solid var(--card)}
 .legend{display:flex;justify-content:space-between;font-size:12px;color:var(--sub)}
 svg.spark{width:100%;height:auto;display:block;margin-top:8px}
+.chart{position:relative;touch-action:pan-y}.chart svg{width:100%;height:auto;display:block;margin-top:8px;overflow:visible}
+.tip{position:absolute;top:0;pointer-events:none;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:4px 8px;font-size:12px;color:var(--text);white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.15);display:none;z-index:2}
+.keys{display:flex;gap:14px;font-size:12px;color:var(--sub);margin-top:6px}.keys i{display:inline-block;width:12px;height:3px;border-radius:2px;vertical-align:middle;margin-right:5px}
+details.tbl summary{font-size:13px;color:var(--blue);margin-top:8px;cursor:pointer}details.tbl table{width:100%;font-size:12px;border-collapse:collapse;margin-top:6px}details.tbl td{padding:3px 0;border-top:1px solid var(--line)}details.tbl td:not(:first-child){text-align:right}
 .sheet-bg{position:fixed;inset:0;background:rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:opacity .2s;z-index:9}
 .sheet{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-radius:18px 18px 0 0;padding:18px 18px calc(24px + env(safe-area-inset-bottom));transform:translateY(100%);transition:transform .25s;z-index:10;max-width:720px;margin:0 auto;max-height:85vh;overflow-y:auto;-webkit-overflow-scrolling:touch}
 .open .sheet-bg{opacity:1;pointer-events:auto}.open .sheet{transform:none}
@@ -99,11 +103,9 @@ details summary::-webkit-details-marker{display:none}
 "use strict";
 const $ = s => document.querySelector(s);
 const KEY_STORE = "trader-key-v1";
-let D = null, TAB = "heute", FILTER = "alle", SUB = null, FEES = true, DAY = null, LABF = "alle";
+let D = null, TAB = "start", FILTER = "alle", SUB = null, FEES = true, DAY = null, LABF = "alle";
 const TABS = [
-  ["heute","Heute",'<path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>'],
-  ["konto","Konto",'<rect x="3" y="6" width="18" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18" stroke="currentColor" stroke-width="2"/><path d="M15 15h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'],
-  ["trades","Trades",'<path d="M4 18l5-6 4 3 7-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 6h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'],
+  ["start","Übersicht",'<rect x="3" y="12" width="4" height="8" rx="1" fill="currentColor"/><rect x="10" y="7" width="4" height="13" rx="1" fill="currentColor"/><rect x="17" y="3" width="4" height="17" rx="1" fill="currentColor"/>'],
   ["labor","Labor",'<path d="M9 3h6M10 3v6L4.5 18.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>'],
   ["mehr","Mehr",'<circle cx="5" cy="12" r="2" fill="currentColor"/><circle cx="12" cy="12" r="2" fill="currentColor"/><circle cx="19" cy="12" r="2" fill="currentColor"/>'],
 ];
@@ -197,21 +199,21 @@ async function refresh(){
 
 // ------------------------------------------------------------ Gerüst
 function show(){
-  try{ TAB = localStorage.getItem("trader-tab") || "heute"; }catch(e){}
-  if(!["heute","konto","trades","labor","mehr"].includes(TAB)) TAB = "heute";
+  try{ TAB = localStorage.getItem("trader-tab") || "start"; }catch(e){}
+  if(!["start","labor","mehr"].includes(TAB)) TAB = "start";
   const nav = $("#nav"); nav.classList.remove("hide");
   nav.innerHTML = TABS.map(([id,label,icon]) => '<button data-t="'+id+'" onclick="go(\''+id+'\')"><svg viewBox="0 0 24 24">'+icon+'</svg>'+label+'</button>').join("");
   render();
   try{ if(!localStorage.getItem("trader-intro")) showIntro(); }catch(e){}
-  setInterval(() => { if(TAB==="heute") renderHeute(true); }, 30000);
+  setInterval(() => { if(TAB==="mehr" && SUB==="heute") renderHeute(true); }, 30000);
   setInterval(refresh, 5*60000);
   document.addEventListener("visibilitychange", () => { if(!document.hidden) refresh(); });
 }
 function go(t){ TAB = t; SUB = null; try{ localStorage.setItem("trader-tab", t); }catch(e){} render(); window.scrollTo(0,0); }
 function render(){
   document.querySelectorAll("nav button").forEach(b => b.classList.toggle("on", b.dataset.t===TAB));
-  if(TAB==="mehr" && SUB) return ({markt:renderMarkt, lernen:renderLernen, woche:renderWoche, echt:renderEcht, aend:renderAend, regeln:renderRegeln, glossar:renderGlossar, ticker:renderTicker, einst:renderEinst})[SUB]();
-  ({heute:renderHeute, konto:renderKonto, trades:renderTrades, labor:renderLabor, mehr:renderMehr})[TAB]();
+  if(TAB==="mehr" && SUB) return ({heute:renderHeute, konto:renderKonto, trades:renderTrades, markt:renderMarkt, lernen:renderLernen, woche:renderWoche, echt:renderEcht, aend:renderAend, regeln:renderRegeln, glossar:renderGlossar, ticker:renderTicker, einst:renderEinst, muster:renderMuster})[SUB]();
+  ({start:renderStart, labor:renderLabor, mehr:renderMehr})[TAB]();
 }
 function head(title, right){
   const back = TAB==="mehr" && SUB ? '<button class="term" style="text-decoration:none;font-weight:600" onclick="SUB=null;render();window.scrollTo(0,0)">‹ Mehr</button>' : '<div class="sub">'+esc(D.phase)+' · Spielgeld</div>';
@@ -291,7 +293,7 @@ function renderHeute(onlyClock){
   h += goalCard();
   h += '<div class="card"><div class="small">Nächster Schritt</div><div class="next">'+esc(nextStep(ck))+'</div></div>';
   const S = D.sim||{}, KS = S.live || S.vorschau;
-  if(KS){ const R = KS.fee; h += '<button class="card" style="display:block;width:calc(100% - 32px);text-align:left;border:0;color:inherit;font:inherit;cursor:pointer" onclick="go(\'konto\')"><div class="row"><span class="small">'+(S.live?"Simulator-Konto":"Simulator-Vorschau (Backtest)")+'</span><span class="sub">›</span></div><div class="row"><span class="big" style="font-size:28px">'+nf2.format(R.equity)+' €</span><b class="num '+cls(R.pnl)+'">'+eur(R.pnl)+'</b></div><div class="small">mit 1 € Gebühr je Order · ohne Gebühr: '+nf2.format(KS.no_fee.equity)+' €</div></button>'; }
+  if(KS){ const R = KS.fee; h += '<button class="card" style="display:block;width:calc(100% - 32px);text-align:left;border:0;color:inherit;font:inherit;cursor:pointer" onclick="go(\'mehr\');sub(\'konto\')"><div class="row"><span class="small">'+(S.live?"Simulator-Konto":"Simulator-Vorschau (Backtest)")+'</span><span class="sub">›</span></div><div class="row"><span class="big" style="font-size:28px">'+nf2.format(R.equity)+' €</span><b class="num '+cls(R.pnl)+'">'+eur(R.pnl)+'</b></div><div class="small">mit 1 € Gebühr je Order · ohne Gebühr: '+nf2.format(KS.no_fee.equity)+' €</div></button>'; }
   const champ = D.lab && D.lab.variants && D.lab.variants[0];
   if(champ) h += '<div class="card"><div class="small">Tagesplan</div><div class="next" style="font-size:16px">Top-Variante: '+esc(champ.label)+'</div>'+
     '<div class="small" style="margin-top:6px">So gehen Profis vor – und das System auch: nur Trades nach dieser Regel, '+g("Stopp")+' immer gesetzt, nach der Tagesgrenze ist Schluss, alles vor Börsenschluss verkauft.</div></div>';
@@ -470,6 +472,11 @@ function renderMehr(){
   const row = (id,t,s,badge) => '<button class="item" style="display:block;width:100%;text-align:left;border:0;background:none;color:inherit;font:inherit;cursor:pointer" onclick="sub(\''+id+'\')"><div class="row"><b>'+t+'</b><span>'+(badge||"")+' <span class="sub">›</span></span></div><div class="small">'+s+'</div></button>';
   let h = head("Mehr");
   h += '<div class="list">'+
+    row("heute","Live heute","Börsenuhr, laufende Spielgeld-Trades, Vorschläge")+
+    row("trades","Trades","Tagebuch mit Erklärung und Notizen")+
+    row("konto","Simulator-Konto","100 € wie echt, mit Grenzen und Gebühren")+
+    row("muster","Gelernte Muster","Wann gewinnen die Regeln – und wann nicht?")+
+    '</div><div class="list">'+
     row("markt","Markt","Morgen-Scan, Opening-Range-Ausbrüche, News, Pelosi")+
     row("ticker","Ticker-Analyse", D.ticker&&D.ticker.symbol?"Zuletzt: "+esc(D.ticker.symbol):"Eine bestimmte Aktie prüfen lassen")+
     row("woche","Wochen-Rückblick", w?("Woche "+esc(w.week)):"kommt am Freitagabend", w?'<span class="badge b-blue">neu</span>':"")+
@@ -565,7 +572,7 @@ const INTRO = [
   ["Willkommen im Trader-Labor","Hier testet ein Computer-System Daytrading-Regeln mit Spielgeld. Nichts kostet echtes Geld."],
   ["Heute","Zeigt, ob die Börse offen ist, was als Nächstes passiert und welche Spielgeld-Trades gerade laufen."],
   ["Vorschläge","Wenn eine Regel auslöst, bekommst du einen Push mit Ja und Nein. Ja heißt: Dieser Trade zählt auch für dich."],
-  ["Konto und Labor","Konto zeigt 100 € Spielgeld wie echt, mit Grenzen. Labor zeigt, welche Regeln an ungesehenen Tagen funktionieren."],
+  ["Übersicht","Hier siehst du auf einen Blick: Läuft alles? Welcher Tag des 100-Tage-Experiments? Wie stehen die Go-Ampel und das 100-€-Tageskonto?"],
   ["Lernen","Blaue, unterstrichene Wörter kannst du antippen. Unter „Mehr“ findest du Glossar, Profi-Regeln und den Wochen-Rückblick."],
 ];
 let INTRO_I = 0;
@@ -617,6 +624,124 @@ async function saveNote(pid, id){
     openSheet("<h3>Notiz gespeichert</h3><p>Sie steht ab dem nächsten Lauf (≤ 10 Min. im Handel) dauerhaft im Tagebuch.</p>");
     render();
   }catch(e){ openSheet("<h3>Nicht gespeichert</h3><p>Keine Verbindung. Bitte noch einmal versuchen.</p>"); }
+}
+
+// ------------------------------------------------------------ Übersicht (Startseite)
+// Diagramme (Regeln aus dem Skill „dataviz“): dünne Balken mit 4px-Rundung nur am Datenende, 2px Abstand,
+// Achsen zurückhaltend, Antippen zeigt den Wert, Farben der Linien geprüft (blau/orange, auch bei Farbschwäche).
+const CH = {}; let chN = 0;
+function chartTip(id, ev){
+  const c = CH[id], box = document.getElementById(id); if(!c||!box) return;
+  const r = box.querySelector("svg").getBoundingClientRect(), x = (ev.touches?ev.touches[0].clientX:ev.clientX) - r.left;
+  const i = Math.max(0, Math.min(c.n-1, Math.round((x/r.width*c.W - c.x0)/c.step)));
+  const t = box.querySelector(".tip"); t.innerHTML = c.text(i); t.style.display = "block";
+  const px = (c.x0 + i*c.step)/c.W*r.width; t.style.left = Math.max(0, Math.min(r.width - t.offsetWidth, px - t.offsetWidth/2))+"px";
+  const cr = box.querySelector(".cross"); if(cr){ cr.setAttribute("x1", c.x0+i*c.step); cr.setAttribute("x2", c.x0+i*c.step); cr.style.display = ""; }
+}
+function chartOff(id){ const b=document.getElementById(id); if(!b) return; b.querySelector(".tip").style.display="none"; const cr=b.querySelector(".cross"); if(cr) cr.style.display="none"; }
+function chartBox(id, svg, meta){
+  CH[id] = meta;
+  return '<div class="chart" id="'+id+'" onpointermove="chartTip(\''+id+'\',event)" onpointerdown="chartTip(\''+id+'\',event)" onpointerleave="if(event.pointerType==\'mouse\')chartOff(\''+id+'\')"><div class="tip"></div>'+svg+'</div>';
+}
+function axisY(lo, hi, y, W, fmt){
+  return [lo, hi].map(v=>'<text x="'+W+'" y="'+(y(v)+(v===hi?10:-3)).toFixed(1)+'" text-anchor="end" font-size="10" fill="var(--sub)">'+esc(fmt(v))+'</text>').join("");
+}
+function barChart(vals, base, dates){
+  if(!vals.length) return "";
+  const id = "ch"+(++chN), W=340, H=150, top=12, bot=18, L=4, R=44; // rechts Platz für die Achsen-Beschriftung
+  const lo=Math.min(base,...vals), hi=Math.max(base,...vals), step=(W-L-R)/vals.length, bw=Math.max(1, step-2);
+  const y=v=>top+(hi-v)/Math.max(1e-9,hi-lo)*(H-top-bot);
+  let s='<line x1="0" x2="'+(W-R)+'" y1="'+y(base).toFixed(1)+'" y2="'+y(base).toFixed(1)+'" stroke="var(--sub)" stroke-width="1"/>';
+  vals.forEach((v,i)=>{
+    const x0=L+i*step+1, y0=y(base), y1=y(v), h=Math.abs(y1-y0), rr=Math.min(4, bw/2, h);
+    const up=v>=base, col=up?"var(--green)":"var(--red)";
+    // Rechteck vom Startwert aus, gerundet nur am Ende (oben bei Plus, unten bei Minus)
+    const d = up ? "M"+x0+" "+y0+"V"+(y1+rr)+"Q"+x0+" "+y1+" "+(x0+rr)+" "+y1+"H"+(x0+bw-rr)+"Q"+(x0+bw)+" "+y1+" "+(x0+bw)+" "+(y1+rr)+"V"+y0+"Z"
+                 : "M"+x0+" "+y0+"V"+(y1-rr)+"Q"+x0+" "+y1+" "+(x0+rr)+" "+y1+"H"+(x0+bw-rr)+"Q"+(x0+bw)+" "+y1+" "+(x0+bw)+" "+(y1-rr)+"V"+y0+"Z";
+    s+='<path d="'+d+'" fill="'+col+'"/>';
+  });
+  s+=axisY(lo, hi, y, W, v=>nf0.format(v)+" €");
+  s+='<line class="cross" y1="'+top+'" y2="'+(H-bot)+'" stroke="var(--sub)" stroke-width="1" style="display:none"/>';
+  s+='<text x="0" y="'+(H-4)+'" font-size="10" fill="var(--sub)">'+esc(dateDE(dates[0]))+'</text><text x="'+(W-R)+'" y="'+(H-4)+'" font-size="10" text-anchor="end" fill="var(--sub)">'+esc(dateDE(dates[dates.length-1]))+'</text>';
+  const svg='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Tageskonto je Tag, Start '+base+' €">'+s+'</svg>';
+  return chartBox(id, svg, {W, n:vals.length, x0:L+1+bw/2, step, text:i=>'<b>'+esc(dateDE(dates[i]))+'</b> · '+nf2.format(vals[i])+' € <span class="'+cls(vals[i]-base)+'">('+eur(vals[i]-base)+')</span>'});
+}
+function multiLine(series, dates){
+  // series: [{name, vals, col}] – höchstens zwei Linien, gleiche Achse
+  const n = series[0].vals.length; if(!n) return "";
+  const id = "ch"+(++chN), W=340, H=150, top=12, bot=18, L=4, R=44; // rechts Platz für die Achsen-Beschriftung
+  const all = [0].concat(...series.map(s=>s.vals)), lo=Math.min(...all), hi=Math.max(...all);
+  const step=(W-L-R)/Math.max(1,n-1), x=i=>L+i*step, y=v=>top+(hi-v)/Math.max(1e-9,hi-lo)*(H-top-bot);
+  let s='<line x1="0" x2="'+(W-R)+'" y1="'+y(0).toFixed(1)+'" y2="'+y(0).toFixed(1)+'" stroke="var(--sub)" stroke-dasharray="3 4" stroke-width="1"/>';
+  s+=axisY(lo, hi, y, W, v=>eur(v));
+  s+='<line class="cross" y1="'+top+'" y2="'+(H-bot)+'" stroke="var(--sub)" stroke-width="1" style="display:none"/>';
+  series.forEach(se=>{ s+='<path d="'+se.vals.map((v,i)=>(i?"L":"M")+x(i).toFixed(1)+" "+y(v).toFixed(1)).join(" ")+'" fill="none" stroke="'+se.col+'" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>'; });
+  s+='<text x="0" y="'+(H-4)+'" font-size="10" fill="var(--sub)">'+esc(dateDE(dates[0]))+'</text><text x="'+(W-R)+'" y="'+(H-4)+'" font-size="10" text-anchor="end" fill="var(--sub)">'+esc(dateDE(dates[n-1]))+'</text>';
+  const svg='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Summe aller Tage">'+s+'</svg>';
+  const keys='<div class="keys">'+series.map(se=>'<span><i style="background:'+se.col+'"></i>'+esc(se.name)+' <b class="num" style="color:var(--text)">'+eur(se.vals[n-1])+'</b></span>').join("")+'</div>';
+  return chartBox(id, svg, {W, n, x0:L, step, text:i=>'<b>'+esc(dateDE(dates[i]))+'</b><br>'+series.map(se=>'<i style="display:inline-block;width:8px;height:3px;background:'+se.col+';vertical-align:middle"></i> '+esc(se.name)+': '+eur(se.vals[i])).join("<br>")})+keys;
+}
+function renderStart(){
+  const ck = clock(), ex = D.experiment||{}, go = D.go||[], okN = go.filter(c=>c.ok).length;
+  const bad = D.status.filter(s=>s.ok===false);
+  const last = D.status.map(s=>s.ran_at).filter(Boolean).sort().pop();
+  const mins = last ? Math.round((Date.now()-new Date(last))/60000) : null;
+  const stale = ck.state==="offen" && mins!=null && mins>40;
+  let h = head("Übersicht");
+  // Status
+  h += '<div class="card"><div class="row"><span class="badge '+(bad.length||stale?"b-red":"b-green")+'">'+(bad.length?"Problem":stale?"Verzögert":"Alles läuft")+'</span>'+
+       '<span class="small">'+(mins!=null?"letzter Lauf "+ago(last):"noch kein Lauf")+'</span></div>'+
+       '<div class="next" style="margin-top:8px">'+esc(ck.text)+'</div><div class="small">'+esc(ck.next)+'</div>'+
+       bad.map(s=>'<p class="small neg">'+esc(s.name)+': '+esc((s.steps[0]||{}).detail||s.summary)+'</p>').join("")+'</div>';
+  // Experiment
+  if(ex.day){ const p=Math.min(100,Math.round(ex.day/ex.days*100));
+    h += '<div class="card"><div class="row"><b>100-Tage-Experiment</b><span class="big num" style="font-size:26px">Tag '+int(ex.day)+'<span class="sub" style="font-size:16px"> / '+int(ex.days)+'</span></span></div>'+
+      '<div class="bar"><div class="fill" style="left:0;width:'+p+'%;background:var(--blue)"></div></div><div class="small">Jeden Handelstag starten alle Regeln automatisch mit je 100 € Spielgeld. Das System lernt aus jedem Trade.</div></div>'; }
+  // Go-Ampel
+  h += '<div class="card"><div class="row"><b>Go-Ampel</b><span class="badge '+(okN===go.length&&go.length?"b-green":"b-orange")+'">'+okN+' von '+go.length+' grün</span></div>'+
+    go.map(c=>'<div class="row" style="margin-top:6px"><span class="small"><span style="color:'+(c.ok?"var(--green)":"var(--red)")+'">●</span> '+esc(c.name)+'</span><span class="small num">'+esc(c.detail)+'</span></div>').join("")+
+    '<p class="small" style="margin-top:8px">Erst wenn alles grün ist, kommt der Push „GO für den Simulator“.</p></div>';
+  // Diagramme
+  const ld = (D.live_days||[]).filter(d=>d.acc!=null);
+  let vals, valsFee, lab, title;
+  if(ld.length){ vals=ld.map(d=>d.acc); valsFee=ld.map(d=>d.acc_fee); lab=ld.map(d=>d.date); title="Tageskonto der Top-Regel (live)"; }
+  else { const a=(D.accounts||{})[D.champion]; const ds=a?a.days.filter(x=>x[3]>0):[]; vals=ds.map(x=>x[1]); valsFee=ds.map(x=>x[2]); lab=ds.map(x=>x[0]); title="Tageskonto der Top-Regel (Rückblick, 60 Tage)"; }
+  if(vals.length){
+    const up=vals.filter(v=>v>100).length, cum=[]; vals.reduce((s,v)=>{ s+=v-100; cum.push(s); return s; },0);
+    const cumF=[]; valsFee.reduce((s,v)=>{ s+=v-100; cumF.push(s); return s; },0);
+    h += '<h2>'+esc(title)+'</h2><div class="card"><div class="small">Jeder Balken ist ein Tag: Start mit 100 €, Ende des Tages. Grün = Plus, Rot = Minus. Antippen zeigt den Wert.</div>'+barChart(vals,100,lab)+
+      '<div class="row" style="margin-top:6px"><span class="small">Tage im Plus</span><b>'+up+' von '+vals.length+'</b></div>'+
+      '<details class="tbl"><summary>Als Tabelle</summary><table><tr><td class="small">Tag</td><td class="small">ohne Gebühr</td><td class="small">mit Gebühr</td></tr>'+
+      vals.map((v,k)=>'<tr><td>'+esc(dateDE(lab[k]))+'</td><td class="num '+cls(v-100)+'">'+nf2.format(v)+' €</td><td class="num '+cls(valsFee[k]-100)+'">'+nf2.format(valsFee[k])+' €</td></tr>').reverse().join("")+'</table></details></div>';
+    h += '<h2>Summe aller Tage</h2><div class="card"><div class="small">Gewinn und Verlust aller Tage zusammengezählt.</div>'+multiLine([{name:"ohne Gebühr", vals:cum, col:"var(--s1)"},{name:"mit 1 € Gebühr je Order", vals:cumF, col:"var(--s2)"}], lab)+'</div>';
+  }
+  // Statistik
+  const L = D.live && D.live.date===D.market.date ? D.live : null;
+  const tot = (D.live_days||[]).reduce((s,d)=>s+(d.n_all||0),0), nc=(D.live_days||[]).reduce((s,d)=>s+(d.n_champ||0),0), wc=(D.live_days||[]).reduce((s,d)=>s+(d.wins||0),0);
+  const passed=((D.lab||{}).variants||[]).filter(v=>v.passed).length, pats=(D.patterns||[]).filter(p=>p.holds).length;
+  const tile=(l,v,s)=>'<div class="card kpi"><div class="label">'+l+'</div><div class="val">'+v+'</div><div class="small">'+s+'</div></div>';
+  h += '<h2>Statistik</h2><div class="grid2">'+tile("Trades heute", L?int(L.n_trades):"–", L?"Stand "+esc(L.as_of):"Börse zu")+tile("Trades gesamt", int(tot), "seit Tag 1, alle Regeln")+
+       tile("Trefferquote Top-Regel", nc?nf0.format(wc/nc*100)+" %":"–", nc?int(nc)+" Trades live":"noch keine Live-Trades")+tile("Regeln bestanden", passed+" / "+(((D.lab||{}).variants||[]).length), int(pats)+" Muster gelernt")+'</div>';
+  // Muster
+  const good=(D.patterns||[]).filter(p=>p.holds).slice(0,3), badp=(D.patterns||[]).filter(p=>p.avoid).slice(-2);
+  if(good.length||badp.length){
+    h += '<h2>Was das System gelernt hat</h2><div class="list">'+good.map(p=>'<div class="item"><div class="row"><span><span class="pos">▲</span> '+esc(p.name)+': <b>'+esc(p.label)+'</b></span><span class="num pos">'+pct(p.avg_test)+'</span></div></div>').join("")+
+      badp.map(p=>'<div class="item"><div class="row"><span><span class="neg">▼</span> '+esc(p.name)+': <b>'+esc(p.label)+'</b></span><span class="num neg">'+pct(p.avg_test)+'</span></div></div>').join("")+'</div>'+
+      '<div class="btns" style="margin:0 16px"><button class="btn ghost" onclick="go(\'mehr\');sub(\'muster\')">Alle Muster</button></div>';
+  }
+  h += '<div class="card small" style="margin-top:14px">Spielgeld. Pushes kommen nur zum Börsenstart und als Rückblick nach Börsenschluss. Daten '+ago(D.generated_at)+'.</div>';
+  $("#app").innerHTML = h;
+}
+function renderMuster(){
+  let h = head("Gelernte Muster");
+  h += '<div class="card small">Das System speichert zu jedem Trade die Umstände (Uhrzeit, Volumen, Lücke, Gesamtmarkt, Schwankung, Stopp-Abstand, Kurs, Wochentag) und vergleicht: Ø-Ergebnis je Trade an Lerntagen und an ungesehenen Prüftagen. „Hält“ heißt: an beiden im Plus, mit mindestens 200 Prüf-Trades.</div>';
+  const groups = {}; (D.patterns||[]).forEach(p=>{ (groups[p.name]=groups[p.name]||[]).push(p); });
+  Object.entries(groups).forEach(([name,ps])=>{
+    h += '<h2>'+esc(name)+'</h2><div class="list">'+ps.map(p=>'<div class="item"><div class="row"><b>'+esc(p.label)+'</b><span class="badge '+(p.holds?"b-green":p.avoid?"b-red":"")+'">'+(p.holds?"hält":p.avoid?"meiden":"offen")+'</span></div>'+
+      '<div class="small">Lerntage '+pct(p.avg_train)+' ('+int(p.n_train)+') · Prüftage '+pct(p.avg_test)+' ('+int(p.n_test)+')'+(p.champ_n?' · Top-Regel '+pct(p.champ_avg)+' ('+int(p.champ_n)+')':'')+'</div></div>').join("")+'</div>';
+  });
+  if(!(D.patterns||[]).length) h += '<div class="card sub">Die Muster entstehen beim nächsten Labor-Lauf nach Börsenschluss.</div>';
+  $("#app").innerHTML = h;
 }
 
 load();

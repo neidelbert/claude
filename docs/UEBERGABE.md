@@ -1,6 +1,6 @@
 # Übergabe – Trader-System (für jede neue Claude-Sitzung zuerst lesen)
 
-Stand: 23.10.2026, 05:00 Uhr. Repo: `neidelbert/claude` (öffentlich), Branch `main`.
+Stand: 23.10.2026, nachmittags. Repo: `neidelbert/claude` (öffentlich), Branch `main`.
 
 ## Worum es geht
 Lukas (Anfänger, programmiert nicht) baut mit Claude ein KI-gestütztes Daytrading-System für US-Aktien.
@@ -15,13 +15,15 @@ Den ganzen Plan enthält `docs/TRADER-PLAN.md`, das Interview mit Lukas ist dort
 | Zeitplan | `.github/workflows/trader-system.yml`: Zeitplan-Läufe starten eine **Schleife** (`teil=schleife`), die selbst im 10-Minuten-Takt `system.py auto` ausführt, solange `system.py window` offen ist (Handelstag 7:25–19:35 Uhr ET, max. 5,5 h); Webseite über `tools/trader/seite.sh` | Mo–Fr, Crons als Starter |
 | Morgen-Scan | `scan.py` (Daily), `news.py`, `ptr.py` (Pelosi) | ab ca. 8:00 Uhr ET |
 | ORB-Scan | `scan.py orb` | ab ca. 10:10 Uhr ET |
-| Labor live | `lab.py live`: Spielgeld-Trades aller Varianten, Vorschlags-Pushes mit Ja/Nein | alle 10 Min. im Handel |
-| Auswertung Börsenstart | `open_summary` in `do_live` (Plan, Weg zum Ziel, offene Fragen) | erster Live-Lauf nach 9:35 Uhr ET |
-| Auswertung Börsenschluss | Tagesbilanz in `do_live` (+ Weg zum Ziel, offene Fragen) | ca. 16:00–17:00 Uhr ET |
-| Labor-Rangliste | `lab.py fetch/run`: 58 Varianten an 60 Tagen 5-Min.-Kerzen, Lern-/Prüftage | nach Börsenschluss |
+| **100-Tage-Experiment** | Start 23.10.2026 (`experiment` in `trader/system.json`). Jeder Handelstag: alle 58 Regeln mit je 100 € Tageskonto (20 € je Trade, mit/ohne 1 € Gebühr), ~300 Aktien der Watchlist. Nach Tag 100 hört `do_live` auf. `experiment_day`, `live_days`, `go_checks`, `close_report` in `system.py` | jeden Handelstag automatisch |
+| Labor live | `lab.py live`: Spielgeld-Trades aller Varianten, jeder Trade mit Merkmalen (`features`) | alle 10 Min. im Handel |
+| Push Börsenstart | „Tag X von 100 · Börse offen“ (kurz: Handel bis, Go-Ampel) | erster Live-Lauf nach 9:35 Uhr ET |
+| Push Börsenschluss | „Tag X von 100 · Rückblick“ (`close_report`: Trades, Tageskonto, beste Regel, Muster, Go-Ampel); einmalig „GO für den Simulator“, wenn alle 6 Punkte grün | ca. 16:00–17:00 Uhr ET |
+| Andere Pushes | aus (`push_*` in `trader/system.json`); nur Preisalarme und Fehler bleiben an | – |
+| Labor-Rangliste | `lab.py fetch/run`: 58 Varianten an 60 Tagen 5-Min.-Kerzen, Lern-/Prüftage, Tageskonten der Top 10 (`accounts`), gelernte Muster (`patterns`, „hält“ ab 200 Prüf-Trades) | nach Börsenschluss |
 | Wochen-Rückblick | `week_review` in `system.py` | letzter Handelstag der Woche |
 | Simulator | `sim.py` (Vorschau = Backtest der Top-Variante; live ab `sim.start_date`) | in jeder Webseite |
-| Webseite | `site/index.html` + `tools/trader/site.py` → Branch `gh-pages` | nach jedem Commit eines Laufs |
+| Webseite | `site/index.html` + `tools/trader/site.py` → Branch `gh-pages`. Tabs: Übersicht (Status, Tag X/100, Go-Ampel, Tageskonto-Balken, Summe mit/ohne Gebühr, Statistik, Muster), Labor, Mehr (Live heute, Trades, Konto, Muster, …). Diagramme nach Skill `dataviz` (Antippen zeigt Werte, Tabelle, geprüfte Farben `--s1`/`--s2`) | nach jedem Commit eines Laufs |
 | Prüfungen | `pruefen.yml` (YAML, Python, Selbsttest bei jedem Push), `seite-pruefen.yml` (live, manuell) | – |
 
 ## Adressen und Kanäle
@@ -63,7 +65,8 @@ Den ganzen Plan enthält `docs/TRADER-PLAN.md`, das Interview mit Lukas ist dort
 - **Lukas' offene Fragen** stehen in `docs/AUSWERTUNG.md`: Simulator-Start, Broker und Gebühren, Push-Kanal privat,
   Push-Menge, SEC-Agent, KI-Zweitmeinung ab Monat 2, Datenschutz der Antworten.
 - **Nächste Ideen** in `docs/VERBESSERUNGEN.md` (Punkte-Tabelle).
-- **Auswertungen** kommen auf Lukas' Wunsch nur zum Börsenstart und Börsenschluss als Push, nicht nachts.
+- **Pushes** auf Lukas' Wunsch nur zum Börsenstart (kurz) und Börsenschluss (Rückblick), nicht nachts.
+- **Go-Ampel (6 Punkte):** ≥ 40 Live-Tage; Tageskonto der Top-Regel an ≥ 60 % der Tage im Plus; Zufallswert ≥ 2; nach Gebühr im Plus; Top-Regel ≥ 10 Tage dieselbe; Top-Regel hat Prüftage bestanden. Grün heißt nur: Simulator starten (Lukas entscheidet), nie echtes Geld.
 - **Geplante Erinnerung dieser Sitzung:** 23.10. 14:50 UTC (Kontrolle des ersten Zeitplan-Tags). Eine neue Sitzung sieht sie mit `list_triggers`.
 
 ## Wie eine neue Sitzung weitermacht
@@ -100,3 +103,4 @@ Den ganzen Plan enthält `docs/TRADER-PLAN.md`, das Interview mit Lukas ist dort
 | 23.10. | #27 | Übergabe-Dokument, CLAUDE.md verweist darauf |
 | 23.10. | #28 | Auswertung zum Börsenstart und Börsenschluss statt nachts (5:40-Erinnerung gelöscht); dieses Änderungsprotokoll |
 | 23.10. | #29 | Schleife im Workflow: GitHub startete Zeitpläne nur alle 25–45 Min. (4 statt ~16 Läufe bis 10:50 ET) → ein Lauf arbeitet selbst im 10-Min.-Takt; `system.py window`, `seite.sh` |
+| 23.10. | #30 | 100-Tage-Experiment (Lukas: „jeden Tag automatisch bis Tag 100“, 100 € je Tag, aus jedem Trade lernen, sicheres Go): Tageskonto je Regel, Trade-Merkmale und Muster-Suche, Go-Ampel, nur 2 Pushes am Tag (Start kurz, Schluss Rückblick), Übersicht mit Status, Diagrammen und Statistik; Diagramme nach Skill `dataviz` |

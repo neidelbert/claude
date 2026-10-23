@@ -52,11 +52,16 @@ jobs:
       NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
       NTFY_REPLY_TOPIC: ${{ secrets.NTFY_REPLY_TOPIC }}
       SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+      # Ja/Nein und Notizen verschlüsselt speichern (ohne Secret Klartext) und KI-Zweitmeinung (ohne Secret aus)
+      DATEN_SCHLUESSEL: ${{ secrets.DATEN_SCHLUESSEL }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Python-Pakete (Verschlüsselung und KI)
+        run: pip install -q cryptography anthropic
       - name: Kerzen-Cache fürs Labor laden
         uses: actions/cache/restore@v4
         with:
@@ -87,7 +92,6 @@ jobs:
           if [ "$TEIL" = "schleife" ]; then
             # GitHub startet Zeitpläne oft 30–45 Minuten zu spät. Darum arbeitet ein Lauf selbst im 10-Minuten-Takt,
             # solange heute etwas fällig ist (höchstens 5,5 Stunden; danach übernimmt der nächste Zeitplan-Lauf).
-            pip install -q cryptography
             ende=$(( $(date +%s) + 19800 ))
             while python3 tools/trader/system.py window; do
               out=$(mktemp)

@@ -40,5 +40,9 @@
   "experiment": {
     "start": "2026-10-23",
     "days": 100
+  },
+  "_ai": "KI-Zweitmeinung: ab ai.start (JJJJ-MM-TT) bewertet Claude zum Börsenstart die News der Morgen-Kandidaten. Braucht das GitHub-Secret ANTHROPIC_API_KEY, sonst nur eine Erinnerung im Push. null = aus",
+  "ai": {
+    "start": "2026-11-23"
   }
 }

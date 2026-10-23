@@ -40,6 +40,12 @@ T = "trader"                         # Datenordner, relativ zu ROOT
 _spec = importlib.util.spec_from_file_location("trader_scan", os.path.join(HERE, "scan.py"))
 scan = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(scan)
+_vspec = importlib.util.spec_from_file_location("trader_vault", os.path.join(HERE, "vault.py"))
+vault = importlib.util.module_from_spec(_vspec)
+_vspec.loader.exec_module(vault)
+_aspec = importlib.util.spec_from_file_location("trader_ai", os.path.join(HERE, "ai.py"))
+ai = importlib.util.module_from_spec(_aspec)
+_aspec.loader.exec_module(ai)
 
 DEFAULT_CONFIG = {
     "ntfy_server": "https://ntfy.sh",
@@ -57,6 +63,7 @@ DEFAULT_CONFIG = {
     "push_lab": True,                # Labor-Rangliste am Abend
     "push_weekly": True,             # Wochen-Rückblick
     "experiment": {"start": None, "days": 100},
+    "ai": {"start": None},
 }
 
 # Zeitfenster in New Yorker Zeit, in denen „auto“ einen Teil startet.
@@ -140,7 +147,7 @@ def date_de(iso):
 def read_json(path, default=None):
     try:
         with open(path, encoding="utf-8") as fh:
-            return json.load(fh)
+            return vault.unwrap(json.load(fh))
     except (OSError, ValueError):
         return default
 
@@ -502,7 +509,7 @@ def week_review(cfg, now):
             focus_eur[r["id"]]["n"] += r["n"]
     ranked = sorted(focus_eur.items(), key=lambda kv: kv[1]["eur"], reverse=True)
     dec = read_json(p(T, "lab", "decisions.json"), {}) or {}
-    wk = [k for k in dec if k[:8] >= monday.strftime("%Y%m%d") and k != "test"]
+    wk = [k for k in dec if k[:8].isdigit() and k[:8] >= monday.strftime("%Y%m%d")]
     lk_eur, lk_n = 0.0, 0
     for i in range(5):
         doc = read_json(p(T, "lab", "live", "%s.json" % (monday + datetime.timedelta(days=i)).isoformat()), {}) or {}
@@ -674,9 +681,50 @@ def close_report(cfg, day, sm):
     pats = [x for x in res.get("patterns", []) if x.get("holds")]
     if pats:
         lines.append("Gelernt: %d Muster halten, z. B. %s: %s" % (len(pats), pats[0]["name"], pats[0]["label"]))
+    ai_line = ai_result_line(day)
+    if ai_line:
+        lines.append(ai_line)
     checks = go_checks(cfg)
     lines.append("Go-Ampel: %d von %d grün" % (sum(1 for c in checks if c["ok"]), len(checks)))
     return lines
+
+
+def ai_result_line(day):
+    """Wie liefen heute die Trades auf Aktien, die die KI morgens positiv bzw. negativ bewertet hat?"""
+    rated = {r["symbol"]: r["news"] for r in (read_json(p(T, "lab", "ai", "%s.json" % day), {}) or {}).get("ratings", [])}
+    if not rated:
+        return None
+    doc = read_json(p(T, "lab", "live", "%s.json" % day), {}) or {}
+    by = {}
+    for t in doc.get("trades", []):
+        if t["symbol"] in rated and not t.get("open"):
+            by.setdefault(rated[t["symbol"]], []).append(t["pct"])
+    parts = ["%s Ø %s %% (%d)" % (k, de_num(sum(v) / len(v)), len(v)) for k, v in sorted(by.items()) if v]
+    return "KI-Zweitmeinung: " + ("; ".join(parts) if parts else "keine Trades auf bewerteten Aktien")
+
+
+def ai_morning(cfg, day):
+    """Einmal zum Börsenstart: KI bewertet die News der Morgen-Kandidaten. -> kurze Zeile für den Push oder None."""
+    if ai.due_without_key(cfg, day):
+        return ("Erinnerung: Die KI-Zweitmeinung ist ab heute vorgesehen, aber der Claude-API-Schlüssel fehlt noch. "
+                "Frag Claude im Chat nach der Anleitung.")
+    if not ai.enabled(cfg, day):
+        return None
+    path = p(T, "lab", "ai", "%s.json" % day)
+    if read_json(path, None):
+        return None
+    news = ((read_json(status_path("morning"), {}) or {}).get("data") or {}).get("news") or {}
+    syms = news.get("tickers") or []
+    if not syms:
+        return None
+    try:
+        rows = ai.review(syms, news.get("items") or [])
+    except Exception as e:
+        return "KI-Zweitmeinung fehlgeschlagen: %s" % str(e)[:120]
+    write_json(path, {"date": day, "model": ai.MODEL, "ratings": rows})
+    n = {k: sum(1 for r in rows if r["news"] == k) for k in ("positiv", "neutral", "negativ")}
+    return "KI-Zweitmeinung zu %d Aktien: %d positiv, %d neutral, %d negativ" % (len(rows), n["positiv"], n["neutral"],
+                                                                               n["negativ"])
 
 
 def experiment_day(cfg, day):
@@ -772,10 +820,30 @@ def open_summary(cfg, day):
     return lines
 
 
+SIM_ID = "SIMSTART"     # Antwort-ID für den Push „GO für den Simulator“
+
+
+def sim_started(cfg):
+    return bool((cfg.get("sim") or {}).get("start_date") or read_json(p(T, "lab", "sim_start.json"), None))
+
+
+def start_sim(cfg, decisions, day):
+    """Lukas hat auf „GO für den Simulator“ Ja getippt -> Simulator zählt ab dem nächsten Tag."""
+    a = decisions.get(SIM_ID) or {}
+    if a.get("answer") != "ja" or sim_started(cfg):
+        return False
+    start = (datetime.date.fromisoformat(day) + datetime.timedelta(days=1)).isoformat()
+    write_json(p(T, "lab", "sim_start.json"), {"start": start, "answer_ts": a.get("ts")})
+    push(cfg, "Simulator startet", "Danke für dein Ja. Der Simulator zählt ab %s mit 100 € wie echt. Weiter Spielgeld, "
+         "der Stand steht auf der Webseite unter „Konto“." % date_de(start), priority=3, tags=["rocket"])
+    return True
+
+
 def do_live(cfg, now, force):
     et = scan.to_eastern(now)
     day = et.date().isoformat()
-    owned = ["lab/live/%s.json" % day, "lab/decisions.json", "lab/notes.json", "status/live.json"]
+    owned = ["lab/live/%s.json" % day, "lab/decisions.json", "lab/notes.json", "status/live.json", "lab/sim_start.json",
+             "lab/ai/%s.json" % day]
     steps = []
     old = read_json(status_path("live"), {}) or {}
     data = dict(old.get("data") or {}) if old.get("date_et") == day else {}
@@ -791,7 +859,7 @@ def do_live(cfg, now, force):
                 decisions[pid] = a
                 new_answers += 1
         if new_answers:
-            write_json(dec_path, decisions)
+            write_json(dec_path, vault.seal(decisions))
         notes_path = p(T, "lab", "notes.json")
         notes = read_json(notes_path, {}) or {}
         known = {n["id"] for lst in notes.values() for n in lst}
@@ -799,10 +867,12 @@ def do_live(cfg, now, force):
         for n in fresh:
             notes.setdefault(n["pid"], []).append({"id": n["id"], "text": n["text"], "ts": n["ts"]})
         if fresh:
-            write_json(notes_path, notes)
+            write_json(notes_path, vault.seal(notes))
             new_answers += len(fresh)
     except Exception as e:
         step(steps, "Antworten lesen", False, str(e)[:200])
+    if start_sim(cfg, decisions, day):
+        new_answers += 1
     rc, ld, reason = run_json("live", ["lab.py", "live"], timeout=900)
     if ld is None or ld.get("error"):
         step(steps, "Labor live", False, (ld or {}).get("error") or reason)
@@ -873,9 +943,11 @@ def do_live(cfg, now, force):
         d0 = datetime.date.fromisoformat(day)
         o_de, zone = berlin(scan.eastern_to_utc(datetime.datetime.combine(d0, sess[0])))
         c_de, _ = berlin(scan.eastern_to_utc(datetime.datetime.combine(d0, sess[1])))
+        extra = ai_morning(cfg, day)
         push(cfg, "%sBörse offen" % tag, "Das Labor handelt bis %s Uhr %s automatisch mit Spielgeld (alle Regeln, "
-             "jede mit 100 €). Go-Ampel: %d von %d grün. Rückblick nach Börsenschluss." % (
-                 c_de.strftime("%H:%M"), zone, sum(1 for c in checks if c["ok"]), len(checks)),
+             "jede mit 100 €). Go-Ampel: %d von %d grün. Rückblick nach Börsenschluss.%s" % (
+                 c_de.strftime("%H:%M"), zone, sum(1 for c in checks if c["ok"]), len(checks),
+                 "\n" + extra if extra else ""),
              priority=2, tags=["sunrise"])
         return True, "Börsenstart gemeldet", steps, data, owned
     if closed and data.get("eod") != day:
@@ -902,11 +974,12 @@ def do_live(cfg, now, force):
         lines = close_report(cfg, day, sm)
         push(cfg, "%sRückblick %s" % (tag, date_de(day)), "\n".join(lines), priority=3, tags=["memo"])
         checks = go_checks(cfg)
-        if all(c["ok"] for c in checks) and data.get("go_sent") is None:
-            data["go_sent"] = day
-            push(cfg, "GO für den Simulator", "Alle %d Prüfpunkte der Go-Ampel sind grün. Nächster Schritt: Simulator "
-                 "mit 100 € wie echt starten – sag Claude im Chat Bescheid." % len(checks), priority=5,
-                 tags=["green_circle"])
+        if all(c["ok"] for c in checks) and data.get("go_sent") is None and not sim_started(cfg):
+            data["go_sent"] = day   # jeden Abend erneut, solange die Ampel grün ist und Lukas nicht Ja getippt hat
+            push(cfg, "GO für den Simulator", "Alle %d Prüfpunkte der Go-Ampel sind grün. Simulator mit 100 € wie echt "
+                 "starten (Grenzen 3/8/30 €, 1 € Gebühr je Order)? „Ja“ startet ihn am nächsten Handelstag. Es ist "
+                 "weiter Spielgeld, kein echtes Geld." % len(checks), priority=5, tags=["green_circle"],
+                 actions=yes_no_actions(cfg, SIM_ID))
         if xd == xn:
             push(cfg, "Experiment beendet: Tag %d von %d" % (xd, xn), "Das 100-Tage-Experiment ist fertig. Go-Ampel: "
                  "%d von %d grün. Die Auswertung steht auf der Webseite." % (sum(1 for c in checks if c["ok"]),
@@ -933,7 +1006,7 @@ def render_live(out):
     for vid in doc.get("focus", []):
         pv = doc["per_variant"].get(vid, {"n": 0, "open": 0, "eur": 0})
         out.append("| %s | %s | %s | %s € |" % (labels.get(vid, vid), pv["n"], pv["open"], de_num(pv["eur"])))
-    lk = doc.get("lukas", [])
+    lk = [] if vault.enabled() else doc.get("lukas", [])     # verschlüsselt: nicht in die öffentliche Übersicht
     if lk:
         out += ["", "**Deine Ja-Trades heute** (Einstieg zum ersten Kurs nach deiner Antwort):", "",
                 "| Aktie | Regel | Antwort | Einstieg | Stand | Ergebnis |", "|---|---|---|---|---|---|"]

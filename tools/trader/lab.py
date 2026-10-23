@@ -34,6 +34,9 @@ ROOT = os.path.dirname(os.path.dirname(HERE))
 _spec = importlib.util.spec_from_file_location("trader_scan", os.path.join(HERE, "scan.py"))
 scan = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(scan)
+_vspec = importlib.util.spec_from_file_location("trader_vault", os.path.join(HERE, "vault.py"))
+vault = importlib.util.module_from_spec(_vspec)
+_vspec.loader.exec_module(vault)
 
 CACHE = os.path.join(ROOT, ".cache", "lab", "bars")   # nicht im Git, über actions/cache gesammelt
 OUT = os.path.join(ROOT, "trader", "lab", "results.json")
@@ -101,13 +104,36 @@ def variants():
         for atr_stop in (0.1, 0.2):
             for tgt in (0.0, 2.0):
                 out.append({"strategy": "sip", "top": top, "atr_stop": atr_stop, "target_r": tgt})
+    base = {vid(v): v for v in out}
+    for bid in FILTER_BASES:                            # dieselben Regeln, aber nur bei gutem Muster (weniger Gebühren)
+        for fl in FILTERS:
+            out.append(dict(base[bid], filt=fl))
     for v in out:
         v["id"] = vid(v)
         v["label"] = label(v)
     return out
 
 
+# Muster-Filter: feste Bedingungen beim Einstieg (nur Wissen bis zum Einstieg, kein Blick in die Zukunft)
+FILTERS = {"v4": "nur bei Volumen über 4× normal", "v2": "nur bei Volumen über 2× normal",
+           "frueh": "nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt"}
+FILTER_BASES = ["orb-30-low-2R-v0", "orb-15-low-2R-v0", "gap-2-v2-2R", "bounce-gapdown3-daylow-2R",
+                "sip-top20-atr0.1-eod", "orbrank-top20-2R"]
+
+
+def filt_ok(fl, f):
+    if fl == "v4":
+        return (f.get("rv") or 0) >= 4
+    if fl == "v2":
+        return (f.get("rv") or 0) >= 2
+    if fl == "frueh":
+        return f["k"] < 30 and f["risk"] >= 0.5
+    return True
+
+
 def vid(v):
+    if v.get("filt"):
+        return vid({k: x for k, x in v.items() if k != "filt"}) + "-f" + v["filt"]
     if v["strategy"] == "orb":
         return "orb-%d-%s-%sR-v%s" % (v["or_min"], v["stop"], fmt(v["target_r"]), fmt(v["rvol"]))
     if v["strategy"] == "gap":
@@ -130,6 +156,8 @@ def de(x):
 
 
 def label(v):
+    if v.get("filt"):
+        return label({k: x for k, x in v.items() if k != "filt"}) + " · " + FILTERS[v["filt"]]
     if v["strategy"] == "orb":
         return "Opening-Range-Ausbruch %d Min · %s · Ziel %sR%s" % (
             v["or_min"], ORB_STOPS[v["stop"]], de(v["target_r"]),
@@ -519,11 +547,11 @@ def features(bars, i, entry, stop, c, day):
     """Umstände eines Trades beim Einstieg – daraus lernt das System, wann Regeln gewinnen."""
     k = bars[i][0]
     pc = c.get("prev_close")
-    first6 = bars[:6] if len(bars) >= 6 else bars
-    vol6 = sum(b[5] for b in first6)
+    m = min(6, i + 1)                    # nur Kerzen bis zum Einstieg (Kerze i ist beim Einstieg geschlossen)
+    vol = sum(b[5] for b in bars[:m])
     spy = c.get("spy") or {}
     return {"k": k, "gap": round((bars[0][1] / pc - 1) * 100, 2) if pc else None,
-            "rv": round(vol6 / c["vol6"], 2) if c.get("vol6") else None,
+            "rv": round(vol / (c["vol6"] * m / 6), 2) if c.get("vol6") else None,
             "mkt": (spy[k][1] > spy[k][0]) if k in spy else None,
             "atrp": round(c["atr"] / entry * 100, 2) if c.get("atr") else None,
             "risk": round((entry - stop) / entry * 100, 2), "price": round(entry, 2),
@@ -552,7 +580,7 @@ def day_account(trades, fee=0.0):
 
 BUCKETS = [
     ("k", "Uhrzeit des Einstiegs", [(None, 12, "bis 10:30 Uhr ET"), (12, 30, "10:30–12:00 Uhr ET"), (30, None, "ab 12:00 Uhr ET")]),
-    ("rv", "Volumen der ersten 30 Min.", [(None, 1, "weniger als normal"), (1, 2, "1–2× normal"), (2, 4, "2–4× normal"),
+    ("rv", "Volumen bis zum Einstieg", [(None, 1, "weniger als normal"), (1, 2, "1–2× normal"), (2, 4, "2–4× normal"),
                                           (4, None, "über 4× normal")]),
     ("gap", "Lücke zum Vortag", [(None, -2, "unter −2 %"), (-2, 0, "−2 bis 0 %"), (0, 2, "0 bis +2 %"), (2, None, "über +2 %")]),
     ("mkt", "Gesamtmarkt (SPY)", [(True, True, "im Plus"), (False, False, "im Minus")]),
@@ -660,8 +688,10 @@ def cmd_run(a):
                     continue
                 t = simulate(bars, sig[0], sig[1], v["target_r"], end_k, *sig[2:])
                 if t:
-                    t.update(symbol=sym, date=d, test=d in test_days,
-                             f=features(bars, sig[0], t["entry"], t["stop"], ctx[d], d))
+                    f = features(bars, sig[0], t["entry"], t["stop"], ctx[d], d)
+                    if v.get("filt") and not filt_ok(v["filt"], f):
+                        continue
+                    t.update(symbol=sym, date=d, test=d in test_days, f=f)
                     trades[v["id"]].append(t)
     rows = []
     for v in vs:
@@ -803,10 +833,12 @@ def cmd_live(a):
             t = simulate(bars, sig[0], sig[1], v["target_r"], end_k, *sig[2:])
             if not t:
                 continue
+            f = features(bars, sig[0], t["entry"], t["stop"], ctx, day)
+            if v.get("filt") and not filt_ok(v["filt"], f):
+                continue
             t.update(variant=v["id"], strategy=v["strategy"], symbol=sym, in_at=clock(t["in_k"]),
                      out_at=None if t["open"] else clock(t["out_k"]), last=round(bars[-1][4], 4),
-                     eur=round(t["pct"] / 100 * STAKE, 2), key="%s|%s" % (v["id"], sym),
-                     f=features(bars, sig[0], t["entry"], t["stop"], ctx, day))
+                     eur=round(t["pct"] / 100 * STAKE, 2), key="%s|%s" % (v["id"], sym), f=f)
             trades.append(t)
     path = os.path.join(LIVE_DIR, day + ".json")
     try:
@@ -852,8 +884,13 @@ def cmd_live(a):
     charts = {sym: [[b[0], round(b[4], 4)] for b in today_bars[sym]] for sym in sorted(chart_syms) if sym in today_bars}
     doc = {"date": day, "charts": charts, "as_of": "%s Uhr ET" % et.strftime("%H:%M"), "symbols": len(today), "failed": len(failed),
            "focus": focus, "labels": {k: labels[k] for k in focus if k in labels}, "per_variant": per,
-           "n_trades": n_all, "n_open": n_open_all, "lukas": lukas, "accounts": accounts,
+           "n_trades": n_all, "n_open": n_open_all, "lukas": [] if vault.enabled() else lukas,
+           "lukas_n": len(lukas), "accounts": accounts,
            "trades": sorted(trades, key=lambda t: (t["in_k"], t["symbol"], t["variant"]))}
+    if vault.enabled():                    # deine Ja-Trades verschlüsselt speichern
+        doc["lukas_enc"] = vault.seal(lukas)
+        chart_syms = {t["symbol"] for t in trades if t["variant"] in focus}
+        doc["charts"] = {k: c for k, c in charts.items() if k in chart_syms}
     os.makedirs(LIVE_DIR, exist_ok=True)
     with open(path, "w", encoding="utf-8") as fh:
         json.dump(doc, fh, ensure_ascii=False, indent=1)
@@ -872,7 +909,7 @@ def lukas_trades(day, trades, today_bars, focus, end_k):
     Liegt der Kurs dann schon am Stopp oder Ziel: „verpasst“."""
     try:
         with open(DECISIONS, encoding="utf-8") as fh:
-            dec = json.load(fh)
+            dec = vault.unwrap(json.load(fh))
     except (OSError, ValueError):
         return []
     prefix = day.replace("-", "") + "-"
@@ -993,9 +1030,11 @@ def cmd_selftest(a):
     acc, n_done = day_account([{"in_k": 3, "out_k": 10, "pct": 10.0}, {"in_k": 4, "out_k": 12, "pct": -5.0}])
     assert acc == 101.0 and n_done == 2, acc                 # 20 € +10 % und 20 € −5 %
     assert day_account([{"in_k": 3, "out_k": 10, "pct": 10.0}], 1.0)[0] == 100.0   # Gewinn 2 € − 2 € Gebühr
+    assert filt_ok("v4", {"rv": 4.2}) and not filt_ok("v4", {"rv": 3.9, "k": 5, "risk": 1})
+    assert filt_ok("frueh", {"k": 20, "risk": 0.6}) and not filt_ok("frueh", {"k": 30, "risk": 0.6})
     n = len(variants())
-    assert n == 58 and len({v["id"] for v in variants()}) == n, n
-    print("Selbsttest ok: Einstieg, Ziel, Stopp vor Ziel, Ausstieg zum Schluss, offener Live-Trade, 58 Varianten (mit Stocks in Play, Volumen-Rangliste und Markt-Filter).")
+    assert n == 76 and len({v["id"] for v in variants()}) == n, n
+    print("Selbsttest ok: Einstieg, Ziel, Stopp vor Ziel, Ausstieg zum Schluss, offener Live-Trade, Muster-Filter, 76 Varianten (mit Stocks in Play, Volumen-Rangliste, Markt- und Muster-Filter).")
     return 0
 
 

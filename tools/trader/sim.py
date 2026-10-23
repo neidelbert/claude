@@ -35,6 +35,12 @@ def settings():
         cfg = {}
     out = dict(DEFAULTS)
     out.update({k: v for k, v in (cfg.get("sim") or {}).items() if not k.startswith("_")})
+    if not out["start_date"]:   # Lukas hat im Push „GO für den Simulator“ Ja getippt
+        try:
+            with open(os.path.join(T, "lab", "sim_start.json"), encoding="utf-8") as fh:
+                out["start_date"] = json.load(fh).get("start")
+        except (OSError, ValueError):
+            pass
     return out
 
 

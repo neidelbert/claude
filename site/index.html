@@ -420,7 +420,7 @@ function renderLernen(){
   h += '<h2>Lektion des Tages</h2><div class="card">'+esc(D.learn.lesson)+'</div>';
   h += '<h2>So funktioniert das System</h2><div class="card">'+D.learn.how.map(([t,x],i)=>'<div class="step" style="margin:'+(i?"12px":"0")+' 0 0"><div class="n">'+(i+1)+'</div><div><b>'+esc(t)+'</b><div class="small">'+esc(x)+'</div></div></div>').join("")+'</div>';
   h += '<h2>Die drei Phasen</h2><div class="list">'+
-    '<div class="item"><div class="row"><b>1. Testphase</b><span class="badge b-blue">jetzt</span></div><div class="small">Spielgeld ohne Limit. 58 Varianten laufen parallel, das System misst und lernt.</div></div>'+
+    '<div class="item"><div class="row"><b>1. Testphase</b><span class="badge b-blue">jetzt</span></div><div class="small">Spielgeld ohne Limit. 76 Varianten laufen parallel, das System misst und lernt.</div></div>'+
     '<div class="item"><div class="row"><b>2. Simulator</b><span class="badge">später</span></div><div class="small">100 € Spielgeld wie echt: höchstens 3 € Verlust pro Trade, 8 € pro Tag, 30 € pro Monat, mit Gebühren.</div></div>'+
     '<div class="item"><div class="row"><b>3. Echtes Geld</b><span class="badge">frühestens nach 2 Monaten</span></div><div class="small">Nur wenn der Simulator 2 Monate am Stück im Plus war – und nur mit deinem Ja zu jeder Order.</div></div></div>';
   h += '<h2>Alle Lektionen</h2><div class="list">'+D.learn.lessons.map(l=>'<div class="item small">'+esc(l)+'</div>').join("")+'</div>';
@@ -722,6 +722,11 @@ function renderStart(){
   const tile=(l,v,s)=>'<div class="card kpi"><div class="label">'+l+'</div><div class="val">'+v+'</div><div class="small">'+s+'</div></div>';
   h += '<h2>Statistik</h2><div class="grid2">'+tile("Trades heute", L?int(L.n_trades):"–", L?"Stand "+esc(L.as_of):"Börse zu")+tile("Trades gesamt", int(tot), "seit Tag 1, alle Regeln")+
        tile("Trefferquote Top-Regel", nc?nf0.format(wc/nc*100)+" %":"–", nc?int(nc)+" Trades live":"noch keine Live-Trades")+tile("Regeln bestanden", passed+" / "+(((D.lab||{}).variants||[]).length), int(pats)+" Muster gelernt")+'</div>';
+  // KI-Zweitmeinung (ab 23.11., nur mit API-Schlüssel)
+  if(D.ai && (D.ai.ratings||[]).length){
+    const col={positiv:"pos",negativ:"neg"};
+    h += '<h2>KI-Zweitmeinung '+esc(dateDE(D.ai.date))+'</h2><div class="list">'+D.ai.ratings.map(r=>'<div class="item"><div class="row"><b>'+esc(r.symbol)+'</b><span class="'+(col[r.news]||"")+'">'+esc(r.news)+' · Risiko '+esc(r.risk)+'</span></div><div class="small">'+esc(r.why)+'</div></div>').join("")+'</div>';
+  }
   // Muster
   const good=(D.patterns||[]).filter(p=>p.holds).slice(0,3), badp=(D.patterns||[]).filter(p=>p.avoid).slice(-2);
   if(good.length||badp.length){

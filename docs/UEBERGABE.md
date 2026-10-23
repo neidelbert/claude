@@ -15,7 +15,7 @@ Den ganzen Plan enthält `docs/TRADER-PLAN.md`, das Interview mit Lukas ist dort
 | Zeitplan | `.github/workflows/trader-system.yml`: Zeitplan-Läufe starten eine **Schleife** (`teil=schleife`), die selbst im 10-Minuten-Takt `system.py auto` ausführt, solange `system.py window` offen ist (Handelstag 7:25–19:35 Uhr ET, max. 5,5 h); Webseite über `tools/trader/seite.sh` | Mo–Fr, Crons als Starter |
 | Morgen-Scan | `scan.py` (Daily), `news.py`, `ptr.py` (Pelosi) | ab ca. 8:00 Uhr ET |
 | ORB-Scan | `scan.py orb` | ab ca. 10:10 Uhr ET |
-| **100-Tage-Experiment** | Start 23.10.2026 (`experiment` in `trader/system.json`). Jeder Handelstag: alle 58 Regeln mit je 100 € Tageskonto (20 € je Trade, mit/ohne 1 € Gebühr), ~300 Aktien der Watchlist. Nach Tag 100 hört `do_live` auf. `experiment_day`, `live_days`, `go_checks`, `close_report` in `system.py` | jeden Handelstag automatisch |
+| **100-Tage-Experiment** | Start 23.10.2026 (`experiment` in `trader/system.json`). Jeder Handelstag: alle 76 Regeln mit je 100 € Tageskonto (20 € je Trade, mit/ohne 1 € Gebühr), ~300 Aktien der Watchlist. Nach Tag 100 hört `do_live` auf. `experiment_day`, `live_days`, `go_checks`, `close_report` in `system.py` | jeden Handelstag automatisch |
 | Labor live | `lab.py live`: Spielgeld-Trades aller Varianten, jeder Trade mit Merkmalen (`features`) | alle 10 Min. im Handel |
 | Push Börsenstart | „Tag X von 100 · Börse offen“ (kurz: Handel bis, Go-Ampel) | erster Live-Lauf nach 9:35 Uhr ET |
 | Push Börsenschluss | „Tag X von 100 · Rückblick“ (`close_report`: Trades, Tageskonto, beste Regel, Muster, Go-Ampel); einmalig „GO für den Simulator“, wenn alle 6 Punkte grün | ca. 16:00–17:00 Uhr ET |
@@ -25,6 +25,10 @@ Den ganzen Plan enthält `docs/TRADER-PLAN.md`, das Interview mit Lukas ist dort
 | Simulator | `sim.py` (Vorschau = Backtest der Top-Variante; live ab `sim.start_date`) | in jeder Webseite |
 | Webseite | `site/index.html` + `tools/trader/site.py` → Branch `gh-pages`. Tabs: Übersicht (Status, Tag X/100, Go-Ampel, Tageskonto-Balken, Summe mit/ohne Gebühr, Statistik, Muster), Labor, Mehr (Live heute, Trades, Konto, Muster, …). Diagramme nach Skill `dataviz` (Antippen zeigt Werte, Tabelle, geprüfte Farben `--s1`/`--s2`) | nach jedem Commit eines Laufs |
 | Prüfungen | `pruefen.yml` (YAML, Python, Selbsttest bei jedem Push), `seite-pruefen.yml` (live, manuell) | – |
+
+| KI-Zweitmeinung | `tools/trader/ai.py` (Claude Opus 5.5, Anthropic-SDK, strukturierte Ausgabe): ab `ai.start` (23.11.) und mit Secret `ANTHROPIC_API_KEY` bewertet Claude zum Börsenstart die News der Morgen-Kandidaten → `trader/lab/ai/<Tag>.json`; Rückblick vergleicht Ø-Ergebnis je Bewertung. Ohne Schlüssel: Erinnerung im Börsenstart-Push | Börsenstart |
+| Verschlüsselung | `tools/trader/vault.py`: mit Secret `DATEN_SCHLUESSEL` werden `decisions.json`, `notes.json` und `lukas` in den Live-Dateien (`lukas_enc`) AES-GCM-verschlüsselt; `read_json`/`rj` entschlüsseln automatisch. Ohne Secret Klartext | jeder Lauf |
+| Simulator-Start | Push „GO für den Simulator“ hat Ja/Nein (ID `SIMSTART`); Ja → `trader/lab/sim_start.json` (`sim.py` liest es) | nach grüner Go-Ampel |
 
 ## Adressen und Kanäle
 - **Webseite:** https://neidelbert.github.io/claude/. Die Daten sind verschlüsselt und lassen sich nur mit Lukas' Passwort öffnen.
@@ -105,3 +109,4 @@ Den ganzen Plan enthält `docs/TRADER-PLAN.md`, das Interview mit Lukas ist dort
 | 23.10. | #29 | Schleife im Workflow: GitHub startete Zeitpläne nur alle 25–45 Min. (4 statt ~16 Läufe bis 10:50 ET) → ein Lauf arbeitet selbst im 10-Min.-Takt; `system.py window`, `seite.sh` |
 | 23.10. | #30 | 100-Tage-Experiment (Lukas: „jeden Tag automatisch bis Tag 100“, 100 € je Tag, aus jedem Trade lernen, sicheres Go): Tageskonto je Regel, Trade-Merkmale und Muster-Suche, Go-Ampel, nur 2 Pushes am Tag (Start kurz, Schluss Rückblick), Übersicht mit Status, Diagrammen und Statistik; Diagramme nach Skill `dataviz` |
 | 23.10. | #31 | Stand nach dem ersten Labor-Lauf mit neuem Code (0 bestanden, 1 Muster hält); Webseite live geprüft |
+| 23.10. | #32 | Lukas' Antworten umgesetzt: Simulator-Start per Ja im GO-Push, Muster-Filter (76 Varianten; Volumen-Merkmal jetzt ohne Blick in die Zukunft), KI-Zweitmeinung ab 23.11. (aus ohne Schlüssel), Verschlüsselung von Ja/Nein und Notizen (Secret `DATEN_SCHLUESSEL`), Workflow installiert `cryptography` + `anthropic` |

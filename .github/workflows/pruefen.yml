@@ -22,3 +22,7 @@ jobs:
         run: python3 -m py_compile tools/trader/*.py
       - name: Selbsttest Labor
         run: python3 tools/trader/lab.py selftest
+      - name: Selbsttest Verschlüsselung
+        run: |
+          pip install -q cryptography
+          python3 tools/trader/vault.py

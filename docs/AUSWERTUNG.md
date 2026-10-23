@@ -36,25 +36,19 @@
 - Neu: Notizen zu jedem Trade (Tagebuch), auf echter Infrastruktur getestet. Markt-Filter im Labor (58 Varianten).
 - Der 22.10. ist als erster Live-Tag nachträglich durchgerechnet (1.534 Spielgeld-Trades aller Varianten).
 
-## Offene Fragen an dich
-1. **Webseite:** ist online und geprüft: https://neidelbert.github.io/claude/. Das Passwort steht im Claude-Chat,
-   nicht im Repo. Speichere sie auf dem iPhone über Teilen → „Zum Home-Bildschirm“.
-2. **Ja/Nein-Test:** Hast du im Test-Push auf „Ja“ oder „Nein“ getippt? Dann prüfe ich, ob die Antwort angekommen ist.
-3. **Simulator-Start:** Ab wann soll der echte Simulator zählen? Mein Vorschlag: sobald eine Variante 4 Wochen live im
-   Plus bleibt. Oder soll er sofort parallel starten?
-4. **Gebühren und Kapital:** Mit 1 € je Order frisst die Gebühr jeden Gewinn. Was davon soll ich prüfen?
-   (a) Broker mit sehr kleinen Gebühren und Schnittstelle suchen
-   (b) mit mehr Kapital rechnen (z. B. 500 €)
-   (c) seltener handeln (höchstens 1 Trade pro Tag)
-5. **Push-Kanal privat machen?** Das Repo ist öffentlich, also kann jeder den Kanalnamen lesen. Ich kann dir zeigen, wie
-   du zwei Secrets (`NTFY_TOPIC`, `NTFY_REPLY_TOPIC`) mit neuen Namen anlegst.
-6. **Wie viele Pushes?** Ab heute kommen Vorschläge nur für die Top-Varianten, dazu Ausstiege und die Tagesbilanz. Wird es
-   zu viel, kann ich auf „nur Vorschläge + Tagesbilanz“ umstellen.
-7. **SEC-Meldungen (8-K)?** Dafür braucht die SEC Name und E-Mail. Optional als Secret `SEC_USER_AGENT`.
-8. **KI-Zweitmeinung ab Monat 2?** Claude würde die News zu jedem Vorschlag lesen und bewerten. Das braucht einen
-   Claude-API-Schlüssel und kostet ca. 5–10 € im Monat. Ja oder nein?
-9. **Datenschutz:** Deine Ja/Nein-Antworten liegen im Klartext im öffentlichen Repo, die Webseite ist verschlüsselt.
-   Ist das okay, oder soll ich sie auch verschlüsseln?
+## Entscheidungen von Lukas (23.10. nachmittags)
+| Frage | Entscheidung | Umsetzung (#32) |
+|---|---|---|
+| Simulator-Start | nach der Go-Ampel | Push „GO für den Simulator“ mit Ja/Nein; Ja → `trader/lab/sim_start.json`, Simulator zählt ab dem nächsten Tag |
+| Gebühren | nur Trades mit gutem Muster | 18 neue Varianten (76 statt 58): 6 Grundregeln × Filter „Volumen über 4×“, „über 2×“, „bis 12 Uhr ET und Stopp ≥ 0,5 %“ |
+| Push-Kanal privat | nein, so lassen | – |
+| KI-Zweitmeinung | ja, ab Monat 2 | ab 23.11. (`ai.start`), braucht Secret `ANTHROPIC_API_KEY`; bis dahin aus, danach Erinnerung im Börsenstart-Push. Kosten mit Claude Opus 5.5 (Effort niedrig, 1 Aufruf am Tag): unter 1 € im Monat |
+| Datenschutz | verschlüsseln | Ja/Nein, Notizen und deine Ja-Trades AES-verschlüsselt, sobald das Secret `DATEN_SCHLUESSEL` angelegt ist |
+| SEC-Meldungen | nein | – |
+
+## Noch offen
+1. **Secret `DATEN_SCHLUESSEL` anlegen** (sonst bleibt alles im Klartext): GitHub → Repo `claude` → Settings → Secrets and variables → Actions → „New repository secret“, Name `DATEN_SCHLUESSEL`, Wert: ein langes Passwort (nicht das der Webseite). Hinweis: Die alten Antworten bleiben in der Git-Geschichte lesbar, und die Antworten laufen weiter über den öffentlichen Antwortkanal (ntfy hält sie ca. 12–24 Std.).
+2. **Am 23.11.: Secret `ANTHROPIC_API_KEY`** (Schlüssel von console.anthropic.com), dann schaltet sich die KI von selbst ein.
 
 ## Zu deinem Ziel „Geld verdienen, um mehr in Claude zu investieren“
 Ehrlich gesagt: Das System kann dir zeigen, **ob** eine Regel funktioniert, aber es kann keinen Gewinn versprechen.

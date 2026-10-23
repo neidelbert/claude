@@ -13,8 +13,8 @@
   "_orb_source": "„watchlist“ = Treffer des Morgen-Scans (alle geprüft), „universe“ = alle Aktien (die 200 meistgehandelten Kandidaten geprüft)",
   "orb_source": "watchlist",
   "universe_max_age_days": 6,
-  "push_morning": true,
-  "push_orb": true,
+  "push_morning": false,
+  "push_orb": false,
   "push_alerts": true,
   "push_errors": true,
   "_site_salt": "Fester Zufallswert für die Verschlüsselung der Webseite (nicht geheim, nicht ändern: sonst muss das Passwort neu eingegeben werden)",
@@ -30,5 +30,15 @@
     "fee_eur": 1.0,
     "min_position": 20.0,
     "start_date": null
+  },
+  "_push": "Lukas will nur zwei Pushes am Tag: Börsenstart (kurz) und Börsenschluss (Rückblick). Fehler und GO kommen immer.",
+  "push_live_events": false,
+  "push_proposals": false,
+  "push_lab": false,
+  "push_weekly": false,
+  "_experiment": "100-Tage-Experiment: Tag 1 = start (Handelstage gezählt). Danach stoppt der Zeitplan.",
+  "experiment": {
+    "start": "2026-10-23",
+    "days": 100
   }
 }

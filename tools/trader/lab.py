@@ -87,6 +87,8 @@ def variants():
         for stop in ("daylow", "pct1.5"):
             for tgt in (1.0, 2.0):
                 out.append({"strategy": "bounce", "trigger": trig, "stop": stop, "target_r": tgt})
+    for tgt in (1.5, 2.0):                              # bester Ausbruch, nur wenn der Gesamtmarkt (SPY) im Plus ist
+        out.append({"strategy": "orbmkt", "or_min": 30, "stop": "low", "target_r": tgt, "rvol": 1.5})
     for top in (20, 10):                                # Ausbruch 30 Min., nur die Aktien mit dem höchsten Startvolumen
         for tgt in (1.5, 2.0):
             out.append({"strategy": "orbrank", "or_min": 30, "stop": "low", "target_r": tgt, "top": top})
@@ -107,6 +109,8 @@ def vid(v):
         return "gap-%s-v%s-%sR" % (fmt(v["gap"]), fmt(v["rvol"]), fmt(v["target_r"]))
     if v["strategy"] == "orbrank":
         return "orbrank-top%d-%sR" % (v["top"], fmt(v["target_r"]))
+    if v["strategy"] == "orbmkt":
+        return "orbmkt-30-low-%sR-v1.5" % fmt(v["target_r"])
     if v["strategy"] == "sip":
         return "sip-top%d-atr%s-%s" % (v["top"], fmt(v["atr_stop"]), "%sR" % fmt(v["target_r"]) if v["target_r"] else "eod")
     return "bounce-%s-%s-%sR" % (v["trigger"], v["stop"], fmt(v["target_r"]))
@@ -125,6 +129,8 @@ def label(v):
         return "Opening-Range-Ausbruch %d Min · %s · Ziel %sR%s" % (
             v["or_min"], ORB_STOPS[v["stop"]], de(v["target_r"]),
             " · Volumen ≥ %s×" % de(v["rvol"]) if v["rvol"] else "")
+    if v["strategy"] == "orbmkt":
+        return "Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel %sR" % de(v["target_r"])
     if v["strategy"] == "orbrank":
         return "Ausbruch 30 Min · nur Top %d nach Volumen · Stopp Tief der Spanne · Ziel %sR" % (v["top"], de(v["target_r"]))
     if v["strategy"] == "sip":
@@ -146,6 +152,8 @@ STRATEGY_DE = {
            "Umsatz in den ersten 5 Minuten. Ist die erste 5-Minuten-Kerze grün, wird über ihrem Hoch gekauft. Der Stopp "
            "liegt eng (10 oder 20 % der durchschnittlichen Tagesschwankung ATR), verkauft wird spätestens zum Schluss. "
            "Die Studie handelte auch Leerverkäufe und mit Hebel – hier nur Kauf, ohne Hebel.",
+    "orbmkt": "Ausbruch mit Markt-Filter: der beste 30-Minuten-Ausbruch, aber nur, wenn der Gesamtmarkt (SPY) zur Signal-"
+              "Kerze über seinem Eröffnungskurs steht. Profis kaufen ungern gegen einen fallenden Markt.",
     "orbrank": "Ausbruch mit Volumen-Rangliste: wie der 30-Minuten-Ausbruch, aber nur bei den 10 oder 20 Aktien mit "
                "dem ungewöhnlichsten Volumen in den ersten 30 Minuten – so wählen Profis ihre „Stocks in Play“.",
     "bounce": "Erholung: Eine stark gefallene Aktie (RSI unter 30 oder Lücke nach unten) steigt wieder über "
@@ -396,6 +404,17 @@ def rank_sip(day_ctx):
         day_ctx[sym][1]["sip_rank"] = rank
 
 
+def mark_spy(day_ctx):
+    """SPY-Kerzen des Tages in jeden Kontext legen (für den Markt-Filter)."""
+    spy = day_ctx.get("SPY")
+    if not spy or not spy[0] or spy[0][0][0] != 0:
+        return
+    o = spy[0][0][1]
+    m = {b[0]: (o, b[4]) for b in spy[0]}
+    for _, (_, c) in day_ctx.items():
+        c["spy"] = m
+
+
 def rank_orb30(day_ctx):
     """Rangliste nach Volumen der ersten 30 Minuten im Vergleich zu den Tagen davor (ab 5 $)."""
     cands = []
@@ -414,6 +433,17 @@ def signal_orbrank(v, bars, c):
     return signal_orb({"or_min": 30, "stop": v["stop"], "rvol": 0}, bars, c)
 
 
+def signal_orbmkt(v, bars, c):
+    sig = signal_orb({"or_min": 30, "stop": v["stop"], "rvol": v["rvol"]}, bars, c)
+    spy = c.get("spy")                                  # {k: (Eröffnung des Tages, Schluss der Kerze k)}
+    if not sig or not spy:
+        return None
+    k = bars[sig[0]][0]
+    if k not in spy or spy[k][1] <= spy[k][0]:
+        return None
+    return sig
+
+
 def signal_sip(v, bars, c):
     rank = c.get("sip_rank")
     if not rank or rank > v["top"] or not c.get("atr"):
@@ -429,7 +459,8 @@ def signal_sip(v, bars, c):
     return None
 
 
-SIGNALS = {"orb": signal_orb, "gap": signal_gap, "bounce": signal_bounce, "sip": signal_sip, "orbrank": signal_orbrank}
+SIGNALS = {"orb": signal_orb, "gap": signal_gap, "bounce": signal_bounce, "sip": signal_sip, "orbrank": signal_orbrank,
+           "orbmkt": signal_orbmkt}
 
 
 def simulate(bars, i, stop, target_r, end_k, fill=None):
@@ -528,6 +559,7 @@ def cmd_run(a):
         dc = {sym: (data[sym][d], ctxs[sym][d]) for sym in data if d in data[sym]}
         rank_sip(dc)
         rank_orb30(dc)
+        mark_spy(dc)
     for sym, days in data.items():
         ctx = ctxs[sym]
         for d, bars in days.items():
@@ -655,6 +687,7 @@ def cmd_live(a):
         day_ctx[sym] = (bars, contexts(hist)[day])
     rank_sip(day_ctx)
     rank_orb30(day_ctx)
+    mark_spy(day_ctx)
     for sym, (bars, ctx) in day_ctx.items():
         for v in vs:
             sig = SIGNALS[v["strategy"]](v, bars, ctx)
@@ -838,8 +871,8 @@ def cmd_selftest(a):
     assert ts["why"] == "Schluss" and ts["target"] is None and ts["out_k"] == 76, ts
     assert signal_sip(sv, bg, {"sip_rank": 21, "atr": 2.0}) is None
     n = len(variants())
-    assert n == 56 and len({v["id"] for v in variants()}) == n, n
-    print("Selbsttest ok: Einstieg, Ziel, Stopp vor Ziel, Ausstieg zum Schluss, offener Live-Trade, 56 Varianten (mit Stocks in Play und Volumen-Rangliste).")
+    assert n == 58 and len({v["id"] for v in variants()}) == n, n
+    print("Selbsttest ok: Einstieg, Ziel, Stopp vor Ziel, Ausstieg zum Schluss, offener Live-Trade, 58 Varianten (mit Stocks in Play, Volumen-Rangliste und Markt-Filter).")
     return 0
 
 

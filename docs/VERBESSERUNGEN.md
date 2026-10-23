@@ -4,6 +4,28 @@ Geprüft wurden: Recherche (Studien, Profi-Regeln, Aufbau von Trading-Apps), die
 Lauf-Protokolle der Workflows und Browser-Tests der Oberfläche. Bewertet nach: Bringt es uns dem Ziel näher
 (ehrliche Messung → Simulator → echtes Geld)? Aufwand? Risiko?
 
+## Methode
+Jede Idee bekommt 1–3 Punkte für **Nutzen fürs Ziel** (doppelt gewichtet), **wenig Aufwand** und **wenig Risiko**
+(max. 12 Punkte). Umgesetzt wird von oben nach unten, solange bis 2:30 Uhr Zeit ist. Quellen der Ideen: Recherche
+(Zarattini/Barbon/Aziz 2024, Profi-Regeln zu Risiko und Tagebuch, Aufbau von Broker-Apps), echte Labor-Zahlen,
+Workflow-Protokolle, Browser-Tests.
+
+| Idee | Nutzen ×2 | Aufwand | Risiko | Punkte | Ergebnis |
+|---|---|---|---|---|---|
+| Webseite ohne Secret online (öffentl. Schlüssel, gh-pages) | 3 | 2 | 3 | 11 | ✓ #17 |
+| Workflow-Prüfung jeder Änderung | 3 | 3 | 3 | 12 | ✓ #15 |
+| Gebühren-Grenze je Variante | 3 | 3 | 3 | 12 | ✓ #15 |
+| „Weg zum Ziel“ auf der Startseite | 3 | 3 | 3 | 12 | ✓ #15 |
+| Markt-Filter (nur kaufen, wenn SPY im Plus) | 3 | 3 | 3 | 12 | ✓ #20 |
+| Ausbruch mit Volumen-Rangliste | 3 | 2 | 3 | 11 | ✓ #15 |
+| Live-Prüfung der Webseite | 2 | 3 | 3 | 10 | ✓ #18 |
+| Option „leise“ für Nacht-Tests | 1 | 3 | 3 | 8 | ✓ #19 |
+| Notizen zu Trades (über ntfy-Antwortkanal) | 2 | 1 | 2 | 7 | später |
+| KI-Zweitmeinung (Claude-API) | 2 | 1 | 2 | 7 | Monat 2 (Interview) |
+| Alle 7.000 Aktien live | 2 | 1 | 1 | 6 | nein: Datenlimit |
+| Leerverkauf / Hebel wie die Studie | 2 | 2 | 1 | 7 | nein: im Plan ausgeschlossen |
+| Bezahlte Echtzeitdaten | 2 | 2 | 2 | 8 | nein: 0-€-Budget |
+
 ## Umgesetzt
 | Verbesserung | Warum | Wo |
 |---|---|---|
@@ -19,6 +41,7 @@ Lauf-Protokolle der Workflows und Browser-Tests der Oberfläche. Bewertet nach: 
 | Webseite ohne Secret (öffentlicher Schlüssel) + gh-pages | Seite ging nicht online, weil Pages/Secret fehlten | #17 |
 | Live-Prüfung der Webseite | Beweis, dass die echte Adresse funktioniert | #18 |
 | Option „leise“ für manuelle Läufe | Tests in der Nacht ohne Push | #19 |
+| Markt-Filter (2 Varianten) | Profis kaufen ungern gegen einen fallenden Markt; testet den besten Ausbruch nur bei steigendem SPY | #20 |
 
 ## Geprüft, (noch) nicht umgesetzt
 | Idee | Grund |
@@ -28,5 +51,4 @@ Lauf-Protokolle der Workflows und Browser-Tests der Oberfläche. Bewertet nach: 
 | Alle 7.000 Aktien statt ~230 im Live-Labor | zu viele Anfragen an die kostenlosen Yahoo-Daten alle 10 Minuten |
 | Bezahlte Echtzeit-Daten | 0 €-Budget in Monat 1 |
 | KI-Zweitmeinung (Claude-API) | im Interview auf Monat 2 verschoben, braucht API-Schlüssel und Budget |
-| Markt-Filter (nur handeln, wenn der Gesamtmarkt steigt) | sinnvoll, erst testen, wenn genug Live-Tage da sind → Kandidat für nächste Woche |
 | Notizen zu Trades auf der Webseite | braucht einen Speicher; möglich über den ntfy-Antwortkanal → Kandidat |

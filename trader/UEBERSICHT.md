@@ -1,6 +1,6 @@
 # Trader-Übersicht
 
-Stand: Do 22.10. 19:39 Uhr ET (01:39 Uhr MESZ) · wird bei jedem Lauf neu gebaut.
+Stand: Do 22.10. 20:00 Uhr ET (02:00 Uhr MESZ) · wird bei jedem Lauf neu gebaut.
 
 NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
@@ -11,7 +11,7 @@ NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
 | Morgen-Scan | Do 22.10. 18:31 Uhr ET (00:31 Uhr MESZ) | OK – 823 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865573995)) |
 | ORB-Scan | noch nie | – |
 | Labor live | noch nie | – |
-| Labor | Do 22.10. 19:39 Uhr ET (01:39 Uhr MESZ) | OK – 3 von 52 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/39873169195)) |
+| Labor | Do 22.10. 20:00 Uhr ET (02:00 Uhr MESZ) | OK – 5 von 56 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/39875383227)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
 | Test-Push | Do 22.10. 19:24 Uhr ET (01:24 Uhr MESZ) | OK – Push gesendet ([Lauf](https://github.com/neidelbert/claude/actions/runs/39871573010)) |
@@ -109,28 +109,29 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 
 ## Labor (Testphase, Spielgeld ohne Limit)
 
-178 Aktien · 60 Handelstage · Lerntage Do 30.07.2026 bis Do 24.09.2026 · **Prüftage Fr 25.09.2026 bis Do 22.10.2026** · 52 Varianten
+178 Aktien · 60 Handelstage · Lerntage Do 30.07.2026 bis Do 24.09.2026 · **Prüftage Fr 25.09.2026 bis Do 22.10.2026** · 56 Varianten
 
 | # | Variante | Prüftage: Trades | Treffer | Ø je Trade | € bei 100 €/Trade | nach Gebühren | Zufall? | bestanden |
 |---|---|---|---|---|---|---|---|---|
-| 1 | Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5× | 179 | 46 % | +0,06 % | 10,06 € | -347,94 € | möglich | **ja** |
-| 2 | Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1,5R · Volumen ≥ 1,5× | 179 | 46 % | +0,04 % | 6,68 € | -351,32 € | möglich | **ja** |
-| 3 | Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 2R · Volumen ≥ 1,5× | 179 | 44 % | +0,01 % | 2,63 € | -355,38 € | möglich | **ja** |
-| 4 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R | 94 | 52 % | +0,71 % | 66,88 € | -121,12 € | unwahrscheinlich | nein |
-| 5 | Erholung: Lücke nach unten ≥ 3 % · Stopp 1,5 % darunter · Ziel 2R | 94 | 52 % | +0,47 % | 44,25 € | -143,75 € | unwahrscheinlich | nein |
-| 6 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 1R | 94 | 53 % | +0,27 % | 25,13 € | -162,87 € | möglich | nein |
-| 7 | Erholung: RSI unter 30 · Stopp 1,5 % darunter · Ziel 2R | 199 | 48 % | +0,14 % | 28,14 € | -369,86 € | möglich | nein |
-| 8 | Erholung: RSI unter 30 · Stopp Tagestief · Ziel 2R | 199 | 44 % | +0,13 % | 26,72 € | -371,28 € | möglich | nein |
-| 9 | Erholung: Lücke nach unten ≥ 3 % · Stopp 1,5 % darunter · Ziel 1R | 94 | 54 % | +0,10 % | 9,12 € | -178,88 € | möglich | nein |
-| 10 | Erholung: RSI unter 30 · Stopp 1,5 % darunter · Ziel 1R | 199 | 50 % | +0,09 % | 17,10 € | -380,90 € | möglich | nein |
-| 11 | Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 1,5R | 1.315 | 45 % | +0,02 % | 24,89 € | -2.605,11 € | möglich | nein |
-| 12 | Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 2R | 1.315 | 44 % | +0,02 % | 22,43 € | -2.607,57 € | möglich | nein |
+| 1 | Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5× | 183 | 47 % | +0,10 % | 18,18 € | -347,82 € | möglich | **ja** |
+| 2 | Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1,5R · Volumen ≥ 1,5× | 183 | 47 % | +0,08 % | 14,80 € | -351,20 € | möglich | **ja** |
+| 3 | Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 2R · Volumen ≥ 1,5× | 183 | 44 % | +0,05 % | 9,44 € | -356,56 € | möglich | **ja** |
+| 4 | Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1R · Volumen ≥ 1,5× | 183 | 47 % | +0,04 % | 8,00 € | -358,00 € | möglich | **ja** |
+| 5 | Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 1,5R · Volumen ≥ 1,5× | 183 | 46 % | +0,03 % | 4,61 € | -361,39 € | möglich | **ja** |
+| 6 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R | 94 | 52 % | +0,71 % | 66,42 € | -121,58 € | unwahrscheinlich | nein |
+| 7 | Erholung: Lücke nach unten ≥ 3 % · Stopp 1,5 % darunter · Ziel 2R | 94 | 52 % | +0,47 % | 44,24 € | -143,76 € | unwahrscheinlich | nein |
+| 8 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 1R | 94 | 53 % | +0,26 % | 24,68 € | -163,32 € | möglich | nein |
+| 9 | Erholung: RSI unter 30 · Stopp 1,5 % darunter · Ziel 2R | 199 | 48 % | +0,14 % | 28,09 € | -369,90 € | möglich | nein |
+| 10 | Erholung: RSI unter 30 · Stopp Tagestief · Ziel 2R | 199 | 44 % | +0,14 % | 26,82 € | -371,18 € | möglich | nein |
+| 11 | Erholung: Lücke nach unten ≥ 3 % · Stopp 1,5 % darunter · Ziel 1R | 94 | 54 % | +0,10 % | 9,12 € | -178,88 € | möglich | nein |
+| 12 | Erholung: RSI unter 30 · Stopp 1,5 % darunter · Ziel 1R | 199 | 50 % | +0,09 % | 17,10 € | -380,90 € | möglich | nein |
 
 So liest du das: Ein Trade ist ein Kauf und Verkauf am selben Tag. „Treffer“ ist der Anteil der Trades mit Plus. „€ bei 100 €/Trade“ ist die Summe, wenn jeder Trade mit 100 € gemacht worden wäre. „Zufall möglich“ heißt: zu wenige oder zu schwankende Trades, das Ergebnis kann Glück sein.
 
 - **Opening-Range-Ausbruch: Die ersten 15 oder 30 Minuten bilden eine Spanne. Schließt eine 5-Minuten-Kerze über ihrem Hoch, wird gekauft.**
 - **News-Sprung: Die Aktie öffnet deutlich über dem Vortag (meist wegen einer Nachricht) und mit viel Umsatz. Gekauft wird, wenn sie über das Hoch der ersten 5 Minuten steigt.**
 - **Stocks in Play (nach der Studie von Zarattini, Barbon und Aziz, 2024): Nur Aktien mit ungewöhnlich viel Umsatz in den ersten 5 Minuten. Ist die erste 5-Minuten-Kerze grün, wird über ihrem Hoch gekauft. Der Stopp liegt eng (10 oder 20 % der durchschnittlichen Tagesschwankung ATR), verkauft wird spätestens zum Schluss. Die Studie handelte auch Leerverkäufe und mit Hebel – hier nur Kauf, ohne Hebel.**
+- **Ausbruch mit Volumen-Rangliste: wie der 30-Minuten-Ausbruch, aber nur bei den 10 oder 20 Aktien mit dem ungewöhnlichsten Volumen in den ersten 30 Minuten – so wählen Profis ihre „Stocks in Play“.**
 - **Erholung: Eine stark gefallene Aktie (RSI unter 30 oder Lücke nach unten) steigt wieder über ihren Tagesdurchschnittspreis (VWAP).**
 
 ## Preisalarme

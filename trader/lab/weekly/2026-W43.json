@@ -1,0 +1,110 @@
+{
+  "week": "2026-W43",
+  "from": "2026-10-19",
+  "to": "2026-10-23",
+  "live_days": 2,
+  "trades": 2818,
+  "best": [
+    {
+      "id": "orb-30-low-2R-v0",
+      "label": "Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R",
+      "eur": 46.61,
+      "n": 147
+    },
+    {
+      "id": "orb-30-low-1.5R-v0",
+      "label": "Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1,5R",
+      "eur": 44.84,
+      "n": 147
+    },
+    {
+      "id": "orb-30-low-1R-v0",
+      "label": "Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1R",
+      "eur": 40.82,
+      "n": 147
+    }
+  ],
+  "worst": [
+    {
+      "id": "bounce-gapdown3-daylow-1R",
+      "label": "Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 1R",
+      "eur": -14.94,
+      "n": 16
+    },
+    {
+      "id": "bounce-gapdown3-pct1.5-1R",
+      "label": "Erholung: Lücke nach unten ≥ 3 % · Stopp 1,5 % darunter · Ziel 1R",
+      "eur": -14.41,
+      "n": 16
+    },
+    {
+      "id": "bounce-gapdown3-daylow-2R",
+      "label": "Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R",
+      "eur": -14.2,
+      "n": 16
+    }
+  ],
+  "share_positive": 55,
+  "champion": "Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R",
+  "passed": 0,
+  "decisions": {
+    "ja": 31,
+    "nein": 0
+  },
+  "lukas": {
+    "n": 31,
+    "eur": -10.73
+  },
+  "changes": [
+    {
+      "date": "2026-10-22",
+      "kind": "passed",
+      "id": "orb-30-low-1R-v1.5",
+      "text": "Neu bestanden: Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1R · Volumen ≥ 1,5×."
+    },
+    {
+      "date": "2026-10-22",
+      "kind": "passed",
+      "id": "orb-30-mid-1.5R-v1.5",
+      "text": "Neu bestanden: Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 1,5R · Volumen ≥ 1,5×."
+    },
+    {
+      "date": "2026-10-23",
+      "kind": "champion",
+      "id": "bounce-gapdown3-daylow-2R",
+      "old": "orb-30-low-2R-v1.5",
+      "text": "Neue Top-Variante: Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R (Prüftage: 146 Trades, 106,55 € bei 100 € pro Trade). Vorher: Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5×."
+    },
+    {
+      "date": "2026-10-23",
+      "kind": "failed",
+      "id": "orb-30-low-2R-v1.5",
+      "text": "Nicht mehr bestanden: Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5× (an den neuen Prüftagen nicht mehr im Plus)."
+    },
+    {
+      "date": "2026-10-23",
+      "kind": "failed",
+      "id": "orb-30-low-1.5R-v1.5",
+      "text": "Nicht mehr bestanden: Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1,5R · Volumen ≥ 1,5× (an den neuen Prüftagen nicht mehr im Plus)."
+    },
+    {
+      "date": "2026-10-23",
+      "kind": "failed",
+      "id": "orb-30-low-1R-v1.5",
+      "text": "Nicht mehr bestanden: Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1R · Volumen ≥ 1,5× (an den neuen Prüftagen nicht mehr im Plus)."
+    },
+    {
+      "date": "2026-10-23",
+      "kind": "failed",
+      "id": "orb-30-mid-2R-v1.5",
+      "text": "Nicht mehr bestanden: Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 2R · Volumen ≥ 1,5× (an den neuen Prüftagen nicht mehr im Plus)."
+    },
+    {
+      "date": "2026-10-23",
+      "kind": "failed",
+      "id": "orb-30-mid-1.5R-v1.5",
+      "text": "Nicht mehr bestanden: Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 1,5R · Volumen ≥ 1,5× (an den neuen Prüftagen nicht mehr im Plus)."
+    }
+  ],
+  "lesson": "Eine Woche ist sehr kurz. Wichtig ist nicht, ob sie im Plus war, sondern ob die Regeln eingehalten wurden und ob die Top-Varianten auch an neuen Tagen halten, was die Prüftage versprochen haben."
+}

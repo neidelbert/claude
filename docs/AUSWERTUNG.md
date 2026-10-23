@@ -32,9 +32,13 @@
   Karte „Weg zum Ziel“ auf der Startseite.
 - Pushes öffnen vorerst die Übersicht auf GitHub, bis die Webseite online ist.
 
+- Ja/Nein-Fehler behoben: Die Antworten wurden kleingeschrieben, dadurch wären Ja-Trades nie gezählt worden.
+- Neu: Notizen zu jedem Trade (Tagebuch), auf echter Infrastruktur getestet. Markt-Filter im Labor (58 Varianten).
+- Der 22.10. ist als erster Live-Tag nachträglich durchgerechnet (1.534 Spielgeld-Trades aller Varianten).
+
 ## Offene Fragen an dich
-1. **Webseite:** ist online unter https://neidelbert.github.io/claude/. Das Passwort steht im Claude-Chat, nicht im Repo.
-   Ein Secret brauchst du nicht mehr. Willst du ein eigenes Passwort, sag es Claude.
+1. **Webseite:** ist online und geprüft: https://neidelbert.github.io/claude/. Das Passwort steht im Claude-Chat,
+   nicht im Repo. Speichere sie auf dem iPhone über Teilen → „Zum Home-Bildschirm“.
 2. **Ja/Nein-Test:** Hast du im Test-Push auf „Ja“ oder „Nein“ getippt? Dann prüfe ich, ob die Antwort angekommen ist.
 3. **Simulator-Start:** Ab wann soll der echte Simulator zählen? Mein Vorschlag: sobald eine Variante 4 Wochen live im
    Plus bleibt. Oder soll er sofort parallel starten?

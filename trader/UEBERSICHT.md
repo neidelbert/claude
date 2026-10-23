@@ -1,8 +1,8 @@
 # Trader-Übersicht
 
-Stand: Fr 23.10. 08:28 Uhr ET (14:28 Uhr MESZ) · wird bei jedem Lauf neu gebaut.
+Stand: Fr 23.10. 09:36 Uhr ET (15:36 Uhr MESZ) · wird bei jedem Lauf neu gebaut.
 
-NYSE heute: vor der Eröffnung (Handelszeit 09:30 bis 16:00 Uhr ET).
+NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
 ## Systemstatus
 
@@ -10,7 +10,7 @@ NYSE heute: vor der Eröffnung (Handelszeit 09:30 bis 16:00 Uhr ET).
 |---|---|---|
 | Morgen-Scan | Fr 23.10. 08:25 Uhr ET (14:25 Uhr MESZ) | OK – 823 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/39953208409)) |
 | ORB-Scan | noch nie | – |
-| Labor live | Do 22.10. 22:54 Uhr ET (04:54 Uhr MESZ) | OK – Tagesbilanz: 1.534 Trades ([Lauf](https://github.com/neidelbert/claude/actions/runs/39892110942)) |
+| Labor live | Fr 23.10. 09:36 Uhr ET (15:36 Uhr MESZ) | OK – Auswertung Börsenstart gesendet ([Lauf](https://github.com/neidelbert/claude/actions/runs/39962610192)) |
 | Labor | Do 22.10. 20:04 Uhr ET (02:04 Uhr MESZ) | OK – 5 von 58 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/39875812193)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
@@ -107,43 +107,20 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 - 22.10. 16:11 Uhr ET · [Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView](https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss)
 - 22.10. 15:51 Uhr ET · [How much Apple stock does CEO John Ternus actually own?](https://www.thestreet.com/personalities/how-much-apple-stock-does-john-ternus-own?.tsrc=rss)
 
-## Labor live – Do 22.10.2026, Stand 22:54 Uhr ET
+## Labor live – Fr 23.10.2026, Stand 09:36 Uhr ET
 
-178 Aktien beobachtet · 1.534 Spielgeld-Trades aller Varianten · 0 offen
+179 Aktien beobachtet · 0 Spielgeld-Trades aller Varianten · 0 offen
 
 | Top-Variante | Trades | offen | € bei 100 €/Trade |
 |---|---|---|---|
-| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5× | 15 | 0 | -0,52 € |
-| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1,5R · Volumen ≥ 1,5× | 15 | 0 | -0,52 € |
-| Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 2R · Volumen ≥ 1,5× | 15 | 0 | 0,15 € |
-| Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R | 11 | 0 | -13,02 € |
-| Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 7 | 0 | 1,79 € |
-| Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R | 7 | 0 | 4,26 € |
-| Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · Ziel 2R | 15 | 0 | 2,10 € |
-| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 3R | 1 | 0 | -2,84 € |
-
-| Aktie | Regel | Einstieg | Stopp | Ziel | Stand | Ergebnis |
-|---|---|---|---|---|---|---|
-| ROKU | Opening-Range-Ausbruch 30 Min | 10:20 159,73 $ | 157,99 $ | 163,21 $ | Schluss 15:55 Uhr | 0,01 € |
-| ROKU | Ausbruch 30 Min | 10:20 159,73 $ | 156,78 $ | 165,63 $ | Schluss 15:55 Uhr | 0,01 € |
-| AMAT | Erholung: Lücke nach unten ≥ 3 % | 10:30 386,86 $ | 380,92 $ | 398,74 $ | Stopp 11:00 Uhr | -1,58 € |
-| COIN | Erholung: Lücke nach unten ≥ 3 % | 10:40 171,39 $ | 168,55 $ | 177,06 $ | Stopp 12:50 Uhr | -1,70 € |
-| ZS | Opening-Range-Ausbruch 30 Min | 11:00 237,89 $ | 233,00 $ | 245,22 $ | Schluss 15:55 Uhr | -0,08 € |
-| ZS | Opening-Range-Ausbruch 30 Min | 11:00 237,89 $ | 233,00 $ | 247,67 $ | Schluss 15:55 Uhr | -0,08 € |
-| ZS | Opening-Range-Ausbruch 30 Min | 11:00 237,89 $ | 235,26 $ | 243,14 $ | Stopp 14:05 Uhr | -1,15 € |
-| SAP | Opening-Range-Ausbruch 30 Min | 11:05 241,81 $ | 236,29 $ | 250,09 $ | Schluss 15:55 Uhr | -0,30 € |
-| SAP | Opening-Range-Ausbruch 30 Min | 11:05 241,81 $ | 236,29 $ | 252,85 $ | Schluss 15:55 Uhr | -0,30 € |
-| SAP | Opening-Range-Ausbruch 30 Min | 11:05 241,81 $ | 238,82 $ | 247,79 $ | Schluss 15:55 Uhr | -0,30 € |
-| SAP | Ausbruch 30 Min | 11:05 241,81 $ | 236,29 $ | 252,85 $ | Schluss 15:55 Uhr | -0,30 € |
-| UNP | Opening-Range-Ausbruch 30 Min | 11:15 296,17 $ | 278,59 $ | 322,54 $ | Schluss 15:55 Uhr | 0,90 € |
-| UNP | Opening-Range-Ausbruch 30 Min | 11:15 296,17 $ | 278,59 $ | 331,33 $ | Schluss 15:55 Uhr | 0,90 € |
-| UNP | Opening-Range-Ausbruch 30 Min | 11:15 296,17 $ | 287,24 $ | 314,02 $ | Schluss 15:55 Uhr | 0,90 € |
-| UNP | Ausbruch 30 Min | 11:15 296,17 $ | 278,59 $ | 331,33 $ | Schluss 15:55 Uhr | 0,90 € |
-| BABA | Erholung: Lücke nach unten ≥ 3 % | 11:20 102,26 $ | 100,71 $ | 105,36 $ | Schluss 15:55 Uhr | -0,68 € |
-| MSTR | Erholung: Lücke nach unten ≥ 3 % | 11:20 147,44 $ | 144,08 $ | 154,17 $ | Stopp 14:05 Uhr | -2,33 € |
-| TSLA | Erholung: Lücke nach unten ≥ 3 % | 11:20 383,76 $ | 373,71 $ | 403,87 $ | Schluss 15:55 Uhr | -0,81 € |
-| INTC | Erholung: Lücke nach unten ≥ 3 % | 12:10 87,74 $ | 86,50 $ | 90,22 $ | Stopp 12:50 Uhr | -1,46 € |
-| XPEV | Erholung: Lücke nach unten ≥ 3 % | 12:55 9,19 $ | 9,01 $ | 9,55 $ | Schluss 15:55 Uhr | -1,02 € |
+| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5× | 0 | 0 | 0,00 € |
+| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1,5R · Volumen ≥ 1,5× | 0 | 0 | 0,00 € |
+| Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 2R · Volumen ≥ 1,5× | 0 | 0 | 0,00 € |
+| Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R | 0 | 0 | 0,00 € |
+| Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 0 | 0 | 0,00 € |
+| Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R | 0 | 0 | 0,00 € |
+| Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · Ziel 2R | 0 | 0 | 0,00 € |
+| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 3R | 0 | 0 | 0,00 € |
 
 ## Labor (Testphase, Spielgeld ohne Limit)
 

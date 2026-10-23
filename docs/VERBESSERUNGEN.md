@@ -67,4 +67,5 @@ Workflow-Protokolle, Browser-Tests.
 | 02:03 | Markt-Filter (#20), Punkte-Tabelle; Labor-Lauf: 58 Varianten, 5 bestanden |
 | 02:07 | Notizen zu Trades (#21); dabei Fehler gefunden: Ja/Nein-IDs wurden kleingeschrieben, Ja-Trades wären nie gezählt worden → behoben und getestet |
 | 02:08–04:50 | **Unterbrechung:** Die Claude-Sitzung wurde neu gestartet, in dieser Zeit lief keine Arbeit. Die Suche endete deshalb um 02:08 statt 02:30 |
-| 04:50 | Nach dem Neustart: #21 gemergt, Webseite leise neu gebaut, mit Passwort getestet (58 Varianten, Notizen vorhanden), Live-Prüfung gestartet |
+| 04:50 | Nach dem Neustart: #21 gemergt, Webseite leise neu gebaut, mit Passwort getestet (58 Varianten, Notizen vorhanden), Live-Prüfung bestanden |
+| 04:52–04:55 | Nachgeholte Zeit: Notizen auf echter Infrastruktur getestet (#23): Test-Notiz über ntfy → Live-Lauf → `trader/lab/notes.json` ✓. Nebenbei hat der Live-Lauf den 22.10. nachträglich mit allen Varianten durchgerechnet (1.534 Spielgeld-Trades) |

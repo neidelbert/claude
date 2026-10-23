@@ -1,14 +1,14 @@
 # Trader-Übersicht
 
-Stand: Do 22.10. 22:54 Uhr ET (04:54 Uhr MESZ) · wird bei jedem Lauf neu gebaut.
+Stand: Fr 23.10. 08:28 Uhr ET (14:28 Uhr MESZ) · wird bei jedem Lauf neu gebaut.
 
-NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
+NYSE heute: vor der Eröffnung (Handelszeit 09:30 bis 16:00 Uhr ET).
 
 ## Systemstatus
 
 | Teil | Letzter Lauf | Ergebnis |
 |---|---|---|
-| Morgen-Scan | Do 22.10. 18:31 Uhr ET (00:31 Uhr MESZ) | OK – 823 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865573995)) |
+| Morgen-Scan | Fr 23.10. 08:25 Uhr ET (14:25 Uhr MESZ) | OK – 823 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/39953208409)) |
 | ORB-Scan | noch nie | – |
 | Labor live | Do 22.10. 22:54 Uhr ET (04:54 Uhr MESZ) | OK – Tagesbilanz: 1.534 Trades ([Lauf](https://github.com/neidelbert/claude/actions/runs/39892110942)) |
 | Labor | Do 22.10. 20:04 Uhr ET (02:04 Uhr MESZ) | OK – 5 von 58 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/39875812193)) |
@@ -61,35 +61,35 @@ Alle 823 Treffer: [watchlist.json](watchlist.json)
 
 Bewegung seit gestern: AAPL +1,23 % · **AMAT -8,16 %** · BRK.B +1,48 % · **CRWV -10,06 %** · **KLAC -9,55 %** · LLY +2,83 % · **LRCX -11,76 %** · **PG +5,58 %** · **SKHY -8,07 %** · WMT +2,82 %
 
-- 22.10. 18:27 Uhr ET · **AAPL** · [Dow Jones Futures: Moderna Crashes, Meta Fuels AI Meltdown, But Warren Buffett Market Thriving](https://finance.yahoo.com/m/47e878bb-824d-3243-a8e9-b86b1c3f85d3/dow-jones-futures%3A-moderna.html?.tsrc=rss) · macro
-- 22.10. 18:15 Uhr ET · **LLY** · [Amgen vs. Eli Lilly: Does the GLP-1 Mania Make LLY Stock a Better Buy in 2026?](https://www.fool.com/coverage/better-buy/2026/10/22/amgen-vs-eli-lilly-does-the-glp-1-mania-make-lly-stock-a-better-buy-in-2026/?.tsrc=rss)
-- 22.10. 18:04 Uhr ET · **PG** · [Procter & Gamble Q1 Earnings Call Highlights](https://www.marketbeat.com/instant-alerts/transcript-procter-gamble-q1-earnings-call-highlights-2026-10-22/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss) · earnings
-- 22.10. 17:56 Uhr ET · **WMT** · [Affirm, Sam's Club Strike Exclusive Buy Now, Pay Later Deal](https://finance.yahoo.com/video/affirm-sams-club-strike-exclusive-215624903.html?.tsrc=rss) · deal, people
-- 22.10. 17:51 Uhr ET · **CRWV** · [Stock Market Today, Oct. 22: CoreWeave Slides on Bernstein Downgrade and Financing Worries](https://www.fool.com/coverage/stock-market-today/2026/10/22/stock-market-today-oct-22-coreweave-slides-on-bernstein-downgrade-and-financing-worries/?.tsrc=rss) · analyst
-- 22.10. 17:18 Uhr ET · **LLY** · [What Does Eli Lilly (LLY) Mean To Signal With Its $5 Billion Richmond Build?](https://finance.yahoo.com/healthcare/articles/does-eli-lilly-lly-mean-211802614.html?.tsrc=rss)
-- 22.10. 17:01 Uhr ET · **LRCX** · [Chip Stocks Tumble Despite Solid Earnings Reports](https://finance.yahoo.com/m/590849aa-2dbe-3494-8c1f-3805dca35f0b/chip-stocks-tumble-despite.html?.tsrc=rss) · earnings
-- 22.10. 17:00 Uhr ET · **BRK.B** · [Kinsale Capital Group, Inc. (KNSL) Q3 Earnings Surpass Estimates](https://finance.yahoo.com/markets/stocks/articles/kinsale-capital-group-inc-knsl-210006034.html?.tsrc=rss) · earnings
-- 22.10. 16:53 Uhr ET · **CRWV** · [Tesla, SpaceX, Meta, Lockheed Martin, Lam Research, Spotify, and More Stocks That Explain Today’s Market](https://finance.yahoo.com/m/add35572-856e-31cb-981d-91d3cc20d822/tesla%2C-spacex%2C-meta%2C-lockheed.html?.tsrc=rss)
-- 22.10. 16:47 Uhr ET · **CRWV** · [CoreWeave and Nebius Stocks Are Crashing. Time to Buy the Dip?](https://www.fool.com/investing/2026/10/22/coreweave-and-nebius-stocks-are-crashing-time-to/?.tsrc=rss)
-- 22.10. 16:45 Uhr ET · **WMT** · [Walmart (WMT) Advances While Market Declines: Some Information for Investors](https://finance.yahoo.com/markets/stocks/articles/walmart-wmt-advances-while-market-204504019.html?.tsrc=rss)
-- 22.10. 16:45 Uhr ET · **BRK.B** · [Berkshire Hathaway B (BRK.B) Increases Despite Market Slip: Here's What You Need to Know](https://finance.yahoo.com/markets/stocks/articles/berkshire-hathaway-b-brk-b-204502243.html?.tsrc=rss)
-- 22.10. 16:44 Uhr ET · **AAPL** · [Meta Eyes an Early Equity Deal for Its AI War Chest—and Berkshire Could Be a Buyer](https://finance.yahoo.com/m/640c88c4-a539-3735-a0ee-746427e88883/meta-eyes-an-early-equity.html?.tsrc=rss) · deal
-- 22.10. 16:41 Uhr ET · **PG** · [P&G’s Boosts Q1 Beauty Sales, but Says It Can Do Better](https://wwd.com/business-news/financial/procter-gamble-boosts-q1-2027-beauty-sales-1239381875/?.tsrc=rss)
-- 22.10. 16:38 Uhr ET · **LRCX** · [Stock Market Today: Nasdaq Thrashed, Dow Up; Moderna, Meta Lead Sell-Off (Live Coverage)](https://finance.yahoo.com/m/a6067e2b-5ce6-3182-915b-58daa8b6d0f9/stock-market-today%3A-nasdaq.html?.tsrc=rss)
-- 22.10. 16:34 Uhr ET · **AAPL** · [Apple’s foldable iPhone has a $2,000 app problem](https://finance.yahoo.com/video/apples-foldable-iphone-has-a-2000-app-problem-203418718.html?.tsrc=rss)
-- 22.10. 16:33 Uhr ET · **AAPL** · [Here Are 4 ETFs That Run an Entire Retirement Portfolio for Less Than $50 a Year on $100,000](https://247wallst.com/investing/etf/2026/10/22/here-are-4-etfs-that-run-an-entire-retirement-portfolio-for-less-than-50-a-year-on-100000/?.tsrc=rss)
-- 22.10. 16:32 Uhr ET · **AAPL** · [Apple Reportedly Raised Its iPhone Duo Target 44%. Here’s What November 2 Has to Show](https://www.tikr.com/blog/apple-reportedly-raised-its-iphone-duo-target-44-heres-what-november-2-has-to-show?ref=yahoofinance&.tsrc=rss)
-- 22.10. 16:28 Uhr ET · **CRWV** · [CoreWeave Sinks 10% as Bernstein Slashes Target to $51: “The Fundamentals Are Probably Stuck”](https://www.tikr.com/blog/coreweave-sinks-10-as-bernstein-slashes-target-to-51-the-fundamentals-are-probably-stuck?ref=yahoofinance&.tsrc=rss) · analyst
-- 22.10. 16:20 Uhr ET · **AAPL** · [What Intel, Boeing, Nike Have In Common With Each Other — And Apple](https://finance.yahoo.com/m/901193fa-8922-3df6-9417-b947a80babdc/what-intel%2C-boeing%2C-nike-have.html?.tsrc=rss)
-- 22.10. 16:13 Uhr ET · **PG** · [Procter & Gamble Soars 6% on Earnings Beat, Shrugs Off $1.4 Billion Cost Hit: “Strong Start”](https://www.tikr.com/blog/procter-gamble-soars-6-on-earnings-beat-shrugs-off-1-4-billion-cost-hit-strong-start?ref=yahoofinance&.tsrc=rss) · earnings
-- 22.10. 16:12 Uhr ET · **LRCX** · [IonQ Sinks 3%, Rigetti Down 5%, D-Wave Down 4% as Quantum Stocks Slide Again in Tech Selloff](https://www.tikr.com/blog/ionq-sinks-3-rigetti-down-5-d-wave-down-4-as-quantum-stocks-slide-again-in-tech-selloff?ref=yahoofinance&.tsrc=rss)
-- 22.10. 16:11 Uhr ET · **AAPL** · [Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView](https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss) · earnings
-- 22.10. 16:04 Uhr ET · **CRWV** · [Companies Are Spending Billions To Build Data Centers. The Timeline For Them To Pay Off is Fuzzy.](https://www.ibtimes.com/companies-are-spending-billions-build-data-centers-timeline-them-pay-off-fuzzy-3808890?.tsrc=rss)
-- 22.10. 16:03 Uhr ET · **CRWV** · [AI Selloff Takes These Data Center Stocks With It. How They Can Blunt the Pain.](https://finance.yahoo.com/m/8abcc1d9-6265-3276-947e-5a37db88999e/ai-selloff-takes-these-data.html?.tsrc=rss)
+- 23.10. 08:01 Uhr ET · **SKHY** · [MU, SNDK, SKHY Stocks Bounce After Thursday’s Markdown, But Strategists Split: ‘Great Buying Opportunity’ Versus ‘The Kospi Has Peaked’](https://stocktwits.com/news-articles/markets/equity/mu-sndk-skhynix-stocks-rebound-semiconductor-selloff-strategists/cZxyh1rRBxL?.tsrc=rss)
+- 23.10. 07:30 Uhr ET · **AAPL** · [Apple Is Just $42 Billion Away From Passing Nvidia as the World’s Most Valuable Company](https://247wallst.com/investing/2026/10/23/apple-is-just-42-billion-away-from-passing-nvidia-as-the-worlds-most-valuable-company/?.tsrc=rss)
+- 23.10. 07:26 Uhr ET · **CRWV** · [The Bond Market Is Sending a Dire Warning to Wall Street About the AI Infrastructure Build-Out, but Is Anyone Paying Attention?](https://www.fool.com/investing/2026/10/23/bond-market-sending-dire-warning-to-wall-street-about-ai-infrastructure-build-out/?.tsrc=rss)
+- 23.10. 07:16 Uhr ET · **AAPL** · [3 Investment Grade Bond Ideas Riding Big Tech AI Capex Plans](https://finance.yahoo.com/markets/stocks/articles/3-investment-grade-bond-ideas-111614808.html?.tsrc=rss)
+- 23.10. 07:15 Uhr ET · **CRWV** · [Nebius Has Cratered Over The Last 3 Months: This Wall Street Ratings Firm Says 2.5X Returns Will Materialize Soon](https://247wallst.com/investing/2026/10/23/nebius-has-cratered-over-the-last-3-months-this-wall-street-ratings-firm-says-2-5x-returns-will-materialize-soon/?.tsrc=rss) · earnings
+- 23.10. 07:06 Uhr ET · **CRWV** · [Two Critical Nvidia Stock Flaws and Other Reasons This Analyst Says Sell](https://finance.yahoo.com/m/9cdb41d6-a291-37eb-bff7-347d06660a9d/two-critical-nvidia-stock.html?.tsrc=rss)
+- 23.10. 07:00 Uhr ET · **AAPL** · [Develop A Critical Thinking Mindset When You Make Decisions](https://finance.yahoo.com/m/4941c14e-8ac8-3d05-85f5-a6d29d520931/develop-a-critical-thinking.html?.tsrc=rss)
+- 23.10. 06:56 Uhr ET · **CRWV** · [BofA sees growing investor reluctance to fund AI infrastructure](https://finance.yahoo.com/technology/ai/articles/bofa-sees-growing-investor-reluctance-105636342.html?.tsrc=rss)
+- 23.10. 06:45 Uhr ET · **CRWV** · [Moderna, Meta, SpaceX, AT&T, CoreWeave, Sandisk, and More Stocks That Explain Today’s Market](https://finance.yahoo.com/m/f96806d8-9583-3620-89cf-a7ccb8de8237/moderna%2C-meta%2C-spacex%2C-at%26t%2C.html?.tsrc=rss) · macro
+- 23.10. 06:38 Uhr ET · **AAPL** · [Apple could be about to dethrone Nvidia as world's most valuable company](https://finance.yahoo.com/markets/stocks/article/apple-could-be-about-to-dethrone-nvidia-as-worlds-most-valuable-company-103826475.html?.tsrc=rss)
+- 23.10. 06:35 Uhr ET · **SKHY** · [History Says This Is What Happens to Mega-IPO Stocks in Their First 12 Months](https://www.fool.com/investing/2026/10/23/history-what-happens-mega-ipo-stock-12-months/?.tsrc=rss)
+- 23.10. 06:29 Uhr ET · **SKHY** · [Stock Market Today: Futures Head Lower at End of Wild Week as Oil Prices Rise Further on Middle East Tensions; Chip Stocks Rebound](https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-10232026-12189475?.tsrc=rss) · macro
+- 23.10. 06:25 Uhr ET · **CRWV** · [SK Hynix Scraps U.S. IPO of Memory-Chip Unit. Why the Stock Is Jumping.](https://finance.yahoo.com/m/824ab6e9-a4f8-30cc-98f6-d256584e0ccc/sk-hynix-scraps-u.s.-ipo-of.html?.tsrc=rss)
+- 23.10. 06:14 Uhr ET · **LLY** · [What Sent Eli Lilly Stock Higher Over The Past Year?](https://www.trefis.com/articles/620216/what-sent-eli-lilly-stock-higher-over-the-past-year/2026-10-23?.tsrc=rss)
+- 23.10. 06:13 Uhr ET · **CRWV** · [Nasdaq, Dow, S&P 500 Futures Drop Premarket: NVDA, AMD, META, CRWV, MRNA, WDC, BE In Focus](https://stocktwits.com/news-articles/markets/equity/nasdaq-dow-s-and-p-500-futures-drop-premarket-nvda-amd-meta-crwv-mrna-wdc-be-in-focus/cZxyfNARBxI?.tsrc=rss) · macro
+- 23.10. 06:00 Uhr ET · **PG** · [Wall Street's safest stock just had its biggest day since the pandemic crash: Chart of the Day](https://finance.yahoo.com/markets/article/wall-streets-safest-stock-just-had-its-biggest-day-since-the-pandemic-crash-chart-of-the-day-100000879.html?.tsrc=rss)
+- 23.10. 05:35 Uhr ET · **SKHY** · [Better Memory Stock: SK Hynix vs. Micron](https://www.fool.com/investing/2026/10/23/better-memory-stock-sk-hynix-vs-micron/?.tsrc=rss)
+- 23.10. 05:30 Uhr ET · **CRWV** · [Stocktwits Wall Street Wrap: Analysts Turn Bullish On SpaceX, Tesla, But Netflix And Chipotle Face Fresh Downgrades Amid Growth Concerns](https://stocktwits.com/news-articles/markets/equity/stocktwits-wall-street-wrap-analysts-turn-bullish-on-space-x-tesla-but-netflix-and-chipotle-face-fresh-downgrades-amid-growth-concerns/cZxyaiCRBx4?.tsrc=rss) · earnings, analyst
+- 23.10. 05:30 Uhr ET · **CRWV** · [Stock market today: Dow, S&P 500, Nasdaq futures wobble after sharp tech sell-off](https://finance.yahoo.com/markets/live/stock-market-today-friday-october-23-dow-sp-500-nasdaq-tesla-meta-093000521.html?.tsrc=rss) · macro
+- 23.10. 05:26 Uhr ET · **AAPL** · [Warren Buffett's Successor, Greg Abel, Has 32% of Berkshire Hathaway's $364 Billion Portfolio Invested in 3 Unstoppable AI Stocks](https://www.fool.com/investing/2026/10/23/warren-buffett-successor-greg-abel-32-berkshire-hathaway-364-billion-portfolio-invested-3-unstoppable-ai-stocks/?.tsrc=rss)
+- 23.10. 05:01 Uhr ET · **AAPL** · [Could You Have Seen The Run In Microsoft Stock Coming?](https://www.trefis.com/articles/620174/could-you-have-seen-the-run-in-microsoft-stock-coming/2026-10-23?.tsrc=rss)
+- 23.10. 04:50 Uhr ET · **CRWV** · [If I Could Only Buy 1 AI Stock in November After This Sell-Off, It Would Be This One.](https://www.fool.com/investing/2026/10/23/if-only-buy-ai-stock-in-november-sell-off-alab/?.tsrc=rss) · earnings
+- 23.10. 04:44 Uhr ET · **SKHY** · [Nasdaq Futures Steady as AI Selloff Pauses](https://www.wsj.com/finance/stocks/nasdaq-futures-steady-as-ai-selloff-pauses-275c6454?.tsrc=rss) · macro
+- 23.10. 04:22 Uhr ET · **BRK.B** · [The S&P 500 May Depend on the Fortunes of These 3 Companies Right Now. Here’s the Good News and the Bad News for Investors.](https://www.fool.com/investing/2026/10/23/the-s-and-p-500-may-depend-on-the-fortunes-of-these-3-companies-right-now-here-s-the-good-news-and-the-bad-news-for-investors/?.tsrc=rss)
+- 23.10. 04:21 Uhr ET · **PG** · [Company News for Oct 23, 2026](https://finance.yahoo.com/markets/stocks/articles/company-news-oct-23-2026-082100335.html?.tsrc=rss)
 
 ## Pelosi-Tracker (pelosi)
 
-- Fr 02.10.2026 · Hon. Nancy Pelosi (CA11) · [PDF](https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035553.pdf)
+Keine neue Meldung seit dem letzten Lauf.
 
 Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 

@@ -1214,7 +1214,7 @@ def publish(owned, message):
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description="Trader-System auf GitHub Actions")
-    ap.add_argument("part", choices=["auto", "morning", "orb", "live", "lab", "alerts", "ticker", "test", "message",
+    ap.add_argument("part", choices=["auto", "window", "morning", "orb", "live", "lab", "alerts", "ticker", "test", "message",
                                      "render"])
     ap.add_argument("symbol", nargs="?")
     ap.add_argument("--force", action="store_true", help="Zeitfenster und „heute schon gelaufen“ ignorieren")
@@ -1226,6 +1226,12 @@ def main(argv=None):
     if a.part == "render":
         render()
         return 0
+    if a.part == "window":
+        # für die Schleife im Workflow: 0 = heute ist noch etwas fällig (Handelstag, 7:25 bis 19:35 Uhr ET)
+        et = scan.to_eastern(utcnow())
+        ok = scan.trading_day(et.date())[0] and datetime.time(7, 25) <= et.time() <= datetime.time(19, 35)
+        print("Zeitfenster offen" if ok else "Zeitfenster zu")
+        return 0 if ok else 1
 
     now = utcnow()
     et = scan.to_eastern(now)

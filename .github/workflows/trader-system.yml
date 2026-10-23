@@ -17,7 +17,7 @@ on:
         description: "Was soll laufen?"
         type: choice
         default: morning
-        options: [morning, orb, live, lab, ticker, alerts, test, nachricht, seite, auto]
+        options: [morning, orb, live, lab, ticker, alerts, test, nachricht, seite, auto, schleife]
       ticker:
         description: "Nur bei „ticker“: Symbol, z. B. TSLA"
         required: false
@@ -39,14 +39,15 @@ permissions:
   contents: write
 
 concurrency:
-  # Zeitplan-Läufe nacheinander; manuelle Läufe sofort (system.py führt gleichzeitige Commits zusammen)
-  group: trader-${{ github.event_name == 'schedule' && 'auto' || github.run_id }}
+  # Zeitplan-Läufe und die Schleife nacheinander (nie zwei Schleifen gleichzeitig);
+  # andere manuelle Läufe sofort (system.py führt gleichzeitige Commits zusammen)
+  group: trader-${{ (github.event_name == 'schedule' || inputs.teil == 'schleife') && 'auto' || github.run_id }}
   cancel-in-progress: false
 
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 350
     env:
       NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
       NTFY_REPLY_TOPIC: ${{ secrets.NTFY_REPLY_TOPIC }}
@@ -65,13 +66,15 @@ jobs:
       - name: Trader-System
         id: system
         env:
-          TEIL: ${{ github.event_name == 'schedule' && 'auto' || inputs.teil }}
+          TEIL: ${{ github.event_name == 'schedule' && 'schleife' || inputs.teil }}
           NTFY_DRY: ${{ inputs.leise && '1' || '' }}
           TICKER: ${{ inputs.ticker }}
           ALARME: ${{ inputs.alarme }}
           NACHRICHT: ${{ inputs.nachricht }}
           NACHRICHT_TITEL: "Auswertung von Claude"
           NACHRICHT_LINK: "https://github.com/neidelbert/claude/blob/main/docs/AUSWERTUNG.md"
+          SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
+          PUSH_URL: "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
         run: |
           set -euo pipefail
           args=("$TEIL")
@@ -81,6 +84,21 @@ jobs:
           fi
           if [ "$TEIL" = "nachricht" ]; then args=("message"); fi
           if [ "$TEIL" = "seite" ]; then echo "Nur Webseite neu bauen."; exit 0; fi
+          if [ "$TEIL" = "schleife" ]; then
+            # GitHub startet Zeitpläne oft 30–45 Minuten zu spät. Darum arbeitet ein Lauf selbst im 10-Minuten-Takt,
+            # solange heute etwas fällig ist (höchstens 5,5 Stunden; danach übernimmt der nächste Zeitplan-Lauf).
+            pip install -q cryptography
+            ende=$(( $(date +%s) + 19800 ))
+            while python3 tools/trader/system.py window; do
+              out=$(mktemp)
+              GITHUB_OUTPUT="$out" python3 tools/trader/system.py auto || echo "Durchgang mit Fehler, weiter"
+              grep -q "lab_ran=true" "$out" && echo "lab_ran=true" >> "$GITHUB_OUTPUT"
+              if grep -q "published=true" "$out"; then bash tools/trader/seite.sh || echo "Webseite nicht veröffentlicht"; fi
+              [ "$(date +%s)" -ge "$ende" ] && break
+              sleep $(( 600 - $(date +%s) % 600 + 20 ))
+            done
+            exit 0
+          fi
           if [ "$TEIL" != "auto" ] && [ "$TEIL" != "ticker" ] && [ "$TEIL" != "test" ] && [ "$TEIL" != "nachricht" ]; then args+=("--force"); fi
           python3 tools/trader/system.py "${args[@]}"
       - name: Kerzen-Cache speichern (nur nach dem Labor)
@@ -89,23 +107,14 @@ jobs:
         with:
           path: .cache/lab
           key: lab-bars-${{ github.run_id }}
-      - name: Webseite bauen (verschlüsselt)
+      - name: Webseite bauen und veröffentlichen (Branch gh-pages)
         if: steps.system.outputs.published == 'true' || inputs.teil == 'seite'
         env:
           SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
+          PUSH_URL: "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
         run: |
           pip install -q cryptography
-          python3 tools/trader/site.py build
-      - name: Webseite veröffentlichen (Branch gh-pages)
-        if: steps.system.outputs.published == 'true' || inputs.teil == 'seite'
-        run: |
-          cd _site
-          git init -q -b gh-pages
-          git config user.name "github-actions[bot]"
-          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -q -m "Webseite $(date -u +%Y-%m-%dT%H:%MZ)"
-          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" gh-pages
+          bash tools/trader/seite.sh
       - name: Absturz melden
         if: failure()
         run: |

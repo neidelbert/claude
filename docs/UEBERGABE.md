@@ -16,7 +16,8 @@ Den ganzen Plan enthält `docs/TRADER-PLAN.md`, das Interview mit Lukas ist dort
 | Morgen-Scan | `scan.py` (Daily), `news.py`, `ptr.py` (Pelosi) | ab ca. 8:00 Uhr ET |
 | ORB-Scan | `scan.py orb` | ab ca. 10:10 Uhr ET |
 | Labor live | `lab.py live`: Spielgeld-Trades aller Varianten, Vorschlags-Pushes mit Ja/Nein | alle 10 Min. im Handel |
-| Tagesbilanz | in `do_live` nach Börsenschluss | ca. 16:00–17:00 Uhr ET |
+| Auswertung Börsenstart | `open_summary` in `do_live` (Plan, Weg zum Ziel, offene Fragen) | erster Live-Lauf nach 9:35 Uhr ET |
+| Auswertung Börsenschluss | Tagesbilanz in `do_live` (+ Weg zum Ziel, offene Fragen) | ca. 16:00–17:00 Uhr ET |
 | Labor-Rangliste | `lab.py fetch/run`: 58 Varianten an 60 Tagen 5-Min.-Kerzen, Lern-/Prüftage | nach Börsenschluss |
 | Wochen-Rückblick | `week_review` in `system.py` | letzter Handelstag der Woche |
 | Simulator | `sim.py` (Vorschau = Backtest der Top-Variante; live ab `sim.start_date`) | in jeder Webseite |
@@ -62,8 +63,8 @@ Den ganzen Plan enthält `docs/TRADER-PLAN.md`, das Interview mit Lukas ist dort
 - **Lukas' offene Fragen** stehen in `docs/AUSWERTUNG.md`: Simulator-Start, Broker und Gebühren, Push-Kanal privat,
   Push-Menge, SEC-Agent, KI-Zweitmeinung ab Monat 2, Datenschutz der Antworten.
 - **Nächste Ideen** in `docs/VERBESSERUNGEN.md` (Punkte-Tabelle).
-- **Geplante Erinnerungen dieser Sitzung:** 23.10. 03:39 UTC (5:40-Auswertung als Push) und 14:50 UTC (Kontrolle des ersten
-  Zeitplan-Tags). Sie feuern in der ursprünglichen Sitzung. Eine neue Sitzung sieht sie mit `list_triggers`.
+- **Auswertungen** kommen auf Lukas' Wunsch nur zum Börsenstart und Börsenschluss als Push, nicht nachts.
+- **Geplante Erinnerung dieser Sitzung:** 23.10. 14:50 UTC (Kontrolle des ersten Zeitplan-Tags). Eine neue Sitzung sieht sie mit `list_triggers`.
 
 ## Wie eine neue Sitzung weitermacht
 1. Repo `neidelbert/claude` klonen bzw. holen, dann diese Datei, `CLAUDE.md`, `docs/TRADER-PLAN.md` und `docs/AUSWERTUNG.md` lesen.

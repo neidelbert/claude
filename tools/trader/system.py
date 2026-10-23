@@ -626,6 +626,49 @@ def lab_module():
     return mod
 
 
+OPEN_QUESTIONS = ("Offene Fragen an dich: Simulator-Start, Broker/Gebühren, Push-Kanal privat, KI-Zweitmeinung "
+                  "ab Monat 2 – Details in docs/AUSWERTUNG.md, Antwort einfach im Claude-Chat.")
+
+
+def goal_line():
+    """Ein Satz „Weg zum Ziel“: Live-Tage, bestandene Varianten, Simulator-Vorschau."""
+    live_dir = p(T, "lab", "live")
+    n_days = len([f for f in os.listdir(live_dir) if f.endswith(".json")]) if os.path.isdir(live_dir) else 0
+    res = read_json(p(T, "lab", "results.json"), {}) or {}
+    passed = sum(1 for r in res.get("variants", []) if r.get("passed"))
+    try:
+        spec = importlib.util.spec_from_file_location("trader_sim", os.path.join(HERE, "sim.py"))
+        sim = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(sim)
+        pre = (sim.compute().get("vorschau") or {}).get("fee") or {}
+        konto = " · Simulator-Vorschau %s € (aus 100 €, mit Gebühr)" % de_num(pre["equity"]) if pre else ""
+    except Exception:
+        konto = ""
+    return "Weg zum Ziel: Testphase, %d von 20 Live-Tagen · %d Varianten bestanden%s" % (min(n_days, 20), passed, konto)
+
+
+def open_summary(cfg, day):
+    """Auswertung zum Börsenstart: Plan für heute, Stand, was zu tun ist."""
+    res = read_json(p(T, "lab", "results.json"), {}) or {}
+    rows = res.get("variants", [])
+    d = datetime.date.fromisoformat(day)
+    sess = scan.session(d)
+    o_de, zone = berlin(scan.eastern_to_utc(datetime.datetime.combine(d, sess[0]))) if sess else (None, "")
+    c_de, _ = berlin(scan.eastern_to_utc(datetime.datetime.combine(d, sess[1]))) if sess else (None, "")
+    lines = ["Die Börse in New York ist offen (%s bis %s Uhr %s). Das Labor handelt ab jetzt alle 10 Minuten "
+             "mit Spielgeld." % (o_de.strftime("%H:%M"), c_de.strftime("%H:%M"), zone) if sess else
+             "Das Labor handelt heute mit Spielgeld."]
+    if rows:
+        lines.append("Heute im Fokus: " + "; ".join(r["label"] for r in rows[:2]))
+    md = ((read_json(status_path("morning"), {}) or {}).get("data") or {}).get("daily") or {}
+    if md:
+        lines.append("Morgen-Scan: %s Charts passen zu einer Regel" % de_int(md.get("hits") or 0))
+    lines.append(goal_line())
+    lines.append("Dein Teil: Bei einem Vorschlag Ja oder Nein tippen, wenn du magst. Ohne Antwort zählt nur die Regel.")
+    lines.append(OPEN_QUESTIONS)
+    return lines
+
+
 def do_live(cfg, now, force):
     et = scan.to_eastern(now)
     day = et.date().isoformat()
@@ -717,6 +760,11 @@ def do_live(cfg, now, force):
                  "\n".join(lines), priority=3, tags=["chart_with_upwards_trend"])
     sess = scan.session(et.date())
     closed = sess and et.time() >= sess[1]
+    if not closed and data.get("open_push") != day:
+        data["open_push"] = day
+        push(cfg, "Auswertung Börsenstart %s" % date_de(day), "\n".join(open_summary(cfg, day)), priority=3,
+             tags=["sunrise"])
+        return True, "Auswertung Börsenstart gesendet", steps, data, owned
     if closed and data.get("eod") != day:
         lab = lab_module()
         sm = lab.day_summary(day) or {}
@@ -738,8 +786,10 @@ def do_live(cfg, now, force):
         nein = [k for k, v in decisions.items() if k.startswith(day.replace("-", "")) and v["answer"] == "nein"]
         if nein:
             lines.append("Nein gesagt: %d" % len(nein))
+        lines.append(goal_line())
         lines.append("Lektion: " + lesson(day))
-        push(cfg, "Tagesbilanz Labor %s" % date_de(day), "\n".join(lines), priority=3, tags=["memo"])
+        lines.append(OPEN_QUESTIONS)
+        push(cfg, "Auswertung Börsenschluss %s" % date_de(day), "\n".join(lines), priority=3, tags=["memo"])
         return True, "Tagesbilanz: %s Trades" % de_int(sm.get("n_trades", 0)), steps, data, owned
     if events or new_answers or force or et.minute % 30 < 10:   # sonst kein Commit, höchstens alle 30 Minuten
         return True, "%s Trades, %s offen" % (de_int(ld["trades"]), de_int(ld["open"])), steps, data, owned

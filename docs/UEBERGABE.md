@@ -70,3 +70,32 @@ Den ganzen Plan enthält `docs/TRADER-PLAN.md`, das Interview mit Lukas ist dort
 1. Repo `neidelbert/claude` klonen bzw. holen, dann diese Datei, `CLAUDE.md`, `docs/TRADER-PLAN.md` und `docs/AUSWERTUNG.md` lesen.
 2. Den Zustand prüfen: `trader/status/*.json`, die letzten Actions-Läufe (`mcp__github__actions_list`) und `docs/VERBESSERUNGEN.md`.
 3. Lukas kurz auf Deutsch berichten und dann seine nächste Anweisung umsetzen.
+
+## Änderungsprotokoll (jede Änderung hier ergänzen: Datum, PR, was, warum)
+| Datum | PR | Änderung |
+|---|---|---|
+| 22.10. | #1 | CLAUDE.md: Antworten und Skill-Ausgaben auf Deutsch |
+| 22.10. | #2 | Trader-System auf GitHub Actions (Netz in der Claude-Sitzung gesperrt), iPhone-Push über ntfy, Übersicht |
+| 22.10. | #3 | Plan nach dem Interview, Labor-Kern (44 Varianten, Lern-/Prüftage) |
+| 22.10. | #4 | Labor live: Spielgeld-Trades alle 10 Min., Pushes, Tagesbilanz |
+| 22.10. | #5 | Ja/Nein-Buttons im Push, Spalte „Lukas“ |
+| 22.10. | #6 | Webseite (iPhone-App, verschlüsselt) |
+| 23.10. | #7 | Stocks in Play, Simulator (100 €, 3/8/30 €), Lernprotokoll, Wochen-Rückblick, Echtgeld-Prüfung, Tabs Heute/Konto/Trades/Labor/Mehr |
+| 23.10. | #8 | Tagebuch über mehrere Tage, Varianten-Details, Ticker-Analyse, Einstellungen, Einführung |
+| 23.10. | #9 | Auswertung der Nacht (docs/AUSWERTUNG.md) |
+| 23.10. | #10–#12 | Versuche, Pages aus dem Workflow einzuschalten (geht nicht mit dem Workflow-Token) |
+| 23.10. | #13 | Oberfläche zusätzlich als privates Artifact (+ geplante Aufgabe 14:37/18:37/22:37 Uhr) |
+| 23.10. | #14 | Reparatur: Doppelpunkt im Schritt-Namen machte den Workflow ungültig |
+| 23.10. | #15 | Volumen-Rangliste, Gebühren-Grenze je Variante, „Weg zum Ziel“, Prüf-Workflow |
+| 23.10. | #16 | Push-Links vorübergehend auf GitHub-Übersicht |
+| 23.10. | #17 | Webseite online ohne Secret: öffentlicher Schlüssel + Branch gh-pages |
+| 23.10. | #18 | Workflow „Webseite prüfen“ (Live-Test) |
+| 23.10. | #19 | Option „leise“, Liste der Verbesserungen |
+| 23.10. | #20 | Markt-Filter (58 Varianten), Punkte-Tabelle |
+| 23.10. | #21 | Notizen zu Trades; Fehler behoben: Ja/Nein-IDs wurden kleingeschrieben |
+| 23.10. | #22, #24 | Protokoll: Unterbrechung durch Neustart, Notiz-Test |
+| 23.10. | #23 | Test-Notiz im Prüf-Workflow |
+| 23.10. | #25 | Test-Notiz entfernt, Auswertung aktualisiert |
+| 23.10. | #26 | SQ durch XYZ ersetzt (keine Daten mehr) |
+| 23.10. | #27 | Übergabe-Dokument, CLAUDE.md verweist darauf |
+| 23.10. | #28 | Auswertung zum Börsenstart und Börsenschluss statt nachts (5:40-Erinnerung gelöscht); dieses Änderungsprotokoll |

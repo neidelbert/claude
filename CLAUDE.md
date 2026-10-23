@@ -3,7 +3,8 @@
 ## Zuerst lesen
 - **Bei jeder neuen Sitzung zuerst `docs/UEBERGABE.md` lesen.** Dort stehen Stand, Adressen, Abläufe und Regeln
   des Trader-Systems. Danach `docs/TRADER-PLAN.md` und `docs/AUSWERTUNG.md`.
-- **Am Ende jeder größeren Arbeit `docs/UEBERGABE.md` aktualisieren**, damit der nächste Chat nahtlos weitermacht.
+- **Jede Änderung im Änderungsprotokoll von `docs/UEBERGABE.md` ergänzen** (Datum, PR, was, warum) und den Stand dort
+  aktuell halten, damit der nächste Chat nahtlos weitermacht.
 
 ## Sprache
 - **Im Chat so wenig wie möglich schreiben.** Kurz, nur das Nötige. Interviews (Fragen) dürfen ausführlich sein.

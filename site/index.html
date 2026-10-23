@@ -109,7 +109,7 @@ const TABS = [
 ];
 const STRAT = {orb:"Opening-Range-Ausbruch", gap:"News-Sprung", bounce:"Erholung"};
 const CHIP = {alle:"Alle", Regel:"Regel", "Ja-Trades":"Deine Ja-Trades", orb:"Ausbruch", gap:"News-Sprung", bounce:"Erholung", sip:"Stocks in Play"};
-STRAT.sip = "Stocks in Play"; STRAT.orbrank = "Ausbruch mit Volumen-Rangliste"; CHIP.orbrank = "Volumen-Rang";
+STRAT.sip = "Stocks in Play"; STRAT.orbrank = "Ausbruch mit Volumen-Rangliste"; CHIP.orbrank = "Volumen-Rang"; STRAT.orbmkt = "Ausbruch mit Markt-Filter"; CHIP.orbmkt = "Markt-Filter";
 
 // ------------------------------------------------------------ Formate
 const nf2 = new Intl.NumberFormat("de-DE",{minimumFractionDigits:2,maximumFractionDigits:2});
@@ -346,7 +346,7 @@ function renderTrades(){
   if(!days.length){ $("#app").innerHTML = h+'<div class="card sub">Noch keine Live-Trades. Ab dem nächsten Börsentag erscheinen sie hier – mit Erklärung zu jedem Trade.</div>'; return; }
   const cur = days.find(d=>d.date===DAY) || days[0];
   h += '<div class="chips">'+days.slice(0,10).map(d=>'<button class="chip '+(d===cur?"on":"")+'" onclick="DAY=\''+d.date+'\';render()">'+(d.today?"Heute":dateDE(d.date).slice(0,6))+'</button>').join("")+'</div>';
-  h += '<div class="chips">'+["alle","Regel","Ja-Trades","orb","orbrank","gap","bounce","sip"].map(f=>'<button class="chip '+(FILTER===f?"on":"")+'" onclick="FILTER=\''+f+'\';render()">'+CHIP[f]+'</button>').join("")+'</div>';
+  h += '<div class="chips">'+["alle","Regel","Ja-Trades","orb","orbmkt","orbrank","gap","bounce","sip"].map(f=>'<button class="chip '+(FILTER===f?"on":"")+'" onclick="FILTER=\''+f+'\';render()">'+CHIP[f]+'</button>').join("")+'</div>';
   let rows = [];
   if(FILTER!=="Ja-Trades") rows = cur.trades.filter(t => FILTER==="alle"||FILTER==="Regel"||t.strategy===FILTER).map(t=>[t,"Regel"]);
   if(FILTER==="alle"||FILTER==="Ja-Trades") rows = rows.concat((cur.lukas||[]).map(t=>[Object.assign({open:t.status==="offen"},t),"Du"]));
@@ -372,7 +372,7 @@ function renderLabor(){
   h += '<div class="card"><div class="row"><span>Bestanden</span><span class="big num">'+passed+'<span class="sub" style="font-size:18px"> / '+L.variants.length+'</span></span></div>'+
        '<p class="small">'+int(L.symbols)+' Aktien · '+int(L.days)+' Tage: '+int(L.n_train_days)+' '+g("Lerntage")+' + '+int(L.n_test_days)+' '+g("Prüftage")+' ('+dateDE(L.test[0])+' bis '+dateDE(L.test[1])+'). Eine '+g("Variante")+' besteht, wenn sie an Lern- und Prüftagen im Plus ist und mindestens '+int(L.settings.min_test_trades)+' Trades hat.</p></div>';
   h += '<div class="card small">Wichtig: Mit 1 € '+g("Gebühr")+' je Order wären alle Varianten im Minus. Darum zeigt jede Karte beide Zahlen.</div>';
-  h += '<h2>Rangliste</h2><div class="chips">'+["alle","orb","orbrank","gap","bounce","sip"].map(f=>'<button class="chip '+(LABF===f?"on":"")+'" onclick="LABF=\''+f+'\';render()">'+CHIP[f]+'</button>').join("")+'</div>';
+  h += '<h2>Rangliste</h2><div class="chips">'+["alle","orb","orbmkt","orbrank","gap","bounce","sip"].map(f=>'<button class="chip '+(LABF===f?"on":"")+'" onclick="LABF=\''+f+'\';render()">'+CHIP[f]+'</button>').join("")+'</div>';
   L.variants.map((v,i)=>[v,i]).filter(([v])=>LABF==="alle"||v.strategy===LABF).slice(0,15).forEach(([v,i]) => { const t=v.test||{};
     h += '<div class="card"><div class="row"><span class="badge '+(v.passed?"b-green":"")+'">'+(v.passed?"bestanden":"nicht bestanden")+'</span><span class="small">#'+(i+1)+'</span></div>'+
       '<h3 style="margin-top:6px">'+esc(v.label)+'</h3>'+
@@ -417,7 +417,7 @@ function renderLernen(){
   h += '<h2>Lektion des Tages</h2><div class="card">'+esc(D.learn.lesson)+'</div>';
   h += '<h2>So funktioniert das System</h2><div class="card">'+D.learn.how.map(([t,x],i)=>'<div class="step" style="margin:'+(i?"12px":"0")+' 0 0"><div class="n">'+(i+1)+'</div><div><b>'+esc(t)+'</b><div class="small">'+esc(x)+'</div></div></div>').join("")+'</div>';
   h += '<h2>Die drei Phasen</h2><div class="list">'+
-    '<div class="item"><div class="row"><b>1. Testphase</b><span class="badge b-blue">jetzt</span></div><div class="small">Spielgeld ohne Limit. 56 Varianten laufen parallel, das System misst und lernt.</div></div>'+
+    '<div class="item"><div class="row"><b>1. Testphase</b><span class="badge b-blue">jetzt</span></div><div class="small">Spielgeld ohne Limit. 58 Varianten laufen parallel, das System misst und lernt.</div></div>'+
     '<div class="item"><div class="row"><b>2. Simulator</b><span class="badge">später</span></div><div class="small">100 € Spielgeld wie echt: höchstens 3 € Verlust pro Trade, 8 € pro Tag, 30 € pro Monat, mit Gebühren.</div></div>'+
     '<div class="item"><div class="row"><b>3. Echtes Geld</b><span class="badge">frühestens nach 2 Monaten</span></div><div class="small">Nur wenn der Simulator 2 Monate am Stück im Plus war – und nur mit deinem Ja zu jeder Order.</div></div></div>';
   h += '<h2>Alle Lektionen</h2><div class="list">'+D.learn.lessons.map(l=>'<div class="item small">'+esc(l)+'</div>').join("")+'</div>';

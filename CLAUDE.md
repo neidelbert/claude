@@ -1,5 +1,10 @@
 # Regeln für Claude – Lukas
 
+## Zuerst lesen
+- **Bei jeder neuen Sitzung zuerst `docs/UEBERGABE.md` lesen.** Dort stehen Stand, Adressen, Abläufe und Regeln
+  des Trader-Systems. Danach `docs/TRADER-PLAN.md` und `docs/AUSWERTUNG.md`.
+- **Am Ende jeder größeren Arbeit `docs/UEBERGABE.md` aktualisieren**, damit der nächste Chat nahtlos weitermacht.
+
 ## Sprache
 - **Im Chat so wenig wie möglich schreiben.** Kurz, nur das Nötige. Interviews (Fragen) dürfen ausführlich sein.
 - **Immer auf Deutsch antworten.** Das gilt für alle Skills, auch wenn die Skill-Anleitung englisch ist

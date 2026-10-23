@@ -10,7 +10,7 @@ NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 |---|---|---|
 | Morgen-Scan | Fr 23.10. 08:25 Uhr ET (14:25 Uhr MESZ) | OK – 823 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/39953208409)) |
 | ORB-Scan | Fr 23.10. 10:19 Uhr ET (16:19 Uhr MESZ) | OK – 123 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/39968654546)) |
-| Labor live | Fr 23.10. 13:00 Uhr ET (19:00 Uhr MESZ) | OK – 1.284 Trades, 899 offen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39973472759)) |
+| Labor live | Fr 23.10. 13:10 Uhr ET (19:10 Uhr MESZ) | OK – 1.284 Trades, 895 offen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39973472759)) |
 | Labor | Fr 23.10. 13:09 Uhr ET (19:09 Uhr MESZ) | OK – 0 von 58 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/39992696989)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
@@ -148,18 +148,18 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 - 22.10. 16:11 Uhr ET · [Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView](https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss)
 - 22.10. 15:51 Uhr ET · [How much Apple stock does CEO John Ternus actually own?](https://www.thestreet.com/personalities/how-much-apple-stock-does-john-ternus-own?.tsrc=rss)
 
-## Labor live – Fr 23.10.2026, Stand 13:00 Uhr ET
+## Labor live – Fr 23.10.2026, Stand 13:10 Uhr ET
 
-179 Aktien beobachtet · 1.284 Spielgeld-Trades aller Varianten · 899 offen
+179 Aktien beobachtet · 1.284 Spielgeld-Trades aller Varianten · 895 offen
 
 | Top-Variante | Trades | offen | € bei 100 €/Trade |
 |---|---|---|---|
-| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5× | 11 | 11 | 7,49 € |
-| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1,5R · Volumen ≥ 1,5× | 11 | 11 | 7,49 € |
-| Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 2R · Volumen ≥ 1,5× | 11 | 11 | 7,49 € |
-| Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R | 5 | 2 | -1,18 € |
-| Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 7 | 7 | 1,65 € |
-| Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R | 10 | 10 | 6,90 € |
+| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5× | 11 | 11 | 5,70 € |
+| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1,5R · Volumen ≥ 1,5× | 11 | 11 | 5,70 € |
+| Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 2R · Volumen ≥ 1,5× | 11 | 11 | 5,70 € |
+| Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R | 5 | 1 | -1,92 € |
+| Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 7 | 7 | 0,65 € |
+| Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R | 10 | 10 | 5,24 € |
 | Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · Ziel 2R | 15 | 0 | -4,68 € |
 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 3R | 0 | 0 | 0,00 € |
 
@@ -168,59 +168,59 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 | Aktie | Regel | Antwort | Einstieg | Stand | Ergebnis |
 |---|---|---|---|---|---|
 | AXP | Erholung | 12:38 Uhr ET | 313,73 $ | Stopp 13:00 Uhr | -0,48 € |
-| BA | Opening-Range-Ausbruch | 12:38 Uhr ET | 187,77 $ | offen, Kurs 188,31 $ | 0,24 € |
-| BA | Ausbruch mit Markt-Filter | 12:38 Uhr ET | 187,77 $ | offen, Kurs 188,31 $ | 0,24 € |
-| BA | Ausbruch mit Volumen-Rangliste | 12:38 Uhr ET | 187,77 $ | offen, Kurs 188,31 $ | 0,24 € |
-| COP | Opening-Range-Ausbruch | 12:33 Uhr ET | 152,38 $ | offen, Kurs 151,68 $ | -0,51 € |
-| COP | Ausbruch mit Volumen-Rangliste | 12:33 Uhr ET | 152,38 $ | offen, Kurs 151,68 $ | -0,51 € |
-| CSCO | Opening-Range-Ausbruch | 12:38 Uhr ET | 106,58 $ | offen, Kurs 106,38 $ | -0,24 € |
-| CSCO | Ausbruch mit Markt-Filter | 12:38 Uhr ET | 106,58 $ | offen, Kurs 106,38 $ | -0,24 € |
-| CSCO | Ausbruch mit Volumen-Rangliste | 12:38 Uhr ET | 106,58 $ | offen, Kurs 106,38 $ | -0,24 € |
-| DVN | Opening-Range-Ausbruch | 12:33 Uhr ET | 51,63 $ | offen, Kurs 51,48 $ | -0,34 € |
-| DVN | Ausbruch mit Volumen-Rangliste | 12:33 Uhr ET | 51,63 $ | offen, Kurs 51,48 $ | -0,34 € |
-| MRNA | Opening-Range-Ausbruch | 12:33 Uhr ET | 205,99 $ | offen, Kurs 205,00 $ | -0,53 € |
-| MRNA | Ausbruch mit Markt-Filter | 12:33 Uhr ET | 205,99 $ | offen, Kurs 205,00 $ | -0,53 € |
-| MRNA | Ausbruch mit Volumen-Rangliste | 12:33 Uhr ET | 205,99 $ | offen, Kurs 205,00 $ | -0,53 € |
-| NCLH | Erholung | 12:38 Uhr ET | 14,97 $ | offen, Kurs 14,94 $ | -0,27 € |
-| OXY | Opening-Range-Ausbruch | 12:38 Uhr ET | 64,91 $ | offen, Kurs 64,64 $ | -0,47 € |
-| OXY | Ausbruch mit Markt-Filter | 12:38 Uhr ET | 64,91 $ | offen, Kurs 64,64 $ | -0,47 € |
-| RIVN | Opening-Range-Ausbruch | 12:38 Uhr ET | 11,97 $ | offen, Kurs 11,94 $ | -0,29 € |
-| RIVN | Ausbruch mit Markt-Filter | 12:38 Uhr ET | 11,97 $ | offen, Kurs 11,94 $ | -0,29 € |
-| RIVN | Ausbruch mit Volumen-Rangliste | 12:38 Uhr ET | 11,97 $ | offen, Kurs 11,94 $ | -0,29 € |
-| SKHY | Opening-Range-Ausbruch | 12:38 Uhr ET | 137,72 $ | offen, Kurs 136,92 $ | -0,63 € |
-| SKHY | Ausbruch mit Markt-Filter | 12:38 Uhr ET | 137,72 $ | offen, Kurs 136,92 $ | -0,63 € |
-| SKHY | Ausbruch mit Volumen-Rangliste | 12:38 Uhr ET | 137,72 $ | offen, Kurs 136,92 $ | -0,63 € |
-| SLB | Opening-Range-Ausbruch | 12:33 Uhr ET | 53,24 $ | offen, Kurs 53,05 $ | -0,41 € |
-| SLB | Ausbruch mit Volumen-Rangliste | 12:33 Uhr ET | 53,24 $ | offen, Kurs 53,05 $ | -0,41 € |
-| TMUS | Erholung | 12:33 Uhr ET | 149,95 $ | offen, Kurs 150,11 $ | 0,05 € |
-| TTMI | Opening-Range-Ausbruch | 12:33 Uhr ET | 79,68 $ | offen, Kurs 79,24 $ | -0,60 € |
-| TTMI | Ausbruch mit Volumen-Rangliste | 12:33 Uhr ET | 79,68 $ | offen, Kurs 79,24 $ | -0,60 € |
-| XOM | Opening-Range-Ausbruch | 12:38 Uhr ET | 183,19 $ | offen, Kurs 182,65 $ | -0,34 € |
-| XOM | Ausbruch mit Markt-Filter | 12:38 Uhr ET | 183,19 $ | offen, Kurs 182,65 $ | -0,34 € |
-| XOM | Ausbruch mit Volumen-Rangliste | 12:38 Uhr ET | 183,19 $ | offen, Kurs 182,65 $ | -0,34 € |
+| BA | Opening-Range-Ausbruch | 12:38 Uhr ET | 187,77 $ | offen, Kurs 187,93 $ | 0,04 € |
+| BA | Ausbruch mit Markt-Filter | 12:38 Uhr ET | 187,77 $ | offen, Kurs 187,93 $ | 0,04 € |
+| BA | Ausbruch mit Volumen-Rangliste | 12:38 Uhr ET | 187,77 $ | offen, Kurs 187,93 $ | 0,04 € |
+| COP | Opening-Range-Ausbruch | 12:33 Uhr ET | 152,38 $ | offen, Kurs 151,47 $ | -0,65 € |
+| COP | Ausbruch mit Volumen-Rangliste | 12:33 Uhr ET | 152,38 $ | offen, Kurs 151,47 $ | -0,65 € |
+| CSCO | Opening-Range-Ausbruch | 12:38 Uhr ET | 106,58 $ | offen, Kurs 106,42 $ | -0,20 € |
+| CSCO | Ausbruch mit Markt-Filter | 12:38 Uhr ET | 106,58 $ | offen, Kurs 106,42 $ | -0,20 € |
+| CSCO | Ausbruch mit Volumen-Rangliste | 12:38 Uhr ET | 106,58 $ | offen, Kurs 106,42 $ | -0,20 € |
+| DVN | Opening-Range-Ausbruch | 12:33 Uhr ET | 51,63 $ | offen, Kurs 51,43 $ | -0,43 € |
+| DVN | Ausbruch mit Volumen-Rangliste | 12:33 Uhr ET | 51,63 $ | offen, Kurs 51,43 $ | -0,43 € |
+| MRNA | Opening-Range-Ausbruch | 12:33 Uhr ET | 205,99 $ | offen, Kurs 203,22 $ | -1,39 € |
+| MRNA | Ausbruch mit Markt-Filter | 12:33 Uhr ET | 205,99 $ | offen, Kurs 203,22 $ | -1,39 € |
+| MRNA | Ausbruch mit Volumen-Rangliste | 12:33 Uhr ET | 205,99 $ | offen, Kurs 203,22 $ | -1,39 € |
+| NCLH | Erholung | 12:38 Uhr ET | 14,97 $ | offen, Kurs 14,88 $ | -0,67 € |
+| OXY | Opening-Range-Ausbruch | 12:38 Uhr ET | 64,91 $ | offen, Kurs 64,56 $ | -0,60 € |
+| OXY | Ausbruch mit Markt-Filter | 12:38 Uhr ET | 64,91 $ | offen, Kurs 64,56 $ | -0,60 € |
+| RIVN | Opening-Range-Ausbruch | 12:38 Uhr ET | 11,97 $ | offen, Kurs 11,95 $ | -0,23 € |
+| RIVN | Ausbruch mit Markt-Filter | 12:38 Uhr ET | 11,97 $ | offen, Kurs 11,95 $ | -0,23 € |
+| RIVN | Ausbruch mit Volumen-Rangliste | 12:38 Uhr ET | 11,97 $ | offen, Kurs 11,95 $ | -0,23 € |
+| SKHY | Opening-Range-Ausbruch | 12:38 Uhr ET | 137,72 $ | offen, Kurs 137,25 $ | -0,39 € |
+| SKHY | Ausbruch mit Markt-Filter | 12:38 Uhr ET | 137,72 $ | offen, Kurs 137,25 $ | -0,39 € |
+| SKHY | Ausbruch mit Volumen-Rangliste | 12:38 Uhr ET | 137,72 $ | offen, Kurs 137,25 $ | -0,39 € |
+| SLB | Opening-Range-Ausbruch | 12:33 Uhr ET | 53,24 $ | offen, Kurs 52,78 $ | -0,92 € |
+| SLB | Ausbruch mit Volumen-Rangliste | 12:33 Uhr ET | 53,24 $ | offen, Kurs 52,78 $ | -0,92 € |
+| TMUS | Erholung | 12:33 Uhr ET | 149,95 $ | Stopp 13:10 Uhr | -0,28 € |
+| TTMI | Opening-Range-Ausbruch | 12:33 Uhr ET | 79,68 $ | offen, Kurs 79,22 $ | -0,63 € |
+| TTMI | Ausbruch mit Volumen-Rangliste | 12:33 Uhr ET | 79,68 $ | offen, Kurs 79,22 $ | -0,63 € |
+| XOM | Opening-Range-Ausbruch | 12:38 Uhr ET | 183,19 $ | offen, Kurs 182,45 $ | -0,46 € |
+| XOM | Ausbruch mit Markt-Filter | 12:38 Uhr ET | 183,19 $ | offen, Kurs 182,45 $ | -0,46 € |
+| XOM | Ausbruch mit Volumen-Rangliste | 12:38 Uhr ET | 183,19 $ | offen, Kurs 182,45 $ | -0,46 € |
 
 | Aktie | Regel | Einstieg | Stopp | Ziel | Stand | Ergebnis |
 |---|---|---|---|---|---|---|
-| RIVN | Opening-Range-Ausbruch 30 Min | 10:50 11,95 $ | 11,60 $ | 12,47 $ | offen, Kurs 11,94 $ | -0,08 € |
-| RIVN | Opening-Range-Ausbruch 30 Min | 10:50 11,95 $ | 11,60 $ | 12,64 $ | offen, Kurs 11,94 $ | -0,08 € |
-| RIVN | Opening-Range-Ausbruch 30 Min | 10:50 11,95 $ | 11,77 $ | 12,31 $ | offen, Kurs 11,94 $ | -0,08 € |
-| RIVN | Ausbruch 30 Min | 10:50 11,95 $ | 11,60 $ | 12,64 $ | offen, Kurs 11,94 $ | -0,08 € |
-| RIVN | Ausbruch 30 Min | 10:50 11,95 $ | 11,60 $ | 12,64 $ | offen, Kurs 11,94 $ | -0,08 € |
-| BA | Opening-Range-Ausbruch 30 Min | 10:55 185,92 $ | 182,40 $ | 191,19 $ | offen, Kurs 188,31 $ | 1,24 € |
-| BA | Opening-Range-Ausbruch 30 Min | 10:55 185,92 $ | 182,40 $ | 192,95 $ | offen, Kurs 188,31 $ | 1,24 € |
-| BA | Opening-Range-Ausbruch 30 Min | 10:55 185,92 $ | 184,10 $ | 189,54 $ | offen, Kurs 188,31 $ | 1,24 € |
-| BA | Ausbruch 30 Min | 10:55 185,92 $ | 182,40 $ | 192,95 $ | offen, Kurs 188,31 $ | 1,24 € |
-| BA | Ausbruch 30 Min | 10:55 185,92 $ | 182,40 $ | 192,95 $ | offen, Kurs 188,31 $ | 1,24 € |
+| RIVN | Opening-Range-Ausbruch 30 Min | 10:50 11,95 $ | 11,60 $ | 12,47 $ | offen, Kurs 11,95 $ | -0,02 € |
+| RIVN | Opening-Range-Ausbruch 30 Min | 10:50 11,95 $ | 11,60 $ | 12,64 $ | offen, Kurs 11,95 $ | -0,02 € |
+| RIVN | Opening-Range-Ausbruch 30 Min | 10:50 11,95 $ | 11,77 $ | 12,31 $ | offen, Kurs 11,95 $ | -0,02 € |
+| RIVN | Ausbruch 30 Min | 10:50 11,95 $ | 11,60 $ | 12,64 $ | offen, Kurs 11,95 $ | -0,02 € |
+| RIVN | Ausbruch 30 Min | 10:50 11,95 $ | 11,60 $ | 12,64 $ | offen, Kurs 11,95 $ | -0,02 € |
+| BA | Opening-Range-Ausbruch 30 Min | 10:55 185,92 $ | 182,40 $ | 191,19 $ | offen, Kurs 187,93 $ | 1,03 € |
+| BA | Opening-Range-Ausbruch 30 Min | 10:55 185,92 $ | 182,40 $ | 192,95 $ | offen, Kurs 187,93 $ | 1,03 € |
+| BA | Opening-Range-Ausbruch 30 Min | 10:55 185,92 $ | 184,10 $ | 189,54 $ | offen, Kurs 187,93 $ | 1,03 € |
+| BA | Ausbruch 30 Min | 10:55 185,92 $ | 182,40 $ | 192,95 $ | offen, Kurs 187,93 $ | 1,03 € |
+| BA | Ausbruch 30 Min | 10:55 185,92 $ | 182,40 $ | 192,95 $ | offen, Kurs 187,93 $ | 1,03 € |
 | AXP | Erholung: Lücke nach unten ≥ 3 % | 11:00 316,05 $ | 312,37 $ | 323,42 $ | Stopp 13:00 Uhr | -1,22 € |
-| OXY | Opening-Range-Ausbruch 30 Min | 11:00 64,23 $ | 62,68 $ | 66,55 $ | offen, Kurs 64,64 $ | 0,59 € |
-| OXY | Opening-Range-Ausbruch 30 Min | 11:00 64,23 $ | 62,68 $ | 67,32 $ | offen, Kurs 64,64 $ | 0,59 € |
-| OXY | Opening-Range-Ausbruch 30 Min | 11:00 64,23 $ | 63,42 $ | 65,84 $ | offen, Kurs 64,64 $ | 0,59 € |
-| OXY | Ausbruch 30 Min | 11:00 64,23 $ | 62,68 $ | 67,32 $ | offen, Kurs 64,64 $ | 0,59 € |
-| CSCO | Opening-Range-Ausbruch 30 Min | 11:30 106,48 $ | 104,04 $ | 110,14 $ | offen, Kurs 106,38 $ | -0,14 € |
-| CSCO | Opening-Range-Ausbruch 30 Min | 11:30 106,48 $ | 104,04 $ | 111,35 $ | offen, Kurs 106,38 $ | -0,14 € |
-| CSCO | Opening-Range-Ausbruch 30 Min | 11:30 106,48 $ | 105,20 $ | 109,03 $ | offen, Kurs 106,38 $ | -0,14 € |
-| CSCO | Ausbruch 30 Min | 11:30 106,48 $ | 104,04 $ | 111,35 $ | offen, Kurs 106,38 $ | -0,14 € |
-| CSCO | Ausbruch 30 Min | 11:30 106,48 $ | 104,04 $ | 111,35 $ | offen, Kurs 106,38 $ | -0,14 € |
+| OXY | Opening-Range-Ausbruch 30 Min | 11:00 64,23 $ | 62,68 $ | 66,55 $ | offen, Kurs 64,56 $ | 0,46 € |
+| OXY | Opening-Range-Ausbruch 30 Min | 11:00 64,23 $ | 62,68 $ | 67,32 $ | offen, Kurs 64,56 $ | 0,46 € |
+| OXY | Opening-Range-Ausbruch 30 Min | 11:00 64,23 $ | 63,42 $ | 65,84 $ | offen, Kurs 64,56 $ | 0,46 € |
+| OXY | Ausbruch 30 Min | 11:00 64,23 $ | 62,68 $ | 67,32 $ | offen, Kurs 64,56 $ | 0,46 € |
+| CSCO | Opening-Range-Ausbruch 30 Min | 11:30 106,48 $ | 104,04 $ | 110,14 $ | offen, Kurs 106,42 $ | -0,11 € |
+| CSCO | Opening-Range-Ausbruch 30 Min | 11:30 106,48 $ | 104,04 $ | 111,35 $ | offen, Kurs 106,42 $ | -0,11 € |
+| CSCO | Opening-Range-Ausbruch 30 Min | 11:30 106,48 $ | 105,20 $ | 109,03 $ | offen, Kurs 106,42 $ | -0,11 € |
+| CSCO | Ausbruch 30 Min | 11:30 106,48 $ | 104,04 $ | 111,35 $ | offen, Kurs 106,42 $ | -0,11 € |
+| CSCO | Ausbruch 30 Min | 11:30 106,48 $ | 104,04 $ | 111,35 $ | offen, Kurs 106,42 $ | -0,11 € |
 
 ## Labor (Testphase, Spielgeld ohne Limit)
 

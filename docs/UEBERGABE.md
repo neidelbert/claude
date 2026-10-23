@@ -12,7 +12,7 @@ Den ganzen Plan enthält `docs/TRADER-PLAN.md`, das Interview mit Lukas ist dort
 | Teil | Wo | Wann |
 |---|---|---|
 | Steuerung | `tools/trader/system.py` (Teile: auto, morning, orb, live, lab, alerts, ticker, test, message, render) | – |
-| Zeitplan | `.github/workflows/trader-system.yml` | Mo–Fr: 12:00–12:45 UTC alle 15 Min., 13–21 UTC alle 10 Min., 21:20–22:50 UTC |
+| Zeitplan | `.github/workflows/trader-system.yml`: Zeitplan-Läufe starten eine **Schleife** (`teil=schleife`), die selbst im 10-Minuten-Takt `system.py auto` ausführt, solange `system.py window` offen ist (Handelstag 7:25–19:35 Uhr ET, max. 5,5 h); Webseite über `tools/trader/seite.sh` | Mo–Fr, Crons als Starter |
 | Morgen-Scan | `scan.py` (Daily), `news.py`, `ptr.py` (Pelosi) | ab ca. 8:00 Uhr ET |
 | ORB-Scan | `scan.py orb` | ab ca. 10:10 Uhr ET |
 | Labor live | `lab.py live`: Spielgeld-Trades aller Varianten, Vorschlags-Pushes mit Ja/Nein | alle 10 Min. im Handel |
@@ -99,3 +99,4 @@ Den ganzen Plan enthält `docs/TRADER-PLAN.md`, das Interview mit Lukas ist dort
 | 23.10. | #26 | SQ durch XYZ ersetzt (keine Daten mehr) |
 | 23.10. | #27 | Übergabe-Dokument, CLAUDE.md verweist darauf |
 | 23.10. | #28 | Auswertung zum Börsenstart und Börsenschluss statt nachts (5:40-Erinnerung gelöscht); dieses Änderungsprotokoll |
+| 23.10. | #29 | Schleife im Workflow: GitHub startete Zeitpläne nur alle 25–45 Min. (4 statt ~16 Läufe bis 10:50 ET) → ein Lauf arbeitet selbst im 10-Min.-Takt; `system.py window`, `seite.sh` |

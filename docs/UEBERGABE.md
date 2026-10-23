@@ -53,13 +53,13 @@ Den ganzen Plan enthält `docs/TRADER-PLAN.md`, das Interview mit Lukas ist dort
    `/opt/pw-browsers` (siehe frühere Tests: iPhone-13-Format, hell/dunkel, keine JS-Fehler, kein seitliches Scrollen).
 7. **Ehrlich bleiben:** Spielgeld-Zahlen zeigen (erlaubt), aber nie Gewinne versprechen. Echtes Geld nur mit Lukas' Ja.
 
-## Stand der Ergebnisse (23.10.2026 nachts)
-- Labor: 58 Varianten, **5 bestanden** (alle Opening-Range-Ausbruch 30 Min. mit Volumen ≥ 1,5×). Die beste bringt
-  +18,18 € an den Prüftagen bei 100 € pro Trade, der Zufallswert liegt unter 2.
-- „Stocks in Play“ (Studie) ist in unserer Umsetzung im Minus. Der Markt-Filter ist an den Prüftagen besser, an
-  den Lerntagen im Minus.
-- Simulator-Vorschau: 100 € → **18,88 €** mit 1 € Gebühr je Order, ohne Gebühr ~99 €. Die Gebühren sind das größte Problem.
-- Erster Live-Tag: 22.10. (nachträglich gerechnet, 1.534 Spielgeld-Trades aller Varianten).
+## Stand der Ergebnisse (23.10.2026, 17:10 UTC, Labor mit neuem Code)
+- Labor: 397 Aktien, 61 Tage, 58 Varianten, **0 bestanden** (vorher 5; ein neuer Tag hat die Prüftage verschoben).
+  Top-Regel: `bounce-gapdown3-daylow-2R`.
+- Muster: 1 hält (Volumen der ersten 30 Min. über 4× normal, Ø +0,21 % je Trade an 606 Prüf-Trades); zu meiden u. a.
+  Mittwoch, Freitag, Einstieg ab 12 Uhr ET, Stopp unter 0,5 %.
+- Go-Ampel: 0–1 von 6 grün. Tag 1 des 100-Tage-Experiments läuft.
+- Gebühren (1 € je Order) bleiben das größte Problem.
 
 ## Offen
 - **Lukas' offene Fragen** stehen in `docs/AUSWERTUNG.md`: Simulator-Start, Broker und Gebühren, Push-Kanal privat,
@@ -104,3 +104,4 @@ Den ganzen Plan enthält `docs/TRADER-PLAN.md`, das Interview mit Lukas ist dort
 | 23.10. | #28 | Auswertung zum Börsenstart und Börsenschluss statt nachts (5:40-Erinnerung gelöscht); dieses Änderungsprotokoll |
 | 23.10. | #29 | Schleife im Workflow: GitHub startete Zeitpläne nur alle 25–45 Min. (4 statt ~16 Läufe bis 10:50 ET) → ein Lauf arbeitet selbst im 10-Min.-Takt; `system.py window`, `seite.sh` |
 | 23.10. | #30 | 100-Tage-Experiment (Lukas: „jeden Tag automatisch bis Tag 100“, 100 € je Tag, aus jedem Trade lernen, sicheres Go): Tageskonto je Regel, Trade-Merkmale und Muster-Suche, Go-Ampel, nur 2 Pushes am Tag (Start kurz, Schluss Rückblick), Übersicht mit Status, Diagrammen und Statistik; Diagramme nach Skill `dataviz` |
+| 23.10. | #31 | Stand nach dem ersten Labor-Lauf mit neuem Code (0 bestanden, 1 Muster hält); Webseite live geprüft |

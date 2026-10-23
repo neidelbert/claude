@@ -334,9 +334,10 @@ function tradeItem(t, who){
     t.why==="Stopp" ? "Der Kurs fiel auf den Stopp. Der Verlust blieb so klein wie geplant. Das passiert oft – entscheidend ist die Summe." :
     t.why==="Ziel" ? "Der Kurs erreichte das Ziel. Der Gewinn ist ein Vielfaches des Risikos ("+g("R")+")." :
     "Weder Stopp noch Ziel: verkauft vor Börsenschluss, wie es beim Daytrading üblich ist.";
+  const pid = t.pid || ((t.date||(D.live&&D.live.date)||"").replace(/-/g,"")+"-"+String(t.symbol).replace(".","_")+"-"+t.strategy);
   return '<details class="item"><summary><div class="row"><span><b>'+esc(t.symbol)+'</b> <span class="small">'+esc(who)+'</span></span><b class="num '+cls(t.eur)+'">'+eur(t.eur)+'</b></div>'+
     '<div class="small">'+esc(STRAT[t.strategy]||"")+' · '+esc(t.in_at||t.answer_at)+' Uhr NY · '+esc(res||t.status)+'</div></summary>'+
-    '<div style="margin-top:8px" class="small">'+esc(lab)+'</div>'+(t.stop?tradeBar(t):"")+spark(t.symbol,t)+'<p class="small">'+expl+'</p></details>';
+    '<div style="margin-top:8px" class="small">'+esc(lab)+'</div>'+(t.stop?tradeBar(t):"")+spark(t.symbol,t)+'<p class="small">'+expl+'</p>'+notesHtml(pid)+'</details>';
 }
 function renderTrades(){
   const days = [];
@@ -592,6 +593,30 @@ function goalCard(){
     stages.map((s,i)=>'<div style="margin-top:10px'+(i>cur?';opacity:.55':'')+'"><div class="row"><b>'+(i+1)+'. '+s.name+'</b><span class="small">'+(s.done?"erledigt":i===cur?"jetzt":"später")+'</span></div>'+
       '<div class="bar"><div class="fill" style="left:0;width:'+Math.round((s.done?1:s.p)*100)+'%;background:'+(s.done?"var(--green)":"var(--blue)")+'"></div></div><div class="small">'+esc(s.txt)+'</div></div>').join("")+
     '<p class="small" style="margin-top:10px">'+esc((stages[cur]||stages[2]).now)+'</p></div>';
+}
+
+function notesHtml(pid){
+  const saved = (D.notes||{})[pid]||[];
+  let local = []; try{ local = JSON.parse(localStorage.getItem("notes-"+pid)||"[]"); }catch(e){}
+  const all = saved.map(n=>n.text).concat(local.filter(x=>!saved.some(n=>n.text===x)));
+  let h = '<div style="margin-top:8px"><div class="small"><b>Deine Notizen</b> (Tagebuch: Warum hast du so entschieden? Was hast du gelernt?)</div>'+
+    (all.length ? all.map(x=>'<div class="small" style="margin-top:4px">• '+esc(x)+'</div>').join("") : '<div class="small muted">Noch keine Notiz.</div>');
+  if(!window.__DATA__ && D.reply && D.reply.topic){
+    const id = "n-"+pid.replace(/[^A-Za-z0-9_-]/g,"");
+    h += '<textarea id="'+id+'" rows="2" class="search" style="width:100%;margin:6px 0 0" placeholder="Notiz schreiben"></textarea>'+
+         '<div class="btns"><button class="btn ghost" onclick="saveNote(\''+pid+'\',\''+id+'\')">Notiz speichern</button></div>';
+  }
+  return h+'</div>';
+}
+async function saveNote(pid, id){
+  const el = document.getElementById(id), text = (el && el.value || "").trim().replace(/\s+/g," ");
+  if(!text) return;
+  try{
+    await fetch(D.reply.server.replace(/\/$/,"")+"/"+D.reply.topic, {method:"POST", body:"notiz "+pid+" "+text.slice(0,500)});
+    try{ const k="notes-"+pid, a=JSON.parse(localStorage.getItem(k)||"[]"); a.push(text); localStorage.setItem(k, JSON.stringify(a)); }catch(e){}
+    openSheet("<h3>Notiz gespeichert</h3><p>Sie steht ab dem nächsten Lauf (≤ 10 Min. im Handel) dauerhaft im Tagebuch.</p>");
+    render();
+  }catch(e){ openSheet("<h3>Nicht gespeichert</h3><p>Keine Verbindung. Bitte noch einmal versuchen.</p>"); }
 }
 
 load();

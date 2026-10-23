@@ -221,9 +221,16 @@ def read_answers(cfg):
             m = json.loads(line)
         except ValueError:
             continue
-        words = (m.get("message") or "").strip().lower().split()
-        if m.get("event") == "message" and len(words) == 2 and words[0] in ("ja", "nein"):
-            out[words[1]] = {"answer": words[0], "ts": int(m.get("time") or 0)}
+        text = (m.get("message") or "").strip()
+        words = text.split()
+        cmd = words[0].lower() if words else ""
+        if m.get("event") == "message" and len(words) == 2 and cmd in ("ja", "nein"):
+            # die ID nicht umwandeln: sie enthält den Ticker in Großbuchstaben (AAPL)
+            out[words[1]] = {"answer": cmd, "ts": int(m.get("time") or 0)}
+        elif m.get("event") == "message" and len(words) >= 3 and cmd == "notiz":
+            # „notiz <id> <Text>“ von der Webseite: Tagebuch-Notiz zu einem Trade
+            out.setdefault("_notes", []).append({"id": m.get("id"), "pid": text.split()[1],
+                                                 "text": text.split(None, 2)[2][:500], "ts": int(m.get("time") or 0)})
     return out
 
 
@@ -622,7 +629,7 @@ def lab_module():
 def do_live(cfg, now, force):
     et = scan.to_eastern(now)
     day = et.date().isoformat()
-    owned = ["lab/live/%s.json" % day, "lab/decisions.json", "status/live.json"]
+    owned = ["lab/live/%s.json" % day, "lab/decisions.json", "lab/notes.json", "status/live.json"]
     steps = []
     old = read_json(status_path("live"), {}) or {}
     data = dict(old.get("data") or {}) if old.get("date_et") == day else {}
@@ -631,12 +638,23 @@ def do_live(cfg, now, force):
     decisions = read_json(dec_path, {}) or {}
     new_answers = 0
     try:
-        for pid, a in read_answers(cfg).items():
+        answers = read_answers(cfg)
+        notes_in = answers.pop("_notes", [])
+        for pid, a in answers.items():
             if decisions.get(pid, {}).get("ts") != a["ts"]:
                 decisions[pid] = a
                 new_answers += 1
         if new_answers:
             write_json(dec_path, decisions)
+        notes_path = p(T, "lab", "notes.json")
+        notes = read_json(notes_path, {}) or {}
+        known = {n["id"] for lst in notes.values() for n in lst}
+        fresh = [n for n in notes_in if n["id"] not in known]
+        for n in fresh:
+            notes.setdefault(n["pid"], []).append({"id": n["id"], "text": n["text"], "ts": n["ts"]})
+        if fresh:
+            write_json(notes_path, notes)
+            new_answers += len(fresh)
     except Exception as e:
         step(steps, "Antworten lesen", False, str(e)[:200])
     rc, ld, reason = run_json("live", ["lab.py", "live"], timeout=900)

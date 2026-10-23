@@ -210,6 +210,7 @@ def build_data(cfg):
         "generated_at": now.isoformat() + "Z", "phase": "Testphase", "market": market_info(now), "status": status,
         "labels": labels, "live": live, "proposals": proposals, "history": history(), "lab": labd,
         "decisions": {k: v for k, v in decisions.items() if k != "test"},
+        "notes": rj("lab", "notes.json", default={}) or {},
         "morning": {"as_of": wl.get("as_of"), "daily": md.get("daily"), "hits": hits[:30],
                     "per_setup": {k: [h["symbol"] for h in hits if k in h.get("setups", [])][:12]
                                   for k in system.SETUP_ORDER},

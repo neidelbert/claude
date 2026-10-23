@@ -20,7 +20,7 @@ Workflow-Protokolle, Browser-Tests.
 | Ausbruch mit Volumen-Rangliste | 3 | 2 | 3 | 11 | ✓ #15 |
 | Live-Prüfung der Webseite | 2 | 3 | 3 | 10 | ✓ #18 |
 | Option „leise“ für Nacht-Tests | 1 | 3 | 3 | 8 | ✓ #19 |
-| Notizen zu Trades (über ntfy-Antwortkanal) | 2 | 1 | 2 | 7 | später |
+| Notizen zu Trades (über ntfy-Antwortkanal) | 2 | 1 | 2 | 7 | ✓ #21 |
 | KI-Zweitmeinung (Claude-API) | 2 | 1 | 2 | 7 | Monat 2 (Interview) |
 | Alle 7.000 Aktien live | 2 | 1 | 1 | 6 | nein: Datenlimit |
 | Leerverkauf / Hebel wie die Studie | 2 | 2 | 1 | 7 | nein: im Plan ausgeschlossen |
@@ -52,3 +52,17 @@ Workflow-Protokolle, Browser-Tests.
 | Bezahlte Echtzeit-Daten | 0 €-Budget in Monat 1 |
 | KI-Zweitmeinung (Claude-API) | im Interview auf Monat 2 verschoben, braucht API-Schlüssel und Budget |
 | Notizen zu Trades auf der Webseite | braucht einen Speicher; möglich über den ntfy-Antwortkanal → Kandidat |
+
+## Protokoll (deutsche Zeit, 23.10.2026)
+| Uhrzeit | Schritt |
+|---|---|
+| 01:31 | Recherche: Profi-Regeln (Risiko je Trade, Tagesgrenze, Tagebuch), Studie Zarattini/Barbon/Aziz, Aufbau von Broker-Apps |
+| 01:35 | Stocks in Play, Simulator, Lernprotokoll, Wochen-Rückblick, neue Tabs (#7) |
+| 01:41 | Tagebuch über mehrere Tage, Varianten-Details, Ticker-Analyse, Einstellungen, Einführung (#8) |
+| 01:46 | Fehler gefunden und behoben: ungültiger Workflow (#14); Prüf-Workflow gegen Wiederholung (#15) |
+| 01:48 | Volumen-Rangliste, Gebühren-Grenze, „Weg zum Ziel“ (#15) |
+| 01:51 | Pages über gh-pages eingeschaltet; Webseite ohne Secret mit öffentlichem Schlüssel (#17) |
+| 01:55 | Live-Prüfung der Webseite (#18), bestanden |
+| 01:59 | Option „leise“, Liste der Verbesserungen (#19) |
+| 02:03 | Markt-Filter (#20), Punkte-Tabelle; Labor-Lauf: 58 Varianten, 5 bestanden |
+| 02:07 | Notizen zu Trades (#21); dabei Fehler gefunden: Ja/Nein-IDs wurden kleingeschrieben, Ja-Trades wären nie gezählt worden → behoben und getestet |

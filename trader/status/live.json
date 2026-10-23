@@ -1,0 +1,24 @@
+{
+  "part": "live",
+  "ok": true,
+  "summary": "Tagesbilanz: 64 Trades",
+  "ran_at": "2026-10-20T20:10:00Z",
+  "date_et": "2026-10-20",
+  "steps": [
+    {
+      "name": "Labor live",
+      "ok": true,
+      "detail": "4 Aktien, 64 Spielgeld-Trades, 0 offen"
+    }
+  ],
+  "data": {
+    "date": "2026-10-20",
+    "as_of": "16:10 Uhr ET",
+    "trades": 64,
+    "open": 0,
+    "symbols": 4,
+    "failed": 0,
+    "eod": "2026-10-20"
+  },
+  "run_url": null
+}

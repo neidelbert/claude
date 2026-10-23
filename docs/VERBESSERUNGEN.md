@@ -70,3 +70,4 @@ Workflow-Protokolle, Browser-Tests.
 | 04:50 | Nach dem Neustart: #21 gemergt, Webseite leise neu gebaut, mit Passwort getestet (58 Varianten, Notizen vorhanden), Live-Prüfung bestanden |
 | 04:52–04:55 | Nachgeholte Zeit: Notizen auf echter Infrastruktur getestet (#23): Test-Notiz über ntfy → Live-Lauf → `trader/lab/notes.json` ✓. Nebenbei hat der Live-Lauf den 22.10. nachträglich mit allen Varianten durchgerechnet (1.534 Spielgeld-Trades) |
 | 04:56 | Test-Notiz aus dem Tagebuch entfernt; Auswertung (5:40-Push) auf den neuesten Stand gebracht |
+| 04:58 | Labor-Protokoll gelesen: SQ liefert keine Daten mehr (Block heißt jetzt XYZ) → Aktienliste korrigiert |

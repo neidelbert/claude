@@ -3,6 +3,11 @@ name: Webseite prüfen
 
 on:
   workflow_dispatch:
+    inputs:
+      notiztest:
+        description: "Zusätzlich eine Test-Notiz an den Antwortkanal schicken"
+        type: boolean
+        default: false
 
 jobs:
   live:
@@ -43,3 +48,9 @@ jobs:
           })();
           JS
           node t.js
+      - name: Test-Notiz an den Antwortkanal (wie die Webseite)
+        if: inputs.notiztest
+        run: |
+          git fetch -q origin main && git show origin/main:trader/system.json > sys.json
+          T=$(python3 -c "import json;print(json.load(open('sys.json'))['ntfy_reply_topic'])")
+          curl -fsS -d "notiz 20261023-TEST-orb Test-Notiz vom Prüf-Workflow" "https://ntfy.sh/$T" >/dev/null && echo "Notiz gesendet"

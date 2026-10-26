@@ -47,5 +47,36 @@
     "kind": "failed",
     "id": "orb-30-mid-1.5R-v1.5",
     "text": "Nicht mehr bestanden: Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 1,5R · Volumen ≥ 1,5× (an den neuen Prüftagen nicht mehr im Plus)."
+  },
+  {
+    "date": "2026-10-26",
+    "kind": "champion",
+    "id": "orb-30-low-2R-v0-fv4",
+    "old": "bounce-gapdown3-daylow-2R",
+    "text": "Neue Top-Variante: Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal (Prüftage: 42 Trades, 12,62 € bei 100 € pro Trade). Vorher: Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R."
+  },
+  {
+    "date": "2026-10-26",
+    "kind": "passed",
+    "id": "orb-30-low-2R-v0-fv4",
+    "text": "Neu bestanden: Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal."
+  },
+  {
+    "date": "2026-10-26",
+    "kind": "passed",
+    "id": "orb-30-low-2R-v0-fv2",
+    "text": "Neu bestanden: Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 2× normal."
+  },
+  {
+    "date": "2026-10-26",
+    "kind": "passed",
+    "id": "orb-15-low-2R-v0-fv4",
+    "text": "Neu bestanden: Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal."
+  },
+  {
+    "date": "2026-10-26",
+    "kind": "passed",
+    "id": "orbrank-top20-2R-fv4",
+    "text": "Neu bestanden: Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal."
   }
 ]

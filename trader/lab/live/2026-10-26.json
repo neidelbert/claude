@@ -1,0 +1,7878 @@
+{
+ "date": "2026-10-26",
+ "charts": {
+  "BABA": [
+   [
+    0,
+    99.715
+   ],
+   [
+    1,
+    99.87
+   ],
+   [
+    2,
+    99.925
+   ],
+   [
+    3,
+    99.99
+   ],
+   [
+    4,
+    99.9
+   ],
+   [
+    5,
+    99.665
+   ],
+   [
+    6,
+    99.91
+   ],
+   [
+    7,
+    100.05
+   ],
+   [
+    8,
+    100.18
+   ],
+   [
+    9,
+    100.73
+   ],
+   [
+    10,
+    100.675
+   ],
+   [
+    11,
+    100.465
+   ],
+   [
+    12,
+    100.41
+   ]
+  ],
+  "BIDU": [
+   [
+    0,
+    77.6
+   ],
+   [
+    1,
+    77.7
+   ],
+   [
+    2,
+    77.58
+   ],
+   [
+    3,
+    77.77
+   ],
+   [
+    4,
+    77.645
+   ],
+   [
+    5,
+    77.48
+   ],
+   [
+    6,
+    77.78
+   ],
+   [
+    7,
+    77.92
+   ],
+   [
+    8,
+    78.235
+   ],
+   [
+    9,
+    78.825
+   ],
+   [
+    10,
+    78.8077
+   ],
+   [
+    11,
+    78.59
+   ],
+   [
+    12,
+    78.58
+   ]
+  ],
+  "CHKP": [
+   [
+    0,
+    160.05
+   ],
+   [
+    1,
+    159.185
+   ],
+   [
+    2,
+    159.8
+   ],
+   [
+    3,
+    158.42
+   ],
+   [
+    4,
+    158.82
+   ],
+   [
+    5,
+    158.62
+   ],
+   [
+    6,
+    159.535
+   ],
+   [
+    7,
+    159.585
+   ],
+   [
+    8,
+    160.41
+   ],
+   [
+    9,
+    161.22
+   ],
+   [
+    10,
+    162.175
+   ],
+   [
+    11,
+    162.0
+   ],
+   [
+    12,
+    161.8
+   ]
+  ],
+  "CI": [
+   [
+    0,
+    307.95
+   ],
+   [
+    1,
+    308.27
+   ],
+   [
+    2,
+    308.46
+   ],
+   [
+    3,
+    308.8
+   ],
+   [
+    4,
+    308.9
+   ],
+   [
+    5,
+    310.2004
+   ],
+   [
+    6,
+    310.14
+   ],
+   [
+    7,
+    310.21
+   ],
+   [
+    8,
+    309.19
+   ],
+   [
+    9,
+    309.8
+   ],
+   [
+    10,
+    309.92
+   ],
+   [
+    11,
+    309.61
+   ],
+   [
+    12,
+    310.06
+   ]
+  ],
+  "CIFR": [
+   [
+    0,
+    7.5395
+   ],
+   [
+    1,
+    7.655
+   ],
+   [
+    2,
+    7.526
+   ],
+   [
+    3,
+    7.745
+   ],
+   [
+    4,
+    7.7735
+   ],
+   [
+    5,
+    7.685
+   ],
+   [
+    6,
+    7.605
+   ],
+   [
+    7,
+    7.645
+   ],
+   [
+    8,
+    7.73
+   ],
+   [
+    9,
+    7.905
+   ],
+   [
+    10,
+    7.805
+   ],
+   [
+    11,
+    7.795
+   ],
+   [
+    12,
+    7.73
+   ]
+  ],
+  "CLSK": [
+   [
+    0,
+    7.4745
+   ],
+   [
+    1,
+    7.55
+   ],
+   [
+    2,
+    7.425
+   ],
+   [
+    3,
+    7.5099
+   ],
+   [
+    4,
+    7.4899
+   ],
+   [
+    5,
+    7.4418
+   ],
+   [
+    6,
+    7.425
+   ],
+   [
+    7,
+    7.48
+   ],
+   [
+    8,
+    7.585
+   ],
+   [
+    9,
+    7.72
+   ],
+   [
+    10,
+    7.65
+   ],
+   [
+    11,
+    7.665
+   ],
+   [
+    12,
+    7.605
+   ]
+  ],
+  "COIN": [
+   [
+    0,
+    158.25
+   ],
+   [
+    1,
+    158.9
+   ],
+   [
+    2,
+    156.2342
+   ],
+   [
+    3,
+    156.435
+   ],
+   [
+    4,
+    156.49
+   ],
+   [
+    5,
+    156.57
+   ],
+   [
+    6,
+    156.4417
+   ],
+   [
+    7,
+    157.9
+   ],
+   [
+    8,
+    158.605
+   ],
+   [
+    9,
+    160.315
+   ],
+   [
+    10,
+    159.38
+   ],
+   [
+    11,
+    159.195
+   ],
+   [
+    12,
+    159.395
+   ]
+  ],
+  "COST": [
+   [
+    0,
+    1002.68
+   ],
+   [
+    1,
+    1003.16
+   ],
+   [
+    2,
+    1006.62
+   ],
+   [
+    3,
+    1005.72
+   ],
+   [
+    4,
+    1009.265
+   ],
+   [
+    5,
+    1009.815
+   ],
+   [
+    6,
+    1011.095
+   ],
+   [
+    7,
+    1012.8
+   ],
+   [
+    8,
+    1014.2549
+   ],
+   [
+    9,
+    1012.425
+   ],
+   [
+    10,
+    1011.71
+   ],
+   [
+    11,
+    1010.3101
+   ],
+   [
+    12,
+    1010.46
+   ]
+  ],
+  "CRS": [
+   [
+    0,
+    277.58
+   ],
+   [
+    1,
+    278.38
+   ],
+   [
+    2,
+    280.48
+   ],
+   [
+    3,
+    282.84
+   ],
+   [
+    4,
+    280.765
+   ],
+   [
+    5,
+    279.89
+   ],
+   [
+    6,
+    281.12
+   ],
+   [
+    7,
+    281.76
+   ],
+   [
+    8,
+    284.545
+   ],
+   [
+    9,
+    288.3
+   ],
+   [
+    10,
+    289.875
+   ],
+   [
+    11,
+    288.9701
+   ],
+   [
+    12,
+    288.58
+   ]
+  ],
+  "CRWD": [
+   [
+    0,
+    258.035
+   ],
+   [
+    1,
+    257.5906
+   ],
+   [
+    2,
+    258.255
+   ],
+   [
+    3,
+    256.78
+   ],
+   [
+    4,
+    255.57
+   ],
+   [
+    5,
+    254.64
+   ],
+   [
+    6,
+    255.96
+   ],
+   [
+    7,
+    256.98
+   ],
+   [
+    8,
+    258.0
+   ],
+   [
+    9,
+    259.245
+   ],
+   [
+    10,
+    260.51
+   ],
+   [
+    11,
+    261.335
+   ],
+   [
+    12,
+    262.025
+   ]
+  ],
+  "DASH": [
+   [
+    0,
+    176.36
+   ],
+   [
+    1,
+    176.92
+   ],
+   [
+    2,
+    175.31
+   ],
+   [
+    3,
+    174.425
+   ],
+   [
+    4,
+    176.255
+   ],
+   [
+    5,
+    176.58
+   ],
+   [
+    6,
+    175.82
+   ],
+   [
+    7,
+    175.77
+   ],
+   [
+    8,
+    177.14
+   ],
+   [
+    9,
+    176.935
+   ],
+   [
+    10,
+    176.18
+   ],
+   [
+    11,
+    176.235
+   ],
+   [
+    12,
+    176.33
+   ]
+  ],
+  "DOW": [
+   [
+    0,
+    33.14
+   ],
+   [
+    1,
+    33.465
+   ],
+   [
+    2,
+    33.805
+   ],
+   [
+    3,
+    33.96
+   ],
+   [
+    4,
+    34.07
+   ],
+   [
+    5,
+    34.09
+   ],
+   [
+    6,
+    34.125
+   ],
+   [
+    7,
+    34.03
+   ],
+   [
+    8,
+    34.165
+   ],
+   [
+    9,
+    34.27
+   ],
+   [
+    10,
+    34.22
+   ],
+   [
+    11,
+    34.11
+   ],
+   [
+    12,
+    34.19
+   ]
+  ],
+  "MARA": [
+   [
+    0,
+    6.7001
+   ],
+   [
+    1,
+    6.7777
+   ],
+   [
+    2,
+    6.68
+   ],
+   [
+    3,
+    6.74
+   ],
+   [
+    4,
+    6.7286
+   ],
+   [
+    5,
+    6.6799
+   ],
+   [
+    6,
+    6.65
+   ],
+   [
+    7,
+    6.7199
+   ],
+   [
+    8,
+    6.8
+   ],
+   [
+    9,
+    6.95
+   ],
+   [
+    10,
+    6.905
+   ],
+   [
+    11,
+    6.9
+   ],
+   [
+    12,
+    6.83
+   ]
+  ],
+  "MET": [
+   [
+    0,
+    100.135
+   ],
+   [
+    1,
+    100.43
+   ],
+   [
+    2,
+    100.43
+   ],
+   [
+    3,
+    100.48
+   ],
+   [
+    4,
+    100.36
+   ],
+   [
+    5,
+    100.28
+   ],
+   [
+    6,
+    100.61
+   ],
+   [
+    7,
+    100.43
+   ],
+   [
+    8,
+    100.24
+   ],
+   [
+    9,
+    100.13
+   ],
+   [
+    10,
+    100.17
+   ],
+   [
+    11,
+    100.145
+   ],
+   [
+    12,
+    100.12
+   ]
+  ],
+  "MRNA": [
+   [
+    0,
+    187.38
+   ],
+   [
+    1,
+    186.595
+   ],
+   [
+    2,
+    189.11
+   ],
+   [
+    3,
+    195.64
+   ],
+   [
+    4,
+    200.295
+   ],
+   [
+    5,
+    201.09
+   ],
+   [
+    6,
+    201.535
+   ],
+   [
+    7,
+    201.34
+   ],
+   [
+    8,
+    200.68
+   ],
+   [
+    9,
+    202.79
+   ],
+   [
+    10,
+    202.31
+   ],
+   [
+    11,
+    200.665
+   ],
+   [
+    12,
+    196.96
+   ]
+  ],
+  "MSTR": [
+   [
+    0,
+    138.27
+   ],
+   [
+    1,
+    139.565
+   ],
+   [
+    2,
+    137.8551
+   ],
+   [
+    3,
+    138.55
+   ],
+   [
+    4,
+    138.94
+   ],
+   [
+    5,
+    139.6
+   ],
+   [
+    6,
+    138.715
+   ],
+   [
+    7,
+    139.645
+   ],
+   [
+    8,
+    140.155
+   ],
+   [
+    9,
+    141.79
+   ],
+   [
+    10,
+    140.72
+   ],
+   [
+    11,
+    140.5
+   ],
+   [
+    12,
+    140.375
+   ]
+  ],
+  "NU": [
+   [
+    0,
+    11.705
+   ],
+   [
+    1,
+    12.12
+   ],
+   [
+    2,
+    12.03
+   ],
+   [
+    3,
+    12.025
+   ],
+   [
+    4,
+    12.085
+   ],
+   [
+    5,
+    12.02
+   ],
+   [
+    6,
+    11.934
+   ],
+   [
+    7,
+    12.165
+   ],
+   [
+    8,
+    12.168
+   ],
+   [
+    9,
+    12.17
+   ],
+   [
+    10,
+    12.055
+   ],
+   [
+    11,
+    12.115
+   ],
+   [
+    12,
+    11.955
+   ]
+  ],
+  "ON": [
+   [
+    0,
+    72.66
+   ],
+   [
+    1,
+    72.81
+   ],
+   [
+    2,
+    72.42
+   ],
+   [
+    3,
+    72.865
+   ],
+   [
+    4,
+    73.015
+   ],
+   [
+    5,
+    72.345
+   ],
+   [
+    6,
+    72.69
+   ],
+   [
+    7,
+    72.45
+   ],
+   [
+    8,
+    72.89
+   ],
+   [
+    9,
+    73.12
+   ],
+   [
+    10,
+    72.8
+   ],
+   [
+    11,
+    72.58
+   ],
+   [
+    12,
+    72.3069
+   ]
+  ],
+  "ORLY": [
+   [
+    0,
+    89.855
+   ],
+   [
+    1,
+    90.39
+   ],
+   [
+    2,
+    90.725
+   ],
+   [
+    3,
+    90.56
+   ],
+   [
+    4,
+    90.91
+   ],
+   [
+    5,
+    91.005
+   ],
+   [
+    6,
+    91.165
+   ],
+   [
+    7,
+    91.44
+   ],
+   [
+    8,
+    91.335
+   ],
+   [
+    9,
+    91.38
+   ],
+   [
+    10,
+    91.27
+   ],
+   [
+    11,
+    91.11
+   ],
+   [
+    12,
+    91.195
+   ]
+  ],
+  "PWR": [
+   [
+    0,
+    552.945
+   ],
+   [
+    1,
+    554.833
+   ],
+   [
+    2,
+    554.26
+   ],
+   [
+    3,
+    561.13
+   ],
+   [
+    4,
+    558.62
+   ],
+   [
+    5,
+    555.62
+   ],
+   [
+    6,
+    556.11
+   ],
+   [
+    7,
+    555.81
+   ],
+   [
+    8,
+    558.155
+   ],
+   [
+    9,
+    563.21
+   ],
+   [
+    10,
+    561.46
+   ],
+   [
+    11,
+    560.395
+   ],
+   [
+    12,
+    558.87
+   ]
+  ],
+  "QLYS": [
+   [
+    0,
+    217.32
+   ],
+   [
+    1,
+    217.51
+   ],
+   [
+    2,
+    219.07
+   ],
+   [
+    3,
+    218.44
+   ],
+   [
+    4,
+    218.87
+   ],
+   [
+    5,
+    217.29
+   ],
+   [
+    6,
+    218.32
+   ],
+   [
+    7,
+    218.0
+   ],
+   [
+    8,
+    220.945
+   ],
+   [
+    9,
+    221.055
+   ],
+   [
+    10,
+    223.32
+   ],
+   [
+    11,
+    223.88
+   ],
+   [
+    12,
+    224.08
+   ]
+  ],
+  "RIOT": [
+   [
+    0,
+    11.955
+   ],
+   [
+    1,
+    12.1058
+   ],
+   [
+    2,
+    11.865
+   ],
+   [
+    3,
+    12.02
+   ],
+   [
+    4,
+    11.97
+   ],
+   [
+    5,
+    11.895
+   ],
+   [
+    6,
+    11.86
+   ],
+   [
+    7,
+    11.925
+   ],
+   [
+    8,
+    12.105
+   ],
+   [
+    9,
+    12.355
+   ],
+   [
+    10,
+    12.235
+   ],
+   [
+    11,
+    12.235
+   ],
+   [
+    12,
+    12.14
+   ]
+  ],
+  "ROP": [
+   [
+    0,
+    440.29
+   ],
+   [
+    1,
+    441.395
+   ],
+   [
+    2,
+    441.04
+   ],
+   [
+    3,
+    440.015
+   ],
+   [
+    4,
+    444.6
+   ],
+   [
+    5,
+    447.1
+   ],
+   [
+    6,
+    446.43
+   ],
+   [
+    7,
+    445.86
+   ],
+   [
+    8,
+    447.65
+   ],
+   [
+    9,
+    447.09
+   ],
+   [
+    10,
+    446.86
+   ],
+   [
+    11,
+    447.93
+   ],
+   [
+    12,
+    449.89
+   ]
+  ],
+  "SE": [
+   [
+    0,
+    71.965
+   ],
+   [
+    1,
+    71.88
+   ],
+   [
+    2,
+    72.425
+   ],
+   [
+    3,
+    72.57
+   ],
+   [
+    4,
+    72.68
+   ],
+   [
+    5,
+    72.53
+   ],
+   [
+    6,
+    72.71
+   ],
+   [
+    7,
+    72.72
+   ],
+   [
+    8,
+    73.22
+   ],
+   [
+    9,
+    73.83
+   ],
+   [
+    10,
+    73.61
+   ],
+   [
+    11,
+    73.84
+   ],
+   [
+    12,
+    74.14
+   ]
+  ],
+  "SNAP": [
+   [
+    0,
+    6.0501
+   ],
+   [
+    1,
+    6.09
+   ],
+   [
+    2,
+    6.0199
+   ],
+   [
+    3,
+    6.07
+   ],
+   [
+    4,
+    6.165
+   ],
+   [
+    5,
+    6.16
+   ],
+   [
+    6,
+    6.17
+   ],
+   [
+    7,
+    6.25
+   ],
+   [
+    8,
+    6.315
+   ],
+   [
+    9,
+    6.295
+   ],
+   [
+    10,
+    6.255
+   ],
+   [
+    11,
+    6.245
+   ],
+   [
+    12,
+    6.235
+   ]
+  ],
+  "T": [
+   [
+    0,
+    21.155
+   ],
+   [
+    1,
+    20.945
+   ],
+   [
+    2,
+    21.06
+   ],
+   [
+    3,
+    21.095
+   ],
+   [
+    4,
+    21.085
+   ],
+   [
+    5,
+    21.065
+   ],
+   [
+    6,
+    21.045
+   ],
+   [
+    7,
+    21.13
+   ],
+   [
+    8,
+    21.115
+   ],
+   [
+    9,
+    21.08
+   ],
+   [
+    10,
+    21.015
+   ],
+   [
+    11,
+    21.055
+   ],
+   [
+    12,
+    21.025
+   ]
+  ],
+  "TSLA": [
+   [
+    0,
+    389.49
+   ],
+   [
+    1,
+    391.4
+   ],
+   [
+    2,
+    392.18
+   ],
+   [
+    3,
+    392.6
+   ],
+   [
+    4,
+    393.82
+   ],
+   [
+    5,
+    392.8299
+   ],
+   [
+    6,
+    394.31
+   ],
+   [
+    7,
+    393.8098
+   ],
+   [
+    8,
+    393.675
+   ],
+   [
+    9,
+    395.5851
+   ],
+   [
+    10,
+    395.5101
+   ],
+   [
+    11,
+    395.32
+   ],
+   [
+    12,
+    393.58
+   ]
+  ]
+ },
+ "as_of": "10:39 Uhr ET",
+ "symbols": 397,
+ "failed": 0,
+ "focus": [
+  "bounce-gapdown3-daylow-2R",
+  "bounce-gapdown3-pct1.5-2R",
+  "bounce-gapdown3-daylow-1R",
+  "orb-30-low-2R-v1.5",
+  "orbmkt-30-low-2R-v1.5",
+  "orbrank-top20-2R",
+  "sip-top10-atr0.1-2R",
+  "gap-2-v2-2R"
+ ],
+ "labels": {
+  "bounce-gapdown3-daylow-2R": "Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R",
+  "bounce-gapdown3-pct1.5-2R": "Erholung: Lücke nach unten ≥ 3 % · Stopp 1,5 % darunter · Ziel 2R",
+  "bounce-gapdown3-daylow-1R": "Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 1R",
+  "orb-30-low-2R-v1.5": "Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5×",
+  "orbmkt-30-low-2R-v1.5": "Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R",
+  "orbrank-top20-2R": "Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R",
+  "sip-top10-atr0.1-2R": "Stocks in Play (Studie): Top 10 nach Startvolumen · Stopp 10 % ATR · Ziel 2R",
+  "gap-2-v2-2R": "News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 2R"
+ },
+ "per_variant": {
+  "orb-15-mid-1R-v0": {
+   "n": 217,
+   "open": 126,
+   "eur": -63.08,
+   "wins": 66
+  },
+  "orb-15-mid-1.5R-v0": {
+   "n": 217,
+   "open": 149,
+   "eur": -67.02,
+   "wins": 59
+  },
+  "orb-15-mid-2R-v0": {
+   "n": 217,
+   "open": 159,
+   "eur": -72.11,
+   "wins": 56
+  },
+  "orb-15-low-1R-v0": {
+   "n": 217,
+   "open": 200,
+   "eur": -62.77,
+   "wins": 60
+  },
+  "orb-15-low-1.5R-v0": {
+   "n": 217,
+   "open": 205,
+   "eur": -65.22,
+   "wins": 59
+  },
+  "orb-15-low-2R-v0": {
+   "n": 217,
+   "open": 207,
+   "eur": -67.9,
+   "wins": 59
+  },
+  "orb-30-mid-1R-v0": {
+   "n": 157,
+   "open": 117,
+   "eur": -48.25,
+   "wins": 31
+  },
+  "orb-30-mid-1.5R-v0": {
+   "n": 157,
+   "open": 128,
+   "eur": -50.71,
+   "wins": 28
+  },
+  "orb-30-mid-2R-v0": {
+   "n": 157,
+   "open": 130,
+   "eur": -51.14,
+   "wins": 28
+  },
+  "orb-30-low-1R-v0": {
+   "n": 157,
+   "open": 153,
+   "eur": -52.5,
+   "wins": 28
+  },
+  "orb-30-low-1.5R-v0": {
+   "n": 157,
+   "open": 153,
+   "eur": -52.5,
+   "wins": 28
+  },
+  "orb-30-low-2R-v0": {
+   "n": 157,
+   "open": 153,
+   "eur": -52.5,
+   "wins": 28
+  },
+  "orb-30-low-2R-v0-ffrueh": {
+   "n": 154,
+   "open": 150,
+   "eur": -52.17,
+   "wins": 28
+  },
+  "orb-15-low-2R-v0-ffrueh": {
+   "n": 211,
+   "open": 201,
+   "eur": -67.69,
+   "wins": 58
+  },
+  "orb-15-mid-1R-v1.5": {
+   "n": 23,
+   "open": 12,
+   "eur": -6.63,
+   "wins": 9
+  },
+  "orb-15-mid-1.5R-v1.5": {
+   "n": 23,
+   "open": 15,
+   "eur": -5.98,
+   "wins": 9
+  },
+  "orb-15-mid-2R-v1.5": {
+   "n": 23,
+   "open": 17,
+   "eur": -6.65,
+   "wins": 9
+  },
+  "orb-15-low-1R-v1.5": {
+   "n": 23,
+   "open": 19,
+   "eur": -1.67,
+   "wins": 10
+  },
+  "orb-15-low-1.5R-v1.5": {
+   "n": 23,
+   "open": 21,
+   "eur": -2.78,
+   "wins": 10
+  },
+  "orb-15-low-2R-v1.5": {
+   "n": 23,
+   "open": 21,
+   "eur": -2.78,
+   "wins": 10
+  },
+  "orb-30-mid-1R-v1.5": {
+   "n": 16,
+   "open": 11,
+   "eur": -1.66,
+   "wins": 6
+  },
+  "orb-30-mid-1.5R-v1.5": {
+   "n": 16,
+   "open": 14,
+   "eur": -1.89,
+   "wins": 6
+  },
+  "orb-30-mid-2R-v1.5": {
+   "n": 16,
+   "open": 15,
+   "eur": -2.12,
+   "wins": 6
+  },
+  "orb-30-low-1R-v1.5": {
+   "n": 16,
+   "open": 15,
+   "eur": -2.64,
+   "wins": 6
+  },
+  "orb-30-low-1.5R-v1.5": {
+   "n": 16,
+   "open": 15,
+   "eur": -2.64,
+   "wins": 6
+  },
+  "orb-30-low-2R-v1.5": {
+   "n": 16,
+   "open": 15,
+   "eur": -2.64,
+   "wins": 6
+  },
+  "orbmkt-30-low-1.5R-v1.5": {
+   "n": 16,
+   "open": 15,
+   "eur": -2.64,
+   "wins": 6
+  },
+  "orbmkt-30-low-2R-v1.5": {
+   "n": 16,
+   "open": 15,
+   "eur": -2.64,
+   "wins": 6
+  },
+  "sip-top20-atr0.1-eod": {
+   "n": 17,
+   "open": 4,
+   "eur": -0.04,
+   "wins": 4
+  },
+  "sip-top20-atr0.1-2R": {
+   "n": 17,
+   "open": 0,
+   "eur": -0.18,
+   "wins": 5
+  },
+  "sip-top20-atr0.2-eod": {
+   "n": 17,
+   "open": 5,
+   "eur": -1.94,
+   "wins": 5
+  },
+  "sip-top20-atr0.2-2R": {
+   "n": 17,
+   "open": 3,
+   "eur": -0.97,
+   "wins": 5
+  },
+  "sip-top20-atr0.1-eod-fv2": {
+   "n": 12,
+   "open": 4,
+   "eur": 1.74,
+   "wins": 4
+  },
+  "bounce-rsi30-daylow-1R": {
+   "n": 31,
+   "open": 25,
+   "eur": -5.15,
+   "wins": 11
+  },
+  "bounce-rsi30-daylow-2R": {
+   "n": 31,
+   "open": 28,
+   "eur": -5.34,
+   "wins": 11
+  },
+  "bounce-rsi30-pct1.5-1R": {
+   "n": 31,
+   "open": 24,
+   "eur": -2.03,
+   "wins": 11
+  },
+  "bounce-rsi30-pct1.5-2R": {
+   "n": 31,
+   "open": 27,
+   "eur": -2.74,
+   "wins": 11
+  },
+  "sip-top10-atr0.1-eod": {
+   "n": 7,
+   "open": 3,
+   "eur": 0.51,
+   "wins": 3
+  },
+  "sip-top10-atr0.1-2R": {
+   "n": 7,
+   "open": 0,
+   "eur": 1.6,
+   "wins": 3
+  },
+  "sip-top10-atr0.2-eod": {
+   "n": 7,
+   "open": 3,
+   "eur": -0.63,
+   "wins": 3
+  },
+  "sip-top10-atr0.2-2R": {
+   "n": 7,
+   "open": 2,
+   "eur": 2.39,
+   "wins": 3
+  },
+  "orbrank-top20-1.5R": {
+   "n": 8,
+   "open": 8,
+   "eur": -1.11,
+   "wins": 3
+  },
+  "orbrank-top20-2R": {
+   "n": 8,
+   "open": 8,
+   "eur": -1.11,
+   "wins": 3
+  },
+  "orbrank-top20-2R-ffrueh": {
+   "n": 8,
+   "open": 8,
+   "eur": -1.11,
+   "wins": 3
+  },
+  "bounce-gapdown3-daylow-1R": {
+   "n": 8,
+   "open": 7,
+   "eur": 3.58,
+   "wins": 6
+  },
+  "bounce-gapdown3-daylow-2R": {
+   "n": 8,
+   "open": 8,
+   "eur": 2.17,
+   "wins": 6
+  },
+  "bounce-gapdown3-pct1.5-1R": {
+   "n": 8,
+   "open": 2,
+   "eur": 8.2,
+   "wins": 6
+  },
+  "bounce-gapdown3-pct1.5-2R": {
+   "n": 8,
+   "open": 7,
+   "eur": 4.21,
+   "wins": 6
+  },
+  "bounce-gapdown3-daylow-2R-ffrueh": {
+   "n": 8,
+   "open": 8,
+   "eur": 2.17,
+   "wins": 6
+  },
+  "orb-15-low-2R-v0-fv2": {
+   "n": 12,
+   "open": 12,
+   "eur": -0.59,
+   "wins": 6
+  },
+  "sip-top20-atr0.1-eod-ffrueh": {
+   "n": 2,
+   "open": 2,
+   "eur": 2.37,
+   "wins": 2
+  },
+  "orb-30-low-2R-v0-fv2": {
+   "n": 7,
+   "open": 7,
+   "eur": -1.59,
+   "wins": 2
+  },
+  "orbrank-top20-2R-fv2": {
+   "n": 7,
+   "open": 7,
+   "eur": -1.59,
+   "wins": 2
+  },
+  "orbrank-top10-1.5R": {
+   "n": 4,
+   "open": 4,
+   "eur": -0.49,
+   "wins": 2
+  },
+  "orbrank-top10-2R": {
+   "n": 4,
+   "open": 4,
+   "eur": -0.49,
+   "wins": 2
+  },
+  "orb-30-low-2R-v0-fv4": {
+   "n": 1,
+   "open": 1,
+   "eur": -1.82,
+   "wins": 0
+  },
+  "orb-15-low-2R-v0-fv4": {
+   "n": 1,
+   "open": 1,
+   "eur": -1.82,
+   "wins": 0
+  },
+  "sip-top20-atr0.1-eod-fv4": {
+   "n": 3,
+   "open": 2,
+   "eur": 3.03,
+   "wins": 2
+  },
+  "orbrank-top20-2R-fv4": {
+   "n": 1,
+   "open": 1,
+   "eur": -1.82,
+   "wins": 0
+  }
+ },
+ "n_trades": 3213,
+ "n_open": 2676,
+ "lukas": [],
+ "lukas_n": 0,
+ "accounts": {
+  "orb-15-mid-1R-v0": [
+   99.3,
+   89.23
+  ],
+  "orb-15-mid-1.5R-v0": [
+   99.3,
+   89.23
+  ],
+  "orb-15-mid-2R-v0": [
+   99.3,
+   89.23
+  ],
+  "orb-15-low-1R-v0": [
+   99.31,
+   91.38
+  ],
+  "orb-15-low-1.5R-v0": [
+   99.31,
+   91.38
+  ],
+  "orb-15-low-2R-v0": [
+   99.31,
+   91.38
+  ],
+  "orb-30-mid-1R-v0": [
+   99.66,
+   91.69
+  ],
+  "orb-30-mid-1.5R-v0": [
+   99.66,
+   91.69
+  ],
+  "orb-30-mid-2R-v0": [
+   99.66,
+   91.69
+  ],
+  "orb-30-low-1R-v0": [
+   99.66,
+   91.69
+  ],
+  "orb-30-low-1.5R-v0": [
+   99.66,
+   91.69
+  ],
+  "orb-30-low-2R-v0": [
+   99.66,
+   91.69
+  ],
+  "orb-30-low-2R-v0-ffrueh": [
+   99.66,
+   91.69
+  ],
+  "orb-15-low-2R-v0-ffrueh": [
+   99.31,
+   91.38
+  ],
+  "orb-15-mid-1R-v1.5": [
+   99.15,
+   87.17
+  ],
+  "orb-15-mid-1.5R-v1.5": [
+   99.15,
+   87.17
+  ],
+  "orb-15-mid-2R-v1.5": [
+   99.15,
+   87.17
+  ],
+  "orb-15-low-1R-v1.5": [
+   100.53,
+   90.62
+  ],
+  "orb-15-low-1.5R-v1.5": [
+   100.42,
+   92.52
+  ],
+  "orb-15-low-2R-v1.5": [
+   100.42,
+   92.52
+  ],
+  "orb-30-mid-1R-v1.5": [
+   99.54,
+   91.32
+  ],
+  "orb-30-mid-1.5R-v1.5": [
+   99.38,
+   91.32
+  ],
+  "orb-30-mid-2R-v1.5": [
+   99.38,
+   91.32
+  ],
+  "orb-30-low-1R-v1.5": [
+   99.38,
+   91.32
+  ],
+  "orb-30-low-1.5R-v1.5": [
+   99.38,
+   91.32
+  ],
+  "orb-30-low-2R-v1.5": [
+   99.38,
+   91.32
+  ],
+  "orbmkt-30-low-1.5R-v1.5": [
+   99.38,
+   91.32
+  ],
+  "orbmkt-30-low-2R-v1.5": [
+   99.38,
+   91.32
+  ],
+  "sip-top20-atr0.1-eod": [
+   100.03,
+   86.23
+  ],
+  "sip-top20-atr0.1-2R": [
+   100.33,
+   82.53
+  ],
+  "sip-top20-atr0.2-eod": [
+   99.68,
+   87.89
+  ],
+  "sip-top20-atr0.2-2R": [
+   99.68,
+   87.89
+  ],
+  "sip-top20-atr0.1-eod-fv2": [
+   100.19,
+   90.4
+  ],
+  "bounce-rsi30-daylow-1R": [
+   99.93,
+   91.8
+  ],
+  "bounce-rsi30-daylow-2R": [
+   99.9,
+   91.8
+  ],
+  "bounce-rsi30-pct1.5-1R": [
+   99.9,
+   91.8
+  ],
+  "bounce-rsi30-pct1.5-2R": [
+   99.9,
+   91.8
+  ],
+  "sip-top10-atr0.1-eod": [
+   100.1,
+   86.1
+  ],
+  "sip-top10-atr0.1-2R": [
+   100.32,
+   86.32
+  ],
+  "sip-top10-atr0.2-eod": [
+   99.52,
+   87.52
+  ],
+  "sip-top10-atr0.2-2R": [
+   99.52,
+   87.52
+  ],
+  "orbrank-top20-1.5R": [
+   99.68,
+   91.85
+  ],
+  "orbrank-top20-2R": [
+   99.68,
+   91.85
+  ],
+  "orbrank-top20-2R-ffrueh": [
+   99.68,
+   91.85
+  ],
+  "bounce-gapdown3-daylow-1R": [
+   100.65,
+   90.58
+  ],
+  "bounce-gapdown3-daylow-2R": [
+   100.41,
+   92.34
+  ],
+  "bounce-gapdown3-pct1.5-1R": [
+   101.04,
+   90.74
+  ],
+  "bounce-gapdown3-pct1.5-2R": [
+   100.77,
+   90.7
+  ],
+  "bounce-gapdown3-daylow-2R-ffrueh": [
+   100.41,
+   92.34
+  ],
+  "orb-15-low-2R-v0-fv2": [
+   100.42,
+   92.52
+  ],
+  "sip-top20-atr0.1-eod-ffrueh": [
+   100.47,
+   96.47
+  ],
+  "orb-30-low-2R-v0-fv2": [
+   99.68,
+   91.85
+  ],
+  "orbrank-top20-2R-fv2": [
+   99.68,
+   91.85
+  ],
+  "orbrank-top10-1.5R": [
+   99.9,
+   91.9
+  ],
+  "orbrank-top10-2R": [
+   99.9,
+   91.9
+  ],
+  "orb-30-low-2R-v0-fv4": [
+   99.64,
+   97.64
+  ],
+  "orb-15-low-2R-v0-fv4": [
+   99.64,
+   97.64
+  ],
+  "sip-top20-atr0.1-eod-fv4": [
+   100.61,
+   94.61
+  ],
+  "orbrank-top20-2R-fv4": [
+   99.64,
+   97.64
+  ]
+ },
+ "trades": [
+  {
+   "entry": 160.7703,
+   "stop": 160.2883,
+   "target": 161.7345,
+   "exit": 159.1054,
+   "why": "Stopp",
+   "r": -3.454,
+   "pct": -1.036,
+   "in_k": 1,
+   "out_k": 1,
+   "open": false,
+   "variant": "sip-top10-atr0.1-2R",
+   "strategy": "sip",
+   "symbol": "CHKP",
+   "in_at": "9:40",
+   "out_at": "9:40",
+   "last": 161.8,
+   "eur": -1.04,
+   "key": "sip-top10-atr0.1-2R|CHKP",
+   "f": {
+    "k": 1,
+    "gap": 0.67,
+    "rv": 2.29,
+    "mkt": true,
+    "atrp": 3.0,
+    "risk": 0.3,
+    "price": 160.77,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": true
+  },
+  {
+   "entry": 308.4892,
+   "stop": 307.7302,
+   "target": 310.007,
+   "exit": 309.852,
+   "why": "Ziel",
+   "r": 1.796,
+   "pct": 0.442,
+   "in_k": 1,
+   "out_k": 5,
+   "open": false,
+   "variant": "sip-top10-atr0.1-2R",
+   "strategy": "sip",
+   "symbol": "CI",
+   "in_at": "9:40",
+   "out_at": "10:00",
+   "last": 310.06,
+   "eur": 0.44,
+   "key": "sip-top10-atr0.1-2R|CI",
+   "f": {
+    "k": 1,
+    "gap": -0.11,
+    "rv": 4.81,
+    "mkt": true,
+    "atrp": 2.46,
+    "risk": 0.25,
+    "price": 308.49,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": true
+  },
+  {
+   "entry": 12.046,
+   "stop": 11.9924,
+   "target": 12.1532,
+   "exit": 11.9865,
+   "why": "Stopp",
+   "r": -1.112,
+   "pct": -0.495,
+   "in_k": 1,
+   "out_k": 2,
+   "open": false,
+   "variant": "sip-top10-atr0.1-2R",
+   "strategy": "sip",
+   "symbol": "NU",
+   "in_at": "9:40",
+   "out_at": "9:45",
+   "last": 11.955,
+   "eur": -0.49,
+   "key": "sip-top10-atr0.1-2R|NU",
+   "f": {
+    "k": 1,
+    "gap": -21.62,
+    "rv": 43.04,
+    "mkt": true,
+    "atrp": 4.45,
+    "risk": 0.44,
+    "price": 12.05,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": true
+  },
+  {
+   "entry": 555.2775,
+   "stop": 552.0526,
+   "target": 561.7274,
+   "exit": 561.4465,
+   "why": "Ziel",
+   "r": 1.913,
+   "pct": 1.111,
+   "in_k": 1,
+   "out_k": 3,
+   "open": false,
+   "variant": "sip-top10-atr0.1-2R",
+   "strategy": "sip",
+   "symbol": "PWR",
+   "in_at": "9:40",
+   "out_at": "9:50",
+   "last": 558.87,
+   "eur": 1.11,
+   "key": "sip-top10-atr0.1-2R|PWR",
+   "f": {
+    "k": 1,
+    "gap": -0.36,
+    "rv": 2.97,
+    "mkt": true,
+    "atrp": 5.81,
+    "risk": 0.58,
+    "price": 555.28,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": true
+  },
+  {
+   "entry": 100.6603,
+   "stop": 100.4355,
+   "target": 101.1099,
+   "exit": 100.3798,
+   "why": "Stopp",
+   "r": -1.248,
+   "pct": -0.279,
+   "in_k": 2,
+   "out_k": 2,
+   "open": false,
+   "variant": "sip-top10-atr0.1-2R",
+   "strategy": "sip",
+   "symbol": "MET",
+   "in_at": "9:45",
+   "out_at": "9:45",
+   "last": 100.12,
+   "eur": -0.28,
+   "key": "sip-top10-atr0.1-2R|MET",
+   "f": {
+    "k": 2,
+    "gap": 0.83,
+    "rv": 3.94,
+    "mkt": true,
+    "atrp": 2.23,
+    "risk": 0.22,
+    "price": 100.66,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": true
+  },
+  {
+   "entry": 193.4317,
+   "stop": 191.0892,
+   "target": 198.1167,
+   "exit": 198.0176,
+   "why": "Ziel",
+   "r": 1.958,
+   "pct": 2.371,
+   "in_k": 3,
+   "out_k": 4,
+   "open": false,
+   "variant": "sip-top10-atr0.1-2R",
+   "strategy": "sip",
+   "symbol": "MRNA",
+   "in_at": "9:50",
+   "out_at": "9:55",
+   "last": 196.96,
+   "eur": 2.37,
+   "key": "sip-top10-atr0.1-2R|MRNA",
+   "f": {
+    "k": 3,
+    "gap": -8.04,
+    "rv": 2.05,
+    "mkt": true,
+    "atrp": 12.11,
+    "risk": 1.21,
+    "price": 193.43,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": true
+  },
+  {
+   "entry": 99.96,
+   "stop": 98.4114,
+   "target": 101.5086,
+   "exit": 100.3598,
+   "why": "Schluss",
+   "r": 0.258,
+   "pct": 0.4,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "BABA",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 100.41,
+   "eur": 0.4,
+   "key": "bounce-rsi30-pct1.5-1R|BABA",
+   "f": {
+    "k": 6,
+    "gap": -0.09,
+    "rv": 1.57,
+    "mkt": true,
+    "atrp": 3.28,
+    "risk": 1.55,
+    "price": 99.96,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 99.96,
+   "stop": 98.4114,
+   "target": 103.0572,
+   "exit": 100.3598,
+   "why": "Schluss",
+   "r": 0.258,
+   "pct": 0.4,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "BABA",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 100.41,
+   "eur": 0.4,
+   "key": "bounce-rsi30-pct1.5-2R|BABA",
+   "f": {
+    "k": 6,
+    "gap": -0.09,
+    "rv": 1.57,
+    "mkt": true,
+    "atrp": 3.28,
+    "risk": 1.55,
+    "price": 99.96,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 51.2206,
+   "stop": 50.4271,
+   "target": 52.0141,
+   "exit": 51.0844,
+   "why": "Schluss",
+   "r": -0.172,
+   "pct": -0.266,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "BAC",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 51.11,
+   "eur": -0.27,
+   "key": "bounce-rsi30-pct1.5-1R|BAC",
+   "f": {
+    "k": 6,
+    "gap": 0.13,
+    "rv": 0.58,
+    "mkt": true,
+    "atrp": 2.54,
+    "risk": 1.55,
+    "price": 51.22,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 51.2206,
+   "stop": 50.4271,
+   "target": 52.8076,
+   "exit": 51.0844,
+   "why": "Schluss",
+   "r": -0.172,
+   "pct": -0.266,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "BAC",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 51.11,
+   "eur": -0.27,
+   "key": "bounce-rsi30-pct1.5-2R|BAC",
+   "f": {
+    "k": 6,
+    "gap": 0.13,
+    "rv": 0.58,
+    "mkt": true,
+    "atrp": 2.54,
+    "risk": 1.55,
+    "price": 51.22,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 77.8189,
+   "stop": 76.6133,
+   "target": 79.0245,
+   "exit": 78.5407,
+   "why": "Schluss",
+   "r": 0.599,
+   "pct": 0.928,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "BIDU",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 78.58,
+   "eur": 0.93,
+   "key": "bounce-rsi30-pct1.5-1R|BIDU",
+   "f": {
+    "k": 6,
+    "gap": 0.59,
+    "rv": 1.88,
+    "mkt": true,
+    "atrp": 2.7,
+    "risk": 1.55,
+    "price": 77.82,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 77.8189,
+   "stop": 76.6133,
+   "target": 80.2301,
+   "exit": 78.5407,
+   "why": "Schluss",
+   "r": 0.599,
+   "pct": 0.928,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "BIDU",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 78.58,
+   "eur": 0.93,
+   "key": "bounce-rsi30-pct1.5-2R|BIDU",
+   "f": {
+    "k": 6,
+    "gap": 0.59,
+    "rv": 1.88,
+    "mkt": true,
+    "atrp": 2.7,
+    "risk": 1.55,
+    "price": 77.82,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 1011.6005,
+   "stop": 999.08,
+   "target": 1030.3813,
+   "exit": 1009.9548,
+   "why": "Schluss",
+   "r": -0.131,
+   "pct": -0.163,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1.5R-v1.5",
+   "strategy": "orb",
+   "symbol": "COST",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 1010.46,
+   "eur": -0.16,
+   "key": "orb-30-low-1.5R-v1.5|COST",
+   "f": {
+    "k": 6,
+    "gap": -0.13,
+    "rv": 2.56,
+    "mkt": true,
+    "atrp": 1.6,
+    "risk": 1.24,
+    "price": 1011.6,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 1011.6005,
+   "stop": 999.08,
+   "target": 1024.121,
+   "exit": 1009.9548,
+   "why": "Schluss",
+   "r": -0.131,
+   "pct": -0.163,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1R-v1.5",
+   "strategy": "orb",
+   "symbol": "COST",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 1010.46,
+   "eur": -0.16,
+   "key": "orb-30-low-1R-v1.5|COST",
+   "f": {
+    "k": 6,
+    "gap": -0.13,
+    "rv": 2.56,
+    "mkt": true,
+    "atrp": 1.6,
+    "risk": 1.24,
+    "price": 1011.6,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 1011.6005,
+   "stop": 999.08,
+   "target": 1036.6415,
+   "exit": 1009.9548,
+   "why": "Schluss",
+   "r": -0.131,
+   "pct": -0.163,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-2R-v1.5",
+   "strategy": "orb",
+   "symbol": "COST",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 1010.46,
+   "eur": -0.16,
+   "key": "orb-30-low-2R-v1.5|COST",
+   "f": {
+    "k": 6,
+    "gap": -0.13,
+    "rv": 2.56,
+    "mkt": true,
+    "atrp": 1.6,
+    "risk": 1.24,
+    "price": 1011.6,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 1011.6005,
+   "stop": 999.08,
+   "target": 1030.3813,
+   "exit": 1009.9548,
+   "why": "Schluss",
+   "r": -0.131,
+   "pct": -0.163,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-1.5R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "COST",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 1010.46,
+   "eur": -0.16,
+   "key": "orbmkt-30-low-1.5R-v1.5|COST",
+   "f": {
+    "k": 6,
+    "gap": -0.13,
+    "rv": 2.56,
+    "mkt": true,
+    "atrp": 1.6,
+    "risk": 1.24,
+    "price": 1011.6,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 1011.6005,
+   "stop": 999.08,
+   "target": 1036.6415,
+   "exit": 1009.9548,
+   "why": "Schluss",
+   "r": -0.131,
+   "pct": -0.163,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-2R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "COST",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 1010.46,
+   "eur": -0.16,
+   "key": "orbmkt-30-low-2R-v1.5|COST",
+   "f": {
+    "k": 6,
+    "gap": -0.13,
+    "rv": 2.56,
+    "mkt": true,
+    "atrp": 1.6,
+    "risk": 1.24,
+    "price": 1011.6,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 1011.6005,
+   "stop": 999.08,
+   "target": 1036.6415,
+   "exit": 1009.9548,
+   "why": "Schluss",
+   "r": -0.131,
+   "pct": -0.163,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbrank-top20-2R",
+   "strategy": "orbrank",
+   "symbol": "COST",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 1010.46,
+   "eur": -0.16,
+   "key": "orbrank-top20-2R|COST",
+   "f": {
+    "k": 6,
+    "gap": -0.13,
+    "rv": 2.56,
+    "mkt": true,
+    "atrp": 1.6,
+    "risk": 1.24,
+    "price": 1011.6,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 281.2606,
+   "stop": 276.9032,
+   "target": 285.6179,
+   "exit": 285.4751,
+   "why": "Ziel",
+   "r": 0.967,
+   "pct": 1.498,
+   "in_k": 6,
+   "out_k": 9,
+   "open": false,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "CRS",
+   "in_at": "10:05",
+   "out_at": "10:20",
+   "last": 288.58,
+   "eur": 1.5,
+   "key": "bounce-rsi30-pct1.5-1R|CRS",
+   "f": {
+    "k": 6,
+    "gap": -1.81,
+    "rv": 3.03,
+    "mkt": true,
+    "atrp": 6.33,
+    "risk": 1.55,
+    "price": 281.26,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 281.2606,
+   "stop": 276.9032,
+   "target": 289.9753,
+   "exit": 289.8303,
+   "why": "Ziel",
+   "r": 1.967,
+   "pct": 3.047,
+   "in_k": 6,
+   "out_k": 10,
+   "open": false,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "CRS",
+   "in_at": "10:05",
+   "out_at": "10:25",
+   "last": 288.58,
+   "eur": 3.05,
+   "key": "bounce-rsi30-pct1.5-2R|CRS",
+   "f": {
+    "k": 6,
+    "gap": -1.81,
+    "rv": 3.03,
+    "mkt": true,
+    "atrp": 6.33,
+    "risk": 1.55,
+    "price": 281.26,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 287.0434,
+   "stop": 282.5965,
+   "target": 291.4904,
+   "exit": 288.4757,
+   "why": "Schluss",
+   "r": 0.322,
+   "pct": 0.499,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "GE",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 288.62,
+   "eur": 0.5,
+   "key": "bounce-rsi30-pct1.5-1R|GE",
+   "f": {
+    "k": 6,
+    "gap": 0.14,
+    "rv": 0.42,
+    "mkt": true,
+    "atrp": 3.06,
+    "risk": 1.55,
+    "price": 287.04,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 287.0434,
+   "stop": 282.5965,
+   "target": 295.9373,
+   "exit": 288.4757,
+   "why": "Schluss",
+   "r": 0.322,
+   "pct": 0.499,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "GE",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 288.62,
+   "eur": 0.5,
+   "key": "bounce-rsi30-pct1.5-2R|GE",
+   "f": {
+    "k": 6,
+    "gap": 0.14,
+    "rv": 0.42,
+    "mkt": true,
+    "atrp": 3.06,
+    "risk": 1.55,
+    "price": 287.04,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 148.9544,
+   "stop": 146.6468,
+   "target": 151.2621,
+   "exit": 148.3258,
+   "why": "Schluss",
+   "r": -0.272,
+   "pct": -0.422,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "KLAC",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 148.4,
+   "eur": -0.42,
+   "key": "bounce-rsi30-pct1.5-1R|KLAC",
+   "f": {
+    "k": 6,
+    "gap": -0.22,
+    "rv": 0.81,
+    "mkt": true,
+    "atrp": 5.55,
+    "risk": 1.55,
+    "price": 148.95,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 148.9544,
+   "stop": 146.6468,
+   "target": 153.5697,
+   "exit": 148.3258,
+   "why": "Schluss",
+   "r": -0.272,
+   "pct": -0.422,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "KLAC",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 148.4,
+   "eur": -0.42,
+   "key": "bounce-rsi30-pct1.5-2R|KLAC",
+   "f": {
+    "k": 6,
+    "gap": -0.22,
+    "rv": 0.81,
+    "mkt": true,
+    "atrp": 5.55,
+    "risk": 1.55,
+    "price": 148.95,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 235.8078,
+   "stop": 232.1547,
+   "target": 239.461,
+   "exit": 235.5172,
+   "why": "Schluss",
+   "r": -0.08,
+   "pct": -0.123,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "LRCX",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 235.635,
+   "eur": -0.12,
+   "key": "bounce-rsi30-pct1.5-1R|LRCX",
+   "f": {
+    "k": 6,
+    "gap": 0.21,
+    "rv": 1.02,
+    "mkt": true,
+    "atrp": 6.58,
+    "risk": 1.55,
+    "price": 235.81,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 235.8078,
+   "stop": 232.1547,
+   "target": 243.1142,
+   "exit": 235.5172,
+   "why": "Schluss",
+   "r": -0.08,
+   "pct": -0.123,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "LRCX",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 235.635,
+   "eur": -0.12,
+   "key": "bounce-rsi30-pct1.5-2R|LRCX",
+   "f": {
+    "k": 6,
+    "gap": 0.21,
+    "rv": 1.02,
+    "mkt": true,
+    "atrp": 6.58,
+    "risk": 1.55,
+    "price": 235.81,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 200.14,
+   "stop": 197.0394,
+   "target": 203.2406,
+   "exit": 199.0505,
+   "why": "Schluss",
+   "r": -0.351,
+   "pct": -0.544,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "MKSI",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 199.1501,
+   "eur": -0.54,
+   "key": "bounce-rsi30-pct1.5-1R|MKSI",
+   "f": {
+    "k": 6,
+    "gap": 0.07,
+    "rv": 0.29,
+    "mkt": true,
+    "atrp": 6.63,
+    "risk": 1.55,
+    "price": 200.14,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 200.14,
+   "stop": 197.0394,
+   "target": 206.3413,
+   "exit": 199.0505,
+   "why": "Schluss",
+   "r": -0.351,
+   "pct": -0.544,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "MKSI",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 199.1501,
+   "eur": -0.54,
+   "key": "bounce-rsi30-pct1.5-2R|MKSI",
+   "f": {
+    "k": 6,
+    "gap": 0.07,
+    "rv": 0.29,
+    "mkt": true,
+    "atrp": 6.63,
+    "risk": 1.55,
+    "price": 200.14,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 91.2106,
+   "stop": 89.49,
+   "target": 93.7915,
+   "exit": 91.1494,
+   "why": "Schluss",
+   "r": -0.036,
+   "pct": -0.067,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1.5R-v1.5",
+   "strategy": "orb",
+   "symbol": "ORLY",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 91.195,
+   "eur": -0.07,
+   "key": "orb-30-low-1.5R-v1.5|ORLY",
+   "f": {
+    "k": 6,
+    "gap": -0.54,
+    "rv": 2.17,
+    "mkt": true,
+    "atrp": 1.97,
+    "risk": 1.89,
+    "price": 91.21,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 91.2106,
+   "stop": 89.49,
+   "target": 92.9312,
+   "exit": 91.1494,
+   "why": "Schluss",
+   "r": -0.036,
+   "pct": -0.067,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1R-v1.5",
+   "strategy": "orb",
+   "symbol": "ORLY",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 91.195,
+   "eur": -0.07,
+   "key": "orb-30-low-1R-v1.5|ORLY",
+   "f": {
+    "k": 6,
+    "gap": -0.54,
+    "rv": 2.17,
+    "mkt": true,
+    "atrp": 1.97,
+    "risk": 1.89,
+    "price": 91.21,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 91.2106,
+   "stop": 89.49,
+   "target": 94.6518,
+   "exit": 91.1494,
+   "why": "Schluss",
+   "r": -0.036,
+   "pct": -0.067,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-2R-v1.5",
+   "strategy": "orb",
+   "symbol": "ORLY",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 91.195,
+   "eur": -0.07,
+   "key": "orb-30-low-2R-v1.5|ORLY",
+   "f": {
+    "k": 6,
+    "gap": -0.54,
+    "rv": 2.17,
+    "mkt": true,
+    "atrp": 1.97,
+    "risk": 1.89,
+    "price": 91.21,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 91.2106,
+   "stop": 89.49,
+   "target": 93.7915,
+   "exit": 91.1494,
+   "why": "Schluss",
+   "r": -0.036,
+   "pct": -0.067,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-1.5R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "ORLY",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 91.195,
+   "eur": -0.07,
+   "key": "orbmkt-30-low-1.5R-v1.5|ORLY",
+   "f": {
+    "k": 6,
+    "gap": -0.54,
+    "rv": 2.17,
+    "mkt": true,
+    "atrp": 1.97,
+    "risk": 1.89,
+    "price": 91.21,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 91.2106,
+   "stop": 89.49,
+   "target": 94.6518,
+   "exit": 91.1494,
+   "why": "Schluss",
+   "r": -0.036,
+   "pct": -0.067,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-2R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "ORLY",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 91.195,
+   "eur": -0.07,
+   "key": "orbmkt-30-low-2R-v1.5|ORLY",
+   "f": {
+    "k": 6,
+    "gap": -0.54,
+    "rv": 2.17,
+    "mkt": true,
+    "atrp": 1.97,
+    "risk": 1.89,
+    "price": 91.21,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 91.2106,
+   "stop": 89.49,
+   "target": 94.6518,
+   "exit": 91.1494,
+   "why": "Schluss",
+   "r": -0.036,
+   "pct": -0.067,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbrank-top20-2R",
+   "strategy": "orbrank",
+   "symbol": "ORLY",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 91.195,
+   "eur": -0.07,
+   "key": "orbrank-top20-2R|ORLY",
+   "f": {
+    "k": 6,
+    "gap": -0.54,
+    "rv": 2.17,
+    "mkt": true,
+    "atrp": 1.97,
+    "risk": 1.89,
+    "price": 91.21,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 90.8354,
+   "stop": 89.4282,
+   "target": 92.2426,
+   "exit": 90.6447,
+   "why": "Schluss",
+   "r": -0.136,
+   "pct": -0.21,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "SCHW",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 90.69,
+   "eur": -0.21,
+   "key": "bounce-rsi30-pct1.5-1R|SCHW",
+   "f": {
+    "k": 6,
+    "gap": 0.24,
+    "rv": 0.25,
+    "mkt": true,
+    "atrp": 2.33,
+    "risk": 1.55,
+    "price": 90.84,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 90.8354,
+   "stop": 89.4282,
+   "target": 93.6499,
+   "exit": 90.6447,
+   "why": "Schluss",
+   "r": -0.136,
+   "pct": -0.21,
+   "in_k": 6,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "SCHW",
+   "in_at": "10:05",
+   "out_at": null,
+   "last": 90.69,
+   "eur": -0.21,
+   "key": "bounce-rsi30-pct1.5-2R|SCHW",
+   "f": {
+    "k": 6,
+    "gap": 0.24,
+    "rv": 0.25,
+    "mkt": true,
+    "atrp": 2.33,
+    "risk": 1.55,
+    "price": 90.84,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 13.3067,
+   "stop": 13.1005,
+   "target": 13.5128,
+   "exit": 13.3383,
+   "why": "Schluss",
+   "r": 0.154,
+   "pct": 0.238,
+   "in_k": 7,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "CDE",
+   "in_at": "10:10",
+   "out_at": null,
+   "last": 13.345,
+   "eur": 0.24,
+   "key": "bounce-rsi30-pct1.5-1R|CDE",
+   "f": {
+    "k": 7,
+    "gap": -0.88,
+    "rv": 0.81,
+    "mkt": true,
+    "atrp": 6.03,
+    "risk": 1.55,
+    "price": 13.31,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 13.3067,
+   "stop": 13.1005,
+   "target": 13.719,
+   "exit": 13.3383,
+   "why": "Schluss",
+   "r": 0.154,
+   "pct": 0.238,
+   "in_k": 7,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "CDE",
+   "in_at": "10:10",
+   "out_at": null,
+   "last": 13.345,
+   "eur": 0.24,
+   "key": "bounce-rsi30-pct1.5-2R|CDE",
+   "f": {
+    "k": 7,
+    "gap": -0.88,
+    "rv": 0.81,
+    "mkt": true,
+    "atrp": 6.03,
+    "risk": 1.55,
+    "price": 13.31,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 7.6488,
+   "stop": 7.46,
+   "target": 7.8376,
+   "exit": 7.8337,
+   "why": "Ziel",
+   "r": 0.979,
+   "pct": 2.417,
+   "in_k": 7,
+   "out_k": 9,
+   "open": false,
+   "variant": "bounce-gapdown3-daylow-1R",
+   "strategy": "bounce",
+   "symbol": "CIFR",
+   "in_at": "10:10",
+   "out_at": "10:20",
+   "last": 7.73,
+   "eur": 2.42,
+   "key": "bounce-gapdown3-daylow-1R|CIFR",
+   "f": {
+    "k": 7,
+    "gap": -5.37,
+    "rv": 0.74,
+    "mkt": true,
+    "atrp": 14.32,
+    "risk": 2.47,
+    "price": 7.65,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": true
+  },
+  {
+   "entry": 7.6488,
+   "stop": 7.46,
+   "target": 8.0265,
+   "exit": 7.7261,
+   "why": "Schluss",
+   "r": 0.409,
+   "pct": 1.011,
+   "in_k": 7,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-gapdown3-daylow-2R",
+   "strategy": "bounce",
+   "symbol": "CIFR",
+   "in_at": "10:10",
+   "out_at": null,
+   "last": 7.73,
+   "eur": 1.01,
+   "key": "bounce-gapdown3-daylow-2R|CIFR",
+   "f": {
+    "k": 7,
+    "gap": -5.37,
+    "rv": 0.74,
+    "mkt": true,
+    "atrp": 14.32,
+    "risk": 2.47,
+    "price": 7.65,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 7.6488,
+   "stop": 7.5303,
+   "target": 7.8858,
+   "exit": 7.8819,
+   "why": "Ziel",
+   "r": 1.967,
+   "pct": 3.047,
+   "in_k": 7,
+   "out_k": 9,
+   "open": false,
+   "variant": "bounce-gapdown3-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "CIFR",
+   "in_at": "10:10",
+   "out_at": "10:20",
+   "last": 7.73,
+   "eur": 3.05,
+   "key": "bounce-gapdown3-pct1.5-2R|CIFR",
+   "f": {
+    "k": 7,
+    "gap": -5.37,
+    "rv": 0.74,
+    "mkt": true,
+    "atrp": 14.32,
+    "risk": 1.55,
+    "price": 7.65,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": true
+  },
+  {
+   "entry": 7.6488,
+   "stop": 7.5303,
+   "target": 7.7673,
+   "exit": 7.7634,
+   "why": "Ziel",
+   "r": 0.967,
+   "pct": 1.498,
+   "in_k": 7,
+   "out_k": 9,
+   "open": false,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "CIFR",
+   "in_at": "10:10",
+   "out_at": "10:20",
+   "last": 7.73,
+   "eur": 1.5,
+   "key": "bounce-rsi30-pct1.5-1R|CIFR",
+   "f": {
+    "k": 7,
+    "gap": -5.37,
+    "rv": 0.74,
+    "mkt": true,
+    "atrp": 14.32,
+    "risk": 1.55,
+    "price": 7.65,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 7.6488,
+   "stop": 7.5303,
+   "target": 7.8858,
+   "exit": 7.8819,
+   "why": "Ziel",
+   "r": 1.967,
+   "pct": 3.047,
+   "in_k": 7,
+   "out_k": 9,
+   "open": false,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "CIFR",
+   "in_at": "10:10",
+   "out_at": "10:20",
+   "last": 7.73,
+   "eur": 3.05,
+   "key": "bounce-rsi30-pct1.5-2R|CIFR",
+   "f": {
+    "k": 7,
+    "gap": -5.37,
+    "rv": 0.74,
+    "mkt": true,
+    "atrp": 14.32,
+    "risk": 1.55,
+    "price": 7.65,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 157.9789,
+   "stop": 155.31,
+   "target": 160.6479,
+   "exit": 159.3153,
+   "why": "Schluss",
+   "r": 0.501,
+   "pct": 0.846,
+   "in_k": 7,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-gapdown3-daylow-1R",
+   "strategy": "bounce",
+   "symbol": "COIN",
+   "in_at": "10:10",
+   "out_at": null,
+   "last": 159.395,
+   "eur": 0.85,
+   "key": "bounce-gapdown3-daylow-1R|COIN",
+   "f": {
+    "k": 7,
+    "gap": -4.31,
+    "rv": 1.52,
+    "mkt": true,
+    "atrp": 6.26,
+    "risk": 1.69,
+    "price": 157.98,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 157.9789,
+   "stop": 155.31,
+   "target": 163.3168,
+   "exit": 159.3153,
+   "why": "Schluss",
+   "r": 0.501,
+   "pct": 0.846,
+   "in_k": 7,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-gapdown3-daylow-2R",
+   "strategy": "bounce",
+   "symbol": "COIN",
+   "in_at": "10:10",
+   "out_at": null,
+   "last": 159.395,
+   "eur": 0.85,
+   "key": "bounce-gapdown3-daylow-2R|COIN",
+   "f": {
+    "k": 7,
+    "gap": -4.31,
+    "rv": 1.52,
+    "mkt": true,
+    "atrp": 6.26,
+    "risk": 1.69,
+    "price": 157.98,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 157.9789,
+   "stop": 155.5315,
+   "target": 162.8738,
+   "exit": 159.3153,
+   "why": "Schluss",
+   "r": 0.546,
+   "pct": 0.846,
+   "in_k": 7,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-gapdown3-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "COIN",
+   "in_at": "10:10",
+   "out_at": null,
+   "last": 159.395,
+   "eur": 0.85,
+   "key": "bounce-gapdown3-pct1.5-2R|COIN",
+   "f": {
+    "k": 7,
+    "gap": -4.31,
+    "rv": 1.52,
+    "mkt": true,
+    "atrp": 6.26,
+    "risk": 1.55,
+    "price": 157.98,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 55.0375,
+   "stop": 54.1848,
+   "target": 55.8902,
+   "exit": 55.0774,
+   "why": "Schluss",
+   "r": 0.047,
+   "pct": 0.073,
+   "in_k": 7,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "FR",
+   "in_at": "10:10",
+   "out_at": null,
+   "last": 55.105,
+   "eur": 0.07,
+   "key": "bounce-rsi30-pct1.5-1R|FR",
+   "f": {
+    "k": 7,
+    "gap": 0.12,
+    "rv": 0.66,
+    "mkt": true,
+    "atrp": 2.71,
+    "risk": 1.55,
+    "price": 55.04,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 55.0375,
+   "stop": 54.1848,
+   "target": 56.7428,
+   "exit": 55.0774,
+   "why": "Schluss",
+   "r": 0.047,
+   "pct": 0.073,
+   "in_k": 7,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "FR",
+   "in_at": "10:10",
+   "out_at": null,
+   "last": 55.105,
+   "eur": 0.07,
+   "key": "bounce-rsi30-pct1.5-2R|FR",
+   "f": {
+    "k": 7,
+    "gap": 0.12,
+    "rv": 0.66,
+    "mkt": true,
+    "atrp": 2.71,
+    "risk": 1.55,
+    "price": 55.04,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 139.7148,
+   "stop": 137.26,
+   "target": 142.1697,
+   "exit": 140.3048,
+   "why": "Schluss",
+   "r": 0.24,
+   "pct": 0.422,
+   "in_k": 7,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-gapdown3-daylow-1R",
+   "strategy": "bounce",
+   "symbol": "MSTR",
+   "in_at": "10:10",
+   "out_at": null,
+   "last": 140.375,
+   "eur": 0.42,
+   "key": "bounce-gapdown3-daylow-1R|MSTR",
+   "f": {
+    "k": 7,
+    "gap": -6.23,
+    "rv": 1.2,
+    "mkt": true,
+    "atrp": 7.02,
+    "risk": 1.76,
+    "price": 139.71,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 139.7148,
+   "stop": 137.26,
+   "target": 144.6245,
+   "exit": 140.3048,
+   "why": "Schluss",
+   "r": 0.24,
+   "pct": 0.422,
+   "in_k": 7,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-gapdown3-daylow-2R",
+   "strategy": "bounce",
+   "symbol": "MSTR",
+   "in_at": "10:10",
+   "out_at": null,
+   "last": 140.375,
+   "eur": 0.42,
+   "key": "bounce-gapdown3-daylow-2R|MSTR",
+   "f": {
+    "k": 7,
+    "gap": -6.23,
+    "rv": 1.2,
+    "mkt": true,
+    "atrp": 7.02,
+    "risk": 1.76,
+    "price": 139.71,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 139.7148,
+   "stop": 137.5503,
+   "target": 144.0438,
+   "exit": 140.3048,
+   "why": "Schluss",
+   "r": 0.273,
+   "pct": 0.422,
+   "in_k": 7,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-gapdown3-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "MSTR",
+   "in_at": "10:10",
+   "out_at": null,
+   "last": 140.375,
+   "eur": 0.42,
+   "key": "bounce-gapdown3-pct1.5-2R|MSTR",
+   "f": {
+    "k": 7,
+    "gap": -6.23,
+    "rv": 1.2,
+    "mkt": true,
+    "atrp": 7.02,
+    "risk": 1.55,
+    "price": 139.71,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 12.1711,
+   "stop": 11.62,
+   "target": 12.9977,
+   "exit": 11.949,
+   "why": "Schluss",
+   "r": -0.403,
+   "pct": -1.824,
+   "in_k": 7,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1.5R-v1.5",
+   "strategy": "orb",
+   "symbol": "NU",
+   "in_at": "10:10",
+   "out_at": null,
+   "last": 11.955,
+   "eur": -1.82,
+   "key": "orb-30-low-1.5R-v1.5|NU",
+   "f": {
+    "k": 7,
+    "gap": -21.62,
+    "rv": 22.36,
+    "mkt": true,
+    "atrp": 4.4,
+    "risk": 4.53,
+    "price": 12.17,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 12.1711,
+   "stop": 11.62,
+   "target": 12.7222,
+   "exit": 11.949,
+   "why": "Schluss",
+   "r": -0.403,
+   "pct": -1.824,
+   "in_k": 7,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1R-v1.5",
+   "strategy": "orb",
+   "symbol": "NU",
+   "in_at": "10:10",
+   "out_at": null,
+   "last": 11.955,
+   "eur": -1.82,
+   "key": "orb-30-low-1R-v1.5|NU",
+   "f": {
+    "k": 7,
+    "gap": -21.62,
+    "rv": 22.36,
+    "mkt": true,
+    "atrp": 4.4,
+    "risk": 4.53,
+    "price": 12.17,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 12.1711,
+   "stop": 11.62,
+   "target": 13.2732,
+   "exit": 11.949,
+   "why": "Schluss",
+   "r": -0.403,
+   "pct": -1.824,
+   "in_k": 7,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-2R-v1.5",
+   "strategy": "orb",
+   "symbol": "NU",
+   "in_at": "10:10",
+   "out_at": null,
+   "last": 11.955,
+   "eur": -1.82,
+   "key": "orb-30-low-2R-v1.5|NU",
+   "f": {
+    "k": 7,
+    "gap": -21.62,
+    "rv": 22.36,
+    "mkt": true,
+    "atrp": 4.4,
+    "risk": 4.53,
+    "price": 12.17,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 12.1711,
+   "stop": 11.62,
+   "target": 12.9977,
+   "exit": 11.949,
+   "why": "Schluss",
+   "r": -0.403,
+   "pct": -1.824,
+   "in_k": 7,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-1.5R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "NU",
+   "in_at": "10:10",
+   "out_at": null,
+   "last": 11.955,
+   "eur": -1.82,
+   "key": "orbmkt-30-low-1.5R-v1.5|NU",
+   "f": {
+    "k": 7,
+    "gap": -21.62,
+    "rv": 22.36,
+    "mkt": true,
+    "atrp": 4.4,
+    "risk": 4.53,
+    "price": 12.17,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 12.1711,
+   "stop": 11.62,
+   "target": 13.2732,
+   "exit": 11.949,
+   "why": "Schluss",
+   "r": -0.403,
+   "pct": -1.824,
+   "in_k": 7,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-2R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "NU",
+   "in_at": "10:10",
+   "out_at": null,
+   "last": 11.955,
+   "eur": -1.82,
+   "key": "orbmkt-30-low-2R-v1.5|NU",
+   "f": {
+    "k": 7,
+    "gap": -21.62,
+    "rv": 22.36,
+    "mkt": true,
+    "atrp": 4.4,
+    "risk": 4.53,
+    "price": 12.17,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 12.1711,
+   "stop": 11.62,
+   "target": 13.2732,
+   "exit": 11.949,
+   "why": "Schluss",
+   "r": -0.403,
+   "pct": -1.824,
+   "in_k": 7,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbrank-top20-2R",
+   "strategy": "orbrank",
+   "symbol": "NU",
+   "in_at": "10:10",
+   "out_at": null,
+   "last": 11.955,
+   "eur": -1.82,
+   "key": "orbrank-top20-2R|NU",
+   "f": {
+    "k": 7,
+    "gap": -21.62,
+    "rv": 22.36,
+    "mkt": true,
+    "atrp": 4.4,
+    "risk": 4.53,
+    "price": 12.17,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 382.5212,
+   "stop": 376.595,
+   "target": 388.4473,
+   "exit": 381.2593,
+   "why": "Schluss",
+   "r": -0.213,
+   "pct": -0.33,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "AMAT",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 381.45,
+   "eur": -0.33,
+   "key": "bounce-rsi30-pct1.5-1R|AMAT",
+   "f": {
+    "k": 8,
+    "gap": -0.05,
+    "rv": 0.54,
+    "mkt": true,
+    "atrp": 5.35,
+    "risk": 1.55,
+    "price": 382.52,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 382.5212,
+   "stop": 376.595,
+   "target": 394.3734,
+   "exit": 381.2593,
+   "why": "Schluss",
+   "r": -0.213,
+   "pct": -0.33,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "AMAT",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 381.45,
+   "eur": -0.33,
+   "key": "bounce-rsi30-pct1.5-2R|AMAT",
+   "f": {
+    "k": 8,
+    "gap": -0.05,
+    "rv": 0.54,
+    "mkt": true,
+    "atrp": 5.35,
+    "risk": 1.55,
+    "price": 382.52,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 78.2741,
+   "stop": 77.4,
+   "target": 79.5853,
+   "exit": 78.5407,
+   "why": "Schluss",
+   "r": 0.305,
+   "pct": 0.341,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1.5R-v1.5",
+   "strategy": "orb",
+   "symbol": "BIDU",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 78.58,
+   "eur": 0.34,
+   "key": "orb-30-low-1.5R-v1.5|BIDU",
+   "f": {
+    "k": 8,
+    "gap": 0.59,
+    "rv": 1.88,
+    "mkt": true,
+    "atrp": 2.69,
+    "risk": 1.12,
+    "price": 78.27,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 78.2741,
+   "stop": 77.4,
+   "target": 79.1482,
+   "exit": 78.5407,
+   "why": "Schluss",
+   "r": 0.305,
+   "pct": 0.341,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1R-v1.5",
+   "strategy": "orb",
+   "symbol": "BIDU",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 78.58,
+   "eur": 0.34,
+   "key": "orb-30-low-1R-v1.5|BIDU",
+   "f": {
+    "k": 8,
+    "gap": 0.59,
+    "rv": 1.88,
+    "mkt": true,
+    "atrp": 2.69,
+    "risk": 1.12,
+    "price": 78.27,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 78.2741,
+   "stop": 77.4,
+   "target": 80.0224,
+   "exit": 78.5407,
+   "why": "Schluss",
+   "r": 0.305,
+   "pct": 0.341,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-2R-v1.5",
+   "strategy": "orb",
+   "symbol": "BIDU",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 78.58,
+   "eur": 0.34,
+   "key": "orb-30-low-2R-v1.5|BIDU",
+   "f": {
+    "k": 8,
+    "gap": 0.59,
+    "rv": 1.88,
+    "mkt": true,
+    "atrp": 2.69,
+    "risk": 1.12,
+    "price": 78.27,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 78.2741,
+   "stop": 77.4,
+   "target": 79.5853,
+   "exit": 78.5407,
+   "why": "Schluss",
+   "r": 0.305,
+   "pct": 0.341,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-1.5R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "BIDU",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 78.58,
+   "eur": 0.34,
+   "key": "orbmkt-30-low-1.5R-v1.5|BIDU",
+   "f": {
+    "k": 8,
+    "gap": 0.59,
+    "rv": 1.88,
+    "mkt": true,
+    "atrp": 2.69,
+    "risk": 1.12,
+    "price": 78.27,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 78.2741,
+   "stop": 77.4,
+   "target": 80.0224,
+   "exit": 78.5407,
+   "why": "Schluss",
+   "r": 0.305,
+   "pct": 0.341,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-2R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "BIDU",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 78.58,
+   "eur": 0.34,
+   "key": "orbmkt-30-low-2R-v1.5|BIDU",
+   "f": {
+    "k": 8,
+    "gap": 0.59,
+    "rv": 1.88,
+    "mkt": true,
+    "atrp": 2.69,
+    "risk": 1.12,
+    "price": 78.27,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 686.0228,
+   "stop": 675.3948,
+   "target": 696.6509,
+   "exit": 686.0068,
+   "why": "Schluss",
+   "r": -0.002,
+   "pct": -0.002,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "CAT",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 686.35,
+   "eur": -0.0,
+   "key": "bounce-rsi30-pct1.5-1R|CAT",
+   "f": {
+    "k": 8,
+    "gap": -0.31,
+    "rv": 0.7,
+    "mkt": true,
+    "atrp": 4.34,
+    "risk": 1.55,
+    "price": 686.02,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 686.0228,
+   "stop": 675.3948,
+   "target": 707.2789,
+   "exit": 686.0068,
+   "why": "Schluss",
+   "r": -0.002,
+   "pct": -0.002,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "CAT",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 686.35,
+   "eur": -0.0,
+   "key": "bounce-rsi30-pct1.5-2R|CAT",
+   "f": {
+    "k": 8,
+    "gap": -0.31,
+    "rv": 0.7,
+    "mkt": true,
+    "atrp": 4.34,
+    "risk": 1.55,
+    "price": 686.02,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 7.5888,
+   "stop": 7.36,
+   "target": 7.8176,
+   "exit": 7.6012,
+   "why": "Schluss",
+   "r": 0.054,
+   "pct": 0.163,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-gapdown3-daylow-1R",
+   "strategy": "bounce",
+   "symbol": "CLSK",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 7.605,
+   "eur": 0.16,
+   "key": "bounce-gapdown3-daylow-1R|CLSK",
+   "f": {
+    "k": 8,
+    "gap": -5.58,
+    "rv": 0.83,
+    "mkt": true,
+    "atrp": 9.89,
+    "risk": 3.01,
+    "price": 7.59,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 7.5888,
+   "stop": 7.36,
+   "target": 8.0464,
+   "exit": 7.6012,
+   "why": "Schluss",
+   "r": 0.054,
+   "pct": 0.163,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-gapdown3-daylow-2R",
+   "strategy": "bounce",
+   "symbol": "CLSK",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 7.605,
+   "eur": 0.16,
+   "key": "bounce-gapdown3-daylow-2R|CLSK",
+   "f": {
+    "k": 8,
+    "gap": -5.58,
+    "rv": 0.83,
+    "mkt": true,
+    "atrp": 9.89,
+    "risk": 3.01,
+    "price": 7.59,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 7.5888,
+   "stop": 7.4712,
+   "target": 7.8239,
+   "exit": 7.6012,
+   "why": "Schluss",
+   "r": 0.106,
+   "pct": 0.163,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-gapdown3-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "CLSK",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 7.605,
+   "eur": 0.16,
+   "key": "bounce-gapdown3-pct1.5-2R|CLSK",
+   "f": {
+    "k": 8,
+    "gap": -5.58,
+    "rv": 0.83,
+    "mkt": true,
+    "atrp": 9.89,
+    "risk": 1.55,
+    "price": 7.59,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 7.5888,
+   "stop": 7.4712,
+   "target": 7.7064,
+   "exit": 7.7025,
+   "why": "Ziel",
+   "r": 0.967,
+   "pct": 1.498,
+   "in_k": 8,
+   "out_k": 9,
+   "open": false,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "CLSK",
+   "in_at": "10:15",
+   "out_at": "10:20",
+   "last": 7.605,
+   "eur": 1.5,
+   "key": "bounce-rsi30-pct1.5-1R|CLSK",
+   "f": {
+    "k": 8,
+    "gap": -5.58,
+    "rv": 0.83,
+    "mkt": true,
+    "atrp": 9.89,
+    "risk": 1.55,
+    "price": 7.59,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 7.5888,
+   "stop": 7.4712,
+   "target": 7.8239,
+   "exit": 7.6012,
+   "why": "Schluss",
+   "r": 0.106,
+   "pct": 0.163,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "CLSK",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 7.605,
+   "eur": 0.16,
+   "key": "bounce-rsi30-pct1.5-2R|CLSK",
+   "f": {
+    "k": 8,
+    "gap": -5.58,
+    "rv": 0.83,
+    "mkt": true,
+    "atrp": 9.89,
+    "risk": 1.55,
+    "price": 7.59,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 284.6873,
+   "stop": 275.6,
+   "target": 298.3182,
+   "exit": 288.4357,
+   "why": "Schluss",
+   "r": 0.412,
+   "pct": 1.317,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1.5R-v1.5",
+   "strategy": "orb",
+   "symbol": "CRS",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 288.58,
+   "eur": 1.32,
+   "key": "orb-30-low-1.5R-v1.5|CRS",
+   "f": {
+    "k": 8,
+    "gap": -1.81,
+    "rv": 3.03,
+    "mkt": true,
+    "atrp": 6.25,
+    "risk": 3.19,
+    "price": 284.69,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 284.6873,
+   "stop": 275.6,
+   "target": 293.7746,
+   "exit": 288.4357,
+   "why": "Schluss",
+   "r": 0.412,
+   "pct": 1.317,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1R-v1.5",
+   "strategy": "orb",
+   "symbol": "CRS",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 288.58,
+   "eur": 1.32,
+   "key": "orb-30-low-1R-v1.5|CRS",
+   "f": {
+    "k": 8,
+    "gap": -1.81,
+    "rv": 3.03,
+    "mkt": true,
+    "atrp": 6.25,
+    "risk": 3.19,
+    "price": 284.69,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 284.6873,
+   "stop": 275.6,
+   "target": 302.8618,
+   "exit": 288.4357,
+   "why": "Schluss",
+   "r": 0.412,
+   "pct": 1.317,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-2R-v1.5",
+   "strategy": "orb",
+   "symbol": "CRS",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 288.58,
+   "eur": 1.32,
+   "key": "orb-30-low-2R-v1.5|CRS",
+   "f": {
+    "k": 8,
+    "gap": -1.81,
+    "rv": 3.03,
+    "mkt": true,
+    "atrp": 6.25,
+    "risk": 3.19,
+    "price": 284.69,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 284.6873,
+   "stop": 275.6,
+   "target": 298.3182,
+   "exit": 288.4357,
+   "why": "Schluss",
+   "r": 0.412,
+   "pct": 1.317,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-1.5R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "CRS",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 288.58,
+   "eur": 1.32,
+   "key": "orbmkt-30-low-1.5R-v1.5|CRS",
+   "f": {
+    "k": 8,
+    "gap": -1.81,
+    "rv": 3.03,
+    "mkt": true,
+    "atrp": 6.25,
+    "risk": 3.19,
+    "price": 284.69,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 284.6873,
+   "stop": 275.6,
+   "target": 302.8618,
+   "exit": 288.4357,
+   "why": "Schluss",
+   "r": 0.412,
+   "pct": 1.317,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-2R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "CRS",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 288.58,
+   "eur": 1.32,
+   "key": "orbmkt-30-low-2R-v1.5|CRS",
+   "f": {
+    "k": 8,
+    "gap": -1.81,
+    "rv": 3.03,
+    "mkt": true,
+    "atrp": 6.25,
+    "risk": 3.19,
+    "price": 284.69,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 284.6873,
+   "stop": 275.6,
+   "target": 302.8618,
+   "exit": 288.4357,
+   "why": "Schluss",
+   "r": 0.412,
+   "pct": 1.317,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbrank-top20-2R",
+   "strategy": "orbrank",
+   "symbol": "CRS",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 288.58,
+   "eur": 1.32,
+   "key": "orbrank-top20-2R|CRS",
+   "f": {
+    "k": 8,
+    "gap": -1.81,
+    "rv": 3.03,
+    "mkt": true,
+    "atrp": 6.25,
+    "risk": 3.19,
+    "price": 284.69,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 177.2286,
+   "stop": 173.6,
+   "target": 180.8571,
+   "exit": 176.2418,
+   "why": "Schluss",
+   "r": -0.272,
+   "pct": -0.557,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-gapdown3-daylow-1R",
+   "strategy": "bounce",
+   "symbol": "DASH",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 176.33,
+   "eur": -0.56,
+   "key": "bounce-gapdown3-daylow-1R|DASH",
+   "f": {
+    "k": 8,
+    "gap": -3.22,
+    "rv": 1.58,
+    "mkt": true,
+    "atrp": 4.11,
+    "risk": 2.05,
+    "price": 177.23,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 177.2286,
+   "stop": 173.6,
+   "target": 184.4857,
+   "exit": 176.2418,
+   "why": "Schluss",
+   "r": -0.272,
+   "pct": -0.557,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-gapdown3-daylow-2R",
+   "strategy": "bounce",
+   "symbol": "DASH",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 176.33,
+   "eur": -0.56,
+   "key": "bounce-gapdown3-daylow-2R|DASH",
+   "f": {
+    "k": 8,
+    "gap": -3.22,
+    "rv": 1.58,
+    "mkt": true,
+    "atrp": 4.11,
+    "risk": 2.05,
+    "price": 177.23,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 177.2286,
+   "stop": 174.4829,
+   "target": 182.7199,
+   "exit": 176.2418,
+   "why": "Schluss",
+   "r": -0.359,
+   "pct": -0.557,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-gapdown3-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "DASH",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 176.33,
+   "eur": -0.56,
+   "key": "bounce-gapdown3-pct1.5-2R|DASH",
+   "f": {
+    "k": 8,
+    "gap": -3.22,
+    "rv": 1.58,
+    "mkt": true,
+    "atrp": 4.11,
+    "risk": 1.55,
+    "price": 177.23,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 317.1735,
+   "stop": 312.2598,
+   "target": 322.0873,
+   "exit": 320.3597,
+   "why": "Schluss",
+   "r": 0.648,
+   "pct": 1.005,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "FN",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 320.52,
+   "eur": 1.0,
+   "key": "bounce-rsi30-pct1.5-1R|FN",
+   "f": {
+    "k": 8,
+    "gap": 0.63,
+    "rv": 0.4,
+    "mkt": true,
+    "atrp": 9.2,
+    "risk": 1.55,
+    "price": 317.17,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 317.1735,
+   "stop": 312.2598,
+   "target": 327.001,
+   "exit": 320.3597,
+   "why": "Schluss",
+   "r": 0.648,
+   "pct": 1.005,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "FN",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 320.52,
+   "eur": 1.0,
+   "key": "bounce-rsi30-pct1.5-2R|FN",
+   "f": {
+    "k": 8,
+    "gap": 0.63,
+    "rv": 0.4,
+    "mkt": true,
+    "atrp": 9.2,
+    "risk": 1.55,
+    "price": 317.17,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 13.7969,
+   "stop": 13.5831,
+   "target": 14.0106,
+   "exit": 13.7731,
+   "why": "Schluss",
+   "r": -0.111,
+   "pct": -0.172,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "HL",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 13.78,
+   "eur": -0.17,
+   "key": "bounce-rsi30-pct1.5-1R|HL",
+   "f": {
+    "k": 8,
+    "gap": -0.54,
+    "rv": 1.15,
+    "mkt": true,
+    "atrp": 5.44,
+    "risk": 1.55,
+    "price": 13.8,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 13.7969,
+   "stop": 13.5831,
+   "target": 14.2244,
+   "exit": 13.7731,
+   "why": "Schluss",
+   "r": -0.111,
+   "pct": -0.172,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "HL",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 13.78,
+   "eur": -0.17,
+   "key": "bounce-rsi30-pct1.5-2R|HL",
+   "f": {
+    "k": 8,
+    "gap": -0.54,
+    "rv": 1.15,
+    "mkt": true,
+    "atrp": 5.44,
+    "risk": 1.55,
+    "price": 13.8,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 6.8034,
+   "stop": 6.62,
+   "target": 6.9868,
+   "exit": 6.8266,
+   "why": "Schluss",
+   "r": 0.126,
+   "pct": 0.341,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-gapdown3-daylow-1R",
+   "strategy": "bounce",
+   "symbol": "MARA",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 6.83,
+   "eur": 0.34,
+   "key": "bounce-gapdown3-daylow-1R|MARA",
+   "f": {
+    "k": 8,
+    "gap": -5.81,
+    "rv": 0.98,
+    "mkt": true,
+    "atrp": 9.28,
+    "risk": 2.7,
+    "price": 6.8,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 6.8034,
+   "stop": 6.62,
+   "target": 7.1702,
+   "exit": 6.8266,
+   "why": "Schluss",
+   "r": 0.126,
+   "pct": 0.341,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-gapdown3-daylow-2R",
+   "strategy": "bounce",
+   "symbol": "MARA",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 6.83,
+   "eur": 0.34,
+   "key": "bounce-gapdown3-daylow-2R|MARA",
+   "f": {
+    "k": 8,
+    "gap": -5.81,
+    "rv": 0.98,
+    "mkt": true,
+    "atrp": 9.28,
+    "risk": 2.7,
+    "price": 6.8,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 6.8034,
+   "stop": 6.698,
+   "target": 7.0142,
+   "exit": 6.8266,
+   "why": "Schluss",
+   "r": 0.22,
+   "pct": 0.341,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-gapdown3-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "MARA",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 6.83,
+   "eur": 0.34,
+   "key": "bounce-gapdown3-pct1.5-2R|MARA",
+   "f": {
+    "k": 8,
+    "gap": -5.81,
+    "rv": 0.98,
+    "mkt": true,
+    "atrp": 9.28,
+    "risk": 1.55,
+    "price": 6.8,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 6.8034,
+   "stop": 6.698,
+   "target": 6.9088,
+   "exit": 6.9053,
+   "why": "Ziel",
+   "r": 0.967,
+   "pct": 1.498,
+   "in_k": 8,
+   "out_k": 9,
+   "open": false,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "MARA",
+   "in_at": "10:15",
+   "out_at": "10:20",
+   "last": 6.83,
+   "eur": 1.5,
+   "key": "bounce-rsi30-pct1.5-1R|MARA",
+   "f": {
+    "k": 8,
+    "gap": -5.81,
+    "rv": 0.98,
+    "mkt": true,
+    "atrp": 9.28,
+    "risk": 1.55,
+    "price": 6.8,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 6.8034,
+   "stop": 6.698,
+   "target": 7.0142,
+   "exit": 6.8266,
+   "why": "Schluss",
+   "r": 0.22,
+   "pct": 0.341,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "MARA",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 6.83,
+   "eur": 0.34,
+   "key": "bounce-rsi30-pct1.5-2R|MARA",
+   "f": {
+    "k": 8,
+    "gap": -5.81,
+    "rv": 0.98,
+    "mkt": true,
+    "atrp": 9.28,
+    "risk": 1.55,
+    "price": 6.8,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 133.6468,
+   "stop": 131.5763,
+   "target": 135.7173,
+   "exit": 132.2988,
+   "why": "Schluss",
+   "r": -0.651,
+   "pct": -1.009,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "MOD",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 132.365,
+   "eur": -1.01,
+   "key": "bounce-rsi30-pct1.5-1R|MOD",
+   "f": {
+    "k": 8,
+    "gap": -2.24,
+    "rv": 0.48,
+    "mkt": true,
+    "atrp": 7.74,
+    "risk": 1.55,
+    "price": 133.65,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 133.6468,
+   "stop": 131.5763,
+   "target": 137.7878,
+   "exit": 132.2988,
+   "why": "Schluss",
+   "r": -0.651,
+   "pct": -1.009,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "MOD",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 132.365,
+   "eur": -1.01,
+   "key": "bounce-rsi30-pct1.5-2R|MOD",
+   "f": {
+    "k": 8,
+    "gap": -2.24,
+    "rv": 0.48,
+    "mkt": true,
+    "atrp": 7.74,
+    "risk": 1.55,
+    "price": 133.65,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 12.1111,
+   "stop": 11.79,
+   "target": 12.4321,
+   "exit": 12.1339,
+   "why": "Schluss",
+   "r": 0.071,
+   "pct": 0.189,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-gapdown3-daylow-1R",
+   "strategy": "bounce",
+   "symbol": "RIOT",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 12.14,
+   "eur": 0.19,
+   "key": "bounce-gapdown3-daylow-1R|RIOT",
+   "f": {
+    "k": 8,
+    "gap": -4.15,
+    "rv": 0.96,
+    "mkt": true,
+    "atrp": 10.04,
+    "risk": 2.65,
+    "price": 12.11,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 12.1111,
+   "stop": 11.79,
+   "target": 12.7532,
+   "exit": 12.1339,
+   "why": "Schluss",
+   "r": 0.071,
+   "pct": 0.189,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-gapdown3-daylow-2R",
+   "strategy": "bounce",
+   "symbol": "RIOT",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 12.14,
+   "eur": 0.19,
+   "key": "bounce-gapdown3-daylow-2R|RIOT",
+   "f": {
+    "k": 8,
+    "gap": -4.15,
+    "rv": 0.96,
+    "mkt": true,
+    "atrp": 10.04,
+    "risk": 2.65,
+    "price": 12.11,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 12.1111,
+   "stop": 11.9234,
+   "target": 12.4863,
+   "exit": 12.1339,
+   "why": "Schluss",
+   "r": 0.122,
+   "pct": 0.189,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-gapdown3-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "RIOT",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 12.14,
+   "eur": 0.19,
+   "key": "bounce-gapdown3-pct1.5-2R|RIOT",
+   "f": {
+    "k": 8,
+    "gap": -4.15,
+    "rv": 0.96,
+    "mkt": true,
+    "atrp": 10.04,
+    "risk": 1.55,
+    "price": 12.11,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 12.1111,
+   "stop": 11.9234,
+   "target": 12.2987,
+   "exit": 12.2925,
+   "why": "Ziel",
+   "r": 0.967,
+   "pct": 1.498,
+   "in_k": 8,
+   "out_k": 9,
+   "open": false,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "RIOT",
+   "in_at": "10:15",
+   "out_at": "10:20",
+   "last": 12.14,
+   "eur": 1.5,
+   "key": "bounce-rsi30-pct1.5-1R|RIOT",
+   "f": {
+    "k": 8,
+    "gap": -4.15,
+    "rv": 0.96,
+    "mkt": true,
+    "atrp": 10.04,
+    "risk": 1.55,
+    "price": 12.11,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 12.1111,
+   "stop": 11.9234,
+   "target": 12.4863,
+   "exit": 12.1339,
+   "why": "Schluss",
+   "r": 0.122,
+   "pct": 0.189,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "RIOT",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 12.14,
+   "eur": 0.19,
+   "key": "bounce-rsi30-pct1.5-2R|RIOT",
+   "f": {
+    "k": 8,
+    "gap": -4.15,
+    "rv": 0.96,
+    "mkt": true,
+    "atrp": 10.04,
+    "risk": 1.55,
+    "price": 12.11,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 73.2566,
+   "stop": 71.53,
+   "target": 75.8465,
+   "exit": 74.1029,
+   "why": "Schluss",
+   "r": 0.49,
+   "pct": 1.155,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1.5R-v1.5",
+   "strategy": "orb",
+   "symbol": "SE",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 74.14,
+   "eur": 1.16,
+   "key": "orb-30-low-1.5R-v1.5|SE",
+   "f": {
+    "k": 8,
+    "gap": -3.74,
+    "rv": 1.5,
+    "mkt": true,
+    "atrp": 5.04,
+    "risk": 2.36,
+    "price": 73.26,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 73.2566,
+   "stop": 71.53,
+   "target": 74.9832,
+   "exit": 74.1029,
+   "why": "Schluss",
+   "r": 0.49,
+   "pct": 1.155,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1R-v1.5",
+   "strategy": "orb",
+   "symbol": "SE",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 74.14,
+   "eur": 1.16,
+   "key": "orb-30-low-1R-v1.5|SE",
+   "f": {
+    "k": 8,
+    "gap": -3.74,
+    "rv": 1.5,
+    "mkt": true,
+    "atrp": 5.04,
+    "risk": 2.36,
+    "price": 73.26,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 73.2566,
+   "stop": 71.53,
+   "target": 76.7098,
+   "exit": 74.1029,
+   "why": "Schluss",
+   "r": 0.49,
+   "pct": 1.155,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-2R-v1.5",
+   "strategy": "orb",
+   "symbol": "SE",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 74.14,
+   "eur": 1.16,
+   "key": "orb-30-low-2R-v1.5|SE",
+   "f": {
+    "k": 8,
+    "gap": -3.74,
+    "rv": 1.5,
+    "mkt": true,
+    "atrp": 5.04,
+    "risk": 2.36,
+    "price": 73.26,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 73.2566,
+   "stop": 71.53,
+   "target": 75.8465,
+   "exit": 74.1029,
+   "why": "Schluss",
+   "r": 0.49,
+   "pct": 1.155,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-1.5R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "SE",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 74.14,
+   "eur": 1.16,
+   "key": "orbmkt-30-low-1.5R-v1.5|SE",
+   "f": {
+    "k": 8,
+    "gap": -3.74,
+    "rv": 1.5,
+    "mkt": true,
+    "atrp": 5.04,
+    "risk": 2.36,
+    "price": 73.26,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 73.2566,
+   "stop": 71.53,
+   "target": 76.7098,
+   "exit": 74.1029,
+   "why": "Schluss",
+   "r": 0.49,
+   "pct": 1.155,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-2R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "SE",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 74.14,
+   "eur": 1.16,
+   "key": "orbmkt-30-low-2R-v1.5|SE",
+   "f": {
+    "k": 8,
+    "gap": -3.74,
+    "rv": 1.5,
+    "mkt": true,
+    "atrp": 5.04,
+    "risk": 2.36,
+    "price": 73.26,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 6.3182,
+   "stop": 5.995,
+   "target": 6.8029,
+   "exit": 6.2319,
+   "why": "Schluss",
+   "r": -0.267,
+   "pct": -1.366,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1.5R-v1.5",
+   "strategy": "orb",
+   "symbol": "SNAP",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 6.235,
+   "eur": -1.37,
+   "key": "orb-30-low-1.5R-v1.5|SNAP",
+   "f": {
+    "k": 8,
+    "gap": -1.18,
+    "rv": 1.66,
+    "mkt": true,
+    "atrp": 5.69,
+    "risk": 5.12,
+    "price": 6.32,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 6.3182,
+   "stop": 5.995,
+   "target": 6.6413,
+   "exit": 6.2319,
+   "why": "Schluss",
+   "r": -0.267,
+   "pct": -1.366,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1R-v1.5",
+   "strategy": "orb",
+   "symbol": "SNAP",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 6.235,
+   "eur": -1.37,
+   "key": "orb-30-low-1R-v1.5|SNAP",
+   "f": {
+    "k": 8,
+    "gap": -1.18,
+    "rv": 1.66,
+    "mkt": true,
+    "atrp": 5.69,
+    "risk": 5.12,
+    "price": 6.32,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 6.3182,
+   "stop": 5.995,
+   "target": 6.9645,
+   "exit": 6.2319,
+   "why": "Schluss",
+   "r": -0.267,
+   "pct": -1.366,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-2R-v1.5",
+   "strategy": "orb",
+   "symbol": "SNAP",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 6.235,
+   "eur": -1.37,
+   "key": "orb-30-low-2R-v1.5|SNAP",
+   "f": {
+    "k": 8,
+    "gap": -1.18,
+    "rv": 1.66,
+    "mkt": true,
+    "atrp": 5.69,
+    "risk": 5.12,
+    "price": 6.32,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 6.3182,
+   "stop": 5.995,
+   "target": 6.8029,
+   "exit": 6.2319,
+   "why": "Schluss",
+   "r": -0.267,
+   "pct": -1.366,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-1.5R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "SNAP",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 6.235,
+   "eur": -1.37,
+   "key": "orbmkt-30-low-1.5R-v1.5|SNAP",
+   "f": {
+    "k": 8,
+    "gap": -1.18,
+    "rv": 1.66,
+    "mkt": true,
+    "atrp": 5.69,
+    "risk": 5.12,
+    "price": 6.32,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 6.3182,
+   "stop": 5.995,
+   "target": 6.9645,
+   "exit": 6.2319,
+   "why": "Schluss",
+   "r": -0.267,
+   "pct": -1.366,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-2R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "SNAP",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 6.235,
+   "eur": -1.37,
+   "key": "orbmkt-30-low-2R-v1.5|SNAP",
+   "f": {
+    "k": 8,
+    "gap": -1.18,
+    "rv": 1.66,
+    "mkt": true,
+    "atrp": 5.69,
+    "risk": 5.12,
+    "price": 6.32,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 197.1785,
+   "stop": 194.1238,
+   "target": 200.2333,
+   "exit": 196.4018,
+   "why": "Schluss",
+   "r": -0.254,
+   "pct": -0.394,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "VRT",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 196.5,
+   "eur": -0.39,
+   "key": "bounce-rsi30-pct1.5-1R|VRT",
+   "f": {
+    "k": 8,
+    "gap": 0.69,
+    "rv": 0.75,
+    "mkt": true,
+    "atrp": 6.0,
+    "risk": 1.55,
+    "price": 197.18,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 197.1785,
+   "stop": 194.1238,
+   "target": 203.288,
+   "exit": 196.4018,
+   "why": "Schluss",
+   "r": -0.254,
+   "pct": -0.394,
+   "in_k": 8,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "VRT",
+   "in_at": "10:15",
+   "out_at": null,
+   "last": 196.5,
+   "eur": -0.39,
+   "key": "bounce-rsi30-pct1.5-2R|VRT",
+   "f": {
+    "k": 8,
+    "gap": 0.69,
+    "rv": 0.75,
+    "mkt": true,
+    "atrp": 6.0,
+    "risk": 1.55,
+    "price": 197.18,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 100.7804,
+   "stop": 99.566,
+   "target": 102.6019,
+   "exit": 100.3598,
+   "why": "Schluss",
+   "r": -0.346,
+   "pct": -0.417,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1.5R-v1.5",
+   "strategy": "orb",
+   "symbol": "BABA",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 100.41,
+   "eur": -0.42,
+   "key": "orb-30-low-1.5R-v1.5|BABA",
+   "f": {
+    "k": 9,
+    "gap": -0.09,
+    "rv": 1.57,
+    "mkt": true,
+    "atrp": 3.26,
+    "risk": 1.2,
+    "price": 100.78,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 100.7804,
+   "stop": 99.566,
+   "target": 101.9947,
+   "exit": 100.3598,
+   "why": "Schluss",
+   "r": -0.346,
+   "pct": -0.417,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1R-v1.5",
+   "strategy": "orb",
+   "symbol": "BABA",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 100.41,
+   "eur": -0.42,
+   "key": "orb-30-low-1R-v1.5|BABA",
+   "f": {
+    "k": 9,
+    "gap": -0.09,
+    "rv": 1.57,
+    "mkt": true,
+    "atrp": 3.26,
+    "risk": 1.2,
+    "price": 100.78,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 100.7804,
+   "stop": 99.566,
+   "target": 103.2091,
+   "exit": 100.3598,
+   "why": "Schluss",
+   "r": -0.346,
+   "pct": -0.417,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-2R-v1.5",
+   "strategy": "orb",
+   "symbol": "BABA",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 100.41,
+   "eur": -0.42,
+   "key": "orb-30-low-2R-v1.5|BABA",
+   "f": {
+    "k": 9,
+    "gap": -0.09,
+    "rv": 1.57,
+    "mkt": true,
+    "atrp": 3.26,
+    "risk": 1.2,
+    "price": 100.78,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 100.7804,
+   "stop": 99.566,
+   "target": 102.6019,
+   "exit": 100.3598,
+   "why": "Schluss",
+   "r": -0.346,
+   "pct": -0.417,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-1.5R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "BABA",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 100.41,
+   "eur": -0.42,
+   "key": "orbmkt-30-low-1.5R-v1.5|BABA",
+   "f": {
+    "k": 9,
+    "gap": -0.09,
+    "rv": 1.57,
+    "mkt": true,
+    "atrp": 3.26,
+    "risk": 1.2,
+    "price": 100.78,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 100.7804,
+   "stop": 99.566,
+   "target": 103.2091,
+   "exit": 100.3598,
+   "why": "Schluss",
+   "r": -0.346,
+   "pct": -0.417,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-2R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "BABA",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 100.41,
+   "eur": -0.42,
+   "key": "orbmkt-30-low-2R-v1.5|BABA",
+   "f": {
+    "k": 9,
+    "gap": -0.09,
+    "rv": 1.57,
+    "mkt": true,
+    "atrp": 3.26,
+    "risk": 1.2,
+    "price": 100.78,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 78.9194,
+   "stop": 77.6968,
+   "target": 80.1421,
+   "exit": 78.7406,
+   "why": "Schluss",
+   "r": -0.146,
+   "pct": -0.227,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "BHP",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 78.78,
+   "eur": -0.23,
+   "key": "bounce-rsi30-pct1.5-1R|BHP",
+   "f": {
+    "k": 9,
+    "gap": 1.79,
+    "rv": 1.02,
+    "mkt": true,
+    "atrp": 2.55,
+    "risk": 1.55,
+    "price": 78.92,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 78.9194,
+   "stop": 77.6968,
+   "target": 81.3647,
+   "exit": 78.7406,
+   "why": "Schluss",
+   "r": -0.146,
+   "pct": -0.227,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "BHP",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 78.78,
+   "eur": -0.23,
+   "key": "bounce-rsi30-pct1.5-2R|BHP",
+   "f": {
+    "k": 9,
+    "gap": 1.79,
+    "rv": 1.02,
+    "mkt": true,
+    "atrp": 2.55,
+    "risk": 1.55,
+    "price": 78.92,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 108.8094,
+   "stop": 107.1237,
+   "target": 110.4951,
+   "exit": 107.0701,
+   "why": "Stopp",
+   "r": -1.032,
+   "pct": -1.598,
+   "in_k": 9,
+   "out_k": 12,
+   "open": false,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "CBRS",
+   "in_at": "10:20",
+   "out_at": "10:35",
+   "last": 106.85,
+   "eur": -1.6,
+   "key": "bounce-rsi30-pct1.5-1R|CBRS",
+   "f": {
+    "k": 9,
+    "gap": -2.11,
+    "rv": 0.69,
+    "mkt": true,
+    "atrp": 9.37,
+    "risk": 1.55,
+    "price": 108.81,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 108.8094,
+   "stop": 107.1237,
+   "target": 112.1808,
+   "exit": 107.0701,
+   "why": "Stopp",
+   "r": -1.032,
+   "pct": -1.598,
+   "in_k": 9,
+   "out_k": 12,
+   "open": false,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "CBRS",
+   "in_at": "10:20",
+   "out_at": "10:35",
+   "last": 106.85,
+   "eur": -1.6,
+   "key": "bounce-rsi30-pct1.5-2R|CBRS",
+   "f": {
+    "k": 9,
+    "gap": -2.11,
+    "rv": 0.69,
+    "mkt": true,
+    "atrp": 9.37,
+    "risk": 1.55,
+    "price": 108.81,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 160.3952,
+   "stop": 155.31,
+   "target": 168.0229,
+   "exit": 159.3153,
+   "why": "Schluss",
+   "r": -0.212,
+   "pct": -0.673,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1.5R-v1.5",
+   "strategy": "orb",
+   "symbol": "COIN",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 159.395,
+   "eur": -0.67,
+   "key": "orb-30-low-1.5R-v1.5|COIN",
+   "f": {
+    "k": 9,
+    "gap": -4.31,
+    "rv": 1.52,
+    "mkt": true,
+    "atrp": 6.16,
+    "risk": 3.17,
+    "price": 160.4,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 160.3952,
+   "stop": 155.31,
+   "target": 165.4803,
+   "exit": 159.3153,
+   "why": "Schluss",
+   "r": -0.212,
+   "pct": -0.673,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1R-v1.5",
+   "strategy": "orb",
+   "symbol": "COIN",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 159.395,
+   "eur": -0.67,
+   "key": "orb-30-low-1R-v1.5|COIN",
+   "f": {
+    "k": 9,
+    "gap": -4.31,
+    "rv": 1.52,
+    "mkt": true,
+    "atrp": 6.16,
+    "risk": 3.17,
+    "price": 160.4,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 160.3952,
+   "stop": 155.31,
+   "target": 170.5655,
+   "exit": 159.3153,
+   "why": "Schluss",
+   "r": -0.212,
+   "pct": -0.673,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-2R-v1.5",
+   "strategy": "orb",
+   "symbol": "COIN",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 159.395,
+   "eur": -0.67,
+   "key": "orb-30-low-2R-v1.5|COIN",
+   "f": {
+    "k": 9,
+    "gap": -4.31,
+    "rv": 1.52,
+    "mkt": true,
+    "atrp": 6.16,
+    "risk": 3.17,
+    "price": 160.4,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 160.3952,
+   "stop": 155.31,
+   "target": 168.0229,
+   "exit": 159.3153,
+   "why": "Schluss",
+   "r": -0.212,
+   "pct": -0.673,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-1.5R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "COIN",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 159.395,
+   "eur": -0.67,
+   "key": "orbmkt-30-low-1.5R-v1.5|COIN",
+   "f": {
+    "k": 9,
+    "gap": -4.31,
+    "rv": 1.52,
+    "mkt": true,
+    "atrp": 6.16,
+    "risk": 3.17,
+    "price": 160.4,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 160.3952,
+   "stop": 155.31,
+   "target": 170.5655,
+   "exit": 159.3153,
+   "why": "Schluss",
+   "r": -0.212,
+   "pct": -0.673,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-2R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "COIN",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 159.395,
+   "eur": -0.67,
+   "key": "orbmkt-30-low-2R-v1.5|COIN",
+   "f": {
+    "k": 9,
+    "gap": -4.31,
+    "rv": 1.52,
+    "mkt": true,
+    "atrp": 6.16,
+    "risk": 3.17,
+    "price": 160.4,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 34.2871,
+   "stop": 32.28,
+   "target": 37.2978,
+   "exit": 34.1729,
+   "why": "Schluss",
+   "r": -0.057,
+   "pct": -0.333,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1.5R-v1.5",
+   "strategy": "orb",
+   "symbol": "DOW",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 34.19,
+   "eur": -0.33,
+   "key": "orb-30-low-1.5R-v1.5|DOW",
+   "f": {
+    "k": 9,
+    "gap": -0.34,
+    "rv": 3.3,
+    "mkt": true,
+    "atrp": 2.56,
+    "risk": 5.85,
+    "price": 34.29,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 34.2871,
+   "stop": 32.28,
+   "target": 36.2943,
+   "exit": 34.1729,
+   "why": "Schluss",
+   "r": -0.057,
+   "pct": -0.333,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1R-v1.5",
+   "strategy": "orb",
+   "symbol": "DOW",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 34.19,
+   "eur": -0.33,
+   "key": "orb-30-low-1R-v1.5|DOW",
+   "f": {
+    "k": 9,
+    "gap": -0.34,
+    "rv": 3.3,
+    "mkt": true,
+    "atrp": 2.56,
+    "risk": 5.85,
+    "price": 34.29,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 34.2871,
+   "stop": 32.28,
+   "target": 38.3014,
+   "exit": 34.1729,
+   "why": "Schluss",
+   "r": -0.057,
+   "pct": -0.333,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-2R-v1.5",
+   "strategy": "orb",
+   "symbol": "DOW",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 34.19,
+   "eur": -0.33,
+   "key": "orb-30-low-2R-v1.5|DOW",
+   "f": {
+    "k": 9,
+    "gap": -0.34,
+    "rv": 3.3,
+    "mkt": true,
+    "atrp": 2.56,
+    "risk": 5.85,
+    "price": 34.29,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 34.2871,
+   "stop": 32.28,
+   "target": 37.2978,
+   "exit": 34.1729,
+   "why": "Schluss",
+   "r": -0.057,
+   "pct": -0.333,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-1.5R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "DOW",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 34.19,
+   "eur": -0.33,
+   "key": "orbmkt-30-low-1.5R-v1.5|DOW",
+   "f": {
+    "k": 9,
+    "gap": -0.34,
+    "rv": 3.3,
+    "mkt": true,
+    "atrp": 2.56,
+    "risk": 5.85,
+    "price": 34.29,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 34.2871,
+   "stop": 32.28,
+   "target": 38.3014,
+   "exit": 34.1729,
+   "why": "Schluss",
+   "r": -0.057,
+   "pct": -0.333,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-2R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "DOW",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 34.19,
+   "eur": -0.33,
+   "key": "orbmkt-30-low-2R-v1.5|DOW",
+   "f": {
+    "k": 9,
+    "gap": -0.34,
+    "rv": 3.3,
+    "mkt": true,
+    "atrp": 2.56,
+    "risk": 5.85,
+    "price": 34.29,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 34.2871,
+   "stop": 32.28,
+   "target": 38.3014,
+   "exit": 34.1729,
+   "why": "Schluss",
+   "r": -0.057,
+   "pct": -0.333,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbrank-top20-2R",
+   "strategy": "orbrank",
+   "symbol": "DOW",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 34.19,
+   "eur": -0.33,
+   "key": "orbrank-top20-2R|DOW",
+   "f": {
+    "k": 9,
+    "gap": -0.34,
+    "rv": 3.3,
+    "mkt": true,
+    "atrp": 2.56,
+    "risk": 5.85,
+    "price": 34.29,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 77.3887,
+   "stop": 76.1897,
+   "target": 78.5876,
+   "exit": 76.3868,
+   "why": "Schluss",
+   "r": -0.836,
+   "pct": -1.295,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "FLEX",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 76.425,
+   "eur": -1.29,
+   "key": "bounce-rsi30-pct1.5-1R|FLEX",
+   "f": {
+    "k": 9,
+    "gap": 1.09,
+    "rv": 0.64,
+    "mkt": true,
+    "atrp": 9.15,
+    "risk": 1.55,
+    "price": 77.39,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 77.3887,
+   "stop": 76.1897,
+   "target": 79.7865,
+   "exit": 76.3868,
+   "why": "Schluss",
+   "r": -0.836,
+   "pct": -1.295,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "FLEX",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 76.425,
+   "eur": -1.29,
+   "key": "bounce-rsi30-pct1.5-2R|FLEX",
+   "f": {
+    "k": 9,
+    "gap": 1.09,
+    "rv": 0.64,
+    "mkt": true,
+    "atrp": 9.15,
+    "risk": 1.55,
+    "price": 77.39,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 24.7124,
+   "stop": 24.3295,
+   "target": 25.0952,
+   "exit": 24.3173,
+   "why": "Stopp",
+   "r": -1.032,
+   "pct": -1.598,
+   "in_k": 9,
+   "out_k": 11,
+   "open": false,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "FPS",
+   "in_at": "10:20",
+   "out_at": "10:30",
+   "last": 24.29,
+   "eur": -1.6,
+   "key": "bounce-rsi30-pct1.5-1R|FPS",
+   "f": {
+    "k": 9,
+    "gap": -0.3,
+    "rv": 0.92,
+    "mkt": true,
+    "atrp": 11.8,
+    "risk": 1.55,
+    "price": 24.71,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 24.7124,
+   "stop": 24.3295,
+   "target": 25.4781,
+   "exit": 24.3173,
+   "why": "Stopp",
+   "r": -1.032,
+   "pct": -1.598,
+   "in_k": 9,
+   "out_k": 11,
+   "open": false,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "FPS",
+   "in_at": "10:20",
+   "out_at": "10:30",
+   "last": 24.29,
+   "eur": -1.6,
+   "key": "bounce-rsi30-pct1.5-2R|FPS",
+   "f": {
+    "k": 9,
+    "gap": -0.3,
+    "rv": 0.92,
+    "mkt": true,
+    "atrp": 11.8,
+    "risk": 1.55,
+    "price": 24.71,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 67.0685,
+   "stop": 66.0295,
+   "target": 68.1076,
+   "exit": 66.7916,
+   "why": "Schluss",
+   "r": -0.267,
+   "pct": -0.413,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "GGG",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 66.825,
+   "eur": -0.41,
+   "key": "bounce-rsi30-pct1.5-1R|GGG",
+   "f": {
+    "k": 9,
+    "gap": 0.78,
+    "rv": 1.28,
+    "mkt": true,
+    "atrp": 3.53,
+    "risk": 1.55,
+    "price": 67.07,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 67.0685,
+   "stop": 66.0295,
+   "target": 69.1466,
+   "exit": 66.7916,
+   "why": "Schluss",
+   "r": -0.267,
+   "pct": -0.413,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "GGG",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 66.825,
+   "eur": -0.41,
+   "key": "bounce-rsi30-pct1.5-2R|GGG",
+   "f": {
+    "k": 9,
+    "gap": 0.78,
+    "rv": 1.28,
+    "mkt": true,
+    "atrp": 3.53,
+    "risk": 1.55,
+    "price": 67.07,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 96.4282,
+   "stop": 94.9343,
+   "target": 97.9221,
+   "exit": 95.7021,
+   "why": "Schluss",
+   "r": -0.486,
+   "pct": -0.753,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "LSCC",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 95.75,
+   "eur": -0.75,
+   "key": "bounce-rsi30-pct1.5-1R|LSCC",
+   "f": {
+    "k": 9,
+    "gap": 0.18,
+    "rv": 0.95,
+    "mkt": true,
+    "atrp": 6.52,
+    "risk": 1.55,
+    "price": 96.43,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 96.4282,
+   "stop": 94.9343,
+   "target": 99.416,
+   "exit": 95.7021,
+   "why": "Schluss",
+   "r": -0.486,
+   "pct": -0.753,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "LSCC",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 95.75,
+   "eur": -0.75,
+   "key": "bounce-rsi30-pct1.5-2R|LSCC",
+   "f": {
+    "k": 9,
+    "gap": 0.18,
+    "rv": 0.95,
+    "mkt": true,
+    "atrp": 6.52,
+    "risk": 1.55,
+    "price": 96.43,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 175.5778,
+   "stop": 172.8577,
+   "target": 178.2978,
+   "exit": 173.823,
+   "why": "Schluss",
+   "r": -0.645,
+   "pct": -0.999,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "MTZ",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 173.91,
+   "eur": -1.0,
+   "key": "bounce-rsi30-pct1.5-1R|MTZ",
+   "f": {
+    "k": 9,
+    "gap": 1.43,
+    "rv": 1.73,
+    "mkt": true,
+    "atrp": 6.16,
+    "risk": 1.55,
+    "price": 175.58,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 175.5778,
+   "stop": 172.8577,
+   "target": 181.0179,
+   "exit": 173.823,
+   "why": "Schluss",
+   "r": -0.645,
+   "pct": -0.999,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "MTZ",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 173.91,
+   "eur": -1.0,
+   "key": "bounce-rsi30-pct1.5-2R|MTZ",
+   "f": {
+    "k": 9,
+    "gap": 1.43,
+    "rv": 1.73,
+    "mkt": true,
+    "atrp": 6.16,
+    "risk": 1.55,
+    "price": 175.58,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 73.1566,
+   "stop": 72.29,
+   "target": 74.4564,
+   "exit": 72.2539,
+   "why": "Stopp",
+   "r": -1.042,
+   "pct": -1.234,
+   "in_k": 9,
+   "out_k": 12,
+   "open": false,
+   "variant": "orb-30-low-1.5R-v1.5",
+   "strategy": "orb",
+   "symbol": "ON",
+   "in_at": "10:20",
+   "out_at": "10:35",
+   "last": 72.3069,
+   "eur": -1.23,
+   "key": "orb-30-low-1.5R-v1.5|ON",
+   "f": {
+    "k": 9,
+    "gap": 0.78,
+    "rv": 1.83,
+    "mkt": true,
+    "atrp": 4.63,
+    "risk": 1.18,
+    "price": 73.16,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 73.1566,
+   "stop": 72.29,
+   "target": 74.0231,
+   "exit": 72.2539,
+   "why": "Stopp",
+   "r": -1.042,
+   "pct": -1.234,
+   "in_k": 9,
+   "out_k": 12,
+   "open": false,
+   "variant": "orb-30-low-1R-v1.5",
+   "strategy": "orb",
+   "symbol": "ON",
+   "in_at": "10:20",
+   "out_at": "10:35",
+   "last": 72.3069,
+   "eur": -1.23,
+   "key": "orb-30-low-1R-v1.5|ON",
+   "f": {
+    "k": 9,
+    "gap": 0.78,
+    "rv": 1.83,
+    "mkt": true,
+    "atrp": 4.63,
+    "risk": 1.18,
+    "price": 73.16,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 73.1566,
+   "stop": 72.29,
+   "target": 74.8897,
+   "exit": 72.2539,
+   "why": "Stopp",
+   "r": -1.042,
+   "pct": -1.234,
+   "in_k": 9,
+   "out_k": 12,
+   "open": false,
+   "variant": "orb-30-low-2R-v1.5",
+   "strategy": "orb",
+   "symbol": "ON",
+   "in_at": "10:20",
+   "out_at": "10:35",
+   "last": 72.3069,
+   "eur": -1.23,
+   "key": "orb-30-low-2R-v1.5|ON",
+   "f": {
+    "k": 9,
+    "gap": 0.78,
+    "rv": 1.83,
+    "mkt": true,
+    "atrp": 4.63,
+    "risk": 1.18,
+    "price": 73.16,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": true
+  },
+  {
+   "entry": 73.1566,
+   "stop": 72.29,
+   "target": 74.4564,
+   "exit": 72.2539,
+   "why": "Stopp",
+   "r": -1.042,
+   "pct": -1.234,
+   "in_k": 9,
+   "out_k": 12,
+   "open": false,
+   "variant": "orbmkt-30-low-1.5R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "ON",
+   "in_at": "10:20",
+   "out_at": "10:35",
+   "last": 72.3069,
+   "eur": -1.23,
+   "key": "orbmkt-30-low-1.5R-v1.5|ON",
+   "f": {
+    "k": 9,
+    "gap": 0.78,
+    "rv": 1.83,
+    "mkt": true,
+    "atrp": 4.63,
+    "risk": 1.18,
+    "price": 73.16,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 73.1566,
+   "stop": 72.29,
+   "target": 74.8897,
+   "exit": 72.2539,
+   "why": "Stopp",
+   "r": -1.042,
+   "pct": -1.234,
+   "in_k": 9,
+   "out_k": 12,
+   "open": false,
+   "variant": "orbmkt-30-low-2R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "ON",
+   "in_at": "10:20",
+   "out_at": "10:35",
+   "last": 72.3069,
+   "eur": -1.23,
+   "key": "orbmkt-30-low-2R-v1.5|ON",
+   "f": {
+    "k": 9,
+    "gap": 0.78,
+    "rv": 1.83,
+    "mkt": true,
+    "atrp": 4.63,
+    "risk": 1.18,
+    "price": 73.16,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": true
+  },
+  {
+   "entry": 73.0865,
+   "stop": 72.7475,
+   "target": 73.7647,
+   "exit": 72.7111,
+   "why": "Stopp",
+   "r": -1.107,
+   "pct": -0.514,
+   "in_k": 9,
+   "out_k": 10,
+   "open": false,
+   "variant": "sip-top10-atr0.1-2R",
+   "strategy": "sip",
+   "symbol": "ON",
+   "in_at": "10:20",
+   "out_at": "10:25",
+   "last": 72.3069,
+   "eur": -0.51,
+   "key": "sip-top10-atr0.1-2R|ON",
+   "f": {
+    "k": 9,
+    "gap": 0.78,
+    "rv": 1.83,
+    "mkt": true,
+    "atrp": 4.64,
+    "risk": 0.46,
+    "price": 73.09,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": true
+  },
+  {
+   "entry": 199.5697,
+   "stop": 196.478,
+   "target": 202.6615,
+   "exit": 197.806,
+   "why": "Schluss",
+   "r": -0.57,
+   "pct": -0.884,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "ONTO",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 197.905,
+   "eur": -0.88,
+   "key": "bounce-rsi30-pct1.5-1R|ONTO",
+   "f": {
+    "k": 9,
+    "gap": 0.3,
+    "rv": 0.87,
+    "mkt": true,
+    "atrp": 8.24,
+    "risk": 1.55,
+    "price": 199.57,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 199.5697,
+   "stop": 196.478,
+   "target": 205.7533,
+   "exit": 197.806,
+   "why": "Schluss",
+   "r": -0.57,
+   "pct": -0.884,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "ONTO",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 197.905,
+   "eur": -0.88,
+   "key": "bounce-rsi30-pct1.5-2R|ONTO",
+   "f": {
+    "k": 9,
+    "gap": 0.3,
+    "rv": 0.87,
+    "mkt": true,
+    "atrp": 8.24,
+    "risk": 1.55,
+    "price": 199.57,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 563.4916,
+   "stop": 549.36,
+   "target": 584.6891,
+   "exit": 558.5906,
+   "why": "Schluss",
+   "r": -0.347,
+   "pct": -0.87,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1.5R-v1.5",
+   "strategy": "orb",
+   "symbol": "PWR",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 558.87,
+   "eur": -0.87,
+   "key": "orb-30-low-1.5R-v1.5|PWR",
+   "f": {
+    "k": 9,
+    "gap": -0.36,
+    "rv": 2.11,
+    "mkt": true,
+    "atrp": 5.72,
+    "risk": 2.51,
+    "price": 563.49,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 563.4916,
+   "stop": 549.36,
+   "target": 577.6233,
+   "exit": 558.5906,
+   "why": "Schluss",
+   "r": -0.347,
+   "pct": -0.87,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1R-v1.5",
+   "strategy": "orb",
+   "symbol": "PWR",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 558.87,
+   "eur": -0.87,
+   "key": "orb-30-low-1R-v1.5|PWR",
+   "f": {
+    "k": 9,
+    "gap": -0.36,
+    "rv": 2.11,
+    "mkt": true,
+    "atrp": 5.72,
+    "risk": 2.51,
+    "price": 563.49,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 563.4916,
+   "stop": 549.36,
+   "target": 591.7549,
+   "exit": 558.5906,
+   "why": "Schluss",
+   "r": -0.347,
+   "pct": -0.87,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-2R-v1.5",
+   "strategy": "orb",
+   "symbol": "PWR",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 558.87,
+   "eur": -0.87,
+   "key": "orb-30-low-2R-v1.5|PWR",
+   "f": {
+    "k": 9,
+    "gap": -0.36,
+    "rv": 2.11,
+    "mkt": true,
+    "atrp": 5.72,
+    "risk": 2.51,
+    "price": 563.49,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 563.4916,
+   "stop": 549.36,
+   "target": 584.6891,
+   "exit": 558.5906,
+   "why": "Schluss",
+   "r": -0.347,
+   "pct": -0.87,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-1.5R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "PWR",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 558.87,
+   "eur": -0.87,
+   "key": "orbmkt-30-low-1.5R-v1.5|PWR",
+   "f": {
+    "k": 9,
+    "gap": -0.36,
+    "rv": 2.11,
+    "mkt": true,
+    "atrp": 5.72,
+    "risk": 2.51,
+    "price": 563.49,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 563.4916,
+   "stop": 549.36,
+   "target": 591.7549,
+   "exit": 558.5906,
+   "why": "Schluss",
+   "r": -0.347,
+   "pct": -0.87,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-2R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "PWR",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 558.87,
+   "eur": -0.87,
+   "key": "orbmkt-30-low-2R-v1.5|PWR",
+   "f": {
+    "k": 9,
+    "gap": -0.36,
+    "rv": 2.11,
+    "mkt": true,
+    "atrp": 5.72,
+    "risk": 2.51,
+    "price": 563.49,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 563.4916,
+   "stop": 549.36,
+   "target": 591.7549,
+   "exit": 558.5906,
+   "why": "Schluss",
+   "r": -0.347,
+   "pct": -0.87,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbrank-top20-2R",
+   "strategy": "orbrank",
+   "symbol": "PWR",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 558.87,
+   "eur": -0.87,
+   "key": "orbrank-top20-2R|PWR",
+   "f": {
+    "k": 9,
+    "gap": -0.36,
+    "rv": 2.11,
+    "mkt": true,
+    "atrp": 5.72,
+    "risk": 2.51,
+    "price": 563.49,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 221.1655,
+   "stop": 216.72,
+   "target": 227.8338,
+   "exit": 223.968,
+   "why": "Schluss",
+   "r": 0.63,
+   "pct": 1.267,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1.5R-v1.5",
+   "strategy": "orb",
+   "symbol": "QLYS",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 224.08,
+   "eur": 1.27,
+   "key": "orb-30-low-1.5R-v1.5|QLYS",
+   "f": {
+    "k": 9,
+    "gap": 1.61,
+    "rv": 1.55,
+    "mkt": true,
+    "atrp": 4.95,
+    "risk": 2.01,
+    "price": 221.17,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 221.1655,
+   "stop": 216.72,
+   "target": 225.611,
+   "exit": 223.968,
+   "why": "Schluss",
+   "r": 0.63,
+   "pct": 1.267,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1R-v1.5",
+   "strategy": "orb",
+   "symbol": "QLYS",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 224.08,
+   "eur": 1.27,
+   "key": "orb-30-low-1R-v1.5|QLYS",
+   "f": {
+    "k": 9,
+    "gap": 1.61,
+    "rv": 1.55,
+    "mkt": true,
+    "atrp": 4.95,
+    "risk": 2.01,
+    "price": 221.17,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 221.1655,
+   "stop": 216.72,
+   "target": 230.0566,
+   "exit": 223.968,
+   "why": "Schluss",
+   "r": 0.63,
+   "pct": 1.267,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-2R-v1.5",
+   "strategy": "orb",
+   "symbol": "QLYS",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 224.08,
+   "eur": 1.27,
+   "key": "orb-30-low-2R-v1.5|QLYS",
+   "f": {
+    "k": 9,
+    "gap": 1.61,
+    "rv": 1.55,
+    "mkt": true,
+    "atrp": 4.95,
+    "risk": 2.01,
+    "price": 221.17,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 221.1655,
+   "stop": 216.72,
+   "target": 227.8338,
+   "exit": 223.968,
+   "why": "Schluss",
+   "r": 0.63,
+   "pct": 1.267,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-1.5R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "QLYS",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 224.08,
+   "eur": 1.27,
+   "key": "orbmkt-30-low-1.5R-v1.5|QLYS",
+   "f": {
+    "k": 9,
+    "gap": 1.61,
+    "rv": 1.55,
+    "mkt": true,
+    "atrp": 4.95,
+    "risk": 2.01,
+    "price": 221.17,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 221.1655,
+   "stop": 216.72,
+   "target": 230.0566,
+   "exit": 223.968,
+   "why": "Schluss",
+   "r": 0.63,
+   "pct": 1.267,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-2R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "QLYS",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 224.08,
+   "eur": 1.27,
+   "key": "orbmkt-30-low-2R-v1.5|QLYS",
+   "f": {
+    "k": 9,
+    "gap": 1.61,
+    "rv": 1.55,
+    "mkt": true,
+    "atrp": 4.95,
+    "risk": 2.01,
+    "price": 221.17,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 11.7259,
+   "stop": 11.5442,
+   "target": 11.9075,
+   "exit": 11.5743,
+   "why": "Schluss",
+   "r": -0.834,
+   "pct": -1.292,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "RIVN",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 11.5801,
+   "eur": -1.29,
+   "key": "bounce-rsi30-pct1.5-1R|RIVN",
+   "f": {
+    "k": 9,
+    "gap": -1.26,
+    "rv": 1.26,
+    "mkt": true,
+    "atrp": 3.96,
+    "risk": 1.55,
+    "price": 11.73,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 11.7259,
+   "stop": 11.5442,
+   "target": 12.0892,
+   "exit": 11.5743,
+   "why": "Schluss",
+   "r": -0.834,
+   "pct": -1.292,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "RIVN",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 11.5801,
+   "eur": -1.29,
+   "key": "bounce-rsi30-pct1.5-2R|RIVN",
+   "f": {
+    "k": 9,
+    "gap": -1.26,
+    "rv": 1.26,
+    "mkt": true,
+    "atrp": 3.96,
+    "risk": 1.55,
+    "price": 11.73,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 395.7829,
+   "stop": 383.8406,
+   "target": 413.6964,
+   "exit": 393.3832,
+   "why": "Schluss",
+   "r": -0.201,
+   "pct": -0.606,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1.5R-v1.5",
+   "strategy": "orb",
+   "symbol": "TSLA",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 393.58,
+   "eur": -0.61,
+   "key": "orb-30-low-1.5R-v1.5|TSLA",
+   "f": {
+    "k": 9,
+    "gap": 4.18,
+    "rv": 1.68,
+    "mkt": true,
+    "atrp": 2.96,
+    "risk": 3.02,
+    "price": 395.78,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 395.7829,
+   "stop": 383.8406,
+   "target": 407.7252,
+   "exit": 393.3832,
+   "why": "Schluss",
+   "r": -0.201,
+   "pct": -0.606,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1R-v1.5",
+   "strategy": "orb",
+   "symbol": "TSLA",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 393.58,
+   "eur": -0.61,
+   "key": "orb-30-low-1R-v1.5|TSLA",
+   "f": {
+    "k": 9,
+    "gap": 4.18,
+    "rv": 1.68,
+    "mkt": true,
+    "atrp": 2.96,
+    "risk": 3.02,
+    "price": 395.78,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 395.7829,
+   "stop": 383.8406,
+   "target": 419.6675,
+   "exit": 393.3832,
+   "why": "Schluss",
+   "r": -0.201,
+   "pct": -0.606,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-2R-v1.5",
+   "strategy": "orb",
+   "symbol": "TSLA",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 393.58,
+   "eur": -0.61,
+   "key": "orb-30-low-2R-v1.5|TSLA",
+   "f": {
+    "k": 9,
+    "gap": 4.18,
+    "rv": 1.68,
+    "mkt": true,
+    "atrp": 2.96,
+    "risk": 3.02,
+    "price": 395.78,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 395.7829,
+   "stop": 383.8406,
+   "target": 413.6964,
+   "exit": 393.3832,
+   "why": "Schluss",
+   "r": -0.201,
+   "pct": -0.606,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-1.5R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "TSLA",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 393.58,
+   "eur": -0.61,
+   "key": "orbmkt-30-low-1.5R-v1.5|TSLA",
+   "f": {
+    "k": 9,
+    "gap": 4.18,
+    "rv": 1.68,
+    "mkt": true,
+    "atrp": 2.96,
+    "risk": 3.02,
+    "price": 395.78,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 395.7829,
+   "stop": 383.8406,
+   "target": 419.6675,
+   "exit": 393.3832,
+   "why": "Schluss",
+   "r": -0.201,
+   "pct": -0.606,
+   "in_k": 9,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-2R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "TSLA",
+   "in_at": "10:20",
+   "out_at": null,
+   "last": 393.58,
+   "eur": -0.61,
+   "key": "orbmkt-30-low-2R-v1.5|TSLA",
+   "f": {
+    "k": 9,
+    "gap": 4.18,
+    "rv": 1.68,
+    "mkt": true,
+    "atrp": 2.96,
+    "risk": 3.02,
+    "price": 395.78,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 260.6403,
+   "stop": 254.51,
+   "target": 269.8357,
+   "exit": 261.894,
+   "why": "Schluss",
+   "r": 0.205,
+   "pct": 0.481,
+   "in_k": 10,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1.5R-v1.5",
+   "strategy": "orb",
+   "symbol": "CRWD",
+   "in_at": "10:25",
+   "out_at": null,
+   "last": 262.025,
+   "eur": 0.48,
+   "key": "orb-30-low-1.5R-v1.5|CRWD",
+   "f": {
+    "k": 10,
+    "gap": 2.25,
+    "rv": 1.95,
+    "mkt": true,
+    "atrp": 5.02,
+    "risk": 2.35,
+    "price": 260.64,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 260.6403,
+   "stop": 254.51,
+   "target": 266.7705,
+   "exit": 261.894,
+   "why": "Schluss",
+   "r": 0.205,
+   "pct": 0.481,
+   "in_k": 10,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1R-v1.5",
+   "strategy": "orb",
+   "symbol": "CRWD",
+   "in_at": "10:25",
+   "out_at": null,
+   "last": 262.025,
+   "eur": 0.48,
+   "key": "orb-30-low-1R-v1.5|CRWD",
+   "f": {
+    "k": 10,
+    "gap": 2.25,
+    "rv": 1.95,
+    "mkt": true,
+    "atrp": 5.02,
+    "risk": 2.35,
+    "price": 260.64,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 260.6403,
+   "stop": 254.51,
+   "target": 272.9008,
+   "exit": 261.894,
+   "why": "Schluss",
+   "r": 0.205,
+   "pct": 0.481,
+   "in_k": 10,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-2R-v1.5",
+   "strategy": "orb",
+   "symbol": "CRWD",
+   "in_at": "10:25",
+   "out_at": null,
+   "last": 262.025,
+   "eur": 0.48,
+   "key": "orb-30-low-2R-v1.5|CRWD",
+   "f": {
+    "k": 10,
+    "gap": 2.25,
+    "rv": 1.95,
+    "mkt": true,
+    "atrp": 5.02,
+    "risk": 2.35,
+    "price": 260.64,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 260.6403,
+   "stop": 254.51,
+   "target": 269.8357,
+   "exit": 261.894,
+   "why": "Schluss",
+   "r": 0.205,
+   "pct": 0.481,
+   "in_k": 10,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-1.5R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "CRWD",
+   "in_at": "10:25",
+   "out_at": null,
+   "last": 262.025,
+   "eur": 0.48,
+   "key": "orbmkt-30-low-1.5R-v1.5|CRWD",
+   "f": {
+    "k": 10,
+    "gap": 2.25,
+    "rv": 1.95,
+    "mkt": true,
+    "atrp": 5.02,
+    "risk": 2.35,
+    "price": 260.64,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 260.6403,
+   "stop": 254.51,
+   "target": 272.9008,
+   "exit": 261.894,
+   "why": "Schluss",
+   "r": 0.205,
+   "pct": 0.481,
+   "in_k": 10,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-2R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "CRWD",
+   "in_at": "10:25",
+   "out_at": null,
+   "last": 262.025,
+   "eur": 0.48,
+   "key": "orbmkt-30-low-2R-v1.5|CRWD",
+   "f": {
+    "k": 10,
+    "gap": 2.25,
+    "rv": 1.95,
+    "mkt": true,
+    "atrp": 5.02,
+    "risk": 2.35,
+    "price": 260.64,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 260.6403,
+   "stop": 254.51,
+   "target": 272.9008,
+   "exit": 261.894,
+   "why": "Schluss",
+   "r": 0.205,
+   "pct": 0.481,
+   "in_k": 10,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbrank-top20-2R",
+   "strategy": "orbrank",
+   "symbol": "CRWD",
+   "in_at": "10:25",
+   "out_at": null,
+   "last": 262.025,
+   "eur": 0.48,
+   "key": "orbrank-top20-2R|CRWD",
+   "f": {
+    "k": 10,
+    "gap": 2.25,
+    "rv": 1.95,
+    "mkt": true,
+    "atrp": 5.02,
+    "risk": 2.35,
+    "price": 260.64,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 17.8189,
+   "stop": 17.5428,
+   "target": 18.095,
+   "exit": 17.7911,
+   "why": "Schluss",
+   "r": -0.101,
+   "pct": -0.156,
+   "in_k": 11,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-1R",
+   "strategy": "bounce",
+   "symbol": "MOS",
+   "in_at": "10:30",
+   "out_at": null,
+   "last": 17.8,
+   "eur": -0.16,
+   "key": "bounce-rsi30-pct1.5-1R|MOS",
+   "f": {
+    "k": 11,
+    "gap": 2.01,
+    "rv": 1.2,
+    "mkt": true,
+    "atrp": 3.84,
+    "risk": 1.55,
+    "price": 17.82,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 17.8189,
+   "stop": 17.5428,
+   "target": 18.371,
+   "exit": 17.7911,
+   "why": "Schluss",
+   "r": -0.101,
+   "pct": -0.156,
+   "in_k": 11,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-rsi30-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "MOS",
+   "in_at": "10:30",
+   "out_at": null,
+   "last": 17.8,
+   "eur": -0.16,
+   "key": "bounce-rsi30-pct1.5-2R|MOS",
+   "f": {
+    "k": 11,
+    "gap": 2.01,
+    "rv": 1.2,
+    "mkt": true,
+    "atrp": 3.84,
+    "risk": 1.55,
+    "price": 17.82,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 448.154,
+   "stop": 439.27,
+   "target": 461.4799,
+   "exit": 449.6651,
+   "why": "Schluss",
+   "r": 0.17,
+   "pct": 0.337,
+   "in_k": 11,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1.5R-v1.5",
+   "strategy": "orb",
+   "symbol": "ROP",
+   "in_at": "10:30",
+   "out_at": null,
+   "last": 449.89,
+   "eur": 0.34,
+   "key": "orb-30-low-1.5R-v1.5|ROP",
+   "f": {
+    "k": 11,
+    "gap": 1.68,
+    "rv": 2.56,
+    "mkt": true,
+    "atrp": 2.46,
+    "risk": 1.98,
+    "price": 448.15,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 448.154,
+   "stop": 439.27,
+   "target": 457.0379,
+   "exit": 449.6651,
+   "why": "Schluss",
+   "r": 0.17,
+   "pct": 0.337,
+   "in_k": 11,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-1R-v1.5",
+   "strategy": "orb",
+   "symbol": "ROP",
+   "in_at": "10:30",
+   "out_at": null,
+   "last": 449.89,
+   "eur": 0.34,
+   "key": "orb-30-low-1R-v1.5|ROP",
+   "f": {
+    "k": 11,
+    "gap": 1.68,
+    "rv": 2.56,
+    "mkt": true,
+    "atrp": 2.46,
+    "risk": 1.98,
+    "price": 448.15,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 448.154,
+   "stop": 439.27,
+   "target": 465.9219,
+   "exit": 449.6651,
+   "why": "Schluss",
+   "r": 0.17,
+   "pct": 0.337,
+   "in_k": 11,
+   "out_k": 12,
+   "open": true,
+   "variant": "orb-30-low-2R-v1.5",
+   "strategy": "orb",
+   "symbol": "ROP",
+   "in_at": "10:30",
+   "out_at": null,
+   "last": 449.89,
+   "eur": 0.34,
+   "key": "orb-30-low-2R-v1.5|ROP",
+   "f": {
+    "k": 11,
+    "gap": 1.68,
+    "rv": 2.56,
+    "mkt": true,
+    "atrp": 2.46,
+    "risk": 1.98,
+    "price": 448.15,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 448.154,
+   "stop": 439.27,
+   "target": 461.4799,
+   "exit": 449.6651,
+   "why": "Schluss",
+   "r": 0.17,
+   "pct": 0.337,
+   "in_k": 11,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-1.5R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "ROP",
+   "in_at": "10:30",
+   "out_at": null,
+   "last": 449.89,
+   "eur": 0.34,
+   "key": "orbmkt-30-low-1.5R-v1.5|ROP",
+   "f": {
+    "k": 11,
+    "gap": 1.68,
+    "rv": 2.56,
+    "mkt": true,
+    "atrp": 2.46,
+    "risk": 1.98,
+    "price": 448.15,
+    "dow": 0
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 448.154,
+   "stop": 439.27,
+   "target": 465.9219,
+   "exit": 449.6651,
+   "why": "Schluss",
+   "r": 0.17,
+   "pct": 0.337,
+   "in_k": 11,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbmkt-30-low-2R-v1.5",
+   "strategy": "orbmkt",
+   "symbol": "ROP",
+   "in_at": "10:30",
+   "out_at": null,
+   "last": 449.89,
+   "eur": 0.34,
+   "key": "orbmkt-30-low-2R-v1.5|ROP",
+   "f": {
+    "k": 11,
+    "gap": 1.68,
+    "rv": 2.56,
+    "mkt": true,
+    "atrp": 2.46,
+    "risk": 1.98,
+    "price": 448.15,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 448.154,
+   "stop": 439.27,
+   "target": 465.9219,
+   "exit": 449.6651,
+   "why": "Schluss",
+   "r": 0.17,
+   "pct": 0.337,
+   "in_k": 11,
+   "out_k": 12,
+   "open": true,
+   "variant": "orbrank-top20-2R",
+   "strategy": "orbrank",
+   "symbol": "ROP",
+   "in_at": "10:30",
+   "out_at": null,
+   "last": 449.89,
+   "eur": 0.34,
+   "key": "orbrank-top20-2R|ROP",
+   "f": {
+    "k": 11,
+    "gap": 1.68,
+    "rv": 2.56,
+    "mkt": true,
+    "atrp": 2.46,
+    "risk": 1.98,
+    "price": 448.15,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 21.0655,
+   "stop": 20.62,
+   "target": 21.5111,
+   "exit": 21.0145,
+   "why": "Schluss",
+   "r": -0.115,
+   "pct": -0.242,
+   "in_k": 11,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-gapdown3-daylow-1R",
+   "strategy": "bounce",
+   "symbol": "T",
+   "in_at": "10:30",
+   "out_at": null,
+   "last": 21.025,
+   "eur": -0.24,
+   "key": "bounce-gapdown3-daylow-1R|T",
+   "f": {
+    "k": 11,
+    "gap": -3.11,
+    "rv": 0.79,
+    "mkt": true,
+    "atrp": 4.15,
+    "risk": 2.11,
+    "price": 21.07,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 21.0655,
+   "stop": 20.62,
+   "target": 21.9566,
+   "exit": 21.0145,
+   "why": "Schluss",
+   "r": -0.115,
+   "pct": -0.242,
+   "in_k": 11,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-gapdown3-daylow-2R",
+   "strategy": "bounce",
+   "symbol": "T",
+   "in_at": "10:30",
+   "out_at": null,
+   "last": 21.025,
+   "eur": -0.24,
+   "key": "bounce-gapdown3-daylow-2R|T",
+   "f": {
+    "k": 11,
+    "gap": -3.11,
+    "rv": 0.79,
+    "mkt": true,
+    "atrp": 4.15,
+    "risk": 2.11,
+    "price": 21.07,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 21.0655,
+   "stop": 20.7392,
+   "target": 21.7182,
+   "exit": 21.0145,
+   "why": "Schluss",
+   "r": -0.156,
+   "pct": -0.242,
+   "in_k": 11,
+   "out_k": 12,
+   "open": true,
+   "variant": "bounce-gapdown3-pct1.5-2R",
+   "strategy": "bounce",
+   "symbol": "T",
+   "in_at": "10:30",
+   "out_at": null,
+   "last": 21.025,
+   "eur": -0.24,
+   "key": "bounce-gapdown3-pct1.5-2R|T",
+   "f": {
+    "k": 11,
+    "gap": -3.11,
+    "rv": 0.79,
+    "mkt": true,
+    "atrp": 4.15,
+    "risk": 1.55,
+    "price": 21.07,
+    "dow": 0
+   },
+   "told_in": true,
+   "told_out": false
+  }
+ ]
+}

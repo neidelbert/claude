@@ -1,27 +1,27 @@
 {
   "part": "lab",
   "ok": true,
-  "summary": "4 von 76 bestanden",
-  "ran_at": "2026-10-26T20:20:21Z",
-  "date_et": "2026-10-26",
+  "summary": "1 von 76 bestanden",
+  "ran_at": "2026-10-27T20:20:20Z",
+  "date_et": "2026-10-27",
   "steps": [
     {
       "name": "Kerzen laden",
       "ok": true,
-      "detail": "397 von 397 Aktien"
+      "detail": "419 von 419 Aktien"
     },
     {
       "name": "Testen",
       "ok": true,
-      "detail": "76 Varianten, 172.936 Trades, 4 bestanden"
+      "detail": "76 Varianten, 253.920 Trades, 1 bestanden"
     }
   ],
   "data": {
-    "days": 62,
-    "symbols": 397,
-    "trades": 172936,
-    "passed": 4,
-    "best": "orb-30-low-2R-v0-fv4"
+    "days": 63,
+    "symbols": 583,
+    "trades": 253920,
+    "passed": 1,
+    "best": "orb-30-low-2R-v0-fv2"
   },
-  "run_url": "https://github.com/neidelbert/claude/actions/runs/40391446088"
+  "run_url": "https://github.com/neidelbert/claude/actions/runs/40554495911"
 }

@@ -1,6 +1,6 @@
 # Trader-Übersicht
 
-Stand: Di 27.10. 09:40 Uhr ET (14:40 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
+Stand: Di 27.10. 09:50 Uhr ET (14:50 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
 
 NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
@@ -10,7 +10,7 @@ NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 |---|---|---|
 | Morgen-Scan | Di 27.10. 08:34 Uhr ET (13:34 Uhr MEZ) | OK – 443 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40504826435)) |
 | ORB-Scan | Mo 26.10. 10:35 Uhr ET (15:35 Uhr MEZ) | OK – 396 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40340972956)) |
-| Labor live | Di 27.10. 09:40 Uhr ET (14:40 Uhr MEZ) | OK – Börsenstart gemeldet ([Lauf](https://github.com/neidelbert/claude/actions/runs/40504826435)) |
+| Labor live | Di 27.10. 09:50 Uhr ET (14:50 Uhr MEZ) | OK – 279 Trades, 231 offen ([Lauf](https://github.com/neidelbert/claude/actions/runs/40504826435)) |
 | Labor | Mo 26.10. 16:20 Uhr ET (21:20 Uhr MEZ) | OK – 4 von 76 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/40391446088)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
@@ -148,9 +148,9 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 - 22.10. 16:11 Uhr ET · [Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView](https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss)
 - 22.10. 15:51 Uhr ET · [How much Apple stock does CEO John Ternus actually own?](https://www.thestreet.com/personalities/how-much-apple-stock-does-john-ternus-own?.tsrc=rss)
 
-## Labor live – Di 27.10.2026, Stand 09:40 Uhr ET
+## Labor live – Di 27.10.2026, Stand 09:50 Uhr ET
 
-419 Aktien beobachtet · 80 Spielgeld-Trades aller Varianten · 63 offen
+419 Aktien beobachtet · 279 Spielgeld-Trades aller Varianten · 231 offen
 
 | Top-Variante | Trades | offen | € bei 100 €/Trade |
 |---|---|---|---|
@@ -160,16 +160,18 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 | Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 0 | 0 | 0,00 € |
 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 2× normal | 0 | 0 | 0,00 € |
 | Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 0 | 0 | 0,00 € |
-| Stocks in Play (Studie): Top 10 nach Startvolumen · Stopp 10 % ATR · Ziel 2R | 5 | 3 | -2,38 € |
-| News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 2R · nur bei Volumen über 2× normal | 0 | 0 | 0,00 € |
+| Stocks in Play (Studie): Top 10 nach Startvolumen · Stopp 10 % ATR · Ziel 2R | 6 | 1 | -4,19 € |
+| News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 2R · nur bei Volumen über 2× normal | 1 | 1 | 0,40 € |
 
 | Aktie | Regel | Einstieg | Stopp | Ziel | Stand | Ergebnis |
 |---|---|---|---|---|---|---|
-| AMD | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:40 547,77 $ | 544,93 $ | 553,46 $ | offen, Kurs 553,01 $ | 0,91 € |
 | AMKR | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:40 39,04 $ | 38,77 $ | 39,59 $ | Stopp 9:40 Uhr | -0,80 € |
-| GM | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:40 79,64 $ | 79,42 $ | 80,10 $ | offen, Kurs 79,44 $ | -0,31 € |
+| GM | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:40 79,65 $ | 79,42 $ | 80,10 $ | Stopp 9:45 Uhr | -0,33 € |
 | PYPL | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:40 56,61 $ | 56,49 $ | 56,84 $ | Stopp 9:40 Uhr | -2,27 € |
-| TSLA | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:40 399,84 $ | 398,53 $ | 402,47 $ | offen, Kurs 400,40 $ | 0,09 € |
+| TSLA | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:40 399,84 $ | 398,53 $ | 402,47 $ | Ziel 9:45 Uhr | 0,61 € |
+| GM | News-Sprung: Lücke ≥ 2 % | 9:45 79,74 $ | 78,37 $ | 82,49 $ | offen, Kurs 80,10 $ | 0,40 € |
+| KO | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:45 92,77 $ | 92,60 $ | 93,10 $ | Stopp 9:45 Uhr | -0,47 € |
+| FPS | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:50 26,61 $ | 26,33 $ | 27,19 $ | offen, Kurs 26,38 $ | -0,93 € |
 
 ## Labor (Testphase, Spielgeld ohne Limit)
 

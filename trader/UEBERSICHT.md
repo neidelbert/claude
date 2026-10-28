@@ -1,8 +1,8 @@
 # Trader-Übersicht
 
-Stand: Mi 28.10. 08:41 Uhr ET (13:41 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
+Stand: Mi 28.10. 09:41 Uhr ET (14:41 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
 
-NYSE heute: vor der Eröffnung (Handelszeit 09:30 bis 16:00 Uhr ET).
+NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
 ## Systemstatus
 
@@ -10,7 +10,7 @@ NYSE heute: vor der Eröffnung (Handelszeit 09:30 bis 16:00 Uhr ET).
 |---|---|---|
 | Morgen-Scan | Mi 28.10. 08:39 Uhr ET (13:39 Uhr MEZ) | OK – 501 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40689559352)) |
 | ORB-Scan | Di 27.10. 10:10 Uhr ET (15:10 Uhr MEZ) | OK – 64 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40504826435)) |
-| Labor live | Di 27.10. 16:00 Uhr ET (21:00 Uhr MEZ) | OK – Tagesbilanz: 2.992 Trades ([Lauf](https://github.com/neidelbert/claude/actions/runs/40554495911)) |
+| Labor live | Mi 28.10. 09:40 Uhr ET (14:40 Uhr MEZ) | OK – Börsenstart gemeldet ([Lauf](https://github.com/neidelbert/claude/actions/runs/40689559352)) |
 | Labor | Di 27.10. 16:20 Uhr ET (21:20 Uhr MEZ) | OK – 1 von 76 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/40554495911)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
@@ -148,43 +148,26 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 - 22.10. 16:11 Uhr ET · [Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView](https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss)
 - 22.10. 15:51 Uhr ET · [How much Apple stock does CEO John Ternus actually own?](https://www.thestreet.com/personalities/how-much-apple-stock-does-john-ternus-own?.tsrc=rss)
 
-## Labor live – Di 27.10.2026, Stand 16:00 Uhr ET
+## Labor live – Mi 28.10.2026, Stand 09:40 Uhr ET
 
-419 Aktien beobachtet · 2.992 Spielgeld-Trades aller Varianten · 0 offen
+414 Aktien beobachtet · 62 Spielgeld-Trades aller Varianten · 38 offen
 
 | Top-Variante | Trades | offen | € bei 100 €/Trade |
 |---|---|---|---|
-| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 1 | 0 | 0,14 € |
-| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 2× normal | 7 | 0 | 6,17 € |
-| Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 1 | 0 | 0,83 € |
-| Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 1 | 0 | 0,14 € |
+| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 2× normal | 0 | 0 | 0,00 € |
 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 2× normal | 0 | 0 | 0,00 € |
-| Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 10 | 0 | 8,11 € |
-| Stocks in Play (Studie): Top 10 nach Startvolumen · Stopp 10 % ATR · Ziel 2R | 7 | 0 | -4,33 € |
-| News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 2R · nur bei Volumen über 2× normal | 2 | 0 | 2,19 € |
+| Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 0 | 0 | 0,00 € |
+| Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 0 | 0 | 0,00 € |
+| Stocks in Play (Studie): Top 10 nach Startvolumen · Stopp 10 % ATR · Ziel 2R | 4 | 2 | -2,67 € |
+| Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R | 0 | 0 | 0,00 € |
+| News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 2R · nur bei Volumen über 2× normal | 0 | 0 | 0,00 € |
 
 | Aktie | Regel | Einstieg | Stopp | Ziel | Stand | Ergebnis |
 |---|---|---|---|---|---|---|
-| SOFI | Opening-Range-Ausbruch 15 Min | 9:55 16,19 $ | 15,67 $ | 17,24 $ | Schluss 15:55 Uhr | 0,83 € |
-| UPS | Opening-Range-Ausbruch 30 Min | 10:05 103,09 $ | 99,61 $ | 110,04 $ | Schluss 15:55 Uhr | 2,88 € |
-| BHP | Opening-Range-Ausbruch 30 Min | 10:10 81,58 $ | 80,42 $ | 83,90 $ | Schluss 15:55 Uhr | 1,19 € |
-| SOFI | Opening-Range-Ausbruch 30 Min | 10:25 16,30 $ | 15,67 $ | 17,57 $ | Schluss 15:55 Uhr | 0,14 € |
-| SOFI | Opening-Range-Ausbruch 30 Min | 10:25 16,30 $ | 15,67 $ | 17,57 $ | Schluss 15:55 Uhr | 0,14 € |
-| SOFI | Ausbruch 30 Min | 10:25 16,30 $ | 15,67 $ | 17,57 $ | Schluss 15:55 Uhr | 0,14 € |
-| FLEX | Ausbruch 30 Min | 10:35 80,60 $ | 77,75 $ | 86,30 $ | Schluss 15:55 Uhr | 4,72 € |
-| GM | Opening-Range-Ausbruch 30 Min | 10:50 80,83 $ | 78,37 $ | 85,74 $ | Schluss 15:55 Uhr | -0,00 € |
-| GM | Ausbruch 30 Min | 10:50 80,83 $ | 78,37 $ | 85,74 $ | Schluss 15:55 Uhr | -0,00 € |
-| GOOGL | Ausbruch 30 Min | 10:50 320,34 $ | 316,90 $ | 327,21 $ | Schluss 15:55 Uhr | 0,51 € |
-| QQQ | Ausbruch 30 Min | 10:55 718,67 $ | 714,28 $ | 727,45 $ | Schluss 15:55 Uhr | 0,29 € |
-| FDX | Opening-Range-Ausbruch 30 Min | 11:00 305,29 $ | 299,13 $ | 317,62 $ | Schluss 15:55 Uhr | 0,66 € |
-| FDX | Ausbruch 30 Min | 11:00 305,29 $ | 299,13 $ | 317,62 $ | Schluss 15:55 Uhr | 0,66 € |
-| SPY | Ausbruch 30 Min | 11:00 769,10 $ | 765,78 $ | 775,75 $ | Schluss 15:55 Uhr | 0,08 € |
-| CCL | Ausbruch 30 Min | 11:05 27,77 $ | 27,14 $ | 29,04 $ | Schluss 15:55 Uhr | -0,03 € |
-| DASH | Opening-Range-Ausbruch 30 Min | 11:05 170,59 $ | 165,50 $ | 180,76 $ | Schluss 15:55 Uhr | 0,09 € |
-| DASH | Ausbruch 30 Min | 11:05 170,59 $ | 165,50 $ | 180,76 $ | Schluss 15:55 Uhr | 0,09 € |
-| AMD | Ausbruch 30 Min | 11:15 555,64 $ | 538,50 $ | 589,91 $ | Schluss 15:55 Uhr | 0,58 € |
-| AMKR | Opening-Range-Ausbruch 30 Min | 11:25 39,27 $ | 37,36 $ | 43,09 $ | Schluss 15:55 Uhr | 1,21 € |
-| AMKR | Ausbruch 30 Min | 11:25 39,27 $ | 37,36 $ | 43,09 $ | Schluss 15:55 Uhr | 1,21 € |
+| CHKP | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:40 159,58 $ | 159,08 $ | 160,57 $ | offen, Kurs 159,28 $ | -0,24 € |
+| HOOD | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:40 91,69 $ | 91,17 $ | 92,72 $ | Stopp 9:40 Uhr | -1,17 € |
+| NXPI | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:40 245,66 $ | 244,76 $ | 247,47 $ | Stopp 9:40 Uhr | -2,03 € |
+| RBLX | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:40 55,21 $ | 54,98 $ | 55,67 $ | offen, Kurs 55,66 $ | 0,77 € |
 
 ## Labor (Testphase, Spielgeld ohne Limit)
 

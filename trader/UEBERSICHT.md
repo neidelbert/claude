@@ -1,6 +1,6 @@
 # Trader-Übersicht
 
-Stand: Mi 28.10. 09:41 Uhr ET (14:41 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
+Stand: Mi 28.10. 09:50 Uhr ET (14:50 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
 
 NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
@@ -10,7 +10,7 @@ NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 |---|---|---|
 | Morgen-Scan | Mi 28.10. 08:39 Uhr ET (13:39 Uhr MEZ) | OK – 501 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40689559352)) |
 | ORB-Scan | Di 27.10. 10:10 Uhr ET (15:10 Uhr MEZ) | OK – 64 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40504826435)) |
-| Labor live | Mi 28.10. 09:40 Uhr ET (14:40 Uhr MEZ) | OK – Börsenstart gemeldet ([Lauf](https://github.com/neidelbert/claude/actions/runs/40689559352)) |
+| Labor live | Mi 28.10. 09:50 Uhr ET (14:50 Uhr MEZ) | OK – 515 Trades, 452 offen ([Lauf](https://github.com/neidelbert/claude/actions/runs/40689559352)) |
 | Labor | Di 27.10. 16:20 Uhr ET (21:20 Uhr MEZ) | OK – 1 von 76 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/40554495911)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
@@ -148,9 +148,9 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 - 22.10. 16:11 Uhr ET · [Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView](https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss)
 - 22.10. 15:51 Uhr ET · [How much Apple stock does CEO John Ternus actually own?](https://www.thestreet.com/personalities/how-much-apple-stock-does-john-ternus-own?.tsrc=rss)
 
-## Labor live – Mi 28.10.2026, Stand 09:40 Uhr ET
+## Labor live – Mi 28.10.2026, Stand 09:50 Uhr ET
 
-414 Aktien beobachtet · 62 Spielgeld-Trades aller Varianten · 38 offen
+414 Aktien beobachtet · 515 Spielgeld-Trades aller Varianten · 452 offen
 
 | Top-Variante | Trades | offen | € bei 100 €/Trade |
 |---|---|---|---|
@@ -158,16 +158,20 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 2× normal | 0 | 0 | 0,00 € |
 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 0 | 0 | 0,00 € |
 | Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 0 | 0 | 0,00 € |
-| Stocks in Play (Studie): Top 10 nach Startvolumen · Stopp 10 % ATR · Ziel 2R | 4 | 2 | -2,67 € |
+| Stocks in Play (Studie): Top 10 nach Startvolumen · Stopp 10 % ATR · Ziel 2R | 7 | 2 | -4,36 € |
 | Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R | 0 | 0 | 0,00 € |
-| News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 2R · nur bei Volumen über 2× normal | 0 | 0 | 0,00 € |
+| News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 2R · nur bei Volumen über 2× normal | 1 | 1 | 0,34 € |
 
 | Aktie | Regel | Einstieg | Stopp | Ziel | Stand | Ergebnis |
 |---|---|---|---|---|---|---|
-| CHKP | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:40 159,58 $ | 159,08 $ | 160,57 $ | offen, Kurs 159,28 $ | -0,24 € |
+| CHKP | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:40 159,58 $ | 159,08 $ | 160,57 $ | Stopp 9:45 Uhr | -0,36 € |
 | HOOD | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:40 91,69 $ | 91,17 $ | 92,72 $ | Stopp 9:40 Uhr | -1,17 € |
 | NXPI | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:40 245,66 $ | 244,76 $ | 247,47 $ | Stopp 9:40 Uhr | -2,03 € |
-| RBLX | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:40 55,21 $ | 54,98 $ | 55,67 $ | offen, Kurs 55,66 $ | 0,77 € |
+| FTV | News-Sprung: Lücke ≥ 2 % | 9:45 66,51 $ | 64,15 $ | 71,24 $ | offen, Kurs 66,77 $ | 0,34 € |
+| MDT | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:45 94,65 $ | 94,41 $ | 95,14 $ | Stopp 9:50 Uhr | -0,31 € |
+| RPRX | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:45 64,73 $ | 64,59 $ | 65,03 $ | Ziel 9:50 Uhr | 0,40 € |
+| CECO | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:50 54,31 $ | 53,80 $ | 55,31 $ | offen, Kurs 53,89 $ | -0,82 € |
+| SGRY | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:50 23,34 $ | 23,24 $ | 23,55 $ | offen, Kurs 23,34 $ | -0,07 € |
 
 ## Labor (Testphase, Spielgeld ohne Limit)
 

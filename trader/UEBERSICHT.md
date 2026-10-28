@@ -1,14 +1,14 @@
 # Trader-Übersicht
 
-Stand: Di 27.10. 16:21 Uhr ET (21:21 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
+Stand: Mi 28.10. 08:41 Uhr ET (13:41 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
 
-NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
+NYSE heute: vor der Eröffnung (Handelszeit 09:30 bis 16:00 Uhr ET).
 
 ## Systemstatus
 
 | Teil | Letzter Lauf | Ergebnis |
 |---|---|---|
-| Morgen-Scan | Di 27.10. 08:34 Uhr ET (13:34 Uhr MEZ) | OK – 443 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40504826435)) |
+| Morgen-Scan | Mi 28.10. 08:39 Uhr ET (13:39 Uhr MEZ) | OK – 501 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40689559352)) |
 | ORB-Scan | Di 27.10. 10:10 Uhr ET (15:10 Uhr MEZ) | OK – 64 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40504826435)) |
 | Labor live | Di 27.10. 16:00 Uhr ET (21:00 Uhr MEZ) | OK – Tagesbilanz: 2.992 Trades ([Lauf](https://github.com/neidelbert/claude/actions/runs/40554495911)) |
 | Labor | Di 27.10. 16:20 Uhr ET (21:20 Uhr MEZ) | OK – 1 von 76 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/40554495911)) |
@@ -18,44 +18,44 @@ NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
 Zeitplan (Mo–Fr, an Handelstagen): Morgen-Scan ab ca. 8:00 Uhr ET, ORB-Scan ab ca. 10:15 Uhr ET, Labor live und Preisalarme alle 10 Minuten während der Handelszeit, Tagesbilanz nach Schluss, Labor-Rangliste nach Börsenschluss (ab ca. 16:20 Uhr ET).
 
-## Morgen-Scan – Schlusskurse vom Mo 26.10.2026
+## Morgen-Scan – Schlusskurse vom Di 27.10.2026
 
-5.945 Aktien in der Liste · 5.943 Charts geladen · 1.433 liquide (ab 5 $ und 1.000.000 Aktien) · 1.430 gescannt · **443 passen zu einer Regel**
+5.945 Aktien in der Liste · 5.943 Charts geladen · 1.493 liquide (ab 5 $ und 1.000.000 Aktien) · 1.491 gescannt · **501 passen zu einer Regel**
 
 | Regel | Anzahl | Meistgehandelt |
 |---|---|---|
-| `breakout_20d` | 217 | TSLA, BRK.B, TXN, XOM, CART, LMT, RRC, SGRY |
-| `bull_flag` | 63 | WMT, HD, COP, CI, EBAY, AJG, BP, EL |
-| `reclaim_ma20` | 52 | MSFT, JPM, PANW, QCOM, GS, ADI, DDOG, RCL |
-| `oversold` | 104 | GOOG, NBIS, CRWV, LRCX, XP, GE, BAC, CAT |
-| `oversold_bounce` | 64 | CRWV, LRCX, AMAT, GE, CAT, KLAC, IREN, HWM |
+| `breakout_20d` | 197 | TSLA, SOFI, TXN, ADI, JNJ, RCL, NXPI, UPS |
+| `bull_flag` | 86 | LLY, UNH, SPGI, COP, WM, ABNB, AJG, VEEV |
+| `reclaim_ma20` | 120 | SOFI, CDNS, CSCO, MS, PYPL, GM, SNPS, MCHP |
+| `oversold` | 56 | BA, BAC, XYL, PCAR, VALE, HWM, XP, CRS |
+| `oversold_bounce` | 90 | GOOGL, GOOG, NBIS, CRWV, LRCX, CLS, GE, CAT |
 
 **Die 20 meistgehandelten Treffer** (Kurs × Umsatz):
 
 | Ticker | Kurs | RSI | Regeln |
 |---|---|---|---|
-| TSLA | 391,62 $ | 60,6 | `breakout_20d` |
-| MSFT | 532,60 $ | 58,0 | `reclaim_ma20` |
-| GOOG | 314,19 $ | 29,8 | `oversold` |
-| NBIS | 153,27 $ | 29,1 | `oversold` |
-| CRWV | 55,19 $ | 28,1 | `oversold`, `oversold_bounce` |
-| LRCX | 237,50 $ | 29,3 | `oversold`, `oversold_bounce` |
-| BRK.B | 548,56 $ | 76,9 | `breakout_20d` |
-| AMAT | 387,59 $ | 30,8 | `oversold_bounce` |
-| TXN | 298,12 $ | 64,6 | `breakout_20d` |
-| XP | 15,71 $ | 28,8 | `oversold` |
-| JPM | 334,04 $ | 44,9 | `reclaim_ma20` |
-| XOM | 184,54 $ | 77,3 | `breakout_20d` |
-| PANW | 390,46 $ | 55,5 | `reclaim_ma20` |
-| CART | 60,88 $ | 82,7 | `breakout_20d` |
-| GE | 288,43 $ | 29,7 | `oversold`, `oversold_bounce` |
-| WMT | 120,29 $ | 70,4 | `bull_flag` |
-| QCOM | 179,60 $ | 51,8 | `reclaim_ma20` |
-| LMT | 635,20 $ | 82,6 | `breakout_20d` |
-| GS | 893,28 $ | 44,1 | `reclaim_ma20` |
-| BAC | 50,52 $ | 26,1 | `oversold` |
+| TSLA | 407,46 $ | 65,9 | `breakout_20d` |
+| GOOGL | 320,58 $ | 34,4 | `oversold_bounce` |
+| BA | 168,18 $ | 25,5 | `oversold` |
+| GOOG | 316,83 $ | 32,9 | `oversold_bounce` |
+| NBIS | 170,47 $ | 39,4 | `oversold_bounce` |
+| CRWV | 59,57 $ | 35,3 | `oversold_bounce` |
+| SOFI | 16,40 $ | 57,6 | `breakout_20d`, `reclaim_ma20` |
+| TXN | 308,91 $ | 70,1 | `breakout_20d` |
+| LRCX | 240,85 $ | 31,6 | `oversold_bounce` |
+| LLY | 1.281,91 $ | 63,2 | `bull_flag` |
+| CLS | 276,54 $ | 37,9 | `oversold_bounce` |
+| GE | 297,66 $ | 40,7 | `oversold_bounce` |
+| CAT | 713,31 $ | 36,5 | `oversold_bounce` |
+| ADI | 425,35 $ | 63,6 | `breakout_20d` |
+| CBRS | 119,31 $ | 32,6 | `oversold_bounce` |
+| CDNS | 343,08 $ | 58,0 | `reclaim_ma20` |
+| KLAC | 153,66 $ | 32,9 | `oversold_bounce` |
+| CSCO | 111,38 $ | 52,7 | `reclaim_ma20` |
+| JNJ | 268,73 $ | 57,3 | `breakout_20d` |
+| UNH | 410,39 $ | 59,5 | `bull_flag` |
 
-Alle 443 Treffer: [watchlist.json](watchlist.json)
+Alle 501 Treffer: [watchlist.json](watchlist.json)
 
 ## ORB-Scan – 2026-10-27 10:10 ET
 
@@ -100,33 +100,33 @@ Ein späterer Treffer liegt näher am aktuellen Kurs.
 
 ## News zu den ersten 10 Treffern (letzte 24 Stunden, nur neue)
 
-Bewegung seit gestern: AMAT +2,74 % · BRK.B +1,17 % · CRWV +1,76 % · GOOG -0,97 % · **LRCX +3,22 %** · MSFT +1,54 % · **NBIS -3,45 %** · **TSLA +5,21 %** · **TXN +4,72 %** · **XP -48,36 %**
+Bewegung seit gestern: **BA -10,69 %** · **CRWV +7,94 %** · GOOG +0,84 % · GOOGL +1,19 % · LLY +0,22 % · LRCX +1,41 % · **NBIS +11,22 %** · **SOFI +13,42 %** · **TSLA +4,04 %** · **TXN +3,62 %**
 
-- 27.10. 08:30 Uhr ET · **GOOG** · [Big Tech Is About to Report. Nvidia Investors Should Watch One Number.](https://www.fool.com/investing/2026/10/27/big-tech-is-about-to-report-nvidia-investors-should-watch-one-number/?.tsrc=rss)
-- 27.10. 08:21 Uhr ET · **GOOG** · [Anthropic’s Founders Will Keep Control With a Single Share of Stock](https://247wallst.com/investing/2026/10/27/anthropics-founders-will-keep-control-with-a-single-share-of-stock/?.tsrc=rss)
-- 27.10. 08:18 Uhr ET · **MSFT** · [Azure and Copilot Reacceleration Reinforce Microsoft’s (MSFT) AI Leadership](https://finance.yahoo.com/technology/ai/articles/azure-copilot-reacceleration-reinforce-microsoft-121852027.html?.tsrc=rss)
-- 27.10. 08:12 Uhr ET · **AMAT** · [What Does Applied Materials (AMAT) Owning About 20% Mean For Its AI Push?](https://finance.yahoo.com/technology/ai/articles/does-applied-materials-amat-owning-121235879.html?.tsrc=rss)
-- 27.10. 08:10 Uhr ET · **MSFT** · [What Few Investors Realize About QQQ’s Dividend](https://247wallst.com/investing/etf/2026/10/27/what-few-investors-realize-about-qqqs-dividend/?.tsrc=rss) · capital
-- 27.10. 08:10 Uhr ET · **TSLA** · [Only 5 of 60 Analysts Still Say Sell Tesla, the Fewest in 11 Years](https://247wallst.com/investing/2026/10/27/only-5-of-60-analysts-still-say-sell-tesla-the-fewest-in-11-years/?.tsrc=rss) · deal
-- 27.10. 08:04 Uhr ET · **AMAT** · [Semiconductor Equipment Selloff Challenges Applied Materials (AMAT)](https://finance.yahoo.com/markets/stocks/articles/semiconductor-equipment-selloff-challenges-applied-120417903.html?.tsrc=rss)
-- 27.10. 08:00 Uhr ET · **GOOG** · [OuterBox Connects Its Proprietary Lead Tracking to Google Ads, HubSpot, and Salesforce](https://finance.yahoo.com/media-advertising/articles/outerbox-connects-proprietary-lead-tracking-120000093.html?.tsrc=rss)
-- 27.10. 07:52 Uhr ET · **LRCX** · [Lam Research Corp. (LRCX) Shares Decline as Investors Reassess AI Spending](https://finance.yahoo.com/markets/stocks/articles/lam-research-corp-lrcx-shares-115245954.html?.tsrc=rss)
-- 27.10. 07:37 Uhr ET · **TSLA** · [This Week In Energy Transition - SunPower Expands in Texas with Strategic Solar Collaborations](https://finance.yahoo.com/energy/articles/week-energy-transition-sunpower-expands-113719902.html?.tsrc=rss)
-- 27.10. 07:26 Uhr ET · **TSLA** · [2 Standout AI Stocks That Can Plunge Up to 93%, According to Select Wall Street Analysts](https://www.fool.com/investing/2026/10/27/2-standout-ai-stocks-can-plunge-up-to-93-according-to-wall-street-analysts/?.tsrc=rss)
-- 27.10. 07:24 Uhr ET · **TSLA** · [Humanoid Robots Could Need 20 Times More Memory Chips by 2030](https://247wallst.com/investing/2026/10/27/humanoid-robots-could-need-20-times-more-memory-chips-by-2030/?.tsrc=rss) · earnings
-- 27.10. 07:22 Uhr ET · **GOOG** · [What Mattered Most In IBM's Latest Quarter?](https://www.trefis.com/stock/ibm/articles/620769/what-mattered-most-in-ibms-latest-quarter/2026-10-27?.tsrc=rss)
-- 27.10. 07:15 Uhr ET · **MSFT** · [Several Important Factors Protect Amazon’s Margins and Secure Its AI Moat](https://247wallst.com/investing/2026/10/27/several-important-factors-protect-amazons-margins-and-secure-its-ai-moat/?.tsrc=rss)
-- 27.10. 07:15 Uhr ET · **CRWV** · [CoreWeave Vs. Nvidia: Demand For Silicon is Not The Same Thing as Solvent, Credit-Backed Demand for Physical Infrastructure](https://247wallst.com/investing/2026/10/27/coreweave-vs-nvidia-demand-for-silicon-is-not-the-same-thing-as-solvent-credit-backed-demand-for-physical-infrastructure/?.tsrc=rss)
-- 27.10. 07:15 Uhr ET · **GOOG** · [Prediction: Broadcom Stock Could Be Worth Twice as Much by 2030](https://247wallst.com/investing/2026/10/27/prediction-broadcom-stock-could-be-worth-twice-as-much-by-2030/?.tsrc=rss) · earnings
-- 27.10. 07:15 Uhr ET · **GOOG** · [Can Adobe Stock Jump 50%?](https://www.trefis.com/stock/adbe/articles/620782/can-adobe-stock-jump-50/2026-10-27?.tsrc=rss)
-- 27.10. 07:15 Uhr ET · **GOOG** · [Is Broadcom Stock Too Dependent On One Business?](https://www.trefis.com/stock/avgo/articles/620733/is-broadcom-stock-too-dependent-on-one-business/2026-10-27?.tsrc=rss)
-- 27.10. 07:15 Uhr ET · **MSFT** · [Microsoft Is Paying Workers to Leave So It Can Pay for AI](https://247wallst.com/investing/2026/10/27/microsoft-is-paying-workers-to-leave-so-it-can-pay-for-ai/?.tsrc=rss)
-- 27.10. 07:11 Uhr ET · **GOOG** · [Entergy (ETR) Stock Appears Rich On A 150% Three Year Run](https://finance.yahoo.com/markets/stocks/articles/entergy-etr-stock-appears-rich-111154138.html?.tsrc=rss) · capital
-- 27.10. 07:00 Uhr ET · **GOOG** · [Anthropic's S-1 is out. Is it actually making money?](https://finance.yahoo.com/video/anthropics-1-actually-making-money-110000352.html?.tsrc=rss)
-- 27.10. 06:54 Uhr ET · **CRWV** · [CoreWeave Expands AI Cloud Footprint With Denmark Data Center — Plans Global Network Expansion Across 4 Continents](https://stocktwits.com/news-articles/markets/equity/core-weave-expands-ai-cloud-footprint-with-denmark-data-center-plans-global-network-expansion-across-4-continents/cZUedJLRBC2?.tsrc=rss)
-- 27.10. 06:53 Uhr ET · **TSLA** · [SpaceX CEO Elon Musk Just Gave Telecoms Some Great News](https://finance.yahoo.com/m/d5e05259-96b6-3ef4-a519-1bee6a11d20d/spacex-ceo-elon-musk-just.html?.tsrc=rss) · people
-- 27.10. 06:50 Uhr ET · **TSLA** · [In a SpaceX-Tesla Merger, Tesla Shareholders Might Be the Junior Partner](https://www.fool.com/investing/2026/10/27/in-a-spacex-tesla-merger-tsla-shareholders-might/?.tsrc=rss) · deal
-- 27.10. 06:45 Uhr ET · **GOOG** · [Ex-Google CEO Eric Schmidt Says AI Could Eliminate 20% of Jobs at Large Companies](https://finance.yahoo.com/technology/ai/articles/ex-google-ceo-eric-schmidt-104506199.html?.tsrc=rss) · people
+- 28.10. 08:31 Uhr ET · **BA** · [Boeing Sinks 12% in a Week on a Slower 737 Ramp: “Longer Than We Had Expected”](https://www.tikr.com/blog/boeing-sinks-12-in-a-week-on-a-slower-737-ramp-longer-than-we-had-expected?ref=yahoofinance&.tsrc=rss) · earnings
+- 28.10. 08:23 Uhr ET · **GOOG** · [What Is Snowflake Stock's Biggest Opportunity?](https://www.trefis.com/stock/snow/articles/620992/what-is-snowflake-stocks-biggest-opportunity/2026-10-28?.tsrc=rss)
+- 28.10. 08:18 Uhr ET · **GOOG** · [Vertiv stock surges as orders double amid AI build-out: 'Evolving faster than ever'](https://finance.yahoo.com/markets/stocks/article/vertiv-stock-surges-as-orders-double-amid-ai-build-out-evolving-faster-than-ever-122018206.html?.tsrc=rss)
+- 28.10. 08:16 Uhr ET · **LLY** · [How Much Should One Number Worry Merck Stock Holders?](https://www.trefis.com/stock/mrk/articles/621000/how-much-should-one-number-worry-merck-stock-holders/2026-10-28?.tsrc=rss)
+- 28.10. 08:15 Uhr ET · **GOOG** · [Big Tech Earnings Face a $600 Billion Question: Is AI Spending Paying Off?](https://firstformoney.com/big-tech-earnings-face-a-600-billion-question-is-ai-spending-paying-off/?.tsrc=rss) · earnings
+- 28.10. 08:14 Uhr ET · **LLY** · [3 Big Pharma Earnings Reports to Watch: Eli Lilly, Merck and Gilead](https://247wallst.com/investing/2026/10/28/3-big-pharma-earnings-reports-to-watch-eli-lilly-merck-and-gilead/?.tsrc=rss) · earnings
+- 28.10. 08:14 Uhr ET · **BA** · [US Stock Market Today: S&P 500 Futures Edge Higher On Fed Decision Watch](https://finance.yahoo.com/markets/stocks/articles/us-stock-market-today-p-121406952.html?.tsrc=rss) · macro
+- 28.10. 08:13 Uhr ET · **GOOG** · [Stock Market Today: Dow Falls Ahead Of Rate Decision, Warsh Comments; Robinhood Plunges (Live Coverage)](https://finance.yahoo.com/m/8aa305ef-cc61-37d7-bc76-82a4a4324c5b/stock-market-today%3A-dow-falls.html?.tsrc=rss) · earnings, macro
+- 28.10. 08:12 Uhr ET · **GOOG** · [Dow Jones Futures Fall, Techs Rise As SK Hynix Crushes Views; Fed, Microsoft, Google On Deck](https://finance.yahoo.com/m/7066a700-b33b-3fa1-858d-f75f49b920da/dow-jones-futures-fall%2C-techs.html?.tsrc=rss) · macro
+- 28.10. 08:09 Uhr ET · **GOOG** · [Bharti Airtel Stock And 2 Indian Telecom Shares Riding The Jio IPO Shift](https://finance.yahoo.com/markets/stocks/articles/bharti-airtel-stock-2-indian-120944242.html?.tsrc=rss)
+- 28.10. 08:04 Uhr ET · **GOOG** · [Morning Minute: Robinhood Misses, But Crypto Beats and Robinhood Chain Soars](https://decrypt.co/382029/morning-minute-robinhood-misses-but-crypto-beats-and-robinhood-chain-soars?.tsrc=rss)
+- 28.10. 08:01 Uhr ET · **LLY** · [Why Should Pfizer Stock Holders Watch This One Number?](https://www.trefis.com/stock/pfe/articles/621004/why-should-pfizer-stock-holders-watch-this-one-number/2026-10-28?.tsrc=rss)
+- 28.10. 08:01 Uhr ET · **GOOG** · [These 7 Stocks Are Analyst Favorites For Magnificent Earnings Growth; Lilly, Amazon Earnings Ahead](https://finance.yahoo.com/m/2b47c372-177e-3051-aa01-406a8d82b220/these-7-stocks-are-analyst.html?.tsrc=rss) · earnings
+- 28.10. 08:00 Uhr ET · **GOOG** · [Funds Load Up On Marriott, Estee Lauder As Big Tech Earnings Loom](https://finance.yahoo.com/m/e5ed3c43-7ba7-36b0-91ee-1cf78a2797a3/funds-load-up-on-marriott%2C.html?.tsrc=rss) · earnings
+- 28.10. 08:00 Uhr ET · **GOOG** · [Google Earnings: Cloud Is Booming, But Can Search Deliver Amid AI Shift?](https://finance.yahoo.com/m/87e72ddb-46f1-3633-bc3f-70cf4ac925d0/google-earnings%3A-cloud-is.html?.tsrc=rss) · earnings
+- 28.10. 08:00 Uhr ET · **BA** · [Boeing: Global Freighter Fleet to Exceed 4,000 Airplanes as Air Cargo Traffic Doubles by 2045](https://finance.yahoo.com/economy/articles/boeing-global-freighter-fleet-exceed-120000853.html?.tsrc=rss) · earnings
+- 28.10. 08:00 Uhr ET · **GOOG** · [How Anthropic's IPO structure could become the AI blueprint](https://finance.yahoo.com/video/anthropics-ipo-structure-could-become-120000012.html?.tsrc=rss) · people
+- 28.10. 07:58 Uhr ET · **GOOG** · [Here Are Wednesday’s Top Wall Street Analyst Research Calls: Enphase Energy, F5, Marvell Technology, MSG Rangers, Pentair, Silicon Motion Technology, Spotify Technology, Texas Instruments, Whirlpool, and More](https://247wallst.com/investing/2026/10/28/here-are-wednesdays-top-wall-street-analyst-research-calls-enphase-energy-f5-marvell-technology-msg-rangers-pentair-silicon-motion-technology-spotify-technology-texas-instruments-whi/?.tsrc=rss) · macro
+- 28.10. 07:51 Uhr ET · **GOOG** · [OpenAI Reportedly Plans to Purchase Google AI Chips as Demand for Computing Infrastructure Grows](https://investorshub.advfn.com/market-news/article/38763/openai-reportedly-plans-to-purchase-google-ai-chips-as-demand-for-computing-infrastructure-grows?.tsrc=rss)
+- 28.10. 07:50 Uhr ET · **TSLA** · [Tesla Stock Heads for Third Day of Gains. It’s About More Than SpaceX.](https://finance.yahoo.com/m/f3514d3f-678c-31b8-b499-e6d96ed30fb3/tesla-stock-heads-for-third.html?.tsrc=rss)
+- 28.10. 07:37 Uhr ET · **GOOG** · [Megacap Earnings Could Spoil the Market’s Appetite for AI](https://finance.yahoo.com/m/4e4095e2-758d-393b-8bb3-33c3b63ed415/megacap-earnings-could-spoil.html?.tsrc=rss) · earnings
+- 28.10. 07:30 Uhr ET · **TSLA** · [Man repairs 2 wrecked Teslas, they pass inspection, but the carmaker cuts fast charging anyway — now he owes $15K](https://finance.yahoo.com/technology/articles/man-repairs-2-wrecked-teslas-113000365.html?.tsrc=rss)
+- 28.10. 07:30 Uhr ET · **TSLA** · [BMO Launches Canada's First Single Stock Autocallable Income ETFs](https://finance.yahoo.com/markets/options/articles/bmo-launches-canadas-first-single-113000761.html?.tsrc=rss) · capital
+- 28.10. 07:25 Uhr ET · **LLY** · [Micron Biomedical Appoints Anand Subramony, Ph.D., as Executive Vice President, Global Product Development and Combination Product Commercialization](https://finance.yahoo.com/healthcare/articles/micron-biomedical-appoints-anand-subramony-112500420.html?.tsrc=rss) · people
+- 28.10. 07:22 Uhr ET · **GOOG** · [OpenAI Is Buying Google’s AI Chips, a Hit to Nvidia’s Biggest Customer Bond](https://247wallst.com/investing/2026/10/28/openai-is-buying-googles-ai-chips-a-hit-to-nvidias-biggest-customer-bond/?.tsrc=rss)
 
 ## Pelosi-Tracker (pelosi)
 

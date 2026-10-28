@@ -1,9 +1,9 @@
 {
   "part": "morning",
   "ok": true,
-  "summary": "443 Treffer",
-  "ran_at": "2026-10-27T12:34:43Z",
-  "date_et": "2026-10-27",
+  "summary": "501 Treffer",
+  "ran_at": "2026-10-28T12:39:20Z",
+  "date_et": "2026-10-28",
   "steps": [
     {
       "name": "Aktienliste",
@@ -13,12 +13,12 @@
     {
       "name": "Daily-Scan",
       "ok": true,
-      "detail": "5.943 von 5.945 Charts geladen, 1.430 gescannt, 443 Treffer"
+      "detail": "5.943 von 5.945 Charts geladen, 1.491 gescannt, 501 Treffer"
     },
     {
       "name": "News",
       "ok": true,
-      "detail": "87 neue Meldungen zu 10 Tickern"
+      "detail": "118 neue Meldungen zu 10 Tickern"
     },
     {
       "name": "Pelosi-Tracker",
@@ -29,216 +29,46 @@
   "data": {
     "universe_date": "2026-10-22",
     "daily": {
-      "as_of": "2026-10-26 close",
+      "as_of": "2026-10-27 close",
       "universe": 5945,
       "fetched": 5943,
-      "liquid": 1433,
-      "scanned": 1430,
+      "liquid": 1493,
+      "scanned": 1491,
       "failed": 2,
-      "hits": 443,
+      "hits": 501,
       "per_setup": {
-        "breakout_20d": 217,
-        "bull_flag": 63,
-        "reclaim_ma20": 52,
-        "oversold": 104,
-        "oversold_bounce": 64
+        "breakout_20d": 197,
+        "bull_flag": 86,
+        "reclaim_ma20": 120,
+        "oversold": 56,
+        "oversold_bounce": 90
       }
     },
     "news": {
       "tickers": [
         "TSLA",
-        "MSFT",
+        "GOOGL",
+        "BA",
         "GOOG",
         "NBIS",
         "CRWV",
-        "LRCX",
-        "BRK.B",
-        "AMAT",
+        "SOFI",
         "TXN",
-        "XP"
+        "LRCX",
+        "LLY"
       ],
       "items": [
         {
-          "id": "rss:3884b7a8-db15-34dd-bef3-3e40bad51e97",
+          "id": "rss:050f8ad3-9888-3873-8178-99e85da9a1a7",
           "source": "Yahoo Finance",
           "kind": "headline",
-          "ticker": "GOOG",
-          "title": "Big Tech Is About to Report. Nvidia Investors Should Watch One Number.",
-          "summary": "Microsoft, Alphabet, and Amazon will offer quarterly updates this week.",
-          "link": "https://www.fool.com/investing/2026/10/27/big-tech-is-about-to-report-nvidia-investors-should-watch-one-number/?.tsrc=rss",
-          "time": "2026-10-27T12:30:01+00:00",
+          "ticker": "BA",
+          "title": "Boeing Sinks 12% in a Week on a Slower 737 Ramp: “Longer Than We Had Expected”",
+          "summary": "Key TakeawaysBoeing shares fell 12% in the past week, nearly all of it on Tuesday, Oct. 27, after its third-quarter report and earnings call.",
+          "link": "https://www.tikr.com/blog/boeing-sinks-12-in-a-week-on-a-slower-737-ramp-longer-than-we-had-expected?ref=yahoofinance&.tsrc=rss",
+          "time": "2026-10-28T12:31:58+00:00",
           "touches": [
-            "GOOG",
-            "MSFT"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:9d863191-752e-3d7b-8fd9-1b7958c928a6",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "GOOG",
-          "title": "Anthropic’s Founders Will Keep Control With a Single Share of Stock",
-          "summary": "A single share of stock with no economic value will hand Anthropic's seven co-founders permanent majority voting control the moment the company goes public, and the mechanism buried in its S-1 is more unusual than anything Zuckerberg built at Meta.",
-          "link": "https://247wallst.com/investing/2026/10/27/anthropics-founders-will-keep-control-with-a-single-share-of-stock/?.tsrc=rss",
-          "time": "2026-10-27T12:21:19+00:00",
-          "touches": [
-            "GOOG"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:54451721-9fe2-3c82-a135-cd38911203bb",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "MSFT",
-          "title": "Azure and Copilot Reacceleration Reinforce Microsoft’s (MSFT) AI Leadership",
-          "summary": "Renaissance Investment Management, an investment management company, released its Q3 2026 investor letter for “Large Cap Growth Strategy.” The letter can be downloaded here. Stocks showed modest gains in Q3, with the S&P 500 up 2.3%. Energy, Technology, and Health Care sectors excelled, while Utilities, Industrials, Real Estate, and Consumer Discretionary lagged. Market breadth was […]",
-          "link": "https://finance.yahoo.com/technology/ai/articles/azure-copilot-reacceleration-reinforce-microsoft-121852027.html?.tsrc=rss",
-          "time": "2026-10-27T12:18:52+00:00",
-          "touches": [
-            "MSFT"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:1596ef24-8e8f-305f-875b-5fe4ad7cf757",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "AMAT",
-          "title": "What Does Applied Materials (AMAT) Owning About 20% Mean For Its AI Push?",
-          "summary": "Applied Materials (NasdaqGS:AMAT) is increasing its investment in BE Semiconductor Industries to around a 20% ownership stake. The expanded holding deepens their partnership around hybrid bonding and next generation chip interconnect technologies used in AI hardware. Management signals a long term commitment to BE Semiconductor Industries as chipmakers scale advanced packaging for AI and high performance computing. The bigger stake in BE Semiconductor Industries reshapes how Applied...",
-          "link": "https://finance.yahoo.com/technology/ai/articles/does-applied-materials-amat-owning-121235879.html?.tsrc=rss",
-          "time": "2026-10-27T12:12:35+00:00",
-          "touches": [
-            "AMAT"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:5e0bb12c-d1f6-339a-b6d9-1cbb4cec00d4",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "MSFT",
-          "title": "What Few Investors Realize About QQQ’s Dividend",
-          "summary": "Most QQQ investors never think about its dividend, but the payout has quietly done something surprising over the past five years that almost nobody notices until they check their tax forms.",
-          "link": "https://247wallst.com/investing/etf/2026/10/27/what-few-investors-realize-about-qqqs-dividend/?.tsrc=rss",
-          "time": "2026-10-27T12:10:59+00:00",
-          "touches": [
-            "MSFT"
-          ],
-          "tags": [
-            "capital"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:c7def546-840c-3c00-86ad-76306e4008f4",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "TSLA",
-          "title": "Only 5 of 60 Analysts Still Say Sell Tesla, the Fewest in 11 Years",
-          "summary": "Wall Street bears are abandoning Tesla at a historic pace, and the reason has almost nothing to do with how many cars the company sells. The catalyst dividing analysts sits at the center of a potential deal that has no terms, no signature, and a deeply conflicted decision-maker.",
-          "link": "https://247wallst.com/investing/2026/10/27/only-5-of-60-analysts-still-say-sell-tesla-the-fewest-in-11-years/?.tsrc=rss",
-          "time": "2026-10-27T12:10:28+00:00",
-          "touches": [
-            "TSLA"
-          ],
-          "tags": [
-            "deal"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:844165e8-1a0b-35a5-8b1a-798f20fdfaef",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "AMAT",
-          "title": "Semiconductor Equipment Selloff Challenges Applied Materials (AMAT)",
-          "summary": "Renaissance Investment Management, an investment management company, released its Q3 2026 investor letter for “Large Cap Growth Strategy.” The letter can be downloaded here. Stocks showed modest gains in Q3, with the S&P 500 up 2.3%. Energy, Technology, and Health Care sectors excelled, while Utilities, Industrials, Real Estate, and Consumer Discretionary lagged. Market breadth was […]",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/semiconductor-equipment-selloff-challenges-applied-120417903.html?.tsrc=rss",
-          "time": "2026-10-27T12:04:17+00:00",
-          "touches": [
-            "AMAT"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:e0e9c79c-ba19-3f56-bdc4-9eaad72e2acd",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "GOOG",
-          "title": "OuterBox Connects Its Proprietary Lead Tracking to Google Ads, HubSpot, and Salesforce",
-          "summary": "COPLEY, OH / ACCESS Newswire / October 27, 2026 / , a full-service performance marketing agency, today announced integrations between LOOP Analytics, its proprietary lead tracking platform, and Google Ads and CRMs like HubSpot and Salesforce. The platform now shows clients which Google Ads campaigns deliver actual revenue, not just form fills.",
-          "link": "https://finance.yahoo.com/media-advertising/articles/outerbox-connects-proprietary-lead-tracking-120000093.html?.tsrc=rss",
-          "time": "2026-10-27T12:00:00+00:00",
-          "touches": [
-            "GOOG"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:389fb7b6-5e6a-3e70-ba03-24de668c34c2",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "LRCX",
-          "title": "Lam Research Corp. (LRCX) Shares Decline as Investors Reassess AI Spending",
-          "summary": "Renaissance Investment Management, an investment management company, released its Q3 2026 investor letter for “Large Cap Growth Strategy.” The letter can be downloaded here. Stocks showed modest gains in Q3, with the S&P 500 up 2.3%. Energy, Technology, and Health Care sectors excelled, while Utilities, Industrials, Real Estate, and Consumer Discretionary lagged. Market breadth was […]",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/lam-research-corp-lrcx-shares-115245954.html?.tsrc=rss",
-          "time": "2026-10-27T11:52:45+00:00",
-          "touches": [
-            "LRCX"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:e7963e00-9f09-3c86-bdd8-1f3da13f0966",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "TSLA",
-          "title": "This Week In Energy Transition - SunPower Expands in Texas with Strategic Solar Collaborations",
-          "summary": "SunPower Inc. has announced an expansion in Texas by acquiring project assets from Greenlight Solar and partnering with SOLRITE Energy, aimed at enhancing their Virtual Power Plant (VPP) capabilities. This initiative is set to broaden SunPower's reach in the residential solar and storage market while integrating local talent and resources, positioning Texas as a significant opportunity for solar growth. The collaboration leverages SOLRITE’s project funding for systems connected to a VPP,...",
-          "link": "https://finance.yahoo.com/energy/articles/week-energy-transition-sunpower-expands-113719902.html?.tsrc=rss",
-          "time": "2026-10-27T11:37:19+00:00",
-          "touches": [
-            "TSLA"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:3b6b89df-47a9-3750-bc9a-8332becf5e1a",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "TSLA",
-          "title": "2 Standout AI Stocks That Can Plunge Up to 93%, According to Select Wall Street Analysts",
-          "summary": "Optimism for individual artificial intelligence (AI) stocks isn’t universal on Wall Street.",
-          "link": "https://www.fool.com/investing/2026/10/27/2-standout-ai-stocks-can-plunge-up-to-93-according-to-wall-street-analysts/?.tsrc=rss",
-          "time": "2026-10-27T11:26:01+00:00",
-          "touches": [
-            "TSLA"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:cd08816a-d2a9-3b52-9a8f-e6039abae89b",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "TSLA",
-          "title": "Humanoid Robots Could Need 20 Times More Memory Chips by 2030",
-          "summary": "Counterpoint Research sees humanoid robot memory demand exploding this decade, but Elon Musk just cut memory on his own robot chips to hit production targets, and Micron investors are left wondering whether the 2030 forecast translates into revenue they can count on now.",
-          "link": "https://247wallst.com/investing/2026/10/27/humanoid-robots-could-need-20-times-more-memory-chips-by-2030/?.tsrc=rss",
-          "time": "2026-10-27T11:24:22+00:00",
-          "touches": [
-            "TSLA"
+            "BA"
           ],
           "tags": [
             "earnings"
@@ -246,62 +76,64 @@
           "new": true
         },
         {
-          "id": "rss:8ec4e719-e6ed-36d6-8012-2aebf005ea8a",
+          "id": "rss:3465025e-307a-3205-bffe-25ea2d4b36e4",
           "source": "Yahoo Finance",
           "kind": "headline",
           "ticker": "GOOG",
-          "title": "What Mattered Most In IBM's Latest Quarter?",
+          "title": "What Is Snowflake Stock's Biggest Opportunity?",
           "summary": "For questions about this article or underlying research, email help@trefis.com.",
-          "link": "https://www.trefis.com/stock/ibm/articles/620769/what-mattered-most-in-ibms-latest-quarter/2026-10-27?.tsrc=rss",
-          "time": "2026-10-27T11:22:20+00:00",
+          "link": "https://www.trefis.com/stock/snow/articles/620992/what-is-snowflake-stocks-biggest-opportunity/2026-10-28?.tsrc=rss",
+          "time": "2026-10-28T12:23:19+00:00",
           "touches": [
             "GOOG",
-            "MSFT"
+            "GOOGL"
           ],
           "tags": [],
           "new": true
         },
         {
-          "id": "rss:c237a8aa-fb1a-3aa9-8c31-16bfda75ec3d",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "MSFT",
-          "title": "Several Important Factors Protect Amazon’s Margins and Secure Its AI Moat",
-          "summary": "Amazon's stock has barely budged this year, yet the business underneath it is accelerating in ways that make most rivals look structurally overpriced. One looming risk, though, could unravel the entire thesis if a single market condition shifts.",
-          "link": "https://247wallst.com/investing/2026/10/27/several-important-factors-protect-amazons-margins-and-secure-its-ai-moat/?.tsrc=rss",
-          "time": "2026-10-27T11:15:50+00:00",
-          "touches": [
-            "MSFT"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:d85f03ea-f404-38c3-8d77-095c6aff9938",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "CRWV",
-          "title": "CoreWeave Vs. Nvidia: Demand For Silicon is Not The Same Thing as Solvent, Credit-Backed Demand for Physical Infrastructure",
-          "summary": "CoreWeave and NVIDIA both rode the same AI demand wave to record quarters, but one collected cash while the other collected debt. The difference between selling the shovel and renting the mine has never looked starker.",
-          "link": "https://247wallst.com/investing/2026/10/27/coreweave-vs-nvidia-demand-for-silicon-is-not-the-same-thing-as-solvent-credit-backed-demand-for-physical-infrastructure/?.tsrc=rss",
-          "time": "2026-10-27T11:15:41+00:00",
-          "touches": [
-            "CRWV"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:2de647b5-cd0e-34ef-b48c-0118795bfd50",
+          "id": "rss:c138b1da-fb00-48dd-855c-5f55e3648560",
           "source": "Yahoo Finance",
           "kind": "headline",
           "ticker": "GOOG",
-          "title": "Prediction: Broadcom Stock Could Be Worth Twice as Much by 2030",
-          "summary": "Broadcom just posted AI revenue growth of 221% year over year while its stock sits near a 52-week low, and the gap between where shares trade today and where earnings power suggests they belong tells a story Wall Street has not fully priced in yet.",
-          "link": "https://247wallst.com/investing/2026/10/27/prediction-broadcom-stock-could-be-worth-twice-as-much-by-2030/?.tsrc=rss",
-          "time": "2026-10-27T11:15:16+00:00",
+          "title": "Vertiv stock surges as orders double amid AI build-out: 'Evolving faster than ever'",
+          "summary": "Vertiv continues to benefit from the massive capex spending from the likes of Google and Microsoft.",
+          "link": "https://finance.yahoo.com/markets/stocks/article/vertiv-stock-surges-as-orders-double-amid-ai-build-out-evolving-faster-than-ever-122018206.html?.tsrc=rss",
+          "time": "2026-10-28T12:18:56+00:00",
           "touches": [
-            "GOOG"
+            "GOOG",
+            "GOOGL"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:a119254f-b86c-3ef7-8d3c-c5007a4ccb18",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "LLY",
+          "title": "How Much Should One Number Worry Merck Stock Holders?",
+          "summary": "For questions about this article or underlying research, email help@trefis.com.",
+          "link": "https://www.trefis.com/stock/mrk/articles/621000/how-much-should-one-number-worry-merck-stock-holders/2026-10-28?.tsrc=rss",
+          "time": "2026-10-28T12:16:34+00:00",
+          "touches": [
+            "LLY"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:e5d0b941-c478-3bf3-8b58-3f63ad4b8e52",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "GOOG",
+          "title": "Big Tech Earnings Face a $600 Billion Question: Is AI Spending Paying Off?",
+          "summary": "Artificial intelligence helped lift U.S. stocks Monday, but this week’s earnings from Alphabet, Microsoft and Amazon will test whether enthusiasm for the technology can survive closer scrutiny of its enormous cost. The three companies, which have nearly $1.7 trillion in combined backlog, plan to spend as much as $600 billion this year. Investors now want […]",
+          "link": "https://firstformoney.com/big-tech-earnings-face-a-600-billion-question-is-ai-spending-paying-off/?.tsrc=rss",
+          "time": "2026-10-28T12:15:14+00:00",
+          "touches": [
+            "GOOG",
+            "GOOGL"
           ],
           "tags": [
             "earnings"
@@ -309,162 +141,51 @@
           "new": true
         },
         {
-          "id": "rss:fe19b780-c4d7-39ac-9edb-8be879ad507b",
+          "id": "rss:ac7507b1-943e-3bcf-8c1d-75e5a4008e7e",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "LLY",
+          "title": "3 Big Pharma Earnings Reports to Watch: Eli Lilly, Merck and Gilead",
+          "summary": "Eli Lilly's EPS estimate collapsed by a third in just 30 days, Merck faces a comparison it cannot repeat, and Gilead is burning through cash fast. Three pharma giants report Thursday, and the results could reshape the sector's outlook for the rest of the year.",
+          "link": "https://247wallst.com/investing/2026/10/28/3-big-pharma-earnings-reports-to-watch-eli-lilly-merck-and-gilead/?.tsrc=rss",
+          "time": "2026-10-28T12:14:59+00:00",
+          "touches": [
+            "LLY"
+          ],
+          "tags": [
+            "earnings"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:12acb698-ab35-3774-9ee4-b7520166d240",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "BA",
+          "title": "US Stock Market Today: S&P 500 Futures Edge Higher On Fed Decision Watch",
+          "summary": "The Morning Bull - US Market Morning Update Wednesday, Oct, 28 2026 US stocks are set for a cautiously positive open, with futures slightly higher as everything revolves around the Federal Reserve decision tonight. Sentiment is constructive but fragile because rate expectations remain in play. The Fed is widely expected to keep the funds rate at 3.75% to 4.00% after September's 25bp move, while markets price another 25bp increase in December. Recent inflation data and elevated oil prices...",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/us-stock-market-today-p-121406952.html?.tsrc=rss",
+          "time": "2026-10-28T12:14:06+00:00",
+          "touches": [
+            "BA"
+          ],
+          "tags": [
+            "macro"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:8aa305ef-cc61-37d7-bc76-82a4a4324c5b",
           "source": "Yahoo Finance",
           "kind": "headline",
           "ticker": "GOOG",
-          "title": "Can Adobe Stock Jump 50%?",
-          "summary": "For questions about this article or underlying research, email help@trefis.com.",
-          "link": "https://www.trefis.com/stock/adbe/articles/620782/can-adobe-stock-jump-50/2026-10-27?.tsrc=rss",
-          "time": "2026-10-27T11:15:15+00:00",
+          "title": "Stock Market Today: Dow Falls Ahead Of Rate Decision, Warsh Comments; Robinhood Plunges (Live Coverage)",
+          "summary": "The Dow Jones index drops Wednesday ahead of the Fed's rate decision and Warsh's comments. Robinhood plunges on earnings.",
+          "link": "https://finance.yahoo.com/m/8aa305ef-cc61-37d7-bc76-82a4a4324c5b/stock-market-today%3A-dow-falls.html?.tsrc=rss",
+          "time": "2026-10-28T12:13:49+00:00",
           "touches": [
             "GOOG",
-            "MSFT"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:99789fd1-9fee-32da-9f93-af386ef9acdb",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "GOOG",
-          "title": "Is Broadcom Stock Too Dependent On One Business?",
-          "summary": "For questions about this article or underlying research, email help@trefis.com.",
-          "link": "https://www.trefis.com/stock/avgo/articles/620733/is-broadcom-stock-too-dependent-on-one-business/2026-10-27?.tsrc=rss",
-          "time": "2026-10-27T11:15:14+00:00",
-          "touches": [
-            "GOOG",
-            "TXN"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:6e32d832-3926-3229-b29d-f667161dd812",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "MSFT",
-          "title": "Microsoft Is Paying Workers to Leave So It Can Pay for AI",
-          "summary": "Microsoft just offered buyouts to roughly a quarter of its entire workforce, and the announcement never once mentions AI or cost cutting. The real reason hiding in the spending figures tells a very different story.",
-          "link": "https://247wallst.com/investing/2026/10/27/microsoft-is-paying-workers-to-leave-so-it-can-pay-for-ai/?.tsrc=rss",
-          "time": "2026-10-27T11:15:13+00:00",
-          "touches": [
-            "MSFT"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:5b6ec455-b5e3-303e-95e5-f9e6ef0e1a02",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "GOOG",
-          "title": "Entergy (ETR) Stock Appears Rich On A 150% Three Year Run",
-          "summary": "Entergy has ridden a powerful share price run in recent years, and the latest leg higher has put fresh attention on what investors are really paying for its dividend stream. With the stock now trading around US$107.5, the question is whether that income profile alone can justify where the market has taken the valuation. Over the past 3 years the stock has delivered a total return of 150.1%, which puts real weight on whether the future dividend checks can support that kind of...",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/entergy-etr-stock-appears-rich-111154138.html?.tsrc=rss",
-          "time": "2026-10-27T11:11:54+00:00",
-          "touches": [
-            "GOOG"
-          ],
-          "tags": [
-            "capital"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:f1ef1dcf-6a2f-4cce-a73f-2f7ca03b8af8",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "GOOG",
-          "title": "Anthropic's S-1 is out. Is it actually making money?",
-          "summary": "Anthropic just filed its S-1 ahead of what could be the biggest IPO in history, and the headline number is an $80.7 billion loss. Host Ejaaz Ahamadeen goes through the filing, from revenue that hit $16.3 billion in the first half of 2026 to $132 billion in cash, and why most of that loss isn't cash out the door.",
-          "link": "https://finance.yahoo.com/video/anthropics-1-actually-making-money-110000352.html?.tsrc=rss",
-          "time": "2026-10-27T11:00:00+00:00",
-          "touches": [
-            "GOOG",
-            "MSFT"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:a57c045f-1574-398b-89ab-51607919aff1",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "CRWV",
-          "title": "CoreWeave Expands AI Cloud Footprint With Denmark Data Center — Plans Global Network Expansion Across 4 Continents",
-          "summary": "CoreWeave has brought most of its planned 22.5 megawatts of computing capacity online in Denmark, with a global AI network rollout targeted for completion by mid-2027.",
-          "link": "https://stocktwits.com/news-articles/markets/equity/core-weave-expands-ai-cloud-footprint-with-denmark-data-center-plans-global-network-expansion-across-4-continents/cZUedJLRBC2?.tsrc=rss",
-          "time": "2026-10-27T10:54:12+00:00",
-          "touches": [
-            "CRWV"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:d5e05259-96b6-3ef4-a519-1bee6a11d20d",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "TSLA",
-          "title": "SpaceX CEO Elon Musk Just Gave Telecoms Some Great News",
-          "summary": "Verizon believes it will take up to eight years for SpaceX to have the required infrastructure to compete in the mobile wireless business. Elon Musk disagrees.",
-          "link": "https://finance.yahoo.com/m/d5e05259-96b6-3ef4-a519-1bee6a11d20d/spacex-ceo-elon-musk-just.html?.tsrc=rss",
-          "time": "2026-10-27T10:53:00+00:00",
-          "touches": [
-            "TSLA"
-          ],
-          "tags": [
-            "people"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:5e9cdfa2-bfac-314e-abde-27ae6326a01a",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "TSLA",
-          "title": "In a SpaceX-Tesla Merger, Tesla Shareholders Might Be the Junior Partner",
-          "summary": "The market values one higher, and that gap could decide who gets the better end of a deal.",
-          "link": "https://www.fool.com/investing/2026/10/27/in-a-spacex-tesla-merger-tsla-shareholders-might/?.tsrc=rss",
-          "time": "2026-10-27T10:50:00+00:00",
-          "touches": [
-            "TSLA"
-          ],
-          "tags": [
-            "deal"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:9448b483-8b07-3cbf-ac48-e3ea93afade7",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "GOOG",
-          "title": "Ex-Google CEO Eric Schmidt Says AI Could Eliminate 20% of Jobs at Large Companies",
-          "summary": "Former Google CEO Eric Schmidt believes large companies could operate with about 20% fewer employees as artificial intelligence takes over administrative and management tasks. “My guess is you’ve got a couple of thousand people who you don’t need,” Schmidt said,...",
-          "link": "https://finance.yahoo.com/technology/ai/articles/ex-google-ceo-eric-schmidt-104506199.html?.tsrc=rss",
-          "time": "2026-10-27T10:45:06+00:00",
-          "touches": [
-            "GOOG"
-          ],
-          "tags": [
-            "people"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:7c169617-0718-32e1-85b8-4f2af9477aba",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "GOOG",
-          "title": "Why Market Caution Could Quickly Turn to Panic",
-          "summary": "It’s a cautious morning on markets as investors take a wait-and-see approach in premarket trading Tuesday ahead of mega-cap tech earnings and the Fed’s latest interest-rate call tomorrow.",
-          "link": "https://finance.yahoo.com/m/7c169617-0718-32e1-85b8-4f2af9477aba/why-market-caution-could.html?.tsrc=rss",
-          "time": "2026-10-27T10:33:13+00:00",
-          "touches": [
-            "GOOG"
+            "GOOGL"
           ],
           "tags": [
             "earnings",
@@ -473,206 +194,155 @@
           "new": true
         },
         {
-          "id": "rss:f39340df-23ae-3814-8002-762f41034126",
+          "id": "rss:7066a700-b33b-3fa1-858d-f75f49b920da",
           "source": "Yahoo Finance",
           "kind": "headline",
           "ticker": "GOOG",
-          "title": "Tandems Launches Hamilton, New Assistant Built Directly Into Its AI-Native WealthOS",
-          "summary": "SAN FRANCISCO, October 27, 2026--Tandems, an AI-native wealth operating system for financial advisors, today announced the launch of Hamilton, a new AI assistant that can handle up to 80% of a financial advisor’s daily tasks. Hamilton plugs natively into the majority of core systems that its customers use across banking and wealth, unlocks dozens of tools Tandems has custom-built for advisors, and runs on proprietary verticalized AI built on a multi-model architecture. Its Model Harness Optimize",
-          "link": "https://finance.yahoo.com/technology/ai/articles/tandems-launches-hamilton-assistant-built-103000838.html?.tsrc=rss",
-          "time": "2026-10-27T10:30:00+00:00",
+          "title": "Dow Jones Futures Fall, Techs Rise As SK Hynix Crushes Views; Fed, Microsoft, Google On Deck",
+          "summary": "The S&P 500 reclaimed a key level as Tesla and growth stocks rallied. The Federal Reserve, Microsoft, Google on deck.",
+          "link": "https://finance.yahoo.com/m/7066a700-b33b-3fa1-858d-f75f49b920da/dow-jones-futures-fall%2C-techs.html?.tsrc=rss",
+          "time": "2026-10-28T12:12:27+00:00",
           "touches": [
-            "GOOG"
+            "GOOG",
+            "GOOGL",
+            "TSLA"
+          ],
+          "tags": [
+            "macro"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:537887fc-ac14-30b6-b7c9-08f422f3b0ba",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "GOOG",
+          "title": "Bharti Airtel Stock And 2 Indian Telecom Shares Riding The Jio IPO Shift",
+          "summary": "Jio Platforms’ blockbuster Mumbai listing, a $3.2b float that jumped 21% on day one and briefly made it India’s second-largest company, has jolted attention back to telecom and digital infrastructure. This is where data demand, global tech backing from Meta and Alphabet’s Google, and fresh capital meet. In this article, you will see three stocks exposed to this same news ripple, and how that could matter for your portfolio decisions. The three stocks below are only a starting sample, since...",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/bharti-airtel-stock-2-indian-120944242.html?.tsrc=rss",
+          "time": "2026-10-28T12:09:44+00:00",
+          "touches": [
+            "GOOG",
+            "GOOGL"
           ],
           "tags": [],
           "new": true
         },
         {
-          "id": "rss:0ac29b25-3a6e-3bd0-8bc2-c414cc128aec",
+          "id": "rss:edbf0b5e-3b6f-3bd0-8467-5539553bcbcd",
           "source": "Yahoo Finance",
           "kind": "headline",
-          "ticker": "TSLA",
-          "title": "Why Did Tesla Stock Jump?",
+          "ticker": "GOOG",
+          "title": "Morning Minute: Robinhood Misses, But Crypto Beats and Robinhood Chain Soars",
+          "summary": "Vlad Tenev delivered the messaging that Robinhood Chain enthusiasts wanted to hear—and the market responded.",
+          "link": "https://decrypt.co/382029/morning-minute-robinhood-misses-but-crypto-beats-and-robinhood-chain-soars?.tsrc=rss",
+          "time": "2026-10-28T12:04:56+00:00",
+          "touches": [
+            "GOOG",
+            "GOOGL"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:152937e1-fbcc-30d2-8154-6c575b785415",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "LLY",
+          "title": "Why Should Pfizer Stock Holders Watch This One Number?",
           "summary": "For questions about this article or underlying research, email help@trefis.com.",
-          "link": "https://www.trefis.com/stock/tsla/articles/620840/why-did-tesla-stock-jump/2026-10-27?.tsrc=rss",
-          "time": "2026-10-27T10:26:46+00:00",
+          "link": "https://www.trefis.com/stock/pfe/articles/621004/why-should-pfizer-stock-holders-watch-this-one-number/2026-10-28?.tsrc=rss",
+          "time": "2026-10-28T12:01:22+00:00",
           "touches": [
-            "TSLA"
+            "LLY"
           ],
           "tags": [],
           "new": true
         },
         {
-          "id": "rss:2b83a243-b6ec-307b-8781-febff4d93a4f",
+          "id": "rss:2b47c372-177e-3051-aa01-406a8d82b220",
           "source": "Yahoo Finance",
           "kind": "headline",
           "ticker": "GOOG",
-          "title": "Haut.AI Launches SkinFM, Its Skin Foundation Model, as New SkinBench Benchmark Exposes AI Skin Analysis Flaws",
-          "summary": "Haut.AI, a SaaS technology company specializing in AI-powered skin intelligence and personalized skincare, today unveiled its Skin Foundation Model (SkinFM), a new image-based AI foundation model trained on more than 4 million real skin images that enables the company to develop customized skin measurements and analysis capabilities more quickly.",
-          "link": "https://finance.yahoo.com/technology/ai/articles/haut-ai-launches-skinfm-skin-100500919.html?.tsrc=rss",
-          "time": "2026-10-27T10:05:00+00:00",
+          "title": "These 7 Stocks Are Analyst Favorites For Magnificent Earnings Growth; Lilly, Amazon Earnings Ahead",
+          "summary": "Among the best stocks in earnings performance, highly rated Eli Lilly is in a buy zone.",
+          "link": "https://finance.yahoo.com/m/2b47c372-177e-3051-aa01-406a8d82b220/these-7-stocks-are-analyst.html?.tsrc=rss",
+          "time": "2026-10-28T12:01:21+00:00",
           "touches": [
-            "GOOG"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:01134ffe-4d06-36eb-9640-fa53b76296bb",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "TSLA",
-          "title": "Hiltzik: Who would gain from a merger of Musk's SpaceX and Musk's Tesla? Take a wild guess",
-          "summary": "Elon Musk says merging his SpaceX and Tesla would be 'a good idea.' It might be — for him.",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/hiltzik-gain-merger-musks-spacex-100000315.html?.tsrc=rss",
-          "time": "2026-10-27T10:00:00+00:00",
-          "touches": [
-            "TSLA"
+            "GOOG",
+            "GOOGL",
+            "LLY"
           ],
           "tags": [
-            "deal"
+            "earnings"
           ],
           "new": true
         },
         {
-          "id": "rss:09af052b-62fc-3291-aa03-e31f48c85bba",
+          "id": "rss:e5ed3c43-7ba7-36b0-91ee-1cf78a2797a3",
           "source": "Yahoo Finance",
           "kind": "headline",
-          "ticker": "AMAT",
-          "title": "BE Semiconductor stock surges as Applied Materials plans to raise stake to 20%",
-          "summary": "Investing.com -- BE Semiconductor Industries shares jumped more than 8% Tuesday after Applied Materials announced plans to increase its stake in the Dutch semiconductor equipment maker to approximately 20% from 9%. The move deepens a partnership between the two companies focused on advanced chip-packaging technologies used in AI applications.",
-          "link": "https://finance.yahoo.com/technology/articles/semiconductor-stock-surges-applied-materials-092650122.html?.tsrc=rss",
-          "time": "2026-10-27T09:26:50+00:00",
+          "ticker": "GOOG",
+          "title": "Funds Load Up On Marriott, Estee Lauder As Big Tech Earnings Loom",
+          "summary": "Funds played defense as they load up on Marriott, Estee Lauder and biotech and energy names in Tuesday's stock market.",
+          "link": "https://finance.yahoo.com/m/e5ed3c43-7ba7-36b0-91ee-1cf78a2797a3/funds-load-up-on-marriott%2C.html?.tsrc=rss",
+          "time": "2026-10-28T12:00:30+00:00",
           "touches": [
-            "AMAT"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:75b3b3f2-bbd2-3fa1-adb9-dc80004f115e",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "BRK.B",
-          "title": "Meet the Stocks Yielding 65%, 45%, and 41% Annually for Warren Buffett's Berkshire Hathaway",
-          "summary": "The Oracle of Omaha often gravitated toward dividend stocks -- and this trio is generating serious income for Berkshire and its shareholders.",
-          "link": "https://www.fool.com/investing/2026/10/27/meet-stocks-yielding-65-45-and-41-annually-for-warren-buffett-berkshire-hathaway/?.tsrc=rss",
-          "time": "2026-10-27T09:26:02+00:00",
-          "touches": [
-            "BRK.B"
+            "GOOG",
+            "GOOGL"
           ],
           "tags": [
-            "capital"
+            "earnings"
           ],
           "new": true
         },
         {
-          "id": "rss:4aea82d0-78e2-34b1-b02d-a21e7da5f6d9",
+          "id": "rss:87e72ddb-46f1-3633-bc3f-70cf4ac925d0",
           "source": "Yahoo Finance",
           "kind": "headline",
-          "ticker": "TSLA",
-          "title": "Elon Musk Reveals the Real Reason He Hasn't Confirmed a SpaceX-Tesla Merger Will Happen",
-          "summary": "Special committees are looking into a possible merger between the companies, but Musk won't be involved.",
-          "link": "https://www.fool.com/investing/2026/10/27/elon-musk-reveals-the-real-reason-he-hasn-t-confirmed-a-spacex-tesla-merger-will-happen/?.tsrc=rss",
-          "time": "2026-10-27T09:20:02+00:00",
+          "ticker": "GOOG",
+          "title": "Google Earnings: Cloud Is Booming, But Can Search Deliver Amid AI Shift?",
+          "summary": "Google stock faces a Q3 earnings test amid renewed investor worries over the core internet search advertising business.",
+          "link": "https://finance.yahoo.com/m/87e72ddb-46f1-3633-bc3f-70cf4ac925d0/google-earnings%3A-cloud-is.html?.tsrc=rss",
+          "time": "2026-10-28T12:00:01+00:00",
           "touches": [
-            "TSLA"
+            "GOOG",
+            "GOOGL"
           ],
           "tags": [
-            "deal"
+            "earnings"
           ],
           "new": true
         },
         {
-          "id": "rss:0e9e98c1-6e1a-3a52-b4bd-b4b4be764a1e",
+          "id": "rss:fbcc3a7e-443b-3e1d-8808-f8b224db382d",
           "source": "Yahoo Finance",
           "kind": "headline",
-          "ticker": "TSLA",
-          "title": "Tesla And 2 Other Top Founder Led Stocks",
-          "summary": "Artificial intelligence heavyweight Anthropic just filed for what could be the biggest IPO ever, and that says something important. Capital is chasing founders who still set the tempo, sign the big checks and own the long term outcomes. You can tap into that mindset too by focusing on businesses where the original builder still leads. This article breaks down three founder led stocks from the screener that fit that brief. The three stocks highlighted here offer a compelling starting point if...",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/tesla-2-other-top-founder-090834814.html?.tsrc=rss",
-          "time": "2026-10-27T09:08:34+00:00",
+          "ticker": "BA",
+          "title": "Boeing: Global Freighter Fleet to Exceed 4,000 Airplanes as Air Cargo Traffic Doubles by 2045",
+          "summary": "Boeing [NYSE: BA] projects in its 2026 World Air Cargo Forecast that air cargo traffic will double over the next 20 years, driving the freighter fleet to exceed 4,000 airplanes by 2045. Growth will be fueled by time-sensitive shipments for advanced manufacturing and AI hardware, diversifying supply chains and rising e-commerce volumes as carriers adapt route networks to shifting trade lanes and manage geopolitical disruptions.",
+          "link": "https://finance.yahoo.com/economy/articles/boeing-global-freighter-fleet-exceed-120000853.html?.tsrc=rss",
+          "time": "2026-10-28T12:00:00+00:00",
           "touches": [
-            "TSLA"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:8581969d-cdfc-36bc-ae2a-a2ecdb1ae529",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "CRWV",
-          "title": "CLS Stock Soars Premarket After Blowout Q3 — Retail Calls It ‘Very Inexpensive’ As Celestica Touts AI ‘Supercycle’",
-          "summary": "The company cited an AI infrastructure ‘supercycle’ and stronger customer demand for 2028.",
-          "link": "https://stocktwits.com/news-articles/markets/equity/cls-stock-blowout-q3-retail-very-inexpensive-celestica-ai-supercycle/cZUeR2HRBzv?.tsrc=rss",
-          "time": "2026-10-27T08:17:54+00:00",
-          "touches": [
-            "CRWV",
-            "NBIS"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:0eb0b0e2-da0b-3f41-ab04-d66de7ed6278",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "CRWV",
-          "title": "MU, SKHY Stocks Rise As Anthropic Filing Shows $450B In Compute Commitments; Kospi Rally Triggers Program-Trading Pause",
-          "summary": "The South Korean benchmark index rose sharply, triggering a brief halt in automated or program trading early Tuesday.",
-          "link": "https://stocktwits.com/news-articles/markets/equity/mu-skhy-stocks-rise-as-anthropic-filing-shows-450-b-in-compute-commitments-kospi-rally-triggers-program-trading-pause/cZUI6gARBzq?.tsrc=rss",
-          "time": "2026-10-27T07:13:32+00:00",
-          "touches": [
-            "CRWV",
-            "NBIS"
+            "BA"
           ],
           "tags": [
-            "halt"
+            "earnings"
           ],
           "new": true
         },
         {
-          "id": "rss:39d4f55d-5893-3878-9f55-78118a909200",
+          "id": "rss:0ad2cea3-670b-4332-9781-6716ae16eebc",
           "source": "Yahoo Finance",
           "kind": "headline",
-          "ticker": "CRWV",
-          "title": "CoreWeave Expands Global AI Cloud Platform With New Capacity in Denmark and First Global AI Network Backbone",
-          "summary": "LONDON, October 27, 2026--CoreWeave, Inc. (Nasdaq: CRWV), The Essential Cloud for AI™, today announced an expansion of its global AI cloud platform, bringing new computing capacity online in Denmark and extending its Global AI Network into the Middle East and Asia Pacific. The expansion strengthens CoreWeave’s ability to deliver the performance, reliability, and connectivity customers need to build and scale AI workloads across international markets.",
-          "link": "https://finance.yahoo.com/technology/ai/articles/coreweave-expands-global-ai-cloud-070000152.html?.tsrc=rss",
-          "time": "2026-10-27T07:00:00+00:00",
+          "ticker": "GOOG",
+          "title": "How Anthropic's IPO structure could become the AI blueprint",
+          "summary": "F/m Investments CEO and CIO, Alex Morris, sits down with Yahoo Finance Senior Reporter Brooke DiPalma to share his thoughts on what an Anthropic (ANTH.PVT) IPO could mean for the larger AI landscape.",
+          "link": "https://finance.yahoo.com/video/anthropics-ipo-structure-could-become-120000012.html?.tsrc=rss",
+          "time": "2026-10-28T12:00:00+00:00",
           "touches": [
-            "CRWV"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:b66006f3-4fba-3e94-ad3b-c1f41780d8a8",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "TSLA",
-          "title": "Elon built the most ridiculous Tesla yet",
-          "summary": "Elon built the most ridiculous Tesla yet",
-          "link": "https://myfirstmillion.videonest.co/videos/2346241/elon-built-the-most-ridiculous-tesla-yet-Ei3_0WSwUs?.tsrc=rss",
-          "time": "2026-10-27T06:33:02+00:00",
-          "touches": [
-            "TSLA"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:71c01a27-bb05-3681-8c28-7984db4422a1",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "TSLA",
-          "title": "Elon Musk Says Robots Will Need More Memory Than 'Everything Else on Earth' — This Analyst Sees 'Much Bigger Volume Story' for Micron, SK Hynix",
-          "summary": "Tesla Inc. (NASDAQ:TSLA) CEO Elon Musk predicted that robots will drive more memory demand than everything else on Earth, a view analyst Shay Boloor sees as a potential volume story for Micron Technology Inc. (NASDAQ:MU) and SK Hynix Inc. (NASDAQ:SKHY). Robot RAM Demand Will Dwarf Everything Else In a post on X on Monday, Musk said that robot RAM needs “will exceed everything else on Earth” because robots must be on physical substrates to shape atoms. Superintelligence needs will “vastly exceed",
-          "link": "https://finance.yahoo.com/technology/ai/articles/elon-musk-says-robots-more-063041305.html?.tsrc=rss",
-          "time": "2026-10-27T06:30:41+00:00",
-          "touches": [
-            "TSLA"
+            "GOOG",
+            "GOOGL"
           ],
           "tags": [
             "people"
@@ -680,16 +350,375 @@
           "new": true
         },
         {
-          "id": "rss:58ea997e-1bcd-3c34-ba98-f64077b83b25",
+          "id": "rss:774d2c74-983c-343f-89f5-ccb18c5d3d3c",
           "source": "Yahoo Finance",
           "kind": "headline",
-          "ticker": "BRK.B",
-          "title": "Warren Buffett Says Buy an S&P 500 Index Fund. Here's What $500 a Month Is Worth in 20 Years at 3 Different Return Rates.",
-          "summary": "The Oracle of Omaha doesn't think most investors should pick individual stocks.",
-          "link": "https://www.fool.com/investing/2026/10/27/warren-buffett-sp-500-etf-500-month-20-years/?.tsrc=rss",
-          "time": "2026-10-27T06:20:00+00:00",
+          "ticker": "GOOG",
+          "title": "Here Are Wednesday’s Top Wall Street Analyst Research Calls: Enphase Energy, F5, Marvell Technology, MSG Rangers, Pentair, Silicon Motion Technology, Spotify Technology, Texas Instruments, Whirlpool, and More",
+          "summary": "With the Fed rate decision dropping at 2:30 PM and Alphabet and Microsoft reporting before the bell, Wednesday's analyst calls on Enphase, Spotify, Whirlpool, and a newly public Rangers franchise land at a pivotal moment for markets.",
+          "link": "https://247wallst.com/investing/2026/10/28/here-are-wednesdays-top-wall-street-analyst-research-calls-enphase-energy-f5-marvell-technology-msg-rangers-pentair-silicon-motion-technology-spotify-technology-texas-instruments-whi/?.tsrc=rss",
+          "time": "2026-10-28T11:58:12+00:00",
           "touches": [
-            "BRK.B"
+            "GOOG",
+            "GOOGL",
+            "TXN"
+          ],
+          "tags": [
+            "macro"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:278b3db3-9698-3f08-9a96-032c4b315432",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "GOOG",
+          "title": "OpenAI Reportedly Plans to Purchase Google AI Chips as Demand for Computing Infrastructure Grows",
+          "summary": "OpenAI (NASDAQ:OAI) is planning to purchase artificial intelligence chips developed by Alphabet’s Google (NASDAQ:GOOG), according to a report published Tuesday by The Information, citing a person familiar with the matter. The potential agreement would expand the commercial relationship between the two companies as demand for AI computing infrastructure continues to increase.",
+          "link": "https://investorshub.advfn.com/market-news/article/38763/openai-reportedly-plans-to-purchase-google-ai-chips-as-demand-for-computing-infrastructure-grows?.tsrc=rss",
+          "time": "2026-10-28T11:51:26+00:00",
+          "touches": [
+            "GOOG",
+            "GOOGL"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:f3514d3f-678c-31b8-b499-e6d96ed30fb3",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "TSLA",
+          "title": "Tesla Stock Heads for Third Day of Gains. It’s About More Than SpaceX.",
+          "summary": "Tesla stock is going for three gains in a row on Wednesday.",
+          "link": "https://finance.yahoo.com/m/f3514d3f-678c-31b8-b499-e6d96ed30fb3/tesla-stock-heads-for-third.html?.tsrc=rss",
+          "time": "2026-10-28T11:50:00+00:00",
+          "touches": [
+            "TSLA"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:4e4095e2-758d-393b-8bb3-33c3b63ed415",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "GOOG",
+          "title": "Megacap Earnings Could Spoil the Market’s Appetite for AI",
+          "summary": "The stock market is bracing for earnings from Alphabet and Microsoft and the Federal Reserve’s latest interest-rate decision today.",
+          "link": "https://finance.yahoo.com/m/4e4095e2-758d-393b-8bb3-33c3b63ed415/megacap-earnings-could-spoil.html?.tsrc=rss",
+          "time": "2026-10-28T11:37:00+00:00",
+          "touches": [
+            "GOOG",
+            "GOOGL"
+          ],
+          "tags": [
+            "earnings"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:1ec8e558-42f4-3597-91c6-3bd577f0cc65",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "TSLA",
+          "title": "Man repairs 2 wrecked Teslas, they pass inspection, but the carmaker cuts fast charging anyway — now he owes $15K",
+          "summary": "Vehicles that Tesla has not confirmed comply with its safety standards could damage a Supercharger or might not be safe to drive, the company says.",
+          "link": "https://finance.yahoo.com/technology/articles/man-repairs-2-wrecked-teslas-113000365.html?.tsrc=rss",
+          "time": "2026-10-28T11:30:00+00:00",
+          "touches": [
+            "TSLA"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:315dbfaa-dba6-3b0d-83d6-554b24301c31",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "TSLA",
+          "title": "BMO Launches Canada's First Single Stock Autocallable Income ETFs",
+          "summary": "BMO Asset Management Inc., the manager of the BMO ETFs, today announced the launch of BMO Autocallable Income NVIDIA (NVDA) ETF – Series 1 (Cboe Canada: NVIA), BMO Autocallable Income Palantir (PLTR) ETF – Series 1 (Cboe Canada: PLTA), and BMO Autocallable Income Tesla (TSLA) ETF – Series 1 (Cboe Canada: TESA) (collectively, the \"BMO ETFs\"), each offering CAD Units. Collectively, the units of the BMO ETFs are referred to as the \"Units\".",
+          "link": "https://finance.yahoo.com/markets/options/articles/bmo-launches-canadas-first-single-113000761.html?.tsrc=rss",
+          "time": "2026-10-28T11:30:00+00:00",
+          "touches": [
+            "TSLA"
+          ],
+          "tags": [
+            "capital"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:66d0438b-a533-38f9-8741-4e8366955a6c",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "LLY",
+          "title": "Micron Biomedical Appoints Anand Subramony, Ph.D., as Executive Vice President, Global Product Development and Combination Product Commercialization",
+          "summary": "Seasoned drug delivery and product development leader formerly at Lilly and AstraZeneca to advance Micron Biomedical's transition from platform technology to commercial product company Anand Subramony, Ph.D. joins Micron Biomedical Micron Biomedical appoints former Lilly and AstraZeneca leader, Anand Subramony, Ph.D., as executive vice president, global product development and combination product commercialization as the company transitions from a platform technology to a commercial products com",
+          "link": "https://finance.yahoo.com/healthcare/articles/micron-biomedical-appoints-anand-subramony-112500420.html?.tsrc=rss",
+          "time": "2026-10-28T11:25:00+00:00",
+          "touches": [
+            "LLY"
+          ],
+          "tags": [
+            "people"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:e40f47ce-d450-3874-9b5a-373f8363b535",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "GOOG",
+          "title": "OpenAI Is Buying Google’s AI Chips, a Hit to Nvidia’s Biggest Customer Bond",
+          "summary": "OpenAI reportedly buying Google's custom AI chips would quietly shift leverage in one of the most lucrative vendor relationships in tech, and the fallout for NVIDIA's pricing power and Alphabet's chip ambitions is only beginning to take shape.",
+          "link": "https://247wallst.com/investing/2026/10/28/openai-is-buying-googles-ai-chips-a-hit-to-nvidias-biggest-customer-bond/?.tsrc=rss",
+          "time": "2026-10-28T11:22:22+00:00",
+          "touches": [
+            "GOOG",
+            "GOOGL"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:c55955fb-2fe2-3d22-b550-e4153e867414",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "TSLA",
+          "title": "Hidden Gems in the SpaceX Filing: Soaring Compute Rates and Deep Tesla Ties",
+          "summary": "“Customer B” is spending more to rent SpaceX’s AI data centers than investors thought.",
+          "link": "https://finance.yahoo.com/m/c55955fb-2fe2-3d22-b550-e4153e867414/hidden-gems-in-the-spacex.html?.tsrc=rss",
+          "time": "2026-10-28T11:20:00+00:00",
+          "touches": [
+            "TSLA"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:e36fc504-6a4f-323a-a606-b31c1b73bac3",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "TSLA",
+          "title": "Tesla Bears Are Falling Off But Not Because Tesla’s Improving",
+          "summary": "Tesla short sellers are retreating, but the reason has nothing to do with the company fixing its collapsing margins or surging profits. A single rumor reshuffled the entire bearish case overnight, and now the stock sits exactly at Wall Street's consensus target with nowhere obvious to go.",
+          "link": "https://247wallst.com/investing/2026/10/28/tesla-bears-are-falling-off-but-not-because-teslas-improving/?.tsrc=rss",
+          "time": "2026-10-28T11:15:48+00:00",
+          "touches": [
+            "TSLA"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:43ccc443-7e6d-38b1-ab2c-7e028eadd0a4",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "LLY",
+          "title": "Missed Eli Lilly's Run? What Holders Had To Believe",
+          "summary": "If you only glanced at headlines about drug pricing reform, patent risk, and lawsuits, Eli Lilly might have looked like a minefield rather than a gift. Investors who held Eli Lilly over the past year are up 57.3%, including dividends. That outcome lands against a backdrop of huge GLP-1 demand, rich valuation debates, and sharply different analyst targets. If you had been weighing those crosscurrents in October 2025, what exactly were you betting on? A Narrative on Simply Wall St is one...",
+          "link": "https://finance.yahoo.com/healthcare/articles/missed-eli-lillys-run-holders-111333172.html?.tsrc=rss",
+          "time": "2026-10-28T11:13:33+00:00",
+          "touches": [
+            "LLY"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:7f2375c9-bc1d-3215-ab2b-4b2c110744c8",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "TSLA",
+          "title": "Tesla's Free Cash Flow Just Turned Positive. Here's Why That's Only Half the Story.",
+          "summary": "The reason is because the company made about $3 billion less in capital expenditure than expected, not that its business improved.",
+          "link": "https://www.fool.com/investing/2026/10/28/teslas-free-cash-flow-just-turned-positive-heres-w/?.tsrc=rss",
+          "time": "2026-10-28T11:10:00+00:00",
+          "touches": [
+            "TSLA"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:8dff2c5b-7eda-3b09-b065-b74ad7ea87a8",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "GOOG",
+          "title": "Nvidia Stock Faces a Test From Its Biggest AI Chip Rival",
+          "summary": "Nvidia stock has fallen back into range-bound trading and a major AI chip competitor could be to blame.",
+          "link": "https://finance.yahoo.com/m/8dff2c5b-7eda-3b09-b065-b74ad7ea87a8/nvidia-stock-faces-a-test.html?.tsrc=rss",
+          "time": "2026-10-28T11:07:00+00:00",
+          "touches": [
+            "GOOG",
+            "GOOGL"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:39a2a2ea-5d69-34c0-83e6-390329c5b0d6",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "GOOG",
+          "title": "Tech optimism lifts stocks ahead of Fed update on rates",
+          "summary": "Share prices of technology firms surged  in Asia on Wednesday after blockbuster earnings from the South Korean chip giant SK hynix boosted optimism in the AI trade ahead of results from Wall Street titans Microsoft and Alphabet.Shares in SK hynix soared almost 11 percent Wednesday and South Korean rival Samsung, which reports its earnings Thursday, added nine percent.",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/tech-stocks-soar-sk-hynix-024123086.html?.tsrc=rss",
+          "time": "2026-10-28T11:05:11+00:00",
+          "touches": [
+            "GOOG",
+            "GOOGL"
+          ],
+          "tags": [
+            "earnings",
+            "macro"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:f07d294e-94c9-3ada-ba12-5acc918aac5f",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "TSLA",
+          "title": "Tesla Closed Up 4% at $407. Here’s What a SpaceX Merger Could Mean for Your Shares.",
+          "summary": "A possible Tesla and SpaceX combination has Elon Musk calling it a good idea, Wall Street assigning a 52% probability, and at least one prominent critic labeling it a rescue operation in disguise. Here is what each possible outcome does to your shares.",
+          "link": "https://247wallst.com/investing/2026/10/28/tesla-closed-up-4-at-407-heres-what-a-spacex-merger-could-mean-for-your-shares/?.tsrc=rss",
+          "time": "2026-10-28T11:04:26+00:00",
+          "touches": [
+            "TSLA"
+          ],
+          "tags": [
+            "deal"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:070f90df-db8d-33d5-9d91-1c5399436911",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "LRCX",
+          "title": "SK Hynix Stock Gains 1.9% on AI Chip Demand, Dividend Hopes",
+          "summary": "SKHY shares rose 1.9% on AI chip demand and hopes for a 16 trillion won special dividend ahead of its third-quarter earnings report.",
+          "link": "https://finance.yahoo.com/technology/ai/articles/sk-hynix-stock-gains-1-110200713.html?.tsrc=rss",
+          "time": "2026-10-28T11:02:00+00:00",
+          "touches": [
+            "LRCX"
+          ],
+          "tags": [
+            "earnings",
+            "capital"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:fee99c07-0a1e-41be-9dd2-a5c95797ddf8",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "CRWV",
+          "title": "Three billionaires called the AI top. Each has a reason to.",
+          "summary": "Elon Musk, Ken Griffin and Chamath Palihapitiya all called the top of the AI trade in the same week, as CoreWeave, Nebius and IREN fell more than 30% in a month. Host Ejaaz Ahamadeen breaks down what's true, who's talking their book, and what investors should actually worry about, from idle GPUs to a closing debt window.",
+          "link": "https://finance.yahoo.com/video/three-billionaires-called-ai-top-110000440.html?.tsrc=rss",
+          "time": "2026-10-28T11:00:00+00:00",
+          "touches": [
+            "CRWV",
+            "NBIS",
+            "TSLA"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:991fe9f7-9e74-3bb5-80cc-84f4ef6387cb",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "TSLA",
+          "title": "YieldMax® ETFs Announces Weekly Distributions for Group 2 ETFs",
+          "summary": "CHICAGO and MILWAUKEE and NEW YORK, Oct. 28, 2026 (GLOBE NEWSWIRE) -- YieldMax® ETFs today announced distributions for the YieldMax® Group 2 weekly pay ETFs. Group 2 Distribution Announcement Ex. & Record Date: October 29, 2026Payment Date: October 30, 2026 ETF Ticker1ETF NameDistribution FrequencyDistribution per ShareDistribution Rate2,4,530-DaySEC Yield3AIYYYieldMax® AI Option Income Strategy ETFWeekly$0.096165.84%2.49%AMDYYieldMax® AMD Option Income Strategy ETFWeekly$0.355941.54%2.12%AMZYYi",
+          "link": "https://finance.yahoo.com/news/yieldmax-etfs-announces-weekly-distributions-105500387.html?.tsrc=rss",
+          "time": "2026-10-28T10:55:00+00:00",
+          "touches": [
+            "TSLA"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:8befee5c-63e2-3039-b75c-c0256313447f",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "LLY",
+          "title": "Lilly's retatrutide delivered greater A1C reduction and more than double the weight loss of Ozempic's highest approved dose in head-to-head trial",
+          "summary": "Eli Lilly and Company (NYSE: LLY), the maker of Mounjaro (tirzepatide) and Foundayo (orforglipron), today announced positive topline results from TRANSCEND-T2D-2, a head-to-head Phase 3 trial comparing retatrutide with injectable Ozempic 2 mg in adults with type 2 diabetes. At 80 weeks, retatrutide met the primary and all key secondary endpoints, delivering greater A1C reduction and substantially more weight loss than Ozempic.1,2",
+          "link": "https://finance.yahoo.com/healthcare/articles/lillys-retatrutide-delivered-greater-a1c-104500255.html?.tsrc=rss",
+          "time": "2026-10-28T10:45:00+00:00",
+          "touches": [
+            "LLY"
+          ],
+          "tags": [
+            "earnings"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:3839daba-d56c-3ed4-a128-7bfd9b47d933",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "TSLA",
+          "title": "Tesla (TSLA) Could Be 223% Overvalued After Flat Revenue And Lower Profit",
+          "summary": "Tesla (TSLA) has just reported third quarter 2026 earnings that showed revenue broadly flat at US$28.0b while net income declined to US$787 million, sharpening investor focus on profitability and capital allocation. Tesla’s recent earnings setback has played out against a sharp swing in sentiment, with the share price up 36.6% over 90 days and 9.5% over the past month, yet still down 7.0% year to date and delivering an 11.5% decline in 1-year total shareholder return. The 3-year total...",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/tesla-tsla-could-223-overvalued-102009803.html?.tsrc=rss",
+          "time": "2026-10-28T10:20:09+00:00",
+          "touches": [
+            "TSLA"
+          ],
+          "tags": [
+            "earnings"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:2821fe01-1931-3be3-950e-4183503e129d",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "TSLA",
+          "title": "What Is Behind The Move In GM Stock?",
+          "summary": "For questions about this article or underlying research, email help@trefis.com.",
+          "link": "https://www.trefis.com/stock/gm/articles/621068/what-is-behind-the-move-in-gm-stock/2026-10-28?.tsrc=rss",
+          "time": "2026-10-28T10:11:34+00:00",
+          "touches": [
+            "TSLA"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:421590c2-6ede-33ec-a2a0-7715772adbb7",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "TSLA",
+          "title": "The Pentagon Is Now the eVTOL Industry's Biggest Customer. Here's How Much Revenue That's Actually Worth to Archer and Joby.",
+          "summary": "Defense contracts provide early, reliable revenue for both companies and strengthen their investment case.",
+          "link": "https://www.fool.com/investing/2026/10/28/the-pentagon-is-now-the-evtol-industrys-biggest-cu/?.tsrc=rss",
+          "time": "2026-10-28T10:10:00+00:00",
+          "touches": [
+            "TSLA"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:424a52fc-4011-3f7c-9b28-0926684ce295",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "TSLA",
+          "title": "Tesla Just Spent $4.73 Billion on Capex. Here's Where Every Dollar Went.",
+          "summary": "Tesla's capital spending is soaring as it expands beyond electric vehicles.",
+          "link": "https://www.fool.com/investing/2026/10/28/tesla-just-spent-473-billion-on-capex-heres-where/?.tsrc=rss",
+          "time": "2026-10-28T10:05:00+00:00",
+          "touches": [
+            "TSLA"
           ],
           "tags": [],
           "new": true
@@ -697,83 +726,83 @@
       ],
       "moves": [
         {
-          "ticker": "AMAT",
-          "price": 387.59,
-          "prev_close": 377.24,
-          "pct": 2.74,
-          "time": "2026-10-26T20:00:01+00:00",
-          "moving": false
-        },
-        {
-          "ticker": "BRK.B",
-          "price": 548.56,
-          "prev_close": 542.19,
-          "pct": 1.17,
-          "time": "2026-10-26T20:00:53+00:00",
-          "moving": false
+          "ticker": "BA",
+          "price": 168.18,
+          "prev_close": 188.31,
+          "pct": -10.69,
+          "time": "2026-10-27T20:00:03+00:00",
+          "moving": true
         },
         {
           "ticker": "CRWV",
-          "price": 55.19,
-          "prev_close": 54.23,
-          "pct": 1.76,
-          "time": "2026-10-26T20:00:01+00:00",
-          "moving": false
+          "price": 59.57,
+          "prev_close": 55.19,
+          "pct": 7.94,
+          "time": "2026-10-27T20:00:01+00:00",
+          "moving": true
         },
         {
           "ticker": "GOOG",
-          "price": 314.19,
-          "prev_close": 317.28,
-          "pct": -0.97,
-          "time": "2026-10-26T20:00:01+00:00",
+          "price": 316.83,
+          "prev_close": 314.19,
+          "pct": 0.84,
+          "time": "2026-10-27T20:00:01+00:00",
+          "moving": false
+        },
+        {
+          "ticker": "GOOGL",
+          "price": 320.58,
+          "prev_close": 316.8,
+          "pct": 1.19,
+          "time": "2026-10-27T20:00:01+00:00",
+          "moving": false
+        },
+        {
+          "ticker": "LLY",
+          "price": 1281.91,
+          "prev_close": 1279.14,
+          "pct": 0.22,
+          "time": "2026-10-27T20:00:02+00:00",
           "moving": false
         },
         {
           "ticker": "LRCX",
-          "price": 237.5,
-          "prev_close": 230.1,
-          "pct": 3.22,
-          "time": "2026-10-26T20:00:01+00:00",
-          "moving": true
-        },
-        {
-          "ticker": "MSFT",
-          "price": 532.6,
-          "prev_close": 524.51,
-          "pct": 1.54,
-          "time": "2026-10-26T20:00:01+00:00",
+          "price": 240.85,
+          "prev_close": 237.5,
+          "pct": 1.41,
+          "time": "2026-10-27T20:00:01+00:00",
           "moving": false
         },
         {
           "ticker": "NBIS",
-          "price": 153.27,
-          "prev_close": 158.74,
-          "pct": -3.45,
-          "time": "2026-10-26T20:00:01+00:00",
+          "price": 170.47,
+          "prev_close": 153.27,
+          "pct": 11.22,
+          "time": "2026-10-27T20:00:00+00:00",
+          "moving": true
+        },
+        {
+          "ticker": "SOFI",
+          "price": 16.4,
+          "prev_close": 14.46,
+          "pct": 13.42,
+          "time": "2026-10-27T20:00:00+00:00",
           "moving": true
         },
         {
           "ticker": "TSLA",
-          "price": 391.62,
-          "prev_close": 372.22,
-          "pct": 5.21,
-          "time": "2026-10-26T20:00:00+00:00",
+          "price": 407.46,
+          "prev_close": 391.62,
+          "pct": 4.04,
+          "time": "2026-10-27T20:00:00+00:00",
           "moving": true
         },
         {
           "ticker": "TXN",
-          "price": 298.12,
-          "prev_close": 284.69,
-          "pct": 4.72,
-          "time": "2026-10-26T20:00:01+00:00",
-          "moving": true
-        },
-        {
-          "ticker": "XP",
-          "price": 15.71,
-          "prev_close": 30.41,
-          "pct": -48.36,
-          "time": "2026-10-26T20:00:00+00:00",
+          "price": 308.91,
+          "prev_close": 298.12,
+          "pct": 3.62,
+          "time": "2026-10-27T20:00:00+00:00",
           "moving": true
         }
       ],
@@ -786,5 +815,5 @@
       "new": []
     }
   },
-  "run_url": "https://github.com/neidelbert/claude/actions/runs/40504826435"
+  "run_url": "https://github.com/neidelbert/claude/actions/runs/40689559352"
 }

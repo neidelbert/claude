@@ -1,6 +1,6 @@
 # Trader-Übersicht
 
-Stand: Mi 28.10. 16:00 Uhr ET (21:00 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
+Stand: Mi 28.10. 16:21 Uhr ET (21:21 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
 
 NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
@@ -11,7 +11,7 @@ NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
 | Morgen-Scan | Mi 28.10. 08:39 Uhr ET (13:39 Uhr MEZ) | OK – 501 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40689559352)) |
 | ORB-Scan | Mi 28.10. 10:10 Uhr ET (15:10 Uhr MEZ) | OK – 163 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40689559352)) |
 | Labor live | Mi 28.10. 16:00 Uhr ET (21:00 Uhr MEZ) | OK – Tagesbilanz: 3.137 Trades ([Lauf](https://github.com/neidelbert/claude/actions/runs/40745751848)) |
-| Labor | Di 27.10. 16:20 Uhr ET (21:20 Uhr MEZ) | OK – 1 von 76 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/40554495911)) |
+| Labor | Mi 28.10. 16:20 Uhr ET (21:20 Uhr MEZ) | OK – 1 von 76 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/40745751848)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
 | Test-Push | Do 22.10. 19:24 Uhr ET (01:24 Uhr MESZ) | OK – Push gesendet ([Lauf](https://github.com/neidelbert/claude/actions/runs/39871573010)) |
@@ -187,22 +187,22 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 
 ## Labor (Testphase, Spielgeld ohne Limit)
 
-583 Aktien · 63 Handelstage · Lerntage Do 30.07.2026 bis Mo 28.09.2026 · **Prüftage Di 29.09.2026 bis Di 27.10.2026** · 76 Varianten
+697 Aktien · 64 Handelstage · Lerntage Do 30.07.2026 bis Di 29.09.2026 · **Prüftage Mi 30.09.2026 bis Mi 28.10.2026** · 76 Varianten
 
 | # | Variante | Prüftage: Trades | Treffer | Ø je Trade | € bei 100 €/Trade | nach Gebühren | Zufall? | bestanden |
 |---|---|---|---|---|---|---|---|---|
-| 1 | Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 2× normal | 337 | 51 % | +0,09 % | 30,13 € | -643,87 € | möglich | **ja** |
-| 2 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 2× normal | 78 | 64 % | +1,18 % | 92,11 € | -63,89 € | unwahrscheinlich | nein |
-| 3 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 182 | 59 % | +1,12 % | 203,18 € | -160,82 € | unwahrscheinlich | nein |
-| 4 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R | 208 | 55 % | +0,88 % | 183,74 € | -232,26 € | unwahrscheinlich | nein |
-| 5 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 4× normal | 36 | 61 % | +0,82 % | 29,39 € | -42,61 € | möglich | nein |
-| 6 | Erholung: Lücke nach unten ≥ 3 % · Stopp 1,5 % darunter · Ziel 2R | 208 | 52 % | +0,44 % | 90,88 € | -325,12 € | unwahrscheinlich | nein |
-| 7 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 1R | 208 | 55 % | +0,34 % | 71,21 € | -344,79 € | unwahrscheinlich | nein |
-| 8 | Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 459 | 50 % | +0,20 % | 90,74 € | -827,26 € | unwahrscheinlich | nein |
-| 9 | Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 1,5R | 459 | 50 % | +0,18 % | 82,84 € | -835,15 € | unwahrscheinlich | nein |
-| 10 | Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5× | 712 | 50 % | +0,12 % | 87,90 € | -1.336,10 € | möglich | nein |
-| 11 | Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1,5R · Volumen ≥ 1,5× | 712 | 50 % | +0,11 % | 81,30 € | -1.342,69 € | möglich | nein |
-| 12 | Erholung: RSI unter 30 · Stopp 1,5 % darunter · Ziel 2R | 956 | 46 % | +0,09 % | 85,54 € | -1.826,46 € | unwahrscheinlich | nein |
+| 1 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 31 | 42 % | +0,06 % | 1,74 € | -60,26 € | möglich | **ja** |
+| 2 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 2× normal | 99 | 67 % | +1,17 % | 116,25 € | -81,75 € | unwahrscheinlich | nein |
+| 3 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 225 | 61 % | +1,10 % | 246,85 € | -203,15 € | unwahrscheinlich | nein |
+| 4 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R | 253 | 58 % | +0,91 % | 228,99 € | -277,01 € | unwahrscheinlich | nein |
+| 5 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 4× normal | 48 | 62 % | +0,74 % | 35,50 € | -60,50 € | unwahrscheinlich | nein |
+| 6 | Erholung: Lücke nach unten ≥ 3 % · Stopp 1,5 % darunter · Ziel 2R | 253 | 53 % | +0,47 % | 118,21 € | -387,79 € | unwahrscheinlich | nein |
+| 7 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 1R | 253 | 58 % | +0,37 % | 93,74 € | -412,26 € | unwahrscheinlich | nein |
+| 8 | Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 556 | 51 % | +0,25 % | 137,80 € | -974,20 € | unwahrscheinlich | nein |
+| 9 | Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 1,5R | 556 | 51 % | +0,23 % | 127,14 € | -984,86 € | unwahrscheinlich | nein |
+| 10 | Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5× | 866 | 51 % | +0,18 % | 153,94 € | -1.578,06 € | unwahrscheinlich | nein |
+| 11 | Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1,5R · Volumen ≥ 1,5× | 866 | 51 % | +0,17 % | 145,03 € | -1.586,97 € | unwahrscheinlich | nein |
+| 12 | Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1R · Volumen ≥ 1,5× | 866 | 51 % | +0,14 % | 123,33 € | -1.608,67 € | unwahrscheinlich | nein |
 
 So liest du das: Ein Trade ist ein Kauf und Verkauf am selben Tag. „Treffer“ ist der Anteil der Trades mit Plus. „€ bei 100 €/Trade“ ist die Summe, wenn jeder Trade mit 100 € gemacht worden wäre. „Zufall möglich“ heißt: zu wenige oder zu schwankende Trades, das Ergebnis kann Glück sein.
 

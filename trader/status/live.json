@@ -1,26 +1,21 @@
 {
   "part": "live",
   "ok": true,
-  "summary": "1.053 Trades, 979 offen",
-  "ran_at": "2026-10-28T14:00:20Z",
+  "summary": "1.598 Trades, 1.438 offen",
+  "ran_at": "2026-10-28T14:10:20Z",
   "date_et": "2026-10-28",
   "steps": [
     {
-      "name": "Antworten lesen",
-      "ok": false,
-      "detail": "<urlopen error [Errno 101] Network is unreachable>"
-    },
-    {
       "name": "Labor live",
       "ok": true,
-      "detail": "414 Aktien, 1.053 Spielgeld-Trades, 979 offen"
+      "detail": "414 Aktien, 1.598 Spielgeld-Trades, 1.438 offen"
     }
   ],
   "data": {
     "date": "2026-10-28",
-    "as_of": "10:00 Uhr ET",
-    "trades": 1053,
-    "open": 979,
+    "as_of": "10:12 Uhr ET",
+    "trades": 1598,
+    "open": 1438,
     "symbols": 414,
     "failed": 0,
     "open_push": "2026-10-28"

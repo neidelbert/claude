@@ -1,6 +1,6 @@
 # Trader-Übersicht
 
-Stand: Mi 28.10. 10:01 Uhr ET (15:01 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
+Stand: Mi 28.10. 10:12 Uhr ET (15:12 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
 
 NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
@@ -9,15 +9,12 @@ NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 | Teil | Letzter Lauf | Ergebnis |
 |---|---|---|
 | Morgen-Scan | Mi 28.10. 08:39 Uhr ET (13:39 Uhr MEZ) | OK – 501 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40689559352)) |
-| ORB-Scan | Di 27.10. 10:10 Uhr ET (15:10 Uhr MEZ) | OK – 64 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40504826435)) |
-| Labor live | Mi 28.10. 10:00 Uhr ET (15:00 Uhr MEZ) | OK – 1.053 Trades, 979 offen ([Lauf](https://github.com/neidelbert/claude/actions/runs/40689559352)) |
+| ORB-Scan | Mi 28.10. 10:10 Uhr ET (15:10 Uhr MEZ) | OK – 163 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40689559352)) |
+| Labor live | Mi 28.10. 10:10 Uhr ET (15:10 Uhr MEZ) | OK – 1.598 Trades, 1.438 offen ([Lauf](https://github.com/neidelbert/claude/actions/runs/40689559352)) |
 | Labor | Di 27.10. 16:20 Uhr ET (21:20 Uhr MEZ) | OK – 1 von 76 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/40554495911)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
 | Test-Push | Do 22.10. 19:24 Uhr ET (01:24 Uhr MESZ) | OK – Push gesendet ([Lauf](https://github.com/neidelbert/claude/actions/runs/39871573010)) |
-
-**Probleme:**
-- Labor live / Antworten lesen: <urlopen error [Errno 101] Network is unreachable>
 
 Zeitplan (Mo–Fr, an Handelstagen): Morgen-Scan ab ca. 8:00 Uhr ET, ORB-Scan ab ca. 10:15 Uhr ET, Labor live und Preisalarme alle 10 Minuten während der Handelszeit, Tagesbilanz nach Schluss, Labor-Rangliste nach Börsenschluss (ab ca. 16:20 Uhr ET).
 
@@ -60,44 +57,44 @@ Zeitplan (Mo–Fr, an Handelstagen): Morgen-Scan ab ca. 8:00 Uhr ET, ORB-Scan ab
 
 Alle 501 Treffer: [watchlist.json](watchlist.json)
 
-## ORB-Scan – 2026-10-27 10:10 ET
+## ORB-Scan – 2026-10-28 10:10 ET
 
-Quelle: Treffer des Morgen-Scans · 396 nutzbare Charts · **64 über der Eröffnungsspanne**
+Quelle: Treffer des Morgen-Scans · 450 nutzbare Charts · **163 über der Eröffnungsspanne**
 
 | Bar-Schluss | Ticker | Kurs | Spanne | über dem Hoch |
 |---|---|---|---|---|
-| 9:50 AM | AEO | 19,03 $ | 18,76 $ – 18,97 $ | +0,34 % |
-| 9:50 AM | AROC | 30,83 $ | 30,10 $ – 30,76 $ | +0,23 % |
-| 9:50 AM | ATI | 166,57 $ | 164,90 $ – 166,38 $ | +0,11 % |
-| 9:50 AM | BKR | 56,90 $ | 56,36 $ – 56,76 $ | +0,24 % |
-| 9:50 AM | CCC | 7,70 $ | 7,68 $ – 7,69 $ | +0,07 % |
-| 9:50 AM | COLD | 14,64 $ | 14,50 $ – 14,62 $ | +0,14 % |
-| 9:50 AM | CSTM | 24,08 $ | 23,69 $ – 24,00 $ | +0,32 % |
-| 9:50 AM | DOV | 204,63 $ | 201,98 $ – 204,00 $ | +0,31 % |
-| 9:50 AM | EQPT | 16,79 $ | 16,47 $ – 16,75 $ | +0,24 % |
-| 9:50 AM | ERIC | 11,00 $ | 10,94 $ – 10,99 $ | +0,09 % |
-| 9:50 AM | FR | 55,25 $ | 55,07 $ – 55,23 $ | +0,04 % |
-| 9:50 AM | FRVO | 8,60 $ | 8,14 $ – 8,55 $ | +0,58 % |
-| 9:50 AM | FUN | 7,21 $ | 7,02 $ – 7,17 $ | +0,56 % |
-| 9:50 AM | GGG | 67,18 $ | 66,20 $ – 66,92 $ | +0,40 % |
-| 9:50 AM | GNL | 7,18 $ | 7,12 $ – 7,17 $ | +0,14 % |
-| 9:50 AM | LBTYA | 7,66 $ | 7,54 $ – 7,66 $ | +0,11 % |
-| 9:50 AM | LBTYK | 7,61 $ | 7,51 $ – 7,59 $ | +0,13 % |
-| 9:50 AM | LKQ | 17,46 $ | 17,22 $ – 17,43 $ | +0,17 % |
-| 9:50 AM | MOD | 135,62 $ | 133,03 $ – 134,90 $ | +0,54 % |
-| 9:50 AM | MOS | 18,40 $ | 17,81 $ – 18,38 $ | +0,14 % |
-| 9:50 AM | MRVI | 7,61 $ | 7,50 $ – 7,60 $ | +0,13 % |
-| 9:50 AM | MYGN | 6,09 $ | 6,01 $ – 6,08 $ | +0,10 % |
-| 9:50 AM | NZF | 11,23 $ | 11,11 $ – 11,23 $ | +0,04 % |
-| 9:50 AM | PCAR | 104,81 $ | 102,01 $ – 104,46 $ | +0,33 % |
-| 9:50 AM | SLB | 53,87 $ | 52,50 $ – 53,63 $ | +0,45 % |
-| 9:50 AM | SUNB | 80,82 $ | 79,60 $ – 80,75 $ | +0,08 % |
-| 9:50 AM | XP | 16,57 $ | 15,81 $ – 16,53 $ | +0,21 % |
-| 9:55 AM | ADPT | 26,66 $ | 26,07 $ – 26,60 $ | +0,23 % |
-| 9:55 AM | AMRX | 21,24 $ | 20,93 $ – 21,18 $ | +0,26 % |
-| 9:55 AM | CRL | 358,48 $ | 351,95 $ – 357,18 $ | +0,36 % |
+| 9:50 AM | AMGN | 450,32 $ | 439,70 $ – 448,95 $ | +0,31 % |
+| 9:50 AM | AMRX | 21,57 $ | 21,11 $ – 21,55 $ | +0,09 % |
+| 9:50 AM | BBWI | 21,92 $ | 21,65 $ – 21,86 $ | +0,27 % |
+| 9:50 AM | BEAM | 25,44 $ | 24,50 $ – 25,42 $ | +0,07 % |
+| 9:50 AM | BILL | 49,59 $ | 48,39 $ – 49,56 $ | +0,06 % |
+| 9:50 AM | BOX | 42,60 $ | 41,96 $ – 42,57 $ | +0,07 % |
+| 9:50 AM | BRKR | 62,37 $ | 60,55 $ – 62,25 $ | +0,19 % |
+| 9:50 AM | BROS | 43,10 $ | 42,05 $ – 42,90 $ | +0,48 % |
+| 9:50 AM | CAI | 34,86 $ | 33,50 $ – 34,64 $ | +0,64 % |
+| 9:50 AM | CCEP | 111,32 $ | 110,34 $ – 110,94 $ | +0,34 % |
+| 9:50 AM | CE | 49,05 $ | 48,25 $ – 49,04 $ | +0,02 % |
+| 9:50 AM | CERT | 11,33 $ | 10,84 $ – 11,26 $ | +0,62 % |
+| 9:50 AM | CRL | 374,28 $ | 360,01 $ – 374,27 $ | +0,00 % |
+| 9:50 AM | CXM | 6,83 $ | 6,56 $ – 6,79 $ | +0,59 % |
+| 9:50 AM | DOCU | 82,79 $ | 80,63 $ – 82,57 $ | +0,27 % |
+| 9:50 AM | ELF | 114,73 $ | 112,25 $ – 113,69 $ | +0,91 % |
+| 9:50 AM | ELVN | 44,43 $ | 43,39 $ – 44,39 $ | +0,09 % |
+| 9:50 AM | ENOV | 22,06 $ | 21,45 $ – 22,00 $ | +0,25 % |
+| 9:50 AM | EW | 91,03 $ | 89,90 $ – 90,90 $ | +0,14 % |
+| 9:50 AM | FND | 48,47 $ | 47,52 $ – 48,38 $ | +0,19 % |
+| 9:50 AM | FTRE | 25,50 $ | 24,30 $ – 25,38 $ | +0,46 % |
+| 9:50 AM | GILD | 159,40 $ | 156,04 $ – 158,95 $ | +0,29 % |
+| 9:50 AM | GKOS | 186,18 $ | 180,90 $ – 185,00 $ | +0,64 % |
+| 9:50 AM | GTLB | 57,49 $ | 55,77 $ – 57,46 $ | +0,05 % |
+| 9:50 AM | HALO | 128,89 $ | 126,25 $ – 128,77 $ | +0,09 % |
+| 9:50 AM | HLN | 10,06 $ | 9,97 $ – 10,03 $ | +0,30 % |
+| 9:50 AM | HRB | 48,03 $ | 47,26 $ – 47,95 $ | +0,16 % |
+| 9:50 AM | HTFL | 59,50 $ | 57,79 $ – 59,43 $ | +0,12 % |
+| 9:50 AM | JNJ | 268,75 $ | 264,20 $ – 268,42 $ | +0,12 % |
+| 9:50 AM | LFST | 13,36 $ | 13,05 $ – 13,34 $ | +0,15 % |
 
-… und 34 weitere in [orb.json](orb.json).
+… und 133 weitere in [orb.json](orb.json).
 
 Ein späterer Treffer liegt näher am aktuellen Kurs.
 
@@ -151,30 +148,38 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 - 22.10. 16:11 Uhr ET · [Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView](https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss)
 - 22.10. 15:51 Uhr ET · [How much Apple stock does CEO John Ternus actually own?](https://www.thestreet.com/personalities/how-much-apple-stock-does-john-ternus-own?.tsrc=rss)
 
-## Labor live – Mi 28.10.2026, Stand 10:00 Uhr ET
+## Labor live – Mi 28.10.2026, Stand 10:12 Uhr ET
 
-414 Aktien beobachtet · 1.053 Spielgeld-Trades aller Varianten · 979 offen
+414 Aktien beobachtet · 1.598 Spielgeld-Trades aller Varianten · 1.438 offen
 
 | Top-Variante | Trades | offen | € bei 100 €/Trade |
 |---|---|---|---|
-| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 2× normal | 0 | 0 | 0,00 € |
-| Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 2× normal | 0 | 0 | 0,00 € |
-| Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 0 | 0 | 0,00 € |
+| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 2× normal | 2 | 2 | 0,08 € |
+| Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 2× normal | 2 | 2 | -0,73 € |
+| Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 2 | 2 | -0,73 € |
 | Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 0 | 0 | 0,00 € |
-| Stocks in Play (Studie): Top 10 nach Startvolumen · Stopp 10 % ATR · Ziel 2R | 7 | 1 | -4,48 € |
-| Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R | 0 | 0 | 0,00 € |
-| News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 2R · nur bei Volumen über 2× normal | 1 | 1 | 0,04 € |
+| Stocks in Play (Studie): Top 10 nach Startvolumen · Stopp 10 % ATR · Ziel 2R | 7 | 1 | -4,49 € |
+| Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R | 2 | 2 | 0,08 € |
+| News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 2R · nur bei Volumen über 2× normal | 1 | 1 | -0,14 € |
 
 | Aktie | Regel | Einstieg | Stopp | Ziel | Stand | Ergebnis |
 |---|---|---|---|---|---|---|
 | CHKP | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:40 159,58 $ | 159,08 $ | 160,57 $ | Stopp 9:45 Uhr | -0,36 € |
 | HOOD | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:40 91,69 $ | 91,17 $ | 92,72 $ | Stopp 9:40 Uhr | -1,17 € |
 | NXPI | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:40 245,66 $ | 244,76 $ | 247,47 $ | Stopp 9:40 Uhr | -2,03 € |
-| FTV | News-Sprung: Lücke ≥ 2 % | 9:45 66,45 $ | 64,15 $ | 71,04 $ | offen, Kurs 66,51 $ | 0,04 € |
+| FTV | News-Sprung: Lücke ≥ 2 % | 9:45 66,45 $ | 64,15 $ | 71,04 $ | offen, Kurs 66,39 $ | -0,14 € |
 | MDT | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:45 94,65 $ | 94,41 $ | 95,14 $ | Stopp 9:50 Uhr | -0,31 € |
 | RPRX | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:45 64,73 $ | 64,59 $ | 65,03 $ | Ziel 9:50 Uhr | 0,40 € |
 | CECO | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:50 54,31 $ | 53,80 $ | 55,31 $ | Stopp 9:55 Uhr | -0,98 € |
-| SGRY | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:50 23,34 $ | 23,24 $ | 23,55 $ | offen, Kurs 23,35 $ | -0,03 € |
+| SGRY | Stocks in Play (Studie): Top 10 nach Startvolumen | 9:50 23,34 $ | 23,24 $ | 23,55 $ | offen, Kurs 23,34 $ | -0,04 € |
+| HOOD | Erholung: Lücke nach unten ≥ 3 % | 10:05 91,58 $ | 89,15 $ | 96,42 $ | offen, Kurs 91,05 $ | -0,63 € |
+| HOOD | Erholung: Lücke nach unten ≥ 3 % | 10:05 91,58 $ | 89,15 $ | 96,42 $ | offen, Kurs 91,05 $ | -0,63 € |
+| NXPI | Opening-Range-Ausbruch 30 Min | 10:05 247,79 $ | 235,00 $ | 273,38 $ | offen, Kurs 248,37 $ | 0,18 € |
+| NXPI | Ausbruch 30 Min | 10:05 247,79 $ | 235,00 $ | 273,38 $ | offen, Kurs 248,37 $ | 0,18 € |
+| MDT | Opening-Range-Ausbruch 30 Min | 10:10 95,60 $ | 93,04 $ | 100,71 $ | offen, Kurs 95,55 $ | -0,10 € |
+| MDT | Ausbruch 30 Min | 10:10 95,60 $ | 93,04 $ | 100,71 $ | offen, Kurs 95,55 $ | -0,10 € |
+| VFC | Erholung: Lücke nach unten ≥ 3 % | 10:10 16,47 $ | 15,95 $ | 17,50 $ | offen, Kurs 16,46 $ | -0,10 € |
+| VFC | Erholung: Lücke nach unten ≥ 3 % | 10:10 16,47 $ | 15,95 $ | 17,50 $ | offen, Kurs 16,46 $ | -0,10 € |
 
 ## Labor (Testphase, Spielgeld ohne Limit)
 

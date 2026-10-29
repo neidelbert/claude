@@ -122,5 +122,35 @@
     "kind": "failed",
     "id": "orb-30-low-2R-v0-fv2",
     "text": "Nicht mehr bestanden: Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 2× normal (an den neuen Prüftagen nicht mehr im Plus)."
+  },
+  {
+    "date": "2026-10-29",
+    "kind": "passed",
+    "id": "gap-4-v2-2R",
+    "text": "Neu bestanden: News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 2R."
+  },
+  {
+    "date": "2026-10-29",
+    "kind": "passed",
+    "id": "gap-4-v3-1.5R",
+    "text": "Neu bestanden: News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R."
+  },
+  {
+    "date": "2026-10-29",
+    "kind": "passed",
+    "id": "gap-4-v3-3R",
+    "text": "Neu bestanden: News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R."
+  },
+  {
+    "date": "2026-10-29",
+    "kind": "passed",
+    "id": "gap-4-v2-3R",
+    "text": "Neu bestanden: News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 3R."
+  },
+  {
+    "date": "2026-10-29",
+    "kind": "passed",
+    "id": "gap-4-v2-1.5R",
+    "text": "Neu bestanden: News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 1,5R."
   }
 ]

@@ -1,6 +1,6 @@
 # Trader-Übersicht
 
-Stand: Do 29.10. 14:51 Uhr ET (19:51 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
+Stand: Do 29.10. 15:01 Uhr ET (20:01 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
 
 NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
@@ -10,7 +10,7 @@ NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 |---|---|---|
 | Morgen-Scan | Mi 28.10. 08:39 Uhr ET (13:39 Uhr MEZ) | OK – 501 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40689559352)) |
 | ORB-Scan | Mi 28.10. 10:10 Uhr ET (15:10 Uhr MEZ) | OK – 163 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40689559352)) |
-| Labor live | Do 29.10. 14:50 Uhr ET (19:50 Uhr MEZ) | OK – 4.066 Trades, 2.578 offen ([Lauf](https://github.com/neidelbert/claude/actions/runs/40927932269)) |
+| Labor live | Do 29.10. 15:00 Uhr ET (20:00 Uhr MEZ) | OK – 4.066 Trades, 2.566 offen ([Lauf](https://github.com/neidelbert/claude/actions/runs/40927932269)) |
 | Labor | Mi 28.10. 16:20 Uhr ET (21:20 Uhr MEZ) | OK – 1 von 76 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/40745751848)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
@@ -148,42 +148,42 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 - 22.10. 16:11 Uhr ET · [Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView](https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss)
 - 22.10. 15:51 Uhr ET · [How much Apple stock does CEO John Ternus actually own?](https://www.thestreet.com/personalities/how-much-apple-stock-does-john-ternus-own?.tsrc=rss)
 
-## Labor live – Do 29.10.2026, Stand 14:50 Uhr ET
+## Labor live – Do 29.10.2026, Stand 15:00 Uhr ET
 
-414 Aktien beobachtet · 4.066 Spielgeld-Trades aller Varianten · 2.578 offen
+414 Aktien beobachtet · 4.066 Spielgeld-Trades aller Varianten · 2.566 offen
 
 | Top-Variante | Trades | offen | € bei 100 €/Trade |
 |---|---|---|---|
-| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 5 | 5 | 10,57 € |
-| Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 2× normal | 9 | 7 | -4,01 € |
-| Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 24 | 20 | -18,26 € |
-| Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 34 | 32 | -24,04 € |
-| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5× | 38 | 35 | -24,59 € |
+| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 5 | 5 | 11,59 € |
+| Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 2× normal | 9 | 7 | -2,75 € |
+| Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 24 | 20 | -16,40 € |
+| Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 34 | 32 | -19,00 € |
+| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5× | 38 | 35 | -19,57 € |
 | Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · Ziel 2R | 17 | 0 | 3,71 € |
-| Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 2× normal | 9 | 9 | -4,13 € |
+| Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 2× normal | 9 | 9 | -2,23 € |
 
 | Aktie | Regel | Einstieg | Stopp | Ziel | Stand | Ergebnis |
 |---|---|---|---|---|---|---|
 | IREN | Erholung: Lücke nach unten ≥ 3 % | 11:10 27,02 $ | 26,21 $ | 28,63 $ | Stopp 13:55 Uhr | -3,04 € |
-| DPC | Opening-Range-Ausbruch 30 Min | 11:15 29,35 $ | 27,52 $ | 33,03 $ | offen, Kurs 28,68 $ | -2,36 € |
-| DPC | Ausbruch 30 Min | 11:15 29,35 $ | 27,52 $ | 33,03 $ | offen, Kurs 28,68 $ | -2,36 € |
-| GTLB | Erholung: Lücke nach unten ≥ 3 % | 11:15 56,13 $ | 54,35 $ | 59,68 $ | offen, Kurs 56,34 $ | 0,33 € |
-| SGI | Opening-Range-Ausbruch 30 Min | 11:15 64,53 $ | 62,48 $ | 68,63 $ | offen, Kurs 63,92 $ | -1,00 € |
-| SGI | Ausbruch 30 Min | 11:15 64,53 $ | 62,48 $ | 68,63 $ | offen, Kurs 63,92 $ | -1,00 € |
-| INCY | Opening-Range-Ausbruch 30 Min | 11:20 117,09 $ | 111,01 $ | 129,25 $ | offen, Kurs 114,31 $ | -2,43 € |
-| INCY | Ausbruch 30 Min | 11:20 117,09 $ | 111,01 $ | 129,25 $ | offen, Kurs 114,31 $ | -2,43 € |
+| DPC | Opening-Range-Ausbruch 30 Min | 11:15 29,35 $ | 27,52 $ | 33,03 $ | offen, Kurs 28,87 $ | -1,70 € |
+| DPC | Ausbruch 30 Min | 11:15 29,35 $ | 27,52 $ | 33,03 $ | offen, Kurs 28,87 $ | -1,70 € |
+| GTLB | Erholung: Lücke nach unten ≥ 3 % | 11:15 56,13 $ | 54,35 $ | 59,68 $ | offen, Kurs 56,27 $ | 0,20 € |
+| SGI | Opening-Range-Ausbruch 30 Min | 11:15 64,53 $ | 62,48 $ | 68,63 $ | offen, Kurs 64,20 $ | -0,56 € |
+| SGI | Ausbruch 30 Min | 11:15 64,53 $ | 62,48 $ | 68,63 $ | offen, Kurs 64,20 $ | -0,56 € |
+| INCY | Opening-Range-Ausbruch 30 Min | 11:20 117,09 $ | 111,01 $ | 129,25 $ | offen, Kurs 114,38 $ | -2,37 € |
+| INCY | Ausbruch 30 Min | 11:20 117,09 $ | 111,01 $ | 129,25 $ | offen, Kurs 114,38 $ | -2,37 € |
 | SQM | Erholung: Lücke nach unten ≥ 3 % | 11:20 56,95 $ | 56,49 $ | 57,87 $ | Stopp 12:35 Uhr | -0,85 € |
 | HSBC | Opening-Range-Ausbruch 30 Min | 11:25 87,25 $ | 86,60 $ | 88,55 $ | Stopp 13:35 Uhr | -0,79 € |
 | HSBC | Ausbruch 30 Min | 11:25 87,25 $ | 86,60 $ | 88,55 $ | Stopp 13:35 Uhr | -0,79 € |
-| GOOG | Opening-Range-Ausbruch 30 Min | 11:30 285,08 $ | 278,30 $ | 298,65 $ | offen, Kurs 281,14 $ | -1,43 € |
-| GOOG | Ausbruch 30 Min | 11:30 285,08 $ | 278,30 $ | 298,65 $ | offen, Kurs 281,14 $ | -1,43 € |
-| GOOG | Ausbruch 30 Min | 11:30 285,08 $ | 278,30 $ | 298,65 $ | offen, Kurs 281,14 $ | -1,43 € |
-| AMZN | Opening-Range-Ausbruch 30 Min | 11:35 248,91 $ | 241,24 $ | 264,25 $ | offen, Kurs 245,16 $ | -1,56 € |
-| AMZN | Ausbruch 30 Min | 11:35 248,91 $ | 241,24 $ | 264,25 $ | offen, Kurs 245,16 $ | -1,56 € |
-| WDAY | Erholung: Lücke nach unten ≥ 3 % | 11:40 193,27 $ | 190,72 $ | 198,37 $ | offen, Kurs 194,42 $ | 0,55 € |
+| GOOG | Opening-Range-Ausbruch 30 Min | 11:30 285,08 $ | 278,30 $ | 298,65 $ | offen, Kurs 281,39 $ | -1,34 € |
+| GOOG | Ausbruch 30 Min | 11:30 285,08 $ | 278,30 $ | 298,65 $ | offen, Kurs 281,39 $ | -1,34 € |
+| GOOG | Ausbruch 30 Min | 11:30 285,08 $ | 278,30 $ | 298,65 $ | offen, Kurs 281,39 $ | -1,34 € |
+| AMZN | Opening-Range-Ausbruch 30 Min | 11:35 248,91 $ | 241,24 $ | 264,25 $ | offen, Kurs 245,28 $ | -1,51 € |
+| AMZN | Ausbruch 30 Min | 11:35 248,91 $ | 241,24 $ | 264,25 $ | offen, Kurs 245,28 $ | -1,51 € |
+| WDAY | Erholung: Lücke nach unten ≥ 3 % | 11:40 193,27 $ | 190,72 $ | 198,37 $ | offen, Kurs 194,34 $ | 0,51 € |
 | CECO | Opening-Range-Ausbruch 30 Min | 11:55 57,43 $ | 55,05 $ | 62,19 $ | Stopp 14:15 Uhr | -4,19 € |
 | CECO | Ausbruch 30 Min | 11:55 57,43 $ | 55,05 $ | 62,19 $ | Stopp 14:15 Uhr | -4,19 € |
-| HLN | Erholung: Lücke nach unten ≥ 3 % | 12:10 8,56 $ | 8,38 $ | 8,92 $ | offen, Kurs 8,53 $ | -0,39 € |
+| HLN | Erholung: Lücke nach unten ≥ 3 % | 12:10 8,56 $ | 8,38 $ | 8,92 $ | offen, Kurs 8,53 $ | -0,45 € |
 
 ## Labor (Testphase, Spielgeld ohne Limit)
 

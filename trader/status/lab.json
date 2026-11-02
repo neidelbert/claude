@@ -1,9 +1,9 @@
 {
   "part": "lab",
   "ok": true,
-  "summary": "6 von 76 bestanden",
-  "ran_at": "2026-10-30T20:20:20Z",
-  "date_et": "2026-10-30",
+  "summary": "7 von 76 bestanden",
+  "ran_at": "2026-11-02T21:28:20Z",
+  "date_et": "2026-11-02",
   "steps": [
     {
       "name": "Kerzen laden",
@@ -13,20 +13,15 @@
     {
       "name": "Testen",
       "ok": true,
-      "detail": "76 Varianten, 309.158 Trades, 6 bestanden"
-    },
-    {
-      "name": "Wochen-Rückblick",
-      "ok": true,
-      "detail": "2026-W44"
+      "detail": "76 Varianten, 313.635 Trades, 7 bestanden"
     }
   ],
   "data": {
-    "days": 66,
+    "days": 67,
     "symbols": 697,
-    "trades": 309158,
-    "passed": 6,
+    "trades": 313635,
+    "passed": 7,
     "best": "gap-4-v3-2R"
   },
-  "run_url": "https://github.com/neidelbert/claude/actions/runs/41101519065"
+  "run_url": "https://github.com/neidelbert/claude/actions/runs/41528598624"
 }

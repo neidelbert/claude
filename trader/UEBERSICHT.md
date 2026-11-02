@@ -1,6 +1,6 @@
 # Trader-Übersicht
 
-Stand: Fr 30.10. 16:21 Uhr ET (21:21 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
+Stand: Mo 02.11. 16:30 Uhr ET (22:30 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
 
 NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
@@ -10,8 +10,8 @@ NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
 |---|---|---|
 | Morgen-Scan | Mi 28.10. 08:39 Uhr ET (13:39 Uhr MEZ) | OK – 501 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40689559352)) |
 | ORB-Scan | Mi 28.10. 10:10 Uhr ET (15:10 Uhr MEZ) | OK – 163 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40689559352)) |
-| Labor live | Fr 30.10. 16:00 Uhr ET (21:00 Uhr MEZ) | OK – Tagesbilanz: 1.925 Trades ([Lauf](https://github.com/neidelbert/claude/actions/runs/41101519065)) |
-| Labor | Fr 30.10. 16:20 Uhr ET (21:20 Uhr MEZ) | OK – 6 von 76 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/41101519065)) |
+| Labor live | Mo 02.11. 16:28 Uhr ET (22:28 Uhr MEZ) | OK – Tagesbilanz: 4.545 Trades ([Lauf](https://github.com/neidelbert/claude/actions/runs/41528598624)) |
+| Labor | Mo 02.11. 16:28 Uhr ET (22:28 Uhr MEZ) | OK – 7 von 76 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/41528598624)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
 | Test-Push | Do 22.10. 19:24 Uhr ET (01:24 Uhr MESZ) | OK – Push gesendet ([Lauf](https://github.com/neidelbert/claude/actions/runs/39871573010)) |
@@ -148,62 +148,62 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 - 22.10. 16:11 Uhr ET · [Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView](https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss)
 - 22.10. 15:51 Uhr ET · [How much Apple stock does CEO John Ternus actually own?](https://www.thestreet.com/personalities/how-much-apple-stock-does-john-ternus-own?.tsrc=rss)
 
-## Labor live – Fr 30.10.2026, Stand 16:00 Uhr ET
+## Labor live – Mo 02.11.2026, Stand 16:28 Uhr ET
 
-414 Aktien beobachtet · 1.925 Spielgeld-Trades aller Varianten · 0 offen
+414 Aktien beobachtet · 4.545 Spielgeld-Trades aller Varianten · 0 offen
 
 | Top-Variante | Trades | offen | € bei 100 €/Trade |
 |---|---|---|---|
-| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 0 | 0 | 0,00 € |
-| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 2R | 0 | 0 | 0,00 € |
-| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R | 0 | 0 | 0,00 € |
-| Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 2× normal | 14 | 0 | -14,26 € |
-| Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 0 | 0 | 0,00 € |
-| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5× | 18 | 0 | -21,24 € |
-| Stocks in Play (Studie): Top 10 nach Startvolumen · Stopp 10 % ATR · Ziel 2R | 8 | 0 | 1,97 € |
-| Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 2× normal | 4 | 0 | -7,95 € |
+| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 2 | 0 | -1,28 € |
+| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 2R | 3 | 0 | -2,41 € |
+| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R | 2 | 0 | 3,06 € |
+| Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 2× normal | 5 | 0 | -3,62 € |
+| Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 54 | 0 | -55,15 € |
+| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5× | 54 | 0 | -55,15 € |
+| Stocks in Play (Studie): Top 10 nach Startvolumen · Stopp 10 % ATR · Ziel 2R | 7 | 0 | -1,70 € |
+| Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 5 | 0 | -7,23 € |
 
 | Aktie | Regel | Einstieg | Stopp | Ziel | Stand | Ergebnis |
 |---|---|---|---|---|---|---|
-| CDE | Erholung: Lücke nach unten ≥ 3 % | 10:40 13,19 $ | 12,96 $ | 13,65 $ | Stopp 13:40 Uhr | -1,80 € |
-| HPQ | Opening-Range-Ausbruch 30 Min | 10:40 29,29 $ | 26,95 $ | 33,96 $ | Schluss 15:55 Uhr | -1,57 € |
-| HPQ | Ausbruch 30 Min | 10:40 29,29 $ | 26,95 $ | 33,96 $ | Schluss 15:55 Uhr | -1,57 € |
-| MOD | Opening-Range-Ausbruch 30 Min | 10:40 134,43 $ | 126,67 $ | 149,96 $ | Stopp 14:55 Uhr | -5,82 € |
-| TSM | Erholung: Lücke nach unten ≥ 3 % | 10:40 415,25 $ | 411,45 $ | 422,84 $ | Stopp 11:15 Uhr | -0,96 € |
-| AAPL | Opening-Range-Ausbruch 30 Min | 10:45 348,99 $ | 344,13 $ | 358,72 $ | Stopp 14:05 Uhr | -1,44 € |
-| TGTX | Opening-Range-Ausbruch 30 Min | 10:45 60,68 $ | 58,00 $ | 66,03 $ | Schluss 15:55 Uhr | 1,08 € |
-| OLN | Opening-Range-Ausbruch 30 Min | 10:50 17,30 $ | 15,95 $ | 20,00 $ | Schluss 15:55 Uhr | 1,29 € |
-| COIN | Erholung: Lücke nach unten ≥ 3 % | 11:00 140,67 $ | 136,90 $ | 148,20 $ | Schluss 15:55 Uhr | 0,66 € |
-| PEP | Opening-Range-Ausbruch 30 Min | 11:05 137,67 $ | 136,35 $ | 140,30 $ | Schluss 15:55 Uhr | -0,16 € |
-| AMZN | Opening-Range-Ausbruch 30 Min | 11:10 240,73 $ | 229,36 $ | 263,46 $ | Schluss 15:55 Uhr | -0,13 € |
-| AMZN | Ausbruch 30 Min | 11:10 240,73 $ | 229,36 $ | 263,46 $ | Schluss 15:55 Uhr | -0,13 € |
-| GOOG | Opening-Range-Ausbruch 30 Min | 11:10 281,01 $ | 277,62 $ | 287,79 $ | Stopp 12:55 Uhr | -1,26 € |
-| MSTR | Opening-Range-Ausbruch 30 Min | 11:10 132,57 $ | 124,10 $ | 149,50 $ | Schluss 15:55 Uhr | -1,67 € |
-| CAT | Erholung: Lücke nach unten ≥ 3 % | 11:25 633,17 $ | 621,85 $ | 655,80 $ | Stopp 14:25 Uhr | -1,84 € |
-| CROX | Opening-Range-Ausbruch 30 Min | 11:30 153,64 $ | 150,26 $ | 160,39 $ | Stopp 14:10 Uhr | -2,25 € |
-| EXEL | Opening-Range-Ausbruch 30 Min | 12:00 72,11 $ | 67,50 $ | 81,33 $ | Schluss 15:55 Uhr | -3,41 € |
-| EXEL | Ausbruch 30 Min | 12:00 72,11 $ | 67,50 $ | 81,33 $ | Schluss 15:55 Uhr | -3,41 € |
-| MTZ | Erholung: Lücke nach unten ≥ 3 % | 12:05 184,35 $ | 169,00 $ | 215,04 $ | Schluss 15:55 Uhr | 0,74 € |
-| AMZN | Erholung: Lücke nach unten ≥ 3 % | 12:10 239,00 $ | 229,36 $ | 258,27 $ | Schluss 15:55 Uhr | 0,59 € |
+| INTU | Ausbruch 30 Min | 11:05 351,35 $ | 336,93 $ | 380,18 $ | Schluss 15:55 Uhr | 0,35 € |
+| PDD | Opening-Range-Ausbruch 30 Min | 11:05 83,08 $ | 80,82 $ | 87,60 $ | Schluss 15:55 Uhr | -1,53 € |
+| PDD | Ausbruch 30 Min | 11:05 83,08 $ | 80,82 $ | 87,60 $ | Schluss 15:55 Uhr | -1,53 € |
+| LYB | Opening-Range-Ausbruch 30 Min | 11:10 67,04 $ | 65,20 $ | 70,72 $ | Schluss 15:55 Uhr | -0,65 € |
+| LYB | Ausbruch 30 Min | 11:10 67,04 $ | 65,20 $ | 70,72 $ | Schluss 15:55 Uhr | -0,65 € |
+| ZTS | Opening-Range-Ausbruch 30 Min | 11:10 82,22 $ | 79,89 $ | 86,88 $ | Schluss 15:55 Uhr | 0,95 € |
+| ZTS | Ausbruch 30 Min | 11:10 82,22 $ | 79,89 $ | 86,88 $ | Schluss 15:55 Uhr | 0,95 € |
+| PHM | Opening-Range-Ausbruch 30 Min | 11:15 129,57 $ | 126,11 $ | 136,50 $ | Schluss 15:55 Uhr | 1,55 € |
+| PHM | Ausbruch 30 Min | 11:15 129,57 $ | 126,11 $ | 136,50 $ | Schluss 15:55 Uhr | 1,55 € |
+| WMT | Opening-Range-Ausbruch 30 Min | 11:25 126,01 $ | 124,14 $ | 129,76 $ | Schluss 15:55 Uhr | 1,42 € |
+| WMT | Ausbruch 30 Min | 11:25 126,01 $ | 124,14 $ | 129,76 $ | Schluss 15:55 Uhr | 1,42 € |
+| ABNB | Opening-Range-Ausbruch 30 Min | 11:30 172,48 $ | 166,50 $ | 184,42 $ | Schluss 15:55 Uhr | -0,81 € |
+| ABNB | Ausbruch 30 Min | 11:30 172,48 $ | 166,50 $ | 184,42 $ | Schluss 15:55 Uhr | -0,81 € |
+| BNL | Opening-Range-Ausbruch 30 Min | 11:30 17,27 $ | 17,00 $ | 17,81 $ | Schluss 15:55 Uhr | 1,87 € |
+| BNL | Ausbruch 30 Min | 11:30 17,27 $ | 17,00 $ | 17,81 $ | Schluss 15:55 Uhr | 1,87 € |
+| AXSM | Erholung: Lücke nach unten ≥ 3 % | 11:35 129,22 $ | 123,00 $ | 141,66 $ | Schluss 15:55 Uhr | 6,60 € |
+| ISRG | Opening-Range-Ausbruch 30 Min | 11:35 444,14 $ | 437,07 $ | 458,29 $ | Stopp 15:20 Uhr | -1,64 € |
+| ISRG | Ausbruch 30 Min | 11:35 444,14 $ | 437,07 $ | 458,29 $ | Stopp 15:20 Uhr | -1,64 € |
+| KIM | Opening-Range-Ausbruch 30 Min | 11:55 24,89 $ | 24,52 $ | 25,62 $ | Schluss 15:55 Uhr | 0,74 € |
+| KIM | Ausbruch 30 Min | 11:55 24,89 $ | 24,52 $ | 25,62 $ | Schluss 15:55 Uhr | 0,74 € |
 
 ## Labor (Testphase, Spielgeld ohne Limit)
 
-697 Aktien · 66 Handelstage · Lerntage Do 30.07.2026 bis Mi 30.09.2026 · **Prüftage Do 01.10.2026 bis Fr 30.10.2026** · 76 Varianten
+697 Aktien · 67 Handelstage · Lerntage Do 30.07.2026 bis Do 01.10.2026 · **Prüftage Fr 02.10.2026 bis Mo 02.11.2026** · 76 Varianten
 
 | # | Variante | Prüftage: Trades | Treffer | Ø je Trade | € bei 100 €/Trade | nach Gebühren | Zufall? | bestanden |
 |---|---|---|---|---|---|---|---|---|
-| 1 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 37 | 49 % | +0,24 % | 9,07 € | -64,93 € | möglich | **ja** |
-| 2 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 2R | 42 | 48 % | +0,17 % | 7,32 € | -76,68 € | möglich | **ja** |
-| 3 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R | 37 | 49 % | +0,07 % | 2,75 € | -71,25 € | möglich | **ja** |
-| 4 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R | 37 | 49 % | +0,06 % | 2,07 € | -71,93 € | möglich | **ja** |
-| 5 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 3R | 42 | 48 % | +0,04 % | 1,89 € | -82,11 € | möglich | **ja** |
-| 6 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 1,5R | 42 | 48 % | +0,01 % | 0,20 € | -83,80 € | möglich | **ja** |
-| 7 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 2× normal | 119 | 61 % | +0,87 % | 104,03 € | -133,97 € | unwahrscheinlich | nein |
-| 8 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 4× normal | 52 | 64 % | +0,72 % | 37,56 € | -66,44 € | unwahrscheinlich | nein |
-| 9 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 298 | 51 % | +0,47 % | 139,87 € | -456,13 € | unwahrscheinlich | nein |
-| 10 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R | 335 | 50 % | +0,36 % | 121,07 € | -548,93 € | unwahrscheinlich | nein |
-| 11 | Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 566 | 51 % | +0,25 % | 143,56 € | -988,43 € | unwahrscheinlich | nein |
-| 12 | Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 1,5R | 566 | 51 % | +0,24 % | 133,41 € | -998,59 € | unwahrscheinlich | nein |
+| 1 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 36 | 50 % | +0,46 % | 16,53 € | -55,47 € | möglich | **ja** |
+| 2 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R | 36 | 50 % | +0,40 % | 14,54 € | -57,46 € | möglich | **ja** |
+| 3 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 2R | 42 | 48 % | +0,33 % | 13,64 € | -70,36 € | möglich | **ja** |
+| 4 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R | 36 | 50 % | +0,27 % | 9,52 € | -62,48 € | möglich | **ja** |
+| 5 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 1,5R | 42 | 48 % | +0,26 % | 10,87 € | -73,13 € | möglich | **ja** |
+| 6 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 3R | 42 | 48 % | +0,20 % | 8,21 € | -75,79 € | möglich | **ja** |
+| 7 | News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 2R · nur bei Volumen über 2× normal | 102 | 46 % | +0,00 % | 0,06 € | -203,94 € | möglich | **ja** |
+| 8 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 2× normal | 118 | 60 % | +0,87 % | 102,94 € | -133,06 € | unwahrscheinlich | nein |
+| 9 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 4× normal | 53 | 60 % | +0,71 % | 37,44 € | -68,56 € | möglich | nein |
+| 10 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 299 | 50 % | +0,47 % | 139,98 € | -458,02 € | unwahrscheinlich | nein |
+| 11 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R | 335 | 49 % | +0,36 % | 120,59 € | -549,41 € | unwahrscheinlich | nein |
+| 12 | Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 621 | 49 % | +0,15 % | 90,69 € | -1.151,31 € | möglich | nein |
 
 So liest du das: Ein Trade ist ein Kauf und Verkauf am selben Tag. „Treffer“ ist der Anteil der Trades mit Plus. „€ bei 100 €/Trade“ ist die Summe, wenn jeder Trade mit 100 € gemacht worden wäre. „Zufall möglich“ heißt: zu wenige oder zu schwankende Trades, das Ergebnis kann Glück sein.
 

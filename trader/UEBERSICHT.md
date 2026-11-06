@@ -1,8 +1,8 @@
 # Trader-Übersicht
 
-Stand: Do 05.11. 16:22 Uhr ET (22:22 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
+Stand: Fr 06.11. 13:59 Uhr ET (19:59 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
 
-NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
+NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
 ## Systemstatus
 
@@ -10,7 +10,7 @@ NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
 |---|---|---|
 | Morgen-Scan | Mi 28.10. 08:39 Uhr ET (13:39 Uhr MEZ) | OK – 501 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40689559352)) |
 | ORB-Scan | Mi 28.10. 10:10 Uhr ET (15:10 Uhr MEZ) | OK – 163 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40689559352)) |
-| Labor live | Do 05.11. 16:00 Uhr ET (22:00 Uhr MEZ) | OK – Tagesbilanz: 1.722 Trades ([Lauf](https://github.com/neidelbert/claude/actions/runs/42095621632)) |
+| Labor live | Fr 06.11. 13:59 Uhr ET (19:59 Uhr MEZ) | OK – Börsenstart gemeldet ([Lauf](https://github.com/neidelbert/claude/actions/runs/42275552374)) |
 | Labor | Do 05.11. 16:20 Uhr ET (22:20 Uhr MEZ) | OK – 12 von 76 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/42095621632)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
@@ -148,43 +148,43 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 - 22.10. 16:11 Uhr ET · [Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView](https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss)
 - 22.10. 15:51 Uhr ET · [How much Apple stock does CEO John Ternus actually own?](https://www.thestreet.com/personalities/how-much-apple-stock-does-john-ternus-own?.tsrc=rss)
 
-## Labor live – Do 05.11.2026, Stand 16:00 Uhr ET
+## Labor live – Fr 06.11.2026, Stand 13:59 Uhr ET
 
-414 Aktien beobachtet · 1.722 Spielgeld-Trades aller Varianten · 0 offen
+414 Aktien beobachtet · 5.021 Spielgeld-Trades aller Varianten · 3.636 offen
 
 | Top-Variante | Trades | offen | € bei 100 €/Trade |
 |---|---|---|---|
-| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 2R | 0 | 0 | 0,00 € |
-| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 1,5R | 0 | 0 | 0,00 € |
-| News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 2R · nur bei Volumen über 2× normal | 5 | 0 | -3,11 € |
-| Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 2× normal | 15 | 0 | -30,89 € |
-| Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 0 | 0 | 0,00 € |
-| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5× | 25 | 0 | -50,60 € |
-| Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · Ziel 2R | 10 | 0 | -3,61 € |
-| Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 3 | 0 | -7,26 € |
+| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 2R | 8 | 2 | 14,93 € |
+| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 1,5R | 8 | 2 | 8,40 € |
+| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 3 | 1 | 33,26 € |
+| Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 4× normal | 6 | 5 | -5,01 € |
+| Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 33 | 33 | 16,47 € |
+| Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 2R · Volumen ≥ 1,5× | 33 | 28 | 15,67 € |
+| Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 4 | 0 | -3,45 € |
+| Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 5 | 5 | 12,50 € |
 
 | Aktie | Regel | Einstieg | Stopp | Ziel | Stand | Ergebnis |
 |---|---|---|---|---|---|---|
-| EVRG | Opening-Range-Ausbruch 30 Min | 10:20 89,09 $ | 87,40 $ | 92,48 $ | Stopp 13:50 Uhr | -1,95 € |
-| CAI | Erholung: Lücke nach unten ≥ 3 % | 10:25 26,72 $ | 25,75 $ | 28,67 $ | Stopp 10:55 Uhr | -3,69 € |
-| PANW | Erholung: Lücke nach unten ≥ 3 % | 10:25 319,93 $ | 312,12 $ | 335,55 $ | Schluss 15:55 Uhr | -1,13 € |
-| BROS | Erholung: Lücke nach unten ≥ 3 % | 10:30 36,95 $ | 35,80 $ | 39,25 $ | Stopp 11:15 Uhr | -3,16 € |
-| DKNG | Opening-Range-Ausbruch 30 Min | 10:35 23,54 $ | 23,02 $ | 24,57 $ | Stopp 12:20 Uhr | -2,24 € |
-| PCOR | Opening-Range-Ausbruch 30 Min | 10:35 79,45 $ | 76,14 $ | 86,07 $ | Stopp 12:25 Uhr | -4,21 € |
-| RYN | Opening-Range-Ausbruch 30 Min | 10:45 21,44 $ | 20,60 $ | 23,12 $ | Schluss 15:55 Uhr | 1,91 € |
-| TEAM | Opening-Range-Ausbruch 30 Min | 10:45 187,23 $ | 180,81 $ | 200,06 $ | Schluss 15:55 Uhr | -1,91 € |
-| ALL | Opening-Range-Ausbruch 30 Min | 11:00 280,54 $ | 273,18 $ | 295,25 $ | Stopp 12:50 Uhr | -2,67 € |
-| PG | Opening-Range-Ausbruch 30 Min | 11:00 170,61 $ | 168,66 $ | 174,50 $ | Stopp 11:20 Uhr | -1,19 € |
-| AMD | Erholung: Lücke nach unten ≥ 3 % | 11:20 424,41 $ | 403,71 $ | 465,81 $ | Schluss 15:55 Uhr | -2,59 € |
-| NET | Erholung: Lücke nach unten ≥ 3 % | 11:20 241,68 $ | 233,62 $ | 257,80 $ | Schluss 15:55 Uhr | 1,17 € |
-| AVGO | Erholung: Lücke nach unten ≥ 3 % | 11:25 305,55 $ | 292,80 $ | 331,04 $ | Schluss 15:55 Uhr | -3,13 € |
-| DELL | Erholung: Lücke nach unten ≥ 3 % | 11:25 333,68 $ | 317,50 $ | 366,03 $ | Schluss 15:55 Uhr | -4,02 € |
-| MU | Erholung: Lücke nach unten ≥ 3 % | 11:25 707,46 $ | 655,86 $ | 810,67 $ | Schluss 15:55 Uhr | -5,30 € |
-| ANET | Erholung: Lücke nach unten ≥ 3 % | 11:30 165,21 $ | 158,34 $ | 178,95 $ | Schluss 15:55 Uhr | -2,57 € |
-| ARM | Erholung: Lücke nach unten ≥ 3 % | 11:30 170,84 $ | 163,13 $ | 186,25 $ | Schluss 15:55 Uhr | -0,54 € |
-| P | Erholung: Lücke nach unten ≥ 3 % | 11:30 96,86 $ | 91,73 $ | 107,12 $ | Schluss 15:55 Uhr | -2,21 € |
-| ASML | Erholung: Lücke nach unten ≥ 3 % | 11:35 1.399,82 $ | 1.359,16 $ | 1.481,14 $ | Schluss 15:55 Uhr | -2,18 € |
-| QCOM | Erholung: Lücke nach unten ≥ 3 % | 11:55 153,92 $ | 148,25 $ | 165,25 $ | Schluss 15:55 Uhr | 4,35 € |
+| DVN | Ausbruch 30 Min | 10:40 42,58 $ | 40,60 $ | 46,53 $ | offen, Kurs 42,19 $ | -0,97 € |
+| SU | Opening-Range-Ausbruch 30 Min | 10:40 69,37 $ | 68,78 $ | 70,55 $ | offen, Kurs 69,06 $ | -0,50 € |
+| SU | Ausbruch 30 Min | 10:40 69,37 $ | 68,25 $ | 71,62 $ | offen, Kurs 69,06 $ | -0,50 € |
+| QCOM | Opening-Range-Ausbruch 30 Min | 10:50 165,97 $ | 162,16 $ | 173,59 $ | offen, Kurs 165,90 $ | -0,09 € |
+| QCOM | Ausbruch 30 Min | 10:50 165,97 $ | 159,11 $ | 179,68 $ | offen, Kurs 165,90 $ | -0,09 € |
+| CNX | Opening-Range-Ausbruch 30 Min | 10:55 35,73 $ | 35,30 $ | 36,60 $ | Stopp 12:20 Uhr | -1,29 € |
+| CNX | Ausbruch 30 Min | 10:55 35,73 $ | 34,95 $ | 37,29 $ | offen, Kurs 35,19 $ | -1,58 € |
+| SKM | Opening-Range-Ausbruch 30 Min | 11:25 31,32 $ | 31,00 $ | 31,97 $ | offen, Kurs 31,30 $ | -0,12 € |
+| SKM | Ausbruch 30 Min | 11:25 31,32 $ | 30,71 $ | 32,54 $ | offen, Kurs 31,30 $ | -0,12 € |
+| SKM | Ausbruch 30 Min | 11:25 31,32 $ | 30,71 $ | 32,54 $ | offen, Kurs 31,30 $ | -0,12 € |
+| MC | Erholung: Lücke nach unten ≥ 3 % | 11:35 57,13 $ | 52,39 $ | 66,61 $ | offen, Kurs 56,96 $ | -0,34 € |
+| TEAM | Erholung: Lücke nach unten ≥ 3 % | 11:35 158,79 $ | 151,50 $ | 173,37 $ | offen, Kurs 155,74 $ | -1,97 € |
+| ELF | Opening-Range-Ausbruch 30 Min | 11:40 116,94 $ | 111,09 $ | 128,64 $ | offen, Kurs 118,83 $ | 1,57 € |
+| ELF | Ausbruch 30 Min | 11:40 116,94 $ | 105,36 $ | 140,09 $ | offen, Kurs 118,83 $ | 1,57 € |
+| MP | Opening-Range-Ausbruch 30 Min | 11:50 35,31 $ | 34,54 $ | 36,86 $ | offen, Kurs 35,41 $ | 0,21 € |
+| MP | Ausbruch 30 Min | 11:50 35,31 $ | 33,82 $ | 38,30 $ | offen, Kurs 35,41 $ | 0,21 € |
+| U | Opening-Range-Ausbruch 30 Min | 11:55 52,61 $ | 50,78 $ | 56,25 $ | offen, Kurs 52,66 $ | 0,05 € |
+| U | Ausbruch 30 Min | 11:55 52,61 $ | 49,07 $ | 59,68 $ | offen, Kurs 52,66 $ | 0,05 € |
+| U | Ausbruch 30 Min | 11:55 52,61 $ | 49,07 $ | 59,68 $ | offen, Kurs 52,66 $ | 0,05 € |
+| BKD | Erholung: Lücke nach unten ≥ 3 % | 12:20 9,14 $ | 8,85 $ | 9,74 $ | offen, Kurs 9,24 $ | 0,95 € |
 
 ## Labor (Testphase, Spielgeld ohne Limit)
 

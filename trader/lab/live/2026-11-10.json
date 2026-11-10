@@ -232,7 +232,11 @@
    ],
    [
     57,
-    141.06
+    141.21
+   ],
+   [
+    59,
+    141.105
    ]
   ],
   "BKR": [
@@ -471,6 +475,10 @@
    [
     58,
     47.825
+   ],
+   [
+    59,
+    47.82
    ]
   ],
   "C": [
@@ -709,6 +717,10 @@
    [
     58,
     122.275
+   ],
+   [
+    59,
+    122.38
    ]
   ],
   "CAT": [
@@ -947,6 +959,10 @@
    [
     58,
     582.58
+   ],
+   [
+    59,
+    582.34
    ]
   ],
   "ELVN": [
@@ -1185,6 +1201,10 @@
    [
     58,
     50.87
+   ],
+   [
+    59,
+    50.94
    ]
   ],
   "EMBJ": [
@@ -1422,7 +1442,11 @@
    ],
    [
     58,
-    82.76
+    82.755
+   ],
+   [
+    59,
+    82.78
    ]
   ],
   "HRB": [
@@ -1660,7 +1684,11 @@
    ],
    [
     58,
-    50.57
+    50.53
+   ],
+   [
+    59,
+    50.525
    ]
   ],
   "HWM": [
@@ -1890,7 +1918,7 @@
    ],
    [
     56,
-    217.49
+    217.52
    ],
    [
     57,
@@ -1899,6 +1927,10 @@
    [
     58,
     218.12
+   ],
+   [
+    59,
+    218.09
    ]
   ],
   "LCID": [
@@ -2137,6 +2169,10 @@
    [
     58,
     3.895
+   ],
+   [
+    59,
+    3.885
    ]
   ],
   "LYB": [
@@ -2362,11 +2398,11 @@
    ],
    [
     55,
-    59.95
+    59.96
    ],
    [
     56,
-    59.915
+    59.92
    ],
    [
     57,
@@ -2375,6 +2411,10 @@
    [
     58,
     59.93
+   ],
+   [
+    59,
+    59.77
    ]
   ],
   "MARA": [
@@ -2613,6 +2653,10 @@
    [
     58,
     7.125
+   ],
+   [
+    59,
+    7.13
    ]
   ],
   "SE": [
@@ -2851,6 +2895,10 @@
    [
     58,
     77.7
+   ],
+   [
+    59,
+    77.635
    ]
   ],
   "SMCI": [
@@ -3089,6 +3137,10 @@
    [
     58,
     27.585
+   ],
+   [
+    59,
+    27.58
    ]
   ],
   "TGTX": [
@@ -3327,6 +3379,10 @@
    [
     58,
     63.86
+   ],
+   [
+    59,
+    63.985
    ]
   ],
   "TS": [
@@ -3565,6 +3621,10 @@
    [
     58,
     60.69
+   ],
+   [
+    59,
+    60.63
    ]
   ],
   "USAR": [
@@ -3803,10 +3863,14 @@
    [
     58,
     7.815
+   ],
+   [
+    59,
+    7.8001
    ]
   ]
  },
- "as_of": "14:25 Uhr ET",
+ "as_of": "14:30 Uhr ET",
  "symbols": 414,
  "failed": 0,
  "focus": [
@@ -3833,127 +3897,127 @@
   "orb-15-mid-1R-v0": {
    "n": 196,
    "open": 30,
-   "eur": -92.12,
-   "wins": 89
+   "eur": -91.58,
+   "wins": 90
   },
   "orb-15-mid-1.5R-v0": {
    "n": 196,
    "open": 47,
-   "eur": -109.61,
-   "wins": 75
+   "eur": -109.49,
+   "wins": 76
   },
   "orb-15-mid-2R-v0": {
    "n": 196,
    "open": 62,
-   "eur": -139.09,
-   "wins": 67
+   "eur": -139.82,
+   "wins": 68
   },
   "orb-15-low-1R-v0": {
    "n": 196,
    "open": 105,
-   "eur": -140.24,
-   "wins": 83
+   "eur": -139.13,
+   "wins": 85
   },
   "orb-15-low-1.5R-v0": {
    "n": 196,
-   "open": 125,
-   "eur": -156.87,
-   "wins": 79
+   "open": 124,
+   "eur": -156.81,
+   "wins": 81
   },
   "orb-15-low-2R-v0": {
    "n": 196,
    "open": 128,
-   "eur": -156.5,
-   "wins": 79
+   "eur": -156.84,
+   "wins": 81
   },
   "orb-30-mid-1R-v0": {
    "n": 149,
    "open": 41,
-   "eur": -123.98,
+   "eur": -124.13,
    "wins": 58
   },
   "orb-30-mid-1.5R-v0": {
    "n": 149,
    "open": 54,
-   "eur": -123.99,
+   "eur": -124.16,
    "wins": 57
   },
   "orb-30-mid-2R-v0": {
    "n": 149,
    "open": 61,
-   "eur": -128.96,
+   "eur": -129.15,
    "wins": 54
   },
   "orb-30-low-1R-v0": {
    "n": 149,
    "open": 102,
-   "eur": -147.2,
+   "eur": -146.18,
    "wins": 62
   },
   "orb-30-low-1.5R-v0": {
    "n": 149,
-   "open": 107,
-   "eur": -142.55,
+   "open": 106,
+   "eur": -141.61,
    "wins": 62
   },
   "orb-30-low-2R-v0": {
    "n": 149,
    "open": 110,
-   "eur": -143.87,
+   "eur": -143.32,
    "wins": 62
   },
   "orb-30-low-2R-v0-ffrueh": {
    "n": 147,
    "open": 108,
-   "eur": -143.75,
+   "eur": -143.21,
    "wins": 62
   },
   "orb-15-low-2R-v0-ffrueh": {
    "n": 194,
    "open": 126,
-   "eur": -156.38,
-   "wins": 79
+   "eur": -156.73,
+   "wins": 81
   },
   "orb-15-mid-1R-v1.5": {
    "n": 23,
    "open": 2,
-   "eur": -9.47,
+   "eur": -9.51,
    "wins": 12
   },
   "orb-15-mid-1.5R-v1.5": {
    "n": 23,
    "open": 4,
-   "eur": -14.63,
+   "eur": -14.65,
    "wins": 10
   },
   "orb-15-mid-2R-v1.5": {
    "n": 23,
    "open": 8,
-   "eur": -27.28,
+   "eur": -27.76,
    "wins": 9
   },
   "orb-15-low-1R-v1.5": {
    "n": 23,
    "open": 13,
-   "eur": -18.39,
+   "eur": -18.67,
    "wins": 10
   },
   "orb-15-low-1.5R-v1.5": {
    "n": 23,
    "open": 15,
-   "eur": -25.04,
+   "eur": -25.53,
    "wins": 10
   },
   "orb-15-low-2R-v1.5": {
    "n": 23,
    "open": 15,
-   "eur": -25.04,
+   "eur": -25.53,
    "wins": 10
   },
   "orb-30-mid-1R-v1.5": {
    "n": 14,
    "open": 1,
-   "eur": -34.06,
+   "eur": -34.04,
    "wins": 3
   },
   "orb-30-mid-1.5R-v1.5": {
@@ -3965,67 +4029,67 @@
   "orb-30-mid-2R-v1.5": {
    "n": 14,
    "open": 3,
-   "eur": -34.15,
+   "eur": -34.25,
    "wins": 3
   },
   "orb-30-low-1R-v1.5": {
    "n": 14,
    "open": 9,
-   "eur": -33.95,
+   "eur": -34.47,
    "wins": 4
   },
   "orb-30-low-1.5R-v1.5": {
    "n": 14,
    "open": 9,
-   "eur": -33.95,
+   "eur": -34.47,
    "wins": 4
   },
   "orb-30-low-2R-v1.5": {
    "n": 14,
    "open": 9,
-   "eur": -33.95,
+   "eur": -34.47,
    "wins": 4
   },
   "orbmkt-30-low-1.5R-v1.5": {
    "n": 12,
    "open": 7,
-   "eur": -35.85,
+   "eur": -36.37,
    "wins": 2
   },
   "orbmkt-30-low-2R-v1.5": {
    "n": 12,
    "open": 7,
-   "eur": -35.85,
+   "eur": -36.37,
    "wins": 2
   },
   "orb-15-low-2R-v0-fv2": {
    "n": 13,
    "open": 10,
-   "eur": -11.69,
+   "eur": -12.18,
    "wins": 7
   },
   "bounce-rsi30-daylow-1R": {
    "n": 10,
    "open": 5,
-   "eur": -7.69,
+   "eur": -7.8,
    "wins": 4
   },
   "bounce-rsi30-daylow-2R": {
    "n": 10,
    "open": 6,
-   "eur": -7.95,
+   "eur": -8.08,
    "wins": 4
   },
   "bounce-rsi30-pct1.5-1R": {
    "n": 10,
    "open": 1,
-   "eur": 0.35,
+   "eur": 0.47,
    "wins": 5
   },
   "bounce-rsi30-pct1.5-2R": {
    "n": 10,
    "open": 3,
-   "eur": -4.14,
+   "eur": -4.37,
    "wins": 3
   },
   "sip-top20-atr0.1-eod": {
@@ -4043,7 +4107,7 @@
   "sip-top20-atr0.2-eod": {
    "n": 12,
    "open": 1,
-   "eur": -8.08,
+   "eur": -8.15,
    "wins": 1
   },
   "sip-top20-atr0.2-2R": {
@@ -4055,19 +4119,19 @@
   "orbrank-top20-1.5R": {
    "n": 8,
    "open": 6,
-   "eur": -15.13,
+   "eur": -15.53,
    "wins": 4
   },
   "orbrank-top20-2R": {
    "n": 8,
    "open": 6,
-   "eur": -15.13,
+   "eur": -15.53,
    "wins": 4
   },
   "orbrank-top20-2R-ffrueh": {
    "n": 8,
    "open": 6,
-   "eur": -15.13,
+   "eur": -15.53,
    "wins": 4
   },
   "sip-top10-atr0.1-eod": {
@@ -4085,7 +4149,7 @@
   "sip-top10-atr0.2-eod": {
    "n": 7,
    "open": 1,
-   "eur": -3.65,
+   "eur": -3.72,
    "wins": 1
   },
   "sip-top10-atr0.2-2R": {
@@ -4097,55 +4161,55 @@
   "bounce-gapdown3-daylow-1R": {
    "n": 9,
    "open": 3,
-   "eur": -25.95,
+   "eur": -26.09,
    "wins": 2
   },
   "bounce-gapdown3-daylow-2R": {
    "n": 9,
    "open": 3,
-   "eur": -25.95,
+   "eur": -26.09,
    "wins": 2
   },
   "bounce-gapdown3-pct1.5-1R": {
    "n": 9,
    "open": 2,
-   "eur": -10.43,
+   "eur": -10.57,
    "wins": 2
   },
   "bounce-gapdown3-pct1.5-2R": {
    "n": 9,
    "open": 2,
-   "eur": -10.43,
+   "eur": -10.57,
    "wins": 2
   },
   "orb-30-low-2R-v0-fv2": {
    "n": 8,
    "open": 6,
-   "eur": -21.43,
+   "eur": -22.06,
    "wins": 3
   },
   "orbrank-top20-2R-fv2": {
    "n": 7,
    "open": 5,
-   "eur": -16.57,
+   "eur": -16.95,
    "wins": 3
   },
   "bounce-gapdown3-daylow-2R-ffrueh": {
    "n": 7,
    "open": 1,
-   "eur": -25.95,
+   "eur": -26.04,
    "wins": 1
   },
   "orbrank-top10-1.5R": {
    "n": 5,
    "open": 3,
-   "eur": -12.42,
+   "eur": -12.59,
    "wins": 2
   },
   "orbrank-top10-2R": {
    "n": 5,
    "open": 3,
-   "eur": -12.42,
+   "eur": -12.59,
    "wins": 2
   },
   "sip-top20-atr0.1-eod-ffrueh": {
@@ -4193,13 +4257,13 @@
   "orb-30-low-2R-v0-fv4": {
    "n": 2,
    "open": 1,
-   "eur": -8.22,
+   "eur": -8.2,
    "wins": 1
   },
   "orb-15-low-2R-v0-fv4": {
    "n": 3,
    "open": 2,
-   "eur": -5.05,
+   "eur": -5.01,
    "wins": 2
   },
   "gap-2-v2-2R-fv4": {
@@ -4235,18 +4299,18 @@
   "orbrank-top20-2R-fv4": {
    "n": 2,
    "open": 1,
-   "eur": -8.22,
+   "eur": -8.2,
    "wins": 1
   },
   "bounce-gapdown3-daylow-2R-fv2": {
    "n": 2,
    "open": 1,
-   "eur": -4.96,
+   "eur": -5.05,
    "wins": 1
   }
  },
  "n_trades": 2906,
- "n_open": 1388,
+ "n_open": 1386,
  "lukas": [],
  "lukas_n": 0,
  "accounts": {
@@ -4255,84 +4319,84 @@
    77.65
   ],
   "orb-15-mid-1.5R-v0": [
-   98.83,
-   83.36
+   98.84,
+   83.37
   ],
   "orb-15-mid-2R-v0": [
    98.18,
    88.85
   ],
   "orb-15-low-1R-v0": [
-   99.47,
-   89.98
+   99.43,
+   89.97
   ],
   "orb-15-low-1.5R-v0": [
-   99.38,
-   91.88
+   99.34,
+   91.89
   ],
   "orb-15-low-2R-v0": [
-   99.38,
-   91.88
+   99.34,
+   91.89
   ],
   "orb-30-mid-1R-v0": [
-   97.85,
-   82.48
+   97.89,
+   82.51
   ],
   "orb-30-mid-1.5R-v0": [
-   97.85,
-   82.48
+   97.89,
+   82.51
   ],
   "orb-30-mid-2R-v0": [
-   97.85,
-   82.48
+   97.89,
+   82.51
   ],
   "orb-30-low-1R-v0": [
-   97.45,
-   90.56
+   97.5,
+   90.61
   ],
   "orb-30-low-1.5R-v0": [
-   97.45,
-   90.56
+   97.5,
+   90.61
   ],
   "orb-30-low-2R-v0": [
-   97.45,
-   90.56
+   97.5,
+   90.61
   ],
   "orb-30-low-2R-v0-ffrueh": [
-   97.45,
-   90.56
+   97.5,
+   90.61
   ],
   "orb-15-low-2R-v0-ffrueh": [
-   99.38,
-   91.88
+   99.34,
+   91.89
   ],
   "orb-15-mid-1R-v1.5": [
    101.85,
-   89.56
+   89.55
   ],
   "orb-15-mid-1.5R-v1.5": [
-   99.83,
-   89.51
+   99.82,
+   89.5
   ],
   "orb-15-mid-2R-v1.5": [
-   99.83,
-   89.56
+   99.81,
+   89.55
   ],
   "orb-15-low-1R-v1.5": [
-   99.71,
-   91.26
+   99.73,
+   91.29
   ],
   "orb-15-low-1.5R-v1.5": [
-   99.71,
-   91.26
+   99.73,
+   91.29
   ],
   "orb-15-low-2R-v1.5": [
-   99.71,
-   91.26
+   99.73,
+   91.29
   ],
   "orb-30-mid-1R-v1.5": [
    96.89,
-   86.17
+   86.18
   ],
   "orb-30-mid-1.5R-v1.5": [
    96.8,
@@ -4343,36 +4407,36 @@
    86.08
   ],
   "orb-30-low-1R-v1.5": [
-   96.79,
-   87.93
+   96.83,
+   87.94
   ],
   "orb-30-low-1.5R-v1.5": [
-   96.79,
-   87.93
+   96.83,
+   87.94
   ],
   "orb-30-low-2R-v1.5": [
-   96.79,
-   87.93
+   96.83,
+   87.94
   ],
   "orbmkt-30-low-1.5R-v1.5": [
-   96.79,
+   96.83,
    89.84
   ],
   "orbmkt-30-low-2R-v1.5": [
-   96.79,
+   96.83,
    89.84
   ],
   "orb-15-low-2R-v0-fv2": [
-   99.04,
-   90.59
+   99.06,
+   90.62
   ],
   "bounce-rsi30-daylow-1R": [
-   97.08,
-   85.08
+   97.12,
+   85.12
   ],
   "bounce-rsi30-daylow-2R": [
-   97.08,
-   85.08
+   97.12,
+   85.12
   ],
   "bounce-rsi30-pct1.5-1R": [
    99.32,
@@ -4399,16 +4463,16 @@
    85.88
   ],
   "orbrank-top20-1.5R": [
-   98.33,
-   90.06
+   98.25,
+   90.0
   ],
   "orbrank-top20-2R": [
-   98.33,
-   90.06
+   98.25,
+   90.0
   ],
   "orbrank-top20-2R-ffrueh": [
-   98.33,
-   90.06
+   98.25,
+   90.0
   ],
   "sip-top10-atr0.1-eod": [
    99.42,
@@ -4419,7 +4483,7 @@
    88.11
   ],
   "sip-top10-atr0.2-eod": [
-   99.51,
+   99.49,
    89.16
   ],
   "sip-top10-atr0.2-2R": [
@@ -4427,40 +4491,40 @@
    89.66
   ],
   "bounce-gapdown3-daylow-1R": [
-   94.73,
-   79.48
+   94.72,
+   79.46
   ],
   "bounce-gapdown3-daylow-2R": [
-   94.73,
-   79.48
+   94.72,
+   79.46
   ],
   "bounce-gapdown3-pct1.5-1R": [
-   97.92,
-   79.92
+   97.89,
+   79.89
   ],
   "bounce-gapdown3-pct1.5-2R": [
-   97.92,
-   79.92
+   97.89,
+   79.89
   ],
   "orb-30-low-2R-v0-fv2": [
-   97.08,
-   88.97
+   96.98,
+   88.92
   ],
   "orbrank-top20-2R-fv2": [
-   98.33,
-   90.06
+   98.25,
+   90.0
   ],
   "bounce-gapdown3-daylow-2R-ffrueh": [
    94.73,
-   83.48
+   83.47
   ],
   "orbrank-top10-1.5R": [
-   97.52,
-   89.42
+   97.48,
+   89.39
   ],
   "orbrank-top10-2R": [
-   97.52,
-   89.42
+   97.48,
+   89.39
   ],
   "sip-top20-atr0.1-eod-ffrueh": [
    99.77,
@@ -4495,8 +4559,8 @@
    94.36
   ],
   "orb-15-low-2R-v0-fv4": [
-   98.99,
-   92.99
+   99.0,
+   93.0
   ],
   "gap-2-v2-2R-fv4": [
    98.89,
@@ -4523,8 +4587,8 @@
    94.36
   ],
   "bounce-gapdown3-daylow-2R-fv2": [
-   99.01,
-   95.01
+   98.99,
+   94.99
   ]
  },
  "trades": [
@@ -4544,7 +4608,7 @@
    "symbol": "SE",
    "in_at": "9:40",
    "out_at": "13:50",
-   "last": 77.7,
+   "last": 77.635,
    "eur": -5.53,
    "key": "gap-2-v2-2R-fv2|SE",
    "f": {
@@ -4576,7 +4640,7 @@
    "symbol": "SE",
    "in_at": "9:40",
    "out_at": "13:50",
-   "last": 77.7,
+   "last": 77.635,
    "eur": -5.53,
    "key": "gap-2-v2-2R-fv4|SE",
    "f": {
@@ -4608,7 +4672,7 @@
    "symbol": "SE",
    "in_at": "9:40",
    "out_at": "13:50",
-   "last": 77.7,
+   "last": 77.635,
    "eur": -5.53,
    "key": "gap-2-v2-3R|SE",
    "f": {
@@ -4640,7 +4704,7 @@
    "symbol": "SE",
    "in_at": "9:40",
    "out_at": "13:50",
-   "last": 77.7,
+   "last": 77.635,
    "eur": -5.53,
    "key": "gap-2-v3-2R|SE",
    "f": {
@@ -4672,7 +4736,7 @@
    "symbol": "SE",
    "in_at": "9:40",
    "out_at": "13:50",
-   "last": 77.7,
+   "last": 77.635,
    "eur": -5.53,
    "key": "gap-2-v3-3R|SE",
    "f": {
@@ -4704,7 +4768,7 @@
    "symbol": "AXSM",
    "in_at": "9:45",
    "out_at": "13:05",
-   "last": 141.06,
+   "last": 141.105,
    "eur": -0.61,
    "key": "sip-top20-atr0.1-eod-ffrueh|AXSM",
    "f": {
@@ -4736,7 +4800,7 @@
    "symbol": "C",
    "in_at": "10:05",
    "out_at": "10:40",
-   "last": 122.275,
+   "last": 122.38,
    "eur": -1.0,
    "key": "orbmkt-30-low-2R-v1.5|C",
    "f": {
@@ -4756,20 +4820,20 @@
    "entry": 584.7122,
    "stop": 566.12,
    "target": 621.8966,
-   "exit": 582.2887,
+   "exit": 582.0489,
    "why": "Schluss",
-   "r": -0.13,
-   "pct": -0.414,
+   "r": -0.143,
+   "pct": -0.455,
    "in_k": 6,
-   "out_k": 58,
+   "out_k": 59,
    "open": true,
    "variant": "orbmkt-30-low-2R-v1.5",
    "strategy": "orbmkt",
    "symbol": "CAT",
    "in_at": "10:05",
    "out_at": null,
-   "last": 582.58,
-   "eur": -0.41,
+   "last": 582.34,
+   "eur": -0.46,
    "key": "orbmkt-30-low-2R-v1.5|CAT",
    "f": {
     "k": 6,
@@ -4788,20 +4852,20 @@
    "entry": 51.2531,
    "stop": 48.8,
    "target": 56.1593,
-   "exit": 50.5447,
+   "exit": 50.4997,
    "why": "Schluss",
-   "r": -0.289,
-   "pct": -1.382,
+   "r": -0.307,
+   "pct": -1.47,
    "in_k": 6,
-   "out_k": 58,
+   "out_k": 59,
    "open": true,
    "variant": "orbmkt-30-low-2R-v1.5",
    "strategy": "orbmkt",
    "symbol": "HRB",
    "in_at": "10:05",
    "out_at": null,
-   "last": 50.57,
-   "eur": -1.38,
+   "last": 50.525,
+   "eur": -1.47,
    "key": "orbmkt-30-low-2R-v1.5|HRB",
    "f": {
     "k": 6,
@@ -4820,20 +4884,20 @@
    "entry": 51.2531,
    "stop": 48.8,
    "target": 56.1593,
-   "exit": 50.5447,
+   "exit": 50.4997,
    "why": "Schluss",
-   "r": -0.289,
-   "pct": -1.382,
+   "r": -0.307,
+   "pct": -1.47,
    "in_k": 6,
-   "out_k": 58,
+   "out_k": 59,
    "open": true,
    "variant": "orbrank-top10-2R",
    "strategy": "orbrank",
    "symbol": "HRB",
    "in_at": "10:05",
    "out_at": null,
-   "last": 50.57,
-   "eur": -1.38,
+   "last": 50.525,
+   "eur": -1.47,
    "key": "orbrank-top10-2R|HRB",
    "f": {
     "k": 6,
@@ -4852,20 +4916,20 @@
    "entry": 7.4738,
    "stop": 6.48,
    "target": 9.4615,
-   "exit": 7.1214,
+   "exit": 7.1264,
    "why": "Schluss",
-   "r": -0.355,
-   "pct": -4.715,
+   "r": -0.35,
+   "pct": -4.648,
    "in_k": 6,
-   "out_k": 58,
+   "out_k": 59,
    "open": true,
    "variant": "orbmkt-30-low-2R-v1.5",
    "strategy": "orbmkt",
    "symbol": "MARA",
    "in_at": "10:05",
    "out_at": null,
-   "last": 7.125,
-   "eur": -4.71,
+   "last": 7.13,
+   "eur": -4.65,
    "key": "orbmkt-30-low-2R-v1.5|MARA",
    "f": {
     "k": 6,
@@ -4896,7 +4960,7 @@
    "symbol": "SMCI",
    "in_at": "10:05",
    "out_at": "12:00",
-   "last": 27.585,
+   "last": 27.58,
    "eur": -4.7,
    "key": "orbmkt-30-low-2R-v1.5|SMCI",
    "f": {
@@ -4916,20 +4980,20 @@
    "entry": 67.3437,
    "stop": 62.19,
    "target": 77.651,
-   "exit": 63.8281,
+   "exit": 63.953,
    "why": "Schluss",
-   "r": -0.682,
-   "pct": -5.22,
+   "r": -0.658,
+   "pct": -5.035,
    "in_k": 6,
-   "out_k": 58,
+   "out_k": 59,
    "open": true,
    "variant": "orbmkt-30-low-2R-v1.5",
    "strategy": "orbmkt",
    "symbol": "TGTX",
    "in_at": "10:05",
    "out_at": null,
-   "last": 63.86,
-   "eur": -5.22,
+   "last": 63.985,
+   "eur": -5.04,
    "key": "orbmkt-30-low-2R-v1.5|TGTX",
    "f": {
     "k": 6,
@@ -4960,7 +5024,7 @@
    "symbol": "BKR",
    "in_at": "10:10",
    "out_at": "14:05",
-   "last": 47.825,
+   "last": 47.82,
    "eur": -4.19,
    "key": "orbmkt-30-low-2R-v1.5|BKR",
    "f": {
@@ -4992,7 +5056,7 @@
    "symbol": "BKR",
    "in_at": "10:10",
    "out_at": "14:05",
-   "last": 47.825,
+   "last": 47.82,
    "eur": -4.19,
    "key": "orbrank-top10-2R|BKR",
    "f": {
@@ -5024,7 +5088,7 @@
    "symbol": "ELVN",
    "in_at": "10:10",
    "out_at": "11:35",
-   "last": 50.87,
+   "last": 50.94,
    "eur": -2.63,
    "key": "orbmkt-30-low-2R-v1.5|ELVN",
    "f": {
@@ -5044,20 +5108,20 @@
    "entry": 4.0919,
    "stop": 3.55,
    "target": 5.1758,
-   "exit": 3.8931,
+   "exit": 3.8831,
    "why": "Schluss",
-   "r": -0.367,
-   "pct": -4.861,
+   "r": -0.385,
+   "pct": -5.105,
    "in_k": 7,
-   "out_k": 58,
+   "out_k": 59,
    "open": true,
    "variant": "orbmkt-30-low-2R-v1.5",
    "strategy": "orbmkt",
    "symbol": "LCID",
    "in_at": "10:10",
    "out_at": null,
-   "last": 3.895,
-   "eur": -4.86,
+   "last": 3.885,
+   "eur": -5.11,
    "key": "orbmkt-30-low-2R-v1.5|LCID",
    "f": {
     "k": 7,
@@ -5076,20 +5140,20 @@
    "entry": 59.5648,
    "stop": 57.5103,
    "target": 63.6737,
-   "exit": 59.9,
+   "exit": 59.7401,
    "why": "Schluss",
-   "r": 0.163,
-   "pct": 0.563,
+   "r": 0.085,
+   "pct": 0.294,
    "in_k": 7,
-   "out_k": 58,
+   "out_k": 59,
    "open": true,
    "variant": "orbmkt-30-low-2R-v1.5",
    "strategy": "orbmkt",
    "symbol": "LYB",
    "in_at": "10:10",
    "out_at": null,
-   "last": 59.93,
-   "eur": 0.56,
+   "last": 59.77,
+   "eur": 0.29,
    "key": "orbmkt-30-low-2R-v1.5|LYB",
    "f": {
     "k": 7,
@@ -5108,20 +5172,20 @@
    "entry": 59.8399,
    "stop": 58.63,
    "target": 62.2597,
-   "exit": 60.6597,
+   "exit": 60.5997,
    "why": "Schluss",
-   "r": 0.678,
-   "pct": 1.37,
+   "r": 0.628,
+   "pct": 1.27,
    "in_k": 7,
-   "out_k": 58,
+   "out_k": 59,
    "open": true,
    "variant": "orbmkt-30-low-2R-v1.5",
    "strategy": "orbmkt",
    "symbol": "TS",
    "in_at": "10:10",
    "out_at": null,
-   "last": 60.69,
-   "eur": 1.37,
+   "last": 60.63,
+   "eur": 1.27,
    "key": "orbmkt-30-low-2R-v1.5|TS",
    "f": {
     "k": 7,
@@ -5140,20 +5204,20 @@
    "entry": 59.8399,
    "stop": 58.63,
    "target": 62.2597,
-   "exit": 60.6597,
+   "exit": 60.5997,
    "why": "Schluss",
-   "r": 0.678,
-   "pct": 1.37,
+   "r": 0.628,
+   "pct": 1.27,
    "in_k": 7,
-   "out_k": 58,
+   "out_k": 59,
    "open": true,
    "variant": "orbrank-top10-2R",
    "strategy": "orbrank",
    "symbol": "TS",
    "in_at": "10:10",
    "out_at": null,
-   "last": 60.69,
-   "eur": 1.37,
+   "last": 60.63,
+   "eur": 1.27,
    "key": "orbrank-top10-2R|TS",
    "f": {
     "k": 7,
@@ -5184,7 +5248,7 @@
    "symbol": "USAR",
    "in_at": "10:10",
    "out_at": "10:40",
-   "last": 7.815,
+   "last": 7.8001,
    "eur": -5.38,
    "key": "bounce-gapdown3-daylow-2R-fv2|USAR",
    "f": {
@@ -5216,7 +5280,7 @@
    "symbol": "HWM",
    "in_at": "10:15",
    "out_at": "10:20",
-   "last": 218.12,
+   "last": 218.09,
    "eur": -0.56,
    "key": "sip-top20-atr0.1-eod-ffrueh|HWM",
    "f": {
@@ -5248,7 +5312,7 @@
    "symbol": "SE",
    "in_at": "10:20",
    "out_at": "13:50",
-   "last": 77.7,
+   "last": 77.635,
    "eur": -8.68,
    "key": "orb-30-low-2R-v0-fv4|SE",
    "f": {
@@ -5280,7 +5344,7 @@
    "symbol": "SE",
    "in_at": "10:20",
    "out_at": "13:50",
-   "last": 77.7,
+   "last": 77.635,
    "eur": -8.68,
    "key": "orbmkt-30-low-2R-v1.5|SE",
    "f": {
@@ -5312,7 +5376,7 @@
    "symbol": "SE",
    "in_at": "10:20",
    "out_at": "13:50",
-   "last": 77.7,
+   "last": 77.635,
    "eur": -8.68,
    "key": "orbrank-top10-2R|SE",
    "f": {
@@ -5332,20 +5396,20 @@
    "entry": 82.3412,
    "stop": 79.945,
    "target": 87.1335,
-   "exit": 82.7186,
+   "exit": 82.7386,
    "why": "Schluss",
-   "r": 0.158,
-   "pct": 0.458,
+   "r": 0.166,
+   "pct": 0.483,
    "in_k": 15,
-   "out_k": 58,
+   "out_k": 59,
    "open": true,
    "variant": "orb-30-low-2R-v0-fv4",
    "strategy": "orb",
    "symbol": "EMBJ",
    "in_at": "10:50",
    "out_at": null,
-   "last": 82.76,
-   "eur": 0.46,
+   "last": 82.78,
+   "eur": 0.48,
    "key": "orb-30-low-2R-v0-fv4|EMBJ",
    "f": {
     "k": 15,
@@ -5364,20 +5428,20 @@
    "entry": 82.3412,
    "stop": 79.945,
    "target": 87.1335,
-   "exit": 82.7186,
+   "exit": 82.7386,
    "why": "Schluss",
-   "r": 0.158,
-   "pct": 0.458,
+   "r": 0.166,
+   "pct": 0.483,
    "in_k": 15,
-   "out_k": 58,
+   "out_k": 59,
    "open": true,
    "variant": "orbrank-top10-2R",
    "strategy": "orbrank",
    "symbol": "EMBJ",
    "in_at": "10:50",
    "out_at": null,
-   "last": 82.76,
-   "eur": 0.46,
+   "last": 82.78,
+   "eur": 0.48,
    "key": "orbrank-top10-2R|EMBJ",
    "f": {
     "k": 15,
@@ -5396,20 +5460,20 @@
    "entry": 50.3352,
    "stop": 48.8,
    "target": 53.4055,
-   "exit": 50.5447,
+   "exit": 50.4997,
    "why": "Schluss",
-   "r": 0.137,
-   "pct": 0.416,
+   "r": 0.107,
+   "pct": 0.327,
    "in_k": 23,
-   "out_k": 58,
+   "out_k": 59,
    "open": true,
    "variant": "bounce-gapdown3-daylow-2R-fv2",
    "strategy": "bounce",
    "symbol": "HRB",
    "in_at": "11:30",
    "out_at": null,
-   "last": 50.57,
-   "eur": 0.42,
+   "last": 50.525,
+   "eur": 0.33,
    "key": "bounce-gapdown3-daylow-2R-fv2|HRB",
    "f": {
     "k": 23,

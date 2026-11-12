@@ -274,5 +274,29 @@
     "kind": "passed",
     "id": "sip-top20-atr0.1-eod-ffrueh",
     "text": "Neu bestanden: Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt."
+  },
+  {
+    "date": "2026-11-12",
+    "kind": "passed",
+    "id": "orbrank-top10-1.5R",
+    "text": "Neu bestanden: Ausbruch 30 Min · nur Top 10 nach Volumen · Stopp Tief der Spanne · Ziel 1,5R."
+  },
+  {
+    "date": "2026-11-12",
+    "kind": "passed",
+    "id": "orbrank-top10-2R",
+    "text": "Neu bestanden: Ausbruch 30 Min · nur Top 10 nach Volumen · Stopp Tief der Spanne · Ziel 2R."
+  },
+  {
+    "date": "2026-11-12",
+    "kind": "passed",
+    "id": "orb-15-low-2R-v0-fv4",
+    "text": "Neu bestanden: Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal."
+  },
+  {
+    "date": "2026-11-12",
+    "kind": "passed",
+    "id": "orbrank-top20-2R-fv4",
+    "text": "Neu bestanden: Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal."
   }
 ]

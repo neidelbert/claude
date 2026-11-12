@@ -1,8 +1,8 @@
 # Trader-Übersicht
 
-Stand: Mi 11.11. 16:22 Uhr ET (22:22 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
+Stand: Do 12.11. 14:39 Uhr ET (20:39 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
 
-NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
+NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
 ## Systemstatus
 
@@ -10,7 +10,7 @@ NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
 |---|---|---|
 | Morgen-Scan | Mi 28.10. 08:39 Uhr ET (13:39 Uhr MEZ) | OK – 501 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40689559352)) |
 | ORB-Scan | Mi 28.10. 10:10 Uhr ET (15:10 Uhr MEZ) | OK – 163 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40689559352)) |
-| Labor live | Mi 11.11. 16:00 Uhr ET (22:00 Uhr MEZ) | OK – Tagesbilanz: 2.815 Trades ([Lauf](https://github.com/neidelbert/claude/actions/runs/43086146552)) |
+| Labor live | Do 12.11. 14:38 Uhr ET (20:38 Uhr MEZ) | OK – Börsenstart gemeldet ([Lauf](https://github.com/neidelbert/claude/actions/runs/43292171165)) |
 | Labor | Mi 11.11. 16:20 Uhr ET (22:20 Uhr MEZ) | OK – 16 von 76 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/43086146552)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
@@ -148,43 +148,43 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 - 22.10. 16:11 Uhr ET · [Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView](https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss)
 - 22.10. 15:51 Uhr ET · [How much Apple stock does CEO John Ternus actually own?](https://www.thestreet.com/personalities/how-much-apple-stock-does-john-ternus-own?.tsrc=rss)
 
-## Labor live – Mi 11.11.2026, Stand 16:00 Uhr ET
+## Labor live – Do 12.11.2026, Stand 14:38 Uhr ET
 
-414 Aktien beobachtet · 2.815 Spielgeld-Trades aller Varianten · 0 offen
+414 Aktien beobachtet · 3.168 Spielgeld-Trades aller Varianten · 2.057 offen
 
 | Top-Variante | Trades | offen | € bei 100 €/Trade |
 |---|---|---|---|
-| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R | 1 | 0 | 2,15 € |
-| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 1 | 0 | 2,15 € |
-| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R | 1 | 0 | 2,15 € |
-| Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 4× normal | 0 | 0 | 0,00 € |
-| Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 4 | 0 | -5,19 € |
-| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5× | 8 | 0 | -1,72 € |
-| Ausbruch 30 Min · nur Top 10 nach Volumen · Stopp Tief der Spanne · Ziel 2R | 3 | 0 | 4,04 € |
-| Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 9 | 0 | 2,22 € |
+| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R | 1 | 1 | -0,04 € |
+| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 1 | 1 | -0,04 € |
+| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R | 1 | 1 | -0,04 € |
+| Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 9 | 4 | 12,76 € |
+| Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 4× normal | 2 | 2 | 0,60 € |
+| Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 14 | 13 | -15,28 € |
+| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5× | 14 | 13 | -15,28 € |
+| Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 3 | 3 | 0,31 € |
 
 | Aktie | Regel | Einstieg | Stopp | Ziel | Stand | Ergebnis |
 |---|---|---|---|---|---|---|
-| AMKR | Opening-Range-Ausbruch 30 Min | 10:05 37,36 $ | 36,23 $ | 39,61 $ | Schluss 15:55 Uhr | 1,67 € |
-| AMKR | Ausbruch 30 Min | 10:05 37,36 $ | 36,23 $ | 39,61 $ | Schluss 15:55 Uhr | 1,67 € |
-| CRWV | News-Sprung: Lücke ≥ 4 % | 10:05 58,85 $ | 54,66 $ | 65,13 $ | Schluss 15:55 Uhr | 2,15 € |
-| CRWV | News-Sprung: Lücke ≥ 4 % | 10:05 58,85 $ | 54,66 $ | 67,22 $ | Schluss 15:55 Uhr | 2,15 € |
-| CRWV | News-Sprung: Lücke ≥ 4 % | 10:05 58,85 $ | 54,66 $ | 71,41 $ | Schluss 15:55 Uhr | 2,15 € |
-| CRWV | Opening-Range-Ausbruch 30 Min | 10:05 58,85 $ | 53,81 $ | 68,93 $ | Schluss 15:55 Uhr | 2,15 € |
-| CRWV | Ausbruch 30 Min | 10:05 58,85 $ | 53,81 $ | 68,93 $ | Schluss 15:55 Uhr | 2,15 € |
-| NBIS | Opening-Range-Ausbruch 30 Min | 10:05 155,57 $ | 147,36 $ | 171,98 $ | Schluss 15:55 Uhr | -0,57 € |
-| DELL | Stocks in Play (Studie): Top 20 nach Startvolumen | 10:10 368,53 $ | 365,21 $ | – | Schluss 15:55 Uhr | 1,57 € |
-| GGG | Opening-Range-Ausbruch 30 Min | 10:10 72,49 $ | 70,60 $ | 76,26 $ | Schluss 15:55 Uhr | 0,22 € |
-| GGG | Ausbruch 30 Min | 10:10 72,49 $ | 70,60 $ | 76,26 $ | Schluss 15:55 Uhr | 0,22 € |
-| NVDA | Opening-Range-Ausbruch 30 Min | 10:55 175,70 $ | 170,77 $ | 185,55 $ | Schluss 15:55 Uhr | -1,00 € |
-| NVDA | Ausbruch 30 Min | 10:55 175,70 $ | 170,77 $ | 185,55 $ | Schluss 15:55 Uhr | -1,00 € |
-| VRT | Stocks in Play (Studie): Top 20 nach Startvolumen | 11:00 210,42 $ | 208,50 $ | – | Stopp 11:10 Uhr | -0,96 € |
-| KLAC | Opening-Range-Ausbruch 30 Min | 11:30 162,71 $ | 155,35 $ | 177,42 $ | Schluss 15:55 Uhr | -1,02 € |
-| KLAC | Ausbruch 30 Min | 11:30 162,71 $ | 155,35 $ | 177,42 $ | Schluss 15:55 Uhr | -1,02 € |
-| AVGO | Opening-Range-Ausbruch 30 Min | 12:00 354,91 $ | 348,10 $ | 368,52 $ | Stopp 15:10 Uhr | -1,97 € |
-| AVGO | Ausbruch 30 Min | 12:00 354,91 $ | 348,10 $ | 368,52 $ | Stopp 15:10 Uhr | -1,97 € |
-| TXN | Opening-Range-Ausbruch 30 Min | 12:00 313,24 $ | 304,71 $ | 330,29 $ | Schluss 15:55 Uhr | -1,20 € |
-| TXN | Ausbruch 30 Min | 12:00 313,24 $ | 304,71 $ | 330,29 $ | Schluss 15:55 Uhr | -1,20 € |
+| MP | Ausbruch 30 Min | 10:35 37,86 $ | 36,03 $ | 41,53 $ | offen, Kurs 37,88 $ | -0,01 € |
+| BCRX | Opening-Range-Ausbruch 30 Min | 10:40 7,67 $ | 7,46 $ | 8,10 $ | offen, Kurs 7,66 $ | -0,29 € |
+| BCRX | Ausbruch 30 Min | 10:40 7,67 $ | 7,46 $ | 8,10 $ | offen, Kurs 7,66 $ | -0,29 € |
+| CLS | Opening-Range-Ausbruch 30 Min | 10:45 258,50 $ | 233,11 $ | 309,28 $ | offen, Kurs 256,17 $ | -0,95 € |
+| CLS | Ausbruch 30 Min | 10:45 258,50 $ | 233,11 $ | 309,28 $ | offen, Kurs 256,17 $ | -0,95 € |
+| AMD | Opening-Range-Ausbruch 30 Min | 11:00 584,28 $ | 554,90 $ | 643,05 $ | offen, Kurs 583,49 $ | -0,19 € |
+| AMD | Ausbruch 30 Min | 11:00 584,28 $ | 554,90 $ | 643,05 $ | offen, Kurs 583,49 $ | -0,19 € |
+| CRML | Opening-Range-Ausbruch 30 Min | 11:00 5,44 $ | 5,20 $ | 5,91 $ | offen, Kurs 5,33 $ | -2,03 € |
+| CRML | Ausbruch 30 Min | 11:00 5,44 $ | 5,20 $ | 5,91 $ | offen, Kurs 5,33 $ | -2,03 € |
+| JCI | Opening-Range-Ausbruch 30 Min | 11:00 144,90 $ | 142,70 $ | 149,31 $ | offen, Kurs 143,24 $ | -1,20 € |
+| JCI | Ausbruch 30 Min | 11:00 144,90 $ | 142,70 $ | 149,31 $ | offen, Kurs 143,24 $ | -1,20 € |
+| TXG | Opening-Range-Ausbruch 30 Min | 11:00 59,20 $ | 53,00 $ | 71,60 $ | offen, Kurs 59,44 $ | 0,36 € |
+| TXG | Ausbruch 30 Min | 11:00 59,20 $ | 53,00 $ | 71,60 $ | offen, Kurs 59,44 $ | 0,36 € |
+| CRWV | Opening-Range-Ausbruch 30 Min | 11:10 58,22 $ | 50,17 $ | 74,33 $ | offen, Kurs 55,91 $ | -4,01 € |
+| CRWV | Ausbruch 30 Min | 11:10 58,22 $ | 50,17 $ | 74,33 $ | offen, Kurs 55,91 $ | -4,01 € |
+| AVGO | Opening-Range-Ausbruch 30 Min | 11:20 368,84 $ | 354,72 $ | 397,09 $ | offen, Kurs 364,29 $ | -1,28 € |
+| AVGO | Ausbruch 30 Min | 11:20 368,84 $ | 354,72 $ | 397,09 $ | offen, Kurs 364,29 $ | -1,28 € |
+| ABSI | Opening-Range-Ausbruch 30 Min | 11:50 9,82 $ | 8,96 $ | 11,55 $ | offen, Kurs 9,72 $ | -1,12 € |
+| ABSI | Ausbruch 30 Min | 11:50 9,82 $ | 8,96 $ | 11,55 $ | offen, Kurs 9,72 $ | -1,12 € |
+| NVDA | Erholung: Lücke nach unten ≥ 3 % | 12:30 164,05 $ | 148,80 $ | 194,55 $ | offen, Kurs 163,88 $ | -0,15 € |
 
 ## Labor (Testphase, Spielgeld ohne Limit)
 

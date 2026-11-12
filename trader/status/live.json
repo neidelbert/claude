@@ -1,25 +1,24 @@
 {
   "part": "live",
   "ok": true,
-  "summary": "Tagesbilanz: 2.815 Trades",
-  "ran_at": "2026-11-11T21:00:20Z",
-  "date_et": "2026-11-11",
+  "summary": "Börsenstart gemeldet",
+  "ran_at": "2026-11-12T19:38:33Z",
+  "date_et": "2026-11-12",
   "steps": [
     {
       "name": "Labor live",
       "ok": true,
-      "detail": "414 Aktien, 2.815 Spielgeld-Trades, 0 offen"
+      "detail": "414 Aktien, 3.168 Spielgeld-Trades, 2.057 offen"
     }
   ],
   "data": {
-    "date": "2026-11-11",
-    "as_of": "16:00 Uhr ET",
-    "trades": 2815,
-    "open": 0,
+    "date": "2026-11-12",
+    "as_of": "14:38 Uhr ET",
+    "trades": 3168,
+    "open": 2057,
     "symbols": 414,
     "failed": 0,
-    "open_push": "2026-11-11",
-    "eod": "2026-11-11"
+    "open_push": "2026-11-12"
   },
-  "run_url": "https://github.com/neidelbert/claude/actions/runs/43086146552"
+  "run_url": "https://github.com/neidelbert/claude/actions/runs/43292171165"
 }

@@ -1,0 +1,115 @@
+{
+  "week": "2026-W46",
+  "from": "2026-11-09",
+  "to": "2026-11-13",
+  "live_days": 4,
+  "trades": 10256,
+  "best": [
+    {
+      "id": "bounce-gapdown3-pct1.5-2R",
+      "label": "Erholung: Lücke nach unten ≥ 3 % · Stopp 1,5 % darunter · Ziel 2R",
+      "eur": 41.69,
+      "n": 54
+    },
+    {
+      "id": "bounce-gapdown3-pct1.5-1R",
+      "label": "Erholung: Lücke nach unten ≥ 3 % · Stopp 1,5 % darunter · Ziel 1R",
+      "eur": 32.18,
+      "n": 54
+    },
+    {
+      "id": "bounce-gapdown3-daylow-1R",
+      "label": "Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 1R",
+      "eur": 31.65,
+      "n": 54
+    }
+  ],
+  "worst": [
+    {
+      "id": "orb-15-low-2R-v0-ffrueh",
+      "label": "Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 2R · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt",
+      "eur": -278.27,
+      "n": 679
+    },
+    {
+      "id": "orb-15-low-2R-v0",
+      "label": "Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 2R",
+      "eur": -277.95,
+      "n": 685
+    },
+    {
+      "id": "orb-30-low-2R-v0-ffrueh",
+      "label": "Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt",
+      "eur": -274.6,
+      "n": 533
+    }
+  ],
+  "share_positive": 36,
+  "champion": "News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R",
+  "passed": 19,
+  "decisions": {
+    "ja": 0,
+    "nein": 0
+  },
+  "lukas": {
+    "n": 0,
+    "eur": 0.0
+  },
+  "changes": [
+    {
+      "date": "2026-11-10",
+      "kind": "failed",
+      "id": "orbrank-top10-2R",
+      "text": "Nicht mehr bestanden: Ausbruch 30 Min · nur Top 10 nach Volumen · Stopp Tief der Spanne · Ziel 2R (an den neuen Prüftagen nicht mehr im Plus)."
+    },
+    {
+      "date": "2026-11-10",
+      "kind": "failed",
+      "id": "orbrank-top10-1.5R",
+      "text": "Nicht mehr bestanden: Ausbruch 30 Min · nur Top 10 nach Volumen · Stopp Tief der Spanne · Ziel 1,5R (an den neuen Prüftagen nicht mehr im Plus)."
+    },
+    {
+      "date": "2026-11-10",
+      "kind": "failed",
+      "id": "orbrank-top20-2R-fv4",
+      "text": "Nicht mehr bestanden: Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal (an den neuen Prüftagen nicht mehr im Plus)."
+    },
+    {
+      "date": "2026-11-11",
+      "kind": "passed",
+      "id": "sip-top20-atr0.1-eod-ffrueh",
+      "text": "Neu bestanden: Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt."
+    },
+    {
+      "date": "2026-11-12",
+      "kind": "passed",
+      "id": "orbrank-top10-1.5R",
+      "text": "Neu bestanden: Ausbruch 30 Min · nur Top 10 nach Volumen · Stopp Tief der Spanne · Ziel 1,5R."
+    },
+    {
+      "date": "2026-11-12",
+      "kind": "passed",
+      "id": "orbrank-top10-2R",
+      "text": "Neu bestanden: Ausbruch 30 Min · nur Top 10 nach Volumen · Stopp Tief der Spanne · Ziel 2R."
+    },
+    {
+      "date": "2026-11-12",
+      "kind": "passed",
+      "id": "orb-15-low-2R-v0-fv4",
+      "text": "Neu bestanden: Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal."
+    },
+    {
+      "date": "2026-11-12",
+      "kind": "passed",
+      "id": "orbrank-top20-2R-fv4",
+      "text": "Neu bestanden: Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal."
+    },
+    {
+      "date": "2026-11-13",
+      "kind": "failed",
+      "id": "orb-15-low-2R-v0-fv4",
+      "text": "Nicht mehr bestanden: Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal (an den neuen Prüftagen nicht mehr im Plus)."
+    }
+  ],
+  "lesson": "Eine Woche ist sehr kurz. Wichtig ist nicht, ob sie im Plus war, sondern ob die Regeln eingehalten wurden und ob die Top-Varianten auch an neuen Tagen halten, was die Prüftage versprochen haben."
+}

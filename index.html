@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Trader">
+<meta name="robots" content="noindex, nofollow">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>Trader-Labor</title>
+<style>
+:root{
+  --bg:#f2f2f7;--card:#ffffff;--card2:#f7f7fa;--text:#111114;--sub:#6b6b73;--line:#e3e3e8;
+  --blue:#0a66d8;--green:#14915a;--red:#d1342f;--orange:#c86a00;--chip:#e9e9ef;--tab:rgba(249,249,251,.92);
+  --greenbg:#e5f5ec;--redbg:#fbe9e8;--orangebg:#fdf1e0;--bluebg:#e6effc;--s1:#2a78d6;--s2:#eb6834;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#000;--card:#1c1c1e;--card2:#242427;--text:#f4f4f6;--sub:#9a9aa2;--line:#2e2e32;
+  --blue:#4a9bff;--green:#35c27c;--red:#ff6b62;--orange:#ffa53d;--chip:#2c2c30;--tab:rgba(22,22,24,.92);
+  --greenbg:#123222;--redbg:#3a1614;--orangebg:#3a2810;--bluebg:#10243f;--s1:#3987e5;--s2:#d95926;
+}}
+:root[data-theme="dark"]{
+  --bg:#000;--card:#1c1c1e;--card2:#242427;--text:#f4f4f6;--sub:#9a9aa2;--line:#2e2e32;
+  --blue:#4a9bff;--green:#35c27c;--red:#ff6b62;--orange:#ffa53d;--chip:#2c2c30;--tab:rgba(22,22,24,.92);
+  --greenbg:#123222;--redbg:#3a1614;--orangebg:#3a2810;--bluebg:#10243f;--s1:#3987e5;--s2:#d95926;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.4 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif}
+body{padding:env(safe-area-inset-top) 0 calc(76px + env(safe-area-inset-bottom))}
+header{padding:14px 16px 4px;display:flex;align-items:flex-end;justify-content:space-between;gap:8px}
+h1{font-size:32px;line-height:1.1;margin:0;font-weight:800;letter-spacing:-.5px}
+h2{font-size:20px;margin:22px 16px 8px;font-weight:700}
+h3{font-size:16px;margin:0 0 6px}
+.sub{color:var(--sub);font-size:14px}
+.small{font-size:13px;color:var(--sub)}
+main{max-width:720px;margin:0 auto}
+.card{background:var(--card);margin:10px 16px;border-radius:16px;padding:14px 16px;overflow:hidden}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.big{font-size:34px;font-weight:800;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
+.num{font-variant-numeric:tabular-nums}
+.pos{color:var(--green)}.neg{color:var(--red)}
+.badge{display:inline-block;font-size:12px;font-weight:700;padding:3px 9px;border-radius:99px;background:var(--chip);color:var(--sub)}
+.b-green{background:var(--greenbg);color:var(--green)}.b-red{background:var(--redbg);color:var(--red)}
+.b-orange{background:var(--orangebg);color:var(--orange)}.b-blue{background:var(--bluebg);color:var(--blue)}
+.list{background:var(--card);margin:10px 16px;border-radius:16px;overflow:hidden}
+.item{padding:12px 16px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:0}
+.item .row+.row{margin-top:2px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 16px}
+.grid2 .card{margin:0}
+.kpi .label{font-size:13px;color:var(--sub)}
+.kpi .val{font-size:24px;font-weight:800;font-variant-numeric:tabular-nums}
+button{font:inherit}
+.btn{border:0;border-radius:12px;padding:11px 14px;font-weight:700;background:var(--blue);color:#fff;cursor:pointer}
+.btn.ghost{background:var(--chip);color:var(--text)}
+.btn.yes{background:var(--green)}.btn.no{background:var(--red)}
+.btns{display:flex;gap:8px;margin-top:10px}.btns .btn{flex:1}
+.term{border:0;background:none;color:var(--blue);padding:0;font:inherit;text-decoration:underline dotted;text-underline-offset:3px;cursor:pointer}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 16px 2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{border:0;border-radius:99px;padding:7px 13px;background:var(--chip);color:var(--text);font-weight:600;font-size:14px;white-space:nowrap;cursor:pointer}
+.chip.on{background:var(--blue);color:#fff}
+nav{position:fixed;left:0;right:0;bottom:0;background:var(--tab);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-top:1px solid var(--line);display:flex;padding:6px 4px calc(6px + env(safe-area-inset-bottom));z-index:5}
+nav button{flex:1;border:0;background:none;color:var(--sub);display:flex;flex-direction:column;align-items:center;gap:2px;font-size:11px;font-weight:600;padding:4px 0;cursor:pointer}
+nav button svg{width:26px;height:26px}
+nav button.on{color:var(--blue)}
+.bar{height:8px;border-radius:99px;background:var(--chip);position:relative;margin:8px 0 4px;overflow:visible}
+.bar .fill{position:absolute;top:0;bottom:0;border-radius:99px}
+.bar .dot{position:absolute;top:50%;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--text);border:2px solid var(--card)}
+.legend{display:flex;justify-content:space-between;font-size:12px;color:var(--sub)}
+svg.spark{width:100%;height:auto;display:block;margin-top:8px}
+.chart{position:relative;touch-action:pan-y}.chart svg{width:100%;height:auto;display:block;margin-top:8px;overflow:visible}
+.tip{position:absolute;top:0;pointer-events:none;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:4px 8px;font-size:12px;color:var(--text);white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.15);display:none;z-index:2}
+.keys{display:flex;gap:14px;font-size:12px;color:var(--sub);margin-top:6px}.keys i{display:inline-block;width:12px;height:3px;border-radius:2px;vertical-align:middle;margin-right:5px}
+details.tbl summary{font-size:13px;color:var(--blue);margin-top:8px;cursor:pointer}details.tbl table{width:100%;font-size:12px;border-collapse:collapse;margin-top:6px}details.tbl td{padding:3px 0;border-top:1px solid var(--line)}details.tbl td:not(:first-child){text-align:right}
+.sheet-bg{position:fixed;inset:0;background:rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:opacity .2s;z-index:9}
+.sheet{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-radius:18px 18px 0 0;padding:18px 18px calc(24px + env(safe-area-inset-bottom));transform:translateY(100%);transition:transform .25s;z-index:10;max-width:720px;margin:0 auto;max-height:85vh;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.open .sheet-bg{opacity:1;pointer-events:auto}.open .sheet{transform:none}
+.lock{max-width:420px;margin:12vh auto 0;padding:0 20px;text-align:center}
+.lock img{width:84px;height:84px;border-radius:20px}
+.lock input{width:100%;font:inherit;font-size:18px;padding:14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--text);margin:16px 0 10px}
+.lock .btn{width:100%;padding:14px}
+.err{color:var(--red);font-size:14px;min-height:20px}
+.next{font-size:17px;font-weight:600}
+.step{display:flex;gap:12px}
+.step .n{flex:0 0 28px;height:28px;border-radius:50%;background:var(--bluebg);color:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px}
+a{color:var(--blue)}
+.hide{display:none}
+details summary{cursor:pointer;list-style:none}
+details summary::-webkit-details-marker{display:none}
+.muted{opacity:.6}
+.search{width:calc(100% - 32px);margin:6px 16px;font:inherit;padding:10px 12px;border-radius:12px;border:0;background:var(--chip);color:var(--text)}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="sheetwrap"><div class="sheet-bg" onclick="closeSheet()"></div><div class="sheet" id="sheet"></div></div>
+<nav id="nav" class="hide"></nav>
+<script>
+"use strict";
+const $ = s => document.querySelector(s);
+const KEY_STORE = "trader-key-v1";
+let D = null, TAB = "start", FILTER = "alle", SUB = null, FEES = true, DAY = null, LABF = "alle";
+const TABS = [
+  ["start","Übersicht",'<rect x="3" y="12" width="4" height="8" rx="1" fill="currentColor"/><rect x="10" y="7" width="4" height="13" rx="1" fill="currentColor"/><rect x="17" y="3" width="4" height="17" rx="1" fill="currentColor"/>'],
+  ["labor","Labor",'<path d="M9 3h6M10 3v6L4.5 18.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>'],
+  ["mehr","Mehr",'<circle cx="5" cy="12" r="2" fill="currentColor"/><circle cx="12" cy="12" r="2" fill="currentColor"/><circle cx="19" cy="12" r="2" fill="currentColor"/>'],
+];
+const STRAT = {orb:"Opening-Range-Ausbruch", gap:"News-Sprung", bounce:"Erholung"};
+const CHIP = {alle:"Alle", Regel:"Regel", "Ja-Trades":"Deine Ja-Trades", orb:"Ausbruch", gap:"News-Sprung", bounce:"Erholung", sip:"Stocks in Play"};
+STRAT.sip = "Stocks in Play"; STRAT.orbrank = "Ausbruch mit Volumen-Rangliste"; CHIP.orbrank = "Volumen-Rang"; STRAT.orbmkt = "Ausbruch mit Markt-Filter"; CHIP.orbmkt = "Markt-Filter";
+
+// ------------------------------------------------------------ Formate
+const nf2 = new Intl.NumberFormat("de-DE",{minimumFractionDigits:2,maximumFractionDigits:2});
+const nf0 = new Intl.NumberFormat("de-DE",{maximumFractionDigits:0});
+const nf1 = new Intl.NumberFormat("de-DE",{minimumFractionDigits:1,maximumFractionDigits:1});
+const eur = x => x==null ? "–" : (x>0?"+":"") + nf2.format(x) + " €";
+const usd = x => x==null ? "–" : nf2.format(x) + " $";
+const pct = x => x==null ? "–" : (x>0?"+":"") + nf2.format(x) + " %";
+const int = x => x==null ? "–" : nf0.format(x);
+const cls = x => x>0 ? "pos" : x<0 ? "neg" : "";
+const esc = s => String(s==null?"":s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function tz(iso, zone, opts){ try{ return new Intl.DateTimeFormat("de-DE",Object.assign({timeZone:zone},opts)).format(new Date(iso)); }catch(e){ return "–"; } }
+const hmDE = iso => tz(iso,"Europe/Berlin",{hour:"2-digit",minute:"2-digit"});
+const dayDE = iso => tz(iso,"Europe/Berlin",{weekday:"short",day:"2-digit",month:"2-digit"});
+function dateDE(d){ if(!d) return "–"; const [y,m,dd]=d.split("-"); return dd+"."+m+"."+y; }
+function ago(iso){ const m=Math.round((Date.now()-new Date(iso))/60000); return m<1?"gerade eben":m<60?"vor "+m+" Min.":m<1440?"vor "+Math.round(m/60)+" Std.":"vor "+Math.round(m/1440)+" Tagen"; }
+function etToDE(hhmm){ // "10:15" ET -> deutsche Uhrzeit am Marktdatum
+  if(!D||!D.market.open_utc||!hhmm) return "";
+  const [h,m]=hhmm.split(":").map(Number), o=new Date(D.market.open_utc);
+  return hmDE(new Date(o.getTime()+((h*60+m)-(9*60+30))*60000).toISOString());
+}
+function g(term, text){ return '<button class="term" onclick="gloss(\''+term.replace(/'/g,"")+'\')">'+esc(text||term)+'</button>'; }
+
+// ------------------------------------------------------------ Entsperren
+async function deriveKey(pw, salt, iter){
+  const base = await crypto.subtle.importKey("raw", new TextEncoder().encode(pw), "PBKDF2", false, ["deriveKey"]);
+  return crypto.subtle.deriveKey({name:"PBKDF2",salt,iterations:iter,hash:"SHA-256"}, base, {name:"AES-GCM",length:256}, true, ["decrypt"]);
+}
+const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+async function fetchEnc(){
+  const r = await fetch("data.enc?t="+Date.now(), {cache:"no-store"});
+  if(!r.ok) throw new Error("setup");
+  return r.json();
+}
+async function decrypt(enc, key){
+  // key = aus dem Passwort abgeleiteter Schlüssel. Version 2: er öffnet erst den privaten RSA-Schlüssel,
+  // der den zufälligen Datenschlüssel dieser Veröffentlichung öffnet.
+  let dk = key;
+  if(enc.v === 2){
+    const pk8 = await crypto.subtle.decrypt({name:"AES-GCM", iv:b64(enc.kiv)}, key, b64(enc.kct));
+    const priv = await crypto.subtle.importKey("pkcs8", pk8, {name:"RSA-OAEP", hash:"SHA-256"}, false, ["decrypt"]);
+    const raw = await crypto.subtle.decrypt({name:"RSA-OAEP"}, priv, b64(enc.ek));
+    dk = await crypto.subtle.importKey("raw", raw, {name:"AES-GCM"}, false, ["decrypt"]);
+  }
+  const pt = await crypto.subtle.decrypt({name:"AES-GCM", iv:b64(enc.iv)}, dk, b64(enc.ct));
+  return JSON.parse(new TextDecoder().decode(pt));
+}
+async function storedKey(){
+  try{ const raw = localStorage.getItem(KEY_STORE); if(!raw) return null;
+    return await crypto.subtle.importKey("raw", b64(raw), {name:"AES-GCM"}, true, ["decrypt"]); }catch(e){ return null; }
+}
+async function load(){
+  if(window.__DATA__){ D = window.__DATA__; return show(); }   // Artifact-Version: Daten eingebettet
+  if(location.search.includes("plain=1")){ D = await (await fetch("data.json")).json(); return show(); }
+  let enc;
+  try{ enc = await fetchEnc(); }catch(e){ return setup(); }
+  const key = await storedKey();
+  if(key){ try{ D = await decrypt(enc, key); return show(); }catch(e){} }
+  lockScreen(enc);
+}
+function setup(){
+  $("#app").innerHTML = '<div class="lock"><img src="icon-180.png" alt=""><h1 style="margin-top:14px">Trader-Labor</h1>'+
+    '<p class="sub">Noch keine Daten veröffentlicht. Der nächste Lauf des Systems baut sie.</p></div>';
+}
+function lockScreen(enc){
+  $("#app").innerHTML = '<div class="lock"><img src="icon-180.png" alt=""><h1 style="margin-top:14px">Trader-Labor</h1>'+
+    '<p class="sub">Privat. Bitte Passwort eingeben.</p><form id="f"><input id="pw" type="password" autocomplete="current-password" placeholder="Passwort">'+
+    '<div class="err" id="err"></div><button class="btn" type="submit">Entsperren</button></form>'+
+    '<p class="small" style="margin-top:18px">Das Passwort bleibt auf diesem Gerät gespeichert, bis du dich abmeldest.</p></div>';
+  $("#f").onsubmit = async ev => {
+    ev.preventDefault(); $("#err").textContent = "Prüfe …";
+    try{
+      const key = await deriveKey($("#pw").value, b64(enc.salt), enc.iter);
+      D = await decrypt(enc, key);
+      try{ localStorage.setItem(KEY_STORE, btoa(String.fromCharCode(...new Uint8Array(await crypto.subtle.exportKey("raw", key))))); }catch(e){}
+      show();
+    }catch(e){ $("#err").textContent = "Falsches Passwort."; }
+  };
+}
+function logout(){ try{ localStorage.removeItem(KEY_STORE); }catch(e){} location.reload(); }
+async function refresh(){
+  if(window.__DATA__) return;
+  try{ const enc = await fetchEnc(), key = await storedKey(); if(key){ D = await decrypt(enc, key); render(); } else load(); }catch(e){}
+}
+
+// ------------------------------------------------------------ Gerüst
+function show(){
+  try{ TAB = localStorage.getItem("trader-tab") || "start"; }catch(e){}
+  if(!["start","labor","mehr"].includes(TAB)) TAB = "start";
+  const nav = $("#nav"); nav.classList.remove("hide");
+  nav.innerHTML = TABS.map(([id,label,icon]) => '<button data-t="'+id+'" onclick="go(\''+id+'\')"><svg viewBox="0 0 24 24">'+icon+'</svg>'+label+'</button>').join("");
+  render();
+  try{ if(!localStorage.getItem("trader-intro")) showIntro(); }catch(e){}
+  setInterval(() => { if(TAB==="mehr" && SUB==="heute") renderHeute(true); }, 30000);
+  setInterval(refresh, 5*60000);
+  document.addEventListener("visibilitychange", () => { if(!document.hidden) refresh(); });
+}
+function go(t){ TAB = t; SUB = null; try{ localStorage.setItem("trader-tab", t); }catch(e){} render(); window.scrollTo(0,0); }
+function render(){
+  document.querySelectorAll("nav button").forEach(b => b.classList.toggle("on", b.dataset.t===TAB));
+  if(TAB==="mehr" && SUB) return ({heute:renderHeute, konto:renderKonto, trades:renderTrades, markt:renderMarkt, lernen:renderLernen, woche:renderWoche, echt:renderEcht, aend:renderAend, regeln:renderRegeln, glossar:renderGlossar, ticker:renderTicker, einst:renderEinst, muster:renderMuster})[SUB]();
+  ({start:renderStart, labor:renderLabor, mehr:renderMehr})[TAB]();
+}
+function head(title, right){
+  const back = TAB==="mehr" && SUB ? '<button class="term" style="text-decoration:none;font-weight:600" onclick="SUB=null;render();window.scrollTo(0,0)">‹ Mehr</button>' : '<div class="sub">'+esc(D.phase)+' · Spielgeld</div>';
+  return '<header><div>'+back+'<h1>'+title+'</h1></div>'+(right||"")+'</header>';
+}
+function sub(id){ SUB = id; render(); window.scrollTo(0,0); }
+function openSheet(html){ $("#sheet").innerHTML = html + '<div class="btns"><button class="btn ghost" onclick="closeSheet()">Schließen</button></div>'; $("#sheetwrap").classList.add("open"); }
+function closeSheet(){ $("#sheetwrap").classList.remove("open"); }
+function gloss(t){ const txt = D.learn.glossary[t]; openSheet('<h3>'+esc(t)+'</h3><p>'+esc(txt||"Noch keine Erklärung.")+'</p>'); }
+
+// ------------------------------------------------------------ Markt-Uhr und nächster Schritt
+function clock(){
+  const m = D.market, now = Date.now();
+  if(!m.open_utc) return {state:"zu", text:"Heute geschlossen ("+esc(m.closed_reason||"")+")", next:"Nächster Börsenstart: "+dayDE(m.next_open_utc)+", "+hmDE(m.next_open_utc)+" Uhr"};
+  const o = new Date(m.open_utc).getTime(), c = new Date(m.close_utc).getTime();
+  const fmt = ms => { const mm = Math.max(0,Math.round(ms/60000)); return mm>=60 ? Math.floor(mm/60)+" Std. "+(mm%60)+" Min." : mm+" Min."; };
+  if(now < o) return {state:"vor", text:"Börsenstart in "+fmt(o-now), next:"Öffnet um "+hmDE(m.open_utc)+" Uhr (9:30 Uhr New York)"};
+  if(now < c) return {state:"offen", text:"Börse offen, noch "+fmt(c-now), next:"Schließt um "+hmDE(m.close_utc)+" Uhr"};
+  return {state:"zu", text:"Börse geschlossen", next:"Nächster Start: "+dayDE(m.next_open_utc)+", "+hmDE(m.next_open_utc)+" Uhr"};
+}
+function nextStep(ck){
+  const L = D.live, today = D.market.date;
+  if(D.proposals.length) return D.proposals.length+" Vorschlag"+(D.proposals.length>1?"e warten":" wartet")+" auf dein Ja oder Nein.";
+  if(ck.state==="vor") return "Warte auf den Börsenstart. Das System meldet sich, sobald eine Regel auslöst.";
+  if(ck.state==="offen") return L && L.date===today && L.n_open ? L.n_open+" Spielgeld-Trades laufen. Nichts zu tun – Stopp und Ziel sind gesetzt." : "Das System beobachtet ~180 Aktien. Noch kein Vorschlag offen.";
+  return "Für heute ist alles erledigt. Lies die Tagesbilanz und die Lektion unten.";
+}
+
+// ------------------------------------------------------------ Heute
+function tradeBar(t){
+  const lo = t.stop, hi = t.target, now = t.open ? t.last : t.exit;
+  const p = x => Math.max(0, Math.min(100, (x-lo)/(hi-lo)*100));
+  const e = p(t.entry), n = p(now);
+  const color = now>=t.entry ? "var(--green)" : "var(--red)";
+  return '<div class="bar"><div class="fill" style="left:'+Math.min(e,n)+'%;width:'+Math.abs(n-e)+'%;background:'+color+'"></div>'+
+    '<div class="dot" style="left:'+n+'%"></div></div><div class="legend"><span>'+g("Stopp")+' '+usd(t.stop)+'</span><span>Einstieg '+usd(t.entry)+'</span><span>'+g("Ziel")+' '+usd(t.target)+'</span></div>';
+}
+function spark(sym, t){
+  const pts = (D.live && D.live.charts && D.live.charts[sym]) || [];
+  if(pts.length < 3) return "";
+  const W=320,H=90,pad=4, ks=pts.map(p=>p[0]), cs=pts.map(p=>p[1]);
+  let lo=Math.min(...cs), hi=Math.max(...cs);
+  if(t){ lo=Math.min(lo,t.stop); hi=Math.max(hi,t.target); }
+  const x = k => pad+(k-ks[0])/Math.max(1,(ks[ks.length-1]-ks[0]))*(W-2*pad), y = v => H-pad-(v-lo)/Math.max(1e-9,hi-lo)*(H-2*pad);
+  const path = pts.map((p,i)=>(i?"L":"M")+x(p[0]).toFixed(1)+" "+y(p[1]).toFixed(1)).join(" ");
+  let lines = "";
+  if(t){ [[t.stop,"var(--red)"],[t.entry,"var(--sub)"],[t.target,"var(--green)"]].forEach(([v,c])=>{ lines += '<line x1="0" x2="'+W+'" y1="'+y(v)+'" y2="'+y(v)+'" stroke="'+c+'" stroke-dasharray="4 4" stroke-width="1"/>'; });
+    if(t.in_k!=null) lines += '<circle cx="'+x(t.in_k)+'" cy="'+y(t.entry)+'" r="4" fill="var(--blue)"/>'; if(!t.open && t.out_k!=null) lines += '<circle cx="'+x(t.out_k)+'" cy="'+y(t.exit)+'" r="4" fill="'+(t.eur>=0?"var(--green)":"var(--red)")+'"/>'; }
+  return '<svg class="spark" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Kursverlauf '+esc(sym)+'">'+lines+'<path d="'+path+'" fill="none" stroke="var(--blue)" stroke-width="2"/></svg>';
+}
+function proposalCard(t){
+  const sent = (()=>{ try{ return localStorage.getItem("ans-"+t.pid); }catch(e){ return null; } })();
+  const risk = (t.entry-t.stop)/t.entry*100;
+  return '<div class="card"><div class="row"><h3>'+esc(t.symbol)+' · '+esc(STRAT[t.strategy])+'</h3><span class="badge b-blue">Vorschlag</span></div>'+
+    '<div class="sub">Einstieg '+esc(t.in_at)+' Uhr New York ('+etToDE(t.in_at)+' Uhr bei uns) zu '+usd(t.entry)+'</div>'+
+    tradeBar(t)+'<p class="small">'+esc(D.learn.strategies[t.strategy]||"")+' Risiko bei 100 €: '+nf2.format(risk)+' €.</p>'+
+    (window.__DATA__ ? '<div class="small" style="margin-top:8px">Ja oder Nein bitte im Push antippen.</div>' : sent ? '<div class="badge b-green">Gesendet: „'+esc(sent)+'“ – zählt beim nächsten Lauf (≤ 10 Min.)</div>' :
+    '<div class="btns"><button class="btn yes" onclick="answer(\''+t.pid+'\',\'ja\')">Ja, mitmachen</button><button class="btn no" onclick="answer(\''+t.pid+'\',\'nein\')">Nein</button></div>')+'</div>';
+}
+async function answer(pid, a){
+  try{
+    await fetch(D.reply.server.replace(/\/$/,"")+"/"+D.reply.topic, {method:"POST", body:a+" "+pid});
+    try{ localStorage.setItem("ans-"+pid, a); }catch(e){}
+    render();
+  }catch(e){ openSheet("<h3>Nicht gesendet</h3><p>Keine Verbindung. Bitte noch einmal versuchen oder den Button im Push nutzen.</p>"); }
+}
+function renderHeute(onlyClock){
+  const ck = clock();
+  if(onlyClock && $("#clock")){ $("#clock").innerHTML = clockHtml(ck); return; }
+  const L = D.live && D.live.date===D.market.date ? D.live : null;
+  const top = L && L.focus.length ? L.per_variant[L.focus[0]] || {n:0,eur:0} : null;
+  const lk = L ? (L.lukas||[]).filter(t=>t.eur!=null) : [];
+  const lkEur = lk.reduce((s,t)=>s+t.eur,0);
+  const bad = D.status.filter(s=>s.ok===false);
+  let h = head("Heute", window.__DATA__ ? '<span class="small">Stand '+hmDE(D.generated_at)+' Uhr</span>' : '<button class="btn ghost" style="padding:8px 12px" onclick="refresh()">Neu laden</button>');
+  h += '<div class="card" id="clock">'+clockHtml(ck)+'</div>';
+  h += goalCard();
+  h += '<div class="card"><div class="small">Nächster Schritt</div><div class="next">'+esc(nextStep(ck))+'</div></div>';
+  const S = D.sim||{}, KS = S.live || S.vorschau;
+  if(KS){ const R = KS.fee; h += '<button class="card" style="display:block;width:calc(100% - 32px);text-align:left;border:0;color:inherit;font:inherit;cursor:pointer" onclick="go(\'mehr\');sub(\'konto\')"><div class="row"><span class="small">'+(S.live?"Simulator-Konto":"Simulator-Vorschau (Backtest)")+'</span><span class="sub">›</span></div><div class="row"><span class="big" style="font-size:28px">'+nf2.format(R.equity)+' €</span><b class="num '+cls(R.pnl)+'">'+eur(R.pnl)+'</b></div><div class="small">mit 1 € Gebühr je Order · ohne Gebühr: '+nf2.format(KS.no_fee.equity)+' €</div></button>'; }
+  const champ = D.lab && D.lab.variants && D.lab.variants[0];
+  if(champ) h += '<div class="card"><div class="small">Tagesplan</div><div class="next" style="font-size:16px">Top-Variante: '+esc(champ.label)+'</div>'+
+    '<div class="small" style="margin-top:6px">So gehen Profis vor – und das System auch: nur Trades nach dieser Regel, '+g("Stopp")+' immer gesetzt, nach der Tagesgrenze ist Schluss, alles vor Börsenschluss verkauft.</div></div>';
+  D.proposals.forEach(t => h += proposalCard(t));
+  h += '<div class="grid2"><div class="card kpi"><div class="label">Top-Variante heute</div><div class="val '+cls(top&&top.eur)+'">'+(top?eur(top.eur):"–")+'</div><div class="small">'+(top?int(top.n)+" Trades · bei 100 € pro Trade":"heute noch kein Lauf")+'</div></div>'+
+       '<div class="card kpi"><div class="label">Deine Ja-Trades</div><div class="val '+cls(lkEur)+'">'+(lk.length?eur(lkEur):"–")+'</div><div class="small">'+(lk.length?lk.length+" Trades":"noch keine Antwort heute")+'</div></div></div>';
+  if(L){
+    const open = L.trades.filter(t=>t.open);
+    h += '<h2>Laufende Spielgeld-Trades</h2>';
+    if(!open.length) h += '<div class="card sub">Gerade läuft kein Trade der Top-Varianten. Stand '+esc(L.as_of)+'.</div>';
+    const seen = new Set();
+    open.forEach(t => { const k=t.symbol+t.strategy; if(seen.has(k)) return; seen.add(k);
+      h += '<div class="card"><div class="row"><h3>'+esc(t.symbol)+'</h3><span class="num '+cls(t.eur)+'">'+eur(t.eur)+'</span></div><div class="sub">'+esc(STRAT[t.strategy])+' · seit '+esc(t.in_at)+' Uhr NY · Kurs '+usd(t.last)+'</div>'+tradeBar(t)+spark(t.symbol,t)+'</div>'; });
+    h += '<div class="card"><div class="row"><span>Alle Varianten heute</span><b class="num">'+int(L.n_trades)+' Trades</b></div><div class="small">'+int(L.n_open)+' offen · '+int(L.symbols)+' Aktien beobachtet · Stand '+esc(L.as_of)+'</div></div>';
+  }
+  if(D.history.length){
+    h += '<h2>Verlauf</h2><div class="list">'+D.history.slice(-10).reverse().map(r =>
+      '<div class="item"><div class="row"><span>'+dateDE(r.date)+'</span><b class="num '+cls(r.top_eur)+'">'+eur(r.top_eur)+'</b></div><div class="small">Top-Variante '+int(r.top_n)+' Trades · alle Varianten '+eur(r.all_eur)+(r.lukas_n?' · du: '+eur(r.lukas_eur):'')+'</div></div>').join("")+'</div>';
+  }
+  h += '<h2>Lektion des Tages</h2><div class="card">'+esc(D.learn.lesson)+'</div>';
+  h += '<h2>System</h2><div class="card"><div class="row"><span>'+(bad.length?'<span class="badge b-red">'+bad.length+' Problem'+(bad.length>1?'e':'')+'</span>':'<span class="badge b-green">Alles läuft</span>')+'</span><span class="small">Daten '+ago(D.generated_at)+'</span></div>'+
+       bad.map(s=>'<p class="small"><b>'+esc(s.name)+':</b> '+esc((s.steps[0]||{}).detail||s.summary)+'</p>').join("")+'<div class="btns"><button class="btn ghost" onclick="statusSheet()">Details</button></div></div>';
+  $("#app").innerHTML = h;
+}
+function clockHtml(ck){
+  const b = ck.state==="offen" ? "b-green" : ck.state==="vor" ? "b-orange" : "";
+  return '<div class="row"><span class="badge '+b+'">'+(ck.state==="offen"?"Offen":ck.state==="vor"?"Vor dem Start":"Geschlossen")+'</span><span class="small">New York '+tz(new Date().toISOString(),"America/New_York",{hour:"2-digit",minute:"2-digit"})+' Uhr</span></div>'+
+    '<div class="next" style="margin-top:6px">'+ck.text+'</div><div class="small">'+ck.next+'</div>';
+}
+function statusSheet(){
+  openSheet('<h3>Systemstatus</h3>'+D.status.map(s=>'<div class="item" style="padding:8px 0"><div class="row"><b>'+esc(s.name)+'</b><span class="badge '+(s.ok===false?"b-red":s.ok?"b-green":"")+'">'+(s.ok===false?"Fehler":s.ok?"OK":"noch nie")+'</span></div><div class="small">'+(s.ran_at?dayDE(s.ran_at)+" "+hmDE(s.ran_at)+" Uhr · ":"")+esc(s.summary||"")+'</div></div>').join("")+
+    '<p class="small">Push-Kanal in der ntfy-App: <b>'+esc(D.push_topic||"")+'</b></p><div class="btns"><button class="btn ghost" onclick="logout()">Abmelden</button></div>');
+}
+
+// ------------------------------------------------------------ Trades
+function tradeItem(t, who){
+  const lab = D.labels[t.variant] || t.variant;
+  const res = t.open ? "läuft" : t.why;
+  const expl = t.open ? "Der Trade läuft noch. Er endet am Stopp, am Ziel oder um 15:55 Uhr New York." :
+    t.why==="Stopp" ? "Der Kurs fiel auf den Stopp. Der Verlust blieb so klein wie geplant. Das passiert oft – entscheidend ist die Summe." :
+    t.why==="Ziel" ? "Der Kurs erreichte das Ziel. Der Gewinn ist ein Vielfaches des Risikos ("+g("R")+")." :
+    "Weder Stopp noch Ziel: verkauft vor Börsenschluss, wie es beim Daytrading üblich ist.";
+  const pid = t.pid || ((t.date||(D.live&&D.live.date)||"").replace(/-/g,"")+"-"+String(t.symbol).replace(".","_")+"-"+t.strategy);
+  return '<details class="item"><summary><div class="row"><span><b>'+esc(t.symbol)+'</b> <span class="small">'+esc(who)+'</span></span><b class="num '+cls(t.eur)+'">'+eur(t.eur)+'</b></div>'+
+    '<div class="small">'+esc(STRAT[t.strategy]||"")+' · '+esc(t.in_at||t.answer_at)+' Uhr NY · '+esc(res||t.status)+'</div></summary>'+
+    '<div style="margin-top:8px" class="small">'+esc(lab)+'</div>'+(t.stop?tradeBar(t):"")+spark(t.symbol,t)+'<p class="small">'+expl+'</p>'+notesHtml(pid)+'</details>';
+}
+function renderTrades(){
+  const days = [];
+  if(D.live) days.push({date:D.live.date, trades:D.live.trades, lukas:D.live.lukas||[], as_of:D.live.as_of, today:true});
+  (D.journal||[]).forEach(j => days.push(j));
+  let h = head("Trades");
+  if(!days.length){ $("#app").innerHTML = h+'<div class="card sub">Noch keine Live-Trades. Ab dem nächsten Börsentag erscheinen sie hier – mit Erklärung zu jedem Trade.</div>'; return; }
+  const cur = days.find(d=>d.date===DAY) || days[0];
+  h += '<div class="chips">'+days.slice(0,10).map(d=>'<button class="chip '+(d===cur?"on":"")+'" onclick="DAY=\''+d.date+'\';render()">'+(d.today?"Heute":dateDE(d.date).slice(0,6))+'</button>').join("")+'</div>';
+  h += '<div class="chips">'+["alle","Regel","Ja-Trades","orb","orbmkt","orbrank","gap","bounce","sip"].map(f=>'<button class="chip '+(FILTER===f?"on":"")+'" onclick="FILTER=\''+f+'\';render()">'+CHIP[f]+'</button>').join("")+'</div>';
+  let rows = [];
+  if(FILTER!=="Ja-Trades") rows = cur.trades.filter(t => FILTER==="alle"||FILTER==="Regel"||t.strategy===FILTER).map(t=>[t,"Regel"]);
+  if(FILTER==="alle"||FILTER==="Ja-Trades") rows = rows.concat((cur.lukas||[]).map(t=>[Object.assign({open:t.status==="offen"},t),"Du"]));
+  const sum = rows.reduce((s,[t])=>s+(t.eur||0),0);
+  h += '<div class="card"><div class="row"><span>'+dateDE(cur.date)+(cur.as_of?' · Stand '+esc(cur.as_of):'')+'</span><b class="num '+cls(sum)+'">'+eur(sum)+'</b></div><div class="small">'+rows.length+' Trades der Top-Varianten · Spielgeld, jeweils bei 100 € pro Trade. Tippe auf einen Trade für die Erklärung.</div></div>';
+  h += rows.length ? '<div class="list">'+rows.map(([t,w])=>tradeItem(t,w)).join("")+'</div>' : '<div class="card sub">Keine Trades für diesen Filter.</div>';
+  $("#app").innerHTML = h;
+}
+
+// ------------------------------------------------------------ Labor
+function curve(id){
+  const pts = (D.lab.curves||{})[id]; if(!pts||pts.length<3) return "";
+  const W=320,H=60,vs=pts.map(p=>p[1]), lo=Math.min(0,...vs), hi=Math.max(0,...vs);
+  const x=i=>i/(pts.length-1)*W, y=v=>H-3-(v-lo)/Math.max(1e-9,hi-lo)*(H-6);
+  const testStart = pts.findIndex(p=>p[0]>=D.lab.test[0]);
+  return '<svg class="spark" viewBox="0 0 '+W+' '+H+'"><rect x="'+x(testStart)+'" y="0" width="'+(W-x(testStart))+'" height="'+H+'" fill="var(--bluebg)"/><line x1="0" x2="'+W+'" y1="'+y(0)+'" y2="'+y(0)+'" stroke="var(--line)"/><path d="'+pts.map((p,i)=>(i?"L":"M")+x(i).toFixed(1)+" "+y(p[1]).toFixed(1)).join(" ")+'" fill="none" stroke="'+(vs[vs.length-1]>=0?"var(--green)":"var(--red)")+'" stroke-width="2"/></svg><div class="legend"><span>Lerntage</span><span>Prüftage (blau)</span></div>';
+}
+function renderLabor(){
+  const L = D.lab;
+  let h = head("Labor");
+  if(!L || !L.variants){ $("#app").innerHTML = h+'<div class="card sub">Noch keine Labor-Ergebnisse.</div>'; return; }
+  const passed = L.variants.filter(v=>v.passed).length;
+  h += '<div class="card"><div class="row"><span>Bestanden</span><span class="big num">'+passed+'<span class="sub" style="font-size:18px"> / '+L.variants.length+'</span></span></div>'+
+       '<p class="small">'+int(L.symbols)+' Aktien · '+int(L.days)+' Tage: '+int(L.n_train_days)+' '+g("Lerntage")+' + '+int(L.n_test_days)+' '+g("Prüftage")+' ('+dateDE(L.test[0])+' bis '+dateDE(L.test[1])+'). Eine '+g("Variante")+' besteht, wenn sie an Lern- und Prüftagen im Plus ist und mindestens '+int(L.settings.min_test_trades)+' Trades hat.</p></div>';
+  h += '<div class="card small">Wichtig: Mit 1 € '+g("Gebühr")+' je Order wären alle Varianten im Minus. Darum zeigt jede Karte beide Zahlen.</div>';
+  h += '<h2>Rangliste</h2><div class="chips">'+["alle","orb","orbmkt","orbrank","gap","bounce","sip"].map(f=>'<button class="chip '+(LABF===f?"on":"")+'" onclick="LABF=\''+f+'\';render()">'+CHIP[f]+'</button>').join("")+'</div>';
+  L.variants.map((v,i)=>[v,i]).filter(([v])=>LABF==="alle"||v.strategy===LABF).slice(0,15).forEach(([v,i]) => { const t=v.test||{};
+    h += '<div class="card"><div class="row"><span class="badge '+(v.passed?"b-green":"")+'">'+(v.passed?"bestanden":"nicht bestanden")+'</span><span class="small">#'+(i+1)+'</span></div>'+
+      '<h3 style="margin-top:6px">'+esc(v.label)+'</h3>'+
+      (t.n ? '<div class="grid2" style="margin:8px 0 0"><div><div class="small">Prüftage, bei 100 €/Trade</div><div class="val num '+cls(t.eur)+'" style="font-size:22px;font-weight:800">'+eur(t.eur)+'</div></div><div><div class="small">nach Gebühren</div><div class="num '+cls(t.eur_after_fees)+'" style="font-size:22px;font-weight:800">'+eur(t.eur_after_fees)+'</div></div></div>'+
+      '<div class="small" style="margin-top:6px">'+int(t.n)+' Trades · '+g("Trefferquote")+' '+nf0.format(t.win_rate)+' % · Ø '+pct(t.avg_pct)+' · '+g("Zufallswert")+' '+nf1.format(t.t||0)+(Math.abs(t.t||0)>=2?" (kaum Zufall)":" (Zufall möglich)")+'</div>'+
+      '<div class="small" style="margin-top:4px">'+(t.eur>0?'Lohnt sich bis <b>'+nf2.format(t.be_fee!=null?t.be_fee:t.eur/(2*t.n))+' €</b> '+g("Gebühr")+' je Order (bei 100 € pro Trade).':'Schon ohne Gebühr im Minus.')+'</div>' : '<div class="small">Auf den Prüftagen kein Trade.</div>')+
+      curve(v.id)+'<div class="btns"><button class="btn ghost" onclick="variantSheet(\''+v.id+'\')">Details</button></div></div>'; });
+  h += '<h2>Die Strategien</h2>'+Object.entries(L.strategies||{}).map(([k,v])=>'<div class="card"><h3>'+esc(STRAT[k]||k)+'</h3><div class="small">'+esc(v)+'</div></div>').join("");
+  h += '<div class="card small">Rangliste vom '+dayDE(L.created_at)+', '+hmDE(L.created_at)+' Uhr. Spread '+nf2.format(L.settings.slip_pct)+' % je Seite ist eingerechnet.</div>';
+  $("#app").innerHTML = h;
+}
+
+// ------------------------------------------------------------ Markt
+function renderMarkt(){
+  const M = D.morning;
+  let h = head("Markt");
+  h += '<h2>Morgen-Scan</h2>';
+  if(M && M.hits.length){
+    h += '<div class="card"><div class="row"><span>Passen zu einer Regel</span><span class="big num">'+int((M.daily||{}).hits||M.hits.length)+'</span></div><div class="small">Schlusskurse vom '+esc(M.as_of||"")+' · '+int((M.daily||{}).scanned)+' Aktien gescannt</div></div>';
+    h += '<div class="list">'+Object.entries(M.counts).map(([k,n])=>'<details class="item"><summary><div class="row"><span><code>'+esc(k)+'</code></span><b class="num">'+int(n)+'</b></div><div class="small">'+esc(D.learn.setups[k]||"")+'</div></summary><div class="small" style="margin-top:6px">'+esc((M.per_setup[k]||[]).join(", "))+'</div></details>').join("")+'</div>';
+    h += '<h2>Meistgehandelte Treffer</h2><div class="list">'+M.hits.slice(0,15).map(x=>'<div class="item"><div class="row"><b>'+esc(x.symbol)+'</b><span class="num">'+usd(x.price)+'</span></div><div class="small">'+esc((x.setups||[]).join(", "))+' · '+g("RSI")+' '+(x.rsi!=null?nf1.format(x.rsi):"–")+'</div></div>').join("")+'</div>';
+  } else h += '<div class="card sub">Noch kein Morgen-Scan.</div>';
+  if(D.orb && D.orb.hits.length){
+    h += '<h2>'+g("Opening Range","Opening-Range")+'-Ausbrüche</h2><div class="card small">'+esc(D.orb.as_of)+' · '+int(D.orb.scanned)+' Charts · '+D.orb.hits.length+' über der Spanne</div><div class="list">'+
+      D.orb.hits.slice(0,15).map(x=>'<div class="item"><div class="row"><b>'+esc(x.symbol)+'</b><span class="num">'+usd(x.price)+'</span></div><div class="small">'+esc(x.at)+' NY · Spanne '+usd(x.or_low)+' bis '+usd(x.or_high)+' · '+pct(x.pct_over)+' darüber</div></div>').join("")+'</div>';
+  }
+  if(M && M.moves && M.moves.length){
+    h += '<h2>Bewegung seit gestern</h2><div class="chips" style="flex-wrap:wrap">'+M.moves.map(m=>'<span class="badge '+(m.pct>=0?"b-green":"b-red")+'">'+esc(m.ticker)+' '+pct(m.pct)+'</span>').join("")+'</div>';
+  }
+  if(M && M.news.length){
+    h += '<h2>News</h2><div class="list">'+M.news.slice(0,20).map(n=>'<a class="item" style="display:block;color:inherit;text-decoration:none" href="'+esc(n.link)+'" target="_blank" rel="noopener"><div class="small">'+esc(n.ticker)+' · '+(n.time?dayDE(n.time)+" "+hmDE(n.time)+" Uhr":"")+(n.tags&&n.tags.length?' · '+esc(n.tags.join(", ")):'')+'</div><div>'+esc(n.title)+'</div></a>').join("")+'</div><div class="card small">Schlagzeilen sind Hinweise, keine Fakten: erst den Artikel lesen.</div>';
+  }
+  if(M && M.pelosi){
+    h += '<h2>Pelosi-Tracker</h2><div class="list">'+(M.pelosi.new.length?M.pelosi.new.map(r=>'<a class="item" style="display:block;color:inherit" href="'+esc(r.url)+'" target="_blank" rel="noopener"><b>'+esc(r.name)+'</b><div class="small">gemeldet '+dateDE(r.filed)+' · PDF öffnen</div></a>').join(""):'<div class="item sub">Keine neue Meldung.</div>')+'</div><div class="card small">Abgeordnete melden Aktienkäufe erst Tage bis Wochen später, nur als Betragsspanne.</div>';
+  }
+  $("#app").innerHTML = h;
+}
+
+// ------------------------------------------------------------ Lernen
+function renderLernen(){
+  let h = head("Lernen");
+  h += '<h2>Lektion des Tages</h2><div class="card">'+esc(D.learn.lesson)+'</div>';
+  h += '<h2>So funktioniert das System</h2><div class="card">'+D.learn.how.map(([t,x],i)=>'<div class="step" style="margin:'+(i?"12px":"0")+' 0 0"><div class="n">'+(i+1)+'</div><div><b>'+esc(t)+'</b><div class="small">'+esc(x)+'</div></div></div>').join("")+'</div>';
+  h += '<h2>Die drei Phasen</h2><div class="list">'+
+    '<div class="item"><div class="row"><b>1. Testphase</b><span class="badge b-blue">jetzt</span></div><div class="small">Spielgeld ohne Limit. 76 Varianten laufen parallel, das System misst und lernt.</div></div>'+
+    '<div class="item"><div class="row"><b>2. Simulator</b><span class="badge">später</span></div><div class="small">100 € Spielgeld wie echt: höchstens 3 € Verlust pro Trade, 8 € pro Tag, 30 € pro Monat, mit Gebühren.</div></div>'+
+    '<div class="item"><div class="row"><b>3. Echtes Geld</b><span class="badge">frühestens nach 2 Monaten</span></div><div class="small">Nur wenn der Simulator 2 Monate am Stück im Plus war – und nur mit deinem Ja zu jeder Order.</div></div></div>';
+  h += '<h2>Alle Lektionen</h2><div class="list">'+D.learn.lessons.map(l=>'<div class="item small">'+esc(l)+'</div>').join("")+'</div>';
+  h += '<div class="btns" style="margin:10px 16px"><button class="btn ghost" onclick="sub(\'glossar\')">Glossar öffnen</button></div>';
+  h += '<div class="card small">Spielgeld: Alle Zahlen sind gemessen, nicht versprochen. Die meisten Daytrader verlieren Geld – genau deshalb misst dieses System ehrlich, bevor echtes Geld ins Spiel kommt.</div>';
+  $("#app").innerHTML = h;
+}
+function glossList(q){ q=q.toLowerCase(); return Object.entries(D.learn.glossary).filter(([k,v])=>!q||k.toLowerCase().includes(q)||v.toLowerCase().includes(q)).map(([k,v])=>'<div class="item"><b>'+esc(k)+'</b><div class="small">'+esc(v)+'</div></div>').join("")||'<div class="item sub">Nichts gefunden.</div>'; }
+function filterGloss(q){ $("#gl").innerHTML = glossList(q); }
+
+// ------------------------------------------------------------ Konto (Simulator)
+function lineChart(vals, base, labels){
+  if(!vals.length) return "";
+  const W=340,H=150,all=vals.concat([base]), lo=Math.min(...all), hi=Math.max(...all), pad=6;
+  const x=i=>pad+i/Math.max(1,vals.length-1)*(W-2*pad), y=v=>H-pad-(v-lo)/Math.max(1e-9,hi-lo)*(H-2*pad);
+  const up = vals[vals.length-1] >= base, col = up ? "var(--green)" : "var(--red)";
+  const path = vals.map((v,i)=>(i?"L":"M")+x(i).toFixed(1)+" "+y(v).toFixed(1)).join(" ");
+  const area = path+" L"+x(vals.length-1).toFixed(1)+" "+(H-pad)+" L"+x(0).toFixed(1)+" "+(H-pad)+" Z";
+  return '<svg class="spark" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Kontoverlauf"><path d="'+area+'" fill="'+col+'" opacity=".12"/>'+
+    '<line x1="0" x2="'+W+'" y1="'+y(base)+'" y2="'+y(base)+'" stroke="var(--sub)" stroke-dasharray="3 4" stroke-width="1"/><path d="'+path+'" fill="none" stroke="'+col+'" stroke-width="2.5" stroke-linejoin="round"/></svg>'+
+    (labels?'<div class="legend"><span>'+esc(labels[0])+'</span><span>'+esc(labels[1])+'</span></div>':'');
+}
+function renderKonto(){
+  const S = D.sim || {}, st = S.settings || {}, live = S.live, pre = S.vorschau;
+  const src = live || pre;
+  let h = head("Konto");
+  h += '<div class="chips"><button class="chip '+(FEES?"on":"")+'" onclick="FEES=true;render()">mit 1 € Gebühr je Order</button><button class="chip '+(!FEES?"on":"")+'" onclick="FEES=false;render()">ohne Gebühr</button></div>';
+  if(!src){ $("#app").innerHTML = h+'<div class="card sub">Noch keine Daten für den Simulator.</div>'; return; }
+  const R = FEES ? src.fee : src.no_fee;
+  h += '<div class="card"><div class="small">'+(live?"Simulator seit "+dateDE(live.start):"Vorschau: Top-Variante an den letzten "+int(R.days.length)+" Tagen (Backtest)")+'</div>'+
+       '<div class="big">'+nf2.format(R.equity)+' €</div><div class="num '+cls(R.pnl)+'" style="font-weight:700">'+eur(R.pnl)+' seit Start mit '+nf0.format(st.start_eur)+' €</div>'+
+       lineChart(R.days.map(d=>d.equity), st.start_eur, R.days.length?[dateDE(R.days[0].date), dateDE(R.days[R.days.length-1].date)]:null)+'</div>';
+  if(!live) h += '<div class="card small"><b>Noch Testphase.</b> Der echte Simulator startet erst, wenn du es entscheidest. Bis dahin zeigt diese Seite, wie die aktuelle Top-Variante des Labors mit 100 € und allen Grenzen gelaufen <i>wäre</i>.</div>';
+  h += '<div class="grid2"><div class="card kpi"><div class="label">Trades</div><div class="val">'+int(R.trades)+'</div><div class="small">'+g("Trefferquote")+' '+(R.win_rate!=null?nf0.format(R.win_rate)+" %":"–")+'</div></div>'+
+       '<div class="card kpi"><div class="label">Größter Rückgang</div><div class="val neg">'+nf2.format(R.max_dd)+' €</div><div class="small">vom Höchststand</div></div></div>';
+  h += '<h2>Grenzen</h2><div class="list">'+
+    '<div class="item"><div class="row"><span>Pro Trade höchstens</span><b>'+nf0.format(st.max_loss_trade)+' € Verlust</b></div><div class="small">Daraus berechnet das System, wie viel gekauft wird.</div></div>'+
+    '<div class="item"><div class="row"><span>Pro Tag höchstens</span><b>'+nf0.format(st.max_loss_day)+' €</b></div><div class="small">Erreicht an '+int(R.day_stops)+' Tagen – danach Schluss für den Tag.</div></div>'+
+    '<div class="item"><div class="row"><span>Pro Monat höchstens</span><b>'+nf0.format(st.max_loss_month)+' €</b></div><div class="small">Erreicht in '+int(R.month_stops)+' Monaten – danach Pause bis Monatsende.</div></div></div>';
+  h += '<h2>Monate</h2><div class="list">'+R.months.map(m=>'<div class="item"><div class="row"><span>'+esc(m.month)+'</span><b class="num '+cls(m.pnl)+'">'+eur(m.pnl)+'</b></div><div class="small">'+int(m.trades)+' Trades'+(m.stopped?' · <span class="neg">Monatsgrenze erreicht</span>':'')+'</div></div>').join("")+'</div>';
+  h += '<h2>Letzte Trades</h2><div class="list">'+R.book.slice(-15).reverse().map(b=>'<div class="item"><div class="row"><span><b>'+esc(b.symbol)+'</b> <span class="small">'+dateDE(b.date)+'</span></span><b class="num '+cls(b.pnl)+'">'+eur(b.pnl)+'</b></div><div class="small">Position '+nf2.format(b.value)+' € · '+esc(b.why)+(b.fees?' · Gebühren '+nf2.format(b.fees)+' €':'')+'</div></div>').join("")+'</div>';
+  if(pre && FEES && pre.no_fee) h += '<div class="card small">Vergleich: Ohne Gebühren stünde das Konto bei <b>'+nf2.format(pre.no_fee.equity)+' €</b>, mit 1 € je Order bei <b>'+nf2.format(pre.fee.equity)+' €</b>. Bei 100 € Kapital entscheidet die '+g("Gebühr")+' über Plus oder Minus.</div>';
+  $("#app").innerHTML = h;
+}
+
+// ------------------------------------------------------------ Mehr
+function renderMehr(){
+  const w = D.weekly, checks = (D.sim||{}).checks||[], ok = checks.filter(c=>c.ok).length;
+  const row = (id,t,s,badge) => '<button class="item" style="display:block;width:100%;text-align:left;border:0;background:none;color:inherit;font:inherit;cursor:pointer" onclick="sub(\''+id+'\')"><div class="row"><b>'+t+'</b><span>'+(badge||"")+' <span class="sub">›</span></span></div><div class="small">'+s+'</div></button>';
+  let h = head("Mehr");
+  h += '<div class="list">'+
+    row("heute","Live heute","Börsenuhr, laufende Spielgeld-Trades, Vorschläge")+
+    row("trades","Trades","Tagebuch mit Erklärung und Notizen")+
+    row("konto","Simulator-Konto","100 € wie echt, mit Grenzen und Gebühren")+
+    row("muster","Gelernte Muster","Wann gewinnen die Regeln – und wann nicht?")+
+    '</div><div class="list">'+
+    row("markt","Markt","Morgen-Scan, Opening-Range-Ausbrüche, News, Pelosi")+
+    row("ticker","Ticker-Analyse", D.ticker&&D.ticker.symbol?"Zuletzt: "+esc(D.ticker.symbol):"Eine bestimmte Aktie prüfen lassen")+
+    row("woche","Wochen-Rückblick", w?("Woche "+esc(w.week)):"kommt am Freitagabend", w?'<span class="badge b-blue">neu</span>':"")+
+    row("echt","Echtgeld-Prüfung","Wann echtes Geld überhaupt in Frage kommt",'<span class="badge '+(ok===checks.length&&checks.length?"b-green":"b-orange")+'">'+ok+'/'+checks.length+'</span>')+
+    row("aend","Was das System gelernt hat","Änderungen an der Rangliste",'<span class="badge">'+(D.changes||[]).length+'</span>')+
+    '</div><div class="list">'+
+    row("regeln","So handeln Profis","Die Grundregeln guter Daytrader")+
+    row("lernen","Lernen","Lektionen, Ablauf, die drei Phasen")+
+    row("glossar","Glossar","Alle Fachwörter einfach erklärt")+
+    '</div><div class="list">'+
+    row("einst","Einstellungen","Zeitplan, Grenzen, Push-Kanal, Einführung")+
+    '<button class="item" style="display:block;width:100%;text-align:left;border:0;background:none;color:inherit;font:inherit;cursor:pointer" onclick="statusSheet()"><div class="row"><b>Systemstatus</b><span class="sub">›</span></div><div class="small">Läufe, Fehler, Push-Kanal, Abmelden</div></button></div>';
+  h += '<div class="card small">Stand der Daten: '+dayDE(D.generated_at)+', '+hmDE(D.generated_at)+' Uhr. Die Seite lädt alle 5 Minuten neu.</div>';
+  $("#app").innerHTML = h;
+}
+function renderWoche(){
+  const w = D.weekly;
+  let h = head("Wochen-Rückblick");
+  if(!w){ $("#app").innerHTML = h+'<div class="card sub">Der erste Rückblick kommt am Freitagabend nach Börsenschluss.</div>'; return; }
+  h += '<div class="card"><div class="small">Woche '+esc(w.week)+' · '+dateDE(w.from)+' bis '+dateDE(w.to)+'</div><div class="big">'+int(w.trades)+'</div><div class="small">Spielgeld-Trades aller Varianten an '+int(w.live_days)+' Live-Tagen</div></div>';
+  h += '<h2>Beste Varianten der Woche</h2><div class="list">'+w.best.map(b=>'<div class="item"><div class="row"><span class="small">'+esc(b.label)+'</span><b class="num '+cls(b.eur)+'">'+eur(b.eur)+'</b></div><div class="small">'+int(b.n)+' Trades</div></div>').join("")+'</div>';
+  h += '<h2>Schwächste</h2><div class="list">'+w.worst.map(b=>'<div class="item"><div class="row"><span class="small">'+esc(b.label)+'</span><b class="num '+cls(b.eur)+'">'+eur(b.eur)+'</b></div></div>').join("")+'</div>';
+  h += '<div class="grid2"><div class="card kpi"><div class="label">Deine Antworten</div><div class="val">'+int(w.decisions.ja)+' Ja</div><div class="small">'+int(w.decisions.nein)+' Nein</div></div><div class="card kpi"><div class="label">Deine Ja-Trades</div><div class="val '+cls(w.lukas.eur)+'">'+eur(w.lukas.eur)+'</div><div class="small">'+int(w.lukas.n)+' Trades</div></div></div>';
+  if(w.share_positive!=null) h += '<div class="card">'+w.share_positive+' % der Varianten waren diese Woche im Plus. Top-Variante jetzt: <b>'+esc(w.champion||"–")+'</b> ('+int(w.passed)+' bestanden).</div>';
+  if(w.changes.length) h += '<h2>Änderungen</h2><div class="list">'+w.changes.map(c=>'<div class="item small">'+esc(c.text)+'</div>').join("")+'</div>';
+  h += '<h2>Was heißt das?</h2><div class="card">'+esc(w.lesson)+'</div>';
+  $("#app").innerHTML = h;
+}
+function renderEcht(){
+  const checks = (D.sim||{}).checks||[];
+  let h = head("Echtgeld-Prüfung");
+  h += '<div class="card small">Echtes Geld kommt erst in Frage, wenn <b>alle</b> Punkte grün sind. Dann entscheidest du. Bis dahin bleibt alles Spielgeld.</div>';
+  h += '<div class="list">'+checks.map(c=>'<div class="item"><div class="row"><span>'+esc(c.name)+'</span><span class="badge '+(c.ok?"b-green":"b-red")+'">'+(c.ok?"erfüllt":"offen")+'</span></div><div class="small">'+esc(c.detail)+'</div></div>').join("")+'</div>';
+  h += '<div class="card small">Warum so streng? Ein guter Monat kann Glück sein. Zwei Monate mit Grenzen und Gebühren im Plus sind ein echter Hinweis – aber auch dann keine Garantie.</div>';
+  $("#app").innerHTML = h;
+}
+function renderAend(){
+  let h = head("Gelernt");
+  h += '<div class="card small">Jeden Abend rechnet das Labor alle Varianten an den neuesten 60 Tagen neu. Hier steht, was sich dadurch geändert hat.</div>';
+  h += (D.changes||[]).length ? '<div class="list">'+D.changes.map(c=>'<div class="item"><div class="row"><span class="badge '+(c.kind==="failed"?"b-red":c.kind==="passed"?"b-green":"b-blue")+'">'+({champion:"Top-Variante",passed:"bestanden",failed:"durchgefallen"}[c.kind]||c.kind)+'</span><span class="small">'+dateDE(c.date)+'</span></div><div class="small" style="margin-top:4px">'+esc(c.text)+'</div></div>').join("")+'</div>' : '<div class="card sub">Noch keine Änderung seit dem Start.</div>';
+  $("#app").innerHTML = h;
+}
+function renderRegeln(){
+  let h = head("So handeln Profis");
+  h += '<div class="card small">Aus Ratgebern erfahrener Daytrader und der Studie von Zarattini, Barbon und Aziz (2024) zu Opening-Range-Ausbrüchen bei „Stocks in Play“. Das System setzt diese Regeln automatisch um.</div>';
+  h += '<div class="card">'+D.rules.map(([t,x],i)=>'<div class="step" style="margin:'+(i?"14px":"0")+' 0 0"><div class="n">'+(i+1)+'</div><div><b>'+esc(t)+'</b><div class="small">'+esc(x)+'</div></div></div>').join("")+'</div>';
+  h += '<div class="card small">Wichtig: Auch Profis verlieren oft. Was sie unterscheidet, ist Disziplin bei Stopp, Grenzen und Auswahl – nicht, dass jeder Trade klappt.</div>';
+  $("#app").innerHTML = h;
+}
+function renderGlossar(){
+  let h = head("Glossar");
+  h += '<input class="search" placeholder="Begriff suchen" oninput="filterGloss(this.value)"><div class="list" id="gl">'+glossList("")+'</div>';
+  $("#app").innerHTML = h;
+}
+
+function variantSheet(id){
+  const v = D.lab.variants.find(x=>x.id===id); if(!v) return;
+  const col = (t,k,f) => t && t.n ? f(t[k]) : "–";
+  const rows = [["Trades","n",int],["Trefferquote","win_rate",x=>nf0.format(x)+" %"],["Ø je Trade","avg_pct",pct],["bei 100 €/Trade","eur",eur],["nach Gebühren","eur_after_fees",eur],["Zufallswert","t",x=>nf1.format(x||0)],["Stopps","stops",int],["Ziele","targets",int]];
+  openSheet('<h3>'+esc(v.label)+'</h3><p class="small">'+esc(D.lab.strategies[v.strategy]||"")+'</p>'+
+    '<div class="list" style="margin:10px 0"><div class="item"><div class="row small"><span></span><b>Lerntage</b><b>Prüftage</b></div></div>'+
+    rows.map(([n,k,f])=>'<div class="item"><div class="row"><span class="small">'+n+'</span><span class="num">'+col(v.train,k,f)+'</span><span class="num">'+col(v.test,k,f)+'</span></div></div>').join("")+'</div>'+
+    '<p class="small">'+(v.passed?"Bestanden: an Lern- und Prüftagen im Plus, genug Trades.":"Nicht bestanden: an Lern- oder Prüftagen nicht im Plus oder zu wenige Trades.")+'</p>');
+}
+function renderTicker(){
+  const t = D.ticker;
+  let h = head("Ticker-Analyse");
+  h += '<div class="card small">Du willst eine bestimmte Aktie prüfen? Schreib Claude im Chat z. B. „Analyse TSLA“. Claude startet die Prüfung: News, Einstiegsregel, Stopp und Ziel. Das Ergebnis erscheint hier und als Push.</div>';
+  if(!t || !t.symbol){ $("#app").innerHTML = h+'<div class="card sub">Noch keine Analyse.</div>'; return; }
+  const e = t.entry||{}, pl = t.plan;
+  const st = {triggered:"ausgelöst", waiting:"wartet", expired:"abgelaufen", "no-data":"keine Daten"}[e.status]||e.status||"–";
+  h += '<div class="card"><div class="row"><h3>'+esc(t.symbol)+'</h3><span class="badge '+(e.status==="triggered"?"b-green":"")+'">'+esc(st)+'</span></div>'+
+    (e.or_high!=null?'<div class="small">'+g("Opening Range","Eröffnungsspanne")+' '+usd(e.or_low)+' bis '+usd(e.or_high)+'</div>':'')+
+    (e.status==="triggered"?'<div class="small">Ausgelöst um '+esc(e.time)+' zu '+usd(e.price)+'</div>':'')+
+    (pl?'<div class="small" style="margin-top:6px">Plan: Einstieg '+usd(pl.entry)+' · '+g("Stopp")+' '+usd(pl.stop)+' · '+g("Ziel")+' '+usd(pl.target)+' · raus bis '+esc(pl.flat_by||"15:55")+' Uhr NY</div>':'')+'</div>';
+  const news = (t.news||{}).items||[];
+  if(news.length) h += '<h2>News</h2><div class="list">'+news.slice(0,10).map(n=>'<a class="item" style="display:block;color:inherit;text-decoration:none" href="'+esc(n.link)+'" target="_blank" rel="noopener"><div class="small">'+(n.time?dayDE(n.time)+" "+hmDE(n.time)+" Uhr":"")+'</div><div>'+esc(n.title)+'</div></a>').join("")+'</div>';
+  $("#app").innerHTML = h;
+}
+function renderEinst(){
+  const S = D.settings||{}, sm = S.sim||{};
+  let h = head("Einstellungen");
+  h += '<div class="card small">Ändern geht über Claude im Chat – die Werte stehen in <code>trader/system.json</code>.</div>';
+  h += '<h2>Zeitplan (deutsche Zeit, Mo–Fr)</h2><div class="list">'+(S.schedule||[]).map(([a,b])=>'<div class="item"><div class="row"><b>'+esc(a)+'</b></div><div class="small">'+esc(b)+'</div></div>').join("")+'</div>';
+  h += '<h2>Simulator</h2><div class="list">'+
+    [["Startkapital",nf0.format(sm.start_eur||0)+" €"],["Verlust pro Trade höchstens",nf0.format(sm.max_loss_trade||0)+" €"],["pro Tag höchstens",nf0.format(sm.max_loss_day||0)+" €"],["pro Monat höchstens",nf0.format(sm.max_loss_month||0)+" €"],["Gebühr je Order",nf2.format(sm.fee_eur||0)+" €"],["kleinste Position",nf0.format(sm.min_position||0)+" €"],["Start",sm.start_date?dateDE(sm.start_date):"noch Testphase"]]
+    .map(([a,b])=>'<div class="item"><div class="row"><span>'+a+'</span><b>'+b+'</b></div></div>').join("")+'</div>';
+  h += '<h2>Sonstiges</h2><div class="list"><div class="item"><div class="row"><span>News zu den ersten</span><b>'+int(S.news_top)+' Treffern</b></div></div><div class="item"><div class="row"><span>Pelosi-Tracker</span><b>'+esc((S.pelosi||[]).join(", "))+'</b></div></div><div class="item"><div class="row"><span>Push-Kanal (ntfy)</span><b class="small">'+esc(S.push_topic||"")+'</b></div></div></div>';
+  h += '<div class="btns" style="margin:10px 16px"><button class="btn ghost" onclick="showIntro()">Einführung noch einmal zeigen</button><button class="btn ghost" onclick="logout()">Abmelden</button></div>';
+  $("#app").innerHTML = h;
+}
+const INTRO = [
+  ["Willkommen im Trader-Labor","Hier testet ein Computer-System Daytrading-Regeln mit Spielgeld. Nichts kostet echtes Geld."],
+  ["Heute","Zeigt, ob die Börse offen ist, was als Nächstes passiert und welche Spielgeld-Trades gerade laufen."],
+  ["Vorschläge","Wenn eine Regel auslöst, bekommst du einen Push mit Ja und Nein. Ja heißt: Dieser Trade zählt auch für dich."],
+  ["Übersicht","Hier siehst du auf einen Blick: Läuft alles? Welcher Tag des 100-Tage-Experiments? Wie stehen die Go-Ampel und das 100-€-Tageskonto?"],
+  ["Lernen","Blaue, unterstrichene Wörter kannst du antippen. Unter „Mehr“ findest du Glossar, Profi-Regeln und den Wochen-Rückblick."],
+];
+let INTRO_I = 0;
+function showIntro(){ INTRO_I = 0; introStep(); }
+function introStep(){
+  const [t,x] = INTRO[INTRO_I], last = INTRO_I === INTRO.length-1;
+  $("#sheet").innerHTML = '<div class="small">'+(INTRO_I+1)+' von '+INTRO.length+'</div><h3 style="font-size:20px;margin-top:6px">'+esc(t)+'</h3><p>'+esc(x)+'</p><div class="btns">'+
+    (last?'<button class="btn" onclick="closeSheet();try{localStorage.setItem(\'trader-intro\',\'1\')}catch(e){}">Los geht’s</button>':'<button class="btn ghost" onclick="closeSheet();try{localStorage.setItem(\'trader-intro\',\'1\')}catch(e){}">Überspringen</button><button class="btn" onclick="INTRO_I++;introStep()">Weiter</button>')+'</div>';
+  $("#sheetwrap").classList.add("open");
+}
+
+function goalCard(){
+  const S = D.sim||{}, checks = S.checks||[], liveDays = (D.history||[]).length, passed = ((D.lab||{}).variants||[]).filter(v=>v.passed).length;
+  const simMonths = S.live ? Math.max(0,(S.live.fee.months||[]).length-1) : 0;
+  const stages = [
+    {name:"Testphase", done: !!S.live, p: Math.min(1, liveDays/20), txt: liveDays+" von 20 Live-Tagen · "+passed+" Varianten bestanden",
+     now:"Jetzt zählt: jeden Handelstag messen. Nach 20 Live-Tagen siehst du, ob eine Variante auch an echten neuen Tagen hält."},
+    {name:"Simulator", done: simMonths>=2 && checks.slice(0,5).every(c=>c.ok), p: S.live ? Math.min(1, simMonths/2) : 0, txt: S.live ? simMonths+" von 2 vollen Monaten" : "startet nach der Testphase",
+     now:"Jetzt zählt: 100 € wie echt, mit Gebühren und Grenzen, zwei Monate am Stück im Plus."},
+    {name:"Echtes Geld", done:false, p: checks.length ? checks.filter(c=>c.ok).length/checks.length : 0, txt: checks.filter(c=>c.ok).length+" von "+checks.length+" Prüfpunkten",
+     now:"Jetzt zählt: Broker mit kleinen Gebühren, Steuern klären, dann entscheidest du."},
+  ];
+  const cur = stages.findIndex(s=>!s.done);
+  return '<div class="card"><div class="row"><span class="small">Weg zum Ziel</span><button class="term small" onclick="go(\'mehr\');sub(\'echt\')">Prüfung ansehen</button></div>'+
+    stages.map((s,i)=>'<div style="margin-top:10px'+(i>cur?';opacity:.55':'')+'"><div class="row"><b>'+(i+1)+'. '+s.name+'</b><span class="small">'+(s.done?"erledigt":i===cur?"jetzt":"später")+'</span></div>'+
+      '<div class="bar"><div class="fill" style="left:0;width:'+Math.round((s.done?1:s.p)*100)+'%;background:'+(s.done?"var(--green)":"var(--blue)")+'"></div></div><div class="small">'+esc(s.txt)+'</div></div>').join("")+
+    '<p class="small" style="margin-top:10px">'+esc((stages[cur]||stages[2]).now)+'</p></div>';
+}
+
+function notesHtml(pid){
+  const saved = (D.notes||{})[pid]||[];
+  let local = []; try{ local = JSON.parse(localStorage.getItem("notes-"+pid)||"[]"); }catch(e){}
+  const all = saved.map(n=>n.text).concat(local.filter(x=>!saved.some(n=>n.text===x)));
+  let h = '<div style="margin-top:8px"><div class="small"><b>Deine Notizen</b> (Tagebuch: Warum hast du so entschieden? Was hast du gelernt?)</div>'+
+    (all.length ? all.map(x=>'<div class="small" style="margin-top:4px">• '+esc(x)+'</div>').join("") : '<div class="small muted">Noch keine Notiz.</div>');
+  if(!window.__DATA__ && D.reply && D.reply.topic){
+    const id = "n-"+pid.replace(/[^A-Za-z0-9_-]/g,"");
+    h += '<textarea id="'+id+'" rows="2" class="search" style="width:100%;margin:6px 0 0" placeholder="Notiz schreiben"></textarea>'+
+         '<div class="btns"><button class="btn ghost" onclick="saveNote(\''+pid+'\',\''+id+'\')">Notiz speichern</button></div>';
+  }
+  return h+'</div>';
+}
+async function saveNote(pid, id){
+  const el = document.getElementById(id), text = (el && el.value || "").trim().replace(/\s+/g," ");
+  if(!text) return;
+  try{
+    await fetch(D.reply.server.replace(/\/$/,"")+"/"+D.reply.topic, {method:"POST", body:"notiz "+pid+" "+text.slice(0,500)});
+    try{ const k="notes-"+pid, a=JSON.parse(localStorage.getItem(k)||"[]"); a.push(text); localStorage.setItem(k, JSON.stringify(a)); }catch(e){}
+    openSheet("<h3>Notiz gespeichert</h3><p>Sie steht ab dem nächsten Lauf (≤ 10 Min. im Handel) dauerhaft im Tagebuch.</p>");
+    render();
+  }catch(e){ openSheet("<h3>Nicht gespeichert</h3><p>Keine Verbindung. Bitte noch einmal versuchen.</p>"); }
+}
+
+// ------------------------------------------------------------ Übersicht (Startseite)
+// Diagramme (Regeln aus dem Skill „dataviz“): dünne Balken mit 4px-Rundung nur am Datenende, 2px Abstand,
+// Achsen zurückhaltend, Antippen zeigt den Wert, Farben der Linien geprüft (blau/orange, auch bei Farbschwäche).
+const CH = {}; let chN = 0;
+function chartTip(id, ev){
+  const c = CH[id], box = document.getElementById(id); if(!c||!box) return;
+  const r = box.querySelector("svg").getBoundingClientRect(), x = (ev.touches?ev.touches[0].clientX:ev.clientX) - r.left;
+  const i = Math.max(0, Math.min(c.n-1, Math.round((x/r.width*c.W - c.x0)/c.step)));
+  const t = box.querySelector(".tip"); t.innerHTML = c.text(i); t.style.display = "block";
+  const px = (c.x0 + i*c.step)/c.W*r.width; t.style.left = Math.max(0, Math.min(r.width - t.offsetWidth, px - t.offsetWidth/2))+"px";
+  const cr = box.querySelector(".cross"); if(cr){ cr.setAttribute("x1", c.x0+i*c.step); cr.setAttribute("x2", c.x0+i*c.step); cr.style.display = ""; }
+}
+function chartOff(id){ const b=document.getElementById(id); if(!b) return; b.querySelector(".tip").style.display="none"; const cr=b.querySelector(".cross"); if(cr) cr.style.display="none"; }
+function chartBox(id, svg, meta){
+  CH[id] = meta;
+  return '<div class="chart" id="'+id+'" onpointermove="chartTip(\''+id+'\',event)" onpointerdown="chartTip(\''+id+'\',event)" onpointerleave="if(event.pointerType==\'mouse\')chartOff(\''+id+'\')"><div class="tip"></div>'+svg+'</div>';
+}
+function axisY(lo, hi, y, W, fmt){
+  return [lo, hi].map(v=>'<text x="'+W+'" y="'+(y(v)+(v===hi?10:-3)).toFixed(1)+'" text-anchor="end" font-size="10" fill="var(--sub)">'+esc(fmt(v))+'</text>').join("");
+}
+function barChart(vals, base, dates){
+  if(!vals.length) return "";
+  const id = "ch"+(++chN), W=340, H=150, top=12, bot=18, L=4, R=44; // rechts Platz für die Achsen-Beschriftung
+  const lo=Math.min(base,...vals), hi=Math.max(base,...vals), step=(W-L-R)/vals.length, bw=Math.max(1, step-2);
+  const y=v=>top+(hi-v)/Math.max(1e-9,hi-lo)*(H-top-bot);
+  let s='<line x1="0" x2="'+(W-R)+'" y1="'+y(base).toFixed(1)+'" y2="'+y(base).toFixed(1)+'" stroke="var(--sub)" stroke-width="1"/>';
+  vals.forEach((v,i)=>{
+    const x0=L+i*step+1, y0=y(base), y1=y(v), h=Math.abs(y1-y0), rr=Math.min(4, bw/2, h);
+    const up=v>=base, col=up?"var(--green)":"var(--red)";
+    // Rechteck vom Startwert aus, gerundet nur am Ende (oben bei Plus, unten bei Minus)
+    const d = up ? "M"+x0+" "+y0+"V"+(y1+rr)+"Q"+x0+" "+y1+" "+(x0+rr)+" "+y1+"H"+(x0+bw-rr)+"Q"+(x0+bw)+" "+y1+" "+(x0+bw)+" "+(y1+rr)+"V"+y0+"Z"
+                 : "M"+x0+" "+y0+"V"+(y1-rr)+"Q"+x0+" "+y1+" "+(x0+rr)+" "+y1+"H"+(x0+bw-rr)+"Q"+(x0+bw)+" "+y1+" "+(x0+bw)+" "+(y1-rr)+"V"+y0+"Z";
+    s+='<path d="'+d+'" fill="'+col+'"/>';
+  });
+  s+=axisY(lo, hi, y, W, v=>nf0.format(v)+" €");
+  s+='<line class="cross" y1="'+top+'" y2="'+(H-bot)+'" stroke="var(--sub)" stroke-width="1" style="display:none"/>';
+  s+='<text x="0" y="'+(H-4)+'" font-size="10" fill="var(--sub)">'+esc(dateDE(dates[0]))+'</text><text x="'+(W-R)+'" y="'+(H-4)+'" font-size="10" text-anchor="end" fill="var(--sub)">'+esc(dateDE(dates[dates.length-1]))+'</text>';
+  const svg='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Tageskonto je Tag, Start '+base+' €">'+s+'</svg>';
+  return chartBox(id, svg, {W, n:vals.length, x0:L+1+bw/2, step, text:i=>'<b>'+esc(dateDE(dates[i]))+'</b> · '+nf2.format(vals[i])+' € <span class="'+cls(vals[i]-base)+'">('+eur(vals[i]-base)+')</span>'});
+}
+function multiLine(series, dates){
+  // series: [{name, vals, col}] – höchstens zwei Linien, gleiche Achse
+  const n = series[0].vals.length; if(!n) return "";
+  const id = "ch"+(++chN), W=340, H=150, top=12, bot=18, L=4, R=44; // rechts Platz für die Achsen-Beschriftung
+  const all = [0].concat(...series.map(s=>s.vals)), lo=Math.min(...all), hi=Math.max(...all);
+  const step=(W-L-R)/Math.max(1,n-1), x=i=>L+i*step, y=v=>top+(hi-v)/Math.max(1e-9,hi-lo)*(H-top-bot);
+  let s='<line x1="0" x2="'+(W-R)+'" y1="'+y(0).toFixed(1)+'" y2="'+y(0).toFixed(1)+'" stroke="var(--sub)" stroke-dasharray="3 4" stroke-width="1"/>';
+  s+=axisY(lo, hi, y, W, v=>eur(v));
+  s+='<line class="cross" y1="'+top+'" y2="'+(H-bot)+'" stroke="var(--sub)" stroke-width="1" style="display:none"/>';
+  series.forEach(se=>{ s+='<path d="'+se.vals.map((v,i)=>(i?"L":"M")+x(i).toFixed(1)+" "+y(v).toFixed(1)).join(" ")+'" fill="none" stroke="'+se.col+'" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>'; });
+  s+='<text x="0" y="'+(H-4)+'" font-size="10" fill="var(--sub)">'+esc(dateDE(dates[0]))+'</text><text x="'+(W-R)+'" y="'+(H-4)+'" font-size="10" text-anchor="end" fill="var(--sub)">'+esc(dateDE(dates[n-1]))+'</text>';
+  const svg='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Summe aller Tage">'+s+'</svg>';
+  const keys='<div class="keys">'+series.map(se=>'<span><i style="background:'+se.col+'"></i>'+esc(se.name)+' <b class="num" style="color:var(--text)">'+eur(se.vals[n-1])+'</b></span>').join("")+'</div>';
+  return chartBox(id, svg, {W, n, x0:L, step, text:i=>'<b>'+esc(dateDE(dates[i]))+'</b><br>'+series.map(se=>'<i style="display:inline-block;width:8px;height:3px;background:'+se.col+';vertical-align:middle"></i> '+esc(se.name)+': '+eur(se.vals[i])).join("<br>")})+keys;
+}
+function renderStart(){
+  const ck = clock(), ex = D.experiment||{}, go = D.go||[], okN = go.filter(c=>c.ok).length;
+  const bad = D.status.filter(s=>s.ok===false);
+  const last = D.status.map(s=>s.ran_at).filter(Boolean).sort().pop();
+  const mins = last ? Math.round((Date.now()-new Date(last))/60000) : null;
+  const stale = ck.state==="offen" && mins!=null && mins>40;
+  let h = head("Übersicht");
+  // Status
+  h += '<div class="card"><div class="row"><span class="badge '+(bad.length||stale?"b-red":"b-green")+'">'+(bad.length?"Problem":stale?"Verzögert":"Alles läuft")+'</span>'+
+       '<span class="small">'+(mins!=null?"letzter Lauf "+ago(last):"noch kein Lauf")+'</span></div>'+
+       '<div class="next" style="margin-top:8px">'+esc(ck.text)+'</div><div class="small">'+esc(ck.next)+'</div>'+
+       bad.map(s=>'<p class="small neg">'+esc(s.name)+': '+esc((s.steps[0]||{}).detail||s.summary)+'</p>').join("")+'</div>';
+  // Experiment
+  if(ex.day){ const p=Math.min(100,Math.round(ex.day/ex.days*100));
+    h += '<div class="card"><div class="row"><b>100-Tage-Experiment</b><span class="big num" style="font-size:26px">Tag '+int(ex.day)+'<span class="sub" style="font-size:16px"> / '+int(ex.days)+'</span></span></div>'+
+      '<div class="bar"><div class="fill" style="left:0;width:'+p+'%;background:var(--blue)"></div></div><div class="small">Jeden Handelstag starten alle Regeln automatisch mit je 100 € Spielgeld. Das System lernt aus jedem Trade.</div></div>'; }
+  // Go-Ampel
+  h += '<div class="card"><div class="row"><b>Go-Ampel</b><span class="badge '+(okN===go.length&&go.length?"b-green":"b-orange")+'">'+okN+' von '+go.length+' grün</span></div>'+
+    go.map(c=>'<div class="row" style="margin-top:6px"><span class="small"><span style="color:'+(c.ok?"var(--green)":"var(--red)")+'">●</span> '+esc(c.name)+'</span><span class="small num">'+esc(c.detail)+'</span></div>').join("")+
+    '<p class="small" style="margin-top:8px">Erst wenn alles grün ist, kommt der Push „GO für den Simulator“.</p></div>';
+  // Diagramme
+  const ld = (D.live_days||[]).filter(d=>d.acc!=null);
+  let vals, valsFee, lab, title;
+  if(ld.length){ vals=ld.map(d=>d.acc); valsFee=ld.map(d=>d.acc_fee); lab=ld.map(d=>d.date); title="Tageskonto der Top-Regel (live)"; }
+  else { const a=(D.accounts||{})[D.champion]; const ds=a?a.days.filter(x=>x[3]>0):[]; vals=ds.map(x=>x[1]); valsFee=ds.map(x=>x[2]); lab=ds.map(x=>x[0]); title="Tageskonto der Top-Regel (Rückblick, 60 Tage)"; }
+  if(vals.length){
+    const up=vals.filter(v=>v>100).length, cum=[]; vals.reduce((s,v)=>{ s+=v-100; cum.push(s); return s; },0);
+    const cumF=[]; valsFee.reduce((s,v)=>{ s+=v-100; cumF.push(s); return s; },0);
+    h += '<h2>'+esc(title)+'</h2><div class="card"><div class="small">Jeder Balken ist ein Tag: Start mit 100 €, Ende des Tages. Grün = Plus, Rot = Minus. Antippen zeigt den Wert.</div>'+barChart(vals,100,lab)+
+      '<div class="row" style="margin-top:6px"><span class="small">Tage im Plus</span><b>'+up+' von '+vals.length+'</b></div>'+
+      '<details class="tbl"><summary>Als Tabelle</summary><table><tr><td class="small">Tag</td><td class="small">ohne Gebühr</td><td class="small">mit Gebühr</td></tr>'+
+      vals.map((v,k)=>'<tr><td>'+esc(dateDE(lab[k]))+'</td><td class="num '+cls(v-100)+'">'+nf2.format(v)+' €</td><td class="num '+cls(valsFee[k]-100)+'">'+nf2.format(valsFee[k])+' €</td></tr>').reverse().join("")+'</table></details></div>';
+    h += '<h2>Summe aller Tage</h2><div class="card"><div class="small">Gewinn und Verlust aller Tage zusammengezählt.</div>'+multiLine([{name:"ohne Gebühr", vals:cum, col:"var(--s1)"},{name:"mit 1 € Gebühr je Order", vals:cumF, col:"var(--s2)"}], lab)+'</div>';
+  }
+  // Statistik
+  const L = D.live && D.live.date===D.market.date ? D.live : null;
+  const tot = (D.live_days||[]).reduce((s,d)=>s+(d.n_all||0),0), nc=(D.live_days||[]).reduce((s,d)=>s+(d.n_champ||0),0), wc=(D.live_days||[]).reduce((s,d)=>s+(d.wins||0),0);
+  const passed=((D.lab||{}).variants||[]).filter(v=>v.passed).length, pats=(D.patterns||[]).filter(p=>p.holds).length;
+  const tile=(l,v,s)=>'<div class="card kpi"><div class="label">'+l+'</div><div class="val">'+v+'</div><div class="small">'+s+'</div></div>';
+  h += '<h2>Statistik</h2><div class="grid2">'+tile("Trades heute", L?int(L.n_trades):"–", L?"Stand "+esc(L.as_of):"Börse zu")+tile("Trades gesamt", int(tot), "seit Tag 1, alle Regeln")+
+       tile("Trefferquote Top-Regel", nc?nf0.format(wc/nc*100)+" %":"–", nc?int(nc)+" Trades live":"noch keine Live-Trades")+tile("Regeln bestanden", passed+" / "+(((D.lab||{}).variants||[]).length), int(pats)+" Muster gelernt")+'</div>';
+  // KI-Zweitmeinung (ab 23.11., nur mit API-Schlüssel)
+  if(D.ai && (D.ai.ratings||[]).length){
+    const col={positiv:"pos",negativ:"neg"};
+    h += '<h2>KI-Zweitmeinung '+esc(dateDE(D.ai.date))+'</h2><div class="list">'+D.ai.ratings.map(r=>'<div class="item"><div class="row"><b>'+esc(r.symbol)+'</b><span class="'+(col[r.news]||"")+'">'+esc(r.news)+' · Risiko '+esc(r.risk)+'</span></div><div class="small">'+esc(r.why)+'</div></div>').join("")+'</div>';
+  }
+  // Muster
+  const good=(D.patterns||[]).filter(p=>p.holds).slice(0,3), badp=(D.patterns||[]).filter(p=>p.avoid).slice(-2);
+  if(good.length||badp.length){
+    h += '<h2>Was das System gelernt hat</h2><div class="list">'+good.map(p=>'<div class="item"><div class="row"><span><span class="pos">▲</span> '+esc(p.name)+': <b>'+esc(p.label)+'</b></span><span class="num pos">'+pct(p.avg_test)+'</span></div></div>').join("")+
+      badp.map(p=>'<div class="item"><div class="row"><span><span class="neg">▼</span> '+esc(p.name)+': <b>'+esc(p.label)+'</b></span><span class="num neg">'+pct(p.avg_test)+'</span></div></div>').join("")+'</div>'+
+      '<div class="btns" style="margin:0 16px"><button class="btn ghost" onclick="go(\'mehr\');sub(\'muster\')">Alle Muster</button></div>';
+  }
+  h += '<div class="card small" style="margin-top:14px">Spielgeld. Pushes kommen nur zum Börsenstart und als Rückblick nach Börsenschluss. Daten '+ago(D.generated_at)+'.</div>';
+  $("#app").innerHTML = h;
+}
+function renderMuster(){
+  let h = head("Gelernte Muster");
+  h += '<div class="card small">Das System speichert zu jedem Trade die Umstände (Uhrzeit, Volumen, Lücke, Gesamtmarkt, Schwankung, Stopp-Abstand, Kurs, Wochentag) und vergleicht: Ø-Ergebnis je Trade an Lerntagen und an ungesehenen Prüftagen. „Hält“ heißt: an beiden im Plus, mit mindestens 200 Prüf-Trades.</div>';
+  const groups = {}; (D.patterns||[]).forEach(p=>{ (groups[p.name]=groups[p.name]||[]).push(p); });
+  Object.entries(groups).forEach(([name,ps])=>{
+    h += '<h2>'+esc(name)+'</h2><div class="list">'+ps.map(p=>'<div class="item"><div class="row"><b>'+esc(p.label)+'</b><span class="badge '+(p.holds?"b-green":p.avoid?"b-red":"")+'">'+(p.holds?"hält":p.avoid?"meiden":"offen")+'</span></div>'+
+      '<div class="small">Lerntage '+pct(p.avg_train)+' ('+int(p.n_train)+') · Prüftage '+pct(p.avg_test)+' ('+int(p.n_test)+')'+(p.champ_n?' · Top-Regel '+pct(p.champ_avg)+' ('+int(p.champ_n)+')':'')+'</div></div>').join("")+'</div>';
+  });
+  if(!(D.patterns||[]).length) h += '<div class="card sub">Die Muster entstehen beim nächsten Labor-Lauf nach Börsenschluss.</div>';
+  $("#app").innerHTML = h;
+}
+
+load();
+</script>
+</body>
+</html>

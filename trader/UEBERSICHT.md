@@ -1,6 +1,6 @@
 # Trader-Übersicht
 
-Stand: Fr 13.11. 16:21 Uhr ET (22:21 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
+Stand: Mo 16.11. 16:46 Uhr ET (22:46 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
 
 NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
@@ -10,8 +10,8 @@ NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
 |---|---|---|
 | Morgen-Scan | Mi 28.10. 08:39 Uhr ET (13:39 Uhr MEZ) | OK – 501 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40689559352)) |
 | ORB-Scan | Mi 28.10. 10:10 Uhr ET (15:10 Uhr MEZ) | OK – 163 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40689559352)) |
-| Labor live | Fr 13.11. 16:00 Uhr ET (22:00 Uhr MEZ) | OK – Tagesbilanz: 1.367 Trades ([Lauf](https://github.com/neidelbert/claude/actions/runs/43491047897)) |
-| Labor | Fr 13.11. 16:20 Uhr ET (22:20 Uhr MEZ) | OK – 19 von 76 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/43491047897)) |
+| Labor live | Mo 16.11. 16:43 Uhr ET (22:43 Uhr MEZ) | OK – Tagesbilanz: 1.700 Trades ([Lauf](https://github.com/neidelbert/claude/actions/runs/43962954889)) |
+| Labor | Mo 16.11. 16:43 Uhr ET (22:43 Uhr MEZ) | OK – 19 von 76 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/43962954889)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
 | Test-Push | Do 22.10. 19:24 Uhr ET (01:24 Uhr MESZ) | OK – Push gesendet ([Lauf](https://github.com/neidelbert/claude/actions/runs/39871573010)) |
@@ -148,33 +148,37 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 - 22.10. 16:11 Uhr ET · [Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView](https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss)
 - 22.10. 15:51 Uhr ET · [How much Apple stock does CEO John Ternus actually own?](https://www.thestreet.com/personalities/how-much-apple-stock-does-john-ternus-own?.tsrc=rss)
 
-## Labor live – Fr 13.11.2026, Stand 16:00 Uhr ET
+## Labor live – Mo 16.11.2026, Stand 16:43 Uhr ET
 
-414 Aktien beobachtet · 1.367 Spielgeld-Trades aller Varianten · 0 offen
+414 Aktien beobachtet · 1.700 Spielgeld-Trades aller Varianten · 0 offen
 
 | Top-Variante | Trades | offen | € bei 100 €/Trade |
 |---|---|---|---|
 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R | 0 | 0 | 0,00 € |
 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 0 | 0 | 0,00 € |
 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R | 0 | 0 | 0,00 € |
-| Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 4 | 0 | -2,83 € |
-| Ausbruch 30 Min · nur Top 10 nach Volumen · Stopp Tief der Spanne · Ziel 1,5R | 0 | 0 | 0,00 € |
-| Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 2 | 0 | -3,07 € |
-| Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 4× normal | 0 | 0 | 0,00 € |
+| Ausbruch 30 Min · nur Top 10 nach Volumen · Stopp Tief der Spanne · Ziel 1,5R | 1 | 0 | -1,61 € |
+| Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 7 | 0 | -6,30 € |
+| Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 4× normal | 1 | 0 | 3,48 € |
+| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 1 | 0 | -1,61 € |
 | Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 0 | 0 | 0,00 € |
 
 | Aktie | Regel | Einstieg | Stopp | Ziel | Stand | Ergebnis |
 |---|---|---|---|---|---|---|
-| BROS | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 34,21 $ | 33,97 $ | – | Stopp 10:20 Uhr | -0,75 € |
-| COIN | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 129,56 $ | 128,59 $ | – | Stopp 9:55 Uhr | -0,80 € |
-| ELF | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 118,56 $ | 117,96 $ | – | Stopp 10:00 Uhr | -0,56 € |
-| MP | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 38,73 $ | 38,47 $ | – | Stopp 10:10 Uhr | -0,72 € |
-| GME | Opening-Range-Ausbruch 15 Min | 9:50 26,36 $ | 25,67 $ | 27,75 $ | Schluss 15:55 Uhr | -1,86 € |
-| KDP | Opening-Range-Ausbruch 15 Min | 9:50 36,80 $ | 35,62 $ | 39,18 $ | Schluss 15:55 Uhr | -1,21 € |
+| EMBJ | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 19,74 $ | 19,43 $ | – | Stopp 9:45 Uhr | -1,62 € |
+| MMED | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 19,09 $ | 18,99 $ | – | Stopp 9:40 Uhr | -0,65 € |
+| MP | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 37,84 $ | 37,57 $ | – | Stopp 10:10 Uhr | -0,77 € |
+| MSTR | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 105,57 $ | 104,73 $ | – | Stopp 9:45 Uhr | -0,85 € |
+| HTFL | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:50 48,20 $ | 47,77 $ | – | Stopp 12:30 Uhr | -0,93 € |
+| RIVN | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:50 12,21 $ | 12,13 $ | – | Stopp 9:55 Uhr | -0,66 € |
+| COIN | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:55 121,86 $ | 120,92 $ | – | Stopp 10:05 Uhr | -0,82 € |
+| ARMK | Erholung: Lücke nach unten ≥ 3 % | 10:15 53,29 $ | 50,89 $ | 58,08 $ | Schluss 15:55 Uhr | 3,48 € |
+| HTHT | Opening-Range-Ausbruch 30 Min | 11:10 55,54 $ | 52,08 $ | 62,45 $ | Schluss 15:55 Uhr | -1,61 € |
+| HTHT | Ausbruch 30 Min | 11:10 55,54 $ | 52,08 $ | 60,72 $ | Schluss 15:55 Uhr | -1,61 € |
 
 ## Labor (Testphase, Spielgeld ohne Limit)
 
-697 Aktien · 76 Handelstage · Lerntage Do 30.07.2026 bis Fr 09.10.2026 · **Prüftage Mo 12.10.2026 bis Fr 13.11.2026** · 76 Varianten
+697 Aktien · 77 Handelstage · Lerntage Do 30.07.2026 bis Fr 09.10.2026 · **Prüftage Mo 12.10.2026 bis Mo 16.11.2026** · 76 Varianten
 
 | # | Variante | Prüftage: Trades | Treffer | Ø je Trade | € bei 100 €/Trade | nach Gebühren | Zufall? | bestanden |
 |---|---|---|---|---|---|---|---|---|

@@ -1,8 +1,8 @@
 # Trader-Übersicht
 
-Stand: Di 17.11. 15:34 Uhr ET (21:34 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
+Stand: Di 17.11. 16:01 Uhr ET (22:01 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
 
-NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
+NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
 ## Systemstatus
 
@@ -10,7 +10,7 @@ NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 |---|---|---|
 | Morgen-Scan | Mi 28.10. 08:39 Uhr ET (13:39 Uhr MEZ) | OK – 501 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40689559352)) |
 | ORB-Scan | Mi 28.10. 10:10 Uhr ET (15:10 Uhr MEZ) | OK – 163 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/40689559352)) |
-| Labor live | Di 17.11. 15:33 Uhr ET (21:33 Uhr MEZ) | OK – Börsenstart gemeldet ([Lauf](https://github.com/neidelbert/claude/actions/runs/44170481529)) |
+| Labor live | Di 17.11. 16:00 Uhr ET (22:00 Uhr MEZ) | OK – Tagesbilanz: 2.054 Trades ([Lauf](https://github.com/neidelbert/claude/actions/runs/44170481529)) |
 | Labor | Mo 16.11. 16:43 Uhr ET (22:43 Uhr MEZ) | OK – 19 von 76 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/43962954889)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
@@ -148,28 +148,28 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 - 22.10. 16:11 Uhr ET · [Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView](https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss)
 - 22.10. 15:51 Uhr ET · [How much Apple stock does CEO John Ternus actually own?](https://www.thestreet.com/personalities/how-much-apple-stock-does-john-ternus-own?.tsrc=rss)
 
-## Labor live – Di 17.11.2026, Stand 15:33 Uhr ET
+## Labor live – Di 17.11.2026, Stand 16:00 Uhr ET
 
-414 Aktien beobachtet · 2.054 Spielgeld-Trades aller Varianten · 582 offen
+414 Aktien beobachtet · 2.054 Spielgeld-Trades aller Varianten · 0 offen
 
 | Top-Variante | Trades | offen | € bei 100 €/Trade |
 |---|---|---|---|
 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R | 0 | 0 | 0,00 € |
 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 0 | 0 | 0,00 € |
 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R | 0 | 0 | 0,00 € |
-| Ausbruch 30 Min · nur Top 10 nach Volumen · Stopp Tief der Spanne · Ziel 1,5R | 2 | 2 | -0,41 € |
+| Ausbruch 30 Min · nur Top 10 nach Volumen · Stopp Tief der Spanne · Ziel 1,5R | 2 | 0 | -0,58 € |
 | Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 2 | 0 | -1,30 € |
 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 4× normal | 0 | 0 | 0,00 € |
-| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 1 | 1 | 0,01 € |
+| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 1 | 0 | -0,09 € |
 | Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 0 | 0 | 0,00 € |
 
 | Aktie | Regel | Einstieg | Stopp | Ziel | Stand | Ergebnis |
 |---|---|---|---|---|---|---|
 | BBWI | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 19,24 $ | 19,14 $ | – | Stopp 9:50 Uhr | -0,56 € |
 | CDE | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 13,52 $ | 13,42 $ | – | Stopp 9:45 Uhr | -0,74 € |
-| BBIO | Opening-Range-Ausbruch 30 Min | 10:35 76,61 $ | 74,95 $ | 79,93 $ | offen, Kurs 76,66 $ | 0,01 € |
-| BBIO | Ausbruch 30 Min | 10:35 76,61 $ | 74,95 $ | 79,10 $ | offen, Kurs 76,66 $ | 0,01 € |
-| EMBJ | Ausbruch 30 Min | 10:40 18,99 $ | 18,57 $ | 19,62 $ | offen, Kurs 18,92 $ | -0,42 € |
+| BBIO | Opening-Range-Ausbruch 30 Min | 10:35 76,61 $ | 74,95 $ | 79,93 $ | Schluss 15:55 Uhr | -0,09 € |
+| BBIO | Ausbruch 30 Min | 10:35 76,61 $ | 74,95 $ | 79,10 $ | Schluss 15:55 Uhr | -0,09 € |
+| EMBJ | Ausbruch 30 Min | 10:40 18,99 $ | 18,57 $ | 19,62 $ | Schluss 15:55 Uhr | -0,49 € |
 
 ## Labor (Testphase, Spielgeld ohne Limit)
 

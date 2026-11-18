@@ -104,6 +104,9 @@ def variants():
         for atr_stop in (0.1, 0.2):
             for tgt in (0.0, 2.0):
                 out.append({"strategy": "sip", "top": top, "atr_stop": atr_stop, "target_r": tgt})
+    for tgt in (2.0, 3.0):                              # Beste-Signale-Regel: höchstens 1 Trade am Tag
+        for lvl in ("streng", "locker"):
+            out.append({"strategy": "best", "level": lvl, "target_r": tgt})
     base = {vid(v): v for v in out}
     for bid in FILTER_BASES:                            # dieselben Regeln, aber nur bei gutem Muster (weniger Gebühren)
         for fl in FILTERS:
@@ -132,6 +135,8 @@ def filt_ok(fl, f):
 
 
 def vid(v):
+    if v["strategy"] == "best":
+        return "best-%s-%sR" % (v["level"], fmt(v["target_r"]))
     if v.get("filt"):
         return vid({k: x for k, x in v.items() if k != "filt"}) + "-f" + v["filt"]
     if v["strategy"] == "orb":
@@ -156,6 +161,9 @@ def de(x):
 
 
 def label(v):
+    if v["strategy"] == "best":
+        return "Beste Signale (%s): News-Sprung ≥ 2 %%, %s · nur der erste Kandidat des Tages · Ziel %sR" % (
+            v["level"], BEST_LEVELS[v["level"]][2], de(v["target_r"]))
     if v.get("filt"):
         return label({k: x for k, x in v.items() if k != "filt"}) + " · " + FILTERS[v["filt"]]
     if v["strategy"] == "orb":
@@ -177,6 +185,9 @@ def label(v):
 
 
 STRATEGY_DE = {
+    "best": "Beste Signale: Aus allen News-Sprüngen des Tages (Lücke ≥ 2 %, viel Startvolumen) zählt nur der erste, der "
+            "zu den gelernten Mustern passt (sehr viel Volumen, starke Schwankung, Einstieg bis 10:30 Uhr ET). Höchstens "
+            "1 Trade am Tag – so bleiben die Gebühren klein.",
     "orb": "Opening-Range-Ausbruch: Die ersten 15 oder 30 Minuten bilden eine Spanne. Schließt eine "
            "5-Minuten-Kerze über ihrem Hoch, wird gekauft.",
     "gap": "News-Sprung: Die Aktie öffnet deutlich über dem Vortag (meist wegen einer Nachricht) und mit viel "
@@ -492,7 +503,33 @@ def signal_sip(v, bars, c):
     return None
 
 
-SIGNALS = {"orb": signal_orb, "gap": signal_gap, "bounce": signal_bounce, "sip": signal_sip, "orbrank": signal_orbrank,
+# Beste Signale: Kandidaten wie beim News-Sprung (Lücke ≥ 2 %, Startvolumen ≥ 2×), dazu die Muster, die im Labor
+# gehalten haben. Je Tag zählt nur der erste Kandidat (frühester Einstieg) – so geht es live ohne Blick in die Zukunft.
+BEST_LEVELS = {"streng": (4.0, 4.0, "Volumen ≥ 4×, Schwankung ≥ 4 %, Einstieg bis 10:30 Uhr ET"),
+               "locker": (2.0, 2.0, "Volumen ≥ 2×, Schwankung ≥ 2 %, Einstieg bis 10:30 Uhr ET")}
+
+
+def signal_best(v, bars, c):
+    return signal_gap({"gap": 2.0, "rvol": 2.0}, bars, c)
+
+
+def best_ok(v, f):
+    rv_min, atr_min, _ = BEST_LEVELS[v["level"]]
+    return (f.get("rv") or 0) >= rv_min and (f.get("atrp") or 0) >= atr_min and f["k"] < 12
+
+
+def first_per_day(trades):
+    """Je Tag nur den Trade mit dem frühesten Einstieg (bei Gleichstand: mehr Volumen)."""
+    best = {}
+    for t in trades:
+        d = t.get("date")
+        key = (t["in_k"], -((t.get("f") or {}).get("rv") or 0), t["symbol"])
+        if d not in best or key < best[d][0]:
+            best[d] = (key, t)
+    return [x[1] for x in best.values()]
+
+
+SIGNALS = {"best": signal_best, "orb": signal_orb, "gap": signal_gap, "bounce": signal_bounce, "sip": signal_sip, "orbrank": signal_orbrank,
            "orbmkt": signal_orbmkt}
 
 
@@ -624,6 +661,52 @@ def find_patterns(all_trades, champ_trades):
     return out
 
 
+# ---------------------------------------------------------------- Walk-Forward
+
+WF_START_WEEKS = 4      # so viele Wochen Vorlauf, bevor die erste Woche geprüft wird
+WF_MIN_TRADES = 20      # so viele Trades braucht eine Regel vorher, um gewählt zu werden
+
+
+def walk_forward(trades, days):
+    """Strenge Prüfung: Jede Woche wählt das System die Regel, die bis dahin am besten war (nur alte Daten),
+    und handelt sie in der neuen Woche. Die Summe dieser Wochen zeigt, ob das Auswählen selbst funktioniert."""
+    weeks = []
+    for d in sorted(days):
+        wk = datetime.date.fromisoformat(d).isocalendar()[:2]
+        if not weeks or weeks[-1][0] != wk:
+            weeks.append((wk, d))
+    out, picked = [], []
+    for wk, start in weeks[WF_START_WEEKS:]:
+        best, best_avg = None, -1e9
+        for vid_, tr in trades.items():
+            prior = [t["pct"] for t in tr if t["date"] < start]
+            if len(prior) >= WF_MIN_TRADES and sum(prior) / len(prior) > best_avg:
+                best, best_avg = vid_, sum(prior) / len(prior)
+        if not best:
+            continue
+        now = [t["pct"] for t in trades[best]
+               if datetime.date.fromisoformat(t["date"]).isocalendar()[:2] == wk]
+        picked += now
+        eur = sum(now) / 100 * STAKE
+        out.append({"week": "%d-W%02d" % wk, "start": start, "pick": best, "n": len(now), "eur": round(eur, 2),
+                    "eur_fee": round(eur - 2 * FEE * len(now), 2)})
+    n = len(picked)
+    mean = sum(picked) / n if n else 0.0
+    sd = math.sqrt(sum((x - mean) ** 2 for x in picked) / (n - 1)) if n > 1 else 0.0
+    return {"weeks": out, "n": n, "eur": round(sum(w["eur"] for w in out), 2),
+            "eur_fee": round(sum(w["eur_fee"] for w in out), 2),
+            "weeks_up": sum(1 for w in out if w["eur"] > 0), "t": round(mean / (sd / math.sqrt(n)), 2) if sd else 0.0}
+
+
+def weeks_up(trades):
+    """Anteil der Wochen (mit Trades), in denen die Regel im Plus war."""
+    per = {}
+    for t in trades:
+        wk = datetime.date.fromisoformat(t["date"]).isocalendar()[:2]
+        per[wk] = per.get(wk, 0) + t["pct"]
+    return {"up": sum(1 for x in per.values() if x > 0), "n": len(per)}
+
+
 # ---------------------------------------------------------------- Auswertung
 
 def stats(trades):
@@ -691,8 +774,13 @@ def cmd_run(a):
                     f = features(bars, sig[0], t["entry"], t["stop"], ctx[d], d)
                     if v.get("filt") and not filt_ok(v["filt"], f):
                         continue
+                    if v["strategy"] == "best" and not best_ok(v, f):
+                        continue
                     t.update(symbol=sym, date=d, test=d in test_days, f=f)
                     trades[v["id"]].append(t)
+    for v in vs:
+        if v["strategy"] == "best":
+            trades[v["id"]] = sorted(first_per_day(trades[v["id"]]), key=lambda t: (t["date"], t["in_k"]))
     rows = []
     for v in vs:
         tr = trades[v["id"]]
@@ -700,7 +788,7 @@ def cmd_run(a):
         test = stats([t for t in tr if t["test"]])
         passed = bool(test.get("n", 0) >= MIN_TEST_TRADES and test.get("avg_pct", 0) > 0 and train.get("avg_pct", -1) > 0)
         score = test.get("avg_pct", -99) if test.get("n", 0) >= MIN_TEST_TRADES else -99
-        rows.append(dict(v, train=train, test=test, all=stats(tr), passed=passed, score=score))
+        rows.append(dict(v, train=train, test=test, all=stats(tr), passed=passed, score=score, weeks=weeks_up(tr)))
     rows.sort(key=lambda r: (r["passed"], r["score"], r["all"].get("eur", -1e9)), reverse=True)
     curves, samples = {}, {}
     for r in rows[:CURVE_TOP]:
@@ -729,6 +817,7 @@ def cmd_run(a):
         tdays = [p for p in pts if p[0] in test_days and p[3]]
         accounts[r["id"]] = {"days": pts, "test_up_share": round(sum(1 for p in tdays if p[1] > ACC_START) /
                                                                    len(tdays) * 100) if tdays else None}
+    wf = walk_forward(trades, all_days)
     pool = [t for r in rows[:20] for t in trades[r["id"]]]
     patterns = find_patterns(pool, champ)
     best_per = {}
@@ -743,7 +832,7 @@ def cmd_run(a):
            "strategies": STRATEGY_DE, "best_per_strategy": best_per,
            "variants": rows, "curves": curves, "samples": samples,
            "champion": rows[0]["id"] if rows else None,
-           "accounts": accounts, "patterns": patterns, "account_settings": {"start": ACC_START, "stake": ACC_STAKE,
+           "accounts": accounts, "patterns": patterns, "walkforward": wf, "account_settings": {"start": ACC_START, "stake": ACC_STAKE,
                                                                              "fee": ACC_FEE},
            "champion_trades": [{k: t[k] for k in ("date", "symbol", "entry", "stop", "target", "exit", "why", "pct",
                                                   "in_k", "out_k", "test")} for t in champ], "seconds": round(time.time() - t0, 1)}
@@ -753,7 +842,7 @@ def cmd_run(a):
         json.dump(doc, fh, ensure_ascii=False, indent=1)
     print(json.dumps({"symbols": len(data), "days": len(all_days), "variants": len(rows),
                       "trades": sum(len(t) for t in trades.values()), "passed": sum(1 for r in rows if r["passed"]),
-                      "patterns_hold": sum(1 for p in patterns if p["holds"]),
+                      "patterns_hold": sum(1 for p in patterns if p["holds"]), "walkforward_eur": wf["eur"],
                       "best": rows[0]["id"], "seconds": doc["seconds"]}))
     return 0
 
@@ -836,10 +925,17 @@ def cmd_live(a):
             f = features(bars, sig[0], t["entry"], t["stop"], ctx, day)
             if v.get("filt") and not filt_ok(v["filt"], f):
                 continue
+            if v["strategy"] == "best" and not best_ok(v, f):
+                continue
             t.update(variant=v["id"], strategy=v["strategy"], symbol=sym, in_at=clock(t["in_k"]),
                      out_at=None if t["open"] else clock(t["out_k"]), last=round(bars[-1][4], 4),
                      eur=round(t["pct"] / 100 * STAKE, 2), key="%s|%s" % (v["id"], sym), f=f)
             trades.append(t)
+    for v in vs:                          # Beste Signale: nur der erste Kandidat des Tages
+        if v["strategy"] == "best":
+            mine = [t for t in trades if t["variant"] == v["id"]]
+            first = min(mine, key=lambda t: (t["in_k"], -((t.get("f") or {}).get("rv") or 0), t["symbol"])) if mine else None
+            trades = [t for t in trades if t["variant"] != v["id"] or t is first]
     path = os.path.join(LIVE_DIR, day + ".json")
     try:
         with open(path, encoding="utf-8") as fh:
@@ -1032,9 +1128,20 @@ def cmd_selftest(a):
     assert day_account([{"in_k": 3, "out_k": 10, "pct": 10.0}], 1.0)[0] == 100.0   # Gewinn 2 € − 2 € Gebühr
     assert filt_ok("v4", {"rv": 4.2}) and not filt_ok("v4", {"rv": 3.9, "k": 5, "risk": 1})
     assert filt_ok("frueh", {"k": 20, "risk": 0.6}) and not filt_ok("frueh", {"k": 30, "risk": 0.6})
+    assert best_ok({"level": "streng"}, {"rv": 4.5, "atrp": 5.0, "k": 3})
+    assert not best_ok({"level": "streng"}, {"rv": 4.5, "atrp": 3.0, "k": 3}) and best_ok({"level": "locker"}, {"rv": 2.5, "atrp": 3.0, "k": 3})
+    assert not best_ok({"level": "locker"}, {"rv": 9, "atrp": 9, "k": 12})
+    fp = first_per_day([{"date": "d1", "in_k": 5, "symbol": "B", "f": {"rv": 3}},
+                        {"date": "d1", "in_k": 3, "symbol": "A", "f": {"rv": 1}},
+                        {"date": "d2", "in_k": 4, "symbol": "C", "f": {"rv": 1}}])
+    assert sorted(t["symbol"] for t in fp) == ["A", "C"], fp
+    wdays = [(datetime.date(2026, 1, 5) + datetime.timedelta(days=d)).isoformat() for d in range(50)]
+    wtr = {"a": [{"date": d, "pct": 1.0} for d in wdays], "b": [{"date": d, "pct": -1.0} for d in wdays]}
+    wf = walk_forward(wtr, wdays)
+    assert wf["weeks"] and all(w["pick"] == "a" for w in wf["weeks"]) and wf["eur"] > 0, wf
     n = len(variants())
-    assert n == 76 and len({v["id"] for v in variants()}) == n, n
-    print("Selbsttest ok: Einstieg, Ziel, Stopp vor Ziel, Ausstieg zum Schluss, offener Live-Trade, Muster-Filter, 76 Varianten (mit Stocks in Play, Volumen-Rangliste, Markt- und Muster-Filter).")
+    assert n == 80 and len({v["id"] for v in variants()}) == n, n
+    print("Selbsttest ok: Einstieg, Ziel, Stopp vor Ziel, Ausstieg zum Schluss, offener Live-Trade, Muster-Filter, Beste Signale, Walk-Forward, 80 Varianten (mit Stocks in Play, Volumen-Rangliste, Markt- und Muster-Filter).")
     return 0
 
 

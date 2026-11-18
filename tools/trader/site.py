@@ -62,7 +62,7 @@ GLOSSARY = {
     "Spielgeld": "Virtuelles Geld. Alles wird so gerechnet, als wäre es echt, aber kein Euro verlässt dein Konto.",
     "Testphase": "Die erste Phase: Spielgeld ohne jedes Limit. Viele Regeln laufen parallel, das System misst und lernt.",
     "Simulator": "Die zweite Phase: 100 € Spielgeld, als wären sie echt, mit Verlustgrenzen und Gebühren.",
-    "Variante": "Eine Regel mit festen Einstellungen, z. B. „Ausbruch nach 15 Minuten, Ziel 2R“. Das Labor testet 76 davon.",
+    "Variante": "Eine Regel mit festen Einstellungen, z. B. „Ausbruch nach 15 Minuten, Ziel 2R“. Das Labor testet 80 davon.",
     "Opening Range": "Die Spanne aus Hoch und Tief der ersten 15 oder 30 Minuten nach Börsenstart (9:30 Uhr New York).",
     "Ausbruch": "Der Kurs schließt über dem Hoch einer Spanne. Das deutet an, dass Käufer gerade stärker sind.",
     "News-Sprung": "Eine Aktie startet wegen einer Nachricht deutlich höher als am Vortag, mit viel Umsatz.",
@@ -87,7 +87,7 @@ GLOSSARY = {
 
 HOW = [
     ["Morgens", "Vor Börsenstart scannt das System rund 6.000 US-Aktien und sucht Charts, die zu einer Regel passen. Dazu holt es News."],
-    ["Börsenstart", "Ab 15:30 Uhr deutscher Zeit prüft das Labor alle 10 Minuten 76 Varianten an rund 400 Aktien."],
+    ["Börsenstart", "Ab 15:30 Uhr deutscher Zeit prüft das Labor alle 10 Minuten 80 Varianten an rund 400 Aktien."],
     ["Vorschlag", "Löst eine Top-Variante aus, kommt ein Push mit Ja/Nein. Ohne Antwort zählt nur die Regel. Mit Ja zählt der Trade auch für dich."],
     ["Ausstieg", "Jeder Trade endet am Stopp, am Ziel oder spätestens um 15:55 Uhr New York (21:55 Uhr bei uns)."],
     ["Abends", "Tagesbilanz als Push. Danach rechnet das Labor alle Varianten an den letzten 60 Tagen neu und erstellt die Rangliste."],
@@ -236,6 +236,7 @@ def build_data(cfg):
         "live_days": [{k: v for k, v in d.items() if k != "champ_pcts"} | {"n_champ": len(d["champ_pcts"]),
                       "wins": sum(1 for x in d["champ_pcts"] if x > 0)} for d in system.live_days(cfg)],
         "patterns": res.get("patterns", []),
+        "walkforward": res.get("walkforward"),
         "ai": latest_ai(),
         "accounts": {k: v for k, v in (res.get("accounts") or {}).items() if k == res.get("champion")},
         "champion": res.get("champion"),

@@ -30,6 +30,10 @@ Den ganzen Plan enthält `docs/TRADER-PLAN.md`, das Interview mit Lukas ist dort
 | Verschlüsselung | `tools/trader/vault.py`: mit Secret `DATEN_SCHLUESSEL` werden `decisions.json`, `notes.json` und `lukas` in den Live-Dateien (`lukas_enc`) AES-GCM-verschlüsselt; `read_json`/`rj` entschlüsseln automatisch. Ohne Secret Klartext | jeder Lauf |
 | Simulator-Start | Push „GO für den Simulator“ hat Ja/Nein (ID `SIMSTART`); Ja → `trader/lab/sim_start.json` (`sim.py` liest es) | nach grüner Go-Ampel |
 
+| Beste Signale | Strategie `best` in `lab.py` (4 Varianten): News-Sprung-Kandidaten + gelernte Muster (`BEST_LEVELS`), je Tag nur der erste Kandidat (`first_per_day`) → höchstens 1 Trade/Tag | Labor + live |
+| Walk-Forward | `walk_forward` in `lab.py`: jede Woche die bis dahin beste Regel (nur alte Daten), Ergebnis der neuen Woche; `results.json` → `walkforward`; 7. Punkt der Go-Ampel; Karte auf der Übersicht | nach Börsenschluss |
+| Broker | `docs/BROKER.md` (Stand 18.11.: IBKR günstigste Option mit API, Lukas will mit 100 € starten) | – |
+
 ## Adressen und Kanäle
 - **Webseite:** https://neidelbert.github.io/claude/. Die Daten sind verschlüsselt und lassen sich nur mit Lukas' Passwort öffnen.
   Das Passwort steht **nicht** im Repo, Lukas hat es aus dem Chat. Geht es verloren, muss ein neues
@@ -70,7 +74,7 @@ Den ganzen Plan enthält `docs/TRADER-PLAN.md`, das Interview mit Lukas ist dort
   Push-Menge, SEC-Agent, KI-Zweitmeinung ab Monat 2, Datenschutz der Antworten.
 - **Nächste Ideen** in `docs/VERBESSERUNGEN.md` (Punkte-Tabelle).
 - **Pushes** auf Lukas' Wunsch nur zum Börsenstart (kurz) und Börsenschluss (Rückblick), nicht nachts.
-- **Go-Ampel (6 Punkte):** ≥ 40 Live-Tage; Tageskonto der Top-Regel an ≥ 60 % der Tage im Plus; Zufallswert ≥ 2; nach Gebühr im Plus; Top-Regel ≥ 10 Tage dieselbe; Top-Regel hat Prüftage bestanden. Grün heißt nur: Simulator starten (Lukas entscheidet), nie echtes Geld.
+- **Go-Ampel (7 Punkte):** ≥ 40 Live-Tage; Tageskonto der Top-Regel an ≥ 60 % der Tage im Plus; Zufallswert ≥ 2; nach Gebühr im Plus; Top-Regel ≥ 10 Tage dieselbe; Top-Regel hat Prüftage bestanden; Walk-Forward nach Gebühr im Plus (≥ 4 Wochen). Grün heißt nur: Simulator starten (Lukas entscheidet), nie echtes Geld.
 - **Geplante Erinnerung dieser Sitzung:** 23.10. 14:50 UTC (Kontrolle des ersten Zeitplan-Tags). Eine neue Sitzung sieht sie mit `list_triggers`.
 
 ## Wie eine neue Sitzung weitermacht
@@ -111,3 +115,4 @@ Den ganzen Plan enthält `docs/TRADER-PLAN.md`, das Interview mit Lukas ist dort
 | 23.10. | #31 | Stand nach dem ersten Labor-Lauf mit neuem Code (0 bestanden, 1 Muster hält); Webseite live geprüft |
 | 23.10. | #32 | Lukas' Antworten umgesetzt: Simulator-Start per Ja im GO-Push, Muster-Filter (76 Varianten; Volumen-Merkmal jetzt ohne Blick in die Zukunft), KI-Zweitmeinung ab 23.11. (aus ohne Schlüssel), Verschlüsselung von Ja/Nein und Notizen (Secret `DATEN_SCHLUESSEL`), Workflow installiert `cryptography` + `anthropic` |
 | 18.11. | #33 | Reparatur: GitHub startete die Zeitplan-Läufe seit Ende Okt. erst gegen 20 Uhr UTC → Morgen-Scan seit 28.10. nicht gelaufen (Watchlist veraltet), 9.11. ganz ausgefallen, Live erst ab ca. 15 Uhr ET (Trades wurden aus den Tageskerzen nachgerechnet). Jetzt Kette mit selbst bestelltem Nachfolger; Morgen-Scan wird bis 15 Uhr ET nachgeholt |
+| 18.11. | #34 | Lukas: „langsam zu echtem Geld“ → Beste-Signale-Regel (80 Varianten), Walk-Forward-Prüfung (7. Go-Punkt), Broker-Vergleich `docs/BROKER.md`; Startgeld später 100 € (Gebühren-Fix fürs Tageskonto bewusst nicht gewählt) |

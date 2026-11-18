@@ -1,5 +1,5 @@
 {
- "created_at": "2026-11-18T21:18:50Z",
+ "created_at": "2026-11-18T21:22:15Z",
  "symbols": 697,
  "days": 79,
  "train": [
@@ -19,7 +19,6 @@
   "min_test_trades": 30
  },
  "strategies": {
-  "best": "Beste Signale: Aus allen News-Sprüngen des Tages (Lücke ≥ 2 %, viel Startvolumen) zählt nur der erste, der zu den gelernten Mustern passt (sehr viel Volumen, starke Schwankung, Einstieg bis 10:30 Uhr ET). Höchstens 1 Trade am Tag – so bleiben die Gebühren klein.",
   "orb": "Opening-Range-Ausbruch: Die ersten 15 oder 30 Minuten bilden eine Spanne. Schließt eine 5-Minuten-Kerze über ihrem Hoch, wird gekauft.",
   "gap": "News-Sprung: Die Aktie öffnet deutlich über dem Vortag (meist wegen einer Nachricht) und mit viel Umsatz. Gekauft wird, wenn sie über das Hoch der ersten 5 Minuten steigt.",
   "sip": "Stocks in Play (nach der Studie von Zarattini, Barbon und Aziz, 2024): Nur Aktien mit ungewöhnlich viel Umsatz in den ersten 5 Minuten. Ist die erste 5-Minuten-Kerze grün, wird über ihrem Hoch gekauft. Der Stopp liegt eng (10 oder 20 % der durchschnittlichen Tagesschwankung ATR), verkauft wird spätestens zum Schluss. Die Studie handelte auch Leerverkäufe und mit Hebel – hier nur Kauf, ohne Hebel.",
@@ -33,8 +32,7 @@
   "sip": "sip-top20-atr0.1-eod-ffrueh",
   "bounce": "bounce-gapdown3-daylow-2R-fv4",
   "orb": "orb-30-low-2R-v0-fv4",
-  "orbmkt": "orbmkt-30-low-2R-v1.5",
-  "best": "best-streng-3R"
+  "orbmkt": "orbmkt-30-low-2R-v1.5"
  },
  "variants": [
   {
@@ -87,11 +85,7 @@
     "targets": 4
    },
    "passed": true,
-   "score": 1.492,
-   "weeks": {
-    "up": 11,
-    "n": 15
-   }
+   "score": 1.492
   },
   {
    "strategy": "gap",
@@ -143,11 +137,7 @@
     "targets": 9
    },
    "passed": true,
-   "score": 1.291,
-   "weeks": {
-    "up": 10,
-    "n": 15
-   }
+   "score": 1.291
   },
   {
    "strategy": "gap",
@@ -199,11 +189,7 @@
     "targets": 15
    },
    "passed": true,
-   "score": 1.093,
-   "weeks": {
-    "up": 9,
-    "n": 15
-   }
+   "score": 1.093
   },
   {
    "strategy": "gap",
@@ -255,11 +241,7 @@
     "targets": 8
    },
    "passed": true,
-   "score": 0.943,
-   "weeks": {
-    "up": 10,
-    "n": 15
-   }
+   "score": 0.943
   },
   {
    "strategy": "gap",
@@ -312,11 +294,7 @@
     "targets": 10
    },
    "passed": true,
-   "score": 0.781,
-   "weeks": {
-    "up": 8,
-    "n": 15
-   }
+   "score": 0.781
   },
   {
    "strategy": "gap",
@@ -368,11 +346,7 @@
     "targets": 15
    },
    "passed": true,
-   "score": 0.755,
-   "weeks": {
-    "up": 9,
-    "n": 15
-   }
+   "score": 0.755
   },
   {
    "strategy": "gap",
@@ -424,11 +398,7 @@
     "targets": 4
    },
    "passed": true,
-   "score": 0.703,
-   "weeks": {
-    "up": 10,
-    "n": 15
-   }
+   "score": 0.703
   },
   {
    "strategy": "gap",
@@ -481,11 +451,7 @@
     "targets": 29
    },
    "passed": true,
-   "score": 0.649,
-   "weeks": {
-    "up": 8,
-    "n": 15
-   }
+   "score": 0.649
   },
   {
    "strategy": "gap",
@@ -537,11 +503,7 @@
     "targets": 9
    },
    "passed": true,
-   "score": 0.641,
-   "weeks": {
-    "up": 9,
-    "n": 16
-   }
+   "score": 0.641
   },
   {
    "strategy": "gap",
@@ -593,11 +555,7 @@
     "targets": 12
    },
    "passed": true,
-   "score": 0.631,
-   "weeks": {
-    "up": 10,
-    "n": 15
-   }
+   "score": 0.631
   },
   {
    "strategy": "gap",
@@ -649,11 +607,7 @@
     "targets": 27
    },
    "passed": true,
-   "score": 0.589,
-   "weeks": {
-    "up": 9,
-    "n": 15
-   }
+   "score": 0.589
   },
   {
    "strategy": "gap",
@@ -706,11 +660,7 @@
     "targets": 29
    },
    "passed": true,
-   "score": 0.575,
-   "weeks": {
-    "up": 9,
-    "n": 16
-   }
+   "score": 0.575
   },
   {
    "strategy": "gap",
@@ -762,11 +712,7 @@
     "targets": 29
    },
    "passed": true,
-   "score": 0.569,
-   "weeks": {
-    "up": 9,
-    "n": 16
-   }
+   "score": 0.569
   },
   {
    "strategy": "gap",
@@ -818,11 +764,7 @@
     "targets": 24
    },
    "passed": true,
-   "score": 0.523,
-   "weeks": {
-    "up": 9,
-    "n": 15
-   }
+   "score": 0.523
   },
   {
    "strategy": "gap",
@@ -874,11 +816,7 @@
     "targets": 58
    },
    "passed": true,
-   "score": 0.518,
-   "weeks": {
-    "up": 9,
-    "n": 16
-   }
+   "score": 0.518
   },
   {
    "strategy": "orbrank",
@@ -931,11 +869,7 @@
     "targets": 8
    },
    "passed": true,
-   "score": 0.117,
-   "weeks": {
-    "up": 8,
-    "n": 16
-   }
+   "score": 0.117
   },
   {
    "strategy": "orbrank",
@@ -988,11 +922,7 @@
     "targets": 4
    },
    "passed": true,
-   "score": 0.082,
-   "weeks": {
-    "up": 8,
-    "n": 16
-   }
+   "score": 0.082
   },
   {
    "strategy": "sip",
@@ -1045,11 +975,7 @@
     "targets": 0
    },
    "passed": true,
-   "score": 0.068,
-   "weeks": {
-    "up": 7,
-    "n": 14
-   }
+   "score": 0.068
   },
   {
    "strategy": "orbrank",
@@ -1103,11 +1029,7 @@
     "targets": 3
    },
    "passed": true,
-   "score": 0.049,
-   "weeks": {
-    "up": 8,
-    "n": 16
-   }
+   "score": 0.049
   },
   {
    "strategy": "bounce",
@@ -1160,11 +1082,7 @@
     "targets": 8
    },
    "passed": false,
-   "score": 0.552,
-   "weeks": {
-    "up": 7,
-    "n": 16
-   }
+   "score": 0.552
   },
   {
    "strategy": "bounce",
@@ -1217,11 +1135,7 @@
     "targets": 26
    },
    "passed": false,
-   "score": 0.422,
-   "weeks": {
-    "up": 6,
-    "n": 16
-   }
+   "score": 0.422
   },
   {
    "strategy": "orb",
@@ -1275,11 +1189,7 @@
     "targets": 3
    },
    "passed": false,
-   "score": 0.16,
-   "weeks": {
-    "up": 7,
-    "n": 16
-   }
+   "score": 0.16
   },
   {
    "strategy": "orbmkt",
@@ -1332,11 +1242,7 @@
     "targets": 22
    },
    "passed": false,
-   "score": 0.126,
-   "weeks": {
-    "up": 5,
-    "n": 15
-   }
+   "score": 0.126
   },
   {
    "strategy": "orbmkt",
@@ -1389,11 +1295,7 @@
     "targets": 52
    },
    "passed": false,
-   "score": 0.107,
-   "weeks": {
-    "up": 5,
-    "n": 15
-   }
+   "score": 0.107
   },
   {
    "strategy": "orb",
@@ -1446,11 +1348,7 @@
     "targets": 217
    },
    "passed": false,
-   "score": 0.082,
-   "weeks": {
-    "up": 5,
-    "n": 16
-   }
+   "score": 0.082
   },
   {
    "strategy": "orb",
@@ -1503,11 +1401,7 @@
     "targets": 401
    },
    "passed": false,
-   "score": 0.072,
-   "weeks": {
-    "up": 6,
-    "n": 16
-   }
+   "score": 0.072
   },
   {
    "strategy": "orb",
@@ -1560,11 +1454,7 @@
     "targets": 39
    },
    "passed": false,
-   "score": 0.068,
-   "weeks": {
-    "up": 4,
-    "n": 16
-   }
+   "score": 0.068
   },
   {
    "strategy": "orb",
@@ -1618,11 +1508,7 @@
     "targets": 18
    },
    "passed": false,
-   "score": 0.063,
-   "weeks": {
-    "up": 4,
-    "n": 16
-   }
+   "score": 0.063
   },
   {
    "strategy": "orb",
@@ -1675,11 +1561,7 @@
     "targets": 100
    },
    "passed": false,
-   "score": 0.057,
-   "weeks": {
-    "up": 4,
-    "n": 16
-   }
+   "score": 0.057
   },
   {
    "strategy": "orb",
@@ -1733,11 +1615,7 @@
     "targets": 9
    },
    "passed": false,
-   "score": 0.044,
-   "weeks": {
-    "up": 7,
-    "n": 16
-   }
+   "score": 0.044
   },
   {
    "strategy": "orb",
@@ -1790,11 +1668,7 @@
     "targets": 715
    },
    "passed": false,
-   "score": 0.044,
-   "weeks": {
-    "up": 6,
-    "n": 16
-   }
+   "score": 0.044
   },
   {
    "strategy": "orb",
@@ -1848,11 +1722,7 @@
     "targets": 54
    },
    "passed": false,
-   "score": 0.04,
-   "weeks": {
-    "up": 6,
-    "n": 16
-   }
+   "score": 0.04
   },
   {
    "strategy": "orb",
@@ -1905,11 +1775,7 @@
     "targets": 292
    },
    "passed": false,
-   "score": 0.02,
-   "weeks": {
-    "up": 6,
-    "n": 16
-   }
+   "score": 0.02
   },
   {
    "strategy": "orb",
@@ -1962,11 +1828,7 @@
     "targets": 1817
    },
    "passed": false,
-   "score": 0.013,
-   "weeks": {
-    "up": 4,
-    "n": 17
-   }
+   "score": 0.013
   },
   {
    "strategy": "orb",
@@ -2019,11 +1881,7 @@
     "targets": 3333
    },
    "passed": false,
-   "score": 0.012,
-   "weeks": {
-    "up": 4,
-    "n": 17
-   }
+   "score": 0.012
   },
   {
    "strategy": "orb",
@@ -2076,11 +1934,7 @@
     "targets": 1039
    },
    "passed": false,
-   "score": -0.001,
-   "weeks": {
-    "up": 4,
-    "n": 16
-   }
+   "score": -0.001
   },
   {
    "strategy": "orb",
@@ -2133,11 +1987,7 @@
     "targets": 390
    },
    "passed": false,
-   "score": -0.001,
-   "weeks": {
-    "up": 5,
-    "n": 16
-   }
+   "score": -0.001
   },
   {
    "strategy": "bounce",
@@ -2190,11 +2040,7 @@
     "targets": 85
    },
    "passed": false,
-   "score": -0.003,
-   "weeks": {
-    "up": 4,
-    "n": 17
-   }
+   "score": -0.003
   },
   {
    "strategy": "orb",
@@ -2247,11 +2093,7 @@
     "targets": 5856
    },
    "passed": false,
-   "score": -0.004,
-   "weeks": {
-    "up": 4,
-    "n": 17
-   }
+   "score": -0.004
   },
   {
    "strategy": "orb",
@@ -2305,11 +2147,7 @@
     "targets": 335
    },
    "passed": false,
-   "score": -0.005,
-   "weeks": {
-    "up": 4,
-    "n": 17
-   }
+   "score": -0.005
   },
   {
    "strategy": "orb",
@@ -2362,11 +2200,7 @@
     "targets": 342
    },
    "passed": false,
-   "score": -0.006,
-   "weeks": {
-    "up": 4,
-    "n": 17
-   }
+   "score": -0.006
   },
   {
    "strategy": "orb",
@@ -2419,11 +2253,7 @@
     "targets": 888
    },
    "passed": false,
-   "score": -0.01,
-   "weeks": {
-    "up": 4,
-    "n": 17
-   }
+   "score": -0.01
   },
   {
    "strategy": "orb",
@@ -2476,11 +2306,7 @@
     "targets": 634
    },
    "passed": false,
-   "score": -0.014,
-   "weeks": {
-    "up": 4,
-    "n": 16
-   }
+   "score": -0.014
   },
   {
    "strategy": "bounce",
@@ -2532,11 +2358,7 @@
     "targets": 87
    },
    "passed": false,
-   "score": -0.017,
-   "weeks": {
-    "up": 4,
-    "n": 17
-   }
+   "score": -0.017
   },
   {
    "strategy": "orb",
@@ -2589,11 +2411,7 @@
     "targets": 2565
    },
    "passed": false,
-   "score": -0.018,
-   "weeks": {
-    "up": 4,
-    "n": 17
-   }
+   "score": -0.018
   },
   {
    "strategy": "orb",
@@ -2646,11 +2464,7 @@
     "targets": 3052
    },
    "passed": false,
-   "score": -0.021,
-   "weeks": {
-    "up": 5,
-    "n": 17
-   }
+   "score": -0.021
   },
   {
    "strategy": "sip",
@@ -2702,11 +2516,7 @@
     "targets": 338
    },
    "passed": false,
-   "score": -0.028,
-   "weeks": {
-    "up": 3,
-    "n": 14
-   }
+   "score": -0.028
   },
   {
    "strategy": "orb",
@@ -2760,11 +2570,7 @@
     "targets": 839
    },
    "passed": false,
-   "score": -0.031,
-   "weeks": {
-    "up": 4,
-    "n": 17
-   }
+   "score": -0.031
   },
   {
    "strategy": "orb",
@@ -2817,11 +2623,7 @@
     "targets": 860
    },
    "passed": false,
-   "score": -0.032,
-   "weeks": {
-    "up": 4,
-    "n": 17
-   }
+   "score": -0.032
   },
   {
    "strategy": "orbrank",
@@ -2875,11 +2677,7 @@
     "targets": 8
    },
    "passed": false,
-   "score": -0.034,
-   "weeks": {
-    "up": 6,
-    "n": 16
-   }
+   "score": -0.034
   },
   {
    "strategy": "orb",
@@ -2932,11 +2730,7 @@
     "targets": 95
    },
    "passed": false,
-   "score": -0.035,
-   "weeks": {
-    "up": 4,
-    "n": 16
-   }
+   "score": -0.035
   },
   {
    "strategy": "orb",
@@ -2989,11 +2783,7 @@
     "targets": 217
    },
    "passed": false,
-   "score": -0.035,
-   "weeks": {
-    "up": 5,
-    "n": 16
-   }
+   "score": -0.035
   },
   {
    "strategy": "orb",
@@ -3046,11 +2836,7 @@
     "targets": 5034
    },
    "passed": false,
-   "score": -0.035,
-   "weeks": {
-    "up": 5,
-    "n": 17
-   }
+   "score": -0.035
   },
   {
    "strategy": "orb",
@@ -3103,11 +2889,7 @@
     "targets": 1908
    },
    "passed": false,
-   "score": -0.037,
-   "weeks": {
-    "up": 4,
-    "n": 17
-   }
+   "score": -0.037
   },
   {
    "strategy": "orb",
@@ -3160,11 +2942,7 @@
     "targets": 4471
    },
    "passed": false,
-   "score": -0.039,
-   "weeks": {
-    "up": 4,
-    "n": 17
-   }
+   "score": -0.039
   },
   {
    "strategy": "orb",
@@ -3217,11 +2995,7 @@
     "targets": 538
    },
    "passed": false,
-   "score": -0.041,
-   "weeks": {
-    "up": 4,
-    "n": 16
-   }
+   "score": -0.041
   },
   {
    "strategy": "sip",
@@ -3273,11 +3047,7 @@
     "targets": 183
    },
    "passed": false,
-   "score": -0.053,
-   "weeks": {
-    "up": 4,
-    "n": 14
-   }
+   "score": -0.053
   },
   {
    "strategy": "orb",
@@ -3330,11 +3100,7 @@
     "targets": 7990
    },
    "passed": false,
-   "score": -0.056,
-   "weeks": {
-    "up": 4,
-    "n": 17
-   }
+   "score": -0.056
   },
   {
    "strategy": "bounce",
@@ -3386,11 +3152,7 @@
     "targets": 151
    },
    "passed": false,
-   "score": -0.074,
-   "weeks": {
-    "up": 5,
-    "n": 17
-   }
+   "score": -0.074
   },
   {
    "strategy": "bounce",
@@ -3442,11 +3204,7 @@
     "targets": 329
    },
    "passed": false,
-   "score": -0.081,
-   "weeks": {
-    "up": 4,
-    "n": 14
-   }
+   "score": -0.081
   },
   {
    "strategy": "sip",
@@ -3498,11 +3256,7 @@
     "targets": 290
    },
    "passed": false,
-   "score": -0.087,
-   "weeks": {
-    "up": 3,
-    "n": 14
-   }
+   "score": -0.087
   },
   {
    "strategy": "sip",
@@ -3554,11 +3308,7 @@
     "targets": 153
    },
    "passed": false,
-   "score": -0.106,
-   "weeks": {
-    "up": 4,
-    "n": 14
-   }
+   "score": -0.106
   },
   {
    "strategy": "orbrank",
@@ -3611,11 +3361,7 @@
     "targets": 17
    },
    "passed": false,
-   "score": -0.112,
-   "weeks": {
-    "up": 6,
-    "n": 16
-   }
+   "score": -0.112
   },
   {
    "strategy": "sip",
@@ -3668,11 +3414,7 @@
     "targets": 0
    },
    "passed": false,
-   "score": -0.114,
-   "weeks": {
-    "up": 4,
-    "n": 14
-   }
+   "score": -0.114
   },
   {
    "strategy": "orbrank",
@@ -3726,11 +3468,7 @@
     "targets": 8
    },
    "passed": false,
-   "score": -0.114,
-   "weeks": {
-    "up": 6,
-    "n": 16
-   }
+   "score": -0.114
   },
   {
    "strategy": "orbrank",
@@ -3783,11 +3521,7 @@
     "targets": 8
    },
    "passed": false,
-   "score": -0.114,
-   "weeks": {
-    "up": 6,
-    "n": 16
-   }
+   "score": -0.114
   },
   {
    "strategy": "bounce",
@@ -3839,11 +3573,7 @@
     "targets": 242
    },
    "passed": false,
-   "score": -0.119,
-   "weeks": {
-    "up": 5,
-    "n": 17
-   }
+   "score": -0.119
   },
   {
    "strategy": "sip",
@@ -3895,11 +3625,7 @@
     "targets": 0
    },
    "passed": false,
-   "score": -0.129,
-   "weeks": {
-    "up": 5,
-    "n": 14
-   }
+   "score": -0.129
   },
   {
    "strategy": "sip",
@@ -3952,11 +3678,7 @@
     "targets": 0
    },
    "passed": false,
-   "score": -0.135,
-   "weeks": {
-    "up": 5,
-    "n": 14
-   }
+   "score": -0.135
   },
   {
    "strategy": "bounce",
@@ -4008,11 +3730,7 @@
     "targets": 151
    },
    "passed": false,
-   "score": -0.145,
-   "weeks": {
-    "up": 5,
-    "n": 14
-   }
+   "score": -0.145
   },
   {
    "strategy": "bounce",
@@ -4064,11 +3782,7 @@
     "targets": 912
    },
    "passed": false,
-   "score": -0.147,
-   "weeks": {
-    "up": 4,
-    "n": 14
-   }
+   "score": -0.147
   },
   {
    "strategy": "bounce",
@@ -4120,11 +3834,7 @@
     "targets": 574
    },
    "passed": false,
-   "score": -0.165,
-   "weeks": {
-    "up": 4,
-    "n": 14
-   }
+   "score": -0.165
   },
   {
    "strategy": "sip",
@@ -4176,11 +3886,7 @@
     "targets": 0
    },
    "passed": false,
-   "score": -0.181,
-   "weeks": {
-    "up": 5,
-    "n": 14
-   }
+   "score": -0.181
   },
   {
    "strategy": "sip",
@@ -4232,11 +3938,7 @@
     "targets": 0
    },
    "passed": false,
-   "score": -0.182,
-   "weeks": {
-    "up": 5,
-    "n": 14
-   }
+   "score": -0.182
   },
   {
    "strategy": "bounce",
@@ -4288,11 +3990,7 @@
     "targets": 337
    },
    "passed": false,
-   "score": -0.203,
-   "weeks": {
-    "up": 7,
-    "n": 17
-   }
+   "score": -0.203
   },
   {
    "strategy": "sip",
@@ -4344,231 +4042,7 @@
     "targets": 0
    },
    "passed": false,
-   "score": -0.213,
-   "weeks": {
-    "up": 5,
-    "n": 14
-   }
-  },
-  {
-   "strategy": "best",
-   "level": "streng",
-   "target_r": 3.0,
-   "id": "best-streng-3R",
-   "label": "Beste Signale (streng): News-Sprung ≥ 2 %, Volumen ≥ 4×, Schwankung ≥ 4 %, Einstieg bis 10:30 Uhr ET · nur der erste Kandidat des Tages · Ziel 3R",
-   "train": {
-    "n": 14,
-    "t": 0.72,
-    "be_fee": 0.503,
-    "win_rate": 42.9,
-    "avg_r": 0.246,
-    "avg_pct": 1.006,
-    "eur": 14.09,
-    "eur_after_fees": -13.91,
-    "profit_factor": 1.68,
-    "max_dd_eur": -8.88,
-    "stops": 3,
-    "targets": 1
-   },
-   "test": {
-    "n": 10,
-    "t": 0.89,
-    "be_fee": 0.841,
-    "win_rate": 50.0,
-    "avg_r": 0.192,
-    "avg_pct": 1.683,
-    "eur": 16.83,
-    "eur_after_fees": -3.17,
-    "profit_factor": 2.46,
-    "max_dd_eur": -6.88,
-    "stops": 3,
-    "targets": 1
-   },
-   "all": {
-    "n": 24,
-    "t": 1.16,
-    "be_fee": 0.644,
-    "win_rate": 45.8,
-    "avg_r": 0.224,
-    "avg_pct": 1.288,
-    "eur": 30.91,
-    "eur_after_fees": -17.09,
-    "profit_factor": 1.96,
-    "max_dd_eur": -8.88,
-    "stops": 6,
-    "targets": 2
-   },
-   "passed": false,
-   "score": -99,
-   "weeks": {
-    "up": 7,
-    "n": 11
-   }
-  },
-  {
-   "strategy": "best",
-   "level": "locker",
-   "target_r": 3.0,
-   "id": "best-locker-3R",
-   "label": "Beste Signale (locker): News-Sprung ≥ 2 %, Volumen ≥ 2×, Schwankung ≥ 2 %, Einstieg bis 10:30 Uhr ET · nur der erste Kandidat des Tages · Ziel 3R",
-   "train": {
-    "n": 32,
-    "t": 0.51,
-    "be_fee": 0.296,
-    "win_rate": 34.4,
-    "avg_r": 0.085,
-    "avg_pct": 0.592,
-    "eur": 18.95,
-    "eur_after_fees": -45.05,
-    "profit_factor": 1.34,
-    "max_dd_eur": -28.25,
-    "stops": 8,
-    "targets": 3
-   },
-   "test": {
-    "n": 20,
-    "t": 0.55,
-    "be_fee": 0.187,
-    "win_rate": 45.0,
-    "avg_r": -0.126,
-    "avg_pct": 0.375,
-    "eur": 7.5,
-    "eur_after_fees": -32.5,
-    "profit_factor": 1.36,
-    "max_dd_eur": -12.36,
-    "stops": 7,
-    "targets": 0
-   },
-   "all": {
-    "n": 52,
-    "t": 0.67,
-    "be_fee": 0.254,
-    "win_rate": 38.5,
-    "avg_r": 0.004,
-    "avg_pct": 0.509,
-    "eur": 26.45,
-    "eur_after_fees": -77.55,
-    "profit_factor": 1.34,
-    "max_dd_eur": -33.59,
-    "stops": 15,
-    "targets": 3
-   },
-   "passed": false,
-   "score": -99,
-   "weeks": {
-    "up": 8,
-    "n": 13
-   }
-  },
-  {
-   "strategy": "best",
-   "level": "streng",
-   "target_r": 2.0,
-   "id": "best-streng-2R",
-   "label": "Beste Signale (streng): News-Sprung ≥ 2 %, Volumen ≥ 4×, Schwankung ≥ 4 %, Einstieg bis 10:30 Uhr ET · nur der erste Kandidat des Tages · Ziel 2R",
-   "train": {
-    "n": 14,
-    "t": 0.56,
-    "be_fee": 0.345,
-    "win_rate": 42.9,
-    "avg_r": 0.171,
-    "avg_pct": 0.69,
-    "eur": 9.66,
-    "eur_after_fees": -18.34,
-    "profit_factor": 1.47,
-    "max_dd_eur": -8.88,
-    "stops": 3,
-    "targets": 2
-   },
-   "test": {
-    "n": 10,
-    "t": 0.97,
-    "be_fee": 0.796,
-    "win_rate": 50.0,
-    "avg_r": 0.192,
-    "avg_pct": 1.592,
-    "eur": 15.92,
-    "eur_after_fees": -4.08,
-    "profit_factor": 2.38,
-    "max_dd_eur": -6.88,
-    "stops": 3,
-    "targets": 2
-   },
-   "all": {
-    "n": 24,
-    "t": 1.1,
-    "be_fee": 0.533,
-    "win_rate": 45.8,
-    "avg_r": 0.18,
-    "avg_pct": 1.066,
-    "eur": 25.58,
-    "eur_after_fees": -22.42,
-    "profit_factor": 1.8,
-    "max_dd_eur": -8.88,
-    "stops": 6,
-    "targets": 4
-   },
-   "passed": false,
-   "score": -99,
-   "weeks": {
-    "up": 7,
-    "n": 11
-   }
-  },
-  {
-   "strategy": "best",
-   "level": "locker",
-   "target_r": 2.0,
-   "id": "best-locker-2R",
-   "label": "Beste Signale (locker): News-Sprung ≥ 2 %, Volumen ≥ 2×, Schwankung ≥ 2 %, Einstieg bis 10:30 Uhr ET · nur der erste Kandidat des Tages · Ziel 2R",
-   "train": {
-    "n": 32,
-    "t": 0.15,
-    "be_fee": 0.066,
-    "win_rate": 34.4,
-    "avg_r": -0.01,
-    "avg_pct": 0.133,
-    "eur": 4.25,
-    "eur_after_fees": -59.75,
-    "profit_factor": 1.08,
-    "max_dd_eur": -33.32,
-    "stops": 8,
-    "targets": 4
-   },
-   "test": {
-    "n": 20,
-    "t": 0.91,
-    "be_fee": 0.365,
-    "win_rate": 45.0,
-    "avg_r": -0.015,
-    "avg_pct": 0.731,
-    "eur": 14.61,
-    "eur_after_fees": -25.39,
-    "profit_factor": 1.71,
-    "max_dd_eur": -12.36,
-    "stops": 7,
-    "targets": 2
-   },
-   "all": {
-    "n": 52,
-    "t": 0.57,
-    "be_fee": 0.181,
-    "win_rate": 38.5,
-    "avg_r": -0.012,
-    "avg_pct": 0.363,
-    "eur": 18.86,
-    "eur_after_fees": -85.14,
-    "profit_factor": 1.25,
-    "max_dd_eur": -38.67,
-    "stops": 15,
-    "targets": 6
-   },
-   "passed": false,
-   "score": -99,
-   "weeks": {
-    "up": 8,
-    "n": 13
-   }
+   "score": -0.213
   }
  ],
  "curves": {
@@ -15459,119 +14933,6 @@
    "avoid": false
   }
  ],
- "walkforward": {
-  "weeks": [
-   {
-    "week": "2026-W35",
-    "start": "2026-08-24",
-    "pick": "gap-4-v3-3R",
-    "n": 9,
-    "eur": 18.71,
-    "eur_fee": 0.71
-   },
-   {
-    "week": "2026-W36",
-    "start": "2026-08-31",
-    "pick": "gap-4-v3-3R",
-    "n": 3,
-    "eur": 2.83,
-    "eur_fee": -3.17
-   },
-   {
-    "week": "2026-W37",
-    "start": "2026-09-08",
-    "pick": "gap-4-v3-3R",
-    "n": 3,
-    "eur": -0.97,
-    "eur_fee": -6.97
-   },
-   {
-    "week": "2026-W38",
-    "start": "2026-09-14",
-    "pick": "gap-4-v3-3R",
-    "n": 3,
-    "eur": 1.38,
-    "eur_fee": -4.62
-   },
-   {
-    "week": "2026-W39",
-    "start": "2026-09-21",
-    "pick": "gap-4-v3-3R",
-    "n": 4,
-    "eur": -5.37,
-    "eur_fee": -13.37
-   },
-   {
-    "week": "2026-W40",
-    "start": "2026-09-28",
-    "pick": "gap-4-v3-3R",
-    "n": 5,
-    "eur": 4.59,
-    "eur_fee": -5.41
-   },
-   {
-    "week": "2026-W41",
-    "start": "2026-10-05",
-    "pick": "gap-4-v3-3R",
-    "n": 11,
-    "eur": -9.21,
-    "eur_fee": -31.21
-   },
-   {
-    "week": "2026-W42",
-    "start": "2026-10-12",
-    "pick": "gap-4-v2-3R",
-    "n": 1,
-    "eur": -4.84,
-    "eur_fee": -6.84
-   },
-   {
-    "week": "2026-W43",
-    "start": "2026-10-19",
-    "pick": "gap-4-v2-3R",
-    "n": 6,
-    "eur": 4.43,
-    "eur_fee": -7.57
-   },
-   {
-    "week": "2026-W44",
-    "start": "2026-10-26",
-    "pick": "gap-4-v2-3R",
-    "n": 17,
-    "eur": 22.18,
-    "eur_fee": -11.82
-   },
-   {
-    "week": "2026-W45",
-    "start": "2026-11-02",
-    "pick": "gap-4-v2-3R",
-    "n": 21,
-    "eur": 14.07,
-    "eur_fee": -27.93
-   },
-   {
-    "week": "2026-W46",
-    "start": "2026-11-09",
-    "pick": "best-streng-3R",
-    "n": 4,
-    "eur": -5.06,
-    "eur_fee": -13.06
-   },
-   {
-    "week": "2026-W47",
-    "start": "2026-11-16",
-    "pick": "best-streng-3R",
-    "n": 0,
-    "eur": 0.0,
-    "eur_fee": 0.0
-   }
-  ],
-  "n": 87,
-  "eur": 42.74,
-  "eur_fee": -131.26,
-  "weeks_up": 7,
-  "t": 1.02
- },
  "account_settings": {
   "start": 100.0,
   "stake": 20.0,
@@ -16866,5 +16227,5 @@
    "test": true
   }
  ],
- "seconds": 65.1
+ "seconds": 62.3
 }

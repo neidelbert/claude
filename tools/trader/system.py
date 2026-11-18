@@ -68,7 +68,7 @@ DEFAULT_CONFIG = {
 
 # Zeitfenster in New Yorker Zeit, in denen „auto“ einen Teil startet.
 # GitHub startet Zeitpläne oft 5 bis 30 Minuten zu spät, daher großzügig.
-MORNING_WINDOW = (datetime.time(7, 30), datetime.time(9, 25))
+MORNING_WINDOW = (datetime.time(7, 30), datetime.time(15, 0))   # bis 15 Uhr nachholen, falls ein Lauf spät startet
 ORB_WINDOW = (datetime.time(10, 10), datetime.time(12, 0))
 LAB_WINDOW = (datetime.time(16, 20), datetime.time(19, 30))   # nach Börsenschluss
 

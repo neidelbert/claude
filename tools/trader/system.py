@@ -601,9 +601,11 @@ def do_lab(cfg, now, force):
     return True, "%d von %d bestanden" % (len(passed), len(rows)), steps, data, owned
 
 
-STRAT_SHORT = {"orb": "Opening-Range-Ausbruch", "gap": "News-Sprung", "bounce": "Erholung", "sip": "Stocks in Play",
+STRAT_SHORT = {"best": "Beste Signale", "orb": "Opening-Range-Ausbruch", "gap": "News-Sprung", "bounce": "Erholung", "sip": "Stocks in Play",
                "orbrank": "Ausbruch mit Volumen-Rangliste", "orbmkt": "Ausbruch mit Markt-Filter"}
 WHY_IN = {
+    "best": "Der erste Kandidat des Tages, der zu den gelernten Mustern passt: Kurssprung, sehr viel Volumen, starke "
+            "Schwankung, früher Einstieg.",
     "orb": "Der Kurs hat über dem Hoch der ersten Minuten geschlossen. Der Stopp liegt dort, wo die Idee falsch wäre.",
     "gap": "Die Aktie ist mit viel Umsatz über dem Vortag gestartet und steigt weiter über ihr erstes Hoch.",
     "bounce": "Die stark gefallene Aktie steigt wieder über ihren Tagesdurchschnittspreis (VWAP).",
@@ -681,6 +683,10 @@ def close_report(cfg, day, sm):
     pats = [x for x in res.get("patterns", []) if x.get("holds")]
     if pats:
         lines.append("Gelernt: %d Muster halten, z. B. %s: %s" % (len(pats), pats[0]["name"], pats[0]["label"]))
+    wf = res.get("walkforward") or {}
+    if wf.get("weeks"):
+        lines.append("Walk-Forward (System wählt jede Woche neu): %s € nach Gebühr in %d Wochen, %d im Plus" % (
+            de_num(wf["eur_fee"]), len(wf["weeks"]), wf["weeks_up"]))
     ai_line = ai_result_line(day)
     if ai_line:
         lines.append(ai_line)
@@ -785,6 +791,7 @@ def go_checks(cfg):
             break
     res = read_json(p(T, "lab", "results.json"), {}) or {}
     rows = res.get("variants", [])
+    wf = res.get("walkforward") or {}
     share = round(up / len(accs) * 100) if accs else 0
     return [
         {"name": "Mindestens 40 Live-Tage", "ok": len(days) >= 40, "detail": "%d von 40" % len(days)},
@@ -795,6 +802,8 @@ def go_checks(cfg):
         {"name": "Top-Regel stabil (≥ 10 Tage dieselbe)", "ok": streak >= 10, "detail": "%d Tage" % streak},
         {"name": "Top-Regel hat die Prüftage bestanden", "ok": bool(rows) and bool(rows[0].get("passed")),
          "detail": "ja" if rows and rows[0].get("passed") else "nein"},
+        {"name": "Walk-Forward nach Gebühr im Plus (≥ 4 Wochen)", "ok": len(wf.get("weeks", [])) >= 4 and wf.get("eur_fee", 0) > 0,
+         "detail": "%s € in %d Wochen" % (de_num(wf.get("eur_fee", 0)), len(wf.get("weeks", [])))},
     ]
 
 

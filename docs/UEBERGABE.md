@@ -12,7 +12,7 @@ Den ganzen Plan enthält `docs/TRADER-PLAN.md`, das Interview mit Lukas ist dort
 | Teil | Wo | Wann |
 |---|---|---|
 | Steuerung | `tools/trader/system.py` (Teile: auto, morning, orb, live, lab, alerts, ticker, test, message, render) | – |
-| Zeitplan | `.github/workflows/trader-system.yml`: Zeitplan-Läufe starten eine **Schleife** (`teil=schleife`), die selbst im 10-Minuten-Takt `system.py auto` ausführt, solange `system.py window` offen ist (Handelstag 7:25–19:35 Uhr ET, max. 5,5 h); Webseite über `tools/trader/seite.sh` | Mo–Fr, Crons als Starter |
+| Zeitplan | `.github/workflows/trader-system.yml`: **Kette rund um die Uhr** (`teil=schleife`): jeder Lauf bestellt zu Beginn per `workflow_dispatch` seinen Nachfolger (wartet in der Concurrency-Gruppe), arbeitet bis 5 Std. im 10-Min.-Takt (`system.py auto`, solange `system.py window` offen ist) und endet. Crons nur Ersatz, falls die Kette reißt (GitHub startete sie im Nov. erst gegen 20 Uhr UTC). Webseite über `tools/trader/seite.sh` | dauernd |
 | Morgen-Scan | `scan.py` (Daily), `news.py`, `ptr.py` (Pelosi) | ab ca. 8:00 Uhr ET |
 | ORB-Scan | `scan.py orb` | ab ca. 10:10 Uhr ET |
 | **100-Tage-Experiment** | Start 23.10.2026 (`experiment` in `trader/system.json`). Jeder Handelstag: alle 76 Regeln mit je 100 € Tageskonto (20 € je Trade, mit/ohne 1 € Gebühr), ~300 Aktien der Watchlist. Nach Tag 100 hört `do_live` auf. `experiment_day`, `live_days`, `go_checks`, `close_report` in `system.py` | jeden Handelstag automatisch |
@@ -110,3 +110,4 @@ Den ganzen Plan enthält `docs/TRADER-PLAN.md`, das Interview mit Lukas ist dort
 | 23.10. | #30 | 100-Tage-Experiment (Lukas: „jeden Tag automatisch bis Tag 100“, 100 € je Tag, aus jedem Trade lernen, sicheres Go): Tageskonto je Regel, Trade-Merkmale und Muster-Suche, Go-Ampel, nur 2 Pushes am Tag (Start kurz, Schluss Rückblick), Übersicht mit Status, Diagrammen und Statistik; Diagramme nach Skill `dataviz` |
 | 23.10. | #31 | Stand nach dem ersten Labor-Lauf mit neuem Code (0 bestanden, 1 Muster hält); Webseite live geprüft |
 | 23.10. | #32 | Lukas' Antworten umgesetzt: Simulator-Start per Ja im GO-Push, Muster-Filter (76 Varianten; Volumen-Merkmal jetzt ohne Blick in die Zukunft), KI-Zweitmeinung ab 23.11. (aus ohne Schlüssel), Verschlüsselung von Ja/Nein und Notizen (Secret `DATEN_SCHLUESSEL`), Workflow installiert `cryptography` + `anthropic` |
+| 18.11. | #33 | Reparatur: GitHub startete die Zeitplan-Läufe seit Ende Okt. erst gegen 20 Uhr UTC → Morgen-Scan seit 28.10. nicht gelaufen (Watchlist veraltet), 9.11. ganz ausgefallen, Live erst ab ca. 15 Uhr ET (Trades wurden aus den Tageskerzen nachgerechnet). Jetzt Kette mit selbst bestelltem Nachfolger; Morgen-Scan wird bis 15 Uhr ET nachgeholt |

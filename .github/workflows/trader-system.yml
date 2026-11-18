@@ -37,6 +37,7 @@ on:
 
 permissions:
   contents: write
+  actions: write     # die Schleife startet ihren Nachfolger selbst (workflow_dispatch)
 
 concurrency:
   # Zeitplan-Läufe und die Schleife nacheinander (nie zwei Schleifen gleichzeitig);
@@ -47,7 +48,7 @@ concurrency:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 350
+    timeout-minutes: 355
     env:
       NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
       NTFY_REPLY_TOPIC: ${{ secrets.NTFY_REPLY_TOPIC }}
@@ -80,6 +81,7 @@ jobs:
           NACHRICHT_LINK: "https://github.com/neidelbert/claude/blob/main/docs/AUSWERTUNG.md"
           SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
           PUSH_URL: "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           args=("$TEIL")
@@ -90,16 +92,24 @@ jobs:
           if [ "$TEIL" = "nachricht" ]; then args=("message"); fi
           if [ "$TEIL" = "seite" ]; then echo "Nur Webseite neu bauen."; exit 0; fi
           if [ "$TEIL" = "schleife" ]; then
-            # GitHub startet Zeitpläne oft 30–45 Minuten zu spät. Darum arbeitet ein Lauf selbst im 10-Minuten-Takt,
-            # solange heute etwas fällig ist (höchstens 5,5 Stunden; danach übernimmt der nächste Zeitplan-Lauf).
-            ende=$(( $(date +%s) + 19800 ))
-            while python3 tools/trader/system.py window; do
-              out=$(mktemp)
-              GITHUB_OUTPUT="$out" python3 tools/trader/system.py auto || echo "Durchgang mit Fehler, weiter"
-              grep -q "lab_ran=true" "$out" && echo "lab_ran=true" >> "$GITHUB_OUTPUT"
-              if grep -q "published=true" "$out"; then bash tools/trader/seite.sh || echo "Webseite nicht veröffentlicht"; fi
-              [ "$(date +%s)" -ge "$ende" ] && break
-              sleep $(( 600 - $(date +%s) % 600 + 20 ))
+            # Kette rund um die Uhr: GitHub startet Zeitpläne oft Stunden zu spät (Nov. 2026: erst gegen 20 Uhr UTC).
+            # Darum bestellt jeder Lauf gleich zu Beginn seinen Nachfolger (er wartet, bis dieser Lauf fertig ist),
+            # arbeitet dann bis zu 5 Stunden im 10-Minuten-Takt und endet. Die Zeitpläne oben sind nur Ersatz, falls die Kette reißt.
+            curl -sS -o /dev/null -w "Nachfolger bestellt: HTTP %{http_code}\n" -X POST \
+              -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/workflows/trader-system.yml/dispatches" \
+              -d '{"ref":"main","inputs":{"teil":"schleife"}}' || echo "Nachfolger nicht bestellt"
+            ende=$(( $(date +%s) + 18000 ))
+            while :; do
+              if python3 tools/trader/system.py window; then
+                out=$(mktemp)
+                GITHUB_OUTPUT="$out" python3 tools/trader/system.py auto || echo "Durchgang mit Fehler, weiter"
+                grep -q "lab_ran=true" "$out" && echo "lab_ran=true" >> "$GITHUB_OUTPUT"
+                if grep -q "published=true" "$out"; then bash tools/trader/seite.sh || echo "Webseite nicht veröffentlicht"; fi
+              fi
+              pause=$(( 600 - $(date +%s) % 600 + 20 ))
+              [ $(( $(date +%s) + pause )) -ge "$ende" ] && break
+              sleep "$pause"
             done
             exit 0
           fi

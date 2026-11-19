@@ -1,6 +1,6 @@
 # Trader-Übersicht
 
-Stand: Do 19.11. 10:40 Uhr ET (16:40 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
+Stand: Do 19.11. 10:44 Uhr ET (16:44 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
 
 NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
@@ -8,9 +8,9 @@ NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
 | Teil | Letzter Lauf | Ergebnis |
 |---|---|---|
-| Morgen-Scan | Do 19.11. 07:30 Uhr ET (13:30 Uhr MEZ) | OK – 410 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/44466796616)) |
-| ORB-Scan | Do 19.11. 10:10 Uhr ET (16:10 Uhr MEZ) | OK – 75 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/44466796616)) |
-| Labor live | Do 19.11. 10:40 Uhr ET (16:40 Uhr MEZ) | OK – 1.420 Trades, 854 offen ([Lauf](https://github.com/neidelbert/claude/actions/runs/44466796616)) |
+| Morgen-Scan | Do 19.11. 10:41 Uhr ET (16:41 Uhr MEZ) | OK – 86 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/44507873118)) |
+| ORB-Scan | Do 19.11. 10:41 Uhr ET (16:41 Uhr MEZ) | OK – 18 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/44507873118)) |
+| Labor live | Do 19.11. 10:41 Uhr ET (16:41 Uhr MEZ) | OK – Börsenstart gemeldet ([Lauf](https://github.com/neidelbert/claude/actions/runs/44507873118)) |
 | Labor | Mi 18.11. 16:20 Uhr ET (22:20 Uhr MEZ) | OK – 19 von 76 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/44387313646)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
@@ -20,15 +20,15 @@ Zeitplan (Mo–Fr, an Handelstagen): Morgen-Scan ab ca. 8:00 Uhr ET, ORB-Scan ab
 
 ## Morgen-Scan – Schlusskurse vom Mi 18.11.2026
 
-5.926 Aktien in der Liste · 5.925 Charts geladen · 1.471 liquide (ab 5 $ und 1.000.000 Aktien) · 1.470 gescannt · **410 passen zu einer Regel**
+5.927 Aktien in der Liste · 5.927 Charts geladen · 359 liquide (ab 5 $ und 1.000.000 Aktien) · 358 gescannt · **86 passen zu einer Regel**
 
 | Regel | Anzahl | Meistgehandelt |
 |---|---|---|
-| `breakout_20d` | 77 | DIS, TGT, VIK, TSCO, ORLY, CMG, SN, FROG |
-| `bull_flag` | 139 | LLY, COST, HD, HWM, LOW, GE, TMUS, SHW |
-| `reclaim_ma20` | 67 | AMD, TTWO, TJX, NET, OKTA, UNP, HON, AKAM |
-| `oversold` | 133 | NVDA, UNH, INTC, MSTR, CAT, CRM, NOW, FCX |
-| `oversold_bounce` | 31 | DDOG, NTRA, AXON, DT, CRSP, ARWR, NTNX, IONS |
+| `breakout_20d` | 14 | DIS, TGT, IBN, CMG, BMRN, CPB, TSCO, PCG |
+| `bull_flag` | 18 | INSM, SNY, DAL, CMCSA, AAL, IBN, NCLH, CMG |
+| `reclaim_ma20` | 12 | AMD, TTWO, NET, TJX, OKTA, AKAM, TECH, NTSK |
+| `oversold` | 43 | NVDA, INTC, UNH, BABA, MSTR, IREN, HOOD, NOW |
+| `oversold_bounce` | 4 | DDOG, DT, AESI, FLO |
 
 **Die 20 meistgehandelten Treffer** (Kurs × Umsatz):
 
@@ -36,97 +36,83 @@ Zeitplan (Mo–Fr, an Handelstagen): Morgen-Scan ab ca. 8:00 Uhr ET, ORB-Scan ab
 |---|---|---|---|
 | NVDA | 150,96 $ | 21,2 | `oversold` |
 | AMD | 530,14 $ | 50,4 | `reclaim_ma20` |
-| UNH | 349,91 $ | 28,6 | `oversold` |
 | INTC | 54,67 $ | 29,3 | `oversold` |
-| LLY | 1.382,75 $ | 55,6 | `bull_flag` |
-| TTWO | 216,61 $ | 53,4 | `reclaim_ma20` |
-| TJX | 140,30 $ | 53,3 | `reclaim_ma20` |
-| COST | 1.096,62 $ | 68,9 | `bull_flag` |
-| MSTR | 90,32 $ | 24,4 | `oversold` |
-| DIS | 122,36 $ | 69,5 | `breakout_20d` |
-| TGT | 165,93 $ | 60,1 | `breakout_20d` |
-| CAT | 558,77 $ | 29,7 | `oversold` |
-| CRM | 190,40 $ | 24,5 | `oversold` |
-| NOW | 90,59 $ | 25,6 | `oversold` |
-| HD | 337,64 $ | 53,9 | `bull_flag` |
-| FCX | 51,45 $ | 26,3 | `oversold` |
+| UNH | 349,91 $ | 28,6 | `oversold` |
 | BABA | 84,37 $ | 24,2 | `oversold` |
+| TTWO | 216,61 $ | 53,4 | `reclaim_ma20` |
+| INSM | 119,80 $ | 60,9 | `bull_flag` |
+| MSTR | 90,32 $ | 24,4 | `oversold` |
 | IREN | 15,24 $ | 28,7 | `oversold` |
-| COF | 184,30 $ | 29,9 | `oversold` |
-| HWM | 221,15 $ | 53,4 | `bull_flag` |
+| NET | 300,91 $ | 49,5 | `reclaim_ma20` |
+| HOOD | 69,17 $ | 27,6 | `oversold` |
+| DIS | 122,36 $ | 69,5 | `breakout_20d` |
+| NOW | 90,59 $ | 25,6 | `oversold` |
+| TJX | 140,30 $ | 53,3 | `reclaim_ma20` |
+| OKTA | 195,61 $ | 52,5 | `reclaim_ma20` |
+| CRM | 190,40 $ | 24,5 | `oversold` |
+| TGT | 165,93 $ | 60,1 | `breakout_20d` |
+| FCX | 51,45 $ | 26,3 | `oversold` |
+| DDOG | 167,11 $ | 27,8 | `oversold`, `oversold_bounce` |
+| BA | 162,91 $ | 29,7 | `oversold` |
 
-Alle 410 Treffer: [watchlist.json](watchlist.json)
+Alle 86 Treffer: [watchlist.json](watchlist.json)
 
-## ORB-Scan – 2026-11-19 10:10 ET
+## ORB-Scan – 2026-11-19 10:43 ET
 
-Quelle: Treffer des Morgen-Scans · 381 nutzbare Charts · **75 über der Eröffnungsspanne**
+Quelle: Treffer des Morgen-Scans · 74 nutzbare Charts · **18 über der Eröffnungsspanne**
 
 | Bar-Schluss | Ticker | Kurs | Spanne | über dem Hoch |
 |---|---|---|---|---|
-| 9:50 AM | ACCO | 5,61 $ | 5,46 $ – 5,60 $ | +0,21 % |
-| 9:50 AM | AEO | 22,02 $ | 21,42 $ – 21,85 $ | +0,80 % |
 | 9:50 AM | AESI | 5,66 $ | 5,24 $ – 5,57 $ | +1,62 % |
 | 9:50 AM | AKAM | 95,86 $ | 92,11 $ – 95,09 $ | +0,81 % |
 | 9:50 AM | AMD | 554,47 $ | 537,09 $ – 552,00 $ | +0,45 % |
-| 9:50 AM | ATEN | 33,69 $ | 32,75 $ – 33,65 $ | +0,12 % |
 | 9:50 AM | BABA | 87,76 $ | 83,25 $ – 87,62 $ | +0,16 % |
-| 9:50 AM | BBY | 100,47 $ | 99,27 $ – 100,00 $ | +0,47 % |
-| 9:50 AM | BGC | 11,38 $ | 11,07 $ – 11,32 $ | +0,53 % |
 | 9:50 AM | BMNR | 16,37 $ | 16,08 $ – 16,33 $ | +0,22 % |
-| 9:50 AM | BURL | 250,16 $ | 245,62 $ – 249,28 $ | +0,35 % |
-| 9:50 AM | CBRL | 74,00 $ | 72,13 $ – 73,82 $ | +0,24 % |
-| 9:50 AM | CLM | 5,59 $ | 5,52 $ – 5,59 $ | +0,18 % |
-| 9:50 AM | COF | 187,51 $ | 184,95 $ – 187,02 $ | +0,26 % |
-| 9:50 AM | CRSP | 41,44 $ | 39,93 $ – 41,28 $ | +0,40 % |
-| 9:50 AM | DLTR | 141,20 $ | 139,89 $ – 141,18 $ | +0,01 % |
-| 9:50 AM | EAT | 201,67 $ | 192,15 $ – 200,64 $ | +0,51 % |
-| 9:50 AM | FIGR | 27,86 $ | 26,62 $ – 27,45 $ | +1,49 % |
-| 9:50 AM | FIGS | 21,40 $ | 20,98 $ – 21,33 $ | +0,30 % |
-| 9:50 AM | FIVN | 25,55 $ | 24,41 $ – 25,50 $ | +0,18 % |
-| 9:50 AM | FSLR | 157,69 $ | 151,81 $ – 156,88 $ | +0,52 % |
 | 9:50 AM | FUTU | 90,07 $ | 85,52 $ – 88,97 $ | +1,24 % |
-| 9:50 AM | FWRG | 12,54 $ | 12,26 $ – 12,53 $ | +0,04 % |
-| 9:50 AM | GIL | 34,54 $ | 33,22 $ – 34,13 $ | +1,20 % |
-| 9:50 AM | GME | 26,67 $ | 26,31 $ – 26,66 $ | +0,02 % |
-| 9:50 AM | GNRC | 217,32 $ | 207,47 $ – 214,29 $ | +1,42 % |
 | 9:50 AM | INTC | 59,15 $ | 57,28 $ – 59,00 $ | +0,25 % |
-| 9:50 AM | LEVI | 23,93 $ | 23,69 $ – 23,86 $ | +0,29 % |
-| 9:50 AM | LULU | 109,50 $ | 108,26 $ – 109,45 $ | +0,05 % |
-| 9:50 AM | LZB | 31,10 $ | 30,42 $ – 31,03 $ | +0,23 % |
-
-… und 45 weitere in [orb.json](orb.json).
+| 9:50 AM | NTSK | 25,85 $ | 24,25 $ – 25,81 $ | +0,14 % |
+| 9:50 AM | SVRA | 5,03 $ | 4,73 $ – 4,91 $ | +2,55 % |
+| 9:50 AM | TJX | 139,62 $ | 136,98 $ – 139,40 $ | +0,16 % |
+| 9:50 AM | VFC | 20,92 $ | 20,60 $ – 20,81 $ | +0,53 % |
+| 9:50 AM | WMG | 33,47 $ | 30,90 $ – 33,23 $ | +0,72 % |
+| 9:55 AM | BMRN | 63,58 $ | 61,00 $ – 62,50 $ | +1,73 % |
+| 10:05 AM | DT | 47,45 $ | 45,82 $ – 47,33 $ | +0,25 % |
+| 10:05 AM | NOW | 93,49 $ | 90,79 $ – 93,32 $ | +0,17 % |
+| 10:05 AM | TGT | 168,11 $ | 165,20 $ – 167,77 $ | +0,20 % |
+| 10:20 AM | BRBR | 14,52 $ | 13,25 $ – 14,50 $ | +0,10 % |
+| 10:20 AM | PCG | 13,84 $ | 13,62 $ – 13,77 $ | +0,50 % |
 
 Ein späterer Treffer liegt näher am aktuellen Kurs.
 
 ## News zu den ersten 10 Treffern (letzte 24 Stunden, nur neue)
 
-Bewegung seit gestern: **AMD +5,31 %** · COST -1,21 % · **DIS +4,63 %** · INTC -0,91 % · LLY -2,32 % · **MSTR -6,40 %** · NVDA -2,89 % · **TJX +8,05 %** · **TTWO +6,22 %** · **UNH -10,21 %**
+Bewegung seit gestern: **AMD -7,66 %** · **BABA +3,09 %** · **INSM +15,12 %** · **INTC +3,53 %** · IREN -0,98 % · MSTR -1,75 % · **NET +5,96 %** · NVDA +1,14 % · TTWO -0,90 % · **UNH -4,50 %**
 
-- 19.11. 07:27 Uhr ET · **NVDA** · [President Trump Just Delivered Good News for Nvidia Stock Investors](https://finance.yahoo.com/markets/stocks/articles/president-trump-just-delivered-good-122719225.html?.tsrc=rss)
-- 19.11. 07:25 Uhr ET · **UNH** · [UnitedHealth Shares Sink as New Federal Fraud Crackdown Sparks Healthcare Sell-Off](https://finance.yahoo.com/healthcare/articles/unitedhealth-shares-sink-federal-fraud-122529002.html?.tsrc=rss)
-- 19.11. 07:23 Uhr ET · **NVDA** · [Dow Jones Futures Rise, Techs Jump 2%: Anthropic To Debut After Record IPO; Palo Alto, Everpure Rally, Walmart Beats](https://finance.yahoo.com/m/107e5a2c-4fba-3df3-b2fd-5d1160e65516/dow-jones-futures-rise%2C-techs.html?.tsrc=rss) · macro
-- 19.11. 07:22 Uhr ET · **AMD** · [OpenAI Says Its AI Improved AMD’s Best Chip Design by Up to 14%](https://247wallst.com/investing/2026/11/19/openai-says-its-ai-improved-amds-best-chip-design-by-up-to-14/?.tsrc=rss)
-- 19.11. 07:16 Uhr ET · **NVDA** · [TJX Beat Its Own Sales Forecast With 4% Comparable Growth, but Management Is Bracing for a Slower Holiday Quarter.](https://www.fool.com/investing/2026/11/19/tjx-beat-its-own-sales-forecast-with-4-comparable-growth-but-management-is-bracing-for-a-slower-holiday-quarter/?.tsrc=rss) · earnings
-- 19.11. 07:15 Uhr ET · **NVDA** · [Stalemates over semiconductors and rare earth minerals appear little changed as Trump heads home from China](https://finance.yahoo.com/markets/article/stalemates-over-semiconductors-and-rare-earth-minerals-appear-little-changed-as-trump-heads-home-from-china-121555352.html?.tsrc=rss)
-- 19.11. 07:15 Uhr ET · **NVDA** · [IonQ Has a $3.7 Billion Runway That Could Send Prices to $65 or Higher in 2027](https://247wallst.com/investing/2026/11/19/ionq-has-a-3-7-billion-runway-that-could-send-prices-to-65-or-higher-in-2027/?.tsrc=rss)
-- 19.11. 07:15 Uhr ET · **AMD** · [Why Did David Tepper Exit AMD and Open a $172M Oracle Position? Here’s What May Have Driven the Shift](https://247wallst.com/investing/2026/11/19/why-did-david-tepper-exit-amd-and-open-a-172m-oracle-position-heres-what-may-have-driven-the-shift/?.tsrc=rss)
-- 19.11. 07:14 Uhr ET · **AMD** · [Advanced Micro Devices (AMD) Closes $8.2 Billion World Labs Acquisition](https://finance.yahoo.com/technology/ai/articles/advanced-micro-devices-amd-closes-121439912.html?.tsrc=rss) · deal
-- 19.11. 07:12 Uhr ET · **AMD** · [Anthropic Tops SpaceX For The Biggest IPO Ever](https://finance.yahoo.com/markets/stocks/articles/anthropic-tops-spacex-biggest-ipo-121239477.html?.tsrc=rss)
-- 19.11. 07:08 Uhr ET · **LLY** · [Which Dates Could Move Bristol Myers Squibb Stock Most?](https://www.trefis.com/stock/bmy/articles/626791/which-dates-could-move-bristol-myers-squibb-stock-most/2026-11-19?.tsrc=rss)
-- 19.11. 07:08 Uhr ET · **NVDA** · [History Says a Bear Market Is Coming. Here's Exactly How I'm Preparing.](https://www.fool.com/investing/2026/11/19/history-says-a-bear-market-is-coming-heres-exactly-how-im-preparing/?.tsrc=rss)
-- 19.11. 07:04 Uhr ET · **NVDA** · [Dan Ives Says Anthropic IPO Is ‘A Big Win For The Tech Sector’ After ‘A White Knuckle Time With Nvidia’](https://stocktwits.com/news-articles/markets/equity/dan-ives-says-anthropic-ipo-big-win-for-the-tech-sector-after-a-white-knuckle-time-with-nvidia/cNbielNR9iz?.tsrc=rss) · earnings
-- 19.11. 07:02 Uhr ET · **NVDA** · [Moody’s Says Jensen Huang’s Exit Is “Credit Negative” for Nvidia](https://247wallst.com/investing/2026/11/19/moodys-says-jensen-huangs-exit-is-credit-negative-for-nvidia/?.tsrc=rss) · analyst, people
-- 19.11. 07:00 Uhr ET · **AMD** · [NexusIgnite Plans Sovereign AI Cloud in Jordan, Starting With Its Universities](https://finance.yahoo.com/technology/ai/articles/nexusignite-plans-sovereign-ai-cloud-120000648.html?.tsrc=rss)
-- 19.11. 07:00 Uhr ET · **NVDA** · [Everything you need to know about the Anthropic IPO](https://finance.yahoo.com/video/everything-know-anthropic-ipo-120000799.html?.tsrc=rss)
-- 19.11. 07:00 Uhr ET · **TTWO** · [GTA VI: Why the 13-year wait could be worth $8 billion](https://finance.yahoo.com/video/gta-vi-why-13-wait-120000877.html?.tsrc=rss)
-- 19.11. 07:00 Uhr ET · **TTWO** · [Rockstar Games Announces Grand Theft Auto VI Now Available](https://finance.yahoo.com/technology/articles/rockstar-games-announces-grand-theft-120000642.html?.tsrc=rss)
-- 19.11. 06:54 Uhr ET · **NVDA** · [The Biggest Investing Lesson I Learned From My First Bear Market](https://www.fool.com/investing/2026/11/19/the-biggest-investing-lesson-i-learned-from-my-first-bear-market/?.tsrc=rss)
-- 19.11. 06:51 Uhr ET · **DIS** · [What Are Netflix Stock Bears Missing?](https://www.trefis.com/stock/nflx/articles/626821/what-are-netflix-stock-bears-missing/2026-11-19?.tsrc=rss)
-- 19.11. 06:47 Uhr ET · **DIS** · [Netflix Is 48% Below Its High While Guiding to Record Revenue of $51.1 Billion, Up 13%, for 2026](https://www.tikr.com/blog/netflix-is-48-below-its-high-while-guiding-to-record-revenue-of-51-1-billion-up-13-for-2026?ref=yahoofinance&tlnk=yf-261119-c55xxvxf&.tsrc=rss)
-- 19.11. 06:47 Uhr ET · **AMD** · [Dividend Stocks Or AI Stocks: Which Fits Now?](https://www.trefis.com/stock/smh/articles/626520/dividend-stocks-or-ai-stocks-which-fits-now/2026-11-19?.tsrc=rss) · capital
-- 19.11. 06:43 Uhr ET · **NVDA** · [How Much Gold Should A $1 Million Portfolio Own?](https://www.trefis.com/stock/gld/articles/624818/how-much-gold-should-a-1-million-portfolio-own/2026-11-19?.tsrc=rss)
-- 19.11. 06:35 Uhr ET · **NVDA** · [Jim Cramer Isn't Buying SpaceX Stock Yet. Cathie Wood Keeps Buying. Here’s Who’s Right.](https://www.fool.com/investing/2026/11/19/jim-cramer-not-buying-spacex-stock-cathie-wood-buying-who-is-right/?.tsrc=rss)
-- 19.11. 06:32 Uhr ET · **NVDA** · [This "Unstoppable" Cryptocurrency Is Ready to Deliver Massive Gains in 2027](https://www.fool.com/investing/2026/11/19/this-unstoppable-cryptocurrency-is-ready-to-deliver-massive-gains-in-2027/?.tsrc=rss)
+- 19.11. 10:30 Uhr ET · **INTC** · [BC-Most Active Stocks](https://finance.yahoo.com/markets/stocks/articles/bc-most-active-stocks-153021724.html?.tsrc=rss)
+- 19.11. 10:29 Uhr ET · **NVDA** · [Apple Stock Polishes Breakout As Nvidia-Led AI Boom Gets Wake-Up Call](https://finance.yahoo.com/m/681ca0c6-76b1-321b-bdd4-bb83acc818fb/apple-stock-polishes-breakout.html?.tsrc=rss)
+- 19.11. 10:27 Uhr ET · **NVDA** · [Jensen Huang Stepped Away From Nvidia. The Stock Has Crashed. Instead of Rushing to Buy the Dip, Here Are 2 AI Stocks Down More Than 15% to Buy Instead.](https://www.fool.com/investing/2026/11/19/jensen-huang-stepped-away-from-nvidia-the-stock-has-crashed-instead-of-rushing-to-buy-the-dip-here-are-2-ai-stocks-down-more-than-15-to-buy-instead/?.tsrc=rss)
+- 19.11. 10:25 Uhr ET · **INSM** · [Billionaire Druckenmiller’s New AI Warning and Top 10 Stock Picks](https://finance.yahoo.com/markets/stocks/articles/billionaire-druckenmiller-ai-warning-top-152506734.html?.tsrc=rss)
+- 19.11. 10:23 Uhr ET · **NVDA** · [Opinion: Trump May Have Finally Killed the AI Trade](https://www.tikr.com/blog/opinion-trump-may-have-finally-killed-the-ai-trade?ref=yahoofinance&tlnk=yf-261119-xjm2c5jx&.tsrc=rss)
+- 19.11. 10:23 Uhr ET · **NVDA** · [Why Micron Stock Finally Popped Today](https://www.fool.com/investing/2026/11/19/why-micron-stock-finally-popped-today/?.tsrc=rss)
+- 19.11. 10:21 Uhr ET · **MSTR** · [Analysts Turned Bearish on These 5 Stocks on Wednesday](https://finance.yahoo.com/markets/stocks/articles/analysts-turned-bearish-5-stocks-152114314.html?.tsrc=rss)
+- 19.11. 10:20 Uhr ET · **NVDA** · [If a Market Correction Is Coming, Here's the Exact 3-Step Strategy I'm Using to Prepare](https://www.fool.com/investing/2026/11/19/if-a-market-correction-is-coming-here-the-exact-3-step-strategy-i-m-using-to-prepare/?.tsrc=rss)
+- 19.11. 10:17 Uhr ET · **NVDA** · [What Could Derail Take-Two Stock?](https://www.trefis.com/stock/ttwo/articles/626761/what-could-derail-take-two-stock/2026-11-19?.tsrc=rss)
+- 19.11. 10:15 Uhr ET · **INTC** · [Microsoft (MSFT) Secures New AI Chip Supply Deal For Azure Growth](https://finance.yahoo.com/technology/ai/articles/microsoft-msft-secures-ai-chip-151529450.html?.tsrc=rss) · deal
+- 19.11. 10:15 Uhr ET · **NVDA** · [Claude crushes it on Wall Street](https://www.axios.com/2026/11/19/anthropic-ipo-claude-crush#utm_source=yahoo_finance&utm_medium=partner&utm_campaign=subs-partner-yahoo-finance-AI?.tsrc=rss)
+- 19.11. 10:13 Uhr ET · **NVDA** · [Peter Lynch Made “Growth at a Reasonable Price” Famous. SPGP Runs the S&P 500 Through That Filter and Keeps 75 Stocks](https://247wallst.com/investing/etf/2026/11/19/peter-lynch-made-growth-at-a-reasonable-price-famous-spgp-runs-the-sp-500-through-that-filter-and-keeps-75-stocks/?.tsrc=rss)
+- 19.11. 10:10 Uhr ET · **NVDA** · [Anthropic IPO mania: Could it be the biggest public debut ever?](https://finance.yahoo.com/video/anthropic-ipo-mania-could-it-be-the-biggest-public-debut-ever-151001594.html?.tsrc=rss) · capital
+- 19.11. 10:08 Uhr ET · **NVDA** · [Some Fed Officials Wanted to Hike in October. A Half-Point Hike Is on the Table.](https://247wallst.com/investing/2026/11/19/some-fed-officials-wanted-to-hike-in-october-a-half-point-hike-is-on-the-table/?.tsrc=rss) · macro
+- 19.11. 10:07 Uhr ET · **NET** · [Palo Alto Networks soars on Q1 earnings and Applied Compute deal](https://finance.yahoo.com/markets/stocks/article/palo-alto-networks-soars-on-q1-earnings-and-applied-compute-deal-150705343.html?.tsrc=rss) · earnings, deal
+- 19.11. 10:06 Uhr ET · **NVDA** · [Nvidia’s earnings beat fails to lift chip sector as macro and policy risks weigh](https://finance.yahoo.com/markets/stocks/articles/nvidia-earnings-beat-fails-lift-150623941.html?.tsrc=rss) · earnings
+- 19.11. 10:06 Uhr ET · **NVDA** · [AI giant Anthropic shares set to trade after record-breaking IPO](https://finance.yahoo.com/technology/ai/articles/anthropic-set-price-ipo-key-030309911.html?.tsrc=rss) · capital, people
+- 19.11. 10:06 Uhr ET · **NVDA** · [I’m Buying Anthropic Stock, Just Not on Day 1. Here’s My Plan.](https://www.fool.com/investing/2026/11/19/i-m-buying-anthropic-stock-just-not-on-day-1-here-s-my-plan/?.tsrc=rss)
+- 19.11. 10:05 Uhr ET · **NVDA** · [“Like Kicking Michael Jordan Off Your Team.” Elon Musk Blasts Nvidia Board’s Actions](https://247wallst.com/investing/2026/11/19/like-kicking-michael-jordan-off-your-team-elon-musk-blasts-nvidia-boards-actions/?.tsrc=rss)
+- 19.11. 10:01 Uhr ET · **INTC** · [Intel Soars 8% on First Outside 18A Customer as CEO Says “I Just Cannot Supply Enough”](https://www.tikr.com/blog/intel-soars-8-on-first-outside-18a-customer-as-ceo-says-i-just-cannot-supply-enough?ref=yahoofinance&tlnk=yf-261119-f6cmv7fm&.tsrc=rss) · people
+- 19.11. 10:01 Uhr ET · **INTC** · [Connected Logistics - Global Strategic Business Report 2026: Capitalize on a $100.8 Billion Market by 2032 with Cisco, IBM, SAP, Intel, and AT&T](https://finance.yahoo.com/technology/articles/connected-logistics-global-strategic-business-150100808.html?.tsrc=rss) · capital
+- 19.11. 09:56 Uhr ET · **AMD** · [Intel Climbs 7% on First 18A Customer, NVIDIA Gains 4% as Trump Floats Blackwell Sales to China and Dan Ives Hails Anthropic IPO; AMD Rises 3%](https://247wallst.com/investing/2026/11/19/intel-climbs-7-on-first-18a-customer-nvidia-gains-4-as-trump-floats-blackwell-sales-to-china-and-dan-ives-hails-anthropic-ipo-amd-rises-3/?.tsrc=rss) · deal
+- 19.11. 09:54 Uhr ET · **AMD** · [Anthropic’s IPO puts AI’s circular financing boom to the test](https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-puts-ai-circular-145439533.html?.tsrc=rss)
+- 19.11. 09:54 Uhr ET · **BABA** · [Anthropic IPO gives boost to AI trade: AlphaCheck](https://finance.yahoo.com/markets/article/ai-trade-soars-with-anthropic-ipo-in-spotlight-alphacheck-145421789.html?.tsrc=rss)
+- 19.11. 09:51 Uhr ET · **MSTR** · [Strategy Stock Lives and Dies by Bitcoin. The Crypto’s Slump Takes a Toll.](https://finance.yahoo.com/m/cd85da47-be7b-3609-83c8-4365ba2c6453/strategy-stock-lives-and-dies.html?.tsrc=rss) · analyst
 
 ## Pelosi-Tracker (pelosi)
 
@@ -148,9 +134,9 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 - 22.10. 16:11 Uhr ET · [Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView](https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss)
 - 22.10. 15:51 Uhr ET · [How much Apple stock does CEO John Ternus actually own?](https://www.thestreet.com/personalities/how-much-apple-stock-does-john-ternus-own?.tsrc=rss)
 
-## Labor live – Do 19.11.2026, Stand 10:40 Uhr ET
+## Labor live – Do 19.11.2026, Stand 10:44 Uhr ET
 
-421 Aktien beobachtet · 1.420 Spielgeld-Trades aller Varianten · 854 offen
+224 Aktien beobachtet · 892 Spielgeld-Trades aller Varianten · 513 offen
 
 | Top-Variante | Trades | offen | € bei 100 €/Trade |
 |---|---|---|---|
@@ -158,7 +144,7 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 2 | 2 | -0,36 € |
 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R | 2 | 2 | -0,36 € |
 | Ausbruch 30 Min · nur Top 10 nach Volumen · Stopp Tief der Spanne · Ziel 1,5R | 1 | 1 | -3,26 € |
-| Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 8 | 1 | -6,81 € |
+| Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 8 | 1 | -7,10 € |
 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 4× normal | 0 | 0 | 0,00 € |
 | Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 1 | 1 | -3,26 € |
 | Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 0 | 0 | 0,00 € |
@@ -166,6 +152,7 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 | Aktie | Regel | Einstieg | Stopp | Ziel | Stand | Ergebnis |
 |---|---|---|---|---|---|---|
 | CRWD | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 254,13 $ | 252,62 $ | – | Stopp 9:40 Uhr | -1,22 € |
+| NET | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 320,07 $ | 317,73 $ | – | Stopp 9:40 Uhr | -0,89 € |
 | OKTA | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 211,99 $ | 210,51 $ | – | Stopp 9:40 Uhr | -1,28 € |
 | PDD | News-Sprung: Lücke ≥ 4 % | 9:40 85,49 $ | 82,02 $ | 90,69 $ | offen, Kurs 85,72 $ | 0,23 € |
 | PDD | News-Sprung: Lücke ≥ 4 % | 9:40 85,49 $ | 82,02 $ | 92,42 $ | offen, Kurs 85,72 $ | 0,23 € |
@@ -178,7 +165,6 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 | NTSK | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:45 25,49 $ | 25,30 $ | – | offen, Kurs 25,45 $ | -0,24 € |
 | SAIL | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:45 23,03 $ | 22,90 $ | – | Stopp 9:55 Uhr | -0,64 € |
 | USAR | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:45 7,12 $ | 7,03 $ | – | Stopp 10:10 Uhr | -1,37 € |
-| NTRA | Stocks in Play (Studie): Top 20 nach Startvolumen | 10:00 300,62 $ | 298,95 $ | – | Stopp 10:40 Uhr | -0,60 € |
 | NTSK | Opening-Range-Ausbruch 30 Min | 10:05 26,29 $ | 24,25 $ | 30,36 $ | offen, Kurs 25,45 $ | -3,26 € |
 | NTSK | Ausbruch 30 Min | 10:05 26,29 $ | 24,25 $ | 29,35 $ | offen, Kurs 25,45 $ | -3,26 € |
 

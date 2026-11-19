@@ -1,0 +1,816 @@
+{
+ "date": "2026-11-19",
+ "charts": {
+  "CRWD": [
+   [
+    0,
+    253.67
+   ],
+   [
+    1,
+    251.15
+   ]
+  ],
+  "OKTA": [
+   [
+    0,
+    210.9752
+   ],
+   [
+    1,
+    209.37
+   ]
+  ],
+  "PDD": [
+   [
+    0,
+    84.615
+   ],
+   [
+    1,
+    85.445
+   ]
+  ],
+  "SNOW": [
+   [
+    0,
+    295.275
+   ],
+   [
+    1,
+    293.37
+   ]
+  ],
+  "ZS": [
+   [
+    0,
+    213.515
+   ],
+   [
+    1,
+    213.46
+   ]
+  ]
+ },
+ "as_of": "09:40 Uhr ET",
+ "symbols": 421,
+ "failed": 0,
+ "focus": [
+  "gap-4-v3-3R",
+  "gap-4-v3-2R",
+  "gap-4-v3-1.5R",
+  "orbrank-top10-1.5R",
+  "sip-top20-atr0.1-eod-ffrueh",
+  "bounce-gapdown3-daylow-2R-fv4",
+  "orb-30-low-2R-v0-fv4",
+  "orbmkt-30-low-2R-v1.5"
+ ],
+ "labels": {
+  "gap-4-v3-3R": "News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R",
+  "gap-4-v3-2R": "News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R",
+  "gap-4-v3-1.5R": "News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R",
+  "orbrank-top10-1.5R": "Ausbruch 30 Min · nur Top 10 nach Volumen · Stopp Tief der Spanne · Ziel 1,5R",
+  "sip-top20-atr0.1-eod-ffrueh": "Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt",
+  "bounce-gapdown3-daylow-2R-fv4": "Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 4× normal",
+  "orb-30-low-2R-v0-fv4": "Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal",
+  "orbmkt-30-low-2R-v1.5": "Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R"
+ },
+ "per_variant": {
+  "sip-top20-atr0.1-eod": {
+   "n": 7,
+   "open": 3,
+   "eur": -3.23,
+   "wins": 2
+  },
+  "sip-top20-atr0.1-2R": {
+   "n": 7,
+   "open": 3,
+   "eur": -3.23,
+   "wins": 2
+  },
+  "sip-top20-atr0.2-eod": {
+   "n": 7,
+   "open": 6,
+   "eur": -3.23,
+   "wins": 2
+  },
+  "sip-top20-atr0.2-2R": {
+   "n": 7,
+   "open": 6,
+   "eur": -3.23,
+   "wins": 2
+  },
+  "sip-top20-atr0.1-eod-fv2": {
+   "n": 7,
+   "open": 3,
+   "eur": -3.23,
+   "wins": 2
+  },
+  "sip-top20-atr0.1-eod-ffrueh": {
+   "n": 4,
+   "open": 1,
+   "eur": -3.64,
+   "wins": 0
+  },
+  "sip-top20-atr0.1-eod-fv4": {
+   "n": 4,
+   "open": 3,
+   "eur": -0.38,
+   "wins": 2
+  },
+  "sip-top10-atr0.1-eod": {
+   "n": 4,
+   "open": 2,
+   "eur": -0.87,
+   "wins": 2
+  },
+  "sip-top10-atr0.1-2R": {
+   "n": 4,
+   "open": 2,
+   "eur": -0.87,
+   "wins": 2
+  },
+  "sip-top10-atr0.2-eod": {
+   "n": 4,
+   "open": 3,
+   "eur": -0.87,
+   "wins": 2
+  },
+  "sip-top10-atr0.2-2R": {
+   "n": 4,
+   "open": 3,
+   "eur": -0.87,
+   "wins": 2
+  },
+  "gap-2-v2-1.5R": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
+  },
+  "gap-2-v2-2R": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
+  },
+  "gap-2-v2-3R": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
+  },
+  "gap-2-v3-1.5R": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
+  },
+  "gap-2-v3-2R": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
+  },
+  "gap-2-v3-3R": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
+  },
+  "gap-4-v2-1.5R": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
+  },
+  "gap-4-v2-2R": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
+  },
+  "gap-4-v2-3R": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
+  },
+  "gap-4-v3-1.5R": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
+  },
+  "gap-4-v3-2R": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
+  },
+  "gap-4-v3-3R": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
+  },
+  "best-locker-2R": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
+  },
+  "best-locker-3R": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
+  },
+  "gap-2-v2-2R-fv4": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
+  },
+  "gap-2-v2-2R-fv2": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
+  },
+  "gap-2-v2-2R-ffrueh": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
+  }
+ },
+ "n_trades": 76,
+ "n_open": 52,
+ "lukas": [],
+ "lukas_n": 0,
+ "accounts": {
+  "sip-top20-atr0.1-eod": [
+   99.77,
+   91.69
+  ],
+  "sip-top20-atr0.1-2R": [
+   99.77,
+   91.69
+  ],
+  "sip-top20-atr0.2-eod": [
+   99.77,
+   91.69
+  ],
+  "sip-top20-atr0.2-2R": [
+   99.77,
+   91.69
+  ],
+  "sip-top20-atr0.1-eod-fv2": [
+   99.77,
+   91.69
+  ],
+  "sip-top20-atr0.1-eod-ffrueh": [
+   99.27,
+   91.27
+  ],
+  "sip-top20-atr0.1-eod-fv4": [
+   99.93,
+   91.93
+  ],
+  "sip-top10-atr0.1-eod": [
+   99.83,
+   91.83
+  ],
+  "sip-top10-atr0.1-2R": [
+   99.83,
+   91.83
+  ],
+  "sip-top10-atr0.2-eod": [
+   99.83,
+   91.83
+  ],
+  "sip-top10-atr0.2-2R": [
+   99.83,
+   91.83
+  ],
+  "gap-2-v2-1.5R": [
+   99.98,
+   97.98
+  ],
+  "gap-2-v2-2R": [
+   99.98,
+   97.98
+  ],
+  "gap-2-v2-3R": [
+   99.98,
+   97.98
+  ],
+  "gap-2-v3-1.5R": [
+   99.98,
+   97.98
+  ],
+  "gap-2-v3-2R": [
+   99.98,
+   97.98
+  ],
+  "gap-2-v3-3R": [
+   99.98,
+   97.98
+  ],
+  "gap-4-v2-1.5R": [
+   99.98,
+   97.98
+  ],
+  "gap-4-v2-2R": [
+   99.98,
+   97.98
+  ],
+  "gap-4-v2-3R": [
+   99.98,
+   97.98
+  ],
+  "gap-4-v3-1.5R": [
+   99.98,
+   97.98
+  ],
+  "gap-4-v3-2R": [
+   99.98,
+   97.98
+  ],
+  "gap-4-v3-3R": [
+   99.98,
+   97.98
+  ],
+  "best-locker-2R": [
+   99.98,
+   97.98
+  ],
+  "best-locker-3R": [
+   99.98,
+   97.98
+  ],
+  "gap-2-v2-2R-fv4": [
+   99.98,
+   97.98
+  ],
+  "gap-2-v2-2R-fv2": [
+   99.98,
+   97.98
+  ],
+  "gap-2-v2-2R-ffrueh": [
+   99.98,
+   97.98
+  ]
+ },
+ "trades": [
+  {
+   "entry": 254.127,
+   "stop": 252.6173,
+   "target": null,
+   "exit": 251.0244,
+   "why": "Stopp",
+   "r": -2.055,
+   "pct": -1.221,
+   "in_k": 1,
+   "out_k": 1,
+   "open": false,
+   "variant": "sip-top20-atr0.1-eod-ffrueh",
+   "strategy": "sip",
+   "symbol": "CRWD",
+   "in_at": "9:40",
+   "out_at": "9:40",
+   "last": 251.15,
+   "eur": -1.22,
+   "key": "sip-top20-atr0.1-eod-ffrueh|CRWD",
+   "f": {
+    "k": 1,
+    "gap": 4.15,
+    "rv": 3.59,
+    "mkt": false,
+    "atrp": 5.94,
+    "risk": 0.59,
+    "price": 254.13,
+    "dow": 3
+   },
+   "told_in": true,
+   "told_out": true
+  },
+  {
+   "entry": 211.9859,
+   "stop": 210.5053,
+   "target": null,
+   "exit": 209.2653,
+   "why": "Stopp",
+   "r": -1.837,
+   "pct": -1.283,
+   "in_k": 1,
+   "out_k": 1,
+   "open": false,
+   "variant": "sip-top20-atr0.1-eod-ffrueh",
+   "strategy": "sip",
+   "symbol": "OKTA",
+   "in_at": "9:40",
+   "out_at": "9:40",
+   "last": 209.37,
+   "eur": -1.28,
+   "key": "sip-top20-atr0.1-eod-ffrueh|OKTA",
+   "f": {
+    "k": 1,
+    "gap": 3.88,
+    "rv": 5.49,
+    "mkt": false,
+    "atrp": 6.98,
+    "risk": 0.7,
+    "price": 211.99,
+    "dow": 3
+   },
+   "told_in": true,
+   "told_out": true
+  },
+  {
+   "entry": 85.4877,
+   "stop": 82.02,
+   "target": 92.4232,
+   "exit": 85.4023,
+   "why": "Schluss",
+   "r": -0.025,
+   "pct": -0.1,
+   "in_k": 1,
+   "out_k": 1,
+   "open": true,
+   "variant": "gap-2-v2-2R-fv2",
+   "strategy": "gap",
+   "symbol": "PDD",
+   "in_at": "9:40",
+   "out_at": null,
+   "last": 85.445,
+   "eur": -0.1,
+   "key": "gap-2-v2-2R-fv2|PDD",
+   "f": {
+    "k": 1,
+    "gap": 6.64,
+    "rv": 13.78,
+    "mkt": false,
+    "atrp": 2.98,
+    "risk": 4.06,
+    "price": 85.49,
+    "dow": 3
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 85.4877,
+   "stop": 82.02,
+   "target": 92.4232,
+   "exit": 85.4023,
+   "why": "Schluss",
+   "r": -0.025,
+   "pct": -0.1,
+   "in_k": 1,
+   "out_k": 1,
+   "open": true,
+   "variant": "gap-2-v2-2R-fv4",
+   "strategy": "gap",
+   "symbol": "PDD",
+   "in_at": "9:40",
+   "out_at": null,
+   "last": 85.445,
+   "eur": -0.1,
+   "key": "gap-2-v2-2R-fv4|PDD",
+   "f": {
+    "k": 1,
+    "gap": 6.64,
+    "rv": 13.78,
+    "mkt": false,
+    "atrp": 2.98,
+    "risk": 4.06,
+    "price": 85.49,
+    "dow": 3
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 85.4877,
+   "stop": 82.02,
+   "target": 95.8909,
+   "exit": 85.4023,
+   "why": "Schluss",
+   "r": -0.025,
+   "pct": -0.1,
+   "in_k": 1,
+   "out_k": 1,
+   "open": true,
+   "variant": "gap-2-v2-3R",
+   "strategy": "gap",
+   "symbol": "PDD",
+   "in_at": "9:40",
+   "out_at": null,
+   "last": 85.445,
+   "eur": -0.1,
+   "key": "gap-2-v2-3R|PDD",
+   "f": {
+    "k": 1,
+    "gap": 6.64,
+    "rv": 13.78,
+    "mkt": false,
+    "atrp": 2.98,
+    "risk": 4.06,
+    "price": 85.49,
+    "dow": 3
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 85.4877,
+   "stop": 82.02,
+   "target": 92.4232,
+   "exit": 85.4023,
+   "why": "Schluss",
+   "r": -0.025,
+   "pct": -0.1,
+   "in_k": 1,
+   "out_k": 1,
+   "open": true,
+   "variant": "gap-2-v3-2R",
+   "strategy": "gap",
+   "symbol": "PDD",
+   "in_at": "9:40",
+   "out_at": null,
+   "last": 85.445,
+   "eur": -0.1,
+   "key": "gap-2-v3-2R|PDD",
+   "f": {
+    "k": 1,
+    "gap": 6.64,
+    "rv": 13.78,
+    "mkt": false,
+    "atrp": 2.98,
+    "risk": 4.06,
+    "price": 85.49,
+    "dow": 3
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 85.4877,
+   "stop": 82.02,
+   "target": 95.8909,
+   "exit": 85.4023,
+   "why": "Schluss",
+   "r": -0.025,
+   "pct": -0.1,
+   "in_k": 1,
+   "out_k": 1,
+   "open": true,
+   "variant": "gap-2-v3-3R",
+   "strategy": "gap",
+   "symbol": "PDD",
+   "in_at": "9:40",
+   "out_at": null,
+   "last": 85.445,
+   "eur": -0.1,
+   "key": "gap-2-v3-3R|PDD",
+   "f": {
+    "k": 1,
+    "gap": 6.64,
+    "rv": 13.78,
+    "mkt": false,
+    "atrp": 2.98,
+    "risk": 4.06,
+    "price": 85.49,
+    "dow": 3
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 85.4877,
+   "stop": 82.02,
+   "target": 92.4232,
+   "exit": 85.4023,
+   "why": "Schluss",
+   "r": -0.025,
+   "pct": -0.1,
+   "in_k": 1,
+   "out_k": 1,
+   "open": true,
+   "variant": "gap-4-v2-2R",
+   "strategy": "gap",
+   "symbol": "PDD",
+   "in_at": "9:40",
+   "out_at": null,
+   "last": 85.445,
+   "eur": -0.1,
+   "key": "gap-4-v2-2R|PDD",
+   "f": {
+    "k": 1,
+    "gap": 6.64,
+    "rv": 13.78,
+    "mkt": false,
+    "atrp": 2.98,
+    "risk": 4.06,
+    "price": 85.49,
+    "dow": 3
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 85.4877,
+   "stop": 82.02,
+   "target": 95.8909,
+   "exit": 85.4023,
+   "why": "Schluss",
+   "r": -0.025,
+   "pct": -0.1,
+   "in_k": 1,
+   "out_k": 1,
+   "open": true,
+   "variant": "gap-4-v2-3R",
+   "strategy": "gap",
+   "symbol": "PDD",
+   "in_at": "9:40",
+   "out_at": null,
+   "last": 85.445,
+   "eur": -0.1,
+   "key": "gap-4-v2-3R|PDD",
+   "f": {
+    "k": 1,
+    "gap": 6.64,
+    "rv": 13.78,
+    "mkt": false,
+    "atrp": 2.98,
+    "risk": 4.06,
+    "price": 85.49,
+    "dow": 3
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 85.4877,
+   "stop": 82.02,
+   "target": 90.6893,
+   "exit": 85.4023,
+   "why": "Schluss",
+   "r": -0.025,
+   "pct": -0.1,
+   "in_k": 1,
+   "out_k": 1,
+   "open": true,
+   "variant": "gap-4-v3-1.5R",
+   "strategy": "gap",
+   "symbol": "PDD",
+   "in_at": "9:40",
+   "out_at": null,
+   "last": 85.445,
+   "eur": -0.1,
+   "key": "gap-4-v3-1.5R|PDD",
+   "f": {
+    "k": 1,
+    "gap": 6.64,
+    "rv": 13.78,
+    "mkt": false,
+    "atrp": 2.98,
+    "risk": 4.06,
+    "price": 85.49,
+    "dow": 3
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 85.4877,
+   "stop": 82.02,
+   "target": 92.4232,
+   "exit": 85.4023,
+   "why": "Schluss",
+   "r": -0.025,
+   "pct": -0.1,
+   "in_k": 1,
+   "out_k": 1,
+   "open": true,
+   "variant": "gap-4-v3-2R",
+   "strategy": "gap",
+   "symbol": "PDD",
+   "in_at": "9:40",
+   "out_at": null,
+   "last": 85.445,
+   "eur": -0.1,
+   "key": "gap-4-v3-2R|PDD",
+   "f": {
+    "k": 1,
+    "gap": 6.64,
+    "rv": 13.78,
+    "mkt": false,
+    "atrp": 2.98,
+    "risk": 4.06,
+    "price": 85.49,
+    "dow": 3
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 85.4877,
+   "stop": 82.02,
+   "target": 95.8909,
+   "exit": 85.4023,
+   "why": "Schluss",
+   "r": -0.025,
+   "pct": -0.1,
+   "in_k": 1,
+   "out_k": 1,
+   "open": true,
+   "variant": "gap-4-v3-3R",
+   "strategy": "gap",
+   "symbol": "PDD",
+   "in_at": "9:40",
+   "out_at": null,
+   "last": 85.445,
+   "eur": -0.1,
+   "key": "gap-4-v3-3R|PDD",
+   "f": {
+    "k": 1,
+    "gap": 6.64,
+    "rv": 13.78,
+    "mkt": false,
+    "atrp": 2.98,
+    "risk": 4.06,
+    "price": 85.49,
+    "dow": 3
+   },
+   "told_in": true,
+   "told_out": false
+  },
+  {
+   "entry": 295.6477,
+   "stop": 293.9811,
+   "target": null,
+   "exit": 293.2233,
+   "why": "Stopp",
+   "r": -1.455,
+   "pct": -0.82,
+   "in_k": 1,
+   "out_k": 1,
+   "open": false,
+   "variant": "sip-top20-atr0.1-eod-ffrueh",
+   "strategy": "sip",
+   "symbol": "SNOW",
+   "in_at": "9:40",
+   "out_at": "9:40",
+   "last": 293.37,
+   "eur": -0.82,
+   "key": "sip-top20-atr0.1-eod-ffrueh|SNOW",
+   "f": {
+    "k": 1,
+    "gap": 2.98,
+    "rv": 3.34,
+    "mkt": false,
+    "atrp": 5.64,
+    "risk": 0.56,
+    "price": 295.65,
+    "dow": 3
+   },
+   "told_in": true,
+   "told_out": true
+  },
+  {
+   "entry": 214.0361,
+   "stop": 212.8112,
+   "target": null,
+   "exit": 213.3533,
+   "why": "Schluss",
+   "r": -0.557,
+   "pct": -0.319,
+   "in_k": 1,
+   "out_k": 1,
+   "open": true,
+   "variant": "sip-top20-atr0.1-eod-ffrueh",
+   "strategy": "sip",
+   "symbol": "ZS",
+   "in_at": "9:40",
+   "out_at": null,
+   "last": 213.46,
+   "eur": -0.32,
+   "key": "sip-top20-atr0.1-eod-ffrueh|ZS",
+   "f": {
+    "k": 1,
+    "gap": 2.14,
+    "rv": 4.79,
+    "mkt": false,
+    "atrp": 5.72,
+    "risk": 0.57,
+    "price": 214.04,
+    "dow": 3
+   },
+   "told_in": true,
+   "told_out": false
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 # Trader-Übersicht
 
-Stand: Fr 20.11. 09:40 Uhr ET (15:40 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
+Stand: Fr 20.11. 10:01 Uhr ET (16:01 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
 
 NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
@@ -10,7 +10,7 @@ NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 |---|---|---|
 | Morgen-Scan | Fr 20.11. 07:30 Uhr ET (13:30 Uhr MEZ) | OK – 260 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/44689475493)) |
 | ORB-Scan | Do 19.11. 10:41 Uhr ET (16:41 Uhr MEZ) | OK – 18 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/44507873118)) |
-| Labor live | Fr 20.11. 09:40 Uhr ET (15:40 Uhr MEZ) | OK – Börsenstart gemeldet ([Lauf](https://github.com/neidelbert/claude/actions/runs/44689475493)) |
+| Labor live | Fr 20.11. 10:00 Uhr ET (16:00 Uhr MEZ) | OK – 1.495 Trades, 1.373 offen ([Lauf](https://github.com/neidelbert/claude/actions/runs/44689475493)) |
 | Labor | Do 19.11. 16:20 Uhr ET (22:20 Uhr MEZ) | OK – 16 von 80 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/44604811557)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
@@ -134,27 +134,27 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 - 22.10. 16:11 Uhr ET · [Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView](https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss)
 - 22.10. 15:51 Uhr ET · [How much Apple stock does CEO John Ternus actually own?](https://www.thestreet.com/personalities/how-much-apple-stock-does-john-ternus-own?.tsrc=rss)
 
-## Labor live – Fr 20.11.2026, Stand 09:40 Uhr ET
+## Labor live – Fr 20.11.2026, Stand 10:00 Uhr ET
 
-397 Aktien beobachtet · 104 Spielgeld-Trades aller Varianten · 92 offen
+397 Aktien beobachtet · 1.495 Spielgeld-Trades aller Varianten · 1.373 offen
 
 | Top-Variante | Trades | offen | € bei 100 €/Trade |
 |---|---|---|---|
 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R | 0 | 0 | 0,00 € |
 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 0 | 0 | 0,00 € |
 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R | 0 | 0 | 0,00 € |
-| Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 2 | 2 | 2,42 € |
+| Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 2 | 2 | 3,84 € |
 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 4× normal | 0 | 0 | 0,00 € |
 | Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 0 | 0 | 0,00 € |
 | Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 0 | 0 | 0,00 € |
 | Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 0 | 0 | 0,00 € |
-| Beste Signale (locker): News-Sprung ≥ 2 %, Volumen ≥ 2×, Schwankung ≥ 2 %, Einstieg bis 10:30 Uhr ET · nur der erste Kandidat des Tages · Ziel 3R | 1 | 1 | -0,10 € |
+| Beste Signale (locker): News-Sprung ≥ 2 %, Volumen ≥ 2×, Schwankung ≥ 2 %, Einstieg bis 10:30 Uhr ET · nur der erste Kandidat des Tages · Ziel 3R | 1 | 1 | -0,69 € |
 
 | Aktie | Regel | Einstieg | Stopp | Ziel | Stand | Ergebnis |
 |---|---|---|---|---|---|---|
-| AXON | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 315,15 $ | 313,36 $ | – | offen, Kurs 321,20 $ | 1,87 € |
-| HBM | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 16,81 $ | 16,70 $ | – | offen, Kurs 16,91 $ | 0,55 € |
-| HDB | Beste Signale (locker): News-Sprung ≥ 2 %, Volumen ≥ 2×, Schwankung ≥ 2 %, Einstieg bis 10:30 Uhr ET | 9:40 27,73 $ | 27,20 $ | 29,30 $ | offen, Kurs 27,71 $ | -0,10 € |
+| AXON | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 315,15 $ | 313,36 $ | – | offen, Kurs 322,70 $ | 2,35 € |
+| HDB | Beste Signale (locker): News-Sprung ≥ 2 %, Volumen ≥ 2×, Schwankung ≥ 2 %, Einstieg bis 10:30 Uhr ET | 9:40 27,73 $ | 27,18 $ | 29,39 $ | offen, Kurs 27,55 $ | -0,69 € |
+| UUUU | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:55 5,33 $ | 5,28 $ | – | offen, Kurs 5,42 $ | 1,49 € |
 
 ## Labor (Testphase, Spielgeld ohne Limit)
 

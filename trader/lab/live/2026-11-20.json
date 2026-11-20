@@ -9,16 +9,22 @@
    [
     1,
     321.205
-   ]
-  ],
-  "HBM": [
-   [
-    0,
-    16.73
    ],
    [
-    1,
-    16.91
+    2,
+    317.105
+   ],
+   [
+    3,
+    322.92
+   ],
+   [
+    4,
+    322.18
+   ],
+   [
+    5,
+    322.7
    ]
   ],
   "HDB": [
@@ -29,10 +35,52 @@
    [
     1,
     27.715
+   ],
+   [
+    2,
+    27.635
+   ],
+   [
+    3,
+    27.49
+   ],
+   [
+    4,
+    27.555
+   ],
+   [
+    5,
+    27.5519
+   ]
+  ],
+  "UUUU": [
+   [
+    0,
+    5.27
+   ],
+   [
+    1,
+    5.325
+   ],
+   [
+    2,
+    5.215
+   ],
+   [
+    3,
+    5.305
+   ],
+   [
+    4,
+    5.33
+   ],
+   [
+    5,
+    5.415
    ]
   ]
  },
- "as_of": "09:40 Uhr ET",
+ "as_of": "10:00 Uhr ET",
  "symbols": 397,
  "failed": 0,
  "focus": [
@@ -58,231 +106,381 @@
   "best-locker-3R": "Beste Signale (locker): News-Sprung ≥ 2 %, Volumen ≥ 2×, Schwankung ≥ 2 %, Einstieg bis 10:30 Uhr ET · nur der erste Kandidat des Tages · Ziel 3R"
  },
  "per_variant": {
+  "orb-15-mid-1R-v0": {
+   "n": 158,
+   "open": 145,
+   "eur": 26.44,
+   "wins": 70
+  },
+  "orb-15-mid-1R-v1.5": {
+   "n": 37,
+   "open": 36,
+   "eur": 2.31,
+   "wins": 18
+  },
+  "orb-15-mid-1.5R-v0": {
+   "n": 158,
+   "open": 153,
+   "eur": 30.55,
+   "wins": 70
+  },
+  "orb-15-mid-1.5R-v1.5": {
+   "n": 37,
+   "open": 37,
+   "eur": 2.36,
+   "wins": 18
+  },
+  "orb-15-mid-2R-v0": {
+   "n": 158,
+   "open": 157,
+   "eur": 30.97,
+   "wins": 70
+  },
+  "orb-15-mid-2R-v1.5": {
+   "n": 37,
+   "open": 37,
+   "eur": 2.36,
+   "wins": 18
+  },
+  "orb-15-low-1R-v0": {
+   "n": 158,
+   "open": 156,
+   "eur": 31.44,
+   "wins": 70
+  },
+  "orb-15-low-1R-v1.5": {
+   "n": 37,
+   "open": 37,
+   "eur": 2.36,
+   "wins": 18
+  },
+  "orb-15-low-1.5R-v0": {
+   "n": 158,
+   "open": 158,
+   "eur": 31.11,
+   "wins": 70
+  },
+  "orb-15-low-1.5R-v1.5": {
+   "n": 37,
+   "open": 37,
+   "eur": 2.36,
+   "wins": 18
+  },
+  "orb-15-low-2R-v0": {
+   "n": 158,
+   "open": 158,
+   "eur": 31.11,
+   "wins": 70
+  },
+  "orb-15-low-2R-v1.5": {
+   "n": 37,
+   "open": 37,
+   "eur": 2.36,
+   "wins": 18
+  },
+  "orb-15-low-2R-v0-fv2": {
+   "n": 20,
+   "open": 20,
+   "eur": 1.78,
+   "wins": 12
+  },
+  "orb-15-low-2R-v0-ffrueh": {
+   "n": 157,
+   "open": 157,
+   "eur": 31.22,
+   "wins": 70
+  },
   "sip-top20-atr0.1-eod": {
-   "n": 12,
-   "open": 10,
-   "eur": 2.4,
-   "wins": 7
+   "n": 18,
+   "open": 3,
+   "eur": -2.23,
+   "wins": 3
   },
   "sip-top20-atr0.1-2R": {
-   "n": 12,
-   "open": 10,
-   "eur": 2.4,
-   "wins": 7
+   "n": 18,
+   "open": 2,
+   "eur": -1.05,
+   "wins": 5
   },
   "sip-top20-atr0.2-eod": {
-   "n": 12,
-   "open": 11,
-   "eur": 2.4,
-   "wins": 7
+   "n": 18,
+   "open": 6,
+   "eur": -4.02,
+   "wins": 4
   },
   "sip-top20-atr0.2-2R": {
-   "n": 12,
-   "open": 11,
-   "eur": 2.4,
-   "wins": 7
+   "n": 18,
+   "open": 5,
+   "eur": -4.15,
+   "wins": 4
   },
   "sip-top10-atr0.1-eod": {
-   "n": 6,
-   "open": 5,
-   "eur": 2.24,
-   "wins": 4
+   "n": 8,
+   "open": 2,
+   "eur": 0.01,
+   "wins": 2
   },
   "sip-top10-atr0.1-2R": {
-   "n": 6,
-   "open": 5,
-   "eur": 2.24,
-   "wins": 4
+   "n": 8,
+   "open": 1,
+   "eur": -0.99,
+   "wins": 2
   },
   "sip-top10-atr0.2-eod": {
-   "n": 6,
-   "open": 6,
-   "eur": 2.24,
-   "wins": 4
+   "n": 8,
+   "open": 5,
+   "eur": 0.47,
+   "wins": 3
   },
   "sip-top10-atr0.2-2R": {
-   "n": 6,
-   "open": 6,
-   "eur": 2.24,
-   "wins": 4
+   "n": 8,
+   "open": 4,
+   "eur": 0.34,
+   "wins": 3
+  },
+  "orb-15-low-2R-v0-fv4": {
+   "n": 2,
+   "open": 2,
+   "eur": -0.4,
+   "wins": 1
   },
   "sip-top20-atr0.1-eod-fv4": {
-   "n": 7,
-   "open": 5,
-   "eur": 1.06,
-   "wins": 4
+   "n": 11,
+   "open": 2,
+   "eur": -1.57,
+   "wins": 2
   },
   "sip-top20-atr0.1-eod-fv2": {
-   "n": 12,
-   "open": 10,
-   "eur": 2.4,
-   "wins": 7
+   "n": 18,
+   "open": 3,
+   "eur": -2.23,
+   "wins": 3
   },
   "sip-top20-atr0.1-eod-ffrueh": {
    "n": 2,
    "open": 2,
-   "eur": 2.42,
+   "eur": 3.84,
    "wins": 2
   },
   "gap-2-v2-1.5R": {
    "n": 1,
    "open": 1,
-   "eur": -0.1,
+   "eur": -0.69,
    "wins": 0
   },
   "gap-2-v2-2R": {
    "n": 1,
    "open": 1,
-   "eur": -0.1,
+   "eur": -0.69,
    "wins": 0
   },
   "gap-2-v2-3R": {
    "n": 1,
    "open": 1,
-   "eur": -0.1,
+   "eur": -0.69,
    "wins": 0
   },
   "gap-2-v3-1.5R": {
    "n": 1,
    "open": 1,
-   "eur": -0.1,
+   "eur": -0.69,
    "wins": 0
   },
   "gap-2-v3-2R": {
    "n": 1,
    "open": 1,
-   "eur": -0.1,
+   "eur": -0.69,
    "wins": 0
   },
   "gap-2-v3-3R": {
    "n": 1,
    "open": 1,
-   "eur": -0.1,
+   "eur": -0.69,
    "wins": 0
   },
   "best-locker-2R": {
    "n": 1,
    "open": 1,
-   "eur": -0.1,
+   "eur": -0.69,
    "wins": 0
   },
   "best-locker-3R": {
    "n": 1,
    "open": 1,
-   "eur": -0.1,
+   "eur": -0.69,
    "wins": 0
   },
   "gap-2-v2-2R-fv4": {
    "n": 1,
    "open": 1,
-   "eur": -0.1,
+   "eur": -0.69,
    "wins": 0
   },
   "gap-2-v2-2R-fv2": {
    "n": 1,
    "open": 1,
-   "eur": -0.1,
+   "eur": -0.69,
    "wins": 0
   },
   "gap-2-v2-2R-ffrueh": {
    "n": 1,
    "open": 1,
-   "eur": -0.1,
+   "eur": -0.69,
    "wins": 0
   }
  },
- "n_trades": 104,
- "n_open": 92,
+ "n_trades": 1495,
+ "n_open": 1373,
  "lukas": [],
  "lukas_n": 0,
  "accounts": {
+  "orb-15-mid-1R-v0": [
+   100.8,
+   90.82
+  ],
+  "orb-15-mid-1R-v1.5": [
+   100.49,
+   92.39
+  ],
+  "orb-15-mid-1.5R-v0": [
+   100.97,
+   92.99
+  ],
+  "orb-15-mid-1.5R-v1.5": [
+   100.5,
+   92.4
+  ],
+  "orb-15-mid-2R-v0": [
+   101.0,
+   93.01
+  ],
+  "orb-15-mid-2R-v1.5": [
+   100.5,
+   92.4
+  ],
+  "orb-15-low-1R-v0": [
+   101.0,
+   93.02
+  ],
+  "orb-15-low-1R-v1.5": [
+   100.5,
+   92.4
+  ],
+  "orb-15-low-1.5R-v0": [
+   101.0,
+   93.01
+  ],
+  "orb-15-low-1.5R-v1.5": [
+   100.5,
+   92.4
+  ],
+  "orb-15-low-2R-v0": [
+   101.0,
+   93.01
+  ],
+  "orb-15-low-2R-v1.5": [
+   100.5,
+   92.4
+  ],
+  "orb-15-low-2R-v0-fv2": [
+   100.5,
+   92.4
+  ],
+  "orb-15-low-2R-v0-ffrueh": [
+   101.0,
+   93.01
+  ],
   "sip-top20-atr0.1-eod": [
-   99.68,
-   91.89
+   99.95,
+   85.93
   ],
   "sip-top20-atr0.1-2R": [
-   99.68,
-   91.89
+   99.95,
+   85.93
   ],
   "sip-top20-atr0.2-eod": [
-   99.68,
-   91.89
+   99.82,
+   87.88
   ],
   "sip-top20-atr0.2-2R": [
-   99.68,
-   91.89
+   99.82,
+   87.88
   ],
   "sip-top10-atr0.1-eod": [
-   100.34,
-   91.96
+   100.15,
+   87.61
   ],
   "sip-top10-atr0.1-2R": [
-   100.34,
-   91.96
+   99.8,
+   87.61
   ],
   "sip-top10-atr0.2-eod": [
-   100.34,
-   91.96
+   100.28,
+   89.76
   ],
   "sip-top10-atr0.2-2R": [
-   100.34,
-   91.96
+   100.17,
+   89.76
+  ],
+  "orb-15-low-2R-v0-fv4": [
+   99.92,
+   95.92
   ],
   "sip-top20-atr0.1-eod-fv4": [
-   99.85,
-   91.76
+   99.7,
+   91.77
   ],
   "sip-top20-atr0.1-eod-fv2": [
-   99.68,
-   91.89
+   99.95,
+   85.93
   ],
   "sip-top20-atr0.1-eod-ffrueh": [
-   100.48,
-   96.48
+   100.77,
+   96.77
   ],
   "gap-2-v2-1.5R": [
-   99.98,
-   97.98
+   99.86,
+   97.86
   ],
   "gap-2-v2-2R": [
-   99.98,
-   97.98
+   99.86,
+   97.86
   ],
   "gap-2-v2-3R": [
-   99.98,
-   97.98
+   99.86,
+   97.86
   ],
   "gap-2-v3-1.5R": [
-   99.98,
-   97.98
+   99.86,
+   97.86
   ],
   "gap-2-v3-2R": [
-   99.98,
-   97.98
+   99.86,
+   97.86
   ],
   "gap-2-v3-3R": [
-   99.98,
-   97.98
+   99.86,
+   97.86
   ],
   "best-locker-2R": [
-   99.98,
-   97.98
+   99.86,
+   97.86
   ],
   "best-locker-3R": [
-   99.98,
-   97.98
+   99.86,
+   97.86
   ],
   "gap-2-v2-2R-fv4": [
-   99.98,
-   97.98
+   99.86,
+   97.86
   ],
   "gap-2-v2-2R-fv2": [
-   99.98,
-   97.98
+   99.86,
+   97.86
   ],
   "gap-2-v2-2R-ffrueh": [
-   99.98,
-   97.98
+   99.86,
+   97.86
   ]
  },
  "trades": [
@@ -290,20 +488,20 @@
    "entry": 315.1475,
    "stop": 313.355,
    "target": null,
-   "exit": 321.0444,
+   "exit": 322.5387,
    "why": "Schluss",
-   "r": 3.29,
-   "pct": 1.871,
+   "r": 4.123,
+   "pct": 2.345,
    "in_k": 1,
-   "out_k": 1,
+   "out_k": 5,
    "open": true,
    "variant": "sip-top20-atr0.1-eod-ffrueh",
    "strategy": "sip",
    "symbol": "AXON",
    "in_at": "9:40",
    "out_at": null,
-   "last": 321.205,
-   "eur": 1.87,
+   "last": 322.7,
+   "eur": 2.35,
    "key": "sip-top20-atr0.1-eod-ffrueh|AXON",
    "f": {
     "k": 1,
@@ -319,63 +517,31 @@
    "told_out": false
   },
   {
-   "entry": 16.8084,
-   "stop": 16.6977,
-   "target": null,
-   "exit": 16.9015,
-   "why": "Schluss",
-   "r": 0.841,
-   "pct": 0.554,
-   "in_k": 1,
-   "out_k": 1,
-   "open": true,
-   "variant": "sip-top20-atr0.1-eod-ffrueh",
-   "strategy": "sip",
-   "symbol": "HBM",
-   "in_at": "9:40",
-   "out_at": null,
-   "last": 16.91,
-   "eur": 0.55,
-   "key": "sip-top20-atr0.1-eod-ffrueh|HBM",
-   "f": {
-    "k": 1,
-    "gap": -29.24,
-    "rv": 3.54,
-    "mkt": false,
-    "atrp": 6.59,
-    "risk": 0.66,
-    "price": 16.81,
-    "dow": 4
-   },
-   "told_in": true,
-   "told_out": false
-  },
-  {
    "entry": 27.7289,
-   "stop": 27.205,
-   "target": 29.3004,
-   "exit": 27.7011,
+   "stop": 27.175,
+   "target": 29.3904,
+   "exit": 27.5381,
    "why": "Schluss",
-   "r": -0.053,
-   "pct": -0.1,
+   "r": -0.344,
+   "pct": -0.688,
    "in_k": 1,
-   "out_k": 1,
+   "out_k": 5,
    "open": true,
    "variant": "best-locker-3R",
    "strategy": "best",
    "symbol": "HDB",
    "in_at": "9:40",
    "out_at": null,
-   "last": 27.715,
-   "eur": -0.1,
+   "last": 27.5519,
+   "eur": -0.69,
    "key": "best-locker-3R|HDB",
    "f": {
     "k": 1,
-    "gap": 3.79,
+    "gap": 3.64,
     "rv": 7.96,
     "mkt": false,
     "atrp": 2.36,
-    "risk": 1.89,
+    "risk": 2.0,
     "price": 27.73,
     "dow": 4
    },
@@ -384,30 +550,30 @@
   },
   {
    "entry": 27.7289,
-   "stop": 27.205,
-   "target": 28.7766,
-   "exit": 27.7011,
+   "stop": 27.175,
+   "target": 28.8366,
+   "exit": 27.5381,
    "why": "Schluss",
-   "r": -0.053,
-   "pct": -0.1,
+   "r": -0.344,
+   "pct": -0.688,
    "in_k": 1,
-   "out_k": 1,
+   "out_k": 5,
    "open": true,
    "variant": "gap-2-v2-2R-fv2",
    "strategy": "gap",
    "symbol": "HDB",
    "in_at": "9:40",
    "out_at": null,
-   "last": 27.715,
-   "eur": -0.1,
+   "last": 27.5519,
+   "eur": -0.69,
    "key": "gap-2-v2-2R-fv2|HDB",
    "f": {
     "k": 1,
-    "gap": 3.79,
+    "gap": 3.64,
     "rv": 7.96,
     "mkt": false,
     "atrp": 2.36,
-    "risk": 1.89,
+    "risk": 2.0,
     "price": 27.73,
     "dow": 4
    },
@@ -416,30 +582,30 @@
   },
   {
    "entry": 27.7289,
-   "stop": 27.205,
-   "target": 28.7766,
-   "exit": 27.7011,
+   "stop": 27.175,
+   "target": 28.8366,
+   "exit": 27.5381,
    "why": "Schluss",
-   "r": -0.053,
-   "pct": -0.1,
+   "r": -0.344,
+   "pct": -0.688,
    "in_k": 1,
-   "out_k": 1,
+   "out_k": 5,
    "open": true,
    "variant": "gap-2-v2-2R-fv4",
    "strategy": "gap",
    "symbol": "HDB",
    "in_at": "9:40",
    "out_at": null,
-   "last": 27.715,
-   "eur": -0.1,
+   "last": 27.5519,
+   "eur": -0.69,
    "key": "gap-2-v2-2R-fv4|HDB",
    "f": {
     "k": 1,
-    "gap": 3.79,
+    "gap": 3.64,
     "rv": 7.96,
     "mkt": false,
     "atrp": 2.36,
-    "risk": 1.89,
+    "risk": 2.0,
     "price": 27.73,
     "dow": 4
    },
@@ -448,30 +614,30 @@
   },
   {
    "entry": 27.7289,
-   "stop": 27.205,
-   "target": 29.3004,
-   "exit": 27.7011,
+   "stop": 27.175,
+   "target": 29.3904,
+   "exit": 27.5381,
    "why": "Schluss",
-   "r": -0.053,
-   "pct": -0.1,
+   "r": -0.344,
+   "pct": -0.688,
    "in_k": 1,
-   "out_k": 1,
+   "out_k": 5,
    "open": true,
    "variant": "gap-2-v2-3R",
    "strategy": "gap",
    "symbol": "HDB",
    "in_at": "9:40",
    "out_at": null,
-   "last": 27.715,
-   "eur": -0.1,
+   "last": 27.5519,
+   "eur": -0.69,
    "key": "gap-2-v2-3R|HDB",
    "f": {
     "k": 1,
-    "gap": 3.79,
+    "gap": 3.64,
     "rv": 7.96,
     "mkt": false,
     "atrp": 2.36,
-    "risk": 1.89,
+    "risk": 2.0,
     "price": 27.73,
     "dow": 4
    },
@@ -480,34 +646,66 @@
   },
   {
    "entry": 27.7289,
-   "stop": 27.205,
-   "target": 29.3004,
-   "exit": 27.7011,
+   "stop": 27.175,
+   "target": 29.3904,
+   "exit": 27.5381,
    "why": "Schluss",
-   "r": -0.053,
-   "pct": -0.1,
+   "r": -0.344,
+   "pct": -0.688,
    "in_k": 1,
-   "out_k": 1,
+   "out_k": 5,
    "open": true,
    "variant": "gap-2-v3-3R",
    "strategy": "gap",
    "symbol": "HDB",
    "in_at": "9:40",
    "out_at": null,
-   "last": 27.715,
-   "eur": -0.1,
+   "last": 27.5519,
+   "eur": -0.69,
    "key": "gap-2-v3-3R|HDB",
    "f": {
     "k": 1,
-    "gap": 3.79,
+    "gap": 3.64,
     "rv": 7.96,
     "mkt": false,
     "atrp": 2.36,
-    "risk": 1.89,
+    "risk": 2.0,
     "price": 27.73,
     "dow": 4
    },
    "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 5.3327,
+   "stop": 5.2771,
+   "target": null,
+   "exit": 5.4123,
+   "why": "Schluss",
+   "r": 1.432,
+   "pct": 1.493,
+   "in_k": 4,
+   "out_k": 5,
+   "open": true,
+   "variant": "sip-top20-atr0.1-eod-ffrueh",
+   "strategy": "sip",
+   "symbol": "UUUU",
+   "in_at": "9:55",
+   "out_at": null,
+   "last": 5.415,
+   "eur": 1.49,
+   "key": "sip-top20-atr0.1-eod-ffrueh|UUUU",
+   "f": {
+    "k": 4,
+    "gap": -4.28,
+    "rv": 2.85,
+    "mkt": true,
+    "atrp": 10.42,
+    "risk": 1.04,
+    "price": 5.33,
+    "dow": 4
+   },
+   "told_in": true,
    "told_out": false
   }
  ]

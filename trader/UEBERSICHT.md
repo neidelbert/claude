@@ -1,8 +1,8 @@
 # Trader-Übersicht
 
-Stand: Fr 20.11. 07:33 Uhr ET (13:33 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
+Stand: Fr 20.11. 09:40 Uhr ET (15:40 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
 
-NYSE heute: vor der Eröffnung (Handelszeit 09:30 bis 16:00 Uhr ET).
+NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
 ## Systemstatus
 
@@ -10,7 +10,7 @@ NYSE heute: vor der Eröffnung (Handelszeit 09:30 bis 16:00 Uhr ET).
 |---|---|---|
 | Morgen-Scan | Fr 20.11. 07:30 Uhr ET (13:30 Uhr MEZ) | OK – 260 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/44689475493)) |
 | ORB-Scan | Do 19.11. 10:41 Uhr ET (16:41 Uhr MEZ) | OK – 18 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/44507873118)) |
-| Labor live | Do 19.11. 16:00 Uhr ET (22:00 Uhr MEZ) | OK – Tagesbilanz: 968 Trades ([Lauf](https://github.com/neidelbert/claude/actions/runs/44604811557)) |
+| Labor live | Fr 20.11. 09:40 Uhr ET (15:40 Uhr MEZ) | OK – Börsenstart gemeldet ([Lauf](https://github.com/neidelbert/claude/actions/runs/44689475493)) |
 | Labor | Do 19.11. 16:20 Uhr ET (22:20 Uhr MEZ) | OK – 16 von 80 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/44604811557)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
@@ -134,39 +134,27 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 - 22.10. 16:11 Uhr ET · [Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView](https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss)
 - 22.10. 15:51 Uhr ET · [How much Apple stock does CEO John Ternus actually own?](https://www.thestreet.com/personalities/how-much-apple-stock-does-john-ternus-own?.tsrc=rss)
 
-## Labor live – Do 19.11.2026, Stand 16:00 Uhr ET
+## Labor live – Fr 20.11.2026, Stand 09:40 Uhr ET
 
-224 Aktien beobachtet · 968 Spielgeld-Trades aller Varianten · 0 offen
+397 Aktien beobachtet · 104 Spielgeld-Trades aller Varianten · 92 offen
 
 | Top-Variante | Trades | offen | € bei 100 €/Trade |
 |---|---|---|---|
-| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R | 2 | 0 | -2,21 € |
-| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 2 | 0 | -2,21 € |
-| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R | 2 | 0 | -2,21 € |
-| Ausbruch 30 Min · nur Top 10 nach Volumen · Stopp Tief der Spanne · Ziel 1,5R | 1 | 0 | -5,20 € |
-| Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 8 | 0 | -7,65 € |
+| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R | 0 | 0 | 0,00 € |
+| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 0 | 0 | 0,00 € |
+| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R | 0 | 0 | 0,00 € |
+| Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 2 | 2 | 2,42 € |
 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 4× normal | 0 | 0 | 0,00 € |
-| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 1 | 0 | -5,20 € |
 | Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 0 | 0 | 0,00 € |
+| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 0 | 0 | 0,00 € |
+| Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 0 | 0 | 0,00 € |
+| Beste Signale (locker): News-Sprung ≥ 2 %, Volumen ≥ 2×, Schwankung ≥ 2 %, Einstieg bis 10:30 Uhr ET · nur der erste Kandidat des Tages · Ziel 3R | 1 | 1 | -0,10 € |
 
 | Aktie | Regel | Einstieg | Stopp | Ziel | Stand | Ergebnis |
 |---|---|---|---|---|---|---|
-| CRWD | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 254,13 $ | 252,62 $ | – | Stopp 9:40 Uhr | -1,22 € |
-| NET | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 320,07 $ | 317,73 $ | – | Stopp 9:40 Uhr | -0,89 € |
-| OKTA | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 211,99 $ | 210,51 $ | – | Stopp 9:40 Uhr | -1,28 € |
-| PDD | News-Sprung: Lücke ≥ 4 % | 9:40 85,49 $ | 82,02 $ | 90,69 $ | Schluss 15:55 Uhr | 0,37 € |
-| PDD | News-Sprung: Lücke ≥ 4 % | 9:40 85,49 $ | 82,02 $ | 92,42 $ | Schluss 15:55 Uhr | 0,37 € |
-| PDD | News-Sprung: Lücke ≥ 4 % | 9:40 85,49 $ | 82,02 $ | 95,89 $ | Schluss 15:55 Uhr | 0,37 € |
-| SNOW | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 295,72 $ | 294,05 $ | – | Stopp 9:40 Uhr | -0,84 € |
-| ZS | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 214,04 $ | 212,81 $ | – | Stopp 9:45 Uhr | -0,62 € |
-| NTSK | News-Sprung: Lücke ≥ 4 % | 9:45 25,58 $ | 24,25 $ | 27,58 $ | Schluss 15:55 Uhr | -2,58 € |
-| NTSK | News-Sprung: Lücke ≥ 4 % | 9:45 25,58 $ | 24,25 $ | 28,25 $ | Schluss 15:55 Uhr | -2,58 € |
-| NTSK | News-Sprung: Lücke ≥ 4 % | 9:45 25,58 $ | 24,25 $ | 29,58 $ | Schluss 15:55 Uhr | -2,58 € |
-| NTSK | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:45 25,49 $ | 25,30 $ | – | Stopp 11:55 Uhr | -0,79 € |
-| SAIL | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:45 23,03 $ | 22,90 $ | – | Stopp 9:55 Uhr | -0,64 € |
-| USAR | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:45 7,12 $ | 7,03 $ | – | Stopp 10:10 Uhr | -1,37 € |
-| NTSK | Opening-Range-Ausbruch 30 Min | 10:05 26,29 $ | 24,25 $ | 30,36 $ | Schluss 15:55 Uhr | -5,20 € |
-| NTSK | Ausbruch 30 Min | 10:05 26,29 $ | 24,25 $ | 29,35 $ | Schluss 15:55 Uhr | -5,20 € |
+| AXON | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 315,15 $ | 313,36 $ | – | offen, Kurs 321,20 $ | 1,87 € |
+| HBM | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 16,81 $ | 16,70 $ | – | offen, Kurs 16,91 $ | 0,55 € |
+| HDB | Beste Signale (locker): News-Sprung ≥ 2 %, Volumen ≥ 2×, Schwankung ≥ 2 %, Einstieg bis 10:30 Uhr ET | 9:40 27,73 $ | 27,20 $ | 29,30 $ | offen, Kurs 27,71 $ | -0,10 € |
 
 ## Labor (Testphase, Spielgeld ohne Limit)
 

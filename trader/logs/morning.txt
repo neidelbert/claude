@@ -1,13 +1,13 @@
-Morgen-Scan – Fr 20.11. 07:30 Uhr ET (13:30 Uhr MEZ)
+Morgen-Scan – Fr 20.11. 11:41 Uhr ET (17:41 Uhr MEZ)
 
-$ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 158 s)
+$ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 117 s)
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-20T12:30:20Z",
+  "created_at": "2026-11-20T16:41:28Z",
   "mode": "daily",
   "as_of": "2026-11-19 close",
   "universe": 5927,
-  "scanned": 1502,
+  "scanned": 604,
   "failed": 0,
   "source": "yahoo",
   "filters": {
@@ -24,17 +24,17 @@ $ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 158 s)
       "price": 145.98,
       "close_date": "2026-11-19",
       "rsi": 19.8,
-      "volume": 315864587
+      "volume": 207277547
     },
     {
-      "symbol": "GOOG",
+      "symbol": "SNDK",
       "setups": [
         "oversold"
       ],
-      "price": 271.02,
+      "price": 94.39,
       "close_date": "2026-11-19",
-      "rsi": 29.6,
-      "volume": 28309231
+      "rsi": 29.1,
+      "volume": 59626858
     },
     {
       "symbol": "INTC",
@@ -44,17 +44,17 @@ $ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 158 s)
       "price": 55.72,
       "close_date": "2026-11-19",
       "rsi": 31.1,
-      "volume": 132524988
+      "volume": 66674928
     },
     {
-      "symbol": "PANW",
+      "symbol": "GOOG",
       "setups": [
-        "reclaim_ma20"
+        "oversold"
       ],
-      "price": 361.73,
+      "price": 271.02,
       "close_date": "2026-11-19",
-      "rsi": 54.5,
-      "volume": 19109488
+      "rsi": 29.6,
+      "volume": 13602016
     },
     {
       "symbol": "UNH",
@@ -64,17 +64,17 @@ $ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 158 s)
       "price": 330.48,
       "close_date": "2026-11-19",
       "rsi": 24.3,
-      "volume": 19810978
+      "volume": 5056039
     },
     {
-      "symbol": "CRWD",
+      "symbol": "PANW",
       "setups": [
         "reclaim_ma20"
       ],
-      "price": 243.46,
+      "price": 361.73,
       "close_date": "2026-11-19",
-      "rsi": 53.6,
-      "volume": 11554903
+      "rsi": 54.5,
+      "volume": 3781335
     },
     {
       "symbol": "COHR",
@@ -84,27 +84,7 @@ $ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 158 s)
       "price": 214.94,
       "close_date": "2026-11-19",
       "rsi": 45.8,
-      "volume": 12116702
-    },
-    {
-      "symbol": "CAT",
-      "setups": [
-        "oversold"
-      ],
-      "price": 537.37,
-      "close_date": "2026-11-19",
-      "rsi": 27.0,
-      "volume": 4048722
-    },
-    {
-      "symbol": "INSM",
-      "setups": [
-        "breakout_20d"
-      ],
-      "price": 144.46,
-      "close_date": "2026-11-19",
-      "rsi": 77.4,
-      "volume": 14394641
+      "volume": 5781916
     },
     {
       "symbol": "MSTR",
@@ -114,7 +94,37 @@ $ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 158 s)
       "price": 86.13,
       "close_date": "2026-11-19",
       "rsi": 22.9,
-      "volume": 23625161
+      "volume": 13761699
+    },
+    {
+      "symbol": "CAT",
+      "setups": [
+        "oversold"
+      ],
+      "price": 537.37,
+      "close_date": "2026-11-19",
+      "rsi": 27.0,
+      "volume": 1565948
+    },
+    {
+      "symbol": "CRWD",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 243.46,
+      "close_date": "2026-11-19",
+      "rsi": 53.6,
+      "volume": 3359662
+    },
+    {
+      "symbol": "IREN",
+      "setups": [
+        "oversold"
+      ],
+      "price": 14.41,
+      "close_date": "2026-11-19",
+      "rsi": 27.6,
+      "volume": 54724687
     },
     {
       "symbol": "PDD",
@@ -125,27 +135,7 @@ $ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 158 s)
       "price": 86.0,
       "close_date": "2026-11-19",
       "rsi": 63.8,
-      "volume": 22768681
-    },
-    {
-      "symbol": "NOW",
-      "setups": [
-        "oversold"
-      ],
-      "price": 88.87,
-      "close_date": "2026-11-19",
-      "rsi": 24.8,
-      "volume": 20355504
-    },
-    {
-      "symbol": "BABA",
-      "setups": [
-        "oversold"
-      ],
-      "price": 83.31,
-      "close_date": "2026-11-19",
-      "rsi": 23.3,
-      "volume": 21703066
+      "volume": 8389876
     },
     {
       "symbol": "HOOD",
@@ -155,77 +145,17 @@ $ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 158 s)
       "price": 68.65,
       "close_date": "2026-11-19",
       "rsi": 27.3,
-      "volume": 25042821
+      "volume": 10210660
     },
     {
-      "symbol": "IREN",
+      "symbol": "NOW",
       "setups": [
         "oversold"
       ],
-      "price": 14.41,
+      "price": 88.87,
       "close_date": "2026-11-19",
-      "rsi": 27.6,
-      "volume": 119125954
-    },
-    {
-      "symbol": "CRM",
-      "setups": [
-        "oversold"
-      ],
-      "price": 183.31,
-      "close_date": "2026-11-19",
-      "rsi": 22.0,
-      "volume": 7962588
-    },
-    {
-      "symbol": "SNDK",
-      "setups": [
-        "oversold"
-      ],
-      "price": 94.39,
-      "close_date": "2026-11-19",
-      "rsi": 29.1,
-      "volume": 15100945
-    },
-    {
-      "symbol": "FCX",
-      "setups": [
-        "oversold"
-      ],
-      "price": 49.12,
-      "close_date": "2026-11-19",
-      "rsi": 23.8,
-      "volume": 26727170
-    },
-    {
-      "symbol": "COF",
-      "setups": [
-        "oversold"
-      ],
-      "price": 181.76,
-      "close_date": "2026-11-19",
-      "rsi": 28.1,
-      "volume": 6913701
-    },
-    {
-      "symbol": "BA",
-      "setups": [
-        "oversold"
-      ],
-      "price": 160.51,
-      "close_date": "2026-11-19",
-      "rsi": 27.9,
-      "volume": 7387021
-    },
-    {
-      "symbol": "TGT",
-      "setups": [
-        "breakout_20d"
-      ],
-      "price": 167.46,
-      "close_date": "2026-11-19",
-      "rsi": 61.7,
-      "volume": 5806590
+      "rsi": 24.8,
+      "volume": 7614904
     },
     {
       "symbol": "COIN",
@@ -235,249 +165,47 @@ $ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 158 s)
       "price": 108.87,
       "close_date": "2026-11-19",
       "rsi": 25.4,
-      "volume": 8043683
+      "volume": 5580415
     },
     {
-      "symbol": "DDOG",
+      "symbol": "FCX",
       "setups": [
         "oversold"
       ],
-      "price": 166.46,
+      "price": 49.12,
       "close_date": "2026-11-19",
-      "rsi": 27.7,
-      "volume": 4897126
+      "rsi": 23.8,
+      "volume": 11873866
     },
     {
-      "symbol": "CMI",
+      "symbol": "CRM",
       "setups": [
         "oversold"
       ],
-      "price": 421.19,
+      "price": 183.31,
       "close_date": "2026-11-19",
-      "rsi": 25.4,
-      "volume": 1927734
+      "rsi": 22.0,
+      "volume": 2970608
     },
     {
-      "symbol": "NTRA",
-      "setups": [
-        "oversold",
-        "oversold_bounce"
-      ],
-      "price": 289.92,
-      "close_date": "2026-11-19",
-      "rsi": 29.2,
-      "volume": 2734776
-    },
-    {
-      "symbol": "VEEV",
+      "symbol": "BABA",
       "setups": [
         "oversold"
       ],
-      "price": 262.92,
+      "price": 83.31,
       "close_date": "2026-11-19",
-      "rsi": 24.8,
-      "volume": 2951630
+      "rsi": 23.3,
+      "volume": 6474894
     },
     {
-      "symbol": "TMUS",
-      "setups": [
-        "bull_flag"
-      ],
-      "price": 162.53,
-      "close_date": "2026-11-19",
-      "rsi": 49.5,
-      "volume": 4408424
-    },
-    {
-      "symbol": "CMCSA",
-      "setups": [
-        "bull_flag"
-      ],
-      "price": 24.86,
-      "close_date": "2026-11-19",
-      "rsi": 59.4,
-      "volume": 27240361
-    },
-    {
-      "symbol": "SAP",
+      "symbol": "BA",
       "setups": [
         "oversold"
       ],
-      "price": 203.23,
+      "price": 160.51,
       "close_date": "2026-11-19",
-      "rsi": 28.3,
-      "volume": 3123342
-    },
-    {
-      "symbol": "TWLO",
-      "setups": [
-        "oversold"
-      ],
-      "price": 178.78,
-      "close_date": "2026-11-19",
-      "rsi": 28.7,
-      "volume": 3252876
-    },
-    {
-      "symbol": "CAH",
-      "setups": [
-        "bull_flag"
-      ],
-      "price": 272.34,
-      "close_date": "2026-11-19",
-      "rsi": 61.0,
-      "volume": 2065051
-    },
-    {
-      "symbol": "AXON",
-      "setups": [
-        "oversold_bounce"
-      ],
-      "price": 306.98,
-      "close_date": "2026-11-19",
-      "rsi": 30.5,
-      "volume": 1741169
-    },
-    {
-      "symbol": "TEAM",
-      "setups": [
-        "oversold"
-      ],
-      "price": 133.01,
-      "close_date": "2026-11-19",
-      "rsi": 22.1,
-      "volume": 4013079
-    },
-    {
-      "symbol": "FSLR",
-      "setups": [
-        "oversold_bounce"
-      ],
-      "price": 151.95,
-      "close_date": "2026-11-19",
-      "rsi": 30.7,
-      "volume": 3244741
-    },
-    {
-      "symbol": "GME",
-      "setups": [
-        "breakout_20d"
-      ],
-      "price": 26.93,
-      "close_date": "2026-11-19",
-      "rsi": 64.5,
-      "volume": 18127266
-    },
-    {
-      "symbol": "BMNR",
-      "setups": [
-        "oversold"
-      ],
-      "price": 15.07,
-      "close_date": "2026-11-19",
-      "rsi": 28.7,
-      "volume": 32183848
-    },
-    {
-      "symbol": "CRCL",
-      "setups": [
-        "oversold"
-      ],
-      "price": 51.88,
-      "close_date": "2026-11-19",
-      "rsi": 24.1,
-      "volume": 8839617
-    },
-    {
-      "symbol": "ASTS",
-      "setups": [
-        "oversold",
-        "oversold_bounce"
-      ],
-      "price": 25.55,
-      "close_date": "2026-11-19",
-      "rsi": 29.8,
-      "volume": 17369982
-    },
-    {
-      "symbol": "AAOI",
-      "setups": [
-        "oversold"
-      ],
-      "price": 39.46,
-      "close_date": "2026-11-19",
-      "rsi": 28.8,
-      "volume": 11082705
-    },
-    {
-      "symbol": "PCG",
-      "setups": [
-        "breakout_20d"
-      ],
-      "price": 13.94,
-      "close_date": "2026-11-19",
-      "rsi": 62.0,
-      "volume": 28898512
-    },
-    {
-      "symbol": "MDLN",
-      "setups": [
-        "bull_flag"
-      ],
-      "price": 37.84,
-      "close_date": "2026-11-19",
-      "rsi": 52.1,
-      "volume": 10342553
-    },
-    {
-      "symbol": "RKT",
-      "setups": [
-        "bull_flag"
-      ],
-      "price": 13.19,
-      "close_date": "2026-11-19",
-      "rsi": 49.8,
-      "volume": 29572639
-    },
-    {
-      "symbol": "SE",
-      "setups": [
-        "oversold"
-      ],
-      "price": 65.94,
-      "close_date": "2026-11-19",
-      "rsi": 25.4,
-      "volume": 5894949
-    },
-    {
-      "symbol": "CMG",
-      "setups": [
-        "bull_flag"
-      ],
-      "price": 36.3,
-      "close_date": "2026-11-19",
-      "rsi": 63.0,
-      "volume": 10691666
-    },
-    {
-      "symbol": "EW",
-      "setups": [
-        "bull_flag"
-      ],
-      "price": 103.88,
-      "close_date": "2026-11-19",
-      "rsi": 66.6,
-      "volume": 3661010
-    },
-    {
-      "symbol": "HALO",
-      "setups": [
-        "oversold"
-      ],
-      "price": 93.04,
-      "close_date": "2026-11-19",
-      "rsi": 20.9,
-      "volume": 3909484
+      "rsi": 27.9,
+      "volume": 3225152
     },
     {
       "symbol": "UTZ",
@@ -490,34 +218,105 @@ $ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 158 s)
       "volume": 25284975
     },
     {
-      "symbol": "HL",
+      "symbol": "TGT",
       "setups": [
-        "oversold"
+        "breakout_20d"
       ],
-      "price": 11.15,
+      "price": 167.46,
       "close_date": "2026-11-19",
-      "rsi": 29.2,
-      "volume": 31861117
+      "rsi": 61.7,
+      "volume": 2046722
     },
     {
-      "symbol": "CDE",
+      "symbol": "INSM",
       "setups": [
-        "oversold"
+        "breakout_20d"
       ],
-      "price": 11.54,
+      "price": 144.46,
       "close_date": "2026-11-19",
-      "rsi": 29.4,
-      "volume": 30780066
+      "rsi": 77.4,
+      "volume": 2211497
     },
     {
-      "symbol": "PBR",
+      "symbol": "SAP",
       "setups": [
         "oversold"
       ],
-      "price": 16.29,
+      "price": 203.23,
       "close_date": "2026-11-19",
-      "rsi": 21.9,
-      "volume": 21488786
+      "rsi": 28.3,
+      "volume": 1490469
+    },
+    {
+      "symbol": "SE",
+      "setups": [
+        "oversold"
+      ],
+      "price": 65.94,
+      "close_date": "2026-11-19",
+      "rsi": 25.4,
+      "volume": 4592170
+    },
+    {
+      "symbol": "BMNR",
+      "setups": [
+        "oversold"
+      ],
+      "price": 15.07,
+      "close_date": "2026-11-19",
+      "rsi": 28.7,
+      "volume": 19272537
+    },
+    {
+      "symbol": "CRCL",
+      "setups": [
+        "oversold"
+      ],
+      "price": 51.88,
+      "close_date": "2026-11-19",
+      "rsi": 24.1,
+      "volume": 5423615
+    },
+    {
+      "symbol": "AAOI",
+      "setups": [
+        "oversold"
+      ],
+      "price": 39.46,
+      "close_date": "2026-11-19",
+      "rsi": 28.8,
+      "volume": 6805403
+    },
+    {
+      "symbol": "DDOG",
+      "setups": [
+        "oversold"
+      ],
+      "price": 166.46,
+      "close_date": "2026-11-19",
+      "rsi": 27.7,
+      "volume": 1450565
+    },
+    {
+      "symbol": "CMCSA",
+      "setups": [
+        "bull_flag"
+      ],
+      "price": 24.86,
+      "close_date": "2026-11-19",
+      "rsi": 59.4,
+      "volume": 8963369
+    },
+    {
+      "symbol": "ASTS",
+      "setups": [
+        "oversold",
+        "oversold_bounce"
+      ],
+      "price": 25.55,
+      "close_date": "2026-11-19",
+      "rsi": 29.8,
+      "volume": 8689309
     },
     {
       "symbol": "HDB",
@@ -527,27 +326,27 @@ $ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 158 s)
       "price": 26.24,
       "close_date": "2026-11-19",
       "rsi": 72.4,
-      "volume": 13255537
+      "volume": 8380841
     },
     {
-      "symbol": "CHTR",
+      "symbol": "TMUS",
       "setups": [
         "bull_flag"
       ],
-      "price": 133.18,
+      "price": 162.53,
       "close_date": "2026-11-19",
-      "rsi": 59.1,
-      "volume": 2598346
+      "rsi": 49.5,
+      "volume": 1349853
     },
     {
-      "symbol": "JAZZ",
+      "symbol": "COF",
       "setups": [
-        "bull_flag"
+        "oversold"
       ],
-      "price": 236.45,
+      "price": 181.76,
       "close_date": "2026-11-19",
-      "rsi": 53.6,
-      "volume": 1437266
+      "rsi": 28.1,
+      "volume": 1138236
     },
     {
       "symbol": "BHP",
@@ -557,48 +356,47 @@ $ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 158 s)
       "price": 68.55,
       "close_date": "2026-11-19",
       "rsi": 26.3,
-      "volume": 4955566
+      "volume": 2608027
     },
     {
-      "symbol": "VVV",
-      "setups": [
-        "breakout_20d",
-        "reclaim_ma20"
-      ],
-      "price": 36.84,
-      "close_date": "2026-11-19",
-      "rsi": 64.4,
-      "volume": 8923180
-    },
-    {
-      "symbol": "ALNY",
+      "symbol": "TEAM",
       "setups": [
         "oversold"
       ],
-      "price": 147.82,
+      "price": 133.01,
       "close_date": "2026-11-19",
-      "rsi": 28.1,
-      "volume": 2145993
+      "rsi": 22.1,
+      "volume": 1324525
     },
     {
-      "symbol": "LSCC",
+      "symbol": "CMG",
       "setups": [
         "bull_flag"
       ],
-      "price": 110.92,
+      "price": 36.3,
       "close_date": "2026-11-19",
-      "rsi": 50.5,
-      "volume": 2765297
+      "rsi": 63.0,
+      "volume": 4656879
     },
     {
-      "symbol": "TU",
+      "symbol": "RKT",
       "setups": [
-        "breakout_20d"
+        "bull_flag"
       ],
-      "price": 10.78,
+      "price": 13.19,
       "close_date": "2026-11-19",
-      "rsi": 72.9,
-      "volume": 28223340
+      "rsi": 49.8,
+      "volume": 11672922
+    },
+    {
+      "symbol": "BIDU",
+      "setups": [
+        "oversold"
+      ],
+      "price": 66.38,
+      "close_date": "2026-11-19",
+      "rsi": 22.8,
+      "volume": 2274753
     },
     {
       "symbol": "IBN",
@@ -609,128 +407,7 @@ $ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 158 s)
       "price": 34.9,
       "close_date": "2026-11-19",
       "rsi": 78.1,
-      "volume": 8446658
-    },
-    {
-      "symbol": "FWONK",
-      "setups": [
-        "bull_flag"
-      ],
-      "price": 106.41,
-      "close_date": "2026-11-19",
-      "rsi": 62.8,
-      "volume": 2764909
-    },
-    {
-      "symbol": "AFRM",
-      "setups": [
-        "oversold"
-      ],
-      "price": 56.91,
-      "close_date": "2026-11-19",
-      "rsi": 27.8,
-      "volume": 4997315
-    },
-    {
-      "symbol": "NTES",
-      "setups": [
-        "oversold"
-      ],
-      "price": 104.94,
-      "close_date": "2026-11-19",
-      "rsi": 28.6,
-      "volume": 2708551
-    },
-    {
-      "symbol": "CNQ",
-      "setups": [
-        "oversold"
-      ],
-      "price": 44.7,
-      "close_date": "2026-11-19",
-      "rsi": 28.2,
-      "volume": 6346128
-    },
-    {
-      "symbol": "PATH",
-      "setups": [
-        "oversold"
-      ],
-      "price": 11.23,
-      "close_date": "2026-11-19",
-      "rsi": 27.4,
-      "volume": 24995515
-    },
-    {
-      "symbol": "S",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 24.01,
-      "close_date": "2026-11-19",
-      "rsi": 54.0,
-      "volume": 11534520
-    },
-    {
-      "symbol": "BIDU",
-      "setups": [
-        "oversold"
-      ],
-      "price": 66.38,
-      "close_date": "2026-11-19",
-      "rsi": 22.8,
-      "volume": 4037497
-    },
-    {
-      "symbol": "STZ",
-      "setups": [
-        "bull_flag"
-      ],
-      "price": 141.44,
-      "close_date": "2026-11-19",
-      "rsi": 55.8,
-      "volume": 1751550
-    },
-    {
-      "symbol": "NLY",
-      "setups": [
-        "oversold",
-        "oversold_bounce"
-      ],
-      "price": 16.96,
-      "close_date": "2026-11-19",
-      "rsi": 29.5,
-      "volume": 14533045
-    },
-    {
-      "symbol": "NRG",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 93.85,
-      "close_date": "2026-11-19",
-      "rsi": 46.9,
-      "volume": 2612190
-    },
-    {
-      "symbol": "FUTU",
-      "setups": [
-        "oversold_bounce"
-      ],
-      "price": 87.21,
-      "close_date": "2026-11-19",
-      "rsi": 36.2,
-      "volume": 2731125
-    },
-    {
-      "symbol": "CCJ",
-      "setups": [
-        "oversold"
-      ],
-      "price": 61.42,
-      "close_date": "2026-11-19",
-      "rsi": 27.2,
-      "volume": 3723533
+      "volume": 3678476
     },
     {
       "symbol": "VALE",
@@ -740,7 +417,17 @@ $ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 158 s)
       "price": 9.83,
       "close_date": "2026-11-19",
       "rsi": 22.7,
-      "volume": 23024060
+      "volume": 12867616
+    },
+    {
+      "symbol": "GME",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 26.93,
+      "close_date": "2026-11-19",
+      "rsi": 64.5,
+      "volume": 4682107
     },
     {
       "symbol": "RIO",
@@ -750,157 +437,7 @@ $ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 158 s)
       "price": 74.7,
       "close_date": "2026-11-19",
       "rsi": 25.0,
-      "volume": 3025907
-    },
-    {
-      "symbol": "HIMS",
-      "setups": [
-        "oversold"
-      ],
-      "price": 16.02,
-      "close_date": "2026-11-19",
-      "rsi": 26.8,
-      "volume": 13420443
-    },
-    {
-      "symbol": "EIX",
-      "setups": [
-        "breakout_20d"
-      ],
-      "price": 63.02,
-      "close_date": "2026-11-19",
-      "rsi": 69.0,
-      "volume": 3353175
-    },
-    {
-      "symbol": "DD",
-      "setups": [
-        "bull_flag"
-      ],
-      "price": 149.69,
-      "close_date": "2026-11-19",
-      "rsi": 58.6,
-      "volume": 1403242
-    },
-    {
-      "symbol": "SNEX",
-      "setups": [
-        "oversold"
-      ],
-      "price": 39.45,
-      "close_date": "2026-11-19",
-      "rsi": 19.0,
-      "volume": 5197659
-    },
-    {
-      "symbol": "SCCO",
-      "setups": [
-        "oversold"
-      ],
-      "price": 141.46,
-      "close_date": "2026-11-19",
-      "rsi": 25.4,
-      "volume": 1440184
-    },
-    {
-      "symbol": "UMC",
-      "setups": [
-        "oversold"
-      ],
-      "price": 13.4,
-      "close_date": "2026-11-19",
-      "rsi": 28.7,
-      "volume": 15149361
-    },
-    {
-      "symbol": "DINO",
-      "setups": [
-        "oversold"
-      ],
-      "price": 89.72,
-      "close_date": "2026-11-19",
-      "rsi": 27.2,
-      "volume": 2162751
-    },
-    {
-      "symbol": "ADM",
-      "setups": [
-        "oversold"
-      ],
-      "price": 67.13,
-      "close_date": "2026-11-19",
-      "rsi": 27.5,
-      "volume": 2883211
-    },
-    {
-      "symbol": "TW",
-      "setups": [
-        "bull_flag"
-      ],
-      "price": 126.76,
-      "close_date": "2026-11-19",
-      "rsi": 59.0,
-      "volume": 1506119
-    },
-    {
-      "symbol": "AG",
-      "setups": [
-        "oversold"
-      ],
-      "price": 11.32,
-      "close_date": "2026-11-19",
-      "rsi": 25.8,
-      "volume": 16548242
-    },
-    {
-      "symbol": "VLTO",
-      "setups": [
-        "bull_flag"
-      ],
-      "price": 116.08,
-      "close_date": "2026-11-19",
-      "rsi": 63.4,
-      "volume": 1610835
-    },
-    {
-      "symbol": "ELAN",
-      "setups": [
-        "bull_flag"
-      ],
-      "price": 26.29,
-      "close_date": "2026-11-19",
-      "rsi": 60.3,
-      "volume": 7049932
-    },
-    {
-      "symbol": "PAAS",
-      "setups": [
-        "oversold"
-      ],
-      "price": 32.39,
-      "close_date": "2026-11-19",
-      "rsi": 26.5,
-      "volume": 5715772
-    },
-    {
-      "symbol": "KTOS",
-      "setups": [
-        "oversold"
-      ],
-      "price": 29.65,
-      "close_date": "2026-11-19",
-      "rsi": 27.6,
-      "volume": 6163583
-    },
-    {
-      "symbol": "USAR",
-      "setups": [
-        "oversold_bounce"
-      ],
-      "price": 6.87,
-      "close_date": "2026-11-19",
-      "rsi": 32.0,
-      "volume": 26599235
+      "volume": 1570616
     },
     {
       "symbol": "ALB",
@@ -910,17 +447,117 @@ $ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 158 s)
       "price": 82.93,
       "close_date": "2026-11-19",
       "rsi": 28.0,
-      "volume": 2202298
+      "volume": 1392822
     },
     {
-      "symbol": "BRBR",
+      "symbol": "HL",
+      "setups": [
+        "oversold"
+      ],
+      "price": 11.15,
+      "close_date": "2026-11-19",
+      "rsi": 29.2,
+      "volume": 10071380
+    },
+    {
+      "symbol": "CDE",
+      "setups": [
+        "oversold"
+      ],
+      "price": 11.54,
+      "close_date": "2026-11-19",
+      "rsi": 29.4,
+      "volume": 9658206
+    },
+    {
+      "symbol": "CNQ",
+      "setups": [
+        "oversold"
+      ],
+      "price": 44.7,
+      "close_date": "2026-11-19",
+      "rsi": 28.2,
+      "volume": 2350423
+    },
+    {
+      "symbol": "UMC",
+      "setups": [
+        "oversold"
+      ],
+      "price": 13.4,
+      "close_date": "2026-11-19",
+      "rsi": 28.7,
+      "volume": 7820294
+    },
+    {
+      "symbol": "AG",
+      "setups": [
+        "oversold"
+      ],
+      "price": 11.32,
+      "close_date": "2026-11-19",
+      "rsi": 25.8,
+      "volume": 9121983
+    },
+    {
+      "symbol": "PBR",
+      "setups": [
+        "oversold"
+      ],
+      "price": 16.29,
+      "close_date": "2026-11-19",
+      "rsi": 21.9,
+      "volume": 6300838
+    },
+    {
+      "symbol": "PCG",
       "setups": [
         "breakout_20d"
       ],
-      "price": 15.11,
+      "price": 13.94,
       "close_date": "2026-11-19",
-      "rsi": 84.4,
-      "volume": 11853373
+      "rsi": 62.0,
+      "volume": 7285882
+    },
+    {
+      "symbol": "MDLN",
+      "setups": [
+        "bull_flag"
+      ],
+      "price": 37.84,
+      "close_date": "2026-11-19",
+      "rsi": 52.1,
+      "volume": 2527798
+    },
+    {
+      "symbol": "CCJ",
+      "setups": [
+        "oversold"
+      ],
+      "price": 61.42,
+      "close_date": "2026-11-19",
+      "rsi": 27.2,
+      "volume": 1529466
+    },
+    {
+      "symbol": "HIMS",
+      "setups": [
+        "oversold"
+      ],
+      "price": 16.02,
+      "close_date": "2026-11-19",
+      "rsi": 26.8,
+      "volume": 5779098
+    },
+    {
+      "symbol": "PATH",
+      "setups": [
+        "oversold"
+      ],
+      "price": 11.23,
+      "close_date": "2026-11-19",
+      "rsi": 27.4,
+      "volume": 7596421
     },
     {
       "symbol": "AGNC",
@@ -931,7 +568,37 @@ $ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 158 s)
       "price": 7.86,
       "close_date": "2026-11-19",
       "rsi": 28.8,
-      "volume": 22635572
+      "volume": 10252066
+    },
+    {
+      "symbol": "PAAS",
+      "setups": [
+        "oversold"
+      ],
+      "price": 32.39,
+      "close_date": "2026-11-19",
+      "rsi": 26.5,
+      "volume": 2477961
+    },
+    {
+      "symbol": "AFRM",
+      "setups": [
+        "oversold"
+      ],
+      "price": 56.91,
+      "close_date": "2026-11-19",
+      "rsi": 27.8,
+      "volume": 1328261
+    },
+    {
+      "symbol": "USAR",
+      "setups": [
+        "oversold_bounce"
+      ],
+      "price": 6.87,
+      "close_date": "2026-11-19",
+      "rsi": 32.0,
+      "volume": 10800187
     },
     {
       "symbol": "KGC",
@@ -941,47 +608,28 @@ $ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 158 s)
       "price": 18.25,
       "close_date": "2026-11-19",
       "rsi": 29.2,
-      "volume": 9467667
+      "volume": 4029511
     },
     {
-      "symbol": "AER",
+      "symbol": "NLY",
       "setups": [
-        "bull_flag"
+        "oversold",
+        "oversold_bounce"
       ],
-      "price": 169.05,
+      "price": 16.96,
       "close_date": "2026-11-19",
-      "rsi": 60.9,
-      "volume": 1007067
+      "rsi": 29.5,
+      "volume": 4332966
     },
     {
-      "symbol": "BBIO",
+      "symbol": "TU",
       "setups": [
-        "bull_flag"
+        "breakout_20d"
       ],
-      "price": 78.18,
+      "price": 10.78,
       "close_date": "2026-11-19",
-      "rsi": 62.5,
-      "volume": 2158121
-    },
-    {
-      "symbol": "CTVA",
-      "setups": [
-        "oversold"
-      ],
-      "price": 8.12,
-      "close_date": "2026-11-19",
-      "rsi": 21.6,
-      "volume": 19967197
-    },
-    {
-      "symbol": "CRSP",
-      "setups": [
-        "oversold"
-      ],
-      "price": 38.93,
-      "close_date": "2026-11-19",
-      "rsi": 27.0,
-      "volume": 4094152
+      "rsi": 72.9,
+      "volume": 6167863
     },
     {
       "symbol": "PINS",
@@ -991,67 +639,7 @@ $ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 158 s)
       "price": 16.89,
       "close_date": "2026-11-19",
       "rsi": 29.1,
-      "volume": 9403555
-    },
-    {
-      "symbol": "MHK",
-      "setups": [
-        "bull_flag"
-      ],
-      "price": 142.85,
-      "close_date": "2026-11-19",
-      "rsi": 52.9,
-      "volume": 1079511
-    },
-    {
-      "symbol": "LNTH",
-      "setups": [
-        "breakout_20d"
-      ],
-      "price": 102.1,
-      "close_date": "2026-11-19",
-      "rsi": 69.7,
-      "volume": 1495839
-    },
-    {
-      "symbol": "ADT",
-      "setups": [
-        "bull_flag"
-      ],
-      "price": 9.88,
-      "close_date": "2026-11-19",
-      "rsi": 83.2,
-      "volume": 15314716
-    },
-    {
-      "symbol": "AHR",
-      "setups": [
-        "bull_flag"
-      ],
-      "price": 57.61,
-      "close_date": "2026-11-19",
-      "rsi": 59.0,
-      "volume": 2472781
-    },
-    {
-      "symbol": "GWRE",
-      "setups": [
-        "oversold"
-      ],
-      "price": 133.86,
-      "close_date": "2026-11-19",
-      "rsi": 28.9,
-      "volume": 1048071
-    },
-    {
-      "symbol": "ACIW",
-      "setups": [
-        "oversold"
-      ],
-      "price": 50.5,
-      "close_date": "2026-11-19",
-      "rsi": 29.9,
-      "volume": 2757206
+      "volume": 3921394
     },
     {
       "symbol": "QBTS",
@@ -1061,163 +649,592 @@ $ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 158 s)
       "price": 7.31,
       "close_date": "2026-11-19",
       "rsi": 26.6,
-      "volume": 18744420
+      "volume": 9007375
     },
     {
-      "symbol": "WYNN",
+      "symbol": "KTOS",
+      "setups": [
+        "oversold"
+      ],
+      "price": 29.65,
+      "close_date": "2026-11-19",
+      "rsi": 27.6,
+      "volume": 2128461
+    },
+    {
+      "symbol": "CTVA",
+      "setups": [
+        "oversold"
+      ],
+      "price": 8.12,
+      "close_date": "2026-11-19",
+      "rsi": 21.6,
+      "volume": 7384783
+    },
+    {
+      "symbol": "VVV",
+      "setups": [
+        "breakout_20d",
+        "reclaim_ma20"
+      ],
+      "price": 36.84,
+      "close_date": "2026-11-19",
+      "rsi": 64.4,
+      "volume": 1504083
+    },
+    {
+      "symbol": "HBM",
+      "setups": [
+        "oversold"
+      ],
+      "price": 17.28,
+      "close_date": "2026-11-19",
+      "rsi": 26.5,
+      "volume": 3182813
+    },
+    {
+      "symbol": "MWH",
       "setups": [
         "bull_flag"
       ],
-      "price": 82.1,
+      "price": 27.18,
       "close_date": "2026-11-19",
-      "rsi": 52.5,
-      "volume": 1668822
+      "rsi": 56.3,
+      "volume": 1775903
     },
     {
-      "symbol": "SIRI",
+      "symbol": "YMM",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 9.06,
+      "close_date": "2026-11-19",
+      "rsi": 59.1,
+      "volume": 5315184
+    },
+    {
+      "symbol": "TCOM",
       "setups": [
         "bull_flag"
       ],
-      "price": 31.98,
+      "price": 42.26,
       "close_date": "2026-11-19",
-      "rsi": 64.7,
-      "volume": 4255380
+      "rsi": 51.5,
+      "volume": 1115796
     },
     {
-      "symb
+      "symbol": "GLNG",
+      "setups": [
+        "oversold"
+      ],
+      "price": 40.4,
+      "close_date": "2026-11-19",
+      "rsi": 29.8,
+      "volume": 1129347
+    },
+    {
+      "symbol": "S",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 24.01,
+      "close_date": "2026-11-19",
+      "rsi": 54.0,
+      "volume": 1803886
+    },
+    {
+      "symbol": "SNEX",
+      "setups": [
+        "oversold"
+      ],
+      "price": 39.45,
+      "close_date": "2026-11-19",
+      "rsi": 19.0,
+      "volume": 1007297
+    },
+    {
+      "symbol": "ADT",
+      "setups": [
+        "bull_flag"
+      ],
+      "price": 9.88,
+      "close_date": "2026-11-19",
+      "rsi": 83.2,
+      "volume": 4015782
+    },
+    {
+      "symbol": "SBSW",
+      "setups": [
+        "oversold"
+      ],
+      "price": 7.73,
+      "close_date": "2026-11-19",
+      "rsi": 28.7,
+      "volume": 5005457
+    },
+    {
+      "symbol": "ENPH",
+      "setups": [
+        "oversold"
+      ],
+      "price": 21.98,
+      "close_date": "2026-11-19",
+      "rsi": 29.3,
+      "volume": 1736799
+    },
+    {
+      "symbol": "VOD",
+      "setups": [
+        "oversold"
+      ],
+      "price": 14.44,
+      "close_date": "2026-11-19",
+      "rsi": 29.7,
+      "volume": 2494083
+    },
+    {
+      "symbol": "PHG",
+      "setups": [
+        "bull_flag"
+      ],
+      "price": 29.25,
+      "close_date": "2026-11-19",
+      "rsi": 57.3,
+      "volume": 1224622
+    },
+    {
+      "symbol": "YSWY",
+      "setups": [
+        "oversold"
+      ],
+      "price": 19.3,
+      "close_date": "2026-11-19",
+      "rsi": 26.4,
+      "volume": 1794441
+    },
+    {
+      "symbol": "DX",
+      "setups": [
+        "oversold_bounce"
+      ],
+      "price": 9.85,
+      "close_date": "2026-11-19",
+      "rsi": 33.1,
+      "volume": 3342144
+    },
+    {
+      "symbol": "PBR.A",
+      "setups": [
+        "oversold"
+      ],
+      "price": 14.32,
+      "close_date": "2026-11-19",
+      "rsi": 20.8,
+      "volume": 2285190
+    },
+    {
+      "symbol": "EXK",
+      "setups": [
+        "oversold"
+      ],
+      "price": 6.08,
+      "close_date": "2026-11-19",
+      "rsi": 28.8,
+      "volume": 5104315
+    },
+    {
+      "symbol": "SSRM",
+      "setups": [
+        "oversold"
+      ],
+      "price": 23.29,
+      "close_date": "2026-11-19",
+      "rsi": 27.7,
+      "volume": 1299568
+    },
+    {
+      "symbol": "ERO",
+      "setups": [
+        "oversold"
+      ],
+      "price": 23.35,
+      "close_date": "2026-11-19",
+      "rsi": 27.5,
+      "volume": 1294156
+    },
+    {
+      "symbol": "UPST",
+      "setups": [
+        "oversold"
+      ],
+      "price": 17.0,
+      "close_date": "2026-11-19",
+      "rsi": 27.5,
+      "volume": 1691991
+    },
+    {
+      "symbol": "ELAN",
+      "setups": [
+        "bull_flag"
+      ],
+      "price": 26.29,
+      "close_date": "2026-11-19",
+      "rsi": 60.3,
+      "volume": 1085240
+    },
+    {
+      "symbol": "SEDG",
+      "setups": [
+        "oversold"
+      ],
+      "price": 20.33,
+      "close_date": "2026-11-19",
+      "rsi": 27.1,
+      "volume": 1387624
+    },
+    {
+      "symbol": "UEC",
+      "setups": [
+        "oversold"
+      ],
+      "price": 5.76,
+      "close_date": "2026-11-19",
+      "rsi": 29.9,
+      "volume": 4749729
+    },
+    {
+      "symbol": "FRVO",
+      "setups": [
+        "bull_flag"
+      ],
+      "price": 11.14,
+      "close_date": "2026-11-19",
+      "rsi": 51.5,
+      "volume": 2424893
+    },
+    {
+      "symbol": "SA",
+      "setups": [
+        "oversold"
+      ],
+      "price": 18.06,
+      "close_date": "2026-11-19",
+      "rsi": 28.6,
+      "volume": 1471706
+    },
+    {
+      "symbol": "SKYD",
+      "setups": [
+        "oversold"
+      ],
+      "price": 6.34,
+      "close_date": "2026-11-19",
+      "rsi": 29.9,
+      "volume": 3975743
+    },
+    {
+      "symbol": "UUUU",
+      "setups": [
+        "oversold"
+      ],
+      "price": 5.48,
+      "close_date": "2026-11-19",
+      "rsi": 23.9,
+      "volume": 4429146
+    },
+    {
+      "symbol": "BVN",
+      "setups": [
+        "oversold"
+      ],
+      "price": 21.23,
+      "close_date": "2026-11-19",
+      "rsi": 21.9,
+      "volume": 1130215
+    },
+    {
+      "symbol": "GDS",
+      "setups": [
+        "oversold"
+      ],
+      "price": 14.76,
+      "close_date": "2026-11-19",
+      "rsi": 22.5,
+      "volume": 1612576
+    },
+    {
+      "symbol": "EC",
+      "setups": [
+        "oversold"
+      ],
+      "price": 13.37,
+      "close_date": "2026-11-19",
+      "rsi": 21.3,
+      "volume": 1733214
+    },
+    {
+      "symbol": "PSNL",
+      "setups": [
+        "oversold"
+      ],
+      "price": 14.72,
+      "close_date": "2026-11-19",
+      "rsi": 29.2,
+      "volume": 1485575
+    },
+    {
+      "symbol": "UMAC",
+      "setups": [
+        "oversold_bounce"
+      ],
+      "price": 10.15,
+      "close_date": "2026-11-19",
+      "rsi": 30.5,
+      "volume": 2050603
+    },
+    {
+      "symbol": "BRBR",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 15.11,
+      "close_date": "2026-11-19",
+      "rsi": 84.4,
+      "volume": 1356312
+    },
+    {
+      "symbol": "ARR",
+      "setups": [
+        "oversold",
+        "oversold_bounce"
+      ],
+      "price": 10.83,
+      "close_date": "2026-11-19",
+      "rsi": 24.5,
+      "volume": 1684923
+    },
+    {
+      "symbol": "BTU",
+      "setups": [
+        "oversold"
+      ],
+      "price": 16.29,
+      "close_date": "2026-11-19",
+      "rsi": 27.9,
+      "volume": 1037751
+    },
+    {
+      "symbol": "FSM",
+      "setups": [
+        "oversold"
+      ],
+      "price": 7.95,
+      "close_date": "2026-11-19",
+      "rsi": 29.6,
+      "volume": 2069758
+    },
+    {
+      "symbol": "CLM",
+      "setups": [
+        "oversold"
+      ],
+      "price": 5.4,
+      "close_date": "2026-11-19",
+      "rsi": 27.6,
+      "volume": 2674357
+    },
+    {
+      "symbol": "TGB",
+      "setups": [
+        "oversold",
+        "oversold_bounce"
+      ],
+      "price": 5.61,
+      "close_date": "2026-11-19",
+      "rsi": 25.6,
+      "volume": 2510859
+    },
+    {
+      "symbol": "BILI",
+      "setups": [
+        "oversold"
+      ],
+      "price": 11.06,
+      "close_date": "2026-11-19",
+      "rsi": 25.2,
+      "volume": 1200698
+    },
+    {
+      "symbol": "NAVI",
+      "setups": [
+        "oversold_bounce"
+      ],
+      "price": 6.02,
+      "close_date": "2026-11-19",
+      "rsi": 30.1,
+      "volume": 2140126
+    },
+    {
+      "symbol": "IE",
+      "setups": [
+        "oversold"
+      ],
+      "price": 5.76,
+      "close_date": "2026-11-19",
+      "rsi": 29.8,
+      "volume": 1562196
+    },
+    {
+      "symbol": "NOAH",
+      "setups": [
+        "oversold_bounce"
+      ],
+   
 …gekürzt
 
-$ news.py --tickers NVDA GOOG INTC PANW UNH CRWD COHR CAT INSM MSTR --json --hours 24 --no-sec  (Exit 0, 3 s)
+$ news.py --tickers NVDA SNDK INTC GOOG UNH PANW COHR MSTR CAT CRWD --json --hours 24 --no-sec  (Exit 0, 3 s)
 {
-  "checked": "2026-11-20T12:32:58.853773+00:00",
+  "checked": "2026-11-20T16:43:25.239808+00:00",
   "moves": [
     {
       "ticker": "CAT",
-      "price": 537.37,
-      "prev_close": 558.77,
-      "pct": -3.83,
-      "time": "2026-11-19T21:00:02+00:00",
+      "price": 517.99,
+      "prev_close": 537.37,
+      "pct": -3.61,
+      "time": "2026-11-20T16:43:23+00:00",
       "moving": true
     },
     {
       "ticker": "COHR",
-      "price": 214.94,
-      "prev_close": 212.84,
-      "pct": 0.99,
-      "time": "2026-11-19T21:00:02+00:00",
-      "moving": false
-    },
-    {
-      "ticker": "CRWD",
-      "price": 243.46,
-      "prev_close": 237.03,
-      "pct": 2.71,
-      "time": "2026-11-19T21:00:01+00:00",
-      "moving": false
-    },
-    {
-      "ticker": "GOOG",
-      "price": 271.02,
-      "prev_close": 279.2,
-      "pct": -2.93,
-      "time": "2026-11-19T21:00:01+00:00",
-      "moving": false
-    },
-    {
-      "ticker": "INSM",
-      "price": 144.46,
-      "prev_close": 119.8,
-      "pct": 20.58,
-      "time": "2026-11-19T21:00:00+00:00",
+      "price": 182.91,
+      "prev_close": 214.94,
+      "pct": -14.9,
+      "time": "2026-11-20T16:43:24+00:00",
       "moving": true
     },
     {
-      "ticker": "INTC",
-      "price": 55.72,
-      "prev_close": 54.67,
-      "pct": 1.92,
-      "time": "2026-11-19T21:00:01+00:00",
+      "ticker": "CRWD",
+      "price": 230.93,
+      "prev_close": 243.46,
+      "pct": -5.15,
+      "time": "2026-11-20T16:43:26+00:00",
+      "moving": true
+    },
+    {
+      "ticker": "GOOG",
+      "price": 272.83,
+      "prev_close": 271.02,
+      "pct": 0.67,
+      "time": "2026-11-20T16:43:26+00:00",
       "moving": false
     },
     {
+      "ticker": "INTC",
+      "price": 53.57,
+      "prev_close": 55.72,
+      "pct": -3.86,
+      "time": "2026-11-20T16:43:26+00:00",
+      "moving": true
+    },
+    {
       "ticker": "MSTR",
-      "price": 86.13,
-      "prev_close": 90.32,
-      "pct": -4.64,
-      "time": "2026-11-19T21:00:01+00:00",
+      "price": 80.92,
+      "prev_close": 86.13,
+      "pct": -6.05,
+      "time": "2026-11-20T16:43:26+00:00",
       "moving": true
     },
     {
       "ticker": "NVDA",
-      "price": 145.98,
-      "prev_close": 150.96,
-      "pct": -3.3,
-      "time": "2026-11-19T21:00:01+00:00",
+      "price": 135.67,
+      "prev_close": 145.98,
+      "pct": -7.06,
+      "time": "2026-11-20T16:43:26+00:00",
       "moving": true
     },
     {
       "ticker": "PANW",
-      "price": 361.73,
-      "prev_close": 339.92,
-      "pct": 6.42,
-      "time": "2026-11-19T21:00:00+00:00",
+      "price": 350.06,
+      "prev_close": 361.73,
+      "pct": -3.23,
+      "time": "2026-11-20T16:43:25+00:00",
+      "moving": true
+    },
+    {
+      "ticker": "SNDK",
+      "price": 80.34,
+      "prev_close": 94.39,
+      "pct": -14.89,
+      "time": "2026-11-20T16:43:27+00:00",
       "moving": true
     },
     {
       "ticker": "UNH",
-      "price": 330.48,
-      "prev_close": 349.91,
-      "pct": -5.55,
-      "time": "2026-11-19T21:00:02+00:00",
+      "price": 346.35,
+      "prev_close": 330.48,
+      "pct": 4.8,
+      "time": "2026-11-20T16:43:25+00:00",
       "moving": true
     }
   ],
   "items": [
     {
-      "id": "rss:9e02231d-41cd-31ac-b37f-993325b8a4ca",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "CRWD",
-      "title": "Dow Jones Futures: Techs Tumble, Anthropic Dives After Ugly Market Reversal To New Lows",
-      "summary": "Tech futures tumbled and Anthropic plunged heading into its second day of trading after the stock market suffered an ugly reversal to lows.",
-      "link": "https://finance.yahoo.com/m/9e02231d-41cd-31ac-b37f-993325b8a4ca/dow-jones-futures%3A-techs.html?.tsrc=rss",
-      "time": "2026-11-20T12:24:54+00:00",
-      "touches": [
-        "CRWD",
-        "NVDA",
-        "PANW"
-      ],
-      "tags": [
-        "macro"
-      ],
-      "new": true
-    },
-    {
-      "id": "rss:21ee7af3-3479-3cc1-ac1e-8d059d05f6d4",
+      "id": "rss:56211f9d-f82e-365c-8b4f-5f3a7dfec17c",
       "source": "Yahoo Finance",
       "kind": "headline",
       "ticker": "NVDA",
-      "title": "Nasdaq Futures Slide, Anthropic Shares Reverse IPO Gains \u2014 LITE, IREN, SNDK, NVDA In Focus",
-      "summary": "Oil prices fell on Friday and were set for a weekly loss as strong Middle East exports offset concerns over supply disruptions from Houthi attacks on Riyadh and tanker disruptions in the Strait of Hormuz.",
-      "link": "https://stocktwits.com/news-articles/markets/equity/nasdaq-futures-slide-anthropic-shares-reverse-ipo-gains-lite-iren-sndk-nvda-in-focus/cNbSL5RR9Ks?.tsrc=rss",
-      "time": "2026-11-20T12:20:04+00:00",
+      "title": "Prediction: $5,000 in SpaceX Will Be Worth This Much by 2040 If Elon Musk Solves Its Power Problem",
+      "summary": "AI is now SpaceX's biggest business, and power is its main bottleneck.",
+      "link": "https://www.fool.com/investing/2026/11/20/prediction-5000-in-spacex-will-be-worth-this-much/?.tsrc=rss",
+      "time": "2026-11-20T16:35:00+00:00",
       "touches": [
         "NVDA"
       ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:5631f57c-3229-311a-a2ae-f58a9a87c42c",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "GOOG",
+      "title": "Investors Might Be Making a Big Mistake by Overlooking This Growth Stock",
+      "summary": "Alphabet's stock has slid after an earnings miss, yet a closer look at the numbers shows something stranger underneath the headline. One accounting hit and a massive spending spree may be hiding the real story, and Wall Street's models disagree with the selloff.",
+      "link": "https://247wallst.com/investing/2026/11/20/investors-might-be-making-a-big-mistake-by-overlooking-this-growth-stock/?.tsrc=rss",
+      "time": "2026-11-20T16:34:05+00:00",
+      "touches": [
+        "GOOG"
+      ],
       "tags": [
-        "macro"
+        "earnings"
       ],
       "new": true
     },
     {
-      "id": "rss:6e6f9c49-9658-3615-8008-22c4188b1bd6",
+      "id": "rss:f027bba9-1921-35b4-853b-78124a11c2a4",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "NVDA",
+      "title": "Why Sandisk Stock Dropped Again Today",
+      "summary": "TrendForce warns: NAND prices are suddenly falling.",
+      "link": "https://www.fool.com/investing/2026/11/20/why-sandisk-stock-dropped-again-today/?.tsrc=rss",
+      "time": "2026-11-20T16:34:00+00:00",
+      "touches": [
+        "NVDA",
+        "SNDK"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:6b659155-e1f9-39ea-a65a-2d2d2ce524d2",
       "source": "Yahoo Finance",
       "kind": "headline",
       "ticker": "GOOG",
-      "title": "'Miserable 7' Stocks Shed Whopping $4 Trillion In Value Overnight",
-      "summary": "Move aside Magnificent 7. It's now the Miserable 7 turning heads on the sheer magnitude of their decline.",
-      "link": "https://finance.yahoo.com/m/6e6f9c49-9658-3615-8008-22c4188b1bd6/%27miserable-7%27-stocks-shed.html?.tsrc=rss",
-      "time": "2026-11-20T12:18:03+00:00",
+      "title": "Scott Bessent Says Trump-Xi Talks Did Not Address Jensen Huang, Left Nvidia H200 Policy Unchanged",
+      "summary": "In an interview with CNBC, Bessent said he does not expect a change in U.S. policy allowing exports of Nvidia\u2019s H200 chips to China.",
+      "link": "https://stocktwits.com/news-articles/markets/equity/scott-bessent-says-trump-xi-talks-did-not-address-jensen-huang-left-nvidia-h200-policy-unchanged/cNbSZuYR915?.tsrc=rss",
+      "time": "2026-11-20T16:32:13+00:00",
       "touches": [
         "GOOG",
         "NVDA"
@@ -1226,14 +1243,122 @@ $ news.py --tickers NVDA GOOG INTC PANW UNH CRWD COHR CAT INSM MSTR --json --hou
       "new": true
     },
     {
-      "id": "rss:97be87c5-879b-3874-8ae3-9011cbe17d8f",
+      "id": "rss:4bbf9581-d9bc-3f2e-9760-2221f5e509cc",
       "source": "Yahoo Finance",
       "kind": "headline",
       "ticker": "NVDA",
-      "title": "Buy Broadcom Now: Get a $115 Billion AI Giant at Just 18.5x Forward Earnings",
-      "summary": "Broadcom's sales nearly doubled, yet the stock has barely moved this year. One retirement-minded investor sees that gap as a buying signal, but a risk tied to just a handful of customers keeps him watching closely.",
-      "link": "https://247wallst.com/investing/2026/11/20/buy-broadcom-now-get-a-115-billion-ai-giant-at-just-18-5x-forward-earnings/?.tsrc=rss",
-      "time": "2026-11-20T12:15:33+00:00",
+      "title": "How Low Nvidia Stock Can Go Now",
+      "summary": "The chip king needs to reclaim $150 soon\u2014the stock\u2019s key level\u2014or $127 or even $100 is in play.",
+      "link": "https://finance.yahoo.com/m/4bbf9581-d9bc-3f2e-9760-2221f5e509cc/how-low-nvidia-stock-can-go.html?.tsrc=rss",
+      "time": "2026-11-20T16:31:00+00:00",
+      "touches": [
+        "NVDA"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:30e2a4ab-b95f-395f-9f4d-e4058f562e01",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "GOOG",
+      "title": "Nvidia Stock Falls 40% From Its High. It\u2019s Getting Ugly but There\u2019s Hope.",
+      "summary": "The stock has fallen for six consecutive days, looks set to make it seven, and is down 40% from its record high on Oct. 6.",
+      "link": "https://finance.yahoo.com/m/30e2a4ab-b95f-395f-9f4d-e4058f562e01/nvidia-stock-falls-40%25-from.html?.tsrc=rss",
+      "time": "2026-11-20T16:27:00+00:00",
+      "touches": [
+        "GOOG",
+        "NVDA"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:27d8735d-c51d-33d5-8083-094abc7a7ba3",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "NVDA",
+      "title": "The Hot \u2018Toothpaste Trade\u2019 Is Another Sign AI Stock Fears Are Getting Worse",
+      "summary": "Consumer staples stock are on fire right now as AI fears dominate the stock market.",
+      "link": "https://finance.yahoo.com/m/27d8735d-c51d-33d5-8083-094abc7a7ba3/the-hot-%E2%80%98toothpaste-trade%E2%80%99-is.html?.tsrc=rss",
+      "time": "2026-11-20T16:26:00+00:00",
+      "touches": [
+        "NVDA"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:a6164b24-0393-3072-a167-8874a4a20c25",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "NVDA",
+      "title": "The Nasdaq Is In Its Third Correction of 2026. Here\u2019s the Lesson Most Investors Are Missing.",
+      "summary": "The first two corrections of the year looked scary, and both ended the same way.",
+      "link": "https://www.fool.com/investing/2026/11/20/the-nasdaq-is-in-its-third-correction-of-2026-here-s-the-lesson-most-investors-are-missing/?.tsrc=rss",
+      "time": "2026-11-20T16:22:02+00:00",
+      "touches": [
+        "NVDA"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:bea2f710-6ddd-3842-9358-6344bb267819",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "NVDA",
+      "title": "Don't Try to Time the Market. Buy This ETF Instead.",
+      "summary": "One ETF is ideal for investors worried about a market crash.",
+      "link": "https://www.fool.com/investing/2026/11/20/don-t-try-to-time-the-market-buy-this-etf-instead/?.tsrc=rss",
+      "time": "2026-11-20T16:20:02+00:00",
+      "touches": [
+        "NVDA"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:caedad9e-1780-34f3-9813-b44093a1c801",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "NVDA",
+      "title": "Why SpaceX Stock Dropped After the Anthropic IPO",
+      "summary": "Will SpaceX buy Tesla? If it does, it may need to overpay by $600 billion.",
+      "link": "https://www.fool.com/investing/2026/11/20/why-spacex-stock-dropped-after-the-anthropic-ipo/?.tsrc=rss",
+      "time": "2026-11-20T16:17:23+00:00",
+      "touches": [
+        "NVDA"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:9c774dbe-2dfa-4b08-af5f-81c9e1ebf1b4",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "GOOG",
+      "title": "Veteran investors talk new book, 'demystifying' financial jargon to invest sooner and smarter",
+      "summary": "Yahoo Finance Executive Editor Brian Sozzi sits down with former BNY Wealth Management CEO Catherine Keating and former Bridgewater Associates chief investment strategist Rebecca Patterson to talk about their new book \u2014 \"Investment Wisdom For Our Friends And Loved Ones: Timeless Lessons from Today's Top Finance Experts\" \u2014 while sharing their own wisdom they could impart on younger investors just starting to save today.",
+      "link": "https://finance.yahoo.com/video/veteran-investors-talk-new-book-demystifying-financial-jargon-to-invest-sooner-and-smarter-161606156.html?.tsrc=rss",
+      "time": "2026-11-20T16:16:06+00:00",
+      "touches": [
+        "GOOG"
+      ],
+      "tags": [
+        "people"
+      ],
+      "new": true
+    },
+    {
+      "id": "rss:75baa26e-06b3-3f2b-996d-53c6a17e873a",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "NVDA",
+      "title": "Which Baidu ETFs Change What Chip News Means For You?",
+      "summary": "Owning Baidu directly means living with its full set of company specific risks on your own. Simply Wall St highlights two of them in plain terms. Large one off items can swing reported results, and advertising is under strain while money making from AI search is taking longer, which could keep that part of the business soft. Holding Baidu inside a fund that also owns other companies spreads how much those issues can move your overall portfolio, and also spreads out any upside from Baidu. The...",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/baidu-etfs-change-chip-news-161322634.html?.tsrc=rss",
+      "time": "2026-11-20T16:13:22+00:00",
       "touches": [
         "NVDA"
       ],
@@ -1243,62 +1368,44 @@ $ news.py --tickers NVDA GOOG INTC PANW UNH CRWD COHR CAT INSM MSTR --json --hou
       "new": true
     },
     {
-      "id": "rss:7f78d173-7459-38fd-8c87-ca334546b58f",
+      "id": "rss:3b1c58bd-a0a6-3eba-8170-79d110eccc45",
       "source": "Yahoo Finance",
       "kind": "headline",
-      "ticker": "MSTR",
-      "title": "Strategy Tumbles 37% in a Month: This Wall Street Pro Predicts 400% Gains on Its Bitcoin Exposure",
-      "summary": "Strategy owns more Bitcoin than any other public company, yet its stock is sinking faster than the coin itself. Analysts still see a rebound, but one hidden cost of funding those purchases could decide whether the bet pays off.",
-      "link": "https://247wallst.com/investing/2026/11/20/strategy-tumbles-37-in-a-month-this-wall-street-pro-predicts-400-gains-on-its-bitcoin-exposure/?.tsrc=rss",
-      "time": "2026-11-20T12:15:18+00:00",
+      "ticker": "SNDK",
+      "title": "MU, SNDK, Other Chipmakers Plunge Amid AI Trade Weakness \u2014 UBS Says Risk-Reward In Equities Has Become \u2018More Balanced\u2019",
+      "summary": "UBS said investors are increasingly questioning whether AI infrastructure spending can generate sufficient returns, but maintains its outlook for further AI investment growth in 2027.",
+      "link": "https://stocktwits.com/news-articles/markets/equity/mu-sndk-other-chipmakers-plunge-amid-ai-trade-weakness-ubs-says-risk-reward-in-equities-has-become-more-balanced/cNbSZa1R91c?.tsrc=rss",
+      "time": "2026-11-20T16:11:54+00:00",
       "touches": [
-        "MSTR"
+        "SNDK"
       ],
       "tags": [],
       "new": true
     },
     {
-      "id": "rss:56cebed5-02bb-38d0-94c4-8aa7ccbd1380",
+      "id": "rss:2c4a74b0-d0a9-3b56-8fe1-d5d1ecc45834",
       "source": "Yahoo Finance",
       "kind": "headline",
-      "ticker": "GOOG",
-      "title": "Stanley Druckenmiller dumps Google stock in a bid to \u2018not lose money\u2019 as the outlook darkens. Here\u2019s what he\u2019s buying",
-      "summary": "\u201cI'm really alert to the fact that the second half of \u201927 could be economically disappointing.\u201d",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/stanley-druckenmiller-dumps-google-stock-121500032.html?.tsrc=rss",
-      "time": "2026-11-20T12:15:00+00:00",
+      "ticker": "CAT",
+      "title": "Caterpillar Sinks 11% in a Week to a New 52-Week Low. Is the Selling Overdone?",
+      "summary": "Key TakeawaysCaterpillar fell 11% in the past week to a new 52-week low, about half its June high, as the AI-infrastructure sell-off also hit Vertiv and Bloom Energy. Caterpillar had no bad news of its own, and management told a Bernstein event it sees a favorable 2027.",
+      "link": "https://www.tikr.com/blog/caterpillar-sinks-11-in-a-week-to-a-new-52-week-low-is-the-selling-overdone?ref=yahoofinance&tlnk=yf-261120-w3r4pmj4&.tsrc=rss",
+      "time": "2026-11-20T16:05:50+00:00",
       "touches": [
-        "GOOG"
+        "CAT"
       ],
       "tags": [],
       "new": true
     },
     {
-      "id": "rss:b882b246-0d2e-3e75-a800-f1c130af0716",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "INTC",
-      "title": "AMD Stock Drops Another 7% Before the Bell and Taiwan Semiconductor Slides 4.2% as Nasdaq Futures Fall 1.6% After Asia\u2019s Chip Selloff",
-      "summary": "AMD was down another 7% before Friday's opening bell and Taiwan Semiconductor 4.2% after Taiwan's worst week since 1991. Nasdaq 100 futures were down 1.6% while Dow futures were flat. Here is what Asia's selloff means for the U.S. open.",
-      "link": "https://247wallst.com/investing/2026/11/20/amd-stock-drops-another-7-0-before-the-bell-and-taiwan-semiconductor-slides-4-2-as-nasdaq-futures-fall-1-6-after-asias-chip-selloff/?.tsrc=rss",
-      "time": "2026-11-20T12:13:09+00:00",
-      "touches": [
-        "INTC",
-        "NVDA"
-      ],
-      "tags": [
-        "macro"
-      ],
-      "new": true
-    },
-    {
-      "id": "rss:b398984c-20aa-3d9e-a901-9900814b33a2",
+      "id": "rss:0248fd83-7d9f-352f-9bde-0268416d20db",
       "source": "Yahoo Finance",
       "kind": "headline",
       "ticker": "NVDA",
-      "title": "3 Funds Riding Anthropic IPO Optimism Through Very Different Chip Bets",
-      "summary": "Two funds here are almost entirely in semiconductors, while one, XLK, has less than half of its portfolio in chip makers despite sharing the same AI story in its marketing. That split matters when Nvidia, AMD and Micron move on Anthropic IPO enthusiasm and talk of tighter memory supply, because the impact on a fund depends on how much of it is actually tied to chips if data center capex holds up. SOXQ, XSD and XLK all tap into that theme in different ways, which is what makes comparing them...",
-      "link": "https://finance.yahoo.com/technology/articles/3-funds-riding-anthropic-ipo-121139010.html?.tsrc=rss",
-      "time": "2026-11-20T12:11:39+00:00",
+      "title": "Apollo and Goldman Sachs Announce Pricing of $44 Billion SpaceX GPU Financing",
+      "summary": "Transaction was led by Apollo and Goldman Sachs Alongside Leading Global Investors NEW YORK, Nov. 20, 2026 (GLOBE NEWSWIRE) -- Apollo (NYSE: APO) and Goldman Sachs (NYSE: GS) today announced the successful pricing of approximately $44 billion of senior and subordinated notes to fund the purchase of GPUs and related equipment for SpaceX (NASDAQ: SPCX). The transaction, which was oversubscribed and upsized as a result of strong investor demand, will deliver the next generation of NVIDIA Vera Rubin",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/apollo-goldman-sachs-announce-pricing-160200875.html?.tsrc=rss",
+      "time": "2026-11-20T16:02:00+00:00",
       "touches": [
         "NVDA"
       ],
@@ -1306,29 +1413,30 @@ $ news.py --tickers NVDA GOOG INTC PANW UNH CRWD COHR CAT INSM MSTR --json --hou
       "new": true
     },
     {
-      "id": "rss:39f8c9c7-9701-3337-a084-5ddb5f41cc58",
+      "id": "rss:801603d1-8318-3eb0-99a6-10147f0d5ed5",
       "source": "Yahoo Finance",
       "kind": "headline",
       "ticker": "NVDA",
-      "title": "3 Magnificent AI Chip Stocks That Could Help Set You Up for Life",
-      "summary": "AI spending is still booming, and these could be some of the biggest long-term winners.",
-      "link": "https://www.fool.com/investing/2026/11/20/3-magnificent-ai-chip-stocks-that-could-help-set-you-up-for-life/?.tsrc=rss",
-      "time": "2026-11-20T12:05:02+00:00",
+      "title": "Anthropic, Nvidia, AMD, Micron, Sandisk, Bloom Energy, and More Stocks That Explain Today\u2019s Market",
+      "summary": "Anthropic\u2019s post-IPO slide adds pressure to artificial-intelligence stocks as chip makers and data center suppliers retreat.",
+      "link": "https://finance.yahoo.com/m/801603d1-8318-3eb0-99a6-10147f0d5ed5/anthropic%2C-nvidia%2C-amd%2C.html?.tsrc=rss",
+      "time": "2026-11-20T15:59:00+00:00",
       "touches": [
-        "NVDA"
+        "NVDA",
+        "SNDK"
       ],
       "tags": [],
       "new": true
     },
     {
-      "id": "rss:07a3702c-d1d7-3fb1-8c80-0c1457b633dc",
+      "id": "rss:10b9337f-82c6-3476-a1d0-f29f1826832d",
       "source": "Yahoo Finance",
       "kind": "headline",
       "ticker": "NVDA",
-      "title": "SpaceX Raises $32 Billion in Debt to Buy Nvidia Chips",
-      "summary": "How SpaceX Is Borrowing Billions For Nvidia Chips Without Putting The Debt On Its Books",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/spacex-raises-32-billion-debt-120100540.html?.tsrc=rss",
-      "time": "2026-11-20T12:01:00+00:00",
+      "title": "Nvidia falls below Alphabet to become fourth most valuable U.S. company",
+      "summary": "Investing.com - Nvidia shares touched their lowest level since June 2025, extending a recent selloff that dragged the chip giant down to fourth on the list of the most valuable U.S. public companies at one point on Friday, surrendering the position to Google-parent Alphabet.",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/nvidia-falls-below-alphabet-become-155838605.html?.tsrc=rss",
+      "time": "2026-11-20T15:58:38+00:00",
       "touches": [
         "NVDA"
       ],
@@ -1336,138 +1444,14 @@ $ news.py --tickers NVDA GOOG INTC PANW UNH CRWD COHR CAT INSM MSTR --json --hou
       "new": true
     },
     {
-      "id": "rss:39f0f63b-9e34-3d65-8e8d-4e8819694109",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "NVDA",
-      "title": "SpaceX's 8.26% Bond Yield Reveals the Cost of the AI Boom",
-      "summary": "The financing will fund Nvidia chip purchases through a structure designed to keep borrowing off SpaceX's balance sheet.",
-      "link": "https://finance.yahoo.com/technology/ai/articles/spacexs-8-26-bond-yield-120052825.html?.tsrc=rss",
-      "time": "2026-11-20T12:00:52+00:00",
-      "touches": [
-        "NVDA"
-      ],
-      "tags": [],
-      "new": true
-    },
-    {
-      "id": "rss:415df5b8-9fbb-4e4e-8da5-daa13222618a",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "GOOG",
-      "title": "OpenAI tried to ruin Anthropic's IPO. It backfired.",
-      "summary": "OpenAI released GPT-6.2 Astra right before Anthropic's IPO, and the move backfired as Google took the No. 2 spot in the AI race. Host Ejaaz Ahamadeen breaks down the Astra reviews, Google's four Gemini 4 models in five weeks and Nvidia's record $115.8 billion quarter without Jensen Huang.",
-      "link": "https://finance.yahoo.com/video/openai-tried-ruin-anthropics-ipo-120000298.html?.tsrc=rss",
-      "time": "2026-11-20T12:00:00+00:00",
-      "touches": [
-        "GOOG",
-        "NVDA"
-      ],
-      "tags": [],
-      "new": true
-    },
-    {
-      "id": "rss:5be3ad68-74b8-3f30-92f6-0be2ee184492",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "GOOG",
-      "title": "Nvidia, Google and Amazon Back Anthropic as Founders Cash Out Nearly $2 Billion",
-      "summary": "Anthropic Raises $104.8 Billion as Founders Sell Shares Worth Nearly $2 Billion",
-      "link": "https://finance.yahoo.com/technology/ai/articles/nvidia-google-amazon-back-anthropic-115953506.html?.tsrc=rss",
-      "time": "2026-11-20T11:59:53+00:00",
-      "touches": [
-        "GOOG"
-      ],
-      "tags": [],
-      "new": true
-    },
-    {
-      "id": "rss:1fe27ab4-317b-33fd-8263-dbe2bf91b8da",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "NVDA",
-      "title": "Jensen Huang Pledges $350 Million to Nvidia-Backed CoreWeave",
-      "summary": "How A Huge Charity Gift Is Linking Nvidia, CoreWeave And The Wider AI Boom",
-      "link": "https://finance.yahoo.com/technology/ai/articles/jensen-huang-pledges-350-million-115855482.html?.tsrc=rss",
-      "time": "2026-11-20T11:58:55+00:00",
-      "touches": [
-        "NVDA"
-      ],
-      "tags": [],
-      "new": true
-    },
-    {
-      "id": "rss:8d85ed76-101b-3bd3-a621-db752dacc61c",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "INTC",
-      "title": "Can Intel Stock Jump 30%?",
-      "summary": "Today's big story: Will 2027 Be A 2022 Repeat For Stocks.",
-      "link": "https://www.trefis.com/stock/intc/articles/627242/can-intel-stock-jump-30-2/2026-11-20?.tsrc=rss",
-      "time": "2026-11-20T11:57:54+00:00",
-      "touches": [
-        "INTC",
-        "NVDA"
-      ],
-      "tags": [],
-      "new": true
-    },
-    {
-      "id": "rss:a768ac96-2699-342c-9621-65b1f719e8d2",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "INSM",
-      "title": "What Is Behind The Move In Insmed Stock?",
-      "summary": "Today's big story: Will 2027 Be A 2022 Repeat For Stocks.",
-      "link": "https://www.trefis.com/stock/insm/articles/627318/what-is-behind-the-move-in-insmed-stock/2026-11-20?.tsrc=rss",
-      "time": "2026-11-20T11:53:30+00:00",
-      "touches": [
-        "INSM"
-      ],
-      "tags": [],
-      "new": true
-    },
-    {
-      "id": "rss:b2d7073d-b8a4-38b6-b395-4b8a6181f093",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "NVDA",
-      "title": "Jensen Huang's Sudden Resignation Has Created a Flash Sale For These 3 AI Stocks",
-      "summary": "Huang's sudden departure has caused a meltdown across AI stocks. These three picks look like good buys.",
-      "link": "https://www.fool.com/investing/2026/11/20/jensen-huang-sudden-resignation-created-flash-sale-ai-stocks/?.tsrc=rss",
-      "time": "2026-11-20T11:50:02+00:00",
-      "touches": [
-        "NVDA"
-      ],
-      "tags": [
-        "people"
-      ],
-      "new": true
-    },
-    {
-      "id": "rss:60fca452-2096-3019-a925-a441edbc78da",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "NVDA",
-      "title": "If You Had Invested $5,000 in Amazon Stock 20 Years Ago, Here's How Much You'd Have Today",
-      "summary": "It's more than just the largest company in the world by sales.",
-      "link": "https://www.fool.com/investing/2026/11/20/if-youd-invested-5000-in-company-name-stock-20-years-ago-heres-how-much-youd-have-today/?.tsrc=rss",
-      "time": "2026-11-20T11:40:02+00:00",
-      "touches": [
-        "NVDA"
-      ],
-      "tags": [],
-      "new": true
-    },
-    {
-      "id": "rss:2c475db2-6849-3dc5-8429-4fbb456f600a",
+      "id": "rss:1c89d5c1-fc6f-37bf-80f9-d899d34cccd7",
       "source": "Yahoo Finance",
       "kind": "headline",
       "ticker": "UNH",
-      "title": "TD Cowen Names UnitedHealth Its 2027 Best Idea \u2014  Why Analyst Sees Mid-To-High-Teens EPS Growth For UNH Stock",
-      "summary": "TD Cowen even raised its price target on the stock to $455 from $402, according to TheFly.",
-      "link": "https://stocktwits.com/news-articles/markets/equity/td-cowen-names-united-health-its-2027-best-idea-why-analyst-sees-mid-to-high-teens-eps-growth-for-unh-stock/cNbSgzzR9KA?.tsrc=rss",
-      "time": "2026-11-20T11:37:53+00:00",
+      "title": "TD Cowen lifts UnitedHealth, Humana to Buy on improved earnings outlook",
+      "summary": "Investing.com -- TD Cowen upgraded UnitedHealth Group (NYSE: UNH) and Humana (NYSE: HUM) to Buy in notes on Friday. Telling investors that both health insurers have a clearer path to stronger earnings now that pricing in Medicare Advantage, the private alternative to traditional Medicare, has become more rational.",
+      "link": "https://finance.yahoo.com/healthcare/articles/td-cowen-lifts-unitedhealth-humana-155813927.html?.tsrc=rss",
+      "time": "2026-11-20T15:58:13+00:00",
       "touches": [
         "UNH"
       ],
@@ -1478,89 +1462,14 @@ $ news.py --tickers NVDA GOOG INTC PANW UNH CRWD COHR CAT INSM MSTR --json --hou
       "new": true
     },
     {
-      "id": "rss:d5dac4cb-f143-3cf9-9f6e-3a5936b00156",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "NVDA",
-      "title": "AI Chips Today - AI Revolution Drives VR and AR Market Expansion",
-      "summary": "The virtual and augmented reality (VR and AR) market is set for substantial growth, expected to expand from $32.3 billion in 2025 to $156.2 billion by 2031, marking a compound annual growth rate of 30.7%. This acceleration is driven by advancements in AI-enabled technologies, more robust 5G infrastructure, and heightened enterprise demand. The integration of AI enhances platform capabilities, enabling real-time environmental understanding and leveraging smart glasses, spatial computing, and...",
-      "link": "https://finance.yahoo.com/technology/ai/articles/ai-chips-today-ai-revolution-113737070.html?.tsrc=rss",
-      "time": "2026-11-20T11:37:37+00:00",
-      "touches": [
-        "NVDA"
-      ],
-      "tags": [],
-      "new": true
-    },
-    {
-      "id": "rss:111e8f17-b69b-3847-b660-fc598f791117",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "NVDA",
-      "title": "CoreWeave Gains $350 Million Computing Commitment as Debt Concerns Persist",
-      "summary": "Jensen Huang's foundation committed $350 million to CoreWeave computing services.",
-      "link": "https://finance.yahoo.com/technology/ai/articles/coreweave-gains-350-million-computing-113603215.html?.tsrc=rss",
-      "time": "2026-11-20T11:36:03+00:00",
-      "touches": [
-        "NVDA"
-      ],
-      "tags": [],
-      "new": true
-    },
-    {
-      "id": "rss:28bb6998-2f8f-3793-8c71-a0dfbef1658b",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "NVDA",
-      "title": "These 3 ETFs Could Set You Up for Life With Next to No Effort on Your Part",
-      "summary": "Want to build a well-diversified portfolio with just three ETFs? VOO, IXUS, and BND have got you covered.",
-      "link": "https://www.fool.com/investing/2026/11/20/these-3-etfs-could-set-you-up-for-life-with-next-to-no-effort-on-your-part/?.tsrc=rss",
-      "time": "2026-11-20T11:36:02+00:00",
-      "touches": [
-        "NVDA"
-      ],
-      "tags": [],
-      "new": true
-    },
-    {
-      "id": "rss:f0cc6e90-7138-38b5-baaf-21946abaa8b7",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "NVDA",
-      "title": "\u201cThe Open Checkbook Is Over.\u201d Nebius, Backed by $2 Billion From Nvidia, Stands to Gain",
-      "summary": "Key TakeawaysNVIDIA said many neoclouds are growing faster than their balance sheets can support, and its neocloud commitments now take effect only if those companies line up financing and get capacity running. Nebius already has a $2.",
-      "link": "https://www.tikr.com/blog/the-open-checkbook-is-over-nebius-backed-by-2-billion-from-nvidia-stands-to-gain?ref=yahoofinance&tlnk=yf-261120-x7v3x99j&.tsrc=rss",
-      "time": "2026-11-20T11:35:13+00:00",
-      "touches": [
-        "NVDA"
-      ],
-      "tags": [],
-      "new": true
-    },
-    {
-      "id": "rss:7cf01f13-b386-3ef8-a4bd-820f554a7f51",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "NVDA",
-      "title": "If a Bear Market Is Coming in 2027, History Says This 1 Simple Move Can Protect Your Investments",
-      "summary": "Bear markets are typically short-lived, but this investing behavior can have long-term consequences for building wealth.",
-      "link": "https://www.fool.com/investing/2026/11/20/if-a-bear-market-is-coming-in-2027-history-says-this-1-simple-move-can-protect-your-investments/?.tsrc=rss",
-      "time": "2026-11-20T11:35:02+00:00",
-      "touches": [
-        "NVDA"
-      ],
-      "tags": [],
-      "new": true
-    },
-    {
-      "id": "rss:78c8f075-aaf1-3a14-a949-009936bc97ec",
+      "id": "rss:1e336199-6831-3b0e-844d-3fe26c9c5f19",
       "source": "Yahoo Finance",
       "kind": "headline",
       "ticker": "GOOG",
-      "title": "Social Buzz: Wallstreetbets Stocks Mostly Lower Pre-Bell Friday; Sandisk, AMD to Decline",
-      "summary": "The most-talked-about stocks in the Reddit subforum Wallstreetbets were mostly lower hours before Fr",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/social-buzz-wallstreetbets-stocks-mostly-113227780.html?.tsrc=rss",
-      "time": "2026-11-20T11:32:27+00:00",
+      "title": "SDMC's Third Consecutive Year at Google's TV Summit, Showcasing Home Physical AI",
+      "summary": "At Google's 2026 TV Summit in Bangkok, SDMC (00901.HK) returned as an invited speaker for the third consecutive year, advancing its AI Home strategy under the theme \"Building the Future of Home Physical AI with Google\".",
+      "link": "https://finance.yahoo.com/technology/ai/articles/sdmcs-third-consecutive-googles-tv-155700409.html?.tsrc=rss",
+      "time": "2026-11-20T15:57:00+00:00",
       "touches": [
         "GOOG"
       ],
@@ -1568,23 +1477,91 @@ $ news.py --tickers NVDA GOOG INTC PANW UNH CRWD COHR CAT INSM MSTR --json --hou
       "new": true
     },
     {
-      "id": "rss:e6903f89-19a0-330d-b107-b6c49353a205",
+      "id": "rss:6016b162-cdb7-3335-9fc7-9ae2c1f449d8",
       "source": "Yahoo Finance",
       "kind": "headline",
-      "ticker": "UNH",
-      "title": "Can UnitedHealth Group Stock Rally 50% After This Dip?",
+      "ticker": "NVDA",
+      "title": "Is Micron's Record Inventory A Risk For The Stock?",
       "summary": "Today's big story: Will 2027 Be A 2022 Repeat For Stocks.",
-      "link": "https://www.trefis.com/stock/unh/articles/627177/can-unitedhealth-group-stock-rally-50-after-this-dip/2026-11-20?.tsrc=rss",
-      "time": "2026-11-20T11:09:42+00:00",
+      "link": "https://www.trefis.com/stock/mu/articles/627203/is-micron-s-record-inventory-a-risk-for-the-stock/2026-11-20?.tsrc=rss",
+      "time": "2026-11-20T15:55:14+00:00",
       "touches": [
-        "UNH"
+        "NVDA"
       ],
       "tags": [],
       "new": true
     },
     {
-      "id": "rss:3cd6bc70-3fc9-3b1c-86f6-d938cd9cdb86",
-      "so
+      "id": "rss:83466ace-a21a-3a2d-ab34-2e43efceb6f0",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "GOOG",
+      "title": "Nvidia Falls Behind Alphabet, Loses $2.3 Trillion In Market Value Since October Peak",
+      "summary": "Alphabet\u2019s market value stood at approximately $3.44 trillion, compared with $3.41 trillion for Nvidia, a difference of about $30 billion.",
+      "link": "https://stocktwits.com/news-articles/markets/equity/nvidia-falls-behind-alphabet-loses-2-3-trillion-in-market-value-since-october-peak/cNbSlqeR91T?.tsrc=rss",
+      "time": "2026-11-20T15:51:23+00:00",
+      "touches": [
+        "GOOG",
+        "NVDA"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:81cc45d2-9b91-3256-8b18-446a8d6b4ebe",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "NVDA",
+      "title": "Costco Just Made a New All-Time High After Announcing a $30-Per-Share Special Dividend. Is the Stock a Buy Before Dec. 10?",
+      "summary": "The $30-per-share special dividend is unprecedented, but it may take more than an extra cash payout to make Costco stock a buy.",
+      "link": "https://www.fool.com/investing/2026/11/20/costco-just-made-a-new-all-time-high-after-announcing-a-30-per-share-special-dividend-is-the-stock-a-buy-before-dec-10/?.tsrc=rss",
+      "time": "2026-11-20T15:50:02+00:00",
+      "touches": [
+        "NVDA"
+      ],
+      "tags": [
+        "capital"
+      ],
+      "new": true
+    },
+    {
+      "id": "rss:20e2cd3a-2ac1-4369-a850-8ba1b84aa26d",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "NVDA",
+      "title": "How Anthropic compares to other tech companies",
+      "summary": "Yahoo Finance Executive Editor Brian Sozzi takes a closer look at how Anthropic  (ANT) compares to other tech giants.",
+      "link": "https://finance.yahoo.com/video/how-anthropic-compares-to-other-tech-companies-154845765.html?.tsrc=rss",
+      "time": "2026-11-20T15:48:45+00:00",
+      "touches": [
+        "NVDA"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:51faae72-f9bf-343c-bbb8-b92e80056ee3",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "CAT",
+      "title": "Caterpillar\u2019s 35% 3-Month Downturn: This Sell-Side Firm Predicts 90% Returns From Here With Another Close Behind",
+      "summary": "Caterpillar posted record backlog and still lost a third of its value in three months while Deere and CNH held firm. Two firms say the damage is overdone, but one number in January could prove them wrong.",
+      "link": "https://247wallst.com/investing/2026/11/20/caterpillars-35-3-month-downturn-this-sell-side-firm-predicts-90-returns-from-here-with-another-close-behind/?.tsrc=rss",
+      "time": "2026-11-20T15:45:59+00:00",
+      "touches": [
+        "CAT"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:853fd1f3-ae07-37e2-ab81-1e60bbaa4ee3",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "NVDA",
+      "title": "Between IREN and CoreWeave Here\u2019s Who Has the Cleaner Path to a Sustained 30% Rebound",
+      "summary": "Both AI cloud darlings tumbled after NVIDIA flashed a warning on financing, yet one sits on billions in customer prepayments while the other still hunts a $6B funding gap. Which stock can actually power a lasting comeback?",
+      "link": "https://247wallst.com/investing/2026/11/20/between-iren-and-coreweave-heres-who-has-the-clean
 …gekürzt
 
 $ ptr.py new --json --state trader/state/pelosi.json --member pelosi  (Exit 1, 0 s)

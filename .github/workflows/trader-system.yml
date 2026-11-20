@@ -101,6 +101,9 @@ jobs:
               -d '{"ref":"main","inputs":{"teil":"schleife"}}' || echo "Nachfolger nicht bestellt"
             ende=$(( $(date +%s) + 18000 ))
             while :; do
+              # immer den neuesten Stand holen: ein Lauf, der Stunden gewartet hat, kennt sonst die Ergebnisse
+              # des Vorgängers nicht (z. B. lief der Morgen-Scan dann ein zweites Mal)
+              git fetch -q origin main && git reset -q --hard origin/main || echo "Stand nicht aktualisiert"
               if python3 tools/trader/system.py window; then
                 out=$(mktemp)
                 GITHUB_OUTPUT="$out" python3 tools/trader/system.py auto || echo "Durchgang mit Fehler, weiter"

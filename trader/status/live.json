@@ -1,21 +1,21 @@
 {
   "part": "live",
   "ok": true,
-  "summary": "3.268 Trades, 1.928 offen",
-  "ran_at": "2026-11-20T16:30:20Z",
+  "summary": "3.268 Trades, 1.821 offen",
+  "ran_at": "2026-11-20T16:40:20Z",
   "date_et": "2026-11-20",
   "steps": [
     {
       "name": "Labor live",
       "ok": true,
-      "detail": "397 Aktien, 3.268 Spielgeld-Trades, 1.928 offen"
+      "detail": "397 Aktien, 3.268 Spielgeld-Trades, 1.821 offen"
     }
   ],
   "data": {
     "date": "2026-11-20",
-    "as_of": "11:30 Uhr ET",
+    "as_of": "11:40 Uhr ET",
     "trades": 3268,
-    "open": 1928,
+    "open": 1821,
     "symbols": 397,
     "failed": 0,
     "open_push": "2026-11-20"

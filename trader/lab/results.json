@@ -1,5 +1,5 @@
 {
- "created_at": "2026-11-20T21:21:49Z",
+ "created_at": "2026-11-20T21:42:11Z",
  "symbols": 767,
  "days": 81,
  "train": [
@@ -61,12 +61,12 @@
    "test": {
     "n": 47,
     "t": 1.96,
-    "be_fee": 0.68,
+    "be_fee": 0.681,
     "win_rate": 66.0,
     "avg_r": 0.263,
     "avg_pct": 1.361,
-    "eur": 63.96,
-    "eur_after_fees": -30.04,
+    "eur": 63.97,
+    "eur_after_fees": -30.03,
     "profit_factor": 2.55,
     "max_dd_eur": -11.31,
     "stops": 6,
@@ -79,8 +79,8 @@
     "win_rate": 55.0,
     "avg_r": 0.155,
     "avg_pct": 0.98,
-    "eur": 108.81,
-    "eur_after_fees": -113.19,
+    "eur": 108.82,
+    "eur_after_fees": -113.18,
     "profit_factor": 1.82,
     "max_dd_eur": -22.18,
     "stops": 19,
@@ -121,8 +121,8 @@
     "win_rate": 66.0,
     "avg_r": 0.227,
     "avg_pct": 1.202,
-    "eur": 56.5,
-    "eur_after_fees": -37.5,
+    "eur": 56.51,
+    "eur_after_fees": -37.49,
     "profit_factor": 2.37,
     "max_dd_eur": -11.31,
     "stops": 6,
@@ -135,8 +135,8 @@
     "win_rate": 55.0,
     "avg_r": 0.127,
     "avg_pct": 0.811,
-    "eur": 90.04,
-    "eur_after_fees": -131.96,
+    "eur": 90.05,
+    "eur_after_fees": -131.95,
     "profit_factor": 1.68,
     "max_dd_eur": -22.18,
     "stops": 19,
@@ -177,8 +177,8 @@
     "win_rate": 66.0,
     "avg_r": 0.238,
     "avg_pct": 1.099,
-    "eur": 51.64,
-    "eur_after_fees": -42.36,
+    "eur": 51.65,
+    "eur_after_fees": -42.35,
     "profit_factor": 2.25,
     "max_dd_eur": -9.96,
     "stops": 6,
@@ -191,8 +191,8 @@
     "win_rate": 55.0,
     "avg_r": 0.122,
     "avg_pct": 0.664,
-    "eur": 73.71,
-    "eur_after_fees": -148.29,
+    "eur": 73.72,
+    "eur_after_fees": -148.28,
     "profit_factor": 1.56,
     "max_dd_eur": -20.64,
     "stops": 19,
@@ -214,13 +214,13 @@
    "label": "News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 3R",
    "train": {
     "n": 97,
-    "t": 1.73,
-    "be_fee": 0.424,
+    "t": 1.72,
+    "be_fee": 0.423,
     "win_rate": 49.5,
-    "avg_r": 0.185,
-    "avg_pct": 0.847,
-    "eur": 82.19,
-    "eur_after_fees": -111.81,
+    "avg_r": 0.183,
+    "avg_pct": 0.845,
+    "eur": 81.98,
+    "eur_after_fees": -112.02,
     "profit_factor": 1.65,
     "max_dd_eur": -22.38,
     "stops": 24,
@@ -233,8 +233,8 @@
     "win_rate": 58.8,
     "avg_r": 0.173,
     "avg_pct": 0.76,
-    "eur": 51.68,
-    "eur_after_fees": -84.32,
+    "eur": 51.69,
+    "eur_after_fees": -84.31,
     "profit_factor": 1.7,
     "max_dd_eur": -19.08,
     "stops": 12,
@@ -243,12 +243,12 @@
    "all": {
     "n": 165,
     "t": 2.24,
-    "be_fee": 0.406,
+    "be_fee": 0.405,
     "win_rate": 53.3,
-    "avg_r": 0.18,
-    "avg_pct": 0.811,
-    "eur": 133.87,
-    "eur_after_fees": -196.13,
+    "avg_r": 0.179,
+    "avg_pct": 0.81,
+    "eur": 133.67,
+    "eur_after_fees": -196.33,
     "profit_factor": 1.67,
     "max_dd_eur": -21.18,
     "stops": 36,
@@ -270,13 +270,13 @@
    "label": "News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 2R",
    "train": {
     "n": 97,
-    "t": 1.57,
-    "be_fee": 0.331,
+    "t": 1.56,
+    "be_fee": 0.33,
     "win_rate": 49.5,
-    "avg_r": 0.141,
-    "avg_pct": 0.662,
-    "eur": 64.25,
-    "eur_after_fees": -129.75,
+    "avg_r": 0.14,
+    "avg_pct": 0.66,
+    "eur": 64.03,
+    "eur_after_fees": -129.97,
     "profit_factor": 1.51,
     "max_dd_eur": -22.38,
     "stops": 24,
@@ -289,8 +289,8 @@
     "win_rate": 58.8,
     "avg_r": 0.139,
     "avg_pct": 0.631,
-    "eur": 42.93,
-    "eur_after_fees": -93.07,
+    "eur": 42.94,
+    "eur_after_fees": -93.06,
     "profit_factor": 1.58,
     "max_dd_eur": -19.21,
     "stops": 12,
@@ -299,12 +299,12 @@
    "all": {
     "n": 165,
     "t": 2.06,
-    "be_fee": 0.325,
+    "be_fee": 0.324,
     "win_rate": 53.3,
-    "avg_r": 0.141,
-    "avg_pct": 0.65,
-    "eur": 107.18,
-    "eur_after_fees": -222.82,
+    "avg_r": 0.14,
+    "avg_pct": 0.648,
+    "eur": 106.97,
+    "eur_after_fees": -223.03,
     "profit_factor": 1.54,
     "max_dd_eur": -23.14,
     "stops": 36,
@@ -326,13 +326,13 @@
    "label": "News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 1,5R",
    "train": {
     "n": 97,
-    "t": 1.41,
-    "be_fee": 0.271,
+    "t": 1.4,
+    "be_fee": 0.27,
     "win_rate": 49.5,
-    "avg_r": 0.119,
-    "avg_pct": 0.542,
-    "eur": 52.59,
-    "eur_after_fees": -141.41,
+    "avg_r": 0.117,
+    "avg_pct": 0.54,
+    "eur": 52.38,
+    "eur_after_fees": -141.62,
     "profit_factor": 1.42,
     "max_dd_eur": -22.38,
     "stops": 24,
@@ -345,8 +345,8 @@
     "win_rate": 58.8,
     "avg_r": 0.133,
     "avg_pct": 0.534,
-    "eur": 36.32,
-    "eur_after_fees": -99.68,
+    "eur": 36.33,
+    "eur_after_fees": -99.67,
     "profit_factor": 1.49,
     "max_dd_eur": -18.84,
     "stops": 12,
@@ -357,11 +357,11 @@
     "t": 1.89,
     "be_fee": 0.269,
     "win_rate": 53.3,
-    "avg_r": 0.125,
-    "avg_pct": 0.539,
-    "eur": 88.91,
-    "eur_after_fees": -241.09,
-    "profit_factor": 1.45,
+    "avg_r": 0.124,
+    "avg_pct": 0.538,
+    "eur": 88.71,
+    "eur_after_fees": -241.29,
+    "profit_factor": 1.44,
     "max_dd_eur": -22.57,
     "stops": 36,
     "targets": 31
@@ -382,51 +382,51 @@
    "id": "gap-2-v2-2R-fv4",
    "label": "News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 2R · nur bei Volumen über 4× normal",
    "train": {
-    "n": 93,
-    "t": 0.17,
-    "be_fee": 0.037,
-    "win_rate": 44.1,
-    "avg_r": -0.051,
-    "avg_pct": 0.073,
-    "eur": 6.83,
-    "eur_after_fees": -179.16,
-    "profit_factor": 1.05,
+    "n": 94,
+    "t": 0.14,
+    "be_fee": 0.029,
+    "win_rate": 43.6,
+    "avg_r": -0.062,
+    "avg_pct": 0.057,
+    "eur": 5.37,
+    "eur_after_fees": -182.63,
+    "profit_factor": 1.04,
     "max_dd_eur": -33.93,
-    "stops": 25,
+    "stops": 26,
     "targets": 4
    },
    "test": {
-    "n": 92,
-    "t": 1.22,
-    "be_fee": 0.215,
+    "n": 90,
+    "t": 1.23,
+    "be_fee": 0.221,
     "win_rate": 53.3,
     "avg_r": 0.039,
-    "avg_pct": 0.43,
-    "eur": 39.58,
-    "eur_after_fees": -144.42,
-    "profit_factor": 1.44,
+    "avg_pct": 0.443,
+    "eur": 39.86,
+    "eur_after_fees": -140.14,
+    "profit_factor": 1.45,
     "max_dd_eur": -15.67,
     "stops": 19,
     "targets": 6
    },
    "all": {
-    "n": 185,
-    "t": 0.91,
-    "be_fee": 0.125,
-    "win_rate": 48.6,
-    "avg_r": -0.006,
-    "avg_pct": 0.251,
-    "eur": 46.42,
-    "eur_after_fees": -323.58,
+    "n": 184,
+    "t": 0.89,
+    "be_fee": 0.123,
+    "win_rate": 48.4,
+    "avg_r": -0.013,
+    "avg_pct": 0.246,
+    "eur": 45.23,
+    "eur_after_fees": -322.77,
     "profit_factor": 1.2,
     "max_dd_eur": -42.04,
-    "stops": 44,
+    "stops": 45,
     "targets": 10
    },
    "passed": true,
-   "score": 0.43,
+   "score": 0.443,
    "weeks": {
-    "up": 8,
+    "up": 7,
     "n": 16
    }
   },
@@ -439,48 +439,48 @@
    "label": "News-Sprung: Lücke ≥ 2 % · Volumen ≥ 3× · Ziel 3R",
    "train": {
     "n": 101,
-    "t": 0.67,
-    "be_fee": 0.159,
+    "t": 0.66,
+    "be_fee": 0.158,
     "win_rate": 44.6,
     "avg_r": 0.016,
     "avg_pct": 0.317,
-    "eur": 32.02,
-    "eur_after_fees": -169.98,
+    "eur": 31.97,
+    "eur_after_fees": -170.03,
     "profit_factor": 1.21,
     "max_dd_eur": -31.63,
     "stops": 25,
     "targets": 2
    },
    "test": {
-    "n": 90,
-    "t": 1.01,
-    "be_fee": 0.206,
-    "win_rate": 52.2,
-    "avg_r": 0.032,
-    "avg_pct": 0.412,
-    "eur": 37.06,
-    "eur_after_fees": -142.94,
-    "profit_factor": 1.4,
+    "n": 89,
+    "t": 1.03,
+    "be_fee": 0.212,
+    "win_rate": 52.8,
+    "avg_r": 0.033,
+    "avg_pct": 0.423,
+    "eur": 37.66,
+    "eur_after_fees": -140.34,
+    "profit_factor": 1.41,
     "max_dd_eur": -16.31,
     "stops": 18,
     "targets": 2
    },
    "all": {
-    "n": 191,
+    "n": 190,
     "t": 1.15,
-    "be_fee": 0.181,
-    "win_rate": 48.2,
-    "avg_r": 0.023,
-    "avg_pct": 0.362,
-    "eur": 69.08,
-    "eur_after_fees": -312.92,
+    "be_fee": 0.183,
+    "win_rate": 48.4,
+    "avg_r": 0.024,
+    "avg_pct": 0.366,
+    "eur": 69.63,
+    "eur_after_fees": -310.37,
     "profit_factor": 1.28,
     "max_dd_eur": -34.6,
     "stops": 43,
     "targets": 4
    },
    "passed": true,
-   "score": 0.412,
+   "score": 0.423,
    "weeks": {
     "up": 10,
     "n": 16
@@ -497,103 +497,47 @@
    "train": {
     "n": 194,
     "t": 1.22,
-    "be_fee": 0.164,
+    "be_fee": 0.163,
     "win_rate": 46.9,
     "avg_r": 0.064,
-    "avg_pct": 0.328,
-    "eur": 63.57,
-    "eur_after_fees": -324.43,
+    "avg_pct": 0.326,
+    "eur": 63.22,
+    "eur_after_fees": -324.78,
     "profit_factor": 1.26,
     "max_dd_eur": -21.31,
     "stops": 55,
     "targets": 19
    },
    "test": {
-    "n": 159,
-    "t": 1.61,
-    "be_fee": 0.199,
-    "win_rate": 52.2,
-    "avg_r": 0.052,
-    "avg_pct": 0.398,
-    "eur": 63.35,
-    "eur_after_fees": -254.65,
-    "profit_factor": 1.43,
-    "max_dd_eur": -17.28,
+    "n": 158,
+    "t": 1.62,
+    "be_fee": 0.202,
+    "win_rate": 52.5,
+    "avg_r": 0.053,
+    "avg_pct": 0.405,
+    "eur": 63.95,
+    "eur_after_fees": -252.05,
+    "profit_factor": 1.44,
+    "max_dd_eur": -17.27,
     "stops": 34,
     "targets": 12
    },
    "all": {
-    "n": 353,
+    "n": 352,
     "t": 1.95,
-    "be_fee": 0.18,
-    "win_rate": 49.3,
+    "be_fee": 0.181,
+    "win_rate": 49.4,
     "avg_r": 0.059,
-    "avg_pct": 0.36,
-    "eur": 126.92,
-    "eur_after_fees": -579.08,
+    "avg_pct": 0.361,
+    "eur": 127.17,
+    "eur_after_fees": -576.83,
     "profit_factor": 1.32,
     "max_dd_eur": -25.29,
     "stops": 89,
     "targets": 31
    },
    "passed": true,
-   "score": 0.398,
-   "weeks": {
-    "up": 8,
-    "n": 16
-   }
-  },
-  {
-   "strategy": "gap",
-   "gap": 2.0,
-   "rvol": 2.0,
-   "target_r": 3.0,
-   "id": "gap-2-v2-3R",
-   "label": "News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 3R",
-   "train": {
-    "n": 201,
-    "t": 1.23,
-    "be_fee": 0.179,
-    "win_rate": 45.8,
-    "avg_r": 0.054,
-    "avg_pct": 0.357,
-    "eur": 71.8,
-    "eur_after_fees": -330.2,
-    "profit_factor": 1.28,
-    "max_dd_eur": -23.4,
-    "stops": 60,
-    "targets": 6
-   },
-   "test": {
-    "n": 170,
-    "t": 1.35,
-    "be_fee": 0.179,
-    "win_rate": 50.6,
-    "avg_r": 0.05,
-    "avg_pct": 0.358,
-    "eur": 60.91,
-    "eur_after_fees": -279.09,
-    "profit_factor": 1.37,
-    "max_dd_eur": -17.97,
-    "stops": 37,
-    "targets": 4
-   },
-   "all": {
-    "n": 371,
-    "t": 1.81,
-    "be_fee": 0.179,
-    "win_rate": 48.0,
-    "avg_r": 0.052,
-    "avg_pct": 0.358,
-    "eur": 132.71,
-    "eur_after_fees": -609.29,
-    "profit_factor": 1.32,
-    "max_dd_eur": -32.12,
-    "stops": 97,
-    "targets": 10
-   },
-   "passed": true,
-   "score": 0.358,
+   "score": 0.405,
    "weeks": {
     "up": 8,
     "n": 16
@@ -612,44 +556,44 @@
     "be_fee": 0.103,
     "win_rate": 44.6,
     "avg_r": 0.002,
-    "avg_pct": 0.206,
-    "eur": 20.77,
-    "eur_after_fees": -181.23,
+    "avg_pct": 0.205,
+    "eur": 20.72,
+    "eur_after_fees": -181.28,
     "profit_factor": 1.14,
     "max_dd_eur": -31.63,
     "stops": 25,
     "targets": 6
    },
    "test": {
-    "n": 90,
-    "t": 0.98,
-    "be_fee": 0.179,
-    "win_rate": 52.2,
-    "avg_r": 0.027,
-    "avg_pct": 0.358,
-    "eur": 32.21,
-    "eur_after_fees": -147.79,
-    "profit_factor": 1.34,
+    "n": 89,
+    "t": 1.0,
+    "be_fee": 0.184,
+    "win_rate": 52.8,
+    "avg_r": 0.028,
+    "avg_pct": 0.369,
+    "eur": 32.81,
+    "eur_after_fees": -145.19,
+    "profit_factor": 1.35,
     "max_dd_eur": -16.31,
     "stops": 18,
     "targets": 6
    },
    "all": {
-    "n": 191,
-    "t": 0.99,
-    "be_fee": 0.139,
-    "win_rate": 48.2,
-    "avg_r": 0.013,
-    "avg_pct": 0.277,
-    "eur": 52.98,
-    "eur_after_fees": -329.02,
+    "n": 190,
+    "t": 1.0,
+    "be_fee": 0.141,
+    "win_rate": 48.4,
+    "avg_r": 0.014,
+    "avg_pct": 0.282,
+    "eur": 53.52,
+    "eur_after_fees": -326.48,
     "profit_factor": 1.22,
     "max_dd_eur": -34.6,
     "stops": 43,
     "targets": 12
    },
    "passed": true,
-   "score": 0.358,
+   "score": 0.369,
    "weeks": {
     "up": 10,
     "n": 16
@@ -659,110 +603,53 @@
    "strategy": "gap",
    "gap": 2.0,
    "rvol": 2.0,
-   "target_r": 2.0,
-   "filt": "frueh",
-   "id": "gap-2-v2-2R-ffrueh",
-   "label": "News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 2R · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt",
+   "target_r": 3.0,
+   "id": "gap-2-v2-3R",
+   "label": "News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 3R",
    "train": {
     "n": 201,
-    "t": 1.15,
-    "be_fee": 0.149,
-    "win_rate": 46.8,
-    "avg_r": 0.051,
-    "avg_pct": 0.298,
-    "eur": 59.98,
-    "eur_after_fees": -342.02,
-    "profit_factor": 1.24,
-    "max_dd_eur": -22.69,
-    "stops": 59,
-    "targets": 19
+    "t": 1.23,
+    "be_fee": 0.178,
+    "win_rate": 45.8,
+    "avg_r": 0.053,
+    "avg_pct": 0.356,
+    "eur": 71.53,
+    "eur_after_fees": -330.47,
+    "profit_factor": 1.28,
+    "max_dd_eur": -23.4,
+    "stops": 60,
+    "targets": 6
    },
    "test": {
     "n": 169,
-    "t": 1.27,
-    "be_fee": 0.153,
+    "t": 1.36,
+    "be_fee": 0.182,
     "win_rate": 50.9,
     "avg_r": 0.051,
-    "avg_pct": 0.307,
-    "eur": 51.8,
-    "eur_after_fees": -286.2,
-    "profit_factor": 1.31,
-    "max_dd_eur": -16.46,
-    "stops": 36,
-    "targets": 13
+    "avg_pct": 0.364,
+    "eur": 61.51,
+    "eur_after_fees": -276.49,
+    "profit_factor": 1.37,
+    "max_dd_eur": -17.96,
+    "stops": 37,
+    "targets": 4
    },
    "all": {
     "n": 370,
-    "t": 1.69,
-    "be_fee": 0.151,
-    "win_rate": 48.6,
-    "avg_r": 0.051,
-    "avg_pct": 0.302,
-    "eur": 111.78,
-    "eur_after_fees": -628.22,
-    "profit_factor": 1.27,
-    "max_dd_eur": -31.03,
-    "stops": 95,
-    "targets": 32
+    "t": 1.81,
+    "be_fee": 0.18,
+    "win_rate": 48.1,
+    "avg_r": 0.052,
+    "avg_pct": 0.36,
+    "eur": 133.04,
+    "eur_after_fees": -606.96,
+    "profit_factor": 1.32,
+    "max_dd_eur": -32.12,
+    "stops": 97,
+    "targets": 10
    },
    "passed": true,
-   "score": 0.307,
-   "weeks": {
-    "up": 8,
-    "n": 16
-   }
-  },
-  {
-   "strategy": "gap",
-   "gap": 2.0,
-   "rvol": 2.0,
-   "target_r": 2.0,
-   "id": "gap-2-v2-2R",
-   "label": "News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 2R",
-   "train": {
-    "n": 201,
-    "t": 1.15,
-    "be_fee": 0.149,
-    "win_rate": 46.8,
-    "avg_r": 0.051,
-    "avg_pct": 0.298,
-    "eur": 59.98,
-    "eur_after_fees": -342.02,
-    "profit_factor": 1.24,
-    "max_dd_eur": -22.69,
-    "stops": 59,
-    "targets": 19
-   },
-   "test": {
-    "n": 170,
-    "t": 1.26,
-    "be_fee": 0.152,
-    "win_rate": 50.6,
-    "avg_r": 0.042,
-    "avg_pct": 0.304,
-    "eur": 51.63,
-    "eur_after_fees": -288.37,
-    "profit_factor": 1.31,
-    "max_dd_eur": -16.63,
-    "stops": 37,
-    "targets": 13
-   },
-   "all": {
-    "n": 371,
-    "t": 1.68,
-    "be_fee": 0.15,
-    "win_rate": 48.5,
-    "avg_r": 0.047,
-    "avg_pct": 0.301,
-    "eur": 111.6,
-    "eur_after_fees": -630.4,
-    "profit_factor": 1.27,
-    "max_dd_eur": -31.03,
-    "stops": 96,
-    "targets": 32
-   },
-   "passed": true,
-   "score": 0.304,
+   "score": 0.364,
    "weeks": {
     "up": 8,
     "n": 16
@@ -781,46 +668,159 @@
     "be_fee": 0.052,
     "win_rate": 44.6,
     "avg_r": -0.01,
-    "avg_pct": 0.104,
-    "eur": 10.49,
-    "eur_after_fees": -191.51,
+    "avg_pct": 0.103,
+    "eur": 10.44,
+    "eur_after_fees": -191.56,
     "profit_factor": 1.07,
     "max_dd_eur": -29.14,
     "stops": 25,
     "targets": 15
    },
    "test": {
-    "n": 90,
-    "t": 0.92,
-    "be_fee": 0.151,
-    "win_rate": 52.2,
-    "avg_r": 0.033,
-    "avg_pct": 0.303,
-    "eur": 27.25,
-    "eur_after_fees": -152.75,
-    "profit_factor": 1.29,
+    "n": 89,
+    "t": 0.94,
+    "be_fee": 0.156,
+    "win_rate": 52.8,
+    "avg_r": 0.034,
+    "avg_pct": 0.313,
+    "eur": 27.85,
+    "eur_after_fees": -150.15,
+    "profit_factor": 1.3,
     "max_dd_eur": -14.15,
     "stops": 18,
     "targets": 12
    },
    "all": {
-    "n": 191,
-    "t": 0.77,
-    "be_fee": 0.099,
-    "win_rate": 48.2,
-    "avg_r": 0.01,
-    "avg_pct": 0.198,
-    "eur": 37.73,
-    "eur_after_fees": -344.26,
-    "profit_factor": 1.15,
+    "n": 190,
+    "t": 0.78,
+    "be_fee": 0.101,
+    "win_rate": 48.4,
+    "avg_r": 0.011,
+    "avg_pct": 0.201,
+    "eur": 38.28,
+    "eur_after_fees": -341.72,
+    "profit_factor": 1.16,
     "max_dd_eur": -33.84,
     "stops": 43,
     "targets": 27
    },
    "passed": true,
-   "score": 0.303,
+   "score": 0.313,
    "weeks": {
     "up": 9,
+    "n": 16
+   }
+  },
+  {
+   "strategy": "gap",
+   "gap": 2.0,
+   "rvol": 2.0,
+   "target_r": 2.0,
+   "filt": "frueh",
+   "id": "gap-2-v2-2R-ffrueh",
+   "label": "News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 2R · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt",
+   "train": {
+    "n": 201,
+    "t": 1.14,
+    "be_fee": 0.148,
+    "win_rate": 46.8,
+    "avg_r": 0.05,
+    "avg_pct": 0.296,
+    "eur": 59.41,
+    "eur_after_fees": -342.59,
+    "profit_factor": 1.23,
+    "max_dd_eur": -22.69,
+    "stops": 59,
+    "targets": 19
+   },
+   "test": {
+    "n": 168,
+    "t": 1.28,
+    "be_fee": 0.156,
+    "win_rate": 51.2,
+    "avg_r": 0.051,
+    "avg_pct": 0.312,
+    "eur": 52.4,
+    "eur_after_fees": -283.6,
+    "profit_factor": 1.32,
+    "max_dd_eur": -16.45,
+    "stops": 36,
+    "targets": 13
+   },
+   "all": {
+    "n": 369,
+    "t": 1.69,
+    "be_fee": 0.151,
+    "win_rate": 48.8,
+    "avg_r": 0.051,
+    "avg_pct": 0.303,
+    "eur": 111.81,
+    "eur_after_fees": -626.19,
+    "profit_factor": 1.27,
+    "max_dd_eur": -31.03,
+    "stops": 95,
+    "targets": 32
+   },
+   "passed": true,
+   "score": 0.312,
+   "weeks": {
+    "up": 8,
+    "n": 16
+   }
+  },
+  {
+   "strategy": "gap",
+   "gap": 2.0,
+   "rvol": 2.0,
+   "target_r": 2.0,
+   "id": "gap-2-v2-2R",
+   "label": "News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 2R",
+   "train": {
+    "n": 201,
+    "t": 1.14,
+    "be_fee": 0.148,
+    "win_rate": 46.8,
+    "avg_r": 0.05,
+    "avg_pct": 0.296,
+    "eur": 59.41,
+    "eur_after_fees": -342.59,
+    "profit_factor": 1.23,
+    "max_dd_eur": -22.69,
+    "stops": 59,
+    "targets": 19
+   },
+   "test": {
+    "n": 169,
+    "t": 1.28,
+    "be_fee": 0.155,
+    "win_rate": 50.9,
+    "avg_r": 0.043,
+    "avg_pct": 0.309,
+    "eur": 52.23,
+    "eur_after_fees": -285.77,
+    "profit_factor": 1.32,
+    "max_dd_eur": -16.62,
+    "stops": 37,
+    "targets": 13
+   },
+   "all": {
+    "n": 370,
+    "t": 1.69,
+    "be_fee": 0.151,
+    "win_rate": 48.6,
+    "avg_r": 0.047,
+    "avg_pct": 0.302,
+    "eur": 111.63,
+    "eur_after_fees": -628.37,
+    "profit_factor": 1.27,
+    "max_dd_eur": -31.03,
+    "stops": 96,
+    "targets": 32
+   },
+   "passed": true,
+   "score": 0.309,
+   "weeks": {
+    "up": 8,
     "n": 16
    }
   },
@@ -834,47 +834,47 @@
    "train": {
     "n": 201,
     "t": 0.79,
-    "be_fee": 0.095,
+    "be_fee": 0.094,
     "win_rate": 46.8,
-    "avg_r": 0.021,
-    "avg_pct": 0.19,
-    "eur": 38.26,
-    "eur_after_fees": -363.74,
+    "avg_r": 0.02,
+    "avg_pct": 0.188,
+    "eur": 37.77,
+    "eur_after_fees": -364.23,
     "profit_factor": 1.15,
     "max_dd_eur": -22.77,
     "stops": 59,
     "targets": 36
    },
    "test": {
-    "n": 170,
-    "t": 1.17,
-    "be_fee": 0.131,
-    "win_rate": 51.2,
+    "n": 169,
+    "t": 1.19,
+    "be_fee": 0.134,
+    "win_rate": 51.5,
     "avg_r": 0.047,
-    "avg_pct": 0.262,
-    "eur": 44.56,
-    "eur_after_fees": -295.44,
+    "avg_pct": 0.267,
+    "eur": 45.16,
+    "eur_after_fees": -292.84,
     "profit_factor": 1.27,
-    "max_dd_eur": -17.27,
+    "max_dd_eur": -17.26,
     "stops": 37,
     "targets": 28
    },
    "all": {
-    "n": 371,
+    "n": 370,
     "t": 1.35,
     "be_fee": 0.112,
-    "win_rate": 48.8,
+    "win_rate": 48.9,
     "avg_r": 0.033,
-    "avg_pct": 0.223,
-    "eur": 82.83,
-    "eur_after_fees": -659.17,
+    "avg_pct": 0.224,
+    "eur": 82.94,
+    "eur_after_fees": -657.06,
     "profit_factor": 1.2,
     "max_dd_eur": -27.77,
     "stops": 96,
     "targets": 64
    },
    "passed": true,
-   "score": 0.262,
+   "score": 0.267,
    "weeks": {
     "up": 8,
     "n": 16
@@ -889,49 +889,49 @@
    "id": "sip-top20-atr0.1-eod-ffrueh",
    "label": "Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt",
    "train": {
-    "n": 81,
-    "t": 0.68,
-    "be_fee": 0.099,
-    "win_rate": 19.8,
-    "avg_r": 0.108,
-    "avg_pct": 0.197,
-    "eur": 15.99,
-    "eur_after_fees": -146.01,
-    "profit_factor": 1.26,
-    "max_dd_eur": -30.76,
-    "stops": 65,
+    "n": 82,
+    "t": 0.58,
+    "be_fee": 0.084,
+    "win_rate": 19.5,
+    "avg_r": 0.06,
+    "avg_pct": 0.169,
+    "eur": 13.85,
+    "eur_after_fees": -150.15,
+    "profit_factor": 1.22,
+    "max_dd_eur": -32.9,
+    "stops": 66,
     "targets": 0
    },
    "test": {
-    "n": 109,
-    "t": 0.54,
-    "be_fee": 0.059,
-    "win_rate": 21.1,
-    "avg_r": 0.238,
-    "avg_pct": 0.117,
-    "eur": 12.77,
-    "eur_after_fees": -205.23,
-    "profit_factor": 1.16,
+    "n": 110,
+    "t": 0.51,
+    "be_fee": 0.055,
+    "win_rate": 20.9,
+    "avg_r": 0.228,
+    "avg_pct": 0.111,
+    "eur": 12.17,
+    "eur_after_fees": -207.82,
+    "profit_factor": 1.15,
     "max_dd_eur": -16.11,
-    "stops": 85,
+    "stops": 86,
     "targets": 0
    },
    "all": {
-    "n": 190,
-    "t": 0.86,
-    "be_fee": 0.076,
-    "win_rate": 20.5,
-    "avg_r": 0.182,
-    "avg_pct": 0.151,
-    "eur": 28.76,
-    "eur_after_fees": -351.24,
-    "profit_factor": 1.21,
-    "max_dd_eur": -25.21,
-    "stops": 150,
+    "n": 192,
+    "t": 0.78,
+    "be_fee": 0.068,
+    "win_rate": 20.3,
+    "avg_r": 0.157,
+    "avg_pct": 0.136,
+    "eur": 26.02,
+    "eur_after_fees": -357.98,
+    "profit_factor": 1.18,
+    "max_dd_eur": -26.01,
+    "stops": 152,
     "targets": 0
    },
    "passed": true,
-   "score": 0.117,
+   "score": 0.111,
    "weeks": {
     "up": 8,
     "n": 14
@@ -1004,48 +1004,48 @@
    "label": "Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 2× normal",
    "train": {
     "n": 136,
-    "t": -1.36,
-    "be_fee": -0.123,
-    "win_rate": 41.9,
-    "avg_r": -0.097,
-    "avg_pct": -0.247,
-    "eur": -33.54,
-    "eur_after_fees": -305.54,
-    "profit_factor": 0.74,
-    "max_dd_eur": -40.2,
+    "t": -1.2,
+    "be_fee": -0.11,
+    "win_rate": 42.6,
+    "avg_r": -0.084,
+    "avg_pct": -0.22,
+    "eur": -29.93,
+    "eur_after_fees": -301.93,
+    "profit_factor": 0.76,
+    "max_dd_eur": -37.62,
     "stops": 38,
     "targets": 10
    },
    "test": {
-    "n": 170,
-    "t": 1.29,
-    "be_fee": 0.134,
-    "win_rate": 48.8,
-    "avg_r": 0.106,
-    "avg_pct": 0.267,
-    "eur": 45.4,
-    "eur_after_fees": -294.6,
-    "profit_factor": 1.28,
-    "max_dd_eur": -22.28,
+    "n": 171,
+    "t": 1.23,
+    "be_fee": 0.127,
+    "win_rate": 48.5,
+    "avg_r": 0.1,
+    "avg_pct": 0.255,
+    "eur": 43.6,
+    "eur_after_fees": -298.4,
+    "profit_factor": 1.26,
+    "max_dd_eur": -26.31,
     "stops": 41,
     "targets": 18
    },
    "all": {
-    "n": 306,
-    "t": 0.27,
-    "be_fee": 0.019,
-    "win_rate": 45.8,
-    "avg_r": 0.016,
-    "avg_pct": 0.039,
-    "eur": 11.86,
-    "eur_after_fees": -600.14,
-    "profit_factor": 1.04,
-    "max_dd_eur": -29.65,
+    "n": 307,
+    "t": 0.31,
+    "be_fee": 0.022,
+    "win_rate": 45.9,
+    "avg_r": 0.019,
+    "avg_pct": 0.045,
+    "eur": 13.67,
+    "eur_after_fees": -600.33,
+    "profit_factor": 1.05,
+    "max_dd_eur": -29.58,
     "stops": 79,
     "targets": 28
    },
    "passed": false,
-   "score": 0.267,
+   "score": 0.255,
    "weeks": {
     "up": 5,
     "n": 16
@@ -1060,49 +1060,49 @@
    "id": "orbmkt-30-low-2R-v1.5",
    "label": "Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R",
    "train": {
-    "n": 690,
-    "t": -2.49,
-    "be_fee": -0.093,
-    "win_rate": 39.0,
-    "avg_r": -0.141,
-    "avg_pct": -0.186,
-    "eur": -128.49,
-    "eur_after_fees": -1508.49,
-    "profit_factor": 0.76,
-    "max_dd_eur": -155.42,
-    "stops": 116,
+    "n": 696,
+    "t": -2.54,
+    "be_fee": -0.094,
+    "win_rate": 39.2,
+    "avg_r": -0.142,
+    "avg_pct": -0.188,
+    "eur": -131.09,
+    "eur_after_fees": -1523.09,
+    "profit_factor": 0.75,
+    "max_dd_eur": -156.23,
+    "stops": 118,
     "targets": 11
    },
    "test": {
-    "n": 723,
-    "t": 0.98,
-    "be_fee": 0.042,
+    "n": 722,
+    "t": 0.93,
+    "be_fee": 0.04,
     "win_rate": 48.5,
-    "avg_r": 0.007,
-    "avg_pct": 0.085,
-    "eur": 61.11,
-    "eur_after_fees": -1384.89,
+    "avg_r": 0.004,
+    "avg_pct": 0.08,
+    "eur": 58.02,
+    "eur_after_fees": -1385.98,
     "profit_factor": 1.11,
     "max_dd_eur": -33.69,
-    "stops": 83,
+    "stops": 85,
     "targets": 15
    },
    "all": {
-    "n": 1413,
-    "t": -0.83,
-    "be_fee": -0.024,
+    "n": 1418,
+    "t": -0.9,
+    "be_fee": -0.026,
     "win_rate": 43.9,
-    "avg_r": -0.065,
-    "avg_pct": -0.048,
-    "eur": -67.38,
-    "eur_after_fees": -2893.38,
-    "profit_factor": 0.94,
-    "max_dd_eur": -105.57,
-    "stops": 199,
+    "avg_r": -0.068,
+    "avg_pct": -0.052,
+    "eur": -73.07,
+    "eur_after_fees": -2909.07,
+    "profit_factor": 0.93,
+    "max_dd_eur": -106.05,
+    "stops": 203,
     "targets": 26
    },
    "passed": false,
-   "score": 0.085,
+   "score": 0.08,
    "weeks": {
     "up": 5,
     "n": 16
@@ -1132,35 +1132,35 @@
     "targets": 3
    },
    "test": {
-    "n": 120,
-    "t": 0.3,
-    "be_fee": 0.04,
-    "win_rate": 55.0,
+    "n": 122,
+    "t": 0.29,
+    "be_fee": 0.038,
+    "win_rate": 54.9,
     "avg_r": -0.024,
-    "avg_pct": 0.08,
-    "eur": 9.59,
-    "eur_after_fees": -230.41,
-    "profit_factor": 1.09,
-    "max_dd_eur": -20.38,
+    "avg_pct": 0.076,
+    "eur": 9.28,
+    "eur_after_fees": -234.72,
+    "profit_factor": 1.08,
+    "max_dd_eur": -21.18,
     "stops": 11,
     "targets": 0
    },
    "all": {
-    "n": 262,
+    "n": 264,
     "t": -0.2,
-    "be_fee": -0.019,
+    "be_fee": -0.02,
     "win_rate": 48.9,
     "avg_r": -0.066,
-    "avg_pct": -0.038,
-    "eur": -9.98,
-    "eur_after_fees": -533.98,
+    "avg_pct": -0.039,
+    "eur": -10.3,
+    "eur_after_fees": -538.3,
     "profit_factor": 0.96,
     "max_dd_eur": -41.8,
     "stops": 30,
     "targets": 3
    },
    "passed": false,
-   "score": 0.08,
+   "score": 0.076,
    "weeks": {
     "up": 6,
     "n": 16
@@ -1175,49 +1175,49 @@
    "id": "orbmkt-30-low-1.5R-v1.5",
    "label": "Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 1,5R",
    "train": {
-    "n": 690,
-    "t": -2.84,
-    "be_fee": -0.101,
-    "win_rate": 39.1,
-    "avg_r": -0.143,
-    "avg_pct": -0.202,
-    "eur": -139.12,
-    "eur_after_fees": -1519.12,
-    "profit_factor": 0.74,
-    "max_dd_eur": -160.09,
-    "stops": 115,
+    "n": 696,
+    "t": -2.89,
+    "be_fee": -0.102,
+    "win_rate": 39.4,
+    "avg_r": -0.144,
+    "avg_pct": -0.204,
+    "eur": -141.72,
+    "eur_after_fees": -1533.72,
+    "profit_factor": 0.73,
+    "max_dd_eur": -160.9,
+    "stops": 117,
     "targets": 19
    },
    "test": {
-    "n": 723,
-    "t": 0.72,
-    "be_fee": 0.03,
+    "n": 722,
+    "t": 0.67,
+    "be_fee": 0.028,
     "win_rate": 48.5,
-    "avg_r": 0.001,
-    "avg_pct": 0.06,
-    "eur": 43.3,
-    "eur_after_fees": -1402.7,
-    "profit_factor": 1.08,
-    "max_dd_eur": -38.75,
-    "stops": 83,
+    "avg_r": -0.001,
+    "avg_pct": 0.056,
+    "eur": 40.22,
+    "eur_after_fees": -1403.78,
+    "profit_factor": 1.07,
+    "max_dd_eur": -39.88,
+    "stops": 85,
     "targets": 41
    },
    "all": {
-    "n": 1413,
-    "t": -1.24,
-    "be_fee": -0.034,
-    "win_rate": 43.9,
-    "avg_r": -0.069,
-    "avg_pct": -0.068,
-    "eur": -95.82,
-    "eur_after_fees": -2921.82,
+    "n": 1418,
+    "t": -1.31,
+    "be_fee": -0.036,
+    "win_rate": 44.0,
+    "avg_r": -0.071,
+    "avg_pct": -0.072,
+    "eur": -101.51,
+    "eur_after_fees": -2937.51,
     "profit_factor": 0.91,
-    "max_dd_eur": -122.49,
-    "stops": 198,
+    "max_dd_eur": -121.35,
+    "stops": 202,
     "targets": 60
    },
    "passed": false,
-   "score": 0.06,
+   "score": 0.056,
    "weeks": {
     "up": 5,
     "n": 16
@@ -1232,49 +1232,49 @@
    "id": "orb-30-mid-2R-v1.5",
    "label": "Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 2R · Volumen ≥ 1,5×",
    "train": {
-    "n": 1604,
-    "t": -3.31,
-    "be_fee": -0.069,
+    "n": 1607,
+    "t": -3.44,
+    "be_fee": -0.071,
     "win_rate": 37.6,
-    "avg_r": -0.166,
-    "avg_pct": -0.138,
-    "eur": -221.35,
-    "eur_after_fees": -3429.35,
+    "avg_r": -0.167,
+    "avg_pct": -0.143,
+    "eur": -229.67,
+    "eur_after_fees": -3443.67,
     "profit_factor": 0.79,
-    "max_dd_eur": -234.3,
-    "stops": 644,
-    "targets": 133
+    "max_dd_eur": -240.83,
+    "stops": 646,
+    "targets": 135
    },
    "test": {
     "n": 1033,
-    "t": 0.3,
-    "be_fee": 0.009,
-    "win_rate": 44.0,
-    "avg_r": -0.041,
-    "avg_pct": 0.017,
-    "eur": 18.05,
-    "eur_after_fees": -2047.94,
-    "profit_factor": 1.03,
-    "max_dd_eur": -57.61,
+    "t": 0.25,
+    "be_fee": 0.007,
+    "win_rate": 43.9,
+    "avg_r": -0.044,
+    "avg_pct": 0.015,
+    "eur": 15.11,
+    "eur_after_fees": -2050.89,
+    "profit_factor": 1.02,
+    "max_dd_eur": -56.41,
     "stops": 364,
-    "targets": 102
+    "targets": 101
    },
    "all": {
-    "n": 2637,
-    "t": -2.25,
-    "be_fee": -0.039,
+    "n": 2640,
+    "t": -2.38,
+    "be_fee": -0.041,
     "win_rate": 40.1,
-    "avg_r": -0.117,
-    "avg_pct": -0.077,
-    "eur": -203.3,
-    "eur_after_fees": -5477.3,
-    "profit_factor": 0.89,
-    "max_dd_eur": -229.4,
-    "stops": 1008,
-    "targets": 235
+    "avg_r": -0.119,
+    "avg_pct": -0.081,
+    "eur": -214.56,
+    "eur_after_fees": -5494.56,
+    "profit_factor": 0.88,
+    "max_dd_eur": -237.04,
+    "stops": 1010,
+    "targets": 236
    },
    "passed": false,
-   "score": 0.017,
+   "score": 0.015,
    "weeks": {
     "up": 6,
     "n": 16
@@ -1289,108 +1289,51 @@
    "id": "orb-30-mid-1.5R-v1.5",
    "label": "Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 1,5R · Volumen ≥ 1,5×",
    "train": {
-    "n": 1604,
-    "t": -3.44,
-    "be_fee": -0.069,
+    "n": 1607,
+    "t": -3.58,
+    "be_fee": -0.071,
     "win_rate": 38.7,
-    "avg_r": -0.165,
-    "avg_pct": -0.138,
-    "eur": -221.52,
-    "eur_after_fees": -3429.52,
-    "profit_factor": 0.79,
-    "max_dd_eur": -230.61,
-    "stops": 633,
+    "avg_r": -0.167,
+    "avg_pct": -0.143,
+    "eur": -229.55,
+    "eur_after_fees": -3443.55,
+    "profit_factor": 0.78,
+    "max_dd_eur": -238.63,
+    "stops": 635,
     "targets": 250
    },
    "test": {
     "n": 1033,
-    "t": 0.08,
-    "be_fee": 0.002,
-    "win_rate": 44.5,
-    "avg_r": -0.051,
-    "avg_pct": 0.005,
-    "eur": 4.77,
-    "eur_after_fees": -2061.23,
-    "profit_factor": 1.01,
-    "max_dd_eur": -62.93,
-    "stops": 364,
-    "targets": 184
-   },
-   "all": {
-    "n": 2637,
-    "t": -2.5,
-    "be_fee": -0.041,
-    "win_rate": 41.0,
-    "avg_r": -0.121,
-    "avg_pct": -0.082,
-    "eur": -216.75,
-    "eur_after_fees": -5490.75,
-    "profit_factor": 0.88,
-    "max_dd_eur": -234.07,
-    "stops": 997,
-    "targets": 434
-   },
-   "passed": false,
-   "score": 0.005,
-   "weeks": {
-    "up": 6,
-    "n": 16
-   }
-  },
-  {
-   "strategy": "orb",
-   "or_min": 30,
-   "stop": "low",
-   "target_r": 2.0,
-   "rvol": 1.5,
-   "id": "orb-30-low-2R-v1.5",
-   "label": "Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5×",
-   "train": {
-    "n": 1607,
-    "t": -3.29,
-    "be_fee": -0.078,
-    "win_rate": 40.6,
-    "avg_r": -0.114,
-    "avg_pct": -0.155,
-    "eur": -249.74,
-    "eur_after_fees": -3463.74,
-    "profit_factor": 0.78,
-    "max_dd_eur": -267.06,
-    "stops": 242,
-    "targets": 26
-   },
-   "test": {
-    "n": 1033,
-    "t": -0.02,
-    "be_fee": -0.001,
-    "win_rate": 46.7,
-    "avg_r": -0.031,
-    "avg_pct": -0.002,
-    "eur": -1.68,
-    "eur_after_fees": -2067.68,
+    "t": 0.04,
+    "be_fee": 0.001,
+    "win_rate": 44.4,
+    "avg_r": -0.053,
+    "avg_pct": 0.002,
+    "eur": 2.49,
+    "eur_after_fees": -2063.51,
     "profit_factor": 1.0,
-    "max_dd_eur": -69.12,
-    "stops": 146,
-    "targets": 18
+    "max_dd_eur": -61.74,
+    "stops": 364,
+    "targets": 183
    },
    "all": {
     "n": 2640,
-    "t": -2.41,
-    "be_fee": -0.048,
-    "win_rate": 43.0,
-    "avg_r": -0.082,
-    "avg_pct": -0.095,
-    "eur": -251.42,
-    "eur_after_fees": -5531.42,
+    "t": -2.62,
+    "be_fee": -0.043,
+    "win_rate": 40.9,
+    "avg_r": -0.123,
+    "avg_pct": -0.086,
+    "eur": -227.06,
+    "eur_after_fees": -5507.06,
     "profit_factor": 0.87,
-    "max_dd_eur": -266.57,
-    "stops": 388,
-    "targets": 44
+    "max_dd_eur": -241.05,
+    "stops": 999,
+    "targets": 433
    },
    "passed": false,
-   "score": -0.002,
+   "score": 0.002,
    "weeks": {
-    "up": 4,
+    "up": 6,
     "n": 16
    }
   },
@@ -1407,48 +1350,105 @@
     "n": 760,
     "t": -1.34,
     "be_fee": -0.053,
-    "win_rate": 43.7,
-    "avg_r": -0.082,
-    "avg_pct": -0.106,
-    "eur": -80.79,
-    "eur_after_fees": -1600.79,
+    "win_rate": 43.8,
+    "avg_r": -0.081,
+    "avg_pct": -0.107,
+    "eur": -80.97,
+    "eur_after_fees": -1600.97,
     "profit_factor": 0.86,
-    "max_dd_eur": -117.99,
+    "max_dd_eur": -118.09,
     "stops": 113,
     "targets": 14
    },
    "test": {
-    "n": 533,
-    "t": -0.1,
-    "be_fee": -0.005,
-    "win_rate": 48.6,
-    "avg_r": -0.037,
-    "avg_pct": -0.011,
-    "eur": -5.75,
-    "eur_after_fees": -1071.75,
+    "n": 532,
+    "t": -0.05,
+    "be_fee": -0.002,
+    "win_rate": 48.5,
+    "avg_r": -0.038,
+    "avg_pct": -0.005,
+    "eur": -2.48,
+    "eur_after_fees": -1066.48,
     "profit_factor": 0.99,
-    "max_dd_eur": -32.49,
-    "stops": 57,
+    "max_dd_eur": -35.42,
+    "stops": 58,
     "targets": 5
    },
    "all": {
-    "n": 1293,
-    "t": -1.06,
-    "be_fee": -0.033,
+    "n": 1292,
+    "t": -1.02,
+    "be_fee": -0.032,
     "win_rate": 45.7,
     "avg_r": -0.064,
-    "avg_pct": -0.067,
-    "eur": -86.54,
-    "eur_after_fees": -2672.54,
-    "profit_factor": 0.91,
-    "max_dd_eur": -108.26,
-    "stops": 170,
+    "avg_pct": -0.065,
+    "eur": -83.45,
+    "eur_after_fees": -2667.45,
+    "profit_factor": 0.92,
+    "max_dd_eur": -102.15,
+    "stops": 171,
     "targets": 19
    },
    "passed": false,
-   "score": -0.011,
+   "score": -0.005,
    "weeks": {
     "up": 5,
+    "n": 16
+   }
+  },
+  {
+   "strategy": "orb",
+   "or_min": 30,
+   "stop": "low",
+   "target_r": 2.0,
+   "rvol": 1.5,
+   "id": "orb-30-low-2R-v1.5",
+   "label": "Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5×",
+   "train": {
+    "n": 1610,
+    "t": -3.45,
+    "be_fee": -0.081,
+    "win_rate": 40.6,
+    "avg_r": -0.116,
+    "avg_pct": -0.163,
+    "eur": -261.7,
+    "eur_after_fees": -3481.7,
+    "profit_factor": 0.77,
+    "max_dd_eur": -277.23,
+    "stops": 244,
+    "targets": 26
+   },
+   "test": {
+    "n": 1033,
+    "t": -0.09,
+    "be_fee": -0.003,
+    "win_rate": 46.6,
+    "avg_r": -0.033,
+    "avg_pct": -0.006,
+    "eur": -6.34,
+    "eur_after_fees": -2072.34,
+    "profit_factor": 0.99,
+    "max_dd_eur": -69.87,
+    "stops": 148,
+    "targets": 18
+   },
+   "all": {
+    "n": 2643,
+    "t": -2.57,
+    "be_fee": -0.051,
+    "win_rate": 42.9,
+    "avg_r": -0.084,
+    "avg_pct": -0.101,
+    "eur": -268.04,
+    "eur_after_fees": -5554.04,
+    "profit_factor": 0.86,
+    "max_dd_eur": -280.61,
+    "stops": 392,
+    "targets": 44
+   },
+   "passed": false,
+   "score": -0.006,
+   "weeks": {
+    "up": 4,
     "n": 16
    }
   },
@@ -1461,109 +1461,108 @@
    "id": "orb-30-mid-1R-v1.5",
    "label": "Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 1R · Volumen ≥ 1,5×",
    "train": {
-    "n": 1604,
-    "t": -3.57,
-    "be_fee": -0.066,
+    "n": 1607,
+    "t": -3.73,
+    "be_fee": -0.068,
     "win_rate": 41.8,
-    "avg_r": -0.169,
-    "avg_pct": -0.131,
-    "eur": -210.66,
-    "eur_after_fees": -3418.66,
-    "profit_factor": 0.79,
-    "max_dd_eur": -225.75,
-    "stops": 613,
-    "targets": 460
+    "avg_r": -0.171,
+    "avg_pct": -0.137,
+    "eur": -219.61,
+    "eur_after_fees": -3433.61,
+    "profit_factor": 0.78,
+    "max_dd_eur": -233.56,
+    "stops": 615,
+    "targets": 457
    },
    "test": {
     "n": 1033,
-    "t": -0.26,
-    "be_fee": -0.006,
-    "win_rate": 48.2,
-    "avg_r": -0.057,
-    "avg_pct": -0.013,
-    "eur": -13.4,
-    "eur_after_fees": -2079.4,
+    "t": -0.28,
+    "be_fee": -0.007,
+    "win_rate": 48.1,
+    "avg_r": -0.058,
+    "avg_pct": -0.014,
+    "eur": -14.48,
+    "eur_after_fees": -2080.48,
     "profit_factor": 0.98,
-    "max_dd_eur": -61.52,
+    "max_dd_eur": -60.33,
     "stops": 344,
-    "targets": 325
+    "targets": 324
    },
    "all": {
-    "n": 2637,
-    "t": -2.84,
-    "be_fee": -0.042,
-    "win_rate": 44.3,
-    "avg_r": -0.125,
-    "avg_pct": -0.085,
-    "eur": -224.05,
-    "eur_after_fees": -5498.05,
-    "profit_factor": 0.87,
-    "max_dd_eur": -243.57,
-    "stops": 957,
-    "targets": 785
+    "n": 2640,
+    "t": -2.97,
+    "be_fee": -0.044,
+    "win_rate": 44.2,
+    "avg_r": -0.127,
+    "avg_pct": -0.089,
+    "eur": -234.09,
+    "eur_after_fees": -5514.09,
+    "profit_factor": 0.86,
+    "max_dd_eur": -251.27,
+    "stops": 959,
+    "targets": 781
    },
    "passed": false,
-   "score": -0.013,
+   "score": -0.014,
    "weeks": {
     "up": 7,
     "n": 16
    }
   },
   {
-   "strategy": "orb",
-   "or_min": 30,
-   "stop": "low",
-   "target_r": 1.5,
-   "rvol": 1.5,
-   "id": "orb-30-low-1.5R-v1.5",
-   "label": "Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1,5R · Volumen ≥ 1,5×",
+   "strategy": "sip",
+   "top": 10,
+   "atr_stop": 0.1,
+   "target_r": 2.0,
+   "id": "sip-top10-atr0.1-2R",
+   "label": "Stocks in Play (Studie): Top 10 nach Startvolumen · Stopp 10 % ATR · Ziel 2R",
    "train": {
-    "n": 1607,
-    "t": -3.47,
-    "be_fee": -0.08,
-    "win_rate": 40.8,
-    "avg_r": -0.115,
-    "avg_pct": -0.16,
-    "eur": -257.18,
-    "eur_after_fees": -3471.18,
-    "profit_factor": 0.77,
-    "max_dd_eur": -268.47,
-    "stops": 241,
-    "targets": 58
+    "n": 293,
+    "t": -1.04,
+    "be_fee": -0.028,
+    "win_rate": 37.9,
+    "avg_r": -0.21,
+    "avg_pct": -0.056,
+    "eur": -16.29,
+    "eur_after_fees": -602.29,
+    "profit_factor": 0.85,
+    "max_dd_eur": -34.41,
+    "stops": 182,
+    "targets": 111
    },
    "test": {
-    "n": 1033,
-    "t": -0.27,
+    "n": 208,
+    "t": -0.25,
     "be_fee": -0.009,
-    "win_rate": 46.7,
-    "avg_r": -0.035,
-    "avg_pct": -0.018,
-    "eur": -18.44,
-    "eur_after_fees": -2084.44,
-    "profit_factor": 0.98,
-    "max_dd_eur": -78.35,
-    "stops": 146,
-    "targets": 52
+    "win_rate": 40.4,
+    "avg_r": -0.136,
+    "avg_pct": -0.017,
+    "eur": -3.62,
+    "eur_after_fees": -419.62,
+    "profit_factor": 0.96,
+    "max_dd_eur": -15.53,
+    "stops": 124,
+    "targets": 84
    },
    "all": {
-    "n": 2640,
-    "t": -2.72,
-    "be_fee": -0.052,
-    "win_rate": 43.1,
-    "avg_r": -0.084,
-    "avg_pct": -0.104,
-    "eur": -275.62,
-    "eur_after_fees": -5555.62,
-    "profit_factor": 0.86,
-    "max_dd_eur": -290.6,
-    "stops": 387,
-    "targets": 110
+    "n": 501,
+    "t": -0.94,
+    "be_fee": -0.02,
+    "win_rate": 38.9,
+    "avg_r": -0.179,
+    "avg_pct": -0.04,
+    "eur": -19.91,
+    "eur_after_fees": -1021.9,
+    "profit_factor": 0.9,
+    "max_dd_eur": -45.16,
+    "stops": 306,
+    "targets": 195
    },
    "passed": false,
-   "score": -0.018,
+   "score": -0.017,
    "weeks": {
-    "up": 4,
-    "n": 16
+    "up": 6,
+    "n": 14
    }
   },
   {
@@ -1575,46 +1574,46 @@
    "id": "orb-30-mid-1.5R-v0",
    "label": "Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 1,5R",
    "train": {
-    "n": 13694,
-    "t": -14.36,
+    "n": 13692,
+    "t": -14.34,
     "be_fee": -0.076,
-    "win_rate": 38.3,
+    "win_rate": 38.2,
     "avg_r": -0.185,
     "avg_pct": -0.152,
-    "eur": -2080.3,
-    "eur_after_fees": -29468.3,
+    "eur": -2078.07,
+    "eur_after_fees": -29462.07,
     "profit_factor": 0.73,
-    "max_dd_eur": -2088.71,
-    "stops": 5924,
-    "targets": 2386
+    "max_dd_eur": -2086.48,
+    "stops": 5922,
+    "targets": 2388
    },
    "test": {
-    "n": 5977,
+    "n": 5975,
     "t": -0.97,
     "be_fee": -0.009,
     "win_rate": 43.3,
     "avg_r": -0.058,
     "avg_pct": -0.019,
-    "eur": -111.81,
-    "eur_after_fees": -12065.81,
+    "eur": -112.1,
+    "eur_after_fees": -12062.1,
     "profit_factor": 0.97,
-    "max_dd_eur": -142.52,
-    "stops": 2254,
+    "max_dd_eur": -142.81,
+    "stops": 2253,
     "targets": 1240
    },
    "all": {
-    "n": 19671,
-    "t": -11.83,
+    "n": 19667,
+    "t": -11.82,
     "be_fee": -0.056,
     "win_rate": 39.8,
     "avg_r": -0.146,
     "avg_pct": -0.111,
-    "eur": -2192.11,
-    "eur_after_fees": -41534.11,
+    "eur": -2190.17,
+    "eur_after_fees": -41524.17,
     "profit_factor": 0.8,
-    "max_dd_eur": -2210.68,
-    "stops": 8178,
-    "targets": 3626
+    "max_dd_eur": -2208.74,
+    "stops": 8175,
+    "targets": 3628
    },
    "passed": false,
    "score": -0.019,
@@ -1626,51 +1625,108 @@
   {
    "strategy": "orb",
    "or_min": 30,
+   "stop": "low",
+   "target_r": 1.5,
+   "rvol": 1.5,
+   "id": "orb-30-low-1.5R-v1.5",
+   "label": "Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1,5R · Volumen ≥ 1,5×",
+   "train": {
+    "n": 1610,
+    "t": -3.64,
+    "be_fee": -0.084,
+    "win_rate": 40.7,
+    "avg_r": -0.117,
+    "avg_pct": -0.167,
+    "eur": -269.14,
+    "eur_after_fees": -3489.14,
+    "profit_factor": 0.76,
+    "max_dd_eur": -280.43,
+    "stops": 243,
+    "targets": 58
+   },
+   "test": {
+    "n": 1033,
+    "t": -0.33,
+    "be_fee": -0.011,
+    "win_rate": 46.6,
+    "avg_r": -0.038,
+    "avg_pct": -0.022,
+    "eur": -23.1,
+    "eur_after_fees": -2089.1,
+    "profit_factor": 0.97,
+    "max_dd_eur": -78.63,
+    "stops": 148,
+    "targets": 52
+   },
+   "all": {
+    "n": 2643,
+    "t": -2.89,
+    "be_fee": -0.055,
+    "win_rate": 43.0,
+    "avg_r": -0.086,
+    "avg_pct": -0.111,
+    "eur": -292.24,
+    "eur_after_fees": -5578.24,
+    "profit_factor": 0.85,
+    "max_dd_eur": -304.64,
+    "stops": 391,
+    "targets": 110
+   },
+   "passed": false,
+   "score": -0.022,
+   "weeks": {
+    "up": 4,
+    "n": 16
+   }
+  },
+  {
+   "strategy": "orb",
+   "or_min": 30,
    "stop": "mid",
    "target_r": 2.0,
    "rvol": 0.0,
    "id": "orb-30-mid-2R-v0",
    "label": "Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 2R",
    "train": {
-    "n": 13694,
+    "n": 13692,
     "t": -14.74,
     "be_fee": -0.081,
     "win_rate": 36.7,
     "avg_r": -0.197,
     "avg_pct": -0.162,
-    "eur": -2216.19,
-    "eur_after_fees": -29604.19,
+    "eur": -2215.86,
+    "eur_after_fees": -29599.86,
     "profit_factor": 0.72,
-    "max_dd_eur": -2229.99,
-    "stops": 6042,
-    "targets": 1271
+    "max_dd_eur": -2229.66,
+    "stops": 6040,
+    "targets": 1270
    },
    "test": {
-    "n": 5977,
+    "n": 5975,
     "t": -1.12,
     "be_fee": -0.011,
     "win_rate": 41.7,
     "avg_r": -0.06,
     "avg_pct": -0.023,
-    "eur": -135.42,
-    "eur_after_fees": -12089.42,
+    "eur": -134.7,
+    "eur_after_fees": -12084.7,
     "profit_factor": 0.96,
-    "max_dd_eur": -165.01,
-    "stops": 2297,
-    "targets": 697
+    "max_dd_eur": -164.3,
+    "stops": 2296,
+    "targets": 698
    },
    "all": {
-    "n": 19671,
-    "t": -12.18,
+    "n": 19667,
+    "t": -12.17,
     "be_fee": -0.06,
     "win_rate": 38.2,
     "avg_r": -0.156,
     "avg_pct": -0.12,
-    "eur": -2351.61,
-    "eur_after_fees": -41693.61,
+    "eur": -2350.57,
+    "eur_after_fees": -41684.57,
     "profit_factor": 0.79,
-    "max_dd_eur": -2377.14,
-    "stops": 8339,
+    "max_dd_eur": -2376.1,
+    "stops": 8336,
     "targets": 1968
    },
    "passed": false,
@@ -1678,62 +1734,6 @@
    "weeks": {
     "up": 4,
     "n": 17
-   }
-  },
-  {
-   "strategy": "sip",
-   "top": 10,
-   "atr_stop": 0.1,
-   "target_r": 2.0,
-   "id": "sip-top10-atr0.1-2R",
-   "label": "Stocks in Play (Studie): Top 10 nach Startvolumen · Stopp 10 % ATR · Ziel 2R",
-   "train": {
-    "n": 292,
-    "t": -0.93,
-    "be_fee": -0.025,
-    "win_rate": 38.0,
-    "avg_r": -0.196,
-    "avg_pct": -0.05,
-    "eur": -14.46,
-    "eur_after_fees": -598.46,
-    "profit_factor": 0.86,
-    "max_dd_eur": -32.23,
-    "stops": 181,
-    "targets": 111
-   },
-   "test": {
-    "n": 208,
-    "t": -0.43,
-    "be_fee": -0.015,
-    "win_rate": 39.9,
-    "avg_r": -0.154,
-    "avg_pct": -0.03,
-    "eur": -6.29,
-    "eur_after_fees": -422.29,
-    "profit_factor": 0.93,
-    "max_dd_eur": -16.49,
-    "stops": 125,
-    "targets": 83
-   },
-   "all": {
-    "n": 500,
-    "t": -0.98,
-    "be_fee": -0.021,
-    "win_rate": 38.8,
-    "avg_r": -0.179,
-    "avg_pct": -0.042,
-    "eur": -20.75,
-    "eur_after_fees": -1020.75,
-    "profit_factor": 0.89,
-    "max_dd_eur": -42.87,
-    "stops": 306,
-    "targets": 194
-   },
-   "passed": false,
-   "score": -0.03,
-   "weeks": {
-    "up": 6,
-    "n": 14
    }
   },
   {
@@ -1745,49 +1745,49 @@
    "id": "orb-30-mid-1R-v0",
    "label": "Opening-Range-Ausbruch 30 Min · Stopp Mitte der Spanne · Ziel 1R",
    "train": {
-    "n": 13694,
+    "n": 13692,
     "t": -14.76,
     "be_fee": -0.071,
     "win_rate": 42.6,
     "avg_r": -0.175,
     "avg_pct": -0.143,
-    "eur": -1954.7,
-    "eur_after_fees": -29342.7,
+    "eur": -1954.39,
+    "eur_after_fees": -29338.39,
     "profit_factor": 0.73,
-    "max_dd_eur": -1959.8,
-    "stops": 5635,
+    "max_dd_eur": -1959.49,
+    "stops": 5633,
     "targets": 4274
    },
    "test": {
-    "n": 5977,
+    "n": 5975,
     "t": -1.7,
     "be_fee": -0.015,
     "win_rate": 47.4,
     "avg_r": -0.066,
-    "avg_pct": -0.03,
-    "eur": -176.81,
-    "eur_after_fees": -12130.81,
+    "avg_pct": -0.029,
+    "eur": -176.06,
+    "eur_after_fees": -12126.06,
     "profit_factor": 0.95,
-    "max_dd_eur": -201.67,
-    "stops": 2138,
+    "max_dd_eur": -200.92,
+    "stops": 2137,
     "targets": 2108
    },
    "all": {
-    "n": 19671,
-    "t": -12.66,
+    "n": 19667,
+    "t": -12.65,
     "be_fee": -0.054,
     "win_rate": 44.1,
     "avg_r": -0.142,
     "avg_pct": -0.108,
-    "eur": -2131.51,
-    "eur_after_fees": -41473.5,
+    "eur": -2130.45,
+    "eur_after_fees": -41464.45,
     "profit_factor": 0.8,
-    "max_dd_eur": -2143.67,
-    "stops": 7773,
+    "max_dd_eur": -2142.61,
+    "stops": 7770,
     "targets": 6382
    },
    "passed": false,
-   "score": -0.03,
+   "score": -0.029,
    "weeks": {
     "up": 4,
     "n": 17
@@ -1802,50 +1802,106 @@
    "label": "Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · Ziel 2R",
    "train": {
     "n": 576,
-    "t": -2.71,
+    "t": -2.73,
     "be_fee": -0.046,
-    "win_rate": 33.9,
-    "avg_r": -0.322,
-    "avg_pct": -0.091,
-    "eur": -52.43,
-    "eur_after_fees": -1204.43,
+    "win_rate": 34.0,
+    "avg_r": -0.321,
+    "avg_pct": -0.092,
+    "eur": -53.22,
+    "eur_after_fees": -1205.22,
     "profit_factor": 0.75,
-    "max_dd_eur": -61.33,
-    "stops": 381,
-    "targets": 195
+    "max_dd_eur": -62.17,
+    "stops": 380,
+    "targets": 196
    },
    "test": {
-    "n": 418,
-    "t": -0.75,
-    "be_fee": -0.018,
-    "win_rate": 37.1,
+    "n": 417,
+    "t": -0.69,
+    "be_fee": -0.016,
+    "win_rate": 37.2,
     "avg_r": -0.191,
-    "avg_pct": -0.035,
-    "eur": -14.65,
-    "eur_after_fees": -850.65,
-    "profit_factor": 0.91,
-    "max_dd_eur": -25.89,
-    "stops": 263,
+    "avg_pct": -0.032,
+    "eur": -13.4,
+    "eur_after_fees": -847.4,
+    "profit_factor": 0.92,
+    "max_dd_eur": -25.74,
+    "stops": 262,
     "targets": 155
    },
    "all": {
-    "n": 994,
-    "t": -2.45,
+    "n": 993,
+    "t": -2.43,
     "be_fee": -0.034,
-    "win_rate": 35.2,
+    "win_rate": 35.3,
     "avg_r": -0.267,
     "avg_pct": -0.067,
-    "eur": -67.08,
-    "eur_after_fees": -2055.08,
+    "eur": -66.62,
+    "eur_after_fees": -2052.62,
     "profit_factor": 0.82,
-    "max_dd_eur": -75.98,
-    "stops": 644,
-    "targets": 350
+    "max_dd_eur": -77.42,
+    "stops": 642,
+    "targets": 351
    },
    "passed": false,
-   "score": -0.035,
+   "score": -0.032,
    "weeks": {
-    "up": 3,
+    "up": 4,
+    "n": 14
+   }
+  },
+  {
+   "strategy": "sip",
+   "top": 20,
+   "atr_stop": 0.2,
+   "target_r": 2.0,
+   "id": "sip-top20-atr0.2-2R",
+   "label": "Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 20 % ATR · Ziel 2R",
+   "train": {
+    "n": 578,
+    "t": -2.12,
+    "be_fee": -0.051,
+    "win_rate": 31.3,
+    "avg_r": -0.209,
+    "avg_pct": -0.103,
+    "eur": -59.52,
+    "eur_after_fees": -1215.52,
+    "profit_factor": 0.81,
+    "max_dd_eur": -75.02,
+    "stops": 390,
+    "targets": 170
+   },
+   "test": {
+    "n": 417,
+    "t": -0.85,
+    "be_fee": -0.029,
+    "win_rate": 33.8,
+    "avg_r": -0.139,
+    "avg_pct": -0.058,
+    "eur": -24.21,
+    "eur_after_fees": -858.22,
+    "profit_factor": 0.9,
+    "max_dd_eur": -50.41,
+    "stops": 267,
+    "targets": 130
+   },
+   "all": {
+    "n": 995,
+    "t": -2.1,
+    "be_fee": -0.042,
+    "win_rate": 32.4,
+    "avg_r": -0.18,
+    "avg_pct": -0.084,
+    "eur": -83.73,
+    "eur_after_fees": -2073.73,
+    "profit_factor": 0.85,
+    "max_dd_eur": -109.09,
+    "stops": 657,
+    "targets": 300
+   },
+   "passed": false,
+   "score": -0.058,
+   "weeks": {
+    "up": 4,
     "n": 14
    }
   },
@@ -1858,49 +1914,49 @@
    "id": "orb-30-low-1R-v1.5",
    "label": "Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1R · Volumen ≥ 1,5×",
    "train": {
-    "n": 1607,
-    "t": -3.05,
-    "be_fee": -0.069,
+    "n": 1610,
+    "t": -3.22,
+    "be_fee": -0.072,
     "win_rate": 41.6,
-    "avg_r": -0.107,
-    "avg_pct": -0.138,
-    "eur": -221.59,
-    "eur_after_fees": -3435.59,
-    "profit_factor": 0.8,
-    "max_dd_eur": -232.89,
-    "stops": 240,
-    "targets": 183
+    "avg_r": -0.108,
+    "avg_pct": -0.145,
+    "eur": -233.08,
+    "eur_after_fees": -3453.08,
+    "profit_factor": 0.79,
+    "max_dd_eur": -243.56,
+    "stops": 242,
+    "targets": 184
    },
    "test": {
     "n": 1033,
-    "t": -0.85,
-    "be_fee": -0.027,
-    "win_rate": 46.9,
-    "avg_r": -0.05,
-    "avg_pct": -0.054,
-    "eur": -55.9,
-    "eur_after_fees": -2121.9,
-    "profit_factor": 0.93,
-    "max_dd_eur": -103.45,
-    "stops": 146,
-    "targets": 131
+    "t": -0.92,
+    "be_fee": -0.029,
+    "win_rate": 46.8,
+    "avg_r": -0.052,
+    "avg_pct": -0.059,
+    "eur": -60.5,
+    "eur_after_fees": -2126.5,
+    "profit_factor": 0.92,
+    "max_dd_eur": -103.73,
+    "stops": 148,
+    "targets": 130
    },
    "all": {
-    "n": 2640,
-    "t": -2.83,
-    "be_fee": -0.053,
+    "n": 2643,
+    "t": -3.0,
+    "be_fee": -0.056,
     "win_rate": 43.6,
-    "avg_r": -0.085,
-    "avg_pct": -0.105,
-    "eur": -277.49,
-    "eur_after_fees": -5557.49,
-    "profit_factor": 0.86,
-    "max_dd_eur": -290.56,
-    "stops": 386,
+    "avg_r": -0.086,
+    "avg_pct": -0.111,
+    "eur": -293.59,
+    "eur_after_fees": -5579.59,
+    "profit_factor": 0.85,
+    "max_dd_eur": -305.53,
+    "stops": 390,
     "targets": 314
    },
    "passed": false,
-   "score": -0.054,
+   "score": -0.059,
    "weeks": {
     "up": 6,
     "n": 16
@@ -1916,45 +1972,45 @@
    "id": "orb-30-low-2R-v0-ffrueh",
    "label": "Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt",
    "train": {
-    "n": 13554,
-    "t": -14.57,
+    "n": 13552,
+    "t": -14.58,
     "be_fee": -0.094,
     "win_rate": 40.8,
     "avg_r": -0.13,
     "avg_pct": -0.187,
-    "eur": -2534.88,
-    "eur_after_fees": -29642.88,
+    "eur": -2535.37,
+    "eur_after_fees": -29639.37,
     "profit_factor": 0.7,
-    "max_dd_eur": -2552.32,
+    "max_dd_eur": -2552.81,
     "stops": 2514,
     "targets": 231
    },
    "test": {
-    "n": 5919,
-    "t": -2.59,
+    "n": 5917,
+    "t": -2.58,
     "be_fee": -0.031,
     "win_rate": 45.3,
     "avg_r": -0.045,
     "avg_pct": -0.061,
-    "eur": -362.86,
-    "eur_after_fees": -12200.86,
+    "eur": -362.61,
+    "eur_after_fees": -12196.61,
     "profit_factor": 0.91,
-    "max_dd_eur": -403.75,
-    "stops": 986,
+    "max_dd_eur": -403.5,
+    "stops": 985,
     "targets": 131
    },
    "all": {
-    "n": 19473,
+    "n": 19469,
     "t": -12.96,
     "be_fee": -0.074,
     "win_rate": 42.1,
     "avg_r": -0.104,
     "avg_pct": -0.149,
-    "eur": -2897.74,
-    "eur_after_fees": -41843.74,
+    "eur": -2897.98,
+    "eur_after_fees": -41835.98,
     "profit_factor": 0.77,
-    "max_dd_eur": -2932.48,
-    "stops": 3500,
+    "max_dd_eur": -2932.71,
+    "stops": 3499,
     "targets": 362
    },
    "passed": false,
@@ -1973,45 +2029,45 @@
    "id": "orb-30-low-2R-v0",
    "label": "Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R",
    "train": {
-    "n": 13709,
+    "n": 13707,
     "t": -14.73,
     "be_fee": -0.093,
     "win_rate": 40.5,
     "avg_r": -0.135,
     "avg_pct": -0.187,
-    "eur": -2562.23,
-    "eur_after_fees": -29980.23,
+    "eur": -2562.72,
+    "eur_after_fees": -29976.72,
     "profit_factor": 0.7,
-    "max_dd_eur": -2579.68,
+    "max_dd_eur": -2580.17,
     "stops": 2579,
     "targets": 236
    },
    "test": {
-    "n": 5983,
+    "n": 5981,
     "t": -2.63,
     "be_fee": -0.031,
     "win_rate": 45.1,
     "avg_r": -0.049,
     "avg_pct": -0.062,
-    "eur": -369.27,
-    "eur_after_fees": -12335.27,
+    "eur": -369.01,
+    "eur_after_fees": -12331.01,
     "profit_factor": 0.91,
-    "max_dd_eur": -410.16,
-    "stops": 1007,
+    "max_dd_eur": -409.9,
+    "stops": 1006,
     "targets": 134
    },
    "all": {
-    "n": 19692,
+    "n": 19688,
     "t": -13.1,
     "be_fee": -0.074,
     "win_rate": 41.9,
     "avg_r": -0.109,
     "avg_pct": -0.149,
-    "eur": -2931.5,
-    "eur_after_fees": -42315.5,
+    "eur": -2931.74,
+    "eur_after_fees": -42307.74,
     "profit_factor": 0.77,
-    "max_dd_eur": -2966.24,
-    "stops": 3586,
+    "max_dd_eur": -2966.47,
+    "stops": 3585,
     "targets": 370
    },
    "passed": false,
@@ -2030,45 +2086,45 @@
    "id": "orb-30-low-1.5R-v0",
    "label": "Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1,5R",
    "train": {
-    "n": 13709,
+    "n": 13707,
     "t": -14.54,
     "be_fee": -0.091,
     "win_rate": 40.8,
     "avg_r": -0.131,
     "avg_pct": -0.182,
-    "eur": -2498.49,
-    "eur_after_fees": -29916.49,
+    "eur": -2498.55,
+    "eur_after_fees": -29912.55,
     "profit_factor": 0.71,
-    "max_dd_eur": -2516.74,
+    "max_dd_eur": -2516.8,
     "stops": 2566,
     "targets": 618
    },
    "test": {
-    "n": 5983,
-    "t": -2.81,
+    "n": 5981,
+    "t": -2.8,
     "be_fee": -0.032,
     "win_rate": 45.1,
-    "avg_r": -0.051,
+    "avg_r": -0.05,
     "avg_pct": -0.065,
-    "eur": -386.98,
-    "eur_after_fees": -12352.98,
+    "eur": -386.71,
+    "eur_after_fees": -12348.71,
     "profit_factor": 0.9,
-    "max_dd_eur": -422.13,
-    "stops": 1007,
+    "max_dd_eur": -421.86,
+    "stops": 1006,
     "targets": 344
    },
    "all": {
-    "n": 19692,
+    "n": 19688,
     "t": -13.09,
     "be_fee": -0.073,
     "win_rate": 42.1,
     "avg_r": -0.106,
     "avg_pct": -0.147,
-    "eur": -2885.46,
-    "eur_after_fees": -42269.46,
+    "eur": -2885.26,
+    "eur_after_fees": -42261.26,
     "profit_factor": 0.77,
-    "max_dd_eur": -2919.79,
-    "stops": 3573,
+    "max_dd_eur": -2919.59,
+    "stops": 3572,
     "targets": 962
    },
    "passed": false,
@@ -2087,46 +2143,46 @@
    "id": "orb-15-mid-2R-v0",
    "label": "Opening-Range-Ausbruch 15 Min · Stopp Mitte der Spanne · Ziel 2R",
    "train": {
-    "n": 16879,
-    "t": -16.38,
+    "n": 16876,
+    "t": -16.36,
     "be_fee": -0.081,
     "win_rate": 35.2,
-    "avg_r": -0.213,
+    "avg_r": -0.212,
     "avg_pct": -0.162,
-    "eur": -2731.74,
-    "eur_after_fees": -36489.74,
+    "eur": -2727.68,
+    "eur_after_fees": -36479.68,
     "profit_factor": 0.72,
-    "max_dd_eur": -2746.04,
-    "stops": 8586,
+    "max_dd_eur": -2741.99,
+    "stops": 8583,
     "targets": 2124
    },
    "test": {
-    "n": 7523,
-    "t": -3.65,
-    "be_fee": -0.033,
+    "n": 7520,
+    "t": -3.62,
+    "be_fee": -0.032,
     "win_rate": 38.9,
-    "avg_r": -0.097,
+    "avg_r": -0.096,
     "avg_pct": -0.065,
-    "eur": -490.18,
-    "eur_after_fees": -15536.18,
+    "eur": -486.92,
+    "eur_after_fees": -15526.92,
     "profit_factor": 0.9,
-    "max_dd_eur": -506.41,
-    "stops": 3588,
-    "targets": 1197
+    "max_dd_eur": -503.15,
+    "stops": 3585,
+    "targets": 1198
    },
    "all": {
-    "n": 24402,
-    "t": -15.04,
+    "n": 24396,
+    "t": -15.0,
     "be_fee": -0.066,
-    "win_rate": 36.3,
+    "win_rate": 36.4,
     "avg_r": -0.177,
     "avg_pct": -0.132,
-    "eur": -3221.92,
-    "eur_after_fees": -52025.92,
+    "eur": -3214.61,
+    "eur_after_fees": -52006.61,
     "profit_factor": 0.78,
-    "max_dd_eur": -3241.42,
-    "stops": 12174,
-    "targets": 3321
+    "max_dd_eur": -3234.11,
+    "stops": 12168,
+    "targets": 3322
    },
    "passed": false,
    "score": -0.065,
@@ -2145,45 +2201,45 @@
    "label": "Opening-Range-Ausbruch 15 Min · Stopp Mitte der Spanne · Ziel 1R · Volumen ≥ 1,5×",
    "train": {
     "n": 2031,
-    "t": -4.35,
-    "be_fee": -0.065,
-    "win_rate": 43.8,
-    "avg_r": -0.159,
-    "avg_pct": -0.13,
-    "eur": -263.69,
-    "eur_after_fees": -4325.69,
+    "t": -4.32,
+    "be_fee": -0.064,
+    "win_rate": 43.9,
+    "avg_r": -0.157,
+    "avg_pct": -0.129,
+    "eur": -261.86,
+    "eur_after_fees": -4323.86,
     "profit_factor": 0.78,
-    "max_dd_eur": -274.33,
-    "stops": 863,
-    "targets": 671
+    "max_dd_eur": -272.51,
+    "stops": 862,
+    "targets": 673
    },
    "test": {
-    "n": 1367,
+    "n": 1369,
     "t": -1.59,
     "be_fee": -0.034,
-    "win_rate": 46.9,
+    "win_rate": 46.8,
     "avg_r": -0.105,
     "avg_pct": -0.068,
-    "eur": -92.91,
-    "eur_after_fees": -2826.91,
+    "eur": -93.0,
+    "eur_after_fees": -2831.0,
     "profit_factor": 0.9,
-    "max_dd_eur": -111.17,
-    "stops": 565,
+    "max_dd_eur": -110.56,
+    "stops": 566,
     "targets": 476
    },
    "all": {
-    "n": 3398,
-    "t": -4.23,
+    "n": 3400,
+    "t": -4.21,
     "be_fee": -0.052,
-    "win_rate": 45.0,
-    "avg_r": -0.137,
-    "avg_pct": -0.105,
-    "eur": -356.59,
-    "eur_after_fees": -7152.59,
+    "win_rate": 45.1,
+    "avg_r": -0.136,
+    "avg_pct": -0.104,
+    "eur": -354.86,
+    "eur_after_fees": -7154.86,
     "profit_factor": 0.83,
-    "max_dd_eur": -364.99,
+    "max_dd_eur": -363.26,
     "stops": 1428,
-    "targets": 1147
+    "targets": 1149
    },
    "passed": false,
    "score": -0.068,
@@ -2201,46 +2257,46 @@
    "id": "orb-30-low-1R-v0",
    "label": "Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 1R",
    "train": {
-    "n": 13709,
-    "t": -14.09,
+    "n": 13707,
+    "t": -14.1,
     "be_fee": -0.086,
     "win_rate": 41.8,
     "avg_r": -0.123,
     "avg_pct": -0.172,
-    "eur": -2353.02,
-    "eur_after_fees": -29771.02,
+    "eur": -2354.43,
+    "eur_after_fees": -29768.43,
     "profit_factor": 0.72,
-    "max_dd_eur": -2368.77,
+    "max_dd_eur": -2370.18,
     "stops": 2528,
-    "targets": 1850
+    "targets": 1848
    },
    "test": {
-    "n": 5983,
+    "n": 5981,
     "t": -3.15,
     "be_fee": -0.035,
     "win_rate": 45.8,
     "avg_r": -0.054,
     "avg_pct": -0.07,
-    "eur": -417.13,
-    "eur_after_fees": -12383.13,
+    "eur": -417.03,
+    "eur_after_fees": -12379.03,
     "profit_factor": 0.9,
-    "max_dd_eur": -449.85,
-    "stops": 1001,
+    "max_dd_eur": -449.75,
+    "stops": 1000,
     "targets": 939
    },
    "all": {
-    "n": 19692,
-    "t": -12.99,
+    "n": 19688,
+    "t": -13.0,
     "be_fee": -0.07,
     "win_rate": 43.0,
     "avg_r": -0.102,
     "avg_pct": -0.141,
-    "eur": -2770.15,
-    "eur_after_fees": -42154.15,
+    "eur": -2771.46,
+    "eur_after_fees": -42147.46,
     "profit_factor": 0.78,
-    "max_dd_eur": -2799.4,
-    "stops": 3529,
-    "targets": 2789
+    "max_dd_eur": -2800.72,
+    "stops": 3528,
+    "targets": 2787
    },
    "passed": false,
    "score": -0.07,
@@ -2258,46 +2314,46 @@
    "id": "orb-15-mid-1.5R-v0",
    "label": "Opening-Range-Ausbruch 15 Min · Stopp Mitte der Spanne · Ziel 1,5R",
    "train": {
-    "n": 16879,
-    "t": -16.35,
+    "n": 16876,
+    "t": -16.33,
     "be_fee": -0.076,
     "win_rate": 37.4,
     "avg_r": -0.198,
     "avg_pct": -0.153,
-    "eur": -2582.45,
-    "eur_after_fees": -36340.45,
+    "eur": -2578.18,
+    "eur_after_fees": -36330.18,
     "profit_factor": 0.73,
-    "max_dd_eur": -2595.56,
-    "stops": 8349,
-    "targets": 3594
+    "max_dd_eur": -2591.28,
+    "stops": 8346,
+    "targets": 3595
    },
    "test": {
-    "n": 7523,
-    "t": -4.2,
+    "n": 7520,
+    "t": -4.18,
     "be_fee": -0.035,
-    "win_rate": 40.8,
-    "avg_r": -0.102,
+    "win_rate": 40.9,
+    "avg_r": -0.101,
     "avg_pct": -0.07,
-    "eur": -528.8,
-    "eur_after_fees": -15574.8,
+    "eur": -525.92,
+    "eur_after_fees": -15565.92,
     "profit_factor": 0.89,
-    "max_dd_eur": -541.61,
-    "stops": 3502,
+    "max_dd_eur": -538.72,
+    "stops": 3499,
     "targets": 1891
    },
    "all": {
-    "n": 24402,
-    "t": -15.4,
+    "n": 24396,
+    "t": -15.36,
     "be_fee": -0.064,
     "win_rate": 38.5,
     "avg_r": -0.168,
     "avg_pct": -0.127,
-    "eur": -3111.25,
-    "eur_after_fees": -51915.25,
+    "eur": -3104.09,
+    "eur_after_fees": -51896.1,
     "profit_factor": 0.78,
-    "max_dd_eur": -3123.5,
-    "stops": 11851,
-    "targets": 5485
+    "max_dd_eur": -3116.34,
+    "stops": 11845,
+    "targets": 5486
    },
    "passed": false,
    "score": -0.07,
@@ -2307,59 +2363,175 @@
    }
   },
   {
-   "strategy": "sip",
-   "top": 20,
-   "atr_stop": 0.2,
-   "target_r": 2.0,
-   "id": "sip-top20-atr0.2-2R",
-   "label": "Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 20 % ATR · Ziel 2R",
+   "strategy": "orb",
+   "or_min": 15,
+   "stop": "mid",
+   "target_r": 1.0,
+   "rvol": 0.0,
+   "id": "orb-15-mid-1R-v0",
+   "label": "Opening-Range-Ausbruch 15 Min · Stopp Mitte der Spanne · Ziel 1R",
    "train": {
-    "n": 578,
-    "t": -2.15,
-    "be_fee": -0.052,
-    "win_rate": 31.1,
-    "avg_r": -0.213,
-    "avg_pct": -0.104,
-    "eur": -60.04,
-    "eur_after_fees": -1216.04,
-    "profit_factor": 0.81,
-    "max_dd_eur": -75.54,
-    "stops": 391,
-    "targets": 169
+    "n": 16876,
+    "t": -17.27,
+    "be_fee": -0.073,
+    "win_rate": 42.8,
+    "avg_r": -0.192,
+    "avg_pct": -0.146,
+    "eur": -2461.53,
+    "eur_after_fees": -36213.53,
+    "profit_factor": 0.72,
+    "max_dd_eur": -2465.23,
+    "stops": 7836,
+    "targets": 5847
    },
    "test": {
-    "n": 418,
-    "t": -1.09,
-    "be_fee": -0.037,
-    "win_rate": 33.3,
-    "avg_r": -0.155,
-    "avg_pct": -0.074,
-    "eur": -30.96,
-    "eur_after_fees": -866.96,
-    "profit_factor": 0.88,
-    "max_dd_eur": -57.19,
-    "stops": 270,
-    "targets": 128
+    "n": 7520,
+    "t": -5.68,
+    "be_fee": -0.042,
+    "win_rate": 46.3,
+    "avg_r": -0.111,
+    "avg_pct": -0.084,
+    "eur": -631.59,
+    "eur_after_fees": -15671.59,
+    "profit_factor": 0.85,
+    "max_dd_eur": -642.87,
+    "stops": 3252,
+    "targets": 2877
    },
    "all": {
-    "n": 996,
-    "t": -2.29,
-    "be_fee": -0.046,
-    "win_rate": 32.0,
-    "avg_r": -0.189,
-    "avg_pct": -0.091,
-    "eur": -90.99,
-    "eur_after_fees": -2082.99,
-    "profit_factor": 0.84,
-    "max_dd_eur": -114.14,
-    "stops": 661,
-    "targets": 297
+    "n": 24396,
+    "t": -17.1,
+    "be_fee": -0.063,
+    "win_rate": 43.9,
+    "avg_r": -0.167,
+    "avg_pct": -0.127,
+    "eur": -3093.12,
+    "eur_after_fees": -51885.12,
+    "profit_factor": 0.77,
+    "max_dd_eur": -3097.56,
+    "stops": 11088,
+    "targets": 8724
    },
    "passed": false,
-   "score": -0.074,
+   "score": -0.084,
    "weeks": {
     "up": 4,
-    "n": 14
+    "n": 17
+   }
+  },
+  {
+   "strategy": "orb",
+   "or_min": 15,
+   "stop": "low",
+   "target_r": 2.0,
+   "rvol": 0.0,
+   "filt": "v2",
+   "id": "orb-15-low-2R-v0-fv2",
+   "label": "Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 2× normal",
+   "train": {
+    "n": 1085,
+    "t": -1.81,
+    "be_fee": -0.061,
+    "win_rate": 41.8,
+    "avg_r": -0.106,
+    "avg_pct": -0.121,
+    "eur": -131.65,
+    "eur_after_fees": -2301.65,
+    "profit_factor": 0.84,
+    "max_dd_eur": -159.72,
+    "stops": 233,
+    "targets": 40
+   },
+   "test": {
+    "n": 769,
+    "t": -1.01,
+    "be_fee": -0.043,
+    "win_rate": 46.4,
+    "avg_r": -0.082,
+    "avg_pct": -0.086,
+    "eur": -65.8,
+    "eur_after_fees": -1603.8,
+    "profit_factor": 0.9,
+    "max_dd_eur": -71.57,
+    "stops": 161,
+    "targets": 16
+   },
+   "all": {
+    "n": 1854,
+    "t": -2.02,
+    "be_fee": -0.053,
+    "win_rate": 43.7,
+    "avg_r": -0.096,
+    "avg_pct": -0.106,
+    "eur": -197.45,
+    "eur_after_fees": -3905.45,
+    "profit_factor": 0.87,
+    "max_dd_eur": -208.47,
+    "stops": 394,
+    "targets": 56
+   },
+   "passed": false,
+   "score": -0.086,
+   "weeks": {
+    "up": 6,
+    "n": 16
+   }
+  },
+  {
+   "strategy": "orb",
+   "or_min": 15,
+   "stop": "mid",
+   "target_r": 1.5,
+   "rvol": 1.5,
+   "id": "orb-15-mid-1.5R-v1.5",
+   "label": "Opening-Range-Ausbruch 15 Min · Stopp Mitte der Spanne · Ziel 1,5R · Volumen ≥ 1,5×",
+   "train": {
+    "n": 2031,
+    "t": -4.46,
+    "be_fee": -0.073,
+    "win_rate": 38.7,
+    "avg_r": -0.169,
+    "avg_pct": -0.146,
+    "eur": -295.72,
+    "eur_after_fees": -4357.72,
+    "profit_factor": 0.77,
+    "max_dd_eur": -311.41,
+    "stops": 918,
+    "targets": 395
+   },
+   "test": {
+    "n": 1369,
+    "t": -1.94,
+    "be_fee": -0.046,
+    "win_rate": 41.1,
+    "avg_r": -0.116,
+    "avg_pct": -0.092,
+    "eur": -125.34,
+    "eur_after_fees": -2863.34,
+    "profit_factor": 0.88,
+    "max_dd_eur": -142.21,
+    "stops": 609,
+    "targets": 291
+   },
+   "all": {
+    "n": 3400,
+    "t": -4.55,
+    "be_fee": -0.062,
+    "win_rate": 39.6,
+    "avg_r": -0.148,
+    "avg_pct": -0.124,
+    "eur": -421.06,
+    "eur_after_fees": -7221.06,
+    "profit_factor": 0.82,
+    "max_dd_eur": -429.6,
+    "stops": 1527,
+    "targets": 686
+   },
+   "passed": false,
+   "score": -0.092,
+   "weeks": {
+    "up": 5,
+    "n": 16
    }
   },
   {
@@ -2386,209 +2558,37 @@
     "targets": 3
    },
    "test": {
-    "n": 107,
-    "t": -0.29,
-    "be_fee": -0.041,
-    "win_rate": 52.3,
-    "avg_r": -0.06,
-    "avg_pct": -0.081,
-    "eur": -8.69,
-    "eur_after_fees": -222.69,
-    "profit_factor": 0.92,
-    "max_dd_eur": -23.17,
+    "n": 108,
+    "t": -0.34,
+    "be_fee": -0.047,
+    "win_rate": 51.9,
+    "avg_r": -0.063,
+    "avg_pct": -0.094,
+    "eur": -10.19,
+    "eur_after_fees": -226.19,
+    "profit_factor": 0.9,
+    "max_dd_eur": -23.97,
     "stops": 10,
     "targets": 0
    },
    "all": {
-    "n": 234,
-    "t": -0.16,
-    "be_fee": -0.017,
-    "win_rate": 49.6,
-    "avg_r": -0.05,
-    "avg_pct": -0.033,
-    "eur": -7.73,
-    "eur_after_fees": -475.73,
-    "profit_factor": 0.97,
+    "n": 235,
+    "t": -0.19,
+    "be_fee": -0.02,
+    "win_rate": 49.4,
+    "avg_r": -0.051,
+    "avg_pct": -0.039,
+    "eur": -9.23,
+    "eur_after_fees": -479.23,
+    "profit_factor": 0.96,
     "max_dd_eur": -34.67,
     "stops": 23,
     "targets": 3
    },
    "passed": false,
-   "score": -0.081,
+   "score": -0.094,
    "weeks": {
     "up": 7,
-    "n": 16
-   }
-  },
-  {
-   "strategy": "orb",
-   "or_min": 15,
-   "stop": "mid",
-   "target_r": 1.0,
-   "rvol": 0.0,
-   "id": "orb-15-mid-1R-v0",
-   "label": "Opening-Range-Ausbruch 15 Min · Stopp Mitte der Spanne · Ziel 1R",
-   "train": {
-    "n": 16879,
-    "t": -17.3,
-    "be_fee": -0.073,
-    "win_rate": 42.8,
-    "avg_r": -0.192,
-    "avg_pct": -0.146,
-    "eur": -2465.42,
-    "eur_after_fees": -36223.42,
-    "profit_factor": 0.72,
-    "max_dd_eur": -2469.12,
-    "stops": 7839,
-    "targets": 5845
-   },
-   "test": {
-    "n": 7523,
-    "t": -5.7,
-    "be_fee": -0.042,
-    "win_rate": 46.3,
-    "avg_r": -0.111,
-    "avg_pct": -0.084,
-    "eur": -633.57,
-    "eur_after_fees": -15679.57,
-    "profit_factor": 0.85,
-    "max_dd_eur": -644.86,
-    "stops": 3254,
-    "targets": 2877
-   },
-   "all": {
-    "n": 24402,
-    "t": -17.14,
-    "be_fee": -0.063,
-    "win_rate": 43.8,
-    "avg_r": -0.167,
-    "avg_pct": -0.127,
-    "eur": -3098.99,
-    "eur_after_fees": -51902.99,
-    "profit_factor": 0.77,
-    "max_dd_eur": -3103.43,
-    "stops": 11093,
-    "targets": 8722
-   },
-   "passed": false,
-   "score": -0.084,
-   "weeks": {
-    "up": 4,
-    "n": 17
-   }
-  },
-  {
-   "strategy": "orb",
-   "or_min": 15,
-   "stop": "low",
-   "target_r": 2.0,
-   "rvol": 0.0,
-   "filt": "v2",
-   "id": "orb-15-low-2R-v0-fv2",
-   "label": "Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 2× normal",
-   "train": {
-    "n": 1087,
-    "t": -1.78,
-    "be_fee": -0.06,
-    "win_rate": 41.8,
-    "avg_r": -0.105,
-    "avg_pct": -0.119,
-    "eur": -129.68,
-    "eur_after_fees": -2303.68,
-    "profit_factor": 0.85,
-    "max_dd_eur": -157.11,
-    "stops": 233,
-    "targets": 40
-   },
-   "test": {
-    "n": 771,
-    "t": -1.01,
-    "be_fee": -0.043,
-    "win_rate": 46.4,
-    "avg_r": -0.083,
-    "avg_pct": -0.085,
-    "eur": -65.56,
-    "eur_after_fees": -1607.56,
-    "profit_factor": 0.9,
-    "max_dd_eur": -72.13,
-    "stops": 160,
-    "targets": 16
-   },
-   "all": {
-    "n": 1858,
-    "t": -2.0,
-    "be_fee": -0.053,
-    "win_rate": 43.7,
-    "avg_r": -0.096,
-    "avg_pct": -0.105,
-    "eur": -195.24,
-    "eur_after_fees": -3911.24,
-    "profit_factor": 0.87,
-    "max_dd_eur": -206.26,
-    "stops": 393,
-    "targets": 56
-   },
-   "passed": false,
-   "score": -0.085,
-   "weeks": {
-    "up": 6,
-    "n": 16
-   }
-  },
-  {
-   "strategy": "orb",
-   "or_min": 15,
-   "stop": "mid",
-   "target_r": 1.5,
-   "rvol": 1.5,
-   "id": "orb-15-mid-1.5R-v1.5",
-   "label": "Opening-Range-Ausbruch 15 Min · Stopp Mitte der Spanne · Ziel 1,5R · Volumen ≥ 1,5×",
-   "train": {
-    "n": 2031,
-    "t": -4.48,
-    "be_fee": -0.073,
-    "win_rate": 38.6,
-    "avg_r": -0.171,
-    "avg_pct": -0.146,
-    "eur": -296.65,
-    "eur_after_fees": -4358.65,
-    "profit_factor": 0.77,
-    "max_dd_eur": -312.34,
-    "stops": 919,
-    "targets": 395
-   },
-   "test": {
-    "n": 1367,
-    "t": -1.92,
-    "be_fee": -0.046,
-    "win_rate": 41.1,
-    "avg_r": -0.116,
-    "avg_pct": -0.091,
-    "eur": -124.45,
-    "eur_after_fees": -2858.45,
-    "profit_factor": 0.88,
-    "max_dd_eur": -141.31,
-    "stops": 608,
-    "targets": 291
-   },
-   "all": {
-    "n": 3398,
-    "t": -4.55,
-    "be_fee": -0.062,
-    "win_rate": 39.6,
-    "avg_r": -0.149,
-    "avg_pct": -0.124,
-    "eur": -421.1,
-    "eur_after_fees": -7217.1,
-    "profit_factor": 0.82,
-    "max_dd_eur": -429.68,
-    "stops": 1527,
-    "targets": 686
-   },
-   "passed": false,
-   "score": -0.091,
-   "weeks": {
-    "up": 5,
     "n": 16
    }
   },
@@ -2602,108 +2602,107 @@
    "label": "Opening-Range-Ausbruch 15 Min · Stopp Mitte der Spanne · Ziel 2R · Volumen ≥ 1,5×",
    "train": {
     "n": 2031,
-    "t": -3.93,
+    "t": -3.92,
     "be_fee": -0.068,
-    "win_rate": 37.0,
-    "avg_r": -0.165,
+    "win_rate": 37.1,
+    "avg_r": -0.164,
     "avg_pct": -0.136,
-    "eur": -276.18,
-    "eur_after_fees": -4338.18,
+    "eur": -275.41,
+    "eur_after_fees": -4337.41,
     "profit_factor": 0.79,
-    "max_dd_eur": -291.92,
-    "stops": 937,
+    "max_dd_eur": -291.15,
+    "stops": 936,
     "targets": 245
    },
    "test": {
-    "n": 1367,
-    "t": -1.86,
+    "n": 1369,
+    "t": -1.88,
     "be_fee": -0.047,
-    "win_rate": 39.5,
-    "avg_r": -0.116,
-    "avg_pct": -0.093,
-    "eur": -127.77,
-    "eur_after_fees": -2861.77,
-    "profit_factor": 0.88,
-    "max_dd_eur": -145.75,
-    "stops": 619,
+    "win_rate": 39.4,
+    "avg_r": -0.117,
+    "avg_pct": -0.094,
+    "eur": -129.18,
+    "eur_after_fees": -2867.18,
+    "profit_factor": 0.87,
+    "max_dd_eur": -147.16,
+    "stops": 620,
     "targets": 175
    },
    "all": {
-    "n": 3398,
+    "n": 3400,
     "t": -4.11,
     "be_fee": -0.059,
-    "win_rate": 38.0,
+    "win_rate": 38.1,
     "avg_r": -0.145,
     "avg_pct": -0.119,
-    "eur": -403.95,
-    "eur_after_fees": -7199.95,
+    "eur": -404.58,
+    "eur_after_fees": -7204.58,
     "profit_factor": 0.83,
-    "max_dd_eur": -415.48,
+    "max_dd_eur": -416.08,
     "stops": 1556,
     "targets": 420
    },
    "passed": false,
-   "score": -0.093,
+   "score": -0.094,
    "weeks": {
     "up": 5,
     "n": 16
    }
   },
   {
-   "strategy": "orb",
-   "or_min": 15,
-   "stop": "low",
-   "target_r": 1.0,
-   "rvol": 0.0,
-   "id": "orb-15-low-1R-v0",
-   "label": "Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 1R",
+   "strategy": "sip",
+   "top": 10,
+   "atr_stop": 0.2,
+   "target_r": 2.0,
+   "id": "sip-top10-atr0.2-2R",
+   "label": "Stocks in Play (Studie): Top 10 nach Startvolumen · Stopp 20 % ATR · Ziel 2R",
    "train": {
-    "n": 16896,
-    "t": -15.65,
-    "be_fee": -0.087,
-    "win_rate": 42.3,
-    "avg_r": -0.134,
-    "avg_pct": -0.173,
-    "eur": -2923.65,
-    "eur_after_fees": -36715.65,
-    "profit_factor": 0.73,
-    "max_dd_eur": -2945.95,
-    "stops": 4308,
-    "targets": 3180
+    "n": 294,
+    "t": -0.67,
+    "be_fee": -0.024,
+    "win_rate": 33.3,
+    "avg_r": -0.162,
+    "avg_pct": -0.049,
+    "eur": -14.38,
+    "eur_after_fees": -602.38,
+    "profit_factor": 0.91,
+    "max_dd_eur": -32.27,
+    "stops": 192,
+    "targets": 93
    },
    "test": {
-    "n": 7528,
-    "t": -5.19,
-    "be_fee": -0.052,
-    "win_rate": 45.4,
-    "avg_r": -0.076,
-    "avg_pct": -0.103,
-    "eur": -778.61,
-    "eur_after_fees": -15834.61,
-    "profit_factor": 0.86,
-    "max_dd_eur": -800.71,
-    "stops": 1911,
-    "targets": 1699
+    "n": 208,
+    "t": -1.04,
+    "be_fee": -0.048,
+    "win_rate": 33.2,
+    "avg_r": -0.166,
+    "avg_pct": -0.096,
+    "eur": -19.96,
+    "eur_after_fees": -435.96,
+    "profit_factor": 0.84,
+    "max_dd_eur": -40.36,
+    "stops": 135,
+    "targets": 66
    },
    "all": {
-    "n": 24424,
-    "t": -15.46,
-    "be_fee": -0.076,
-    "win_rate": 43.3,
-    "avg_r": -0.116,
-    "avg_pct": -0.152,
-    "eur": -3702.26,
-    "eur_after_fees": -52550.26,
-    "profit_factor": 0.77,
-    "max_dd_eur": -3728.49,
-    "stops": 6219,
-    "targets": 4879
+    "n": 502,
+    "t": -1.2,
+    "be_fee": -0.034,
+    "win_rate": 33.3,
+    "avg_r": -0.164,
+    "avg_pct": -0.068,
+    "eur": -34.34,
+    "eur_after_fees": -1038.34,
+    "profit_factor": 0.88,
+    "max_dd_eur": -63.81,
+    "stops": 327,
+    "targets": 159
    },
    "passed": false,
-   "score": -0.103,
+   "score": -0.096,
    "weeks": {
-    "up": 4,
-    "n": 17
+    "up": 5,
+    "n": 14
    }
   },
   {
@@ -2716,49 +2715,49 @@
    "id": "orb-15-low-2R-v0-ffrueh",
    "label": "Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 2R · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt",
    "train": {
-    "n": 16594,
-    "t": -15.38,
+    "n": 16591,
+    "t": -15.37,
     "be_fee": -0.093,
     "win_rate": 40.3,
     "avg_r": -0.141,
     "avg_pct": -0.187,
-    "eur": -3102.6,
-    "eur_after_fees": -36290.6,
+    "eur": -3101.58,
+    "eur_after_fees": -36283.58,
     "profit_factor": 0.72,
-    "max_dd_eur": -3125.81,
-    "stops": 4286,
+    "max_dd_eur": -3124.65,
+    "stops": 4284,
     "targets": 575
    },
    "test": {
-    "n": 7426,
-    "t": -4.67,
+    "n": 7423,
+    "t": -4.66,
     "be_fee": -0.051,
     "win_rate": 43.7,
-    "avg_r": -0.07,
-    "avg_pct": -0.103,
-    "eur": -763.02,
-    "eur_after_fees": -15615.02,
+    "avg_r": -0.069,
+    "avg_pct": -0.102,
+    "eur": -760.73,
+    "eur_after_fees": -15606.73,
     "profit_factor": 0.86,
-    "max_dd_eur": -787.41,
-    "stops": 1913,
+    "max_dd_eur": -785.11,
+    "stops": 1911,
     "targets": 333
    },
    "all": {
-    "n": 24020,
-    "t": -14.89,
+    "n": 24014,
+    "t": -14.87,
     "be_fee": -0.08,
     "win_rate": 41.4,
     "avg_r": -0.119,
     "avg_pct": -0.161,
-    "eur": -3865.62,
-    "eur_after_fees": -51905.62,
+    "eur": -3862.31,
+    "eur_after_fees": -51890.31,
     "profit_factor": 0.77,
-    "max_dd_eur": -3900.76,
-    "stops": 6199,
+    "max_dd_eur": -3897.31,
+    "stops": 6195,
     "targets": 908
    },
    "passed": false,
-   "score": -0.103,
+   "score": -0.102,
    "weeks": {
     "up": 4,
     "n": 17
@@ -2773,165 +2772,109 @@
    "id": "orb-15-low-2R-v0",
    "label": "Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 2R",
    "train": {
-    "n": 16896,
+    "n": 16893,
     "t": -15.65,
     "be_fee": -0.093,
     "win_rate": 40.0,
     "avg_r": -0.148,
     "avg_pct": -0.187,
-    "eur": -3159.34,
-    "eur_after_fees": -36951.34,
+    "eur": -3158.32,
+    "eur_after_fees": -36944.32,
     "profit_factor": 0.72,
-    "max_dd_eur": -3182.01,
-    "stops": 4448,
+    "max_dd_eur": -3180.86,
+    "stops": 4446,
     "targets": 592
    },
    "test": {
-    "n": 7528,
-    "t": -4.73,
+    "n": 7525,
+    "t": -4.72,
     "be_fee": -0.051,
     "win_rate": 43.5,
     "avg_r": -0.074,
-    "avg_pct": -0.103,
-    "eur": -772.92,
-    "eur_after_fees": -15828.92,
+    "avg_pct": -0.102,
+    "eur": -770.63,
+    "eur_after_fees": -15820.63,
     "profit_factor": 0.86,
-    "max_dd_eur": -797.3,
-    "stops": 1954,
+    "max_dd_eur": -795.01,
+    "stops": 1952,
     "targets": 341
    },
    "all": {
-    "n": 24424,
-    "t": -15.14,
+    "n": 24418,
+    "t": -15.13,
     "be_fee": -0.08,
     "win_rate": 41.1,
     "avg_r": -0.125,
     "avg_pct": -0.161,
-    "eur": -3932.26,
-    "eur_after_fees": -52780.26,
+    "eur": -3928.95,
+    "eur_after_fees": -52764.95,
     "profit_factor": 0.76,
-    "max_dd_eur": -3967.38,
-    "stops": 6402,
+    "max_dd_eur": -3963.93,
+    "stops": 6398,
     "targets": 933
    },
    "passed": false,
-   "score": -0.103,
+   "score": -0.102,
    "weeks": {
     "up": 4,
     "n": 17
    }
   },
   {
-   "strategy": "sip",
-   "top": 20,
-   "atr_stop": 0.1,
-   "target_r": 0.0,
-   "filt": "v2",
-   "id": "sip-top20-atr0.1-eod-fv2",
-   "label": "Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bei Volumen über 2× normal",
+   "strategy": "orb",
+   "or_min": 15,
+   "stop": "low",
+   "target_r": 1.0,
+   "rvol": 0.0,
+   "id": "orb-15-low-1R-v0",
+   "label": "Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 1R",
    "train": {
-    "n": 502,
-    "t": 0.11,
-    "be_fee": 0.006,
-    "win_rate": 14.1,
-    "avg_r": -0.068,
-    "avg_pct": 0.011,
-    "eur": 5.57,
-    "eur_after_fees": -998.43,
-    "profit_factor": 1.03,
-    "max_dd_eur": -49.01,
-    "stops": 430,
-    "targets": 0
+    "n": 16893,
+    "t": -15.65,
+    "be_fee": -0.087,
+    "win_rate": 42.3,
+    "avg_r": -0.134,
+    "avg_pct": -0.173,
+    "eur": -2923.37,
+    "eur_after_fees": -36709.37,
+    "profit_factor": 0.73,
+    "max_dd_eur": -2945.52,
+    "stops": 4306,
+    "targets": 3178
    },
    "test": {
-    "n": 356,
-    "t": -1.28,
-    "be_fee": -0.053,
-    "win_rate": 12.4,
-    "avg_r": -0.477,
-    "avg_pct": -0.106,
-    "eur": -37.66,
-    "eur_after_fees": -749.66,
-    "profit_factor": 0.79,
-    "max_dd_eur": -46.6,
-    "stops": 310,
-    "targets": 0
+    "n": 7525,
+    "t": -5.18,
+    "be_fee": -0.052,
+    "win_rate": 45.4,
+    "avg_r": -0.076,
+    "avg_pct": -0.103,
+    "eur": -775.91,
+    "eur_after_fees": -15825.91,
+    "profit_factor": 0.86,
+    "max_dd_eur": -798.02,
+    "stops": 1909,
+    "targets": 1698
    },
    "all": {
-    "n": 858,
-    "t": -0.53,
-    "be_fee": -0.019,
-    "win_rate": 13.4,
-    "avg_r": -0.238,
-    "avg_pct": -0.037,
-    "eur": -32.09,
-    "eur_after_fees": -1748.09,
-    "profit_factor": 0.92,
-    "max_dd_eur": -76.59,
-    "stops": 740,
-    "targets": 0
+    "n": 24418,
+    "t": -15.44,
+    "be_fee": -0.076,
+    "win_rate": 43.3,
+    "avg_r": -0.116,
+    "avg_pct": -0.151,
+    "eur": -3699.28,
+    "eur_after_fees": -52535.28,
+    "profit_factor": 0.77,
+    "max_dd_eur": -3725.37,
+    "stops": 6215,
+    "targets": 4876
    },
    "passed": false,
-   "score": -0.106,
+   "score": -0.103,
    "weeks": {
-    "up": 5,
-    "n": 14
-   }
-  },
-  {
-   "strategy": "sip",
-   "top": 10,
-   "atr_stop": 0.2,
-   "target_r": 2.0,
-   "id": "sip-top10-atr0.2-2R",
-   "label": "Stocks in Play (Studie): Top 10 nach Startvolumen · Stopp 20 % ATR · Ziel 2R",
-   "train": {
-    "n": 293,
-    "t": -0.62,
-    "be_fee": -0.022,
-    "win_rate": 33.4,
-    "avg_r": -0.156,
-    "avg_pct": -0.045,
-    "eur": -13.06,
-    "eur_after_fees": -599.06,
-    "profit_factor": 0.92,
-    "max_dd_eur": -30.1,
-    "stops": 191,
-    "targets": 93
-   },
-   "test": {
-    "n": 208,
-    "t": -1.15,
-    "be_fee": -0.053,
-    "win_rate": 33.2,
-    "avg_r": -0.166,
-    "avg_pct": -0.107,
-    "eur": -22.22,
-    "eur_after_fees": -438.22,
-    "profit_factor": 0.83,
-    "max_dd_eur": -39.92,
-    "stops": 135,
-    "targets": 66
-   },
-   "all": {
-    "n": 501,
-    "t": -1.23,
-    "be_fee": -0.035,
-    "win_rate": 33.3,
-    "avg_r": -0.16,
-    "avg_pct": -0.07,
-    "eur": -35.28,
-    "eur_after_fees": -1037.28,
-    "profit_factor": 0.88,
-    "max_dd_eur": -61.75,
-    "stops": 326,
-    "targets": 159
-   },
-   "passed": false,
-   "score": -0.107,
-   "weeks": {
-    "up": 5,
-    "n": 14
+    "up": 4,
+    "n": 17
    }
   },
   {
@@ -2943,46 +2886,46 @@
    "id": "orb-15-low-1.5R-v0",
    "label": "Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 1,5R",
    "train": {
-    "n": 16896,
+    "n": 16893,
     "t": -15.53,
     "be_fee": -0.091,
     "win_rate": 40.4,
     "avg_r": -0.143,
     "avg_pct": -0.182,
-    "eur": -3068.27,
-    "eur_after_fees": -36860.27,
+    "eur": -3067.19,
+    "eur_after_fees": -36853.19,
     "profit_factor": 0.72,
-    "max_dd_eur": -3094.05,
-    "stops": 4423,
-    "targets": 1326
+    "max_dd_eur": -3092.82,
+    "stops": 4421,
+    "targets": 1325
    },
    "test": {
-    "n": 7528,
-    "t": -5.22,
+    "n": 7525,
+    "t": -5.2,
     "be_fee": -0.055,
-    "win_rate": 43.8,
+    "win_rate": 43.9,
     "avg_r": -0.075,
     "avg_pct": -0.109,
-    "eur": -823.16,
-    "eur_after_fees": -15879.16,
+    "eur": -820.78,
+    "eur_after_fees": -15870.78,
     "profit_factor": 0.85,
-    "max_dd_eur": -845.67,
-    "stops": 1942,
+    "max_dd_eur": -843.29,
+    "stops": 1940,
     "targets": 746
    },
    "all": {
-    "n": 24424,
-    "t": -15.39,
+    "n": 24418,
+    "t": -15.38,
     "be_fee": -0.08,
     "win_rate": 41.5,
     "avg_r": -0.122,
     "avg_pct": -0.159,
-    "eur": -3891.43,
-    "eur_after_fees": -52739.43,
+    "eur": -3887.97,
+    "eur_after_fees": -52723.97,
     "profit_factor": 0.76,
-    "max_dd_eur": -3926.07,
-    "stops": 6365,
-    "targets": 2072
+    "max_dd_eur": -3922.47,
+    "stops": 6361,
+    "targets": 2071
    },
    "passed": false,
    "score": -0.109,
@@ -2996,54 +2939,55 @@
    "top": 20,
    "atr_stop": 0.1,
    "target_r": 0.0,
-   "id": "sip-top20-atr0.1-eod",
-   "label": "Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss",
+   "filt": "v2",
+   "id": "sip-top20-atr0.1-eod-fv2",
+   "label": "Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bei Volumen über 2× normal",
    "train": {
-    "n": 576,
-    "t": 0.17,
-    "be_fee": 0.008,
-    "win_rate": 13.9,
-    "avg_r": -0.083,
-    "avg_pct": 0.017,
-    "eur": 9.65,
-    "eur_after_fees": -1142.35,
-    "profit_factor": 1.04,
-    "max_dd_eur": -58.26,
-    "stops": 495,
+    "n": 503,
+    "t": 0.1,
+    "be_fee": 0.005,
+    "win_rate": 14.3,
+    "avg_r": -0.067,
+    "avg_pct": 0.01,
+    "eur": 5.03,
+    "eur_after_fees": -1000.97,
+    "profit_factor": 1.02,
+    "max_dd_eur": -51.15,
+    "stops": 430,
     "targets": 0
    },
    "test": {
-    "n": 418,
-    "t": -1.59,
-    "be_fee": -0.058,
-    "win_rate": 13.2,
-    "avg_r": -0.464,
-    "avg_pct": -0.116,
-    "eur": -48.34,
-    "eur_after_fees": -884.35,
-    "profit_factor": 0.77,
-    "max_dd_eur": -54.75,
-    "stops": 360,
+    "n": 356,
+    "t": -1.34,
+    "be_fee": -0.055,
+    "win_rate": 12.4,
+    "avg_r": -0.492,
+    "avg_pct": -0.11,
+    "eur": -39.2,
+    "eur_after_fees": -751.21,
+    "profit_factor": 0.78,
+    "max_dd_eur": -48.14,
+    "stops": 310,
     "targets": 0
    },
    "all": {
-    "n": 994,
-    "t": -0.61,
-    "be_fee": -0.019,
-    "win_rate": 13.6,
+    "n": 859,
+    "t": -0.57,
+    "be_fee": -0.02,
+    "win_rate": 13.5,
     "avg_r": -0.243,
-    "avg_pct": -0.039,
-    "eur": -38.7,
-    "eur_after_fees": -2026.7,
+    "avg_pct": -0.04,
+    "eur": -34.18,
+    "eur_after_fees": -1752.18,
     "profit_factor": 0.92,
-    "max_dd_eur": -91.3,
-    "stops": 855,
+    "max_dd_eur": -81.87,
+    "stops": 740,
     "targets": 0
    },
    "passed": false,
-   "score": -0.116,
+   "score": -0.11,
    "weeks": {
-    "up": 5,
+    "up": 4,
     "n": 14
    }
   },
@@ -3052,55 +2996,54 @@
    "top": 20,
    "atr_stop": 0.1,
    "target_r": 0.0,
-   "filt": "v4",
-   "id": "sip-top20-atr0.1-eod-fv4",
-   "label": "Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bei Volumen über 4× normal",
+   "id": "sip-top20-atr0.1-eod",
+   "label": "Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss",
    "train": {
-    "n": 260,
-    "t": 0.28,
-    "be_fee": 0.026,
-    "win_rate": 12.7,
-    "avg_r": 0.029,
-    "avg_pct": 0.052,
-    "eur": 13.62,
-    "eur_after_fees": -506.38,
-    "profit_factor": 1.11,
-    "max_dd_eur": -28.46,
-    "stops": 227,
+    "n": 576,
+    "t": 0.17,
+    "be_fee": 0.008,
+    "win_rate": 14.1,
+    "avg_r": -0.08,
+    "avg_pct": 0.016,
+    "eur": 9.3,
+    "eur_after_fees": -1142.7,
+    "profit_factor": 1.04,
+    "max_dd_eur": -60.2,
+    "stops": 494,
     "targets": 0
    },
    "test": {
-    "n": 210,
-    "t": -1.09,
-    "be_fee": -0.061,
-    "win_rate": 13.3,
-    "avg_r": -0.396,
-    "avg_pct": -0.121,
-    "eur": -25.51,
-    "eur_after_fees": -445.51,
-    "profit_factor": 0.78,
-    "max_dd_eur": -32.39,
-    "stops": 181,
+    "n": 417,
+    "t": -1.64,
+    "be_fee": -0.059,
+    "win_rate": 13.2,
+    "avg_r": -0.475,
+    "avg_pct": -0.119,
+    "eur": -49.54,
+    "eur_after_fees": -883.54,
+    "profit_factor": 0.76,
+    "max_dd_eur": -55.94,
+    "stops": 359,
     "targets": 0
    },
    "all": {
-    "n": 470,
-    "t": -0.22,
-    "be_fee": -0.013,
-    "win_rate": 13.0,
-    "avg_r": -0.161,
-    "avg_pct": -0.025,
-    "eur": -11.89,
-    "eur_after_fees": -951.89,
-    "profit_factor": 0.95,
-    "max_dd_eur": -48.7,
-    "stops": 408,
+    "n": 993,
+    "t": -0.64,
+    "be_fee": -0.02,
+    "win_rate": 13.7,
+    "avg_r": -0.246,
+    "avg_pct": -0.041,
+    "eur": -40.24,
+    "eur_after_fees": -2026.24,
+    "profit_factor": 0.91,
+    "max_dd_eur": -95.86,
+    "stops": 853,
     "targets": 0
    },
    "passed": false,
-   "score": -0.121,
+   "score": -0.119,
    "weeks": {
-    "up": 5,
+    "up": 4,
     "n": 14
    }
   },
@@ -3112,52 +3055,278 @@
    "id": "sip-top10-atr0.1-eod",
    "label": "Stocks in Play (Studie): Top 10 nach Startvolumen · Stopp 10 % ATR · bis Schluss",
    "train": {
-    "n": 292,
-    "t": 0.55,
-    "be_fee": 0.047,
-    "win_rate": 14.4,
-    "avg_r": 0.097,
-    "avg_pct": 0.094,
-    "eur": 27.55,
-    "eur_after_fees": -556.45,
-    "profit_factor": 1.21,
-    "max_dd_eur": -39.34,
+    "n": 293,
+    "t": 0.53,
+    "be_fee": 0.046,
+    "win_rate": 14.7,
+    "avg_r": 0.099,
+    "avg_pct": 0.091,
+    "eur": 26.68,
+    "eur_after_fees": -559.32,
+    "profit_factor": 1.2,
+    "max_dd_eur": -41.49,
     "stops": 250,
     "targets": 0
    },
    "test": {
     "n": 208,
-    "t": -1.23,
-    "be_fee": -0.066,
+    "t": -1.16,
+    "be_fee": -0.062,
     "win_rate": 12.5,
-    "avg_r": -0.499,
-    "avg_pct": -0.132,
-    "eur": -27.39,
-    "eur_after_fees": -443.39,
-    "profit_factor": 0.75,
-    "max_dd_eur": -31.68,
+    "avg_r": -0.496,
+    "avg_pct": -0.124,
+    "eur": -25.85,
+    "eur_after_fees": -441.85,
+    "profit_factor": 0.76,
+    "max_dd_eur": -30.15,
     "stops": 180,
     "targets": 0
    },
    "all": {
-    "n": 500,
-    "t": 0.0,
-    "be_fee": 0.0,
-    "win_rate": 13.6,
-    "avg_r": -0.151,
-    "avg_pct": 0.0,
-    "eur": 0.16,
-    "eur_after_fees": -999.84,
+    "n": 501,
+    "t": 0.02,
+    "be_fee": 0.001,
+    "win_rate": 13.8,
+    "avg_r": -0.148,
+    "avg_pct": 0.002,
+    "eur": 0.84,
+    "eur_after_fees": -1001.16,
     "profit_factor": 1.0,
-    "max_dd_eur": -65.34,
+    "max_dd_eur": -67.62,
     "stops": 430,
     "targets": 0
    },
    "passed": false,
-   "score": -0.132,
+   "score": -0.124,
    "weeks": {
     "up": 5,
     "n": 14
+   }
+  },
+  {
+   "strategy": "sip",
+   "top": 20,
+   "atr_stop": 0.2,
+   "target_r": 0.0,
+   "id": "sip-top20-atr0.2-eod",
+   "label": "Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 20 % ATR · bis Schluss",
+   "train": {
+    "n": 578,
+    "t": -0.09,
+    "be_fee": -0.005,
+    "win_rate": 21.6,
+    "avg_r": -0.083,
+    "avg_pct": -0.01,
+    "eur": -5.56,
+    "eur_after_fees": -1161.56,
+    "profit_factor": 0.98,
+    "max_dd_eur": -74.43,
+    "stops": 438,
+    "targets": 0
+   },
+   "test": {
+    "n": 417,
+    "t": -1.32,
+    "be_fee": -0.063,
+    "win_rate": 21.6,
+    "avg_r": -0.276,
+    "avg_pct": -0.125,
+    "eur": -52.33,
+    "eur_after_fees": -886.33,
+    "profit_factor": 0.82,
+    "max_dd_eur": -71.16,
+    "stops": 315,
+    "targets": 0
+   },
+   "all": {
+    "n": 995,
+    "t": -0.81,
+    "be_fee": -0.029,
+    "win_rate": 21.6,
+    "avg_r": -0.164,
+    "avg_pct": -0.058,
+    "eur": -57.89,
+    "eur_after_fees": -2047.89,
+    "profit_factor": 0.91,
+    "max_dd_eur": -111.6,
+    "stops": 753,
+    "targets": 0
+   },
+   "passed": false,
+   "score": -0.125,
+   "weeks": {
+    "up": 5,
+    "n": 14
+   }
+  },
+  {
+   "strategy": "bounce",
+   "trigger": "gapdown3",
+   "stop": "daylow",
+   "target_r": 2.0,
+   "id": "bounce-gapdown3-daylow-2R",
+   "label": "Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R",
+   "train": {
+    "n": 582,
+    "t": -5.07,
+    "be_fee": -0.195,
+    "win_rate": 38.3,
+    "avg_r": -0.157,
+    "avg_pct": -0.39,
+    "eur": -226.91,
+    "eur_after_fees": -1390.91,
+    "profit_factor": 0.59,
+    "max_dd_eur": -226.91,
+    "stops": 183,
+    "targets": 42
+   },
+   "test": {
+    "n": 567,
+    "t": -1.26,
+    "be_fee": -0.067,
+    "win_rate": 39.2,
+    "avg_r": -0.098,
+    "avg_pct": -0.134,
+    "eur": -75.96,
+    "eur_after_fees": -1209.96,
+    "profit_factor": 0.87,
+    "max_dd_eur": -98.13,
+    "stops": 204,
+    "targets": 57
+   },
+   "all": {
+    "n": 1149,
+    "t": -4.03,
+    "be_fee": -0.132,
+    "win_rate": 38.7,
+    "avg_r": -0.128,
+    "avg_pct": -0.264,
+    "eur": -302.87,
+    "eur_after_fees": -2600.86,
+    "profit_factor": 0.74,
+    "max_dd_eur": -304.38,
+    "stops": 387,
+    "targets": 99
+   },
+   "passed": false,
+   "score": -0.134,
+   "weeks": {
+    "up": 4,
+    "n": 17
+   }
+  },
+  {
+   "strategy": "sip",
+   "top": 20,
+   "atr_stop": 0.1,
+   "target_r": 0.0,
+   "filt": "v4",
+   "id": "sip-top20-atr0.1-eod-fv4",
+   "label": "Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bei Volumen über 4× normal",
+   "train": {
+    "n": 263,
+    "t": 0.22,
+    "be_fee": 0.021,
+    "win_rate": 12.5,
+    "avg_r": 0.006,
+    "avg_pct": 0.042,
+    "eur": 10.94,
+    "eur_after_fees": -515.06,
+    "profit_factor": 1.09,
+    "max_dd_eur": -30.88,
+    "stops": 230,
+    "targets": 0
+   },
+   "test": {
+    "n": 211,
+    "t": -1.24,
+    "be_fee": -0.068,
+    "win_rate": 12.8,
+    "avg_r": -0.448,
+    "avg_pct": -0.137,
+    "eur": -28.84,
+    "eur_after_fees": -450.84,
+    "profit_factor": 0.75,
+    "max_dd_eur": -35.72,
+    "stops": 183,
+    "targets": 0
+   },
+   "all": {
+    "n": 474,
+    "t": -0.33,
+    "be_fee": -0.019,
+    "win_rate": 12.7,
+    "avg_r": -0.196,
+    "avg_pct": -0.038,
+    "eur": -17.91,
+    "eur_after_fees": -965.91,
+    "profit_factor": 0.93,
+    "max_dd_eur": -54.78,
+    "stops": 413,
+    "targets": 0
+   },
+   "passed": false,
+   "score": -0.137,
+   "weeks": {
+    "up": 5,
+    "n": 14
+   }
+  },
+  {
+   "strategy": "bounce",
+   "trigger": "gapdown3",
+   "stop": "daylow",
+   "target_r": 2.0,
+   "filt": "frueh",
+   "id": "bounce-gapdown3-daylow-2R-ffrueh",
+   "label": "Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt",
+   "train": {
+    "n": 510,
+    "t": -4.53,
+    "be_fee": -0.192,
+    "win_rate": 38.8,
+    "avg_r": -0.161,
+    "avg_pct": -0.384,
+    "eur": -195.6,
+    "eur_after_fees": -1215.6,
+    "profit_factor": 0.6,
+    "max_dd_eur": -195.6,
+    "stops": 172,
+    "targets": 39
+   },
+   "test": {
+    "n": 519,
+    "t": -1.21,
+    "be_fee": -0.069,
+    "win_rate": 39.1,
+    "avg_r": -0.095,
+    "avg_pct": -0.137,
+    "eur": -71.23,
+    "eur_after_fees": -1109.23,
+    "profit_factor": 0.88,
+    "max_dd_eur": -96.57,
+    "stops": 195,
+    "targets": 56
+   },
+   "all": {
+    "n": 1029,
+    "t": -3.66,
+    "be_fee": -0.13,
+    "win_rate": 39.0,
+    "avg_r": -0.127,
+    "avg_pct": -0.259,
+    "eur": -266.83,
+    "eur_after_fees": -2324.83,
+    "profit_factor": 0.75,
+    "max_dd_eur": -268.34,
+    "stops": 367,
+    "targets": 95
+   },
+   "passed": false,
+   "score": -0.137,
+   "weeks": {
+    "up": 2,
+    "n": 17
    }
   },
   {
@@ -3176,215 +3345,46 @@
     "win_rate": 43.1,
     "avg_r": -0.093,
     "avg_pct": -0.042,
-    "eur": -8.76,
-    "eur_after_fees": -426.76,
+    "eur": -8.82,
+    "eur_after_fees": -426.82,
     "profit_factor": 0.96,
     "max_dd_eur": -37.5,
     "stops": 32,
     "targets": 7
    },
    "test": {
-    "n": 184,
-    "t": -0.62,
-    "be_fee": -0.066,
+    "n": 186,
+    "t": -0.66,
+    "be_fee": -0.07,
     "win_rate": 48.9,
-    "avg_r": -0.08,
-    "avg_pct": -0.133,
-    "eur": -24.47,
-    "eur_after_fees": -392.47,
-    "profit_factor": 0.87,
-    "max_dd_eur": -46.59,
+    "avg_r": -0.082,
+    "avg_pct": -0.141,
+    "eur": -26.2,
+    "eur_after_fees": -398.2,
+    "profit_factor": 0.86,
+    "max_dd_eur": -50.1,
     "stops": 30,
     "targets": 2
    },
    "all": {
-    "n": 393,
-    "t": -0.55,
-    "be_fee": -0.042,
+    "n": 395,
+    "t": -0.58,
+    "be_fee": -0.044,
     "win_rate": 45.8,
-    "avg_r": -0.087,
-    "avg_pct": -0.085,
-    "eur": -33.23,
-    "eur_after_fees": -819.23,
-    "profit_factor": 0.92,
-    "max_dd_eur": -49.26,
+    "avg_r": -0.088,
+    "avg_pct": -0.089,
+    "eur": -35.02,
+    "eur_after_fees": -825.02,
+    "profit_factor": 0.91,
+    "max_dd_eur": -51.73,
     "stops": 62,
     "targets": 9
-   },
-   "passed": false,
-   "score": -0.133,
-   "weeks": {
-    "up": 5,
-    "n": 16
-   }
-  },
-  {
-   "strategy": "bounce",
-   "trigger": "gapdown3",
-   "stop": "daylow",
-   "target_r": 2.0,
-   "filt": "frueh",
-   "id": "bounce-gapdown3-daylow-2R-ffrueh",
-   "label": "Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt",
-   "train": {
-    "n": 509,
-    "t": -4.54,
-    "be_fee": -0.192,
-    "win_rate": 38.9,
-    "avg_r": -0.16,
-    "avg_pct": -0.383,
-    "eur": -194.98,
-    "eur_after_fees": -1212.98,
-    "profit_factor": 0.6,
-    "max_dd_eur": -194.98,
-    "stops": 170,
-    "targets": 39
-   },
-   "test": {
-    "n": 520,
-    "t": -1.2,
-    "be_fee": -0.068,
-    "win_rate": 39.2,
-    "avg_r": -0.096,
-    "avg_pct": -0.135,
-    "eur": -70.36,
-    "eur_after_fees": -1110.36,
-    "profit_factor": 0.88,
-    "max_dd_eur": -92.86,
-    "stops": 197,
-    "targets": 56
-   },
-   "all": {
-    "n": 1029,
-    "t": -3.65,
-    "be_fee": -0.129,
-    "win_rate": 39.1,
-    "avg_r": -0.127,
-    "avg_pct": -0.258,
-    "eur": -265.33,
-    "eur_after_fees": -2323.33,
-    "profit_factor": 0.75,
-    "max_dd_eur": -266.25,
-    "stops": 367,
-    "targets": 95
-   },
-   "passed": false,
-   "score": -0.135,
-   "weeks": {
-    "up": 2,
-    "n": 17
-   }
-  },
-  {
-   "strategy": "bounce",
-   "trigger": "gapdown3",
-   "stop": "daylow",
-   "target_r": 2.0,
-   "id": "bounce-gapdown3-daylow-2R",
-   "label": "Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R",
-   "train": {
-    "n": 582,
-    "t": -5.07,
-    "be_fee": -0.194,
-    "win_rate": 38.3,
-    "avg_r": -0.156,
-    "avg_pct": -0.388,
-    "eur": -225.98,
-    "eur_after_fees": -1389.98,
-    "profit_factor": 0.59,
-    "max_dd_eur": -225.98,
-    "stops": 181,
-    "targets": 42
-   },
-   "test": {
-    "n": 567,
-    "t": -1.3,
-    "be_fee": -0.069,
-    "win_rate": 39.2,
-    "avg_r": -0.1,
-    "avg_pct": -0.137,
-    "eur": -77.75,
-    "eur_after_fees": -1211.75,
-    "profit_factor": 0.87,
-    "max_dd_eur": -99.73,
-    "stops": 206,
-    "targets": 57
-   },
-   "all": {
-    "n": 1149,
-    "t": -4.06,
-    "be_fee": -0.132,
-    "win_rate": 38.7,
-    "avg_r": -0.128,
-    "avg_pct": -0.264,
-    "eur": -303.73,
-    "eur_after_fees": -2601.73,
-    "profit_factor": 0.74,
-    "max_dd_eur": -304.65,
-    "stops": 387,
-    "targets": 99
-   },
-   "passed": false,
-   "score": -0.137,
-   "weeks": {
-    "up": 4,
-    "n": 17
-   }
-  },
-  {
-   "strategy": "sip",
-   "top": 20,
-   "atr_stop": 0.2,
-   "target_r": 0.0,
-   "id": "sip-top20-atr0.2-eod",
-   "label": "Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 20 % ATR · bis Schluss",
-   "train": {
-    "n": 578,
-    "t": -0.1,
-    "be_fee": -0.005,
-    "win_rate": 21.5,
-    "avg_r": -0.087,
-    "avg_pct": -0.01,
-    "eur": -5.82,
-    "eur_after_fees": -1161.82,
-    "profit_factor": 0.98,
-    "max_dd_eur": -72.64,
-    "stops": 439,
-    "targets": 0
-   },
-   "test": {
-    "n": 418,
-    "t": -1.48,
-    "be_fee": -0.07,
-    "win_rate": 21.1,
-    "avg_r": -0.289,
-    "avg_pct": -0.141,
-    "eur": -58.74,
-    "eur_after_fees": -894.74,
-    "profit_factor": 0.8,
-    "max_dd_eur": -77.71,
-    "stops": 318,
-    "targets": 0
-   },
-   "all": {
-    "n": 996,
-    "t": -0.9,
-    "be_fee": -0.032,
-    "win_rate": 21.3,
-    "avg_r": -0.171,
-    "avg_pct": -0.065,
-    "eur": -64.56,
-    "eur_after_fees": -2056.56,
-    "profit_factor": 0.9,
-    "max_dd_eur": -114.51,
-    "stops": 757,
-    "targets": 0
    },
    "passed": false,
    "score": -0.141,
    "weeks": {
     "up": 5,
-    "n": 14
+    "n": 16
    }
   },
   {
@@ -3397,102 +3397,45 @@
    "label": "Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 1,5R · Volumen ≥ 1,5×",
    "train": {
     "n": 2033,
-    "t": -4.13,
-    "be_fee": -0.084,
-    "win_rate": 41.6,
-    "avg_r": -0.12,
-    "avg_pct": -0.168,
-    "eur": -341.47,
-    "eur_after_fees": -4407.47,
+    "t": -4.18,
+    "be_fee": -0.085,
+    "win_rate": 41.5,
+    "avg_r": -0.121,
+    "avg_pct": -0.17,
+    "eur": -345.39,
+    "eur_after_fees": -4411.39,
     "profit_factor": 0.77,
-    "max_dd_eur": -361.26,
-    "stops": 444,
-    "targets": 135
+    "max_dd_eur": -365.19,
+    "stops": 445,
+    "targets": 134
    },
    "test": {
-    "n": 1367,
-    "t": -2.56,
-    "be_fee": -0.074,
-    "win_rate": 43.3,
-    "avg_r": -0.101,
-    "avg_pct": -0.148,
-    "eur": -202.44,
-    "eur_after_fees": -2936.45,
+    "n": 1369,
+    "t": -2.58,
+    "be_fee": -0.075,
+    "win_rate": 43.2,
+    "avg_r": -0.102,
+    "avg_pct": -0.149,
+    "eur": -204.26,
+    "eur_after_fees": -2942.26,
     "profit_factor": 0.83,
-    "max_dd_eur": -221.04,
-    "stops": 330,
+    "max_dd_eur": -222.79,
+    "stops": 332,
     "targets": 99
    },
    "all": {
-    "n": 3400,
-    "t": -4.75,
-    "be_fee": -0.08,
-    "win_rate": 42.3,
-    "avg_r": -0.112,
-    "avg_pct": -0.16,
-    "eur": -543.91,
-    "eur_after_fees": -7343.91,
+    "n": 3402,
+    "t": -4.8,
+    "be_fee": -0.081,
+    "win_rate": 42.2,
+    "avg_r": -0.113,
+    "avg_pct": -0.162,
+    "eur": -549.65,
+    "eur_after_fees": -7353.65,
     "profit_factor": 0.79,
-    "max_dd_eur": -553.76,
-    "stops": 774,
-    "targets": 234
-   },
-   "passed": false,
-   "score": -0.148,
-   "weeks": {
-    "up": 4,
-    "n": 16
-   }
-  },
-  {
-   "strategy": "orb",
-   "or_min": 15,
-   "stop": "low",
-   "target_r": 2.0,
-   "rvol": 1.5,
-   "id": "orb-15-low-2R-v1.5",
-   "label": "Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5×",
-   "train": {
-    "n": 2033,
-    "t": -3.89,
-    "be_fee": -0.082,
-    "win_rate": 41.4,
-    "avg_r": -0.121,
-    "avg_pct": -0.165,
-    "eur": -335.05,
-    "eur_after_fees": -4401.05,
-    "profit_factor": 0.77,
-    "max_dd_eur": -352.84,
-    "stops": 446,
-    "targets": 62
-   },
-   "test": {
-    "n": 1367,
-    "t": -2.49,
-    "be_fee": -0.074,
-    "win_rate": 43.0,
-    "avg_r": -0.104,
-    "avg_pct": -0.149,
-    "eur": -203.11,
-    "eur_after_fees": -2937.11,
-    "profit_factor": 0.83,
-    "max_dd_eur": -224.94,
-    "stops": 332,
-    "targets": 40
-   },
-   "all": {
-    "n": 3400,
-    "t": -4.54,
-    "be_fee": -0.079,
-    "win_rate": 42.0,
-    "avg_r": -0.114,
-    "avg_pct": -0.158,
-    "eur": -538.16,
-    "eur_after_fees": -7338.16,
-    "profit_factor": 0.8,
-    "max_dd_eur": -547.09,
-    "stops": 778,
-    "targets": 102
+    "max_dd_eur": -559.46,
+    "stops": 777,
+    "targets": 233
    },
    "passed": false,
    "score": -0.149,
@@ -3511,45 +3454,45 @@
    "label": "Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 1R · Volumen ≥ 1,5×",
    "train": {
     "n": 2033,
-    "t": -4.56,
-    "be_fee": -0.087,
+    "t": -4.63,
+    "be_fee": -0.088,
     "win_rate": 42.8,
-    "avg_r": -0.118,
-    "avg_pct": -0.173,
-    "eur": -352.14,
-    "eur_after_fees": -4418.14,
-    "profit_factor": 0.76,
-    "max_dd_eur": -367.74,
-    "stops": 438,
-    "targets": 331
+    "avg_r": -0.119,
+    "avg_pct": -0.176,
+    "eur": -356.91,
+    "eur_after_fees": -4422.91,
+    "profit_factor": 0.75,
+    "max_dd_eur": -372.51,
+    "stops": 439,
+    "targets": 329
    },
    "test": {
-    "n": 1367,
-    "t": -2.73,
-    "be_fee": -0.074,
-    "win_rate": 44.6,
+    "n": 1369,
+    "t": -2.74,
+    "be_fee": -0.075,
+    "win_rate": 44.5,
     "avg_r": -0.1,
     "avg_pct": -0.149,
-    "eur": -203.66,
-    "eur_after_fees": -2937.66,
+    "eur": -204.63,
+    "eur_after_fees": -2942.63,
     "profit_factor": 0.82,
-    "max_dd_eur": -223.13,
-    "stops": 324,
+    "max_dd_eur": -224.11,
+    "stops": 326,
     "targets": 249
    },
    "all": {
-    "n": 3400,
-    "t": -5.18,
-    "be_fee": -0.082,
+    "n": 3402,
+    "t": -5.23,
+    "be_fee": -0.083,
     "win_rate": 43.5,
-    "avg_r": -0.11,
-    "avg_pct": -0.163,
-    "eur": -555.8,
-    "eur_after_fees": -7355.8,
+    "avg_r": -0.111,
+    "avg_pct": -0.165,
+    "eur": -561.53,
+    "eur_after_fees": -7365.53,
     "profit_factor": 0.79,
-    "max_dd_eur": -561.03,
-    "stops": 762,
-    "targets": 580
+    "max_dd_eur": -566.77,
+    "stops": 765,
+    "targets": 578
    },
    "passed": false,
    "score": -0.149,
@@ -3559,59 +3502,60 @@
    }
   },
   {
-   "strategy": "bounce",
-   "trigger": "rsi30",
-   "stop": "daylow",
+   "strategy": "orb",
+   "or_min": 15,
+   "stop": "low",
    "target_r": 2.0,
-   "id": "bounce-rsi30-daylow-2R",
-   "label": "Erholung: RSI unter 30 · Stopp Tagestief · Ziel 2R",
+   "rvol": 1.5,
+   "id": "orb-15-low-2R-v1.5",
+   "label": "Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 2R · Volumen ≥ 1,5×",
    "train": {
-    "n": 2236,
-    "t": -4.78,
-    "be_fee": -0.051,
-    "win_rate": 39.0,
-    "avg_r": -0.127,
-    "avg_pct": -0.102,
-    "eur": -228.7,
-    "eur_after_fees": -4700.7,
-    "profit_factor": 0.78,
-    "max_dd_eur": -238.04,
-    "stops": 908,
-    "targets": 255
+    "n": 2033,
+    "t": -3.93,
+    "be_fee": -0.083,
+    "win_rate": 41.3,
+    "avg_r": -0.123,
+    "avg_pct": -0.167,
+    "eur": -338.93,
+    "eur_after_fees": -4404.93,
+    "profit_factor": 0.77,
+    "max_dd_eur": -356.72,
+    "stops": 447,
+    "targets": 61
    },
    "test": {
-    "n": 996,
-    "t": -2.59,
-    "be_fee": -0.082,
-    "win_rate": 36.9,
-    "avg_r": -0.119,
-    "avg_pct": -0.164,
-    "eur": -163.52,
-    "eur_after_fees": -2155.52,
-    "profit_factor": 0.81,
-    "max_dd_eur": -179.59,
-    "stops": 394,
-    "targets": 121
+    "n": 1369,
+    "t": -2.51,
+    "be_fee": -0.075,
+    "win_rate": 43.0,
+    "avg_r": -0.105,
+    "avg_pct": -0.15,
+    "eur": -204.89,
+    "eur_after_fees": -2942.89,
+    "profit_factor": 0.83,
+    "max_dd_eur": -226.73,
+    "stops": 334,
+    "targets": 40
    },
    "all": {
-    "n": 3232,
-    "t": -4.95,
-    "be_fee": -0.061,
-    "win_rate": 38.4,
-    "avg_r": -0.125,
-    "avg_pct": -0.121,
-    "eur": -392.22,
-    "eur_after_fees": -6856.22,
-    "profit_factor": 0.79,
-    "max_dd_eur": -414.49,
-    "stops": 1302,
-    "targets": 376
+    "n": 3402,
+    "t": -4.59,
+    "be_fee": -0.08,
+    "win_rate": 42.0,
+    "avg_r": -0.116,
+    "avg_pct": -0.16,
+    "eur": -543.83,
+    "eur_after_fees": -7347.82,
+    "profit_factor": 0.8,
+    "max_dd_eur": -552.75,
+    "stops": 781,
+    "targets": 101
    },
    "passed": false,
-   "score": -0.164,
+   "score": -0.15,
    "weeks": {
-    "up": 3,
-    "n": 14
+    "up": 4,
+    "n": 16
    }
   },
   {
@@ -3623,51 +3567,107 @@
    "label": "Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 1R",
    "train": {
     "n": 582,
-    "t": -4.96,
-    "be_fee": -0.177,
-    "win_rate": 42.1,
-    "avg_r": -0.145,
-    "avg_pct": -0.354,
-    "eur": -206.01,
-    "eur_after_fees": -1370.01,
-    "profit_factor": 0.61,
-    "max_dd_eur": -206.01,
-    "stops": 175,
-    "targets": 137
+    "t": -4.82,
+    "be_fee": -0.173,
+    "win_rate": 42.3,
+    "avg_r": -0.141,
+    "avg_pct": -0.346,
+    "eur": -201.44,
+    "eur_after_fees": -1365.44,
+    "profit_factor": 0.62,
+    "max_dd_eur": -202.26,
+    "stops": 176,
+    "targets": 141
    },
    "test": {
     "n": 567,
-    "t": -1.85,
-    "be_fee": -0.083,
+    "t": -1.79,
+    "be_fee": -0.081,
     "win_rate": 44.8,
-    "avg_r": -0.103,
-    "avg_pct": -0.166,
-    "eur": -94.24,
-    "eur_after_fees": -1228.24,
-    "profit_factor": 0.83,
-    "max_dd_eur": -117.31,
-    "stops": 192,
+    "avg_r": -0.101,
+    "avg_pct": -0.161,
+    "eur": -91.53,
+    "eur_after_fees": -1225.53,
+    "profit_factor": 0.84,
+    "max_dd_eur": -117.45,
+    "stops": 190,
     "targets": 159
    },
    "all": {
     "n": 1149,
-    "t": -4.57,
-    "be_fee": -0.131,
-    "win_rate": 43.4,
-    "avg_r": -0.124,
-    "avg_pct": -0.261,
-    "eur": -300.25,
-    "eur_after_fees": -2598.24,
-    "profit_factor": 0.72,
-    "max_dd_eur": -306.05,
-    "stops": 367,
-    "targets": 296
+    "t": -4.44,
+    "be_fee": -0.127,
+    "win_rate": 43.5,
+    "avg_r": -0.121,
+    "avg_pct": -0.255,
+    "eur": -292.98,
+    "eur_after_fees": -2590.97,
+    "profit_factor": 0.73,
+    "max_dd_eur": -304.36,
+    "stops": 366,
+    "targets": 300
    },
    "passed": false,
-   "score": -0.166,
+   "score": -0.161,
    "weeks": {
     "up": 5,
     "n": 17
+   }
+  },
+  {
+   "strategy": "bounce",
+   "trigger": "rsi30",
+   "stop": "daylow",
+   "target_r": 2.0,
+   "id": "bounce-rsi30-daylow-2R",
+   "label": "Erholung: RSI unter 30 · Stopp Tagestief · Ziel 2R",
+   "train": {
+    "n": 2237,
+    "t": -4.85,
+    "be_fee": -0.052,
+    "win_rate": 39.0,
+    "avg_r": -0.129,
+    "avg_pct": -0.104,
+    "eur": -232.01,
+    "eur_after_fees": -4706.01,
+    "profit_factor": 0.77,
+    "max_dd_eur": -241.34,
+    "stops": 909,
+    "targets": 252
+   },
+   "test": {
+    "n": 996,
+    "t": -2.54,
+    "be_fee": -0.08,
+    "win_rate": 37.0,
+    "avg_r": -0.117,
+    "avg_pct": -0.161,
+    "eur": -160.16,
+    "eur_after_fees": -2152.16,
+    "profit_factor": 0.81,
+    "max_dd_eur": -176.24,
+    "stops": 393,
+    "targets": 121
+   },
+   "all": {
+    "n": 3233,
+    "t": -4.95,
+    "be_fee": -0.061,
+    "win_rate": 38.4,
+    "avg_r": -0.125,
+    "avg_pct": -0.121,
+    "eur": -392.18,
+    "eur_after_fees": -6858.18,
+    "profit_factor": 0.79,
+    "max_dd_eur": -414.45,
+    "stops": 1302,
+    "targets": 373
+   },
+   "passed": false,
+   "score": -0.161,
+   "weeks": {
+    "up": 3,
+    "n": 14
    }
   },
   {
@@ -3679,48 +3679,48 @@
    "label": "Erholung: Lücke nach unten ≥ 3 % · Stopp 1,5 % darunter · Ziel 2R",
    "train": {
     "n": 582,
-    "t": -3.38,
-    "be_fee": -0.108,
-    "win_rate": 38.8,
-    "avg_r": -0.14,
-    "avg_pct": -0.216,
-    "eur": -125.85,
-    "eur_after_fees": -1289.85,
-    "profit_factor": 0.72,
-    "max_dd_eur": -128.29,
+    "t": -3.2,
+    "be_fee": -0.103,
+    "win_rate": 39.0,
+    "avg_r": -0.133,
+    "avg_pct": -0.206,
+    "eur": -119.86,
+    "eur_after_fees": -1283.86,
+    "profit_factor": 0.73,
+    "max_dd_eur": -126.95,
     "stops": 228,
-    "targets": 59
+    "targets": 61
    },
    "test": {
     "n": 567,
-    "t": -2.28,
-    "be_fee": -0.089,
+    "t": -2.21,
+    "be_fee": -0.086,
     "win_rate": 35.3,
-    "avg_r": -0.115,
-    "avg_pct": -0.178,
-    "eur": -100.93,
-    "eur_after_fees": -1234.93,
+    "avg_r": -0.112,
+    "avg_pct": -0.173,
+    "eur": -98.04,
+    "eur_after_fees": -1232.04,
     "profit_factor": 0.81,
-    "max_dd_eur": -122.16,
+    "max_dd_eur": -119.27,
     "stops": 303,
-    "targets": 113
+    "targets": 114
    },
    "all": {
     "n": 1149,
-    "t": -3.93,
-    "be_fee": -0.099,
-    "win_rate": 37.1,
-    "avg_r": -0.128,
-    "avg_pct": -0.197,
-    "eur": -226.78,
-    "eur_after_fees": -2524.78,
-    "profit_factor": 0.77,
-    "max_dd_eur": -240.58,
+    "t": -3.76,
+    "be_fee": -0.095,
+    "win_rate": 37.2,
+    "avg_r": -0.123,
+    "avg_pct": -0.19,
+    "eur": -217.91,
+    "eur_after_fees": -2515.91,
+    "profit_factor": 0.78,
+    "max_dd_eur": -237.95,
     "stops": 531,
-    "targets": 172
+    "targets": 175
    },
    "passed": false,
-   "score": -0.178,
+   "score": -0.173,
    "weeks": {
     "up": 5,
     "n": 17
@@ -3734,49 +3734,49 @@
    "id": "sip-top10-atr0.2-eod",
    "label": "Stocks in Play (Studie): Top 10 nach Startvolumen · Stopp 20 % ATR · bis Schluss",
    "train": {
-    "n": 293,
-    "t": 0.23,
-    "be_fee": 0.021,
-    "win_rate": 20.5,
-    "avg_r": -0.052,
-    "avg_pct": 0.041,
-    "eur": 12.04,
-    "eur_after_fees": -573.96,
-    "profit_factor": 1.07,
-    "max_dd_eur": -47.67,
+    "n": 294,
+    "t": 0.22,
+    "be_fee": 0.019,
+    "win_rate": 20.7,
+    "avg_r": -0.049,
+    "avg_pct": 0.038,
+    "eur": 11.31,
+    "eur_after_fees": -576.69,
+    "profit_factor": 1.06,
+    "max_dd_eur": -49.82,
     "stops": 225,
     "targets": 0
    },
    "test": {
     "n": 208,
-    "t": -1.52,
-    "be_fee": -0.098,
-    "win_rate": 18.3,
-    "avg_r": -0.363,
-    "avg_pct": -0.196,
-    "eur": -40.7,
-    "eur_after_fees": -456.7,
-    "profit_factor": 0.73,
-    "max_dd_eur": -47.65,
-    "stops": 164,
+    "t": -1.41,
+    "be_fee": -0.09,
+    "win_rate": 18.8,
+    "avg_r": -0.357,
+    "avg_pct": -0.181,
+    "eur": -37.6,
+    "eur_after_fees": -453.6,
+    "profit_factor": 0.75,
+    "max_dd_eur": -46.27,
+    "stops": 163,
     "targets": 0
    },
    "all": {
-    "n": 501,
-    "t": -0.49,
-    "be_fee": -0.029,
-    "win_rate": 19.6,
-    "avg_r": -0.181,
-    "avg_pct": -0.057,
-    "eur": -28.66,
-    "eur_after_fees": -1030.66,
-    "profit_factor": 0.91,
-    "max_dd_eur": -81.93,
-    "stops": 389,
+    "n": 502,
+    "t": -0.45,
+    "be_fee": -0.026,
+    "win_rate": 19.9,
+    "avg_r": -0.177,
+    "avg_pct": -0.052,
+    "eur": -26.29,
+    "eur_after_fees": -1030.29,
+    "profit_factor": 0.92,
+    "max_dd_eur": -83.66,
+    "stops": 388,
     "targets": 0
    },
    "passed": false,
-   "score": -0.196,
+   "score": -0.181,
    "weeks": {
     "up": 5,
     "n": 14
@@ -3792,106 +3792,48 @@
    "label": "Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 1,5R",
    "train": {
     "n": 308,
-    "t": -0.96,
-    "be_fee": -0.072,
-    "win_rate": 46.1,
-    "avg_r": -0.067,
-    "avg_pct": -0.144,
-    "eur": -44.47,
-    "eur_after_fees": -660.47,
-    "profit_factor": 0.84,
-    "max_dd_eur": -76.11,
+    "t": -1.02,
+    "be_fee": -0.077,
+    "win_rate": 45.8,
+    "avg_r": -0.07,
+    "avg_pct": -0.154,
+    "eur": -47.38,
+    "eur_after_fees": -663.38,
+    "profit_factor": 0.83,
+    "max_dd_eur": -79.02,
     "stops": 40,
     "targets": 13
    },
    "test": {
-    "n": 173,
+    "n": 176,
     "t": -1.02,
-    "be_fee": -0.1,
-    "win_rate": 47.4,
-    "avg_r": -0.082,
-    "avg_pct": -0.199,
-    "eur": -34.5,
-    "eur_after_fees": -380.5,
+    "be_fee": -0.099,
+    "win_rate": 47.2,
+    "avg_r": -0.081,
+    "avg_pct": -0.197,
+    "eur": -34.76,
+    "eur_after_fees": -386.76,
     "profit_factor": 0.8,
-    "max_dd_eur": -39.64,
+    "max_dd_eur": -39.77,
     "stops": 16,
     "targets": 1
    },
    "all": {
-    "n": 481,
-    "t": -1.38,
-    "be_fee": -0.082,
-    "win_rate": 46.6,
-    "avg_r": -0.073,
-    "avg_pct": -0.164,
-    "eur": -78.97,
-    "eur_after_fees": -1040.97,
-    "profit_factor": 0.83,
-    "max_dd_eur": -102.04,
+    "n": 484,
+    "t": -1.43,
+    "be_fee": -0.085,
+    "win_rate": 46.3,
+    "avg_r": -0.074,
+    "avg_pct": -0.17,
+    "eur": -82.14,
+    "eur_after_fees": -1050.14,
+    "profit_factor": 0.82,
+    "max_dd_eur": -105.24,
     "stops": 56,
     "targets": 14
    },
    "passed": false,
-   "score": -0.199,
-   "weeks": {
-    "up": 6,
-    "n": 16
-   }
-  },
-  {
-   "strategy": "orbrank",
-   "or_min": 30,
-   "stop": "low",
-   "target_r": 2.0,
-   "top": 20,
-   "filt": "v2",
-   "id": "orbrank-top20-2R-fv2",
-   "label": "Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 2× normal",
-   "train": {
-    "n": 305,
-    "t": -0.72,
-    "be_fee": -0.057,
-    "win_rate": 45.9,
-    "avg_r": -0.062,
-    "avg_pct": -0.114,
-    "eur": -34.74,
-    "eur_after_fees": -644.74,
-    "profit_factor": 0.88,
-    "max_dd_eur": -71.16,
-    "stops": 40,
-    "targets": 6
-   },
-   "test": {
-    "n": 165,
-    "t": -1.03,
-    "be_fee": -0.104,
-    "win_rate": 49.1,
-    "avg_r": -0.077,
-    "avg_pct": -0.208,
-    "eur": -34.27,
-    "eur_after_fees": -364.27,
-    "profit_factor": 0.79,
-    "max_dd_eur": -39.42,
-    "stops": 15,
-    "targets": 0
-   },
-   "all": {
-    "n": 470,
-    "t": -1.18,
-    "be_fee": -0.073,
-    "win_rate": 47.0,
-    "avg_r": -0.067,
-    "avg_pct": -0.147,
-    "eur": -69.01,
-    "eur_after_fees": -1009.01,
-    "profit_factor": 0.84,
-    "max_dd_eur": -91.98,
-    "stops": 55,
-    "targets": 6
-   },
-   "passed": false,
-   "score": -0.208,
+   "score": -0.197,
    "weeks": {
     "up": 6,
     "n": 16
@@ -3905,49 +3847,49 @@
    "id": "bounce-rsi30-pct1.5-2R",
    "label": "Erholung: RSI unter 30 · Stopp 1,5 % darunter · Ziel 2R",
    "train": {
-    "n": 2236,
-    "t": -3.98,
+    "n": 2237,
+    "t": -3.97,
     "be_fee": -0.046,
     "win_rate": 43.8,
     "avg_r": -0.06,
     "avg_pct": -0.093,
-    "eur": -207.63,
-    "eur_after_fees": -4679.63,
+    "eur": -207.31,
+    "eur_after_fees": -4681.31,
     "profit_factor": 0.81,
-    "max_dd_eur": -215.52,
+    "max_dd_eur": -215.19,
     "stops": 375,
     "targets": 58
    },
    "test": {
     "n": 996,
-    "t": -4.08,
-    "be_fee": -0.105,
-    "win_rate": 36.2,
-    "avg_r": -0.136,
-    "avg_pct": -0.21,
-    "eur": -209.39,
-    "eur_after_fees": -2201.39,
+    "t": -4.03,
+    "be_fee": -0.104,
+    "win_rate": 36.3,
+    "avg_r": -0.134,
+    "avg_pct": -0.208,
+    "eur": -206.9,
+    "eur_after_fees": -2198.9,
     "profit_factor": 0.74,
-    "max_dd_eur": -221.68,
-    "stops": 423,
+    "max_dd_eur": -219.19,
+    "stops": 421,
     "targets": 128
    },
    "all": {
-    "n": 3232,
-    "t": -5.69,
-    "be_fee": -0.065,
+    "n": 3233,
+    "t": -5.65,
+    "be_fee": -0.064,
     "win_rate": 41.5,
     "avg_r": -0.083,
-    "avg_pct": -0.129,
-    "eur": -417.02,
-    "eur_after_fees": -6881.02,
+    "avg_pct": -0.128,
+    "eur": -414.2,
+    "eur_after_fees": -6880.2,
     "profit_factor": 0.78,
-    "max_dd_eur": -431.3,
-    "stops": 798,
+    "max_dd_eur": -428.49,
+    "stops": 796,
     "targets": 186
    },
    "passed": false,
-   "score": -0.21,
+   "score": -0.208,
    "weeks": {
     "up": 4,
     "n": 14
@@ -3963,48 +3905,48 @@
    "label": "Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R",
    "train": {
     "n": 308,
-    "t": -0.76,
-    "be_fee": -0.06,
-    "win_rate": 46.1,
-    "avg_r": -0.061,
-    "avg_pct": -0.119,
-    "eur": -36.69,
-    "eur_after_fees": -652.69,
-    "profit_factor": 0.87,
-    "max_dd_eur": -73.11,
+    "t": -0.81,
+    "be_fee": -0.064,
+    "win_rate": 45.8,
+    "avg_r": -0.064,
+    "avg_pct": -0.129,
+    "eur": -39.6,
+    "eur_after_fees": -655.6,
+    "profit_factor": 0.86,
+    "max_dd_eur": -76.02,
     "stops": 40,
     "targets": 6
    },
    "test": {
-    "n": 173,
+    "n": 176,
     "t": -1.11,
-    "be_fee": -0.108,
-    "win_rate": 47.4,
-    "avg_r": -0.087,
-    "avg_pct": -0.216,
-    "eur": -37.29,
-    "eur_after_fees": -383.29,
+    "be_fee": -0.107,
+    "win_rate": 47.2,
+    "avg_r": -0.086,
+    "avg_pct": -0.213,
+    "eur": -37.55,
+    "eur_after_fees": -389.55,
     "profit_factor": 0.78,
-    "max_dd_eur": -42.43,
+    "max_dd_eur": -42.56,
     "stops": 16,
     "targets": 0
    },
    "all": {
-    "n": 481,
-    "t": -1.25,
-    "be_fee": -0.077,
-    "win_rate": 46.6,
-    "avg_r": -0.071,
-    "avg_pct": -0.154,
-    "eur": -73.98,
-    "eur_after_fees": -1035.98,
-    "profit_factor": 0.84,
-    "max_dd_eur": -99.13,
+    "n": 484,
+    "t": -1.31,
+    "be_fee": -0.08,
+    "win_rate": 46.3,
+    "avg_r": -0.072,
+    "avg_pct": -0.159,
+    "eur": -77.15,
+    "eur_after_fees": -1045.15,
+    "profit_factor": 0.83,
+    "max_dd_eur": -102.34,
     "stops": 56,
     "targets": 6
    },
    "passed": false,
-   "score": -0.216,
+   "score": -0.213,
    "weeks": {
     "up": 6,
     "n": 16
@@ -4018,52 +3960,110 @@
    "id": "bounce-rsi30-daylow-1R",
    "label": "Erholung: RSI unter 30 · Stopp Tagestief · Ziel 1R",
    "train": {
-    "n": 2236,
+    "n": 2237,
     "t": -4.79,
     "be_fee": -0.045,
-    "win_rate": 45.2,
+    "win_rate": 45.1,
     "avg_r": -0.121,
     "avg_pct": -0.091,
-    "eur": -203.09,
-    "eur_after_fees": -4675.09,
+    "eur": -202.97,
+    "eur_after_fees": -4676.97,
     "profit_factor": 0.79,
-    "max_dd_eur": -209.17,
-    "stops": 834,
-    "targets": 734
+    "max_dd_eur": -209.06,
+    "stops": 835,
+    "targets": 735
    },
    "test": {
     "n": 996,
-    "t": -4.01,
-    "be_fee": -0.108,
-    "win_rate": 40.9,
-    "avg_r": -0.151,
-    "avg_pct": -0.216,
-    "eur": -215.49,
-    "eur_after_fees": -2207.49,
+    "t": -3.95,
+    "be_fee": -0.107,
+    "win_rate": 41.0,
+    "avg_r": -0.149,
+    "avg_pct": -0.213,
+    "eur": -212.27,
+    "eur_after_fees": -2204.27,
     "profit_factor": 0.74,
-    "max_dd_eur": -231.5,
-    "stops": 377,
+    "max_dd_eur": -229.41,
+    "stops": 376,
     "targets": 303
    },
    "all": {
-    "n": 3232,
-    "t": -6.11,
-    "be_fee": -0.065,
-    "win_rate": 43.8,
+    "n": 3233,
+    "t": -6.06,
+    "be_fee": -0.064,
+    "win_rate": 43.9,
     "avg_r": -0.13,
-    "avg_pct": -0.13,
-    "eur": -418.57,
-    "eur_after_fees": -6882.57,
+    "avg_pct": -0.128,
+    "eur": -415.24,
+    "eur_after_fees": -6881.24,
     "profit_factor": 0.76,
-    "max_dd_eur": -438.74,
+    "max_dd_eur": -435.41,
     "stops": 1211,
-    "targets": 1037
+    "targets": 1038
    },
    "passed": false,
-   "score": -0.216,
+   "score": -0.213,
    "weeks": {
     "up": 4,
     "n": 14
+   }
+  },
+  {
+   "strategy": "orbrank",
+   "or_min": 30,
+   "stop": "low",
+   "target_r": 2.0,
+   "top": 20,
+   "filt": "v2",
+   "id": "orbrank-top20-2R-fv2",
+   "label": "Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 2× normal",
+   "train": {
+    "n": 305,
+    "t": -0.78,
+    "be_fee": -0.062,
+    "win_rate": 45.6,
+    "avg_r": -0.065,
+    "avg_pct": -0.123,
+    "eur": -37.65,
+    "eur_after_fees": -647.65,
+    "profit_factor": 0.87,
+    "max_dd_eur": -74.07,
+    "stops": 40,
+    "targets": 6
+   },
+   "test": {
+    "n": 167,
+    "t": -1.08,
+    "be_fee": -0.107,
+    "win_rate": 48.5,
+    "avg_r": -0.079,
+    "avg_pct": -0.215,
+    "eur": -35.88,
+    "eur_after_fees": -369.88,
+    "profit_factor": 0.78,
+    "max_dd_eur": -40.89,
+    "stops": 15,
+    "targets": 0
+   },
+   "all": {
+    "n": 472,
+    "t": -1.25,
+    "be_fee": -0.078,
+    "win_rate": 46.6,
+    "avg_r": -0.07,
+    "avg_pct": -0.156,
+    "eur": -73.53,
+    "eur_after_fees": -1017.52,
+    "profit_factor": 0.84,
+    "max_dd_eur": -96.53,
+    "stops": 55,
+    "targets": 6
+   },
+   "passed": false,
+   "score": -0.215,
+   "weeks": {
+    "up": 6,
+    "n": 16
    }
   },
   {
@@ -4077,48 +4077,48 @@
    "label": "Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt",
    "train": {
     "n": 303,
-    "t": -0.73,
-    "be_fee": -0.059,
-    "win_rate": 46.5,
-    "avg_r": -0.046,
-    "avg_pct": -0.117,
-    "eur": -35.52,
-    "eur_after_fees": -641.52,
-    "profit_factor": 0.87,
-    "max_dd_eur": -72.45,
+    "t": -0.79,
+    "be_fee": -0.063,
+    "win_rate": 46.2,
+    "avg_r": -0.049,
+    "avg_pct": -0.127,
+    "eur": -38.43,
+    "eur_after_fees": -644.43,
+    "profit_factor": 0.86,
+    "max_dd_eur": -75.36,
     "stops": 36,
     "targets": 6
    },
    "test": {
-    "n": 172,
+    "n": 175,
     "t": -1.11,
-    "be_fee": -0.108,
-    "win_rate": 47.1,
-    "avg_r": -0.088,
-    "avg_pct": -0.217,
-    "eur": -37.29,
-    "eur_after_fees": -381.29,
+    "be_fee": -0.107,
+    "win_rate": 46.9,
+    "avg_r": -0.087,
+    "avg_pct": -0.215,
+    "eur": -37.55,
+    "eur_after_fees": -387.55,
     "profit_factor": 0.78,
-    "max_dd_eur": -42.43,
+    "max_dd_eur": -42.56,
     "stops": 16,
     "targets": 0
    },
    "all": {
-    "n": 475,
-    "t": -1.23,
-    "be_fee": -0.077,
-    "win_rate": 46.7,
-    "avg_r": -0.061,
-    "avg_pct": -0.153,
-    "eur": -72.81,
-    "eur_after_fees": -1022.81,
-    "profit_factor": 0.84,
-    "max_dd_eur": -98.47,
+    "n": 478,
+    "t": -1.29,
+    "be_fee": -0.079,
+    "win_rate": 46.4,
+    "avg_r": -0.063,
+    "avg_pct": -0.159,
+    "eur": -75.99,
+    "eur_after_fees": -1031.99,
+    "profit_factor": 0.83,
+    "max_dd_eur": -101.68,
     "stops": 52,
     "targets": 6
    },
    "passed": false,
-   "score": -0.217,
+   "score": -0.215,
    "weeks": {
     "up": 6,
     "n": 16
@@ -4132,49 +4132,49 @@
    "id": "bounce-rsi30-pct1.5-1R",
    "label": "Erholung: RSI unter 30 · Stopp 1,5 % darunter · Ziel 1R",
    "train": {
-    "n": 2236,
-    "t": -3.69,
+    "n": 2237,
+    "t": -3.68,
     "be_fee": -0.04,
     "win_rate": 45.6,
     "avg_r": -0.052,
     "avg_pct": -0.08,
-    "eur": -178.6,
-    "eur_after_fees": -4650.6,
+    "eur": -178.37,
+    "eur_after_fees": -4652.37,
     "profit_factor": 0.83,
-    "max_dd_eur": -188.27,
+    "max_dd_eur": -188.03,
     "stops": 366,
-    "targets": 359
+    "targets": 358
    },
    "test": {
     "n": 996,
-    "t": -5.16,
-    "be_fee": -0.11,
-    "win_rate": 42.4,
-    "avg_r": -0.143,
-    "avg_pct": -0.221,
-    "eur": -219.76,
-    "eur_after_fees": -2211.76,
+    "t": -5.09,
+    "be_fee": -0.109,
+    "win_rate": 42.5,
+    "avg_r": -0.141,
+    "avg_pct": -0.218,
+    "eur": -216.98,
+    "eur_after_fees": -2208.98,
     "profit_factor": 0.71,
-    "max_dd_eur": -232.47,
-    "stops": 392,
+    "max_dd_eur": -229.69,
+    "stops": 390,
     "targets": 321
    },
    "all": {
-    "n": 3232,
-    "t": -6.17,
-    "be_fee": -0.062,
-    "win_rate": 44.6,
-    "avg_r": -0.08,
-    "avg_pct": -0.123,
-    "eur": -398.36,
-    "eur_after_fees": -6862.36,
+    "n": 3233,
+    "t": -6.12,
+    "be_fee": -0.061,
+    "win_rate": 44.7,
+    "avg_r": -0.079,
+    "avg_pct": -0.122,
+    "eur": -395.35,
+    "eur_after_fees": -6861.35,
     "profit_factor": 0.78,
-    "max_dd_eur": -414.07,
-    "stops": 758,
-    "targets": 680
+    "max_dd_eur": -411.07,
+    "stops": 756,
+    "targets": 679
    },
    "passed": false,
-   "score": -0.221,
+   "score": -0.218,
    "weeks": {
     "up": 4,
     "n": 14
@@ -4189,48 +4189,48 @@
    "label": "Erholung: Lücke nach unten ≥ 3 % · Stopp 1,5 % darunter · Ziel 1R",
    "train": {
     "n": 582,
-    "t": -1.95,
-    "be_fee": -0.054,
-    "win_rate": 47.3,
-    "avg_r": -0.07,
-    "avg_pct": -0.109,
-    "eur": -63.35,
-    "eur_after_fees": -1227.35,
-    "profit_factor": 0.84,
-    "max_dd_eur": -63.35,
+    "t": -1.82,
+    "be_fee": -0.051,
+    "win_rate": 47.4,
+    "avg_r": -0.066,
+    "avg_pct": -0.102,
+    "eur": -59.43,
+    "eur_after_fees": -1223.43,
+    "profit_factor": 0.85,
+    "max_dd_eur": -59.95,
     "stops": 207,
-    "targets": 197
+    "targets": 200
    },
    "test": {
     "n": 567,
-    "t": -4.23,
-    "be_fee": -0.128,
+    "t": -4.19,
+    "be_fee": -0.126,
     "win_rate": 42.9,
-    "avg_r": -0.165,
-    "avg_pct": -0.255,
-    "eur": -144.59,
-    "eur_after_fees": -1278.59,
+    "avg_r": -0.163,
+    "avg_pct": -0.253,
+    "eur": -143.38,
+    "eur_after_fees": -1277.38,
     "profit_factor": 0.69,
-    "max_dd_eur": -150.65,
+    "max_dd_eur": -151.03,
     "stops": 276,
-    "targets": 205
+    "targets": 206
    },
    "all": {
     "n": 1149,
-    "t": -4.4,
-    "be_fee": -0.09,
-    "win_rate": 45.1,
-    "avg_r": -0.117,
-    "avg_pct": -0.181,
-    "eur": -207.94,
-    "eur_after_fees": -2505.94,
-    "profit_factor": 0.76,
-    "max_dd_eur": -208.88,
+    "t": -4.29,
+    "be_fee": -0.088,
+    "win_rate": 45.2,
+    "avg_r": -0.114,
+    "avg_pct": -0.177,
+    "eur": -202.81,
+    "eur_after_fees": -2500.8,
+    "profit_factor": 0.77,
+    "max_dd_eur": -207.78,
     "stops": 483,
-    "targets": 402
+    "targets": 406
    },
    "passed": false,
-   "score": -0.255,
+   "score": -0.253,
    "weeks": {
     "up": 7,
     "n": 17
@@ -4260,34 +4260,34 @@
    },
    "test": {
     "n": 82,
-    "t": -1.37,
-    "be_fee": -0.188,
+    "t": -1.48,
+    "be_fee": -0.205,
     "win_rate": 45.1,
-    "avg_r": -0.096,
-    "avg_pct": -0.377,
-    "eur": -30.88,
-    "eur_after_fees": -194.88,
-    "profit_factor": 0.65,
-    "max_dd_eur": -35.39,
+    "avg_r": -0.103,
+    "avg_pct": -0.409,
+    "eur": -33.57,
+    "eur_after_fees": -197.57,
+    "profit_factor": 0.63,
+    "max_dd_eur": -38.08,
     "stops": 8,
     "targets": 1
    },
    "all": {
     "n": 216,
-    "t": -0.84,
-    "be_fee": -0.084,
+    "t": -0.9,
+    "be_fee": -0.091,
     "win_rate": 43.5,
-    "avg_r": -0.106,
-    "avg_pct": -0.169,
-    "eur": -36.44,
-    "eur_after_fees": -468.44,
-    "profit_factor": 0.84,
-    "max_dd_eur": -61.6,
+    "avg_r": -0.108,
+    "avg_pct": -0.181,
+    "eur": -39.12,
+    "eur_after_fees": -471.12,
+    "profit_factor": 0.83,
+    "max_dd_eur": -64.29,
     "stops": 25,
     "targets": 6
    },
    "passed": false,
-   "score": -0.377,
+   "score": -0.409,
    "weeks": {
     "up": 6,
     "n": 16
@@ -4317,34 +4317,34 @@
    },
    "test": {
     "n": 82,
-    "t": -1.52,
-    "be_fee": -0.205,
+    "t": -1.64,
+    "be_fee": -0.222,
     "win_rate": 45.1,
-    "avg_r": -0.108,
-    "avg_pct": -0.411,
-    "eur": -33.67,
-    "eur_after_fees": -197.67,
-    "profit_factor": 0.61,
-    "max_dd_eur": -38.19,
+    "avg_r": -0.115,
+    "avg_pct": -0.443,
+    "eur": -36.36,
+    "eur_after_fees": -200.36,
+    "profit_factor": 0.6,
+    "max_dd_eur": -40.88,
     "stops": 8,
     "targets": 0
    },
    "all": {
     "n": 216,
-    "t": -0.71,
-    "be_fee": -0.075,
+    "t": -0.77,
+    "be_fee": -0.081,
     "win_rate": 43.5,
-    "avg_r": -0.103,
-    "avg_pct": -0.15,
-    "eur": -32.34,
-    "eur_after_fees": -464.34,
-    "profit_factor": 0.86,
-    "max_dd_eur": -60.41,
+    "avg_r": -0.106,
+    "avg_pct": -0.162,
+    "eur": -35.03,
+    "eur_after_fees": -467.03,
+    "profit_factor": 0.85,
+    "max_dd_eur": -63.1,
     "stops": 25,
     "targets": 3
    },
    "passed": false,
-   "score": -0.411,
+   "score": -0.443,
    "weeks": {
     "up": 6,
     "n": 16
@@ -4847,55 +4847,55 @@
    ],
    [
     "2026-11-04",
-    61.22
+    61.23
    ],
    [
     "2026-11-05",
-    61.22
+    61.23
    ],
    [
     "2026-11-06",
-    104.01
+    104.02
    ],
    [
     "2026-11-09",
-    104.3
+    104.31
    ],
    [
     "2026-11-10",
-    104.3
+    104.31
    ],
    [
     "2026-11-11",
-    106.45
+    106.46
    ],
    [
     "2026-11-12",
-    105.22
+    105.23
    ],
    [
     "2026-11-13",
-    105.22
+    105.23
    ],
    [
     "2026-11-16",
-    105.22
+    105.23
    ],
    [
     "2026-11-17",
-    105.22
+    105.23
    ],
    [
     "2026-11-18",
-    105.75
+    105.76
    ],
    [
     "2026-11-19",
-    108.81
+    108.82
    ],
    [
     "2026-11-20",
-    108.81
+    108.82
    ]
   ],
   "gap-4-v3-2R": [
@@ -5173,55 +5173,55 @@
    ],
    [
     "2026-11-04",
-    54.35
+    54.37
    ],
    [
     "2026-11-05",
-    54.35
+    54.37
    ],
    [
     "2026-11-06",
-    86.51
+    86.52
    ],
    [
     "2026-11-09",
-    85.53
+    85.54
    ],
    [
     "2026-11-10",
-    85.53
+    85.54
    ],
    [
     "2026-11-11",
-    87.68
+    87.69
    ],
    [
     "2026-11-12",
-    86.45
+    86.46
    ],
    [
     "2026-11-13",
-    86.45
+    86.46
    ],
    [
     "2026-11-16",
-    86.45
+    86.46
    ],
    [
     "2026-11-17",
-    86.45
+    86.46
    ],
    [
     "2026-11-18",
-    86.98
+    86.99
    ],
    [
     "2026-11-19",
-    90.04
+    90.05
    ],
    [
     "2026-11-20",
-    90.04
+    90.05
    ]
   ],
   "gap-4-v3-1.5R": [
@@ -5499,55 +5499,55 @@
    ],
    [
     "2026-11-04",
-    45.65
+    45.66
    ],
    [
     "2026-11-05",
-    45.65
+    45.66
    ],
    [
     "2026-11-06",
-    71.28
+    71.29
    ],
    [
     "2026-11-09",
-    69.66
+    69.67
    ],
    [
     "2026-11-10",
-    69.66
+    69.67
    ],
    [
     "2026-11-11",
-    71.81
+    71.82
    ],
    [
     "2026-11-12",
-    70.58
+    70.59
    ],
    [
     "2026-11-13",
-    70.58
+    70.59
    ],
    [
     "2026-11-16",
-    70.58
+    70.59
    ],
    [
     "2026-11-17",
-    70.58
+    70.59
    ],
    [
     "2026-11-18",
-    71.1
+    71.12
    ],
    [
     "2026-11-19",
-    73.71
+    73.72
    ],
    [
     "2026-11-20",
-    73.71
+    73.72
    ]
   ],
   "gap-4-v2-3R": [
@@ -5661,219 +5661,219 @@
    ],
    [
     "2026-09-08",
-    79.76
+    79.54
    ],
    [
     "2026-09-09",
-    76.11
+    75.89
    ],
    [
     "2026-09-10",
-    76.11
+    75.89
    ],
    [
     "2026-09-11",
-    76.11
+    75.89
    ],
    [
     "2026-09-14",
-    106.72
+    106.51
    ],
    [
     "2026-09-15",
-    106.22
+    106.0
    ],
    [
     "2026-09-16",
-    104.29
+    104.07
    ],
    [
     "2026-09-17",
-    101.15
+    100.94
    ],
    [
     "2026-09-18",
-    101.15
+    100.94
    ],
    [
     "2026-09-21",
-    103.29
+    103.08
    ],
    [
     "2026-09-22",
-    98.21
+    97.99
    ],
    [
     "2026-09-23",
-    98.21
+    97.99
    ],
    [
     "2026-09-24",
-    98.21
+    97.99
    ],
    [
     "2026-09-25",
-    92.32
+    92.1
    ],
    [
     "2026-09-28",
-    92.32
+    92.1
    ],
    [
     "2026-09-29",
-    105.64
+    105.42
    ],
    [
     "2026-09-30",
-    105.64
+    105.42
    ],
    [
     "2026-10-01",
-    96.91
+    96.69
    ],
    [
     "2026-10-02",
-    92.8
+    92.59
    ],
    [
     "2026-10-05",
-    83.33
+    83.11
    ],
    [
     "2026-10-06",
-    84.05
+    83.84
    ],
    [
     "2026-10-07",
-    84.12
+    83.91
    ],
    [
     "2026-10-08",
-    84.12
+    83.91
    ],
    [
     "2026-10-09",
-    87.03
+    86.82
    ],
    [
     "2026-10-12",
-    82.19
+    81.98
    ],
    [
     "2026-10-13",
-    82.19
+    81.98
    ],
    [
     "2026-10-14",
-    82.19
+    81.98
    ],
    [
     "2026-10-15",
-    82.19
+    81.98
    ],
    [
     "2026-10-16",
-    82.19
+    81.98
    ],
    [
     "2026-10-19",
-    84.7
+    84.49
    ],
    [
     "2026-10-20",
-    89.44
+    89.23
    ],
    [
     "2026-10-21",
-    89.47
+    89.25
    ],
    [
     "2026-10-22",
-    86.63
+    86.41
    ],
    [
     "2026-10-23",
-    86.63
+    86.41
    ],
    [
     "2026-10-26",
-    86.92
+    86.7
    ],
    [
     "2026-10-27",
-    99.45
+    99.23
    ],
    [
     "2026-10-28",
-    101.41
+    101.2
    ],
    [
     "2026-10-29",
-    110.09
+    109.88
    ],
    [
     "2026-10-30",
-    110.09
+    109.88
    ],
    [
     "2026-11-02",
-    109.49
+    109.27
    ],
    [
     "2026-11-03",
-    106.55
+    106.34
    ],
    [
     "2026-11-04",
-    103.55
+    103.35
    ],
    [
     "2026-11-05",
-    103.55
+    103.35
    ],
    [
     "2026-11-06",
-    123.67
+    123.46
    ],
    [
     "2026-11-09",
-    128.34
+    128.13
    ],
    [
     "2026-11-10",
-    128.34
+    128.13
    ],
    [
     "2026-11-11",
-    135.74
+    135.54
    ],
    [
     "2026-11-12",
-    134.51
+    134.3
    ],
    [
     "2026-11-13",
-    134.51
+    134.3
    ],
    [
     "2026-11-16",
-    134.51
+    134.3
    ],
    [
     "2026-11-17",
-    134.51
+    134.3
    ],
    [
     "2026-11-18",
-    135.04
+    134.83
    ],
    [
     "2026-11-19",
-    133.87
+    133.67
    ],
    [
     "2026-11-20",
-    133.87
+    133.67
    ]
   ],
   "gap-4-v2-2R": [
@@ -5987,219 +5987,219 @@
    ],
    [
     "2026-09-08",
-    69.54
+    69.33
    ],
    [
     "2026-09-09",
-    65.89
+    65.68
    ],
    [
     "2026-09-10",
-    65.89
+    65.68
    ],
    [
     "2026-09-11",
-    65.89
+    65.68
    ],
    [
     "2026-09-14",
-    92.03
+    91.82
    ],
    [
     "2026-09-15",
-    91.53
+    91.31
    ],
    [
     "2026-09-16",
-    89.6
+    89.38
    ],
    [
     "2026-09-17",
-    86.46
+    86.25
    ],
    [
     "2026-09-18",
-    86.46
+    86.25
    ],
    [
     "2026-09-21",
-    88.6
+    88.39
    ],
    [
     "2026-09-22",
-    83.52
+    83.3
    ],
    [
     "2026-09-23",
-    83.52
+    83.3
    ],
    [
     "2026-09-24",
-    83.52
+    83.3
    ],
    [
     "2026-09-25",
-    77.63
+    77.41
    ],
    [
     "2026-09-28",
-    77.63
+    77.41
    ],
    [
     "2026-09-29",
-    86.7
+    86.49
    ],
    [
     "2026-09-30",
-    86.7
+    86.49
    ],
    [
     "2026-10-01",
-    77.98
+    77.76
    ],
    [
     "2026-10-02",
-    73.87
+    73.65
    ],
    [
     "2026-10-05",
-    62.82
+    62.6
    ],
    [
     "2026-10-06",
-    63.55
+    63.33
    ],
    [
     "2026-10-07",
-    63.62
+    63.4
    ],
    [
     "2026-10-08",
-    63.62
+    63.4
    ],
    [
     "2026-10-09",
-    69.09
+    68.88
    ],
    [
     "2026-10-12",
-    64.25
+    64.03
    ],
    [
     "2026-10-13",
-    64.25
+    64.03
    ],
    [
     "2026-10-14",
-    64.25
+    64.03
    ],
    [
     "2026-10-15",
-    64.25
+    64.03
    ],
    [
     "2026-10-16",
-    64.25
+    64.03
    ],
    [
     "2026-10-19",
-    66.76
+    66.55
    ],
    [
     "2026-10-20",
-    71.5
+    71.28
    ],
    [
     "2026-10-21",
-    71.53
+    71.31
    ],
    [
     "2026-10-22",
-    68.68
+    68.47
    ],
    [
     "2026-10-23",
-    68.68
+    68.47
    ],
    [
     "2026-10-26",
-    68.97
+    68.76
    ],
    [
     "2026-10-27",
-    81.44
+    81.23
    ],
    [
     "2026-10-28",
-    87.91
+    87.69
    ],
    [
     "2026-10-29",
-    96.59
+    96.37
    ],
    [
     "2026-10-30",
-    96.59
+    96.37
    ],
    [
     "2026-11-02",
-    95.98
+    95.77
    ],
    [
     "2026-11-03",
-    93.05
+    92.83
    ],
    [
     "2026-11-04",
-    90.05
+    89.84
    ],
    [
     "2026-11-05",
-    90.05
+    89.84
    ],
    [
     "2026-11-06",
-    99.54
+    99.34
    ],
    [
     "2026-11-09",
-    103.6
+    103.39
    ],
    [
     "2026-11-10",
-    103.6
+    103.39
    ],
    [
     "2026-11-11",
-    109.05
+    108.84
    ],
    [
     "2026-11-12",
-    107.81
+    107.61
    ],
    [
     "2026-11-13",
-    107.81
+    107.61
    ],
    [
     "2026-11-16",
-    107.81
+    107.61
    ],
    [
     "2026-11-17",
-    107.81
+    107.61
    ],
    [
     "2026-11-18",
-    108.34
+    108.14
    ],
    [
     "2026-11-19",
-    107.18
+    106.97
    ],
    [
     "2026-11-20",
-    107.18
+    106.97
    ]
   ],
   "gap-4-v2-1.5R": [
@@ -6313,219 +6313,219 @@
    ],
    [
     "2026-09-08",
-    59.85
+    59.64
    ],
    [
     "2026-09-09",
-    56.2
+    55.99
    ],
    [
     "2026-09-10",
-    56.2
+    55.99
    ],
    [
     "2026-09-11",
-    56.2
+    55.99
    ],
    [
     "2026-09-14",
-    80.94
+    80.72
    ],
    [
     "2026-09-15",
-    80.43
+    80.22
    ],
    [
     "2026-09-16",
-    78.5
+    78.29
    ],
    [
     "2026-09-17",
-    79.57
+    79.36
    ],
    [
     "2026-09-18",
-    79.57
+    79.36
    ],
    [
     "2026-09-21",
-    81.71
+    81.5
    ],
    [
     "2026-09-22",
-    76.63
+    76.41
    ],
    [
     "2026-09-23",
-    76.63
+    76.41
    ],
    [
     "2026-09-24",
-    76.63
+    76.41
    ],
    [
     "2026-09-25",
-    70.74
+    70.52
    ],
    [
     "2026-09-28",
-    70.74
+    70.52
    ],
    [
     "2026-09-29",
-    77.69
+    77.48
    ],
    [
     "2026-09-30",
-    77.69
+    77.48
    ],
    [
     "2026-10-01",
-    68.96
+    68.75
    ],
    [
     "2026-10-02",
-    64.86
+    64.64
    ],
    [
     "2026-10-05",
-    53.02
+    52.8
    ],
    [
     "2026-10-06",
-    53.75
+    53.53
    ],
    [
     "2026-10-07",
-    53.82
+    53.6
    ],
    [
     "2026-10-08",
-    53.82
+    53.6
    ],
    [
     "2026-10-09",
-    57.44
+    57.22
    ],
    [
     "2026-10-12",
-    52.6
+    52.38
    ],
    [
     "2026-10-13",
-    52.6
+    52.38
    ],
    [
     "2026-10-14",
-    52.6
+    52.38
    ],
    [
     "2026-10-15",
-    52.6
+    52.38
    ],
    [
     "2026-10-16",
-    52.6
+    52.38
    ],
    [
     "2026-10-19",
-    55.11
+    54.89
    ],
    [
     "2026-10-20",
-    59.85
+    59.63
    ],
    [
     "2026-10-21",
-    59.87
+    59.65
    ],
    [
     "2026-10-22",
-    57.03
+    56.81
    ],
    [
     "2026-10-23",
-    57.03
+    56.81
    ],
    [
     "2026-10-26",
-    57.32
+    57.1
    ],
    [
     "2026-10-27",
-    67.58
+    67.36
    ],
    [
     "2026-10-28",
-    73.33
+    73.11
    ],
    [
     "2026-10-29",
-    82.01
+    81.8
    ],
    [
     "2026-10-30",
-    82.01
+    81.8
    ],
    [
     "2026-11-02",
-    87.09
+    86.87
    ],
    [
     "2026-11-03",
-    84.16
+    83.94
    ],
    [
     "2026-11-04",
-    81.15
+    80.95
    ],
    [
     "2026-11-05",
-    81.15
+    80.95
    ],
    [
     "2026-11-06",
-    84.12
+    83.91
    ],
    [
     "2026-11-09",
-    86.77
+    86.57
    ],
    [
     "2026-11-10",
-    86.77
+    86.57
    ],
    [
     "2026-11-11",
-    91.24
+    91.03
    ],
    [
     "2026-11-12",
-    90.0
+    89.8
    ],
    [
     "2026-11-13",
-    90.0
+    89.8
    ],
    [
     "2026-11-16",
-    90.0
+    89.8
    ],
    [
     "2026-11-17",
-    90.0
+    89.8
    ],
    [
     "2026-11-18",
-    90.53
+    90.33
    ],
    [
     "2026-11-19",
-    88.91
+    88.71
    ],
    [
     "2026-11-20",
-    88.91
+    88.71
    ]
   ],
   "gap-2-v2-2R-fv4": [
@@ -6695,163 +6695,163 @@
    ],
    [
     "2026-09-28",
-    39.61
+    38.2
    ],
    [
     "2026-09-29",
-    48.69
-   ],
-   [
-    "2026-09-30",
-    48.69
-   ],
-   [
-    "2026-10-01",
-    39.96
-   ],
-   [
-    "2026-10-02",
-    39.96
-   ],
-   [
-    "2026-10-05",
-    24.1
-   ],
-   [
-    "2026-10-06",
-    16.06
-   ],
-   [
-    "2026-10-07",
-    16.13
-   ],
-   [
-    "2026-10-08",
-    16.13
-   ],
-   [
-    "2026-10-09",
-    11.68
-   ],
-   [
-    "2026-10-12",
-    6.83
-   ],
-   [
-    "2026-10-13",
-    6.83
-   ],
-   [
-    "2026-10-14",
-    6.83
-   ],
-   [
-    "2026-10-15",
-    3.05
-   ],
-   [
-    "2026-10-16",
-    -2.63
-   ],
-   [
-    "2026-10-19",
-    -0.12
-   ],
-   [
-    "2026-10-20",
-    5.68
-   ],
-   [
-    "2026-10-21",
-    4.42
-   ],
-   [
-    "2026-10-22",
-    3.33
-   ],
-   [
-    "2026-10-23",
-    3.33
-   ],
-   [
-    "2026-10-26",
-    1.85
-   ],
-   [
-    "2026-10-27",
-    12.55
-   ],
-   [
-    "2026-10-28",
-    19.02
-   ],
-   [
-    "2026-10-29",
-    30.43
-   ],
-   [
-    "2026-10-30",
-    28.35
-   ],
-   [
-    "2026-11-02",
-    29.65
-   ],
-   [
-    "2026-11-03",
-    30.79
-   ],
-   [
-    "2026-11-04",
-    28.36
-   ],
-   [
-    "2026-11-05",
-    22.76
-   ],
-   [
-    "2026-11-06",
-    55.66
-   ],
-   [
-    "2026-11-09",
-    57.5
-   ],
-   [
-    "2026-11-10",
-    51.97
-   ],
-   [
-    "2026-11-11",
-    54.74
-   ],
-   [
-    "2026-11-12",
-    53.17
-   ],
-   [
-    "2026-11-13",
-    53.17
-   ],
-   [
-    "2026-11-16",
-    52.4
-   ],
-   [
-    "2026-11-17",
-    52.4
-   ],
-   [
-    "2026-11-18",
-    51.67
-   ],
-   [
-    "2026-11-19",
     47.27
    ],
    [
+    "2026-09-30",
+    47.27
+   ],
+   [
+    "2026-10-01",
+    38.55
+   ],
+   [
+    "2026-10-02",
+    38.55
+   ],
+   [
+    "2026-10-05",
+    22.69
+   ],
+   [
+    "2026-10-06",
+    14.65
+   ],
+   [
+    "2026-10-07",
+    14.72
+   ],
+   [
+    "2026-10-08",
+    14.72
+   ],
+   [
+    "2026-10-09",
+    10.21
+   ],
+   [
+    "2026-10-12",
+    5.37
+   ],
+   [
+    "2026-10-13",
+    5.37
+   ],
+   [
+    "2026-10-14",
+    5.37
+   ],
+   [
+    "2026-10-15",
+    1.59
+   ],
+   [
+    "2026-10-16",
+    -4.09
+   ],
+   [
+    "2026-10-19",
+    -1.58
+   ],
+   [
+    "2026-10-20",
+    4.22
+   ],
+   [
+    "2026-10-21",
+    2.95
+   ],
+   [
+    "2026-10-22",
+    1.87
+   ],
+   [
+    "2026-10-23",
+    1.87
+   ],
+   [
+    "2026-10-26",
+    0.39
+   ],
+   [
+    "2026-10-27",
+    11.09
+   ],
+   [
+    "2026-10-28",
+    17.55
+   ],
+   [
+    "2026-10-29",
+    28.97
+   ],
+   [
+    "2026-10-30",
+    26.89
+   ],
+   [
+    "2026-11-02",
+    28.18
+   ],
+   [
+    "2026-11-03",
+    29.33
+   ],
+   [
+    "2026-11-04",
+    27.18
+   ],
+   [
+    "2026-11-05",
+    21.58
+   ],
+   [
+    "2026-11-06",
+    54.47
+   ],
+   [
+    "2026-11-09",
+    56.32
+   ],
+   [
+    "2026-11-10",
+    50.79
+   ],
+   [
+    "2026-11-11",
+    53.56
+   ],
+   [
+    "2026-11-12",
+    51.99
+   ],
+   [
+    "2026-11-13",
+    51.99
+   ],
+   [
+    "2026-11-16",
+    51.22
+   ],
+   [
+    "2026-11-17",
+    51.22
+   ],
+   [
+    "2026-11-18",
+    50.49
+   ],
+   [
+    "2026-11-19",
+    46.09
+   ],
+   [
     "2026-11-20",
-    46.42
+    45.23
    ]
   ],
   "gap-2-v3-3R": [
@@ -7057,127 +7057,127 @@
    ],
    [
     "2026-10-09",
-    37.6
+    37.55
    ],
    [
     "2026-10-12",
-    32.02
+    31.97
    ],
    [
     "2026-10-13",
-    32.02
+    31.97
    ],
    [
     "2026-10-14",
-    32.02
+    31.97
    ],
    [
     "2026-10-15",
-    27.87
+    27.82
    ],
    [
     "2026-10-16",
-    22.19
+    22.14
    ],
    [
     "2026-10-19",
-    24.7
+    24.65
    ],
    [
     "2026-10-20",
-    30.5
+    30.45
    ],
    [
     "2026-10-21",
-    29.23
+    29.18
    ],
    [
     "2026-10-22",
-    28.15
+    28.1
    ],
    [
     "2026-10-23",
-    28.15
+    28.1
    ],
    [
     "2026-10-26",
-    26.67
+    26.62
    ],
    [
     "2026-10-27",
-    33.36
+    33.31
    ],
    [
     "2026-10-28",
-    35.32
+    35.27
    ],
    [
     "2026-10-29",
-    41.75
+    41.7
    ],
    [
     "2026-10-30",
-    39.67
+    39.62
    ],
    [
     "2026-11-02",
-    43.7
+    43.65
    ],
    [
     "2026-11-03",
-    44.84
+    44.8
    ],
    [
     "2026-11-04",
-    43.85
+    44.4
    ],
    [
     "2026-11-05",
-    39.47
+    40.02
    ],
    [
     "2026-11-06",
-    82.25
+    82.8
    ],
    [
     "2026-11-09",
-    81.2
+    81.75
    ],
    [
     "2026-11-10",
-    75.67
+    76.22
    ],
    [
     "2026-11-11",
-    78.44
+    78.99
    ],
    [
     "2026-11-12",
-    77.21
+    77.75
    ],
    [
     "2026-11-13",
-    77.21
+    77.75
    ],
    [
     "2026-11-16",
-    76.44
+    76.98
    ],
    [
     "2026-11-17",
-    76.44
+    76.98
    ],
    [
     "2026-11-18",
-    75.71
+    76.26
    ],
    [
     "2026-11-19",
-    71.77
+    72.32
    ],
    [
     "2026-11-20",
-    69.08
+    69.63
    ]
   ]
  },
@@ -7362,7 +7362,7 @@
     "f": {
      "k": 2,
      "gap": 4.0,
-     "rv": 12.74,
+     "rv": 12.19,
      "mkt": false,
      "atrp": 2.2,
      "risk": 2.76,
@@ -7550,7 +7550,7 @@
     "test": true,
     "f": {
      "k": 1,
-     "gap": 11.38,
+     "gap": 12.21,
      "rv": 20.05,
      "mkt": false,
      "atrp": 2.57,
@@ -7715,7 +7715,7 @@
      "gap": 4.64,
      "rv": 3.77,
      "mkt": true,
-     "atrp": 3.81,
+     "atrp": 3.82,
      "risk": 3.11,
      "price": 13.05,
      "dow": 0
@@ -7847,7 +7847,7 @@
     "test": true,
     "f": {
      "k": 2,
-     "gap": 6.68,
+     "gap": 6.76,
      "rv": 5.25,
      "mkt": true,
      "atrp": 5.24,
@@ -7875,7 +7875,7 @@
     "f": {
      "k": 2,
      "gap": 8.78,
-     "rv": 5.33,
+     "rv": 5.87,
      "mkt": true,
      "atrp": 4.67,
      "risk": 3.38,
@@ -7916,10 +7916,10 @@
     "entry": 87.6588,
     "stop": 83.26,
     "target": 100.8552,
-    "exit": 87.5762,
+    "exit": 87.5862,
     "why": "Schluss",
-    "r": -0.019,
-    "pct": -0.094,
+    "r": -0.017,
+    "pct": -0.083,
     "in_k": 3,
     "out_k": 76,
     "open": false,
@@ -8117,7 +8117,7 @@
     "test": true,
     "f": {
      "k": 6,
-     "gap": 14.86,
+     "gap": 16.14,
      "rv": 4.2,
      "mkt": false,
      "atrp": 9.03,
@@ -8444,7 +8444,7 @@
     "f": {
      "k": 2,
      "gap": 4.0,
-     "rv": 12.74,
+     "rv": 12.19,
      "mkt": false,
      "atrp": 2.2,
      "risk": 2.76,
@@ -8632,7 +8632,7 @@
     "test": true,
     "f": {
      "k": 1,
-     "gap": 11.38,
+     "gap": 12.21,
      "rv": 20.05,
      "mkt": false,
      "atrp": 2.57,
@@ -8797,7 +8797,7 @@
      "gap": 4.64,
      "rv": 3.77,
      "mkt": true,
-     "atrp": 3.81,
+     "atrp": 3.82,
      "risk": 3.11,
      "price": 13.05,
      "dow": 0
@@ -8929,7 +8929,7 @@
     "test": true,
     "f": {
      "k": 2,
-     "gap": 6.68,
+     "gap": 6.76,
      "rv": 5.25,
      "mkt": true,
      "atrp": 5.24,
@@ -8957,7 +8957,7 @@
     "f": {
      "k": 2,
      "gap": 8.78,
-     "rv": 5.33,
+     "rv": 5.87,
      "mkt": true,
      "atrp": 4.67,
      "risk": 3.38,
@@ -8998,10 +8998,10 @@
     "entry": 87.6588,
     "stop": 83.26,
     "target": 96.4564,
-    "exit": 87.5762,
+    "exit": 87.5862,
     "why": "Schluss",
-    "r": -0.019,
-    "pct": -0.094,
+    "r": -0.017,
+    "pct": -0.083,
     "in_k": 3,
     "out_k": 76,
     "open": false,
@@ -9199,7 +9199,7 @@
     "test": true,
     "f": {
      "k": 6,
-     "gap": 14.86,
+     "gap": 16.14,
      "rv": 4.2,
      "mkt": false,
      "atrp": 9.03,
@@ -9526,7 +9526,7 @@
     "f": {
      "k": 2,
      "gap": 4.0,
-     "rv": 12.74,
+     "rv": 12.19,
      "mkt": false,
      "atrp": 2.2,
      "risk": 2.76,
@@ -9714,7 +9714,7 @@
     "test": true,
     "f": {
      "k": 1,
-     "gap": 11.38,
+     "gap": 12.21,
      "rv": 20.05,
      "mkt": false,
      "atrp": 2.57,
@@ -9879,7 +9879,7 @@
      "gap": 4.64,
      "rv": 3.77,
      "mkt": true,
-     "atrp": 3.81,
+     "atrp": 3.82,
      "risk": 3.11,
      "price": 13.05,
      "dow": 0
@@ -10011,7 +10011,7 @@
     "test": true,
     "f": {
      "k": 2,
-     "gap": 6.68,
+     "gap": 6.76,
      "rv": 5.25,
      "mkt": true,
      "atrp": 5.24,
@@ -10039,7 +10039,7 @@
     "f": {
      "k": 2,
      "gap": 8.78,
-     "rv": 5.33,
+     "rv": 5.87,
      "mkt": true,
      "atrp": 4.67,
      "risk": 3.38,
@@ -10080,10 +10080,10 @@
     "entry": 87.6588,
     "stop": 83.26,
     "target": 94.257,
-    "exit": 87.5762,
+    "exit": 87.5862,
     "why": "Schluss",
-    "r": -0.019,
-    "pct": -0.094,
+    "r": -0.017,
+    "pct": -0.083,
     "in_k": 3,
     "out_k": 76,
     "open": false,
@@ -10281,7 +10281,7 @@
     "test": true,
     "f": {
      "k": 6,
-     "gap": 14.86,
+     "gap": 16.14,
      "rv": 4.2,
      "mkt": false,
      "atrp": 9.03,
@@ -12070,8 +12070,8 @@
     ],
     [
      "2026-09-08",
-     102.04,
-     94.04,
+     102.0,
+     94.0,
      4
     ],
     [
@@ -12561,8 +12561,8 @@
     ],
     [
      "2026-09-08",
-     101.52,
-     93.52,
+     101.47,
+     93.47,
      4
     ],
     [
@@ -13052,8 +13052,8 @@
     ],
     [
      "2026-09-08",
-     101.25,
-     93.25,
+     101.21,
+     93.21,
      4
     ],
     [
@@ -13627,9 +13627,9 @@
     ],
     [
      "2026-09-28",
-     100.0,
-     100.0,
-     0
+     99.72,
+     97.72,
+     1
     ],
     [
      "2026-09-29",
@@ -13681,8 +13681,8 @@
     ],
     [
      "2026-10-09",
-     99.11,
-     91.11,
+     99.1,
+     91.1,
      4
     ],
     [
@@ -13789,8 +13789,8 @@
     ],
     [
      "2026-11-04",
-     100.34,
-     89.82,
+     100.9,
+     91.19,
      5
     ],
     [
@@ -14172,8 +14172,8 @@
     ],
     [
      "2026-10-09",
-     100.07,
-     91.11,
+     100.06,
+     91.1,
      5
     ],
     [
@@ -14280,8 +14280,8 @@
     ],
     [
      "2026-11-04",
-     100.85,
-     92.52,
+     99.95,
+     92.96,
      5
     ],
     [
@@ -14357,7 +14357,7 @@
      3
     ]
    ],
-   "test_up_share": 46
+   "test_up_share": 42
   },
   "gap-2-v2-2R-fv2": {
    "days": [
@@ -14531,8 +14531,8 @@
     ],
     [
      "2026-09-09",
-     99.36,
-     91.36,
+     99.42,
+     91.42,
      4
     ],
     [
@@ -14663,7 +14663,7 @@
     ],
     [
      "2026-10-09",
-     99.36,
+     99.35,
      91.64,
      5
     ],
@@ -14850,7 +14850,7 @@
    ],
    "test_up_share": 52
   },
-  "gap-2-v2-3R": {
+  "gap-2-v3-2R": {
    "days": [
     [
      "2026-07-30",
@@ -14884,14 +14884,14 @@
     ],
     [
      "2026-08-06",
-     99.53,
-     95.53,
-     2
+     99.61,
+     97.61,
+     1
     ],
     [
      "2026-08-07",
-     101.68,
-     94.2,
+     102.16,
+     94.62,
      5
     ],
     [
@@ -14902,63 +14902,63 @@
     ],
     [
      "2026-08-11",
-     96.99,
-     90.99,
-     3
+     97.35,
+     93.35,
+     2
     ],
     [
      "2026-08-12",
-     101.98,
-     91.98,
-     5
+     102.69,
+     94.69,
+     4
     ],
     [
      "2026-08-13",
-     98.99,
-     96.99,
-     1
+     100.0,
+     100.0,
+     0
     ],
     [
      "2026-08-14",
-     100.83,
-     96.83,
-     2
+     100.8,
+     98.8,
+     1
     ],
     [
      "2026-08-17",
-     100.84,
-     94.84,
-     3
+     99.17,
+     97.17,
+     1
     ],
     [
      "2026-08-18",
-     100.24,
-     96.24,
-     2
+     100.0,
+     100.0,
+     0
     ],
     [
      "2026-08-19",
-     107.34,
-     98.89,
+     104.17,
+     95.97,
      5
     ],
     [
      "2026-08-20",
-     101.0,
-     93.0,
-     4
+     101.59,
+     97.59,
+     2
     ],
     [
      "2026-08-21",
-     100.88,
+     99.87,
      92.8,
      5
     ],
     [
      "2026-08-24",
-     99.21,
-     95.21,
-     2
+     100.0,
+     100.0,
+     0
     ],
     [
      "2026-08-25",
@@ -14968,14 +14968,14 @@
     ],
     [
      "2026-08-26",
-     100.64,
-     94.64,
-     3
+     100.96,
+     98.96,
+     1
     ],
     [
      "2026-08-27",
-     101.06,
-     91.71,
+     101.7,
+     93.33,
      5
     ],
     [
@@ -14986,9 +14986,9 @@
     ],
     [
      "2026-08-31",
-     99.44,
-     93.44,
-     3
+     100.0,
+     100.0,
+     0
     ],
     [
      "2026-09-01",
@@ -15004,33 +15004,33 @@
     ],
     [
      "2026-09-03",
-     100.47,
-     94.47,
-     3
+     100.82,
+     98.82,
+     1
     ],
     [
      "2026-09-04",
-     99.64,
-     91.64,
-     4
+     100.27,
+     94.27,
+     3
     ],
     [
      "2026-09-08",
-     101.39,
-     92.86,
-     5
+     100.31,
+     94.31,
+     3
     ],
     [
      "2026-09-09",
-     99.57,
-     91.57,
-     4
+     98.55,
+     92.55,
+     3
     ],
     [
      "2026-09-10",
-     98.75,
-     94.75,
-     2
+     99.37,
+     97.37,
+     1
     ],
     [
      "2026-09-11",
@@ -15040,9 +15040,9 @@
     ],
     [
      "2026-09-14",
-     104.45,
-     94.98,
-     5
+     103.01,
+     97.01,
+     3
     ],
     [
      "2026-09-15",
@@ -15052,15 +15052,15 @@
     ],
     [
      "2026-09-16",
-     99.61,
-     97.61,
-     1
+     100.0,
+     100.0,
+     0
     ],
     [
      "2026-09-17",
-     99.08,
-     91.75,
-     5
+     100.02,
+     94.02,
+     3
     ],
     [
      "2026-09-18",
@@ -15070,15 +15070,15 @@
     ],
     [
      "2026-09-21",
-     101.39,
-     93.62,
-     5
+     99.94,
+     95.94,
+     2
     ],
     [
      "2026-09-22",
-     97.99,
-     86.33,
-     6
+     98.25,
+     92.25,
+     3
     ],
     [
      "2026-09-23",
@@ -15100,51 +15100,51 @@
     ],
     [
      "2026-09-28",
-     99.72,
-     97.72,
-     1
+     100.0,
+     100.0,
+     0
     ],
     [
      "2026-09-29",
-     102.66,
-     98.66,
+     101.82,
+     97.82,
      2
     ],
     [
      "2026-09-30",
-     100.49,
-     98.49,
-     1
+     100.0,
+     100.0,
+     0
     ],
     [
      "2026-10-01",
-     97.52,
-     89.51,
-     5
+     98.25,
+     92.25,
+     3
     ],
     [
      "2026-10-02",
-     98.28,
-     90.51,
-     5
+     100.0,
+     100.0,
+     0
     ],
     [
      "2026-10-05",
-     98.95,
-     88.46,
+     99.2,
+     91.58,
      5
     ],
     [
      "2026-10-06",
-     98.92,
-     87.51,
+     96.95,
+     82.95,
      7
     ],
     [
      "2026-10-07",
-     100.16,
-     96.16,
-     2
+     100.01,
+     98.01,
+     1
     ],
     [
      "2026-10-08",
@@ -15154,21 +15154,21 @@
     ],
     [
      "2026-10-09",
-     99.36,
-     91.64,
+     100.57,
+     91.1,
      5
     ],
     [
      "2026-10-12",
-     98.77,
-     92.77,
-     3
+     98.88,
+     94.88,
+     2
     ],
     [
      "2026-10-13",
-     99.44,
-     95.44,
-     2
+     100.0,
+     100.0,
+     0
     ],
     [
      "2026-10-14",
@@ -15178,8 +15178,8 @@
     ],
     [
      "2026-10-15",
-     99.74,
-     89.96,
+     98.73,
+     90.96,
      5
     ],
     [
@@ -15190,14 +15190,14 @@
     ],
     [
      "2026-10-19",
-     101.65,
-     95.65,
-     3
+     100.5,
+     96.5,
+     2
     ],
     [
      "2026-10-20",
-     101.26,
-     93.56,
+     101.16,
+     92.87,
      5
     ],
     [
@@ -15208,9 +15208,9 @@
     ],
     [
      "2026-10-22",
-     99.99,
+     99.78,
      91.78,
-     5
+     4
     ],
     [
      "2026-10-23",
@@ -15220,69 +15220,69 @@
     ],
     [
      "2026-10-26",
-     100.27,
-     90.27,
-     5
+     99.7,
+     95.7,
+     2
     ],
     [
      "2026-10-27",
-     101.87,
-     94.61,
-     5
-    ],
-    [
-     "2026-10-28",
      101.05,
      93.13,
      5
     ],
     [
+     "2026-10-28",
+     101.95,
+     94.03,
+     5
+    ],
+    [
      "2026-10-29",
-     101.91,
-     93.54,
+     101.75,
+     93.48,
      5
     ],
     [
      "2026-10-30",
-     99.36,
-     93.36,
-     3
+     99.58,
+     95.58,
+     2
     ],
     [
      "2026-11-02",
-     100.46,
-     92.41,
-     5
+     100.81,
+     94.81,
+     3
     ],
     [
      "2026-11-03",
-     101.8,
-     94.42,
-     5
+     100.23,
+     92.23,
+     4
     ],
     [
      "2026-11-04",
-     100.13,
-     87.49,
-     6
+     100.47,
+     93.49,
+     5
     ],
     [
      "2026-11-05",
-     99.34,
-     89.34,
-     5
+     99.12,
+     95.12,
+     2
     ],
     [
      "2026-11-06",
-     106.33,
-     94.23,
-     5
+     106.43,
+     100.43,
+     3
     ],
     [
      "2026-11-09",
-     101.99,
-     93.52,
-     5
+     99.54,
+     93.54,
+     3
     ],
     [
      "2026-11-10",
@@ -15292,21 +15292,21 @@
     ],
     [
      "2026-11-11",
-     101.61,
-     93.61,
-     4
-    ],
-    [
-     "2026-11-12",
-     99.69,
-     95.69,
+     100.55,
+     96.55,
      2
     ],
     [
-     "2026-11-13",
-     99.81,
-     97.81,
+     "2026-11-12",
+     99.75,
+     97.75,
      1
+    ],
+    [
+     "2026-11-13",
+     100.0,
+     100.0,
+     0
     ],
     [
      "2026-11-16",
@@ -15322,14 +15322,14 @@
     ],
     [
      "2026-11-18",
-     100.21,
-     94.21,
-     3
+     99.85,
+     95.85,
+     2
     ],
     [
      "2026-11-19",
-     99.99,
-     92.52,
+     100.1,
+     92.08,
      5
     ],
     [
@@ -15339,7 +15339,7 @@
      3
     ]
    ],
-   "test_up_share": 52
+   "test_up_share": 46
   }
  },
  "patterns": [
@@ -15347,10 +15347,10 @@
    "key": "price",
    "name": "Aktienkurs",
    "label": "unter 20 $",
-   "n_train": 580,
-   "n_test": 550,
-   "avg_train": -0.488,
-   "avg_test": 0.571,
+   "n_train": 582,
+   "n_test": 544,
+   "avg_train": -0.484,
+   "avg_test": 0.575,
    "champ_n": 13,
    "champ_avg": 1.545,
    "holds": false,
@@ -15360,10 +15360,10 @@
    "key": "rv",
    "name": "Volumen bis zum Einstieg",
    "label": "über 4× normal",
-   "n_train": 1533,
-   "n_test": 1452,
-   "avg_train": 0.085,
-   "avg_test": 0.554,
+   "n_train": 1540,
+   "n_test": 1441,
+   "avg_train": 0.078,
+   "avg_test": 0.56,
    "champ_n": 45,
    "champ_avg": 1.526,
    "holds": true,
@@ -15373,10 +15373,10 @@
    "key": "atrp",
    "name": "Tagesschwankung (ATR)",
    "label": "über 4 %",
-   "n_train": 1070,
-   "n_test": 1121,
-   "avg_train": 0.602,
-   "avg_test": 0.52,
+   "n_train": 1071,
+   "n_test": 1114,
+   "avg_train": 0.613,
+   "avg_test": 0.528,
    "champ_n": 16,
    "champ_avg": 2.769,
    "holds": true,
@@ -15386,10 +15386,10 @@
    "key": "dow",
    "name": "Wochentag",
    "label": "Montag",
-   "n_train": 627,
+   "n_train": 632,
    "n_test": 428,
-   "avg_train": 0.212,
-   "avg_test": 0.5,
+   "avg_train": 0.207,
+   "avg_test": 0.506,
    "champ_n": 7,
    "champ_avg": 0.516,
    "holds": true,
@@ -15400,24 +15400,11 @@
    "name": "Wochentag",
    "label": "Freitag",
    "n_train": 612,
-   "n_test": 359,
-   "avg_train": -0.221,
-   "avg_test": 0.463,
+   "n_test": 361,
+   "avg_train": -0.227,
+   "avg_test": 0.449,
    "champ_n": 3,
    "champ_avg": 14.261,
-   "holds": false,
-   "avoid": false
-  },
-  {
-   "key": "dow",
-   "name": "Wochentag",
-   "label": "Dienstag",
-   "n_train": 494,
-   "n_test": 434,
-   "avg_train": -0.651,
-   "avg_test": 0.413,
-   "champ_n": 8,
-   "champ_avg": 1.571,
    "holds": false,
    "avoid": false
   },
@@ -15425,25 +15412,25 @@
    "key": "gap",
    "name": "Lücke zum Vortag",
    "label": "über +2 %",
-   "n_train": 2064,
-   "n_test": 1800,
-   "avg_train": 0.351,
-   "avg_test": 0.403,
+   "n_train": 2067,
+   "n_test": 1790,
+   "avg_train": 0.347,
+   "avg_test": 0.41,
    "champ_n": 47,
    "champ_avg": 1.361,
    "holds": true,
    "avoid": false
   },
   {
-   "key": "gap",
-   "name": "Lücke zum Vortag",
-   "label": "unter −2 %",
-   "n_train": 341,
-   "n_test": 444,
-   "avg_train": -0.349,
-   "avg_test": 0.366,
-   "champ_n": 0,
-   "champ_avg": null,
+   "key": "dow",
+   "name": "Wochentag",
+   "label": "Dienstag",
+   "n_train": 494,
+   "n_test": 433,
+   "avg_train": -0.654,
+   "avg_test": 0.41,
+   "champ_n": 8,
+   "champ_avg": 1.571,
    "holds": false,
    "avoid": false
   },
@@ -15451,23 +15438,36 @@
    "key": "risk",
    "name": "Abstand zum Stopp",
    "label": "über 1,5 %",
-   "n_train": 2549,
-   "n_test": 2347,
-   "avg_train": 0.203,
-   "avg_test": 0.366,
+   "n_train": 2554,
+   "n_test": 2337,
+   "avg_train": 0.202,
+   "avg_test": 0.368,
    "champ_n": 44,
    "champ_avg": 1.367,
    "holds": true,
    "avoid": false
   },
   {
+   "key": "gap",
+   "name": "Lücke zum Vortag",
+   "label": "unter −2 %",
+   "n_train": 343,
+   "n_test": 444,
+   "avg_train": -0.329,
+   "avg_test": 0.364,
+   "champ_n": 0,
+   "champ_avg": null,
+   "holds": false,
+   "avoid": false
+  },
+  {
    "key": "k",
    "name": "Uhrzeit des Einstiegs",
    "label": "bis 10:30 Uhr ET",
-   "n_train": 2552,
-   "n_test": 2227,
-   "avg_train": 0.218,
-   "avg_test": 0.321,
+   "n_train": 2554,
+   "n_test": 2216,
+   "avg_train": 0.216,
+   "avg_test": 0.325,
    "champ_n": 47,
    "champ_avg": 1.361,
    "holds": true,
@@ -15477,12 +15477,12 @@
    "key": "mkt",
    "name": "Gesamtmarkt (SPY)",
    "label": "im Plus",
-   "n_train": 1806,
-   "n_test": 1843,
+   "n_train": 1813,
+   "n_test": 1834,
    "avg_train": -0.161,
-   "avg_test": 0.317,
+   "avg_test": 0.321,
    "champ_n": 22,
-   "champ_avg": 1.614,
+   "champ_avg": 1.615,
    "holds": false,
    "avoid": false
   },
@@ -15490,10 +15490,10 @@
    "key": "mkt",
    "name": "Gesamtmarkt (SPY)",
    "label": "im Minus",
-   "n_train": 1183,
-   "n_test": 893,
-   "avg_train": 0.652,
-   "avg_test": 0.312,
+   "n_train": 1184,
+   "n_test": 895,
+   "avg_train": 0.647,
+   "avg_test": 0.306,
    "champ_n": 25,
    "champ_avg": 1.138,
    "holds": true,
@@ -15503,9 +15503,9 @@
    "key": "price",
    "name": "Aktienkurs",
    "label": "20–100 $",
-   "n_train": 1245,
+   "n_train": 1247,
    "n_test": 1209,
-   "avg_train": -0.062,
+   "avg_train": -0.06,
    "avg_test": 0.283,
    "champ_n": 19,
    "champ_avg": 1.335,
@@ -15516,10 +15516,10 @@
    "key": "atrp",
    "name": "Tagesschwankung (ATR)",
    "label": "2–4 %",
-   "n_train": 1169,
-   "n_test": 1326,
-   "avg_train": -0.113,
-   "avg_test": 0.277,
+   "n_train": 1177,
+   "n_test": 1328,
+   "avg_train": -0.128,
+   "avg_test": 0.272,
    "champ_n": 28,
    "champ_avg": 0.923,
    "holds": false,
@@ -15529,10 +15529,10 @@
    "key": "k",
    "name": "Uhrzeit des Einstiegs",
    "label": "10:30–12:00 Uhr ET",
-   "n_train": 413,
-   "n_test": 481,
+   "n_train": 419,
+   "n_test": 485,
    "avg_train": -0.195,
-   "avg_test": 0.259,
+   "avg_test": 0.245,
    "champ_n": 0,
    "champ_avg": null,
    "holds": false,
@@ -15542,10 +15542,10 @@
    "key": "dow",
    "name": "Wochentag",
    "label": "Donnerstag",
-   "n_train": 741,
-   "n_test": 836,
-   "avg_train": 0.319,
-   "avg_test": 0.244,
+   "n_train": 744,
+   "n_test": 839,
+   "avg_train": 0.322,
+   "avg_test": 0.234,
    "champ_n": 12,
    "champ_avg": 0.639,
    "holds": true,
@@ -15555,9 +15555,9 @@
    "key": "price",
    "name": "Aktienkurs",
    "label": "über 100 $",
-   "n_train": 1164,
-   "n_test": 977,
-   "avg_train": 0.722,
+   "n_train": 1168,
+   "n_test": 976,
+   "avg_train": 0.712,
    "avg_test": 0.212,
    "champ_n": 15,
    "champ_avg": 1.235,
@@ -15569,9 +15569,9 @@
    "name": "Wochentag",
    "label": "Mittwoch",
    "n_train": 515,
-   "n_test": 679,
-   "avg_train": 1.101,
-   "avg_test": 0.147,
+   "n_test": 668,
+   "avg_train": 1.099,
+   "avg_test": 0.164,
    "champ_n": 17,
    "champ_avg": -0.157,
    "holds": true,
@@ -15581,10 +15581,10 @@
    "key": "rv",
    "name": "Volumen bis zum Einstieg",
    "label": "2–4× normal",
-   "n_train": 1042,
-   "n_test": 860,
-   "avg_train": 0.448,
-   "avg_test": 0.121,
+   "n_train": 1038,
+   "n_test": 864,
+   "avg_train": 0.464,
+   "avg_test": 0.124,
    "champ_n": 2,
    "champ_avg": -2.353,
    "holds": true,
@@ -15594,10 +15594,10 @@
    "key": "risk",
    "name": "Abstand zum Stopp",
    "label": "0,5–1,5 %",
-   "n_train": 426,
-   "n_test": 364,
-   "avg_train": -0.079,
-   "avg_test": 0.017,
+   "n_train": 430,
+   "n_test": 367,
+   "avg_train": -0.089,
+   "avg_test": 0.009,
    "champ_n": 2,
    "champ_avg": 2.005,
    "holds": false,
@@ -15607,10 +15607,10 @@
    "key": "gap",
    "name": "Lücke zum Vortag",
    "label": "−2 bis 0 %",
-   "n_train": 257,
-   "n_test": 193,
-   "avg_train": -0.216,
-   "avg_test": -0.03,
+   "n_train": 258,
+   "n_test": 195,
+   "avg_train": -0.224,
+   "avg_test": -0.038,
    "champ_n": 0,
    "champ_avg": null,
    "holds": false,
@@ -15620,10 +15620,10 @@
    "key": "gap",
    "name": "Lücke zum Vortag",
    "label": "0 bis +2 %",
-   "n_train": 327,
-   "n_test": 299,
-   "avg_train": -0.214,
-   "avg_test": -0.064,
+   "n_train": 329,
+   "n_test": 300,
+   "avg_train": -0.222,
+   "avg_test": -0.084,
    "champ_n": 0,
    "champ_avg": null,
    "holds": false,
@@ -15633,10 +15633,10 @@
    "key": "rv",
    "name": "Volumen bis zum Einstieg",
    "label": "1–2× normal",
-   "n_train": 414,
+   "n_train": 419,
    "n_test": 421,
-   "avg_train": -0.283,
-   "avg_test": -0.104,
+   "avg_train": -0.302,
+   "avg_test": -0.119,
    "champ_n": 0,
    "champ_avg": null,
    "holds": false,
@@ -15647,9 +15647,9 @@
    "name": "Tagesschwankung (ATR)",
    "label": "unter 2 %",
    "n_train": 157,
-   "n_test": 288,
+   "n_test": 286,
    "avg_train": -0.272,
-   "avg_test": -0.303,
+   "avg_test": -0.307,
    "champ_n": 3,
    "champ_avg": -2.059,
    "holds": false,
@@ -15743,8 +15743,8 @@
     "start": "2026-11-02",
     "pick": "gap-4-v2-3R",
     "n": 29,
-    "eur": 13.57,
-    "eur_fee": -44.43
+    "eur": 13.59,
+    "eur_fee": -44.41
    },
    {
     "week": "2026-W46",
@@ -15764,8 +15764,8 @@
    }
   ],
   "n": 98,
-  "eur": 39.36,
-  "eur_fee": -156.64,
+  "eur": 39.38,
+  "eur_fee": -156.62,
   "weeks_up": 8,
   "t": 0.91
  },
@@ -17055,9 +17055,9 @@
    "entry": 87.6588,
    "stop": 83.26,
    "target": 100.8552,
-   "exit": 87.5762,
+   "exit": 87.5862,
    "why": "Schluss",
-   "pct": -0.094,
+   "pct": -0.083,
    "in_k": 3,
    "out_k": 76,
    "test": true
@@ -17219,5 +17219,5 @@
    "test": true
   }
  ],
- "seconds": 59.5
+ "seconds": 41.7
 }

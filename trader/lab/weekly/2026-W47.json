@@ -3,24 +3,24 @@
   "from": "2026-11-16",
   "to": "2026-11-20",
   "live_days": 5,
-  "trades": 9608,
+  "trades": 9833,
   "best": [
     {
       "id": "bounce-gapdown3-daylow-2R-fv4",
       "label": "Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 4× normal",
-      "eur": 5.15,
-      "n": 2
+      "eur": 4.34,
+      "n": 3
+    },
+    {
+      "id": "sip-top10-atr0.1-2R",
+      "label": "Stocks in Play (Studie): Top 10 nach Startvolumen · Stopp 10 % ATR · Ziel 2R",
+      "eur": 0.65,
+      "n": 40
     },
     {
       "id": "best-locker-2R",
       "label": "Beste Signale (locker): News-Sprung ≥ 2 %, Volumen ≥ 2×, Schwankung ≥ 2 %, Einstieg bis 10:30 Uhr ET · nur der erste Kandidat des Tages · Ziel 2R",
-      "eur": -0.56,
-      "n": 2
-    },
-    {
-      "id": "best-locker-3R",
-      "label": "Beste Signale (locker): News-Sprung ≥ 2 %, Volumen ≥ 2×, Schwankung ≥ 2 %, Einstieg bis 10:30 Uhr ET · nur der erste Kandidat des Tages · Ziel 3R",
-      "eur": -0.56,
+      "eur": 0.44,
       "n": 2
     }
   ],
@@ -28,23 +28,23 @@
     {
       "id": "orb-15-low-1.5R-v0",
       "label": "Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 1,5R",
-      "eur": -677.78,
-      "n": 649
+      "eur": -675.69,
+      "n": 648
     },
     {
       "id": "orb-15-low-2R-v0",
       "label": "Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 2R",
-      "eur": -651.95,
-      "n": 649
+      "eur": -649.87,
+      "n": 648
     },
     {
       "id": "orb-15-low-2R-v0-ffrueh",
       "label": "Opening-Range-Ausbruch 15 Min · Stopp Tief der Spanne · Ziel 2R · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt",
-      "eur": -651.32,
-      "n": 646
+      "eur": -649.24,
+      "n": 645
     }
   ],
-  "share_positive": 1,
+  "share_positive": 5,
   "champion": "News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R",
   "passed": 16,
   "decisions": {

@@ -1,7 +1,7 @@
-Labor – Do 19.11. 16:20 Uhr ET (22:20 Uhr MEZ)
+Labor – Fr 20.11. 16:20 Uhr ET (22:20 Uhr MEZ)
 
-$ lab.py fetch  (Exit 0, 35 s)
-{"symbols": 224, "fetched": 224, "failed": [], "n_failed": 0, "seconds": 34.4}
+$ lab.py fetch  (Exit 0, 30 s)
+{"symbols": 245, "fetched": 245, "failed": [], "n_failed": 0, "seconds": 29.6}
 
-$ lab.py run  (Exit 0, 77 s)
-{"symbols": 731, "days": 80, "variants": 80, "trades": 366372, "passed": 16, "patterns_hold": 11, "walkforward_eur": 36.03, "best": "gap-4-v3-3R", "seconds": 75.5}
+$ lab.py run  (Exit 0, 61 s)
+{"symbols": 767, "days": 81, "variants": 80, "trades": 383575, "passed": 16, "patterns_hold": 11, "walkforward_eur": 39.36, "best": "gap-4-v3-3R", "seconds": 59.5}

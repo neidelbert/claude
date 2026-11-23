@@ -1,6 +1,6 @@
 # Trader-Übersicht
 
-Stand: Mo 23.11. 14:31 Uhr ET (20:31 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
+Stand: Mo 23.11. 15:01 Uhr ET (21:01 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
 
 NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
@@ -10,7 +10,7 @@ NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 |---|---|---|
 | Morgen-Scan | Mo 23.11. 07:30 Uhr ET (13:30 Uhr MEZ) | OK – 384 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/45113296426)) |
 | ORB-Scan | Mo 23.11. 10:10 Uhr ET (16:10 Uhr MEZ) | OK – 74 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/45149217755)) |
-| Labor live | Mo 23.11. 14:30 Uhr ET (20:30 Uhr MEZ) | OK – 4.102 Trades, 2.868 offen ([Lauf](https://github.com/neidelbert/claude/actions/runs/45149217755)) |
+| Labor live | Mo 23.11. 15:00 Uhr ET (21:00 Uhr MEZ) | OK – 4.102 Trades, 2.776 offen ([Lauf](https://github.com/neidelbert/claude/actions/runs/45196902629)) |
 | Labor | Fr 20.11. 16:40 Uhr ET (22:40 Uhr MEZ) | OK – 16 von 80 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/44816105107)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
@@ -148,44 +148,44 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 - 22.10. 16:11 Uhr ET · [Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView](https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss)
 - 22.10. 15:51 Uhr ET · [How much Apple stock does CEO John Ternus actually own?](https://www.thestreet.com/personalities/how-much-apple-stock-does-john-ternus-own?.tsrc=rss)
 
-## Labor live – Mo 23.11.2026, Stand 14:30 Uhr ET
+## Labor live – Mo 23.11.2026, Stand 15:00 Uhr ET
 
-423 Aktien beobachtet · 4.102 Spielgeld-Trades aller Varianten · 2.868 offen
+423 Aktien beobachtet · 4.102 Spielgeld-Trades aller Varianten · 2.776 offen
 
 | Top-Variante | Trades | offen | € bei 100 €/Trade |
 |---|---|---|---|
-| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R | 4 | 3 | -4,77 € |
-| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 4 | 3 | -4,77 € |
-| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R | 4 | 3 | -4,77 € |
+| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R | 4 | 3 | -5,12 € |
+| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 4 | 3 | -5,12 € |
+| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R | 4 | 3 | -5,12 € |
 | Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 10 | 0 | -11,59 € |
 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 4× normal | 0 | 0 | 0,00 € |
-| Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 19 | 19 | -14,47 € |
-| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 2 | 2 | -4,13 € |
-| Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 2 | 2 | -4,13 € |
-| Beste Signale (streng): News-Sprung ≥ 2 %, Volumen ≥ 4×, Schwankung ≥ 4 %, Einstieg bis 10:30 Uhr ET · nur der erste Kandidat des Tages · Ziel 3R | 1 | 1 | 0,13 € |
+| Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 19 | 19 | -19,25 € |
+| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 2 | 2 | -4,02 € |
+| Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 2 | 2 | -4,02 € |
+| Beste Signale (streng): News-Sprung ≥ 2 %, Volumen ≥ 4×, Schwankung ≥ 4 %, Einstieg bis 10:30 Uhr ET · nur der erste Kandidat des Tages · Ziel 3R | 1 | 1 | -0,06 € |
 
 | Aktie | Regel | Einstieg | Stopp | Ziel | Stand | Ergebnis |
 |---|---|---|---|---|---|---|
-| PLTR | Ausbruch 30 Min | 10:25 160,61 $ | 154,57 $ | 172,69 $ | offen, Kurs 158,16 $ | -1,57 € |
-| QCOM | Ausbruch 30 Min | 10:25 165,11 $ | 160,49 $ | 174,36 $ | offen, Kurs 163,97 $ | -0,74 € |
+| PLTR | Ausbruch 30 Min | 10:25 160,61 $ | 154,57 $ | 172,69 $ | offen, Kurs 157,59 $ | -1,93 € |
+| QCOM | Ausbruch 30 Min | 10:25 165,11 $ | 160,49 $ | 174,36 $ | offen, Kurs 163,30 $ | -1,15 € |
 | QQQ | News-Sprung: Lücke ≥ 4 % | 10:25 656,70 $ | 648,20 $ | 669,45 $ | Stopp 11:45 Uhr | -1,34 € |
 | QQQ | News-Sprung: Lücke ≥ 4 % | 10:25 656,70 $ | 648,20 $ | 673,69 $ | Stopp 11:45 Uhr | -1,34 € |
 | QQQ | News-Sprung: Lücke ≥ 4 % | 10:25 656,70 $ | 648,20 $ | 682,19 $ | Stopp 11:45 Uhr | -1,34 € |
-| QQQ | Opening-Range-Ausbruch 30 Min | 10:25 656,70 $ | 641,95 $ | 686,19 $ | offen, Kurs 651,38 $ | -0,86 € |
-| QQQ | Ausbruch 30 Min | 10:25 656,70 $ | 641,95 $ | 686,19 $ | offen, Kurs 651,38 $ | -0,86 € |
-| QQQ | Ausbruch 30 Min | 10:25 656,70 $ | 641,95 $ | 686,19 $ | offen, Kurs 651,38 $ | -0,86 € |
-| SPY | Ausbruch 30 Min | 10:25 726,68 $ | 713,53 $ | 752,99 $ | offen, Kurs 723,61 $ | -0,47 € |
-| CCL | Ausbruch 30 Min | 10:30 28,22 $ | 27,64 $ | 29,37 $ | offen, Kurs 28,02 $ | -0,74 € |
-| F | Ausbruch 30 Min | 10:30 11,53 $ | 11,38 $ | 11,83 $ | offen, Kurs 11,65 $ | 0,98 € |
-| PM | Ausbruch 30 Min | 10:35 183,92 $ | 181,80 $ | 188,15 $ | offen, Kurs 183,19 $ | -0,45 € |
-| BRK.B | Ausbruch 30 Min | 10:40 574,88 $ | 568,35 $ | 587,95 $ | offen, Kurs 572,90 $ | -0,40 € |
-| HON | Ausbruch 30 Min | 10:40 220,50 $ | 217,89 $ | 225,72 $ | offen, Kurs 221,22 $ | 0,27 € |
-| NTNX | Ausbruch 30 Min | 10:40 58,11 $ | 56,87 $ | 60,60 $ | offen, Kurs 57,67 $ | -0,80 € |
-| NTRA | Ausbruch 30 Min | 10:40 296,27 $ | 286,11 $ | 316,58 $ | offen, Kurs 291,50 $ | -1,66 € |
-| GLBE | Ausbruch 30 Min | 10:45 35,01 $ | 34,10 $ | 36,82 $ | offen, Kurs 35,18 $ | 0,44 € |
-| DASH | Ausbruch 30 Min | 11:20 163,64 $ | 158,52 $ | 173,89 $ | offen, Kurs 161,79 $ | -1,18 € |
-| ALM | Ausbruch 30 Min | 11:25 7,33 $ | 6,94 $ | 8,12 $ | offen, Kurs 7,41 $ | 0,99 € |
-| COIN | Ausbruch 30 Min | 11:25 111,27 $ | 107,20 $ | 119,40 $ | offen, Kurs 108,26 $ | -2,75 € |
+| QQQ | Opening-Range-Ausbruch 30 Min | 10:25 656,70 $ | 641,95 $ | 686,19 $ | offen, Kurs 650,26 $ | -1,03 € |
+| QQQ | Ausbruch 30 Min | 10:25 656,70 $ | 641,95 $ | 686,19 $ | offen, Kurs 650,26 $ | -1,03 € |
+| QQQ | Ausbruch 30 Min | 10:25 656,70 $ | 641,95 $ | 686,19 $ | offen, Kurs 650,26 $ | -1,03 € |
+| SPY | Ausbruch 30 Min | 10:25 726,68 $ | 713,53 $ | 752,99 $ | offen, Kurs 722,52 $ | -0,62 € |
+| CCL | Ausbruch 30 Min | 10:30 28,22 $ | 27,64 $ | 29,37 $ | offen, Kurs 27,92 $ | -1,11 € |
+| F | Ausbruch 30 Min | 10:30 11,53 $ | 11,38 $ | 11,83 $ | offen, Kurs 11,63 $ | 0,81 € |
+| PM | Ausbruch 30 Min | 10:35 183,92 $ | 181,80 $ | 188,15 $ | offen, Kurs 183,03 $ | -0,53 € |
+| BRK.B | Ausbruch 30 Min | 10:40 574,88 $ | 568,35 $ | 587,95 $ | offen, Kurs 573,70 $ | -0,26 € |
+| HON | Ausbruch 30 Min | 10:40 220,50 $ | 217,89 $ | 225,72 $ | offen, Kurs 220,72 $ | 0,05 € |
+| NTNX | Ausbruch 30 Min | 10:40 58,11 $ | 56,87 $ | 60,60 $ | offen, Kurs 57,63 $ | -0,87 € |
+| NTRA | Ausbruch 30 Min | 10:40 296,27 $ | 286,11 $ | 316,58 $ | offen, Kurs 290,77 $ | -1,91 € |
+| GLBE | Ausbruch 30 Min | 10:45 35,01 $ | 34,10 $ | 36,82 $ | offen, Kurs 35,11 $ | 0,24 € |
+| DASH | Ausbruch 30 Min | 11:20 163,64 $ | 158,52 $ | 173,89 $ | offen, Kurs 161,03 $ | -1,65 € |
+| ALM | Ausbruch 30 Min | 11:25 7,33 $ | 6,94 $ | 8,12 $ | offen, Kurs 7,29 $ | -0,58 € |
+| COIN | Ausbruch 30 Min | 11:25 111,27 $ | 107,20 $ | 119,40 $ | offen, Kurs 108,20 $ | -2,80 € |
 
 ## Labor (Testphase, Spielgeld ohne Limit)
 

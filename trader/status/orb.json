@@ -1,28 +1,28 @@
 {
   "part": "orb",
   "ok": true,
-  "summary": "59 Treffer",
-  "ran_at": "2026-11-20T16:41:28Z",
-  "date_et": "2026-11-20",
+  "summary": "74 Treffer",
+  "ran_at": "2026-11-23T15:10:21Z",
+  "date_et": "2026-11-23",
   "steps": [
     {
       "name": "ORB-Scan",
       "ok": true,
-      "detail": "59 von 88 nutzbaren Charts über der Eröffnungsspanne"
+      "detail": "74 von 365 nutzbaren Charts über der Eröffnungsspanne"
     }
   ],
   "data": {
     "orb": {
-      "as_of": "2026-11-20 11:43 ET",
+      "as_of": "2026-11-23 10:10 ET",
       "source": "Treffer des Morgen-Scans",
-      "universe": 108,
-      "fetched": 108,
-      "scanned": 88,
-      "candidates": 75,
-      "confirmed": 75,
+      "universe": 384,
+      "fetched": 384,
+      "scanned": 365,
+      "candidates": 198,
+      "confirmed": 198,
       "unconfirmed": 0,
-      "hits": 59
+      "hits": 74
     }
   },
-  "run_url": "https://github.com/neidelbert/claude/actions/runs/44729531561"
+  "run_url": "https://github.com/neidelbert/claude/actions/runs/45149217755"
 }

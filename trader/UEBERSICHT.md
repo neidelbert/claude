@@ -1,6 +1,6 @@
 # Trader-Übersicht
 
-Stand: Mo 23.11. 10:12 Uhr ET (16:12 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
+Stand: Mo 23.11. 10:31 Uhr ET (16:31 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
 
 NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
@@ -10,7 +10,7 @@ NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 |---|---|---|
 | Morgen-Scan | Mo 23.11. 07:30 Uhr ET (13:30 Uhr MEZ) | OK – 384 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/45113296426)) |
 | ORB-Scan | Mo 23.11. 10:10 Uhr ET (16:10 Uhr MEZ) | OK – 74 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/45149217755)) |
-| Labor live | Mo 23.11. 10:10 Uhr ET (16:10 Uhr MEZ) | OK – 1.324 Trades, 1.190 offen ([Lauf](https://github.com/neidelbert/claude/actions/runs/45149217755)) |
+| Labor live | Mo 23.11. 10:30 Uhr ET (16:30 Uhr MEZ) | OK – 2.793 Trades, 2.581 offen ([Lauf](https://github.com/neidelbert/claude/actions/runs/45149217755)) |
 | Labor | Fr 20.11. 16:40 Uhr ET (22:40 Uhr MEZ) | OK – 16 von 80 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/44816105107)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
@@ -148,40 +148,44 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 - 22.10. 16:11 Uhr ET · [Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView](https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss)
 - 22.10. 15:51 Uhr ET · [How much Apple stock does CEO John Ternus actually own?](https://www.thestreet.com/personalities/how-much-apple-stock-does-john-ternus-own?.tsrc=rss)
 
-## Labor live – Mo 23.11.2026, Stand 10:12 Uhr ET
+## Labor live – Mo 23.11.2026, Stand 10:30 Uhr ET
 
-423 Aktien beobachtet · 1.324 Spielgeld-Trades aller Varianten · 1.190 offen
+423 Aktien beobachtet · 2.793 Spielgeld-Trades aller Varianten · 2.581 offen
 
 | Top-Variante | Trades | offen | € bei 100 €/Trade |
 |---|---|---|---|
-| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R | 2 | 2 | -2,06 € |
-| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 2 | 2 | -2,06 € |
-| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R | 2 | 2 | -2,06 € |
-| Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 9 | 1 | -9,77 € |
+| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R | 4 | 4 | 1,56 € |
+| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 4 | 4 | 1,56 € |
+| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R | 4 | 4 | 1,56 € |
+| Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 10 | 2 | -9,59 € |
 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 4× normal | 0 | 0 | 0,00 € |
-| Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 0 | 0 | 0,00 € |
-| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 0 | 0 | 0,00 € |
-| Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 0 | 0 | 0,00 € |
-| Beste Signale (streng): News-Sprung ≥ 2 %, Volumen ≥ 4×, Schwankung ≥ 4 %, Einstieg bis 10:30 Uhr ET · nur der erste Kandidat des Tages · Ziel 3R | 1 | 1 | 0,18 € |
+| Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 10 | 10 | -2,17 € |
+| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 2 | 2 | -0,66 € |
+| Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 2 | 2 | -0,66 € |
+| Beste Signale (streng): News-Sprung ≥ 2 %, Volumen ≥ 4×, Schwankung ≥ 4 %, Einstieg bis 10:30 Uhr ET · nur der erste Kandidat des Tages · Ziel 3R | 1 | 1 | 1,27 € |
 
 | Aktie | Regel | Einstieg | Stopp | Ziel | Stand | Ergebnis |
 |---|---|---|---|---|---|---|
-| BMNR | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 15,60 $ | 15,45 $ | – | Stopp 9:40 Uhr | -1,28 € |
-| FIG | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 16,91 $ | 16,78 $ | – | Stopp 9:40 Uhr | -1,05 € |
-| IREN | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 15,59 $ | 15,33 $ | – | Stopp 9:45 Uhr | -1,72 € |
-| MARA | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 6,21 $ | 6,14 $ | – | Stopp 9:45 Uhr | -1,21 € |
-| PATH | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 11,45 $ | 11,39 $ | – | Stopp 9:45 Uhr | -0,55 € |
-| SA | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 19,01 $ | 18,80 $ | – | Stopp 9:40 Uhr | -3,15 € |
-| TSLA | Beste Signale (streng): News-Sprung ≥ 2 %, Volumen ≥ 4×, Schwankung ≥ 4 %, Einstieg bis 10:30 Uhr ET | 9:40 386,95 $ | 372,50 $ | 430,31 $ | offen, Kurs 387,87 $ | 0,18 € |
-| TSLA | News-Sprung: Lücke ≥ 4 % | 9:40 386,95 $ | 372,50 $ | 408,63 $ | offen, Kurs 387,87 $ | 0,18 € |
-| TSLA | News-Sprung: Lücke ≥ 4 % | 9:40 386,95 $ | 372,50 $ | 415,86 $ | offen, Kurs 387,87 $ | 0,18 € |
-| TSLA | News-Sprung: Lücke ≥ 4 % | 9:40 386,95 $ | 372,50 $ | 430,31 $ | offen, Kurs 387,87 $ | 0,18 € |
-| TSLA | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 385,53 $ | 383,60 $ | – | Stopp 9:45 Uhr | -0,55 € |
-| TXN | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 292,31 $ | 290,66 $ | – | offen, Kurs 293,94 $ | 0,51 € |
-| NVDA | News-Sprung: Lücke ≥ 4 % | 10:00 168,64 $ | 159,06 $ | 183,00 $ | offen, Kurs 164,94 $ | -2,24 € |
-| NVDA | News-Sprung: Lücke ≥ 4 % | 10:00 168,64 $ | 159,06 $ | 187,79 $ | offen, Kurs 164,94 $ | -2,24 € |
-| NVDA | News-Sprung: Lücke ≥ 4 % | 10:00 168,64 $ | 159,06 $ | 197,36 $ | offen, Kurs 164,94 $ | -2,24 € |
-| NTRA | Stocks in Play (Studie): Top 20 nach Startvolumen | 10:05 296,12 $ | 294,46 $ | – | Stopp 10:05 Uhr | -0,77 € |
+| AFRM | News-Sprung: Lücke ≥ 4 % | 10:25 59,36 $ | 57,46 $ | 63,16 $ | offen, Kurs 59,24 $ | -0,25 € |
+| AFRM | News-Sprung: Lücke ≥ 4 % | 10:25 59,36 $ | 57,46 $ | 65,06 $ | offen, Kurs 59,24 $ | -0,25 € |
+| AFRM | Ausbruch 30 Min | 10:25 59,36 $ | 57,46 $ | 63,16 $ | offen, Kurs 59,24 $ | -0,25 € |
+| AFRM | Stocks in Play (Studie): Top 20 nach Startvolumen | 10:25 59,29 $ | 58,90 $ | – | offen, Kurs 59,24 $ | -0,13 € |
+| BDX | Ausbruch 30 Min | 10:25 214,43 $ | 211,69 $ | 219,91 $ | offen, Kurs 214,21 $ | -0,15 € |
+| INTC | Ausbruch 30 Min | 10:25 59,22 $ | 56,66 $ | 64,34 $ | offen, Kurs 58,95 $ | -0,51 € |
+| NVDA | Opening-Range-Ausbruch 30 Min | 10:25 170,66 $ | 156,93 $ | 198,13 $ | offen, Kurs 169,99 $ | -0,45 € |
+| NVDA | Ausbruch 30 Min | 10:25 170,66 $ | 156,93 $ | 198,13 $ | offen, Kurs 169,99 $ | -0,45 € |
+| NVDA | Ausbruch 30 Min | 10:25 170,66 $ | 156,93 $ | 198,13 $ | offen, Kurs 169,99 $ | -0,45 € |
+| PLTR | Ausbruch 30 Min | 10:25 160,61 $ | 154,57 $ | 172,69 $ | offen, Kurs 160,35 $ | -0,21 € |
+| QCOM | Ausbruch 30 Min | 10:25 165,11 $ | 160,49 $ | 174,36 $ | offen, Kurs 165,10 $ | -0,06 € |
+| QQQ | News-Sprung: Lücke ≥ 4 % | 10:25 656,70 $ | 648,20 $ | 669,45 $ | offen, Kurs 655,62 $ | -0,21 € |
+| QQQ | News-Sprung: Lücke ≥ 4 % | 10:25 656,70 $ | 648,20 $ | 673,69 $ | offen, Kurs 655,62 $ | -0,21 € |
+| QQQ | News-Sprung: Lücke ≥ 4 % | 10:25 656,70 $ | 648,20 $ | 682,19 $ | offen, Kurs 655,62 $ | -0,21 € |
+| QQQ | Opening-Range-Ausbruch 30 Min | 10:25 656,70 $ | 641,95 $ | 686,19 $ | offen, Kurs 655,62 $ | -0,21 € |
+| QQQ | Ausbruch 30 Min | 10:25 656,70 $ | 641,95 $ | 686,19 $ | offen, Kurs 655,62 $ | -0,21 € |
+| QQQ | Ausbruch 30 Min | 10:25 656,70 $ | 641,95 $ | 686,19 $ | offen, Kurs 655,62 $ | -0,21 € |
+| SPY | Ausbruch 30 Min | 10:25 726,72 $ | 713,53 $ | 753,11 $ | offen, Kurs 726,15 $ | -0,13 € |
+| CCL | Ausbruch 30 Min | 10:30 28,22 $ | 27,64 $ | 29,37 $ | offen, Kurs 28,20 $ | -0,10 € |
+| F | Ausbruch 30 Min | 10:30 11,53 $ | 11,38 $ | 11,83 $ | offen, Kurs 11,53 $ | -0,10 € |
 
 ## Labor (Testphase, Spielgeld ohne Limit)
 

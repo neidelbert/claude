@@ -1,9 +1,9 @@
 {
   "part": "morning",
   "ok": true,
-  "summary": "384 Treffer",
-  "ran_at": "2026-11-23T12:30:21Z",
-  "date_et": "2026-11-23",
+  "summary": "531 Treffer",
+  "ran_at": "2026-11-24T12:30:21Z",
+  "date_et": "2026-11-24",
   "steps": [
     {
       "name": "Aktienliste",
@@ -13,12 +13,12 @@
     {
       "name": "Daily-Scan",
       "ok": true,
-      "detail": "5.927 von 5.927 Charts geladen, 1.620 gescannt, 384 Treffer"
+      "detail": "5.927 von 5.927 Charts geladen, 1.499 gescannt, 531 Treffer"
     },
     {
       "name": "News",
       "ok": true,
-      "detail": "73 neue Meldungen zu 10 Tickern"
+      "detail": "131 neue Meldungen zu 10 Tickern"
     },
     {
       "name": "Pelosi-Tracker",
@@ -29,44 +29,44 @@
   "data": {
     "universe_date": "2026-11-19",
     "daily": {
-      "as_of": "2026-11-20 close",
+      "as_of": "2026-11-23 close",
       "universe": 5927,
       "fetched": 5927,
-      "liquid": 1622,
-      "scanned": 1620,
+      "liquid": 1500,
+      "scanned": 1499,
       "failed": 0,
-      "hits": 384,
+      "hits": 531,
       "per_setup": {
-        "breakout_20d": 12,
-        "bull_flag": 38,
-        "reclaim_ma20": 25,
-        "oversold": 307,
-        "oversold_bounce": 16
+        "breakout_20d": 51,
+        "bull_flag": 31,
+        "reclaim_ma20": 171,
+        "oversold": 82,
+        "oversold_bounce": 253
       }
     },
     "news": {
       "tickers": [
         "NVDA",
         "MU",
+        "AAPL",
+        "TSLA",
         "GOOGL",
-        "SNDK",
         "TSM",
+        "SNDK",
         "INTC",
         "GOOG",
-        "PLTR",
-        "MRVL",
-        "UNH"
+        "DELL"
       ],
       "items": [
         {
-          "id": "rss:dc62d982-cb1e-32fb-9062-e32e3dee917f",
+          "id": "rss:ee590f0a-fa49-36be-bf7a-1fb0ac30a2dd",
           "source": "Yahoo Finance",
           "kind": "headline",
           "ticker": "NVDA",
-          "title": "Anthropic Just Rewrote Wall Street's IPO Record Books. Here's Where History Says Its Shares Will Head Next.",
-          "summary": "More often than not, history can foreshadow the future for hot tech-based initial public offerings (IPOs).",
-          "link": "https://www.fool.com/investing/2026/11/23/anthropic-just-rewrote-wall-street-ipo-record-books-where-history-says-shares-head-next/?.tsrc=rss",
-          "time": "2026-11-23T12:26:02+00:00",
+          "title": "Anthropic Falls Below IPO Price. The Threat Wasn’t Nvidia, It Came From Inside",
+          "summary": "Anthropic stock fell below its $83 IPO price as an Axios report said staff fear unreleased AI models are unsafe to release.",
+          "link": "https://beincrypto.com/anthropic-stock-below-ipo-price-employees/?.tsrc=rss",
+          "time": "2026-11-24T12:28:10+00:00",
           "touches": [
             "NVDA"
           ],
@@ -74,48 +74,85 @@
           "new": true
         },
         {
-          "id": "rss:bfe145e0-1912-3683-a3d0-f48eae4a08c5",
+          "id": "rss:dc519d7f-0e50-35bd-9028-45a4a463a883",
           "source": "Yahoo Finance",
           "kind": "headline",
           "ticker": "NVDA",
-          "title": "Could an AI selloff trigger a bear market and recession?",
-          "summary": "Investing.com -- Yardeni Research said in its latest morning briefing note on Monday that it does not expect the AI-driven stock market rout to cause a recession or a bear market, arguing that the selloff is a correction within a bull market and a buying opportunity.",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/could-ai-selloff-trigger-bear-122152717.html?.tsrc=rss",
-          "time": "2026-11-23T12:21:52+00:00",
+          "title": "Premarket movers: Nvidia slips; HPE, Semtech fall",
+          "summary": "Investing.com - U.S. stock futures turned lower on Tuesday following a sharp rally on Wall Street driven by Nvidia’s decision to reinstate founder Jensen Huang as chief executive.",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/premarket-movers-nvidia-slips-hpe-122424595.html?.tsrc=rss",
+          "time": "2026-11-24T12:24:24+00:00",
           "touches": [
             "NVDA"
           ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:a65c2af3-3332-358b-a418-79e92d4e07d7",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "NVDA",
-          "title": "Down 33% YTD, Is Nvidia a Golden Buying Opportunity?",
-          "summary": "Jensen Huang is out, export controls are tightening, and the stock has dropped below its prior 52-week low. Yet the latest quarter set records. One valuation gap between Nvidia and its rivals may explain why our model sees something the market does not.",
-          "link": "https://247wallst.com/investing/2026/11/23/down-33-ytd-is-nvidia-a-golden-buying-opportunity/?.tsrc=rss",
-          "time": "2026-11-23T12:17:12+00:00",
-          "touches": [
-            "NVDA"
+          "tags": [
+            "macro"
           ],
-          "tags": [],
           "new": true
         },
         {
-          "id": "rss:ec1149f7-d0a7-3983-96d6-41ee0089e50b",
+          "id": "rss:611a40a7-c0d4-322d-a9fa-d72dc3c48789",
           "source": "Yahoo Finance",
           "kind": "headline",
           "ticker": "GOOG",
-          "title": "Marvell Technology’s Near 50% Plummet Within a Month Means Little to This Wall Street Pro Who Predicts 270% Gains From Here",
-          "summary": "A blockbuster all-stock deal and a brutal chip selloff sliced Marvell's value in half in a month, yet its earnings keep climbing. One Jefferies analyst sees a far bigger payoff ahead, but a hidden catch in the deal could change the math.",
-          "link": "https://247wallst.com/investing/2026/11/23/marvell-technologys-near-50-plummet-within-a-month-means-little-to-this-wall-street-pro-who-predicts-270-gains-from-here/?.tsrc=rss",
-          "time": "2026-11-23T12:15:45+00:00",
+          "title": "Elon Musk Reportedly Told Staff SpaceX Is Falling Behind in AI",
+          "summary": "Musk's own yardstick for AI success is revenue per GPU, and by that measure SpaceX's smartest move may be helping its rivals win. The catch is a short exit clause that could unravel the whole bet.",
+          "link": "https://247wallst.com/investing/2026/11/24/elon-musk-reportedly-told-staff-spacex-is-falling-behind-in-ai/?.tsrc=rss",
+          "time": "2026-11-24T12:22:13+00:00",
           "touches": [
             "GOOG",
-            "GOOGL",
-            "MRVL",
+            "GOOGL"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:68cf6df5-0f96-35c8-b700-d38ece6795a8",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "NVDA",
+          "title": "NVIDIA Added About $1 Trillion in Minutes on Huang’s Return. Where Does the Price Target Go Now?",
+          "summary": "A CEO reversal sent NVIDIA soaring in a single morning, but the rally may have already priced in the good news. Margin pressure, a lingering board probe, and a $390 billion supply bill could decide what comes next.",
+          "link": "https://247wallst.com/investing/2026/11/24/nvidia-added-about-1-trillion-in-minutes-on-huangs-return-where-does-the-price-target-go-now/?.tsrc=rss",
+          "time": "2026-11-24T12:17:32+00:00",
+          "touches": [
+            "NVDA"
+          ],
+          "tags": [
+            "analyst",
+            "legal",
+            "people"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:c949f876-fe51-377b-88bc-6aadbd0c7e90",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "NVDA",
+          "title": "ASML Stock What Changed After Nvidia CEO Return",
+          "summary": "ASML Holding reported recent share repurchases under its ongoing buyback program and saw renewed interest after Nvidia reinstated Jensen Huang as CEO, which lifted sentiment toward AI chip suppliers that rely on its EUV tools. The news cycle highlighted how ASML’s monopoly in extreme ultraviolet lithography ties its order outlook and capacity planning directly to customers’ AI and memory buildout decisions. We will examine how ASML’s existing investment narrative is influenced by Huang’s...",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/asml-stock-changed-nvidia-ceo-121558672.html?.tsrc=rss",
+          "time": "2026-11-24T12:15:58+00:00",
+          "touches": [
+            "NVDA"
+          ],
+          "tags": [
+            "capital",
+            "people"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:ea36aa5c-99bf-3551-99dd-360336ab660b",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "NVDA",
+          "title": "Can Earnings Beat Change The Case For Navitas Stock",
+          "summary": "Navitas Semiconductor recently reported third quarter revenue of US$13.99 million that was above expectations, outlined higher fourth quarter guidance with improved non GAAP gross margin, and closed the Claros acquisition that expands its target market across data center and energy power solutions. The company’s collaboration with Nvidia on high efficiency power delivery for AI data centers, including work on the MGX ecosystem and 800 VDC architectures, positions Navitas Semiconductor more...",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/earnings-beat-change-case-navitas-121547987.html?.tsrc=rss",
+          "time": "2026-11-24T12:15:47+00:00",
+          "touches": [
             "NVDA"
           ],
           "tags": [
@@ -125,29 +162,14 @@
           "new": true
         },
         {
-          "id": "rss:e786efaa-83fe-3cbd-9fdf-63282538bddc",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "TSM",
-          "title": "ASML Vs. Taiwan Semiconductor: Here’s Why You Choose One as Your AI-Anchor Now",
-          "summary": "Both companies say AI demand outruns supply, yet one builds fabs worldwide while the other is about to rewrite its price list. After a brutal month for both stocks, the choice of core holding hinges on risks most investors overlook.",
-          "link": "https://247wallst.com/investing/2026/11/23/asml-vs-taiwan-semiconductor-heres-why-you-choose-one-as-your-ai-anchor-now/?.tsrc=rss",
-          "time": "2026-11-23T12:15:36+00:00",
-          "touches": [
-            "TSM"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:473894ef-b917-30a8-9385-b36c2172d63b",
+          "id": "rss:43f2fa31-376e-3e34-a807-6c891d77c2bd",
           "source": "Yahoo Finance",
           "kind": "headline",
           "ticker": "NVDA",
-          "title": "Where Will Nvidia Stock Be in 1 Year? Wall Street's Answer Might Surprise You.",
-          "summary": "Nvidia reported fantastic third-quarter performance, but there will be some changes at the company.",
-          "link": "https://www.fool.com/investing/2026/11/23/where-will-nvidia-stock-be-in-1-year-wall-street-s-answer-might-surprise-you/?.tsrc=rss",
-          "time": "2026-11-23T12:10:02+00:00",
+          "title": "Anthropic’s Frenemy Squeeze: Pledging Up to $49B to Microsoft While Building Its Own Landlord Escape Hatch",
+          "summary": "Anthropic needs Microsoft's cloud today, leans on Amazon's chips, and is quietly planning to run its own data centers. Which landlord loses most when the tenant starts building, and which one has a hook to keep it?",
+          "link": "https://247wallst.com/investing/2026/11/24/anthropics-frenemy-squeeze-pledging-up-to-49b-to-microsoft-while-building-its-own-landlord-escape-hatch/?.tsrc=rss",
+          "time": "2026-11-24T12:15:31+00:00",
           "touches": [
             "NVDA"
           ],
@@ -155,132 +177,48 @@
           "new": true
         },
         {
-          "id": "rss:85c7efab-07b4-33ea-8aa7-64a47b785702",
+          "id": "rss:607b1db7-dce2-3848-876b-43e7cc84dc84",
           "source": "Yahoo Finance",
           "kind": "headline",
-          "ticker": "MU",
-          "title": "Why Is Micron Technology Stock Falling?",
-          "summary": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.",
-          "link": "https://www.trefis.com/stock/mu/articles/627777/why-is-micron-technology-stock-falling/2026-11-23?.tsrc=rss",
-          "time": "2026-11-23T12:05:46+00:00",
+          "ticker": "INTC",
+          "title": "Intel Has Plummeted 30% Over 30 Days: This Pro Analyst Reiterated His Buy Status, Predicting 133% Gains",
+          "summary": "A single guidance reset wiped out a third of Intel's value in a month, yet one KeyBanc analyst still sees a double-digit multiple of upside. What would have to go right for his bold call to hold up?",
+          "link": "https://247wallst.com/investing/2026/11/24/intel-has-plummeted-30-over-30-days-this-pro-analyst-reiterated-his-buy-status-predicting-133-gains/?.tsrc=rss",
+          "time": "2026-11-24T12:15:01+00:00",
           "touches": [
+            "INTC"
+          ],
+          "tags": [
+            "earnings"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:3e3f0541-e6be-35e2-80e6-0202001e157c",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "INTC",
+          "title": "U.S. chip stocks fall premarket after Nvidia-led rally on Huang’s return",
+          "summary": "Investing.com -- U.S. chip stocks slid in premarket trading Tuesday, giving back part of a sharp rally a day earlier that was sparked by Nvidia’s decision to reinstate Jensen Huang as chief executive.",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/u-chip-stocks-fall-premarket-121456516.html?.tsrc=rss",
+          "time": "2026-11-24T12:14:56+00:00",
+          "touches": [
+            "INTC",
             "MU",
             "NVDA"
           ],
-          "tags": [
-            "legal"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:676f5c7e-faad-3d84-9d91-83236308d517",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "NVDA",
-          "title": "Disney Just Made a 52-Week High While Netflix Is Down 36.2% This Year. Here’s the Better Buy Now.",
-          "summary": "Disney and Netflix both have bargain-bin valuations and could pay off for long-term investors.",
-          "link": "https://www.fool.com/investing/2026/11/23/disney-just-made-a-52-week-high-while-netflix-is-down-36-2-this-year-here-s-the-better-buy-now/?.tsrc=rss",
-          "time": "2026-11-23T12:05:02+00:00",
-          "touches": [
-            "NVDA"
-          ],
           "tags": [],
           "new": true
         },
         {
-          "id": "rss:4edce6cd-0084-303f-939a-1d2fcdd12b04",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "GOOG",
-          "title": "What Is Behind The Move In CoreWeave Stock?",
-          "summary": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.",
-          "link": "https://www.trefis.com/stock/crwv/articles/627785/what-is-behind-the-move-in-coreweave-stock-2/2026-11-23?.tsrc=rss",
-          "time": "2026-11-23T12:01:31+00:00",
-          "touches": [
-            "GOOG",
-            "GOOGL",
-            "NVDA"
-          ],
-          "tags": [
-            "legal"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:044c4726-4bfe-4df0-bd9e-5fb67caf0e2d",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "GOOG",
-          "title": "The biggest investors in AI are doing this",
-          "summary": "The S&P 500 lost $6 trillion in six weeks, and AI fears are at the center of it. Host Ejaaz Ahamadeen breaks down the bear and bull case for each fear, then goes through the latest 13F filings from Gavin Baker, Stan Druckenmiller and David Tepper, who read the same crash in opposite ways.",
-          "link": "https://finance.yahoo.com/video/biggest-investors-ai-doing-120000197.html?.tsrc=rss",
-          "time": "2026-11-23T12:00:00+00:00",
-          "touches": [
-            "GOOG",
-            "GOOGL",
-            "NVDA"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:daccf44c-3b91-3cc2-9f83-f92953bdd5f9",
+          "id": "rss:02ce2d43-6bf8-3ff1-b45c-814f5031059c",
           "source": "Yahoo Finance",
           "kind": "headline",
           "ticker": "NVDA",
-          "title": "YieldMax® ETFs Announces Distributions on MSST, NVIT, and TEST",
-          "summary": "CHICAGO and MILWAUKEE and NEW YORK, Nov. 23, 2026 (GLOBE NEWSWIRE) -- YieldMax® today announced distributions for the YieldMax® Performance & Distribution Target 25™ ETFs listed in the table below. The Fund seeks to generate income with a 25% target annual income level. Group 3 Distribution Announcement: Ex. & Record Date: November 24, 2026Payment Date: November 25, 2026 ETF Ticker1ETF NameDistribution FrequencyDistribution per ShareDistribution Rate230-DaySEC Yield3MSSTYieldMax® MSTR Performanc",
-          "link": "https://finance.yahoo.com/markets/options/articles/yieldmax-etfs-announces-distributions-msst-115500809.html?.tsrc=rss",
-          "time": "2026-11-23T11:55:00+00:00",
-          "touches": [
-            "NVDA"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:ad5532ad-bddd-389d-a2b9-00fce4cc53d0",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "NVDA",
-          "title": "Why Did Digital Realty Stock Move?",
-          "summary": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.",
-          "link": "https://www.trefis.com/stock/dlr/articles/627809/why-did-digital-realty-stock-move/2026-11-23?.tsrc=rss",
-          "time": "2026-11-23T11:52:53+00:00",
-          "touches": [
-            "NVDA"
-          ],
-          "tags": [
-            "legal"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:98e6322e-8ce8-3e4f-b28d-eb63c3e64523",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "NVDA",
-          "title": "Here’s How Many Shares of Costco You’d Need for $5,000 in Yearly Dividends.",
-          "summary": "With Costco shares, stay focused on future stock price growth rather than on the dividend.",
-          "link": "https://www.fool.com/investing/2026/11/23/heres-how-many-shares-of-costco-youd-need-for-5000-in-yearly-dividends/?.tsrc=rss",
-          "time": "2026-11-23T11:50:02+00:00",
-          "touches": [
-            "NVDA"
-          ],
-          "tags": [
-            "capital"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:1eec8b57-6014-3e38-8e4c-f9a8dfd32c69",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "NVDA",
-          "title": "Donald Trump urges Nvidia to rehire former CEO Jensen Huang",
-          "summary": "US President Donald Trump has urged Nvidia's board to rehire Jensen Huang, joining calls for his return that include a petition with more than 200,000 signatures. The former CEO is due to face questions in Congress on 1 December.View on euronews",
-          "link": "https://www.euronews.com/2026/11/23/donald-trump-urges-nvidia-to-rehire-former-ceo-jensen-huang?.tsrc=rss",
-          "time": "2026-11-23T11:48:46+00:00",
+          "title": "Nvidia reinstates Jensen Huang as CEO and president",
+          "summary": "The decision to reinstate Huang followed a series of meetings between himself and the board, as well as pressure from industry figures including Elon Musk.",
+          "link": "https://www.verdict.co.uk/nvidia-brings-back-jensen-huang-ceo/?.tsrc=rss",
+          "time": "2026-11-24T12:14:53+00:00",
           "touches": [
             "NVDA"
           ],
@@ -290,31 +228,48 @@
           "new": true
         },
         {
-          "id": "rss:e9425918-5f74-3181-bcb2-f26f999ed363",
+          "id": "rss:d69a1f0d-82c1-35c4-b493-caee71b0e64d",
           "source": "Yahoo Finance",
           "kind": "headline",
           "ticker": "NVDA",
-          "title": "What Sent Astera Labs Stock Lower?",
-          "summary": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.",
-          "link": "https://www.trefis.com/stock/alab/articles/627706/what-sent-astera-labs-stock-lower/2026-11-23?.tsrc=rss",
-          "time": "2026-11-23T11:48:27+00:00",
+          "title": "Ansell And 2 Australian Undervalued Stocks To Improve Your Portfolio",
+          "summary": "Australian markets just watched global shares climb after Nvidia’s CEO returned and reignited enthusiasm for AI and tech. When momentum like this races through headline sectors, quieter pockets often get left behind. That is where Australian businesses with strong cash flow potential but discounted share prices can matter. This article highlights three stocks from a cash flow focused value screen that may interest patient, valuation driven investors. The three stocks below are just a small...",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/ansell-2-australian-undervalued-stocks-121408597.html?.tsrc=rss",
+          "time": "2026-11-24T12:14:08+00:00",
           "touches": [
             "NVDA"
           ],
           "tags": [
-            "legal"
+            "people"
           ],
           "new": true
         },
         {
-          "id": "rss:a6229214-9fdb-338a-9fc6-93d40c382e7b",
+          "id": "rss:d10c70e2-b7e5-30b6-ab2e-afbbcb0d03c2",
           "source": "Yahoo Finance",
           "kind": "headline",
           "ticker": "NVDA",
-          "title": "JPMorgan Traders Drop Bullish View on Stocks After Selloff",
-          "summary": "JPMorgan Chase & Co.'s trading desk is taking a cautious view toward US stocks after the S&P 500 Index tumbled into a correction last week.",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/jpmorgan-traders-drop-bullish-view-114704931.html?.tsrc=rss",
-          "time": "2026-11-23T11:47:04+00:00",
+          "title": "Acutaas Chemicals And 2 Other Indian Growth Stocks To Watch",
+          "summary": "Global markets are watching AI linked stocks jump after Jensen Huang returned as Nvidia CEO, and that surge in risk appetite has spilled into high growth shares more broadly. Indian companies where founders still own meaningful stakes can look especially interesting when confidence improves, because managers feel the market impact directly. This article picks three fast growing Indian stocks with heavy insider backing from our screener and explains what sets each apart. The three stocks...",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/acutaas-chemicals-2-other-indian-121146498.html?.tsrc=rss",
+          "time": "2026-11-24T12:11:46+00:00",
+          "touches": [
+            "NVDA"
+          ],
+          "tags": [
+            "people"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:33c74aa5-6e88-3953-8348-248c4e243cb4",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "NVDA",
+          "title": "Nvidia's Role as AI Industry Advocate Likely to Continue Following Huang's Return Amid Focus on Regulatory Policy, Wedbush Says",
+          "summary": "Nvidia's (NVDA) role as a strong advocate for the artificial intelligence industry with access to se",
+          "link": "https://finance.yahoo.com/technology/ai/articles/nvidia-apos-role-ai-industry-121020908.html?.tsrc=rss",
+          "time": "2026-11-24T12:10:20+00:00",
           "touches": [
             "NVDA"
           ],
@@ -322,15 +277,34 @@
           "new": true
         },
         {
-          "id": "rss:fd03e1e8-c6e4-381c-8c65-ae4223919abc",
+          "id": "rss:38bda86e-dc6b-30e3-b5b7-329f2b338775",
           "source": "Yahoo Finance",
           "kind": "headline",
-          "ticker": "NVDA",
-          "title": "Best Buy Reports Earnings Tomorrow. Here's What Investors Should Be Watching.",
-          "summary": "Revenue and net income figures are only the start.",
-          "link": "https://www.fool.com/investing/2026/11/23/best-buy-reports-earnings-tomorrow-here-s-what-investors-should-be-watching/?.tsrc=rss",
-          "time": "2026-11-23T11:45:08+00:00",
+          "ticker": "TSLA",
+          "title": "Tesla, SpaceX Name Five Directors for Potential $3.5 Trillion Merger",
+          "summary": "The companies are reportedly advancing negotiations for a potential all-stock merger that could face regulatory hurdles.",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/tesla-spacex-name-five-directors-120918069.html?.tsrc=rss",
+          "time": "2026-11-24T12:09:18+00:00",
           "touches": [
+            "TSLA"
+          ],
+          "tags": [
+            "deal"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:e3fe799c-d409-3d74-bdaa-c55798fed12e",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "GOOG",
+          "title": "OpenAI’s Greg Brockman: “The World Is Not Building Enough Compute.” Wall Street Just Stopped Raising Capex Forecasts",
+          "summary": "Key TakeawaysOpenAI President Greg Brockman says the world is short on compute, but analysts didn’t raise their capex forecasts for Amazon, Alphabet, Microsoft or Meta during third-quarter earnings season. Analysts expect Nvidia’s revenue to grow 71% in the fiscal year ending January 2028, faster than its biggest customers’ capex.",
+          "link": "https://www.tikr.com/blog/openais-greg-brockman-the-world-is-not-building-enough-compute-wall-street-just-stopped-raising-capex-forecasts?ref=yahoofinance&tlnk=yf-261124-777pg8fq&.tsrc=rss",
+          "time": "2026-11-24T12:05:04+00:00",
+          "touches": [
+            "GOOG",
+            "GOOGL",
             "NVDA"
           ],
           "tags": [
@@ -339,14 +313,14 @@
           "new": true
         },
         {
-          "id": "rss:1291951b-d534-3168-9fc8-af5ed964fba1",
+          "id": "rss:d849b5a9-eed0-31fc-92d0-0820811524fc",
           "source": "Yahoo Finance",
           "kind": "headline",
           "ticker": "NVDA",
-          "title": "Jensen and Lori Huang Control 870 Million Nvidia Shares Through Trusts and LLCs",
-          "summary": "Jensen and Lori Huang control approximately 3.6% of Nvidia through trusts, investment entities and charitable holdings.",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/jensen-lori-huang-control-870-114440529.html?.tsrc=rss",
-          "time": "2026-11-23T11:44:40+00:00",
+          "title": "Bitcoin or Gold? Cathie Wood of Ark Invest Makes a Compelling Case for Buying Bitcoin.",
+          "summary": "Cathie Wood has a low opinion of gold compared to Bitcoin.",
+          "link": "https://www.fool.com/investing/2026/11/24/bitcoin-or-gold-cathie-wood-of-ark-invest-makes-a-compelling-case-for-buying-bitcoin/?.tsrc=rss",
+          "time": "2026-11-24T12:05:02+00:00",
           "touches": [
             "NVDA"
           ],
@@ -354,30 +328,96 @@
           "new": true
         },
         {
-          "id": "rss:38bebe50-fda3-3de6-b215-276eb4b08c27",
+          "id": "rss:278c65da-ea79-3b4a-bd69-981d15beee41",
           "source": "Yahoo Finance",
           "kind": "headline",
-          "ticker": "PLTR",
-          "title": "Trump's Portfolio Discloses Up to $148 Million in September Trading",
-          "summary": "The White House says independent managers control the portfolio and Trump has no involvement in trading decisions.",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/trumps-portfolio-discloses-148-million-114128711.html?.tsrc=rss",
-          "time": "2026-11-23T11:41:28+00:00",
+          "ticker": "NVDA",
+          "title": "China Just Fired A Warning Shot At Nvidia As Jensen Huang Returns",
+          "summary": "Jensen Huang Is Back At Nvidia, But Beijing Sees Trouble Ahead For Chips",
+          "link": "https://finance.yahoo.com/technology/ai/articles/china-just-fired-warning-shot-120411505.html?.tsrc=rss",
+          "time": "2026-11-24T12:04:11+00:00",
           "touches": [
-            "PLTR"
+            "NVDA"
           ],
           "tags": [],
           "new": true
         },
         {
-          "id": "rss:5d0863d1-3733-3b1d-9c79-9c4251c3f14a",
+          "id": "rss:c442c4b9-e325-3156-ad41-72f815eea9c4",
           "source": "Yahoo Finance",
           "kind": "headline",
-          "ticker": "GOOG",
-          "title": "Nvidia Stock Surges as Trump Urges Board to Rehire Huang. Is the Selling Finally Over?",
-          "summary": "Nvidia stock needs something—or someone—to help drag it out of the hole it’s in. It got both Monday.",
-          "link": "https://finance.yahoo.com/m/5d0863d1-3733-3b1d-9c79-9c4251c3f14a/nvidia-stock-surges-as-trump.html?.tsrc=rss",
-          "time": "2026-11-23T11:41:00+00:00",
+          "ticker": "NVDA",
+          "title": "Dan Ives Calls Jensen Huang's Return To Nvidia The Start of  ‘AI Godfather Part 2,’ But Warns Of More ‘Noise’ Ahead",
+          "summary": "Ives raised his Nvidia price target to $250 and set a $300 bull case after Jensen Huang's return.",
+          "link": "https://stocktwits.com/news-articles/markets/equity/dan-ives-calls-jensen-huang-return-to-nvidia-the-start-of-ai-godfather-part-2-but-warns-of-more-noise-ahead/cNbsIBLR9kL?.tsrc=rss",
+          "time": "2026-11-24T12:03:46+00:00",
           "touches": [
+            "NVDA"
+          ],
+          "tags": [
+            "analyst"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:3a7ee321-972d-3ab4-a0dd-e324b597208c",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "NVDA",
+          "title": "TSMC and SK Hynix Stocks Jump After Nvidia Reinstates Jensen Huang as CEO",
+          "summary": "Nvidia's Return to the Spotlight Sends TSMC and SK Hynix Higher",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/tsmc-sk-hynix-stocks-jump-120300756.html?.tsrc=rss",
+          "time": "2026-11-24T12:03:00+00:00",
+          "touches": [
+            "NVDA",
+            "TSM"
+          ],
+          "tags": [
+            "people"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:1097f44d-3387-3ba6-b25a-f6701216da72",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "DELL",
+          "title": "HPE Expects Thinner AI Margins. Is Dell Next?",
+          "summary": "Today's big story: Nvidia Added $954 Billion In A Day. Is Jensen Huang Too Big To Fire.",
+          "link": "https://www.trefis.com/stock/hpe/articles/628212/hpe-expects-thinner-ai-margins-is-dell-next/2026-11-24?.tsrc=rss",
+          "time": "2026-11-24T12:02:29+00:00",
+          "touches": [
+            "DELL"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:70e3a98b-35bd-3503-8f3e-c9e8ccd906fc",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Nvidia Regains Nearly $1 Trillion in Value -- Apple Still Holds the Top Spot",
+          "summary": "Nvidia Stock Stages a Historic Rebound. What Huang's Return Means for the Chip Giant",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/nvidia-regains-nearly-1-trillion-120207012.html?.tsrc=rss",
+          "time": "2026-11-24T12:02:07+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:41caac1b-3097-3043-b4d9-b486e6d68158",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Not Apple. Not Microsoft. This Is the \"Magnificent Seven\" Stock I’d Buy for a 10-Year Hold.",
+          "summary": "Alphabet’s search business is thriving, its cloud arm is surging, and now it owns a hefty piece of a $1.2 trillion AI company.",
+          "link": "https://www.fool.com/investing/2026/11/24/not-apple-not-microsoft-this-is-the-magnificent-seven-stock-id-buy-for-a-10-year-hold/?.tsrc=rss",
+          "time": "2026-11-24T12:02:01+00:00",
+          "touches": [
+            "AAPL",
             "GOOG",
             "GOOGL"
           ],
@@ -385,262 +425,60 @@
           "new": true
         },
         {
-          "id": "rss:98131a82-8e84-3900-b000-1a2b41e0df20",
+          "id": "rss:874148fd-f8fc-3a54-bbd8-12c3b25c1d27",
           "source": "Yahoo Finance",
           "kind": "headline",
           "ticker": "MU",
-          "title": "AI Chips Update - Global Semiconductor ETF Expands International Investment Horizons",
-          "summary": "xETFs has introduced the International Semiconductor Index ETF (ISMH), which targets leading non-U.S. semiconductor companies, aiming to complement U.S.-focused semiconductor holdings. With approximately 90% of global chip manufacturing capacity located outside the U.S., the ETF provides exposure to international semiconductor giants across different segments of the supply chain. As global semiconductor demand, particularly for memory, is anticipated to surge, ISMH offers investors a chance...",
-          "link": "https://finance.yahoo.com/technology/ai/articles/ai-chips-global-semiconductor-etf-113725192.html?.tsrc=rss",
-          "time": "2026-11-23T11:37:25+00:00",
+          "title": "SanDisk Stock At $937 Looked Cheap. Where Is The Floor?",
+          "summary": "Today's big story: Nvidia Added $954 Billion In A Day. Is Jensen Huang Too Big To Fire.",
+          "link": "https://www.trefis.com/stock/sndk/articles/627524/sandisk-stock-at-937-looked-cheap-where-is-the-floor/2026-11-24?.tsrc=rss",
+          "time": "2026-11-24T12:00:25+00:00",
           "touches": [
             "MU",
-            "TSM"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:76a3103b-f3de-364f-8cd8-90e453a902d8",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "INTC",
-          "title": "CrowdStrike, Zscaler, Anthropic, Sandisk, Strategy, Robinhood, and More Stocks That Explain Today’s Market",
-          "summary": "AI stocks surge as investors buy the dip following last week’s ech selloff.",
-          "link": "https://finance.yahoo.com/m/76a3103b-f3de-364f-8cd8-90e453a902d8/crowdstrike%2C-zscaler%2C.html?.tsrc=rss",
-          "time": "2026-11-23T11:20:00+00:00",
-          "touches": [
-            "INTC",
-            "MRVL",
             "SNDK"
           ],
           "tags": [],
           "new": true
         },
         {
-          "id": "rss:71b74291-97b4-36ad-ac32-088307fd94da",
+          "id": "rss:9fa411b3-4698-3545-840e-c12ddcac445c",
           "source": "Yahoo Finance",
           "kind": "headline",
-          "ticker": "INTC",
-          "title": "Why Did AMD Stock Move?",
-          "summary": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.",
-          "link": "https://www.trefis.com/stock/amd/articles/627783/why-did-amd-stock-move/2026-11-23?.tsrc=rss",
-          "time": "2026-11-23T11:18:17+00:00",
+          "ticker": "AAPL",
+          "title": "How to short an AI bubble",
+          "summary": "AI is booming, and almost any portfolio without exposure to some of the sector’s largest companies would have suffered.",
+          "link": "https://uk.finance.yahoo.com/news/short-ai-bubble-120000844.html?.tsrc=rss",
+          "time": "2026-11-24T12:00:00+00:00",
           "touches": [
-            "INTC",
-            "MRVL"
-          ],
-          "tags": [
-            "legal"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:49baf076-f829-3514-959c-2c602e7474d7",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "INTC",
-          "title": "What Triggered The Drop In Marvell Stock?",
-          "summary": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.",
-          "link": "https://www.trefis.com/stock/mrvl/articles/627782/what-triggered-the-drop-in-marvell-stock/2026-11-23?.tsrc=rss",
-          "time": "2026-11-23T11:18:17+00:00",
-          "touches": [
-            "INTC",
-            "MRVL"
-          ],
-          "tags": [
-            "legal"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:5e739045-7efc-3ea4-ab83-f80516250e7e",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "GOOG",
-          "title": "CrowdStrike explores acquisition of Zscaler – report",
-          "summary": "The talks are continuing, and sources cited by Bloomberg said there is no certainty that they will result in an agreement.",
-          "link": "https://www.verdict.co.uk/crowdstrike-explores-acquisition-zscaler/?.tsrc=rss",
-          "time": "2026-11-23T11:10:21+00:00",
-          "touches": [
-            "GOOG",
-            "GOOGL"
-          ],
-          "tags": [
-            "deal"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:cab5caaa-308a-3707-84e3-bc7e211e7714",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "GOOG",
-          "title": "Claude “May Have Just Proved” the Riemann Hypothesis. Anthropic’s Stock Fell Toward Its IPO Price Anyway",
-          "summary": "Key TakeawaysAnthropic shares fell 8. 5% on Friday, the same day an Anthropic mathematician said he had used Claude to prove the Riemann Hypothesis.",
-          "link": "https://www.tikr.com/blog/claude-may-have-just-proved-the-riemann-hypothesis-anthropics-stock-fell-toward-its-ipo-price-anyway?ref=yahoofinance&tlnk=yf-261123-w3fxccw5&.tsrc=rss",
-          "time": "2026-11-23T11:05:35+00:00",
-          "touches": [
-            "GOOG",
-            "GOOGL"
+            "AAPL"
           ],
           "tags": [],
           "new": true
         },
         {
-          "id": "rss:e6cff489-2bbc-347b-b549-5d902724ccc8",
+          "id": "rss:a783184e-030f-3fc5-b7f4-1d34e2d1901d",
           "source": "Yahoo Finance",
           "kind": "headline",
-          "ticker": "MU",
-          "title": "Avantis U.S. Large Cap Value ETF (AVLV) Buys $42 Million More Micron on Nov. 19",
-          "summary": "The fund bought $42.0 million of Micron Technology and $16.2 million of Netflix, with $245.4 million in gross trading against $21.70 billion in assets.",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/avantis-u-large-cap-value-110532984.html?.tsrc=rss",
-          "time": "2026-11-23T11:05:32+00:00",
+          "ticker": "TSLA",
+          "title": "Tesla Jumped 11% on FSD v15. Wall Street Still Sees $418",
+          "summary": "Key TakeawaysTesla jumped 11. 5% on Monday, Nov.",
+          "link": "https://www.tikr.com/blog/tesla-jumped-11-on-fsd-v15-wall-street-still-sees-418?ref=yahoofinance&tlnk=yf-261124-55wvcq4q&.tsrc=rss",
+          "time": "2026-11-24T11:55:56+00:00",
           "touches": [
-            "MU"
+            "TSLA"
           ],
           "tags": [],
           "new": true
         },
         {
-          "id": "rss:1493d58a-7a10-3dcb-8d78-4e72c52473c9",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "GOOG",
-          "title": "Alphabet Trades at “Just 18 Times Forward Earnings.” Its SpaceX and Anthropic Stakes Top $200 Billion",
-          "summary": "Key TakeawaysAlphabet trades at about 19x forward earnings and passed Nvidia in market value on Friday. Its SpaceX and Anthropic stakes are worth about $230 billion, but netting them out barely moves the multiple.",
-          "link": "https://www.tikr.com/blog/alphabet-trades-at-just-18-times-forward-earnings-its-spacex-and-anthropic-stakes-top-200-billion?ref=yahoofinance&tlnk=yf-261123-pc4vh8rv&.tsrc=rss",
-          "time": "2026-11-23T11:05:21+00:00",
-          "touches": [
-            "GOOG",
-            "GOOGL"
-          ],
-          "tags": [
-            "earnings"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:5ac9c4fd-3d52-39da-a197-f62bf8e34f19",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "UNH",
-          "title": "What State Street Health Care SPDR (XLV) Sold: Eli Lilly Leads on Nov. 19",
-          "summary": "The $46.92 billion fund sold $275.1 million of stock, trimming all 60 holdings and buying nothing.",
-          "link": "https://finance.yahoo.com/healthcare/articles/state-street-health-care-spdr-110513953.html?.tsrc=rss",
-          "time": "2026-11-23T11:05:13+00:00",
-          "touches": [
-            "UNH"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:87a2d3a7-82d5-36bd-879e-1b4d8ba7aa1d",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "MU",
-          "title": "What iShares A.I. Innovation ETF (BAI) Bought: Anthropic Leads on Nov. 19",
-          "summary": "The fund deployed $644.2 million into 39 positions, led by a new $609.1 million stake in Anthropic Class A.",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/ishares-innovation-etf-bai-bought-110433413.html?.tsrc=rss",
-          "time": "2026-11-23T11:04:33+00:00",
-          "touches": [
-            "MU",
-            "TSM"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:bb1105a6-3bd2-352d-b9a7-ca467994065b",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "GOOG",
-          "title": "First Trust L/S Equity (FTLS) Buys $73.5 Million More Berkshire on Thursday",
-          "summary": "The fund bought $73.5 million of Berkshire Hathaway and $52.7 million of ExxonMobil while selling $110.3 million of Microsoft.",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/first-trust-l-equity-ftls-110352347.html?.tsrc=rss",
-          "time": "2026-11-23T11:03:52+00:00",
-          "touches": [
-            "GOOG",
-            "GOOGL"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:02a43bf4-a667-31fa-a56e-8f1d7abf374d",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "GOOG",
-          "title": "ETFs Are Net Sellers of Alphabet (GOOGL) on Nov. 19",
-          "summary": "Alphabet (GOOGL) saw $76.4 million in net ETF selling on Thursday.",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/etfs-net-sellers-alphabet-googl-110256389.html?.tsrc=rss",
-          "time": "2026-11-23T11:02:56+00:00",
-          "touches": [
-            "GOOG",
-            "GOOGL"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:a91b7296-0a36-3a78-9d0b-6d7dc3e77bad",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "PLTR",
-          "title": "ETFs Are Buying Palantir (PLTR) on Nov. 19",
-          "summary": "ETFs bought $57.2 million of Palantir stock on Nov. 19.",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/etfs-buying-palantir-pltr-nov-110127861.html?.tsrc=rss",
-          "time": "2026-11-23T11:01:27+00:00",
-          "touches": [
-            "PLTR"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:e650dc09-8307-4e76-a8ed-0c801cd22987",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "GOOG",
-          "title": "How Taylor Sheridan still makes a profit from high-budget TV",
-          "summary": "Emmy-nominated creator of Yellowstone, 1883, Landman and Lioness Taylor Sheridan explains to Yahoo Finance Executive Editor Brian Sozzi at Yahoo Finance Invest why a low-budget show is worth less to the studio, and why his new NBCUniversal deal comes with no output minimums.",
-          "link": "https://finance.yahoo.com/video/taylor-sheridan-still-makes-profit-110000407.html?.tsrc=rss",
-          "time": "2026-11-23T11:00:00+00:00",
-          "touches": [
-            "GOOG",
-            "GOOGL"
-          ],
-          "tags": [
-            "deal"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:820d6821-2add-3988-b3ae-b59a3fee762f",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "MRVL",
-          "title": "3 Millionaire-Maker AI Chip Stocks Wall Street Isn't Talking About",
-          "summary": "You can make more money with smaller AI chipmakers than by investing in the giants.",
-          "link": "https://www.fool.com/investing/2026/11/23/3-millionaire-maker-ai-chip-stocks-wall-street-isnt-talking-about/?.tsrc=rss",
-          "time": "2026-11-23T10:50:02+00:00",
-          "touches": [
-            "MRVL",
-            "MU"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:d59591b6-fef3-365c-ae18-0914181812c1",
+          "id": "rss:6bd3a88d-6af3-37cf-a0d9-9664c32036da",
           "source": "Yahoo Finance",
           "kind": "headline",
           "ticker": "TSM",
-          "title": "AI Jitters Roil Asian Stock Markets",
-          "summary": "Asian stock markets churned on Monday as traders took Wall Street cues after the 5.3% decline on the",
-          "link": "https://finance.yahoo.com/markets/world-indices/articles/ai-jitters-roil-asian-stock-103847073.html?.tsrc=rss",
-          "time": "2026-11-23T10:38:47+00:00",
+          "title": "TSMC Weighs $22.6 Billion Texas Chip Plant, Seeks Tax Breaks",
+          "summary": "The chipmaker is weighing Texas and Arizona for a proposed manufacturing expansion focused on advanced semiconductor technology.",
+          "link": "https://finance.yahoo.com/technology/articles/tsmc-weighs-22-6-billion-114656874.html?.tsrc=rss",
+          "time": "2026-11-24T11:46:56+00:00",
           "touches": [
             "TSM"
           ],
@@ -648,66 +486,230 @@
           "new": true
         },
         {
-          "id": "rss:3a351d60-761a-33a0-bce2-1b28573baaea",
+          "id": "rss:d0253adf-da50-3264-a39c-1762f9b8b024",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "Nvidia Added $954 Billion In A Day. Is Jensen Huang Too Big To Fire?",
+          "summary": "After the 2008 financial crisis, Washington decided that some banks were too big to fail. Between Nov 12 and Nov 23, the White House showed it holds the same view about at least one person. He is Jensen Huang, the co-founder and chief executive of Nvidia.",
+          "link": "https://www.trefis.com/stock/nvda/articles/628204/nvidia-added-954-billion-in-a-day-is-jensen-huang-too-big-to-fire/2026-11-24?.tsrc=rss",
+          "time": "2026-11-24T11:39:29+00:00",
+          "touches": [
+            "AAPL"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:44fbe8f4-52e2-3935-987e-09edd9a32699",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "GOOG",
+          "title": "Who Pays P&G? The American Shopper In Four Lines",
+          "summary": "Today's big story: Nvidia Added $954 Billion In A Day. Is Jensen Huang Too Big To Fire.",
+          "link": "https://www.trefis.com/stock/pg/articles/627486/who-pays-p-g-the-american-shopper-in-four-lines/2026-11-24?.tsrc=rss",
+          "time": "2026-11-24T11:37:23+00:00",
+          "touches": [
+            "GOOG",
+            "GOOGL"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:47990f2d-f374-3c84-a861-b70743f55352",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "TSLA",
+          "title": "Energy Transition Today - Renewable Energy Market Grows Amidst Technological Advances",
+          "summary": "The global renewable energy market is projected to experience significant growth, reaching approximately $5.88 trillion by 2034. This expansion is driven by the deployment of clean power, government policy support, technological innovations, and increasing demand for low-emission electricity. Key factors contributing to this trend include the rise of solar, wind, hydropower, and other renewable technologies across various applications, along with electrification efforts in transport and...",
+          "link": "https://finance.yahoo.com/energy/articles/energy-transition-today-renewable-energy-113702122.html?.tsrc=rss",
+          "time": "2026-11-24T11:37:02+00:00",
+          "touches": [
+            "TSLA"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:082a5516-691d-393b-99d6-0cba1a18259a",
           "source": "Yahoo Finance",
           "kind": "headline",
           "ticker": "INTC",
-          "title": "U.S. chip and neocloud stocks rally premarket after last week’s selloff",
-          "summary": "Investing.com -- U.S. chip and neocloud stocks surged in premarket trading Monday, rebounding from a rout that gave the Nasdaq its worst week since 2020.",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/u-chip-neocloud-stocks-rally-102133642.html?.tsrc=rss",
-          "time": "2026-11-23T10:21:33+00:00",
+          "title": "Intel Is Up 73% in a Year Despite Its October Crash. CEO Lip-Bu Tan: “I Just Cannot Supply Enough”",
+          "summary": "Key TakeawaysIntel stock is up 73% in a year but sits 58% below its June high. Tan says Intel can’t make enough server chips, while AMD takes the orders and HP shows PC demand falling.",
+          "link": "https://www.tikr.com/blog/intel-is-up-70-in-a-year-despite-its-october-crash-ceo-lip-bu-tan-i-just-cannot-supply-enough?ref=yahoofinance&tlnk=yf-261124-43mcc74v&.tsrc=rss",
+          "time": "2026-11-24T11:35:46+00:00",
           "touches": [
-            "INTC",
-            "MRVL",
-            "MU",
-            "SNDK"
+            "INTC"
+          ],
+          "tags": [
+            "people"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:f7fa0ed2-2c68-3b80-9261-c35639090d03",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "INTC",
+          "title": "Nvidia, Anthropic, Intel, HPE, Sanofi, and More Stocks That Explain Today’s Market",
+          "summary": "AMD, Anthropic, Intel, Marvell, Nvidia, and other AI stocks struggle as the euphoria from Monday fades.",
+          "link": "https://finance.yahoo.com/m/f7fa0ed2-2c68-3b80-9261-c35639090d03/nvidia%2C-anthropic%2C-intel%2C.html?.tsrc=rss",
+          "time": "2026-11-24T11:21:00+00:00",
+          "touches": [
+            "INTC"
           ],
           "tags": [],
           "new": true
         },
         {
-          "id": "rss:8113dbf4-5664-39a8-beb4-dcb8ed33edc5",
+          "id": "rss:ac62d594-ee43-3ad9-900f-75a3380f4f32",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "TSLA",
+          "title": "SpaceX and Tesla Directors Hold Talks Over Potential US$3.5 Trillion Merger",
+          "summary": "Space Exploration Technologies (NASDAQ:SPCX) and Tesla Inc (NASDAQ:TSLA) are exploring a potential US$3. 5 trillion merger, with five directors appointed to negotiate the terms of a proposed all-stock transaction, according to a report by the Financial Times on Tuesday.",
+          "link": "https://investorshub.advfn.com/market-news/article/40597/spacex-and-tesla-directors-hold-talks-over-potential-us3-5-trillion-merger?.tsrc=rss",
+          "time": "2026-11-24T11:19:30+00:00",
+          "touches": [
+            "TSLA"
+          ],
+          "tags": [
+            "deal",
+            "people"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:38491284-d54d-3b1d-9565-d87d762cd992",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "GOOG",
+          "title": "Jim Cramer Calls CrowdStrike’s Zscaler Deal the Biggest in Cybersecurity History. What It Means for Both Stocks",
+          "summary": "One stock sank while the other soared the moment CrowdStrike unveiled its all-stock bid for a rival. Behind the split reaction sit dilution fears, a thin spread, and a regulatory gauntlet that could reshape who wins from here.",
+          "link": "https://247wallst.com/investing/2026/11/24/jim-cramer-calls-crowdstrikes-zscaler-deal-the-biggest-in-cybersecurity-history-what-it-means-for-both-stocks/?.tsrc=rss",
+          "time": "2026-11-24T11:17:04+00:00",
+          "touches": [
+            "GOOG",
+            "GOOGL"
+          ],
+          "tags": [
+            "deal"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:797085f7-e26c-3c20-a3cd-f698a840c679",
           "source": "Yahoo Finance",
           "kind": "headline",
           "ticker": "SNDK",
-          "title": "Sandisk Just Split Its Stock 8-for-1. Is It Time to Buy?",
-          "summary": "Sandisk stock is incredibly cheap right now.",
-          "link": "https://www.fool.com/investing/2026/11/23/sandisk-just-split-its-stock-8-for-1-is-it-time-to-buy/?.tsrc=rss",
-          "time": "2026-11-23T10:20:02+00:00",
+          "title": "Sandisk Stock Jumps 15% as Wall Street Sees 192% Upside",
+          "summary": "Strong demand for NAND flash memory supports Sandisk's earnings, although analysts warn that pricing could weaken in 2027.",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/sandisk-stock-jumps-15-wall-111200041.html?.tsrc=rss",
+          "time": "2026-11-24T11:12:00+00:00",
           "touches": [
             "SNDK"
+          ],
+          "tags": [
+            "earnings"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:f1cc3a9f-1e5d-3424-9be0-48aa9b6845f8",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "GOOG",
+          "title": "Can Adobe Stock Rise 30% From Here?",
+          "summary": "Today's big story: Nvidia Added $954 Billion In A Day. Is Jensen Huang Too Big To Fire.",
+          "link": "https://www.trefis.com/stock/adbe/articles/628292/can-adobe-stock-rise-30-from-here/2026-11-24?.tsrc=rss",
+          "time": "2026-11-24T11:07:47+00:00",
+          "touches": [
+            "GOOG",
+            "GOOGL"
           ],
           "tags": [],
           "new": true
         },
         {
-          "id": "rss:3f1f89c7-5433-3bc0-990f-eab9250e8983",
+          "id": "rss:f45ffb70-c92e-3a27-884c-04d5ad2b2350",
           "source": "Yahoo Finance",
           "kind": "headline",
-          "ticker": "MU",
-          "title": "Micron Stock Rallies After Brutal Selloff. 3 Reasons Its Surge Has Legs.",
-          "summary": "Don’t call it a comeback just yet, but the memory-chip maker is finally showing signs of life following a brutal selloff.",
-          "link": "https://finance.yahoo.com/m/3f1f89c7-5433-3bc0-990f-eab9250e8983/micron-stock-rallies-after.html?.tsrc=rss",
-          "time": "2026-11-23T09:59:00+00:00",
+          "ticker": "AAPL",
+          "title": "Invesco NASDAQ 100 ETF (QQQM) Adds Apple and Microsoft on Friday",
+          "summary": "The $97.29 billion fund bought $198.5 million of stock on Friday, Nov. 20, lifting all 100 of its increased positions and selling nothing.",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/invesco-nasdaq-100-etf-qqqm-110444816.html?.tsrc=rss",
+          "time": "2026-11-24T11:04:44+00:00",
           "touches": [
-            "MU",
-            "SNDK"
+            "AAPL",
+            "MU"
           ],
           "tags": [],
           "new": true
         },
         {
-          "id": "rss:5a3945e4-6c4d-3db4-868f-17fb93c92483",
+          "id": "rss:07a9a429-24c6-3070-9afb-8951b90ef3df",
           "source": "Yahoo Finance",
           "kind": "headline",
-          "ticker": "MU",
-          "title": "Good News for Micron: Citi Says Ending Nvidia’s Financing Would Cut DRAM Demand Only 12%",
-          "summary": "Key TakeawaysCiti estimates even a full stop to Nvidia-linked financing would cut DRAM demand about 12% and NAND demand about 7%. Micron says 75% of its 2027 output is already sold, yet the stock trades as if a far deeper bust is coming.",
-          "link": "https://www.tikr.com/blog/good-news-for-micron-citi-says-ending-nvidias-financing-would-cut-dram-demand-only-12?ref=yahoofinance&tlnk=yf-261123-m6g4jpcr&.tsrc=rss",
-          "time": "2026-11-23T06:15:41+00:00",
+          "ticker": "AAPL",
+          "title": "iShares Russell 1000 Growth (IWF) Buys $22.7 Million More Apple on Nov. 20",
+          "summary": "The fund added $208.7 million in new positions on Friday, Nov. 20, with Apple, Microsoft and Alphabet leading the buys.",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/ishares-russell-1000-growth-iwf-110440903.html?.tsrc=rss",
+          "time": "2026-11-24T11:04:40+00:00",
           "touches": [
-            "MU",
-            "SNDK"
+            "AAPL",
+            "GOOG",
+            "GOOGL"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:f132a873-6449-3e72-99b4-b8efd6ce9c23",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "GOOG",
+          "title": "JPMorgan U.S. Tech Leaders (JTEK) Sells $27.7 Million of Broadcom on Nov. 20",
+          "summary": "The fund's $208.9 million net outflow came from cuts to 35 positions and a single $9.6 million add.",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/jpmorgan-u-tech-leaders-jtek-110436195.html?.tsrc=rss",
+          "time": "2026-11-24T11:04:36+00:00",
+          "touches": [
+            "GOOG",
+            "GOOGL",
+            "INTC",
+            "MU"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:bde9b642-7350-3dd9-8b78-4ce0e2aa01de",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "AAPL",
+          "title": "What ProShares Trust (TQQQ) Bought: Apple Leads on Friday",
+          "summary": "The 3x leveraged Nasdaq-100 fund added $241.3 million in gross buys on Friday, Nov. 20, lifting all 100 increased positions with no sells.",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/proshares-trust-tqqq-bought-apple-110432486.html?.tsrc=rss",
+          "time": "2026-11-24T11:04:32+00:00",
+          "touches": [
+            "AAPL",
+            "MU"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:4c9b0d01-59b3-3165-a062-52af09b98ead",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "TSLA",
+          "title": "Tesla Leads Goldman's Hedge Fund Short List With $26.4 Billion in Bearish Bets",
+          "summary": "Palantir and Walmart follow as Goldman identifies the largest short positions among S&P 500 companies.",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/tesla-leads-goldmans-hedge-fund-110429117.html?.tsrc=rss",
+          "time": "2026-11-24T11:04:29+00:00",
+          "touches": [
+            "TSLA"
           ],
           "tags": [],
           "new": true
@@ -715,84 +717,84 @@
       ],
       "moves": [
         {
-          "ticker": "GOOG",
-          "price": 264.0,
-          "prev_close": 271.02,
-          "pct": -2.59,
-          "time": "2026-11-20T21:00:00+00:00",
+          "ticker": "AAPL",
+          "price": 349.08,
+          "prev_close": 342.56,
+          "pct": 1.9,
+          "time": "2026-11-23T21:00:01+00:00",
           "moving": false
         },
         {
-          "ticker": "GOOGL",
-          "price": 265.29,
-          "prev_close": 272.66,
-          "pct": -2.7,
-          "time": "2026-11-20T21:00:01+00:00",
-          "moving": false
-        },
-        {
-          "ticker": "INTC",
-          "price": 51.28,
-          "prev_close": 55.72,
-          "pct": -7.97,
-          "time": "2026-11-20T21:00:01+00:00",
+          "ticker": "DELL",
+          "price": 334.91,
+          "prev_close": 278.02,
+          "pct": 20.46,
+          "time": "2026-11-23T21:04:57+00:00",
           "moving": true
         },
         {
-          "ticker": "MRVL",
-          "price": 122.28,
-          "prev_close": 138.47,
-          "pct": -11.69,
-          "time": "2026-11-20T21:00:02+00:00",
+          "ticker": "GOOG",
+          "price": 279.53,
+          "prev_close": 264.0,
+          "pct": 5.88,
+          "time": "2026-11-23T21:00:01+00:00",
+          "moving": true
+        },
+        {
+          "ticker": "GOOGL",
+          "price": 282.1,
+          "prev_close": 265.29,
+          "pct": 6.34,
+          "time": "2026-11-23T21:00:01+00:00",
+          "moving": true
+        },
+        {
+          "ticker": "INTC",
+          "price": 59.66,
+          "prev_close": 51.28,
+          "pct": 16.34,
+          "time": "2026-11-23T21:00:01+00:00",
           "moving": true
         },
         {
           "ticker": "MU",
-          "price": 594.51,
-          "prev_close": 690.44,
-          "pct": -13.89,
-          "time": "2026-11-20T21:00:01+00:00",
+          "price": 707.7,
+          "prev_close": 594.51,
+          "pct": 19.04,
+          "time": "2026-11-23T21:00:01+00:00",
           "moving": true
         },
         {
           "ticker": "NVDA",
-          "price": 125.53,
-          "prev_close": 145.98,
-          "pct": -14.01,
-          "time": "2026-11-20T21:00:01+00:00",
-          "moving": true
-        },
-        {
-          "ticker": "PLTR",
-          "price": 143.49,
-          "prev_close": 153.68,
-          "pct": -6.63,
-          "time": "2026-11-20T21:00:00+00:00",
+          "price": 165.05,
+          "prev_close": 125.53,
+          "pct": 31.48,
+          "time": "2026-11-23T21:00:01+00:00",
           "moving": true
         },
         {
           "ticker": "SNDK",
-          "price": 79.24,
-          "prev_close": 94.39,
-          "pct": -16.05,
-          "time": "2026-11-20T21:00:01+00:00",
+          "price": 87.71,
+          "prev_close": 79.24,
+          "pct": 10.69,
+          "time": "2026-11-23T21:00:00+00:00",
+          "moving": true
+        },
+        {
+          "ticker": "TSLA",
+          "price": 385.46,
+          "prev_close": 345.82,
+          "pct": 11.46,
+          "time": "2026-11-23T21:00:00+00:00",
           "moving": true
         },
         {
           "ticker": "TSM",
-          "price": 318.71,
-          "prev_close": 352.09,
-          "pct": -9.48,
-          "time": "2026-11-20T21:00:03+00:00",
+          "price": 363.6,
+          "prev_close": 318.71,
+          "pct": 14.08,
+          "time": "2026-11-23T21:00:02+00:00",
           "moving": true
-        },
-        {
-          "ticker": "UNH",
-          "price": 339.85,
-          "prev_close": 330.48,
-          "pct": 2.84,
-          "time": "2026-11-20T21:00:04+00:00",
-          "moving": false
         }
       ],
       "notes": []
@@ -804,5 +806,5 @@
       "new": []
     }
   },
-  "run_url": "https://github.com/neidelbert/claude/actions/runs/45113296426"
+  "run_url": "https://github.com/neidelbert/claude/actions/runs/45334981954"
 }

@@ -1,6 +1,6 @@
 # Trader-Übersicht
 
-Stand: Mi 25.11. 09:40 Uhr ET (15:40 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
+Stand: Mi 25.11. 09:50 Uhr ET (15:50 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
 
 NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
@@ -10,7 +10,7 @@ NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 |---|---|---|
 | Morgen-Scan | Mi 25.11. 07:30 Uhr ET (13:30 Uhr MEZ) | OK – 371 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/45562375663)) |
 | ORB-Scan | Di 24.11. 10:10 Uhr ET (16:10 Uhr MEZ) | OK – 261 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/45334981954)) |
-| Labor live | Mi 25.11. 09:40 Uhr ET (15:40 Uhr MEZ) | OK – Börsenstart gemeldet ([Lauf](https://github.com/neidelbert/claude/actions/runs/45562375663)) |
+| Labor live | Mi 25.11. 09:50 Uhr ET (15:50 Uhr MEZ) | OK – 214 Trades, 171 offen ([Lauf](https://github.com/neidelbert/claude/actions/runs/45562375663)) |
 | Labor | Di 24.11. 16:20 Uhr ET (22:20 Uhr MEZ) | OK – 16 von 80 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/45428441399)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
@@ -148,16 +148,16 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 - 22.10. 16:11 Uhr ET · [Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView](https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss)
 - 22.10. 15:51 Uhr ET · [How much Apple stock does CEO John Ternus actually own?](https://www.thestreet.com/personalities/how-much-apple-stock-does-john-ternus-own?.tsrc=rss)
 
-## Labor live – Mi 25.11.2026, Stand 09:40 Uhr ET
+## Labor live – Mi 25.11.2026, Stand 09:50 Uhr ET
 
-431 Aktien beobachtet · 39 Spielgeld-Trades aller Varianten · 33 offen
+431 Aktien beobachtet · 214 Spielgeld-Trades aller Varianten · 171 offen
 
 | Top-Variante | Trades | offen | € bei 100 €/Trade |
 |---|---|---|---|
 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R | 0 | 0 | 0,00 € |
 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 0 | 0 | 0,00 € |
 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R | 0 | 0 | 0,00 € |
-| Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 1 | 1 | 0,79 € |
+| Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 3 | 1 | -2,36 € |
 | Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 0 | 0 | 0,00 € |
 | Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 0 | 0 | 0,00 € |
 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 4× normal | 0 | 0 | 0,00 € |
@@ -166,7 +166,9 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 
 | Aktie | Regel | Einstieg | Stopp | Ziel | Stand | Ergebnis |
 |---|---|---|---|---|---|---|
-| ERO | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 20,82 $ | 20,62 $ | – | offen, Kurs 20,99 $ | 0,79 € |
+| ERO | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 20,82 $ | 20,62 $ | – | Stopp 9:50 Uhr | -1,18 € |
+| DELL | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:50 278,05 $ | 274,02 $ | – | Stopp 9:50 Uhr | -1,52 € |
+| PINS | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:50 18,30 $ | 18,21 $ | – | offen, Kurs 18,37 $ | 0,34 € |
 
 ## Labor (Testphase, Spielgeld ohne Limit)
 

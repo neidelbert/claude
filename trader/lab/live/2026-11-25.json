@@ -1,18 +1,62 @@
 {
  "date": "2026-11-25",
  "charts": {
+  "DELL": [
+   [
+    0,
+    268.48
+   ],
+   [
+    1,
+    274.59
+   ],
+   [
+    2,
+    275.435
+   ],
+   [
+    3,
+    273.9595
+   ]
+  ],
   "ERO": [
    [
     0,
-    20.8099
+    20.75
    ],
    [
     1,
     20.9943
+   ],
+   [
+    2,
+    20.65
+   ],
+   [
+    3,
+    20.65
+   ]
+  ],
+  "PINS": [
+   [
+    0,
+    18.205
+   ],
+   [
+    1,
+    18.11
+   ],
+   [
+    2,
+    18.11
+   ],
+   [
+    3,
+    18.37
    ]
   ]
  },
- "as_of": "09:40 Uhr ET",
+ "as_of": "09:50 Uhr ET",
  "symbols": 431,
  "failed": 0,
  "focus": [
@@ -38,121 +82,191 @@
   "best-locker-3R": "Beste Signale (locker): News-Sprung ≥ 2 %, Volumen ≥ 2×, Schwankung ≥ 2 %, Einstieg bis 10:30 Uhr ET · nur der erste Kandidat des Tages · Ziel 3R"
  },
  "per_variant": {
+  "orb-15-mid-1R-v0": {
+   "n": 22,
+   "open": 22,
+   "eur": -2.2,
+   "wins": 0
+  },
+  "orb-15-mid-1.5R-v0": {
+   "n": 22,
+   "open": 22,
+   "eur": -2.2,
+   "wins": 0
+  },
+  "orb-15-mid-2R-v0": {
+   "n": 22,
+   "open": 22,
+   "eur": -2.2,
+   "wins": 0
+  },
+  "orb-15-low-1R-v0": {
+   "n": 22,
+   "open": 22,
+   "eur": -2.2,
+   "wins": 0
+  },
+  "orb-15-low-1.5R-v0": {
+   "n": 22,
+   "open": 22,
+   "eur": -2.2,
+   "wins": 0
+  },
+  "orb-15-low-2R-v0": {
+   "n": 22,
+   "open": 22,
+   "eur": -2.2,
+   "wins": 0
+  },
   "sip-top20-atr0.1-eod": {
-   "n": 6,
-   "open": 5,
-   "eur": -0.46,
-   "wins": 2
+   "n": 8,
+   "open": 1,
+   "eur": -4.72,
+   "wins": 1
   },
   "sip-top20-atr0.1-2R": {
-   "n": 6,
-   "open": 5,
-   "eur": -0.46,
-   "wins": 2
+   "n": 8,
+   "open": 1,
+   "eur": -4.72,
+   "wins": 1
   },
   "sip-top20-atr0.2-eod": {
-   "n": 6,
-   "open": 6,
-   "eur": -0.46,
-   "wins": 2
+   "n": 8,
+   "open": 5,
+   "eur": -5.11,
+   "wins": 1
   },
   "sip-top20-atr0.2-2R": {
-   "n": 6,
-   "open": 6,
-   "eur": -0.46,
-   "wins": 2
-  },
-  "sip-top10-atr0.1-eod": {
-   "n": 2,
-   "open": 1,
-   "eur": -0.5,
+   "n": 8,
+   "open": 5,
+   "eur": -5.11,
    "wins": 1
   },
-  "sip-top10-atr0.1-2R": {
-   "n": 2,
-   "open": 1,
-   "eur": -0.5,
-   "wins": 1
-  },
-  "sip-top10-atr0.2-eod": {
-   "n": 2,
-   "open": 2,
-   "eur": -0.5,
-   "wins": 1
-  },
-  "sip-top10-atr0.2-2R": {
-   "n": 2,
-   "open": 2,
-   "eur": -0.5,
-   "wins": 1
-  },
-  "sip-top20-atr0.1-eod-fv2": {
-   "n": 5,
-   "open": 4,
-   "eur": -0.08,
-   "wins": 2
-  },
-  "sip-top20-atr0.1-eod-fv4": {
-   "n": 1,
-   "open": 0,
-   "eur": -0.64,
+  "orb-15-low-2R-v0-ffrueh": {
+   "n": 22,
+   "open": 22,
+   "eur": -2.2,
    "wins": 0
   },
   "sip-top20-atr0.1-eod-ffrueh": {
-   "n": 1,
+   "n": 3,
    "open": 1,
-   "eur": 0.79,
+   "eur": -2.36,
    "wins": 1
+  },
+  "sip-top20-atr0.1-eod-fv2": {
+   "n": 7,
+   "open": 0,
+   "eur": -5.06,
+   "wins": 0
+  },
+  "sip-top10-atr0.1-eod": {
+   "n": 4,
+   "open": 0,
+   "eur": -3.28,
+   "wins": 0
+  },
+  "sip-top10-atr0.1-2R": {
+   "n": 4,
+   "open": 0,
+   "eur": -3.28,
+   "wins": 0
+  },
+  "sip-top10-atr0.2-eod": {
+   "n": 4,
+   "open": 2,
+   "eur": -3.74,
+   "wins": 0
+  },
+  "sip-top10-atr0.2-2R": {
+   "n": 4,
+   "open": 2,
+   "eur": -3.74,
+   "wins": 0
+  },
+  "sip-top20-atr0.1-eod-fv4": {
+   "n": 2,
+   "open": 0,
+   "eur": -2.16,
+   "wins": 0
   }
  },
- "n_trades": 39,
- "n_open": 33,
+ "n_trades": 214,
+ "n_open": 171,
  "lukas": [],
  "lukas_n": 0,
  "accounts": {
+  "orb-15-mid-1R-v0": [
+   99.9,
+   91.92
+  ],
+  "orb-15-mid-1.5R-v0": [
+   99.9,
+   91.92
+  ],
+  "orb-15-mid-2R-v0": [
+   99.9,
+   91.92
+  ],
+  "orb-15-low-1R-v0": [
+   99.9,
+   91.92
+  ],
+  "orb-15-low-1.5R-v0": [
+   99.9,
+   91.92
+  ],
+  "orb-15-low-2R-v0": [
+   99.9,
+   91.92
+  ],
   "sip-top20-atr0.1-eod": [
-   99.75,
-   91.83
+   99.15,
+   85.29
   ],
   "sip-top20-atr0.1-2R": [
-   99.75,
-   91.83
+   99.15,
+   85.29
   ],
   "sip-top20-atr0.2-eod": [
-   99.75,
-   91.83
+   99.37,
+   87.24
   ],
   "sip-top20-atr0.2-2R": [
-   99.75,
-   91.83
+   99.37,
+   87.24
   ],
-  "sip-top10-atr0.1-eod": [
+  "orb-15-low-2R-v0-ffrueh": [
    99.9,
-   95.9
-  ],
-  "sip-top10-atr0.1-2R": [
-   99.9,
-   95.9
-  ],
-  "sip-top10-atr0.2-eod": [
-   99.9,
-   95.9
-  ],
-  "sip-top10-atr0.2-2R": [
-   99.9,
-   95.9
-  ],
-  "sip-top20-atr0.1-eod-fv2": [
-   99.98,
-   91.83
-  ],
-  "sip-top20-atr0.1-eod-fv4": [
-   99.87,
-   97.87
+   91.92
   ],
   "sip-top20-atr0.1-eod-ffrueh": [
-   100.16,
-   98.16
+   99.53,
+   93.53
+  ],
+  "sip-top20-atr0.1-eod-fv2": [
+   98.99,
+   87.22
+  ],
+  "sip-top10-atr0.1-eod": [
+   99.34,
+   91.34
+  ],
+  "sip-top10-atr0.1-2R": [
+   99.34,
+   91.34
+  ],
+  "sip-top10-atr0.2-eod": [
+   99.25,
+   91.25
+  ],
+  "sip-top10-atr0.2-2R": [
+   99.25,
+   91.25
+  ],
+  "sip-top20-atr0.1-eod-fv4": [
+   99.57,
+   95.57
   ]
  },
  "trades": [
@@ -160,29 +274,93 @@
    "entry": 20.8203,
    "stop": 20.6241,
    "target": null,
-   "exit": 20.9838,
-   "why": "Schluss",
-   "r": 0.833,
-   "pct": 0.785,
+   "exit": 20.5747,
+   "why": "Stopp",
+   "r": -1.252,
+   "pct": -1.18,
    "in_k": 1,
-   "out_k": 1,
-   "open": true,
+   "out_k": 3,
+   "open": false,
    "variant": "sip-top20-atr0.1-eod-ffrueh",
    "strategy": "sip",
    "symbol": "ERO",
    "in_at": "9:40",
-   "out_at": null,
-   "last": 20.9943,
-   "eur": 0.79,
+   "out_at": "9:50",
+   "last": 20.65,
+   "eur": -1.18,
    "key": "sip-top20-atr0.1-eod-ffrueh|ERO",
    "f": {
     "k": 1,
-    "gap": -11.26,
-    "rv": 2.18,
+    "gap": -11.67,
+    "rv": 2.16,
     "mkt": false,
     "atrp": 9.42,
     "risk": 0.94,
     "price": 20.82,
+    "dow": 2
+   },
+   "told_in": true,
+   "told_out": true
+  },
+  {
+   "entry": 278.049,
+   "stop": 274.0198,
+   "target": null,
+   "exit": 273.8225,
+   "why": "Stopp",
+   "r": -1.049,
+   "pct": -1.52,
+   "in_k": 3,
+   "out_k": 3,
+   "open": false,
+   "variant": "sip-top20-atr0.1-eod-ffrueh",
+   "strategy": "sip",
+   "symbol": "DELL",
+   "in_at": "9:50",
+   "out_at": "9:50",
+   "last": 273.9595,
+   "eur": -1.52,
+   "key": "sip-top20-atr0.1-eod-ffrueh|DELL",
+   "f": {
+    "k": 3,
+    "gap": -9.17,
+    "rv": 4.84,
+    "mkt": false,
+    "atrp": 14.49,
+    "risk": 1.45,
+    "price": 278.05,
+    "dow": 2
+   },
+   "told_in": true,
+   "told_out": true
+  },
+  {
+   "entry": 18.2991,
+   "stop": 18.2083,
+   "target": null,
+   "exit": 18.3608,
+   "why": "Schluss",
+   "r": 0.678,
+   "pct": 0.337,
+   "in_k": 3,
+   "out_k": 3,
+   "open": true,
+   "variant": "sip-top20-atr0.1-eod-ffrueh",
+   "strategy": "sip",
+   "symbol": "PINS",
+   "in_at": "9:50",
+   "out_at": null,
+   "last": 18.37,
+   "eur": 0.34,
+   "key": "sip-top20-atr0.1-eod-ffrueh|PINS",
+   "f": {
+    "k": 3,
+    "gap": -1.89,
+    "rv": 1.24,
+    "mkt": false,
+    "atrp": 4.97,
+    "risk": 0.5,
+    "price": 18.3,
     "dow": 2
    },
    "told_in": true,

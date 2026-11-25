@@ -346,5 +346,24 @@
     "kind": "passed",
     "id": "gap-2-v3-1.5R",
     "text": "Neu bestanden: News-Sprung: Lücke ≥ 2 % · Volumen ≥ 3× · Ziel 1,5R."
+  },
+  {
+    "date": "2026-11-25",
+    "kind": "champion",
+    "id": "gap-4-v3-2R",
+    "old": "gap-4-v3-3R",
+    "text": "Neue Top-Variante: News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R (Prüftage: 78 Trades, 70,39 € bei 100 € pro Trade). Vorher: News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R."
+  },
+  {
+    "date": "2026-11-25",
+    "kind": "passed",
+    "id": "bounce-gapdown3-daylow-2R-fv4",
+    "text": "Neu bestanden: Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 4× normal."
+  },
+  {
+    "date": "2026-11-25",
+    "kind": "passed",
+    "id": "orbrank-top20-2R-fv4",
+    "text": "Neu bestanden: Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal."
   }
 ]

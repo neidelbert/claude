@@ -1,6 +1,6 @@
 # Trader-Übersicht
 
-Stand: Mi 25.11. 10:00 Uhr ET (16:00 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
+Stand: Mi 25.11. 10:12 Uhr ET (16:12 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
 
 NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
@@ -9,8 +9,8 @@ NYSE heute: offen (Handelszeit 09:30 bis 16:00 Uhr ET).
 | Teil | Letzter Lauf | Ergebnis |
 |---|---|---|
 | Morgen-Scan | Mi 25.11. 07:30 Uhr ET (13:30 Uhr MEZ) | OK – 371 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/45562375663)) |
-| ORB-Scan | Di 24.11. 10:10 Uhr ET (16:10 Uhr MEZ) | OK – 261 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/45334981954)) |
-| Labor live | Mi 25.11. 10:00 Uhr ET (16:00 Uhr MEZ) | OK – 905 Trades, 841 offen ([Lauf](https://github.com/neidelbert/claude/actions/runs/45562375663)) |
+| ORB-Scan | Mi 25.11. 10:10 Uhr ET (16:10 Uhr MEZ) | OK – 115 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/45562375663)) |
+| Labor live | Mi 25.11. 10:10 Uhr ET (16:10 Uhr MEZ) | OK – 2.393 Trades, 2.200 offen ([Lauf](https://github.com/neidelbert/claude/actions/runs/45562375663)) |
 | Labor | Di 24.11. 16:20 Uhr ET (22:20 Uhr MEZ) | OK – 16 von 80 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/45428441399)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
@@ -57,44 +57,44 @@ Zeitplan (Mo–Fr, an Handelstagen): Morgen-Scan ab ca. 8:00 Uhr ET, ORB-Scan ab
 
 Alle 371 Treffer: [watchlist.json](watchlist.json)
 
-## ORB-Scan – 2026-11-24 10:10 ET
+## ORB-Scan – 2026-11-25 10:10 ET
 
-Quelle: Treffer des Morgen-Scans · 503 nutzbare Charts · **261 über der Eröffnungsspanne**
+Quelle: Treffer des Morgen-Scans · 346 nutzbare Charts · **115 über der Eröffnungsspanne**
 
 | Bar-Schluss | Ticker | Kurs | Spanne | über dem Hoch |
 |---|---|---|---|---|
-| 9:50 AM | AAPL | 352,95 $ | 345,88 $ – 352,50 $ | +0,13 % |
-| 9:50 AM | ACIW | 52,88 $ | 51,66 $ – 52,47 $ | +0,80 % |
-| 9:50 AM | ADC | 71,57 $ | 70,71 $ – 71,51 $ | +0,08 % |
-| 9:50 AM | ADEA | 13,73 $ | 13,45 $ – 13,67 $ | +0,44 % |
-| 9:50 AM | AFRM | 59,83 $ | 57,50 $ – 59,80 $ | +0,05 % |
-| 9:50 AM | AG | 11,24 $ | 10,95 $ – 11,23 $ | +0,17 % |
-| 9:50 AM | AGNC | 7,99 $ | 7,83 $ – 7,98 $ | +0,19 % |
-| 9:50 AM | AKAM | 90,77 $ | 87,78 $ – 89,90 $ | +0,97 % |
-| 9:50 AM | ARIS | 12,82 $ | 12,42 $ – 12,77 $ | +0,43 % |
-| 9:50 AM | B | 34,24 $ | 33,35 $ – 34,21 $ | +0,09 % |
-| 9:50 AM | BAC | 48,52 $ | 47,81 $ – 48,49 $ | +0,06 % |
-| 9:50 AM | BBAR | 9,24 $ | 8,99 $ – 9,21 $ | +0,33 % |
-| 9:50 AM | BEKE | 18,24 $ | 17,86 $ – 18,21 $ | +0,16 % |
-| 9:50 AM | BOX | 46,21 $ | 45,28 $ – 46,03 $ | +0,40 % |
-| 9:50 AM | CAH | 273,40 $ | 269,30 $ – 272,95 $ | +0,17 % |
-| 9:50 AM | CDE | 11,48 $ | 11,11 $ – 11,43 $ | +0,52 % |
-| 9:50 AM | CHYM | 32,60 $ | 31,63 $ – 32,30 $ | +0,93 % |
-| 9:50 AM | CNQ | 44,51 $ | 43,83 $ – 44,34 $ | +0,38 % |
-| 9:50 AM | CRK | 11,66 $ | 11,41 $ – 11,64 $ | +0,17 % |
-| 9:50 AM | CRM | 192,07 $ | 183,89 $ – 190,50 $ | +0,83 % |
-| 9:50 AM | CRSP | 44,47 $ | 42,68 $ – 44,44 $ | +0,07 % |
-| 9:50 AM | CTRE | 37,61 $ | 37,18 $ – 37,53 $ | +0,20 % |
-| 9:50 AM | CUE | 6,78 $ | 5,56 $ – 6,57 $ | +3,27 % |
-| 9:50 AM | CZR | 29,33 $ | 29,24 $ – 29,31 $ | +0,08 % |
-| 9:50 AM | DBX | 36,28 $ | 35,15 $ – 36,03 $ | +0,69 % |
-| 9:50 AM | DDOG | 169,69 $ | 165,06 $ – 167,98 $ | +1,02 % |
-| 9:50 AM | DOX | 41,95 $ | 41,28 $ – 41,86 $ | +0,22 % |
-| 9:50 AM | DT | 46,31 $ | 45,52 $ – 46,17 $ | +0,31 % |
-| 9:50 AM | EGO | 26,90 $ | 26,01 $ – 26,85 $ | +0,19 % |
-| 9:50 AM | EPAM | 162,44 $ | 158,54 $ – 162,36 $ | +0,05 % |
+| 9:50 AM | ADM | 66,40 $ | 64,78 $ – 66,22 $ | +0,27 % |
+| 9:50 AM | AGLT | 5,58 $ | 5,14 $ – 5,42 $ | +2,97 % |
+| 9:50 AM | AGMB | 5,72 $ | 5,48 $ – 5,71 $ | +0,22 % |
+| 9:50 AM | ALKT | 13,64 $ | 13,34 $ – 13,60 $ | +0,32 % |
+| 9:50 AM | BTU | 15,36 $ | 15,14 $ – 15,33 $ | +0,23 % |
+| 9:50 AM | CNQ | 45,31 $ | 44,52 $ – 45,14 $ | +0,37 % |
+| 9:50 AM | CRK | 12,25 $ | 11,92 $ – 12,13 $ | +0,99 % |
+| 9:50 AM | CUE | 7,01 $ | 6,31 $ – 6,89 $ | +1,73 % |
+| 9:50 AM | DAR | 48,62 $ | 46,16 $ – 48,32 $ | +0,62 % |
+| 9:50 AM | DINO | 85,09 $ | 83,98 $ – 85,06 $ | +0,04 % |
+| 9:50 AM | DKNG | 16,11 $ | 15,66 $ – 15,96 $ | +0,94 % |
+| 9:50 AM | ENPH | 19,53 $ | 19,08 $ – 19,49 $ | +0,18 % |
+| 9:50 AM | ET | 18,60 $ | 18,43 $ – 18,58 $ | +0,13 % |
+| 9:50 AM | EXE | 82,79 $ | 81,14 $ – 82,19 $ | +0,72 % |
+| 9:50 AM | FLUT | 68,10 $ | 66,19 $ – 67,43 $ | +0,99 % |
+| 9:50 AM | GRNT | 5,63 $ | 5,47 $ – 5,57 $ | +1,08 % |
+| 9:50 AM | LILAK | 9,47 $ | 9,30 $ – 9,45 $ | +0,21 % |
+| 9:50 AM | MUR | 32,94 $ | 32,05 $ – 32,66 $ | +0,86 % |
+| 9:50 AM | OLMA | 8,06 $ | 7,27 $ – 8,06 $ | +0,00 % |
+| 9:50 AM | OXY | 54,09 $ | 52,96 $ – 53,78 $ | +0,58 % |
+| 9:50 AM | SEDG | 18,09 $ | 17,30 $ – 17,83 $ | +1,49 % |
+| 9:50 AM | SHEL | 93,53 $ | 92,85 $ – 93,45 $ | +0,09 % |
+| 9:50 AM | SSL | 11,54 $ | 11,33 $ – 11,48 $ | +0,48 % |
+| 9:50 AM | VIST | 49,25 $ | 48,24 $ – 49,15 $ | +0,20 % |
+| 9:55 AM | ALTG | 6,16 $ | 5,81 $ – 6,10 $ | +0,98 % |
+| 9:55 AM | BG | 88,25 $ | 83,60 $ – 87,79 $ | +0,52 % |
+| 9:55 AM | DEO | 100,67 $ | 100,24 $ – 100,64 $ | +0,03 % |
+| 9:55 AM | DOX | 42,19 $ | 41,64 $ – 42,08 $ | +0,26 % |
+| 9:55 AM | EMBC | 8,03 $ | 7,14 $ – 7,95 $ | +1,13 % |
+| 9:55 AM | EPRT | 29,22 $ | 29,00 $ – 29,18 $ | +0,14 % |
 
-… und 231 weitere in [orb.json](orb.json).
+… und 85 weitere in [orb.json](orb.json).
 
 Ein späterer Treffer liegt näher am aktuellen Kurs.
 
@@ -148,28 +148,44 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 - 22.10. 16:11 Uhr ET · [Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView](https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss)
 - 22.10. 15:51 Uhr ET · [How much Apple stock does CEO John Ternus actually own?](https://www.thestreet.com/personalities/how-much-apple-stock-does-john-ternus-own?.tsrc=rss)
 
-## Labor live – Mi 25.11.2026, Stand 10:00 Uhr ET
+## Labor live – Mi 25.11.2026, Stand 10:11 Uhr ET
 
-431 Aktien beobachtet · 905 Spielgeld-Trades aller Varianten · 841 offen
+431 Aktien beobachtet · 2.393 Spielgeld-Trades aller Varianten · 2.200 offen
 
 | Top-Variante | Trades | offen | € bei 100 €/Trade |
 |---|---|---|---|
 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R | 0 | 0 | 0,00 € |
 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 0 | 0 | 0,00 € |
 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R | 0 | 0 | 0,00 € |
-| Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 3 | 1 | -0,42 € |
-| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 0 | 0 | 0,00 € |
-| Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 0 | 0 | 0,00 € |
+| Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 3 | 1 | -0,32 € |
+| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 2 | 2 | 0,21 € |
+| Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 2 | 2 | 0,21 € |
 | Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 4× normal | 0 | 0 | 0,00 € |
-| Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 0 | 0 | 0,00 € |
-| Beste Signale (locker): News-Sprung ≥ 2 %, Volumen ≥ 2×, Schwankung ≥ 2 %, Einstieg bis 10:30 Uhr ET · nur der erste Kandidat des Tages · Ziel 3R | 1 | 1 | -0,10 € |
+| Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 20 | 20 | -8,39 € |
+| Beste Signale (locker): News-Sprung ≥ 2 %, Volumen ≥ 2×, Schwankung ≥ 2 %, Einstieg bis 10:30 Uhr ET · nur der erste Kandidat des Tages · Ziel 3R | 1 | 1 | -0,20 € |
 
 | Aktie | Regel | Einstieg | Stopp | Ziel | Stand | Ergebnis |
 |---|---|---|---|---|---|---|
-| ERO | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 20,82 $ | 20,62 $ | – | Stopp 9:50 Uhr | -1,18 € |
-| DELL | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:50 278,05 $ | 274,02 $ | – | Stopp 9:50 Uhr | -1,52 € |
-| PINS | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:50 18,30 $ | 18,21 $ | – | offen, Kurs 18,73 $ | 2,28 € |
-| DKS | Beste Signale (locker): News-Sprung ≥ 2 %, Volumen ≥ 2×, Schwankung ≥ 2 %, Einstieg bis 10:30 Uhr ET | 10:00 157,52 $ | 153,85 $ | 168,52 $ | offen, Kurs 157,44 $ | -0,10 € |
+| DE | Ausbruch 30 Min | 10:05 630,32 $ | 580,51 $ | 729,92 $ | offen, Kurs 631,89 $ | 0,20 € |
+| DE | Ausbruch 30 Min | 10:05 630,32 $ | 580,51 $ | 729,92 $ | offen, Kurs 631,89 $ | 0,20 € |
+| EMBJ | Ausbruch 30 Min | 10:05 17,37 $ | 16,92 $ | 18,28 $ | offen, Kurs 17,35 $ | -0,19 € |
+| EPRT | Ausbruch 30 Min | 10:05 29,32 $ | 29,00 $ | 29,97 $ | offen, Kurs 29,35 $ | 0,05 € |
+| HIMS | Ausbruch 30 Min | 10:05 14,24 $ | 13,46 $ | 15,81 $ | offen, Kurs 14,05 $ | -1,40 € |
+| PAAS | Ausbruch 30 Min | 10:05 30,29 $ | 29,43 $ | 32,00 $ | offen, Kurs 30,04 $ | -0,86 € |
+| PBR | Ausbruch 30 Min | 10:05 15,87 $ | 15,52 $ | 16,58 $ | offen, Kurs 15,78 $ | -0,64 € |
+| SEDG | Ausbruch 30 Min | 10:05 18,89 $ | 17,30 $ | 22,07 $ | offen, Kurs 18,77 $ | -0,68 € |
+| SHOP | Ausbruch 30 Min | 10:05 127,47 $ | 123,74 $ | 134,94 $ | offen, Kurs 126,40 $ | -0,89 € |
+| SNEX | Ausbruch 30 Min | 10:05 38,45 $ | 37,08 $ | 41,20 $ | offen, Kurs 37,91 $ | -1,47 € |
+| SOFI | Ausbruch 30 Min | 10:05 12,42 $ | 11,95 $ | 13,35 $ | offen, Kurs 12,27 $ | -1,27 € |
+| VALE | Ausbruch 30 Min | 10:05 9,51 $ | 9,26 $ | 10,02 $ | offen, Kurs 9,51 $ | -0,09 € |
+| WDAY | Opening-Range-Ausbruch 30 Min | 10:05 181,80 $ | 173,00 $ | 199,39 $ | offen, Kurs 181,91 $ | 0,01 € |
+| WDAY | Ausbruch 30 Min | 10:05 181,80 $ | 173,00 $ | 199,39 $ | offen, Kurs 181,91 $ | 0,01 € |
+| WDAY | Ausbruch 30 Min | 10:05 181,80 $ | 173,00 $ | 199,39 $ | offen, Kurs 181,91 $ | 0,01 € |
+| XOM | Ausbruch 30 Min | 10:05 159,60 $ | 156,83 $ | 165,15 $ | offen, Kurs 159,10 $ | -0,36 € |
+| ACM | Ausbruch 30 Min | 10:10 81,73 $ | 80,51 $ | 84,16 $ | offen, Kurs 81,69 $ | -0,10 € |
+| AMH | Ausbruch 30 Min | 10:10 33,13 $ | 32,80 $ | 33,78 $ | offen, Kurs 33,11 $ | -0,10 € |
+| BAX | Ausbruch 30 Min | 10:10 27,14 $ | 26,70 $ | 28,02 $ | offen, Kurs 27,12 $ | -0,10 € |
+| VRDN | Ausbruch 30 Min | 10:10 36,50 $ | 34,79 $ | 39,91 $ | offen, Kurs 36,48 $ | -0,10 € |
 
 ## Labor (Testphase, Spielgeld ohne Limit)
 

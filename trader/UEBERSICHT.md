@@ -1,14 +1,14 @@
 # Trader-Übersicht
 
-Stand: Mi 25.11. 16:21 Uhr ET (22:21 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
+Stand: Fr 27.11. 07:32 Uhr ET (13:32 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
 
-NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
+NYSE heute: vor der Eröffnung (Handelszeit 09:30 bis 13:00 Uhr ET).
 
 ## Systemstatus
 
 | Teil | Letzter Lauf | Ergebnis |
 |---|---|---|
-| Morgen-Scan | Mi 25.11. 07:30 Uhr ET (13:30 Uhr MEZ) | OK – 371 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/45562375663)) |
+| Morgen-Scan | Fr 27.11. 07:30 Uhr ET (13:30 Uhr MEZ) | OK – 374 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/45935567529)) |
 | ORB-Scan | Mi 25.11. 10:10 Uhr ET (16:10 Uhr MEZ) | OK – 115 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/45562375663)) |
 | Labor live | Mi 25.11. 16:00 Uhr ET (22:00 Uhr MEZ) | OK – Tagesbilanz: 4.546 Trades ([Lauf](https://github.com/neidelbert/claude/actions/runs/45606660043)) |
 | Labor | Mi 25.11. 16:20 Uhr ET (22:20 Uhr MEZ) | OK – 18 von 80 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/45606660043)) |
@@ -18,44 +18,44 @@ NYSE heute: geschlossen (Handelszeit 09:30 bis 16:00 Uhr ET).
 
 Zeitplan (Mo–Fr, an Handelstagen): Morgen-Scan ab ca. 8:00 Uhr ET, ORB-Scan ab ca. 10:15 Uhr ET, Labor live und Preisalarme alle 10 Minuten während der Handelszeit, Tagesbilanz nach Schluss, Labor-Rangliste nach Börsenschluss (ab ca. 16:20 Uhr ET).
 
-## Morgen-Scan – Schlusskurse vom Di 24.11.2026
+## Morgen-Scan – Schlusskurse vom Mi 25.11.2026
 
-5.927 Aktien in der Liste · 5.927 Charts geladen · 1.467 liquide (ab 5 $ und 1.000.000 Aktien) · 1.466 gescannt · **371 passen zu einer Regel**
+5.922 Aktien in der Liste · 5.922 Charts geladen · 1.467 liquide (ab 5 $ und 1.000.000 Aktien) · 1.465 gescannt · **374 passen zu einer Regel**
 
 | Regel | Anzahl | Meistgehandelt |
 |---|---|---|
-| `breakout_20d` | 115 | INSM, WMT, ABBV, GILD, DIS, KYMR, DLTR, T |
-| `bull_flag` | 28 | CAH, EW, PFGC, IBN, HDB, CLX, TSN, TFX |
-| `reclaim_ma20` | 146 | LLY, MRNA, KO, JNJ, ABBV, MA, AMGN, PEP |
-| `oversold` | 70 | SNDK, MSTR, FCX, COIN, VALE, BMNR, CRCL, ADM |
-| `oversold_bounce` | 40 | UNH, CRM, INTU, COF, OXY, TEAM, IP, SHEL |
+| `breakout_20d` | 158 | INSM, HD, DIS, PG, MCD, TJX, T, VZ |
+| `bull_flag` | 12 | BILL, IBN, ATAT, ACHC, MBGL, SGRY, ENR, PGNY |
+| `reclaim_ma20` | 118 | V, QCOM, IBM, HPQ, SBUX, LMT, ABT, NEE |
+| `oversold` | 45 | SNDK, MSTR, INTU, COIN, DDOG, MPC, NTNX, CRCL |
+| `oversold_bounce` | 65 | MSTR, COIN, FCX, BMNR, CRCL, PBR, VALE, SCCO |
 
 **Die 20 meistgehandelten Treffer** (Kurs × Umsatz):
 
 | Ticker | Kurs | RSI | Regeln |
 |---|---|---|---|
-| INSM | 170,15 $ | 82,9 | `breakout_20d` |
 | SNDK | 94,39 $ | 29,3 | `oversold` |
-| LLY | 1.407,59 $ | 59,0 | `reclaim_ma20` |
-| WMT | 132,31 $ | 71,8 | `breakout_20d` |
-| UNH | 341,88 $ | 32,2 | `oversold_bounce` |
-| MRNA | 227,38 $ | 53,3 | `reclaim_ma20` |
-| KO | 97,62 $ | 58,6 | `reclaim_ma20` |
-| JNJ | 276,46 $ | 54,0 | `reclaim_ma20` |
-| MSTR | 77,55 $ | 24,7 | `oversold` |
-| ABBV | 300,28 $ | 63,8 | `breakout_20d`, `reclaim_ma20` |
-| MA | 647,44 $ | 55,6 | `reclaim_ma20` |
-| GILD | 178,29 $ | 68,7 | `breakout_20d` |
-| CRM | 193,26 $ | 35,3 | `oversold_bounce` |
-| AMGN | 473,94 $ | 61,8 | `reclaim_ma20` |
-| DIS | 122,51 $ | 64,2 | `breakout_20d` |
-| PEP | 142,68 $ | 57,0 | `reclaim_ma20` |
-| KYMR | 173,92 $ | 76,5 | `breakout_20d` |
-| INTU | 279,42 $ | 31,8 | `oversold_bounce` |
-| DLTR | 154,65 $ | 68,2 | `breakout_20d` |
-| T | 22,88 $ | 57,5 | `breakout_20d` |
+| INSM | 170,31 $ | 82,9 | `breakout_20d` |
+| V | 424,39 $ | 58,9 | `reclaim_ma20` |
+| HD | 361,26 $ | 68,3 | `breakout_20d` |
+| MSTR | 79,96 $ | 27,2 | `oversold`, `oversold_bounce` |
+| QCOM | 168,66 $ | 49,7 | `reclaim_ma20` |
+| DIS | 125,60 $ | 68,7 | `breakout_20d` |
+| PG | 173,23 $ | 66,9 | `breakout_20d` |
+| MCD | 283,50 $ | 69,5 | `breakout_20d` |
+| TJX | 146,09 $ | 61,1 | `breakout_20d` |
+| IBM | 243,47 $ | 54,0 | `reclaim_ma20` |
+| HPQ | 31,15 $ | 57,5 | `reclaim_ma20` |
+| INTU | 271,72 $ | 29,8 | `oversold` |
+| COIN | 103,72 $ | 28,6 | `oversold`, `oversold_bounce` |
+| SBUX | 107,74 $ | 56,1 | `reclaim_ma20` |
+| T | 22,97 $ | 58,5 | `breakout_20d` |
+| LMT | 599,24 $ | 55,5 | `reclaim_ma20` |
+| VZ | 47,28 $ | 61,1 | `breakout_20d` |
+| RKT | 15,30 $ | 67,5 | `breakout_20d` |
+| DDOG | 158,25 $ | 30,0 | `oversold` |
 
-Alle 371 Treffer: [watchlist.json](watchlist.json)
+Alle 374 Treffer: [watchlist.json](watchlist.json)
 
 ## ORB-Scan – 2026-11-25 10:10 ET
 
@@ -100,33 +100,33 @@ Ein späterer Treffer liegt näher am aktuellen Kurs.
 
 ## News zu den ersten 10 Treffern (letzte 24 Stunden, nur neue)
 
-Bewegung seit gestern: **ABBV +4,10 %** · **INSM +14,13 %** · JNJ +2,88 % · KO +1,81 % · **LLY +3,15 %** · **MRNA +7,21 %** · **MSTR -8,12 %** · **SNDK -11,13 %** · UNH +1,73 % · WMT +2,11 %
+Bewegung seit gestern: DIS +2,52 % · HD +2,14 % · INSM +0,09 % · MCD +1,00 % · **MSTR +3,11 %** · PG +0,44 % · QCOM +2,24 % · **SNDK -5,57 %** · TJX +1,55 % · V +1,83 %
 
-- 25.11. 07:18 Uhr ET · **SNDK** · [Dow Jones Futures Fall, Techs Dive; Trump Says 'Not Too Late' For U.S. To Take Nvidia Stake](https://finance.yahoo.com/m/d96603c1-fe7f-3bf3-8158-0728b464d469/dow-jones-futures-fall%2C-techs.html?.tsrc=rss) · macro
-- 25.11. 07:12 Uhr ET · **SNDK** · [Sandisk (SNDK) Shares Dropped, So What Is Driving Attention Now?](https://finance.yahoo.com/markets/stocks/articles/sandisk-sndk-shares-dropped-driving-121239819.html?.tsrc=rss) · capital
-- 25.11. 07:11 Uhr ET · **WMT** · [Market Chatter: Walmart-Backed PhonePe Resumes IPO Process; Seeks Up to $15 Billion in Valuation](https://finance.yahoo.com/markets/stocks/articles/market-chatter-walmart-backed-phonepe-121130205.html?.tsrc=rss) · capital
-- 25.11. 06:57 Uhr ET · **ABBV** · [What Could Still Lift AbbVie Stock?](https://www.trefis.com/stock/abbv/articles/628894/what-could-still-lift-abbvie-stock/2026-11-25?.tsrc=rss)
-- 25.11. 06:46 Uhr ET · **SNDK** · [Tradr to Launch Six New Leveraged ETFs](https://finance.yahoo.com/markets/options/articles/tradr-launch-six-leveraged-etfs-114600732.html?.tsrc=rss)
-- 25.11. 06:21 Uhr ET · **UNH** · [How Much Could You Lose In UNH Stock?](https://www.trefis.com/stock/unh/articles/628754/how-much-could-you-lose-in-unh-stock/2026-11-25?.tsrc=rss)
-- 25.11. 06:05 Uhr ET · **MRNA** · [Invesco S&P 500 High Beta (SPHB) Buys $13.4 Million More Bloom Energy on Monday](https://finance.yahoo.com/markets/stocks/articles/invesco-p-500-high-beta-110539855.html?.tsrc=rss)
-- 25.11. 06:05 Uhr ET · **KO** · [State Street Consumer Staples SPDR (XLP) Adds Walmart and Costco on Nov. 23](https://finance.yahoo.com/markets/stocks/articles/state-street-consumer-staples-spdr-110513471.html?.tsrc=rss)
-- 25.11. 06:04 Uhr ET · **MRNA** · [What Invesco S&P 500 Equal Weight ETF (RSP) Sold: Moderna Leads on Nov. 23](https://finance.yahoo.com/markets/stocks/articles/invesco-p-500-equal-weight-110443601.html?.tsrc=rss)
-- 25.11. 06:04 Uhr ET · **SNDK** · [What Direxion Daily Technology Bull 3X ETF (TECL) Sold: Apple Leads on Monday](https://finance.yahoo.com/markets/stocks/articles/direxion-daily-technology-bull-3x-110437163.html?.tsrc=rss)
-- 25.11. 06:03 Uhr ET · **ABBV** · [Forget the P/E Ratio. DSTL Picks 100 Large Stocks by the Cash They Generate and the Debt They Don’t Carry](https://247wallst.com/investing/etf/2026/11/25/forget-the-p-e-ratio-dstl-picks-100-large-stocks-by-the-cash-they-generate-and-the-debt-they-dont-carry/?.tsrc=rss)
-- 25.11. 05:50 Uhr ET · **INSM** · [International Biotechnology Trust: Sanofi deal highlights accelerating biotech M&A wave](https://finance.yahoo.com/video/international-biotechnology-trust-sanofi-deal-105025941.html?.tsrc=rss) · deal, capital
-- 25.11. 05:22 Uhr ET · **MSTR** · [Michael Saylor Bought $100M In Bitcoin Before Strategy Did, Says The Man Who Convinced Him To Buy It — Now That Bet Is Around $589M](https://stocktwits.com/news-articles/markets/equity/michael-saylor-100m-bitcoin-purchase-589m-bet/cNbHOY3R9lH?.tsrc=rss)
-- 25.11. 04:43 Uhr ET · **WMT** · [A Walton Beat the IRS in Tax Court in 2000. The Trust She Won With Is How Billionaires Now Pass Stock Gains to Their Kids With No Gift Tax](https://247wallst.com/personal-finance/2026/11/25/a-walton-beat-the-irs-in-tax-court-in-2000-the-trust-she-won-with-is-how-billionaires-now-pass-stock-gains-to-their-kids-with-no-gift-tax/?.tsrc=rss) · legal
-- 25.11. 04:25 Uhr ET · **SNDK** · [SanDisk Trades at 4.6x Earnings—And Still Got Cut in Half](https://finance.yahoo.com/markets/stocks/articles/sandisk-trades-4-6x-earnings-092502421.html?.tsrc=rss) · earnings
-- 25.11. 04:24 Uhr ET · **UNH** · [Skip insurance whiplash: How this surgical leader climbed 16%](https://finance.yahoo.com/healthcare/articles/skip-insurance-whiplash-surgical-leader-092408778.html?.tsrc=rss)
-- 25.11. 04:24 Uhr ET · **KO** · [Up 41% at Just Over Half Costco’s P/E: Inside Coca-Cola’s Quiet Rally](https://finance.yahoo.com/markets/stocks/articles/41-just-over-half-costco-092400539.html?.tsrc=rss)
-- 25.11. 04:08 Uhr ET · **MRNA** · [Is Moderna (MRNA) Stock Reasonable After Its Huge Run And Vaccine Data?](https://finance.yahoo.com/markets/stocks/articles/moderna-mrna-stock-reasonable-huge-090844311.html?.tsrc=rss) · earnings
-- 25.11. 03:32 Uhr ET · **WMT** · [Walmart’s shopper base is shifting: High earners lead its gains as low-income shoppers turn to Amazon](https://finance.yahoo.com/markets/stocks/articles/walmart-shopper-shifting-high-earners-083200748.html?.tsrc=rss)
-- 25.11. 03:27 Uhr ET · **SNDK** · [MU, SKHY, SNDK Stocks In Focus After TrendForce Lowers DRAM Pricing Forecast](https://stocktwits.com/news-articles/markets/equity/mu-skhy-sndk-stocks-in-focus-after-trend-force-lowers-dram-pricing-forecast/cNbH7VLR9l8?.tsrc=rss) · earnings
-- 25.11. 00:12 Uhr ET · **WMT** · [Symbotic: 3 Key Takeaways for Long-Term Investors](https://www.fool.com/earnings/takeaways/2026/11/24/symbotic-3-key-takeaways-for-long-term-investors/?.tsrc=rss)
-- 24.11. 22:20 Uhr ET · **MSTR** · [Dow, S&P 500, Nasdaq Futures Edge Lower Amid Tech Selloff Ahead Of Key Inflation Data: DELL, AMBA, SOXL, MSTR In Focus](https://stocktwits.com/news-articles/markets/equity/dow-s-and-p-500-nasdaq-futures-edge-lower-amid-tech-selloff-ahead-of-key-inflation-data-dell-amba-soxl-mstr-in-focus/cNbHbLoR9lJ?.tsrc=rss) · macro
-- 24.11. 21:47 Uhr ET · **KO** · [Warren Buffett Finished Buying Coca-Cola in August 1994 and Never Bought Another Share. Under Greg Abel, Berkshire Now Collects $2.3 Million a Day From It](https://247wallst.com/investing/2026/11/24/warren-buffett-finished-buying-coca-cola-in-august-1994-and-never-bought-another-share-under-greg-abel-berkshire-now-collects-2-3-million-a-day-from-it/?.tsrc=rss) · capital
-- 24.11. 21:22 Uhr ET · **WMT** · [e.l.f. Beauty vs. Hershey: Which Consumer Goods Stock Is a Better Buy for 2027?](https://www.fool.com/coverage/better-buy/2026/11/24/elf-beauty-vs-hershey-which-consumer-goods-stock-is-a-better-buy-for-2027/?.tsrc=rss)
-- 24.11. 21:09 Uhr ET · **MSTR** · [Strategy (MSTR) Stock Trades At A Discount To Book Value](https://finance.yahoo.com/markets/stocks/articles/strategy-mstr-stock-trades-discount-020908385.html?.tsrc=rss)
+- 27.11. 07:09 Uhr ET · **V** · [What Is Visa (V) Doing With Stablecoin Payments In Europe And Asia?](https://finance.yahoo.com/markets/crypto/articles/visa-v-doing-stablecoin-payments-120939492.html?.tsrc=rss)
+- 27.11. 07:03 Uhr ET · **MSTR** · [Crypto Stocks Gain After Bitcoin Tops $61K In Tech Rebound, But Analysts Want A Move Above $62K](https://stocktwits.com/news-articles/markets/cryptocurrency/crypto-stocks-gain-after-bitcoin-tops-61-k-in-tech-rebound-but-analysts-want-a-move-above-62-k/cNbCsYgR9Ns?.tsrc=rss)
+- 27.11. 07:03 Uhr ET · **PG** · [The Dates That Matter Most For Procter & Gamble Stock](https://www.trefis.com/stock/pg/articles/629330/the-dates-that-matter-most-for-procter-gamble-stock/2026-11-27?.tsrc=rss)
+- 27.11. 07:00 Uhr ET · **SNDK** · [He was right about AI and still lost $35 billion](https://finance.yahoo.com/video/ai-still-lost-35-billion-120000023.html?.tsrc=rss)
+- 27.11. 06:50 Uhr ET · **QCOM** · [Why Is Qualcomm Stock Rallying Today?](https://investorshub.advfn.com/market-news/article/40788/why-is-qualcomm-stock-rallying-today?.tsrc=rss)
+- 27.11. 06:33 Uhr ET · **INSM** · [Sanofi Stock Surges 26% as $41 Billion Insmed Deal Boosts Confidence](https://finance.yahoo.com/markets/stocks/articles/sanofi-stock-surges-26-41-113324950.html?.tsrc=rss) · deal, people
+- 27.11. 06:18 Uhr ET · **SNDK** · [Micron vs. SanDisk: Which Is the Better AI Stock to Buy for 2027?](https://finance.yahoo.com/markets/stocks/articles/micron-vs-sandisk-better-ai-111815853.html?.tsrc=rss)
+- 27.11. 06:09 Uhr ET · **MCD** · [Can BROS' 100-Basis-Point SG&A Leverage Support 2026 Earnings Growth?](https://finance.yahoo.com/markets/stocks/articles/bros-100-basis-point-sg-110900892.html?.tsrc=rss) · earnings
+- 27.11. 06:01 Uhr ET · **SNDK** · [The Anatomy of an AI Rally: Anthropic Stock Quickly Finds Its Place](https://finance.yahoo.com/m/eac9c281-033c-3c73-8b9a-a27703a8cdc9/the-anatomy-of-an-ai-rally%3A.html?.tsrc=rss)
+- 27.11. 05:55 Uhr ET · **SNDK** · [Micron's Higher FY27 CapEx: Can Supply Security Boost Its Growth Further?](https://finance.yahoo.com/markets/stocks/articles/microns-higher-fy27-capex-supply-105500633.html?.tsrc=rss)
+- 27.11. 05:22 Uhr ET · **SNDK** · [Sandisk, Bloom, Marvell, AMD, Nvidia, HP, and More Stocks That Explain Today’s Market](https://finance.yahoo.com/m/977de44c-fcf5-3369-bcdd-0c3ddc7cfec9/sandisk%2C-bloom%2C-marvell%2C-amd%2C.html?.tsrc=rss)
+- 27.11. 01:45 Uhr ET · **V** · [Visa and NBX plan stablecoin-linked payment card](https://www.electronicpaymentsinternational.com/news/visa-and-nbx-plan-stablecoin-linked-payment-card/?.tsrc=rss)
+- 27.11. 01:44 Uhr ET · **INSM** · [The Zacks Analyst Blog Highlights Vera Therapeutics, BridgeBio Pharma, Revolution Medicines, Agios Pharmaceuticals and Stoke Therapeutics](https://finance.yahoo.com/healthcare/articles/zacks-analyst-blog-highlights-vera-064400990.html?.tsrc=rss) · deal
+- 26.11. 22:08 Uhr ET · **QCOM** · [SoftBank’s “Worst Sell-Off” Since ’08 Is Bad News for Arm. Here’s the Number That Matters](https://www.tikr.com/blog/softbanks-worst-sell-off-since-08-is-bad-news-for-arm-heres-the-number-that-matters?ref=yahoofinance&tlnk=yf-261127-3ggwv4gr&.tsrc=rss) · risk
+- 26.11. 19:00 Uhr ET · **HD** · [Home Depot shoppers can now dodge a classic cart disaster](https://www.thestreet.com/investing/stocks/home-depot-shoppers-can-now-dodge-a-classic-cart-disaster?.tsrc=rss)
+- 26.11. 18:45 Uhr ET · **PG** · [2 Dividend Stocks to Buy in November and 1 to Leave on the Shelf](https://www.fool.com/investing/2026/11/26/2-dividend-stocks-to-buy-in-november-and-1-to-leave-on-the-shelf/?.tsrc=rss) · capital
+- 26.11. 16:33 Uhr ET · **V** · [The Nasdaq Composite Is in a Correction, but These 3 Dividend Stocks Are Near 52-Week Highs. Here's Why They're Still Worth Buying Right Now.](https://www.fool.com/investing/2026/11/26/the-nasdaq-composite-is-in-a-correction-but-these-3-dividend-stocks-are-near-52-week-highs-here-s-why-they-re-still-worth-buying-right-now/?.tsrc=rss) · capital
+- 26.11. 16:33 Uhr ET · **DIS** · [Take-Two’s (TTWO) GTA 6 Could Be a Cash Cow for the Next Decade](https://finance.yahoo.com/markets/stocks/articles/two-ttwo-gta-6-could-213300568.html?.tsrc=rss)
+- 26.11. 16:22 Uhr ET · **DIS** · [Disney Stock Just Closed at Its Highest Level Since April 2022](https://247wallst.com/investing/2026/11/26/disney-stock-just-closed-at-its-highest-level-since-april-2022/?.tsrc=rss)
+- 26.11. 16:20 Uhr ET · **SNDK** · [Sandisk’s 8-for-1 Split Is Done. Here’s What Investors Should Do Next.](https://www.fool.com/investing/2026/11/26/sandisks-8-for-1-split-is-done-heres-what-investors-should-do-next/?.tsrc=rss) · capital
+- 26.11. 16:07 Uhr ET · **TJX** · [3 Dividend Stocks That Could Benefit From the Black Friday Shopping Rush](https://247wallst.com/investing/2026/11/26/3-dividend-stocks-that-could-benefit-from-the-black-friday-shopping-rush/?.tsrc=rss) · capital
+- 26.11. 15:46 Uhr ET · **V** · [Billionaire Chris Hohn’s TCI Has 30% of Its $49.6 Billion Stock Portfolio in GE Aerospace](https://247wallst.com/investing/2026/11/26/billionaire-chris-hohns-tci-has-30-of-its-49-6-billion-stock-portfolio-in-ge-aerospace/?.tsrc=rss)
+- 26.11. 15:29 Uhr ET · **PG** · [Here’s How Many Shares of Procter & Gamble You’d Need to Own to Collect $1,000 in Annual Dividends](https://www.fool.com/investing/2026/11/26/here-s-how-many-shares-of-procter-and-gamble-you-d-need-to-own-to-collect-usd1-000-in-annual-dividends/?.tsrc=rss) · capital
+- 26.11. 15:09 Uhr ET · **DIS** · [Walt Disney (DIS) Lifts Dividend On Strong Earnings, Is The Stock Still Cheap?](https://finance.yahoo.com/markets/stocks/articles/walt-disney-dis-lifts-dividend-200909244.html?.tsrc=rss) · earnings, capital
+- 26.11. 14:30 Uhr ET · **SNDK** · [Sandisk Trades at Under 3x Earnings After an 8-for-1 Split and a 70% Crash. Why SNDK Stock Isn’t Doomed Despite NAND Price Warnings.](https://www.barchart.com/story/news/9022920/sandisk-trades-at-under-3x-earnings-after-an-8-for-1-split-and-a-70-crash-why-sndk-stock-isnt-doomed-despite-nand-price-warnings?.tsrc=rss) · earnings
 
 ## Pelosi-Tracker (pelosi)
 

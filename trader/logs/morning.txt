@@ -1,13 +1,19 @@
-Morgen-Scan – Mi 25.11. 07:30 Uhr ET (13:30 Uhr MEZ)
+Morgen-Scan – Fr 27.11. 07:30 Uhr ET (13:30 Uhr MEZ)
 
-$ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 115 s)
+$ scan.py universe  (Exit 0, 2 s)
+Nasdaq Trader symbol directories, files of 2026-11-27 07:00 ET: 13,310 rows.
+Kept 5,922 US-listed common stocks, ordinary shares and ADRs.
+Dropped: 5,830 ETF, 378 not a plain ticker, 358 warrant, 248 unit, 170 note, 129 unit / warrant / right suffix, 102 right, 95 coupon, 38 test issue, 21 preferred, 15 depositary, 3 bond, 1 unit or right.
+Wrote trader/universe.txt (one SYMBOL|Name a line).
+
+$ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 140 s)
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-25T12:30:20Z",
+  "created_at": "2026-11-27T12:30:22Z",
   "mode": "daily",
-  "as_of": "2026-11-24 close",
-  "universe": 5927,
-  "scanned": 1466,
+  "as_of": "2026-11-25 close",
+  "universe": 5922,
+  "scanned": 1465,
   "failed": 0,
   "source": "yahoo",
   "filters": {
@@ -17,16 +23,6 @@ $ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 115 s)
   "note": "A scan is a list of charts that match a rule, not a list of stocks to buy.",
   "hits": [
     {
-      "symbol": "INSM",
-      "setups": [
-        "breakout_20d"
-      ],
-      "price": 170.15,
-      "close_date": "2026-11-24",
-      "rsi": 82.9,
-      "volume": 78939191
-    },
-    {
       "symbol": "SNDK",
       "setups": [
         "oversold"
@@ -34,1010 +30,1021 @@ $ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 115 s)
       "price": 94.39,
       "close_date": "2026-11-19",
       "rsi": 29.3,
-      "volume": 96114209
+      "volume": 121828915
     },
     {
-      "symbol": "LLY",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 1407.59,
-      "close_date": "2026-11-24",
-      "rsi": 59.0,
-      "volume": 3041459
-    },
-    {
-      "symbol": "WMT",
+      "symbol": "INSM",
       "setups": [
         "breakout_20d"
       ],
-      "price": 132.31,
-      "close_date": "2026-11-24",
-      "rsi": 71.8,
-      "volume": 23256041
+      "price": 170.31,
+      "close_date": "2026-11-25",
+      "rsi": 82.9,
+      "volume": 31389984
     },
     {
-      "symbol": "UNH",
-      "setups": [
-        "oversold_bounce"
-      ],
-      "price": 341.88,
-      "close_date": "2026-11-24",
-      "rsi": 32.2,
-      "volume": 8602271
-    },
-    {
-      "symbol": "MRNA",
+      "symbol": "V",
       "setups": [
         "reclaim_ma20"
       ],
-      "price": 227.38,
-      "close_date": "2026-11-24",
-      "rsi": 53.3,
-      "volume": 9374982
+      "price": 424.39,
+      "close_date": "2026-11-25",
+      "rsi": 58.9,
+      "volume": 6588908
     },
     {
-      "symbol": "KO",
+      "symbol": "HD",
       "setups": [
-        "reclaim_ma20"
+        "breakout_20d"
       ],
-      "price": 97.62,
-      "close_date": "2026-11-24",
-      "rsi": 58.6,
-      "volume": 21375185
-    },
-    {
-      "symbol": "JNJ",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 276.46,
-      "close_date": "2026-11-24",
-      "rsi": 54.0,
-      "volume": 6739951
+      "price": 361.26,
+      "close_date": "2026-11-25",
+      "rsi": 68.3,
+      "volume": 6666833
     },
     {
       "symbol": "MSTR",
       "setups": [
-        "oversold"
-      ],
-      "price": 77.55,
-      "close_date": "2026-11-24",
-      "rsi": 24.7,
-      "volume": 23533645
-    },
-    {
-      "symbol": "ABBV",
-      "setups": [
-        "breakout_20d",
-        "reclaim_ma20"
-      ],
-      "price": 300.28,
-      "close_date": "2026-11-24",
-      "rsi": 63.8,
-      "volume": 5922016
-    },
-    {
-      "symbol": "MA",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 647.44,
-      "close_date": "2026-11-24",
-      "rsi": 55.6,
-      "volume": 2639389
-    },
-    {
-      "symbol": "GILD",
-      "setups": [
-        "breakout_20d"
-      ],
-      "price": 178.29,
-      "close_date": "2026-11-24",
-      "rsi": 68.7,
-      "volume": 9248301
-    },
-    {
-      "symbol": "CRM",
-      "setups": [
+        "oversold",
         "oversold_bounce"
       ],
-      "price": 193.26,
-      "close_date": "2026-11-24",
-      "rsi": 35.3,
-      "volume": 8335651
+      "price": 79.96,
+      "close_date": "2026-11-25",
+      "rsi": 27.2,
+      "volume": 29716680
     },
     {
-      "symbol": "AMGN",
+      "symbol": "QCOM",
       "setups": [
         "reclaim_ma20"
       ],
-      "price": 473.94,
-      "close_date": "2026-11-24",
-      "rsi": 61.8,
-      "volume": 3134133
+      "price": 168.66,
+      "close_date": "2026-11-25",
+      "rsi": 49.7,
+      "volume": 14020348
     },
     {
       "symbol": "DIS",
       "setups": [
         "breakout_20d"
       ],
-      "price": 122.51,
-      "close_date": "2026-11-24",
-      "rsi": 64.2,
-      "volume": 11516247
+      "price": 125.6,
+      "close_date": "2026-11-25",
+      "rsi": 68.7,
+      "volume": 16294088
     },
     {
-      "symbol": "PEP",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 142.68,
-      "close_date": "2026-11-24",
-      "rsi": 57.0,
-      "volume": 9575228
-    },
-    {
-      "symbol": "KYMR",
+      "symbol": "PG",
       "setups": [
         "breakout_20d"
       ],
-      "price": 173.92,
-      "close_date": "2026-11-24",
-      "rsi": 76.5,
-      "volume": 6518871
+      "price": 173.23,
+      "close_date": "2026-11-25",
+      "rsi": 66.9,
+      "volume": 9664567
+    },
+    {
+      "symbol": "MCD",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 283.5,
+      "close_date": "2026-11-25",
+      "rsi": 69.5,
+      "volume": 5828921
+    },
+    {
+      "symbol": "TJX",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 146.09,
+      "close_date": "2026-11-25",
+      "rsi": 61.1,
+      "volume": 9308074
+    },
+    {
+      "symbol": "IBM",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 243.47,
+      "close_date": "2026-11-25",
+      "rsi": 54.0,
+      "volume": 5227363
+    },
+    {
+      "symbol": "HPQ",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 31.15,
+      "close_date": "2026-11-25",
+      "rsi": 57.5,
+      "volume": 39060684
     },
     {
       "symbol": "INTU",
       "setups": [
-        "oversold_bounce"
+        "oversold"
       ],
-      "price": 279.42,
-      "close_date": "2026-11-24",
-      "rsi": 31.8,
-      "volume": 3620729
+      "price": 271.72,
+      "close_date": "2026-11-25",
+      "rsi": 29.8,
+      "volume": 3777271
     },
     {
-      "symbol": "DLTR",
+      "symbol": "COIN",
       "setups": [
-        "breakout_20d"
+        "oversold",
+        "oversold_bounce"
       ],
-      "price": 154.65,
-      "close_date": "2026-11-24",
-      "rsi": 68.2,
-      "volume": 6395698
+      "price": 103.72,
+      "close_date": "2026-11-25",
+      "rsi": 28.6,
+      "volume": 9823149
+    },
+    {
+      "symbol": "SBUX",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 107.74,
+      "close_date": "2026-11-25",
+      "rsi": 56.1,
+      "volume": 9289539
     },
     {
       "symbol": "T",
       "setups": [
         "breakout_20d"
       ],
-      "price": 22.88,
-      "close_date": "2026-11-24",
-      "rsi": 57.5,
-      "volume": 42530207
+      "price": 22.97,
+      "close_date": "2026-11-25",
+      "rsi": 58.5,
+      "volume": 40323952
     },
     {
-      "symbol": "FCX",
-      "setups": [
-        "oversold"
-      ],
-      "price": 47.73,
-      "close_date": "2026-11-24",
-      "rsi": 28.7,
-      "volume": 19278741
-    },
-    {
-      "symbol": "DKS",
-      "setups": [
-        "breakout_20d",
-        "reclaim_ma20"
-      ],
-      "price": 153.17,
-      "close_date": "2026-11-24",
-      "rsi": 59.0,
-      "volume": 5759236
-    },
-    {
-      "symbol": "TGT",
-      "setups": [
-        "breakout_20d"
-      ],
-      "price": 176.06,
-      "close_date": "2026-11-24",
-      "rsi": 68.7,
-      "volume": 4980960
-    },
-    {
-      "symbol": "RCL",
+      "symbol": "LMT",
       "setups": [
         "reclaim_ma20"
       ],
-      "price": 318.27,
-      "close_date": "2026-11-24",
-      "rsi": 54.6,
-      "volume": 2753391
+      "price": 599.24,
+      "close_date": "2026-11-25",
+      "rsi": 55.5,
+      "volume": 1544914
     },
     {
       "symbol": "VZ",
       "setups": [
         "breakout_20d"
       ],
-      "price": 47.16,
-      "close_date": "2026-11-24",
-      "rsi": 60.3,
-      "volume": 17910870
+      "price": 47.28,
+      "close_date": "2026-11-25",
+      "rsi": 61.1,
+      "volume": 19328960
     },
     {
-      "symbol": "SPOT",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 599.74,
-      "close_date": "2026-11-24",
-      "rsi": 55.9,
-      "volume": 1325203
-    },
-    {
-      "symbol": "SCHW",
+      "symbol": "RKT",
       "setups": [
         "breakout_20d"
       ],
-      "price": 93.91,
-      "close_date": "2026-11-24",
-      "rsi": 53.5,
-      "volume": 8418384
+      "price": 15.3,
+      "close_date": "2026-11-25",
+      "rsi": 67.5,
+      "volume": 59541943
     },
     {
-      "symbol": "RVMD",
+      "symbol": "DDOG",
       "setups": [
-        "reclaim_ma20"
+        "oversold"
       ],
-      "price": 181.17,
-      "close_date": "2026-11-24",
-      "rsi": 50.7,
-      "volume": 4358863
-    },
-    {
-      "symbol": "ANF",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 168.1,
-      "close_date": "2026-11-24",
-      "rsi": 62.4,
-      "volume": 4697649
-    },
-    {
-      "symbol": "BSX",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 44.14,
-      "close_date": "2026-11-24",
-      "rsi": 51.2,
-      "volume": 17877702
+      "price": 158.25,
+      "close_date": "2026-11-25",
+      "rsi": 30.0,
+      "volume": 5746943
     },
     {
       "symbol": "VRTX",
       "setups": [
-        "breakout_20d",
-        "reclaim_ma20"
+        "breakout_20d"
       ],
-      "price": 563.92,
-      "close_date": "2026-11-24",
-      "rsi": 61.9,
-      "volume": 1364627
+      "price": 564.12,
+      "close_date": "2026-11-25",
+      "rsi": 62.0,
+      "volume": 1607880
     },
     {
-      "symbol": "BMY",
+      "symbol": "ABT",
       "setups": [
         "reclaim_ma20"
       ],
-      "price": 62.02,
-      "close_date": "2026-11-24",
-      "rsi": 52.1,
-      "volume": 12025666
-    },
-    {
-      "symbol": "COIN",
-      "setups": [
-        "oversold"
-      ],
-      "price": 102.35,
-      "close_date": "2026-11-24",
-      "rsi": 27.2,
-      "volume": 7193892
+      "price": 108.0,
+      "close_date": "2026-11-25",
+      "rsi": 54.6,
+      "volume": 8012986
     },
     {
       "symbol": "PDD",
       "setups": [
         "breakout_20d"
       ],
-      "price": 87.22,
-      "close_date": "2026-11-24",
-      "rsi": 63.4,
-      "volume": 8358020
+      "price": 87.42,
+      "close_date": "2026-11-25",
+      "rsi": 63.8,
+      "volume": 9833909
     },
     {
-      "symbol": "SNY",
+      "symbol": "FCX",
       "setups": [
-        "breakout_20d"
+        "oversold_bounce"
       ],
-      "price": 51.9,
-      "close_date": "2026-11-24",
-      "rsi": 76.4,
-      "volume": 13796007
+      "price": 48.55,
+      "close_date": "2026-11-25",
+      "rsi": 30.9,
+      "volume": 17405406
     },
     {
-      "symbol": "FTNT",
+      "symbol": "NEE",
       "setups": [
         "reclaim_ma20"
       ],
-      "price": 132.5,
-      "close_date": "2026-11-24",
-      "rsi": 43.4,
-      "volume": 5244087
+      "price": 85.41,
+      "close_date": "2026-11-25",
+      "rsi": 58.0,
+      "volume": 8711592
     },
     {
-      "symbol": "VALE",
+      "symbol": "MPC",
       "setups": [
         "oversold"
       ],
-      "price": 9.37,
-      "close_date": "2026-11-24",
-      "rsi": 23.9,
-      "volume": 73772844
+      "price": 346.27,
+      "close_date": "2026-11-25",
+      "rsi": 28.8,
+      "volume": 2132666
+    },
+    {
+      "symbol": "LOW",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 235.65,
+      "close_date": "2026-11-25",
+      "rsi": 67.9,
+      "volume": 3099009
+    },
+    {
+      "symbol": "ADP",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 316.72,
+      "close_date": "2026-11-25",
+      "rsi": 66.3,
+      "volume": 2262132
+    },
+    {
+      "symbol": "AJG",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 292.39,
+      "close_date": "2026-11-25",
+      "rsi": 64.6,
+      "volume": 2374412
+    },
+    {
+      "symbol": "AXON",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 343.05,
+      "close_date": "2026-11-25",
+      "rsi": 47.1,
+      "volume": 2022901
+    },
+    {
+      "symbol": "MDLZ",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 67.81,
+      "close_date": "2026-11-25",
+      "rsi": 62.7,
+      "volume": 10118062
     },
     {
       "symbol": "BMNR",
       "setups": [
-        "oversold"
-      ],
-      "price": 13.18,
-      "close_date": "2026-11-24",
-      "rsi": 29.1,
-      "volume": 51996822
-    },
-    {
-      "symbol": "COF",
-      "setups": [
         "oversold_bounce"
       ],
-      "price": 181.36,
-      "close_date": "2026-11-24",
-      "rsi": 31.0,
-      "volume": 3599063
+      "price": 13.44,
+      "close_date": "2026-11-25",
+      "rsi": 30.5,
+      "volume": 50619323
     },
     {
-      "symbol": "A",
+      "symbol": "MSI",
       "setups": [
         "breakout_20d"
       ],
-      "price": 183.52,
-      "close_date": "2026-11-24",
-      "rsi": 60.3,
-      "volume": 3500466
-    },
-    {
-      "symbol": "KMB",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 108.7,
-      "close_date": "2026-11-24",
-      "rsi": 52.9,
-      "volume": 5763681
-    },
-    {
-      "symbol": "WELL",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 245.14,
-      "close_date": "2026-11-24",
-      "rsi": 56.5,
-      "volume": 2528431
-    },
-    {
-      "symbol": "MLM",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 526.17,
-      "close_date": "2026-11-24",
-      "rsi": 54.6,
-      "volume": 1129768
-    },
-    {
-      "symbol": "UPS",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 110.83,
-      "close_date": "2026-11-24",
-      "rsi": 57.6,
-      "volume": 5145670
-    },
-    {
-      "symbol": "CAH",
-      "setups": [
-        "bull_flag"
-      ],
-      "price": 279.65,
-      "close_date": "2026-11-24",
-      "rsi": 66.8,
-      "volume": 2025534
-    },
-    {
-      "symbol": "COR",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 349.68,
-      "close_date": "2026-11-24",
-      "rsi": 56.7,
-      "volume": 1594116
-    },
-    {
-      "symbol": "KR",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 70.12,
-      "close_date": "2026-11-24",
-      "rsi": 59.7,
-      "volume": 7591942
-    },
-    {
-      "symbol": "CRCL",
-      "setups": [
-        "oversold"
-      ],
-      "price": 47.72,
-      "close_date": "2026-11-24",
-      "rsi": 26.2,
-      "volume": 11008645
-    },
-    {
-      "symbol": "SO",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 94.11,
-      "close_date": "2026-11-24",
-      "rsi": 57.9,
-      "volume": 5542363
-    },
-    {
-      "symbol": "CME",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 309.25,
-      "close_date": "2026-11-24",
-      "rsi": 56.5,
-      "volume": 1661007
-    },
-    {
-      "symbol": "OXY",
-      "setups": [
-        "oversold_bounce"
-      ],
-      "price": 53.38,
-      "close_date": "2026-11-24",
-      "rsi": 32.9,
-      "volume": 9620421
+      "price": 541.0,
+      "close_date": "2026-11-25",
+      "rsi": 73.3,
+      "volume": 1248206
     },
     {
       "symbol": "ORLY",
       "setups": [
         "breakout_20d"
       ],
-      "price": 95.43,
-      "close_date": "2026-11-24",
-      "rsi": 67.8,
-      "volume": 5338640
+      "price": 96.69,
+      "close_date": "2026-11-25",
+      "rsi": 70.9,
+      "volume": 6971786
     },
     {
-      "symbol": "BDX",
+      "symbol": "NU",
       "setups": [
-        "breakout_20d"
+        "reclaim_ma20"
       ],
-      "price": 220.0,
-      "close_date": "2026-11-24",
-      "rsi": 70.7,
-      "volume": 2260347
+      "price": 12.36,
+      "close_date": "2026-11-25",
+      "rsi": 48.2,
+      "volume": 52045089
     },
     {
-      "symbol": "ADM",
+      "symbol": "NTNX",
       "setups": [
         "oversold"
       ],
-      "price": 64.9,
-      "close_date": "2026-11-24",
-      "rsi": 25.2,
-      "volume": 7633262
+      "price": 46.3,
+      "close_date": "2026-11-25",
+      "rsi": 23.0,
+      "volume": 13600619
     },
     {
-      "symbol": "PGR",
+      "symbol": "CRCL",
+      "setups": [
+        "oversold",
+        "oversold_bounce"
+      ],
+      "price": 48.27,
+      "close_date": "2026-11-25",
+      "rsi": 27.4,
+      "volume": 13026866
+    },
+    {
+      "symbol": "SO",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 95.0,
+      "close_date": "2026-11-25",
+      "rsi": 61.3,
+      "volume": 6618279
+    },
+    {
+      "symbol": "CSX",
       "setups": [
         "reclaim_ma20"
       ],
-      "price": 235.68,
-      "close_date": "2026-11-24",
-      "rsi": 59.0,
-      "volume": 2065495
+      "price": 51.16,
+      "close_date": "2026-11-25",
+      "rsi": 53.4,
+      "volume": 12241916
     },
     {
-      "symbol": "LYV",
+      "symbol": "CMCSA",
       "setups": [
         "breakout_20d"
       ],
-      "price": 183.63,
-      "close_date": "2026-11-24",
-      "rsi": 59.5,
-      "volume": 2650744
+      "price": 25.73,
+      "close_date": "2026-11-25",
+      "rsi": 65.4,
+      "volume": 23641370
     },
     {
-      "symbol": "CMG",
-      "setups": [
-        "breakout_20d"
-      ],
-      "price": 37.05,
-      "close_date": "2026-11-24",
-      "rsi": 64.1,
-      "volume": 13045674
-    },
-    {
-      "symbol": "DUK",
-      "setups": [
-        "breakout_20d"
-      ],
-      "price": 130.96,
-      "close_date": "2026-11-24",
-      "rsi": 65.0,
-      "volume": 3658002
-    },
-    {
-      "symbol": "TSCO",
-      "setups": [
-        "breakout_20d"
-      ],
-      "price": 39.45,
-      "close_date": "2026-11-24",
-      "rsi": 67.0,
-      "volume": 11948499
-    },
-    {
-      "symbol": "ALNY",
+      "symbol": "F",
       "setups": [
         "reclaim_ma20"
       ],
-      "price": 164.61,
-      "close_date": "2026-11-24",
-      "rsi": 43.5,
-      "volume": 2860528
-    },
-    {
-      "symbol": "BX",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 119.35,
-      "close_date": "2026-11-24",
-      "rsi": 52.1,
-      "volume": 3932912
+      "price": 12.17,
+      "close_date": "2026-11-25",
+      "rsi": 53.8,
+      "volume": 49059043
     },
     {
       "symbol": "MRSH",
       "setups": [
         "breakout_20d"
       ],
-      "price": 213.16,
-      "close_date": "2026-11-24",
-      "rsi": 68.2,
-      "volume": 2201280
+      "price": 216.66,
+      "close_date": "2026-11-25",
+      "rsi": 71.3,
+      "volume": 2691185
     },
     {
-      "symbol": "ROIV",
+      "symbol": "RBLX",
       "setups": [
         "breakout_20d"
       ],
-      "price": 42.34,
-      "close_date": "2026-11-24",
-      "rsi": 66.3,
-      "volume": 11025327
+      "price": 55.63,
+      "close_date": "2026-11-25",
+      "rsi": 62.0,
+      "volume": 10019748
+    },
+    {
+      "symbol": "DUK",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 131.9,
+      "close_date": "2026-11-25",
+      "rsi": 67.3,
+      "volume": 4204046
+    },
+    {
+      "symbol": "O",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 60.25,
+      "close_date": "2026-11-25",
+      "rsi": 65.2,
+      "volume": 9168654
+    },
+    {
+      "symbol": "CHTR",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 147.27,
+      "close_date": "2026-11-25",
+      "rsi": 67.3,
+      "volume": 3685739
+    },
+    {
+      "symbol": "SNY",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 54.39,
+      "close_date": "2026-11-25",
+      "rsi": 80.8,
+      "volume": 9832717
+    },
+    {
+      "symbol": "AMBA",
+      "setups": [
+        "oversold"
+      ],
+      "price": 35.68,
+      "close_date": "2026-11-25",
+      "rsi": 25.8,
+      "volume": 14743492
+    },
+    {
+      "symbol": "TSCO",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 40.37,
+      "close_date": "2026-11-25",
+      "rsi": 70.1,
+      "volume": 12512012
+    },
+    {
+      "symbol": "CMG",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 37.4,
+      "close_date": "2026-11-25",
+      "rsi": 65.4,
+      "volume": 13371606
+    },
+    {
+      "symbol": "DKS",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 158.59,
+      "close_date": "2026-11-25",
+      "rsi": 62.1,
+      "volume": 3116219
+    },
+    {
+      "symbol": "HSY",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 182.57,
+      "close_date": "2026-11-25",
+      "rsi": 62.9,
+      "volume": 2691866
     },
     {
       "symbol": "WM",
       "setups": [
         "breakout_20d"
       ],
-      "price": 244.71,
-      "close_date": "2026-11-24",
-      "rsi": 63.4,
-      "volume": 1857862
-    },
-    {
-      "symbol": "PBR",
-      "setups": [
-        "oversold"
-      ],
-      "price": 15.67,
-      "close_date": "2026-11-24",
-      "rsi": 20.2,
-      "volume": 28244772
-    },
-    {
-      "symbol": "BBIO",
-      "setups": [
-        "breakout_20d"
-      ],
-      "price": 85.87,
-      "close_date": "2026-11-24",
-      "rsi": 72.6,
-      "volume": 5121800
-    },
-    {
-      "symbol": "BMRN",
-      "setups": [
-        "breakout_20d"
-      ],
-      "price": 66.36,
-      "close_date": "2026-11-24",
-      "rsi": 72.9,
-      "volume": 6548172
-    },
-    {
-      "symbol": "BIPC",
-      "setups": [
-        "breakout_20d"
-      ],
-      "price": 42.82,
-      "close_date": "2026-11-20",
-      "rsi": 72.0,
-      "volume": 9888157
-    },
-    {
-      "symbol": "CRH",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 93.66,
-      "close_date": "2026-11-24",
-      "rsi": 54.9,
-      "volume": 4507959
-    },
-    {
-      "symbol": "TRV",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 400.87,
-      "close_date": "2026-11-24",
-      "rsi": 57.1,
-      "volume": 1027578
-    },
-    {
-      "symbol": "CPNG",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 16.01,
-      "close_date": "2026-11-24",
-      "rsi": 59.3,
-      "volume": 25614496
-    },
-    {
-      "symbol": "EL",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 108.13,
-      "close_date": "2026-11-24",
-      "rsi": 53.3,
-      "volume": 3775826
-    },
-    {
-      "symbol": "TEAM",
-      "setups": [
-        "oversold_bounce"
-      ],
-      "price": 140.81,
-      "close_date": "2026-11-24",
-      "rsi": 30.7,
-      "volume": 2879523
-    },
-    {
-      "symbol": "APO",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 119.84,
-      "close_date": "2026-11-24",
-      "rsi": 52.5,
-      "volume": 3375619
-    },
-    {
-      "symbol": "AKAN",
-      "setups": [
-        "breakout_20d"
-      ],
-      "price": 5.2,
-      "close_date": "2026-11-24",
-      "rsi": 69.2,
-      "volume": 76837955
-    },
-    {
-      "symbol": "AJG",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 286.82,
-      "close_date": "2026-11-24",
-      "rsi": 61.2,
-      "volume": 1372740
-    },
-    {
-      "symbol": "IP",
-      "setups": [
-        "oversold_bounce"
-      ],
-      "price": 30.62,
-      "close_date": "2026-11-24",
-      "rsi": 37.8,
-      "volume": 12621090
-    },
-    {
-      "symbol": "GPN",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 94.28,
-      "close_date": "2026-11-24",
-      "rsi": 55.5,
-      "volume": 4078017
-    },
-    {
-      "symbol": "EW",
-      "setups": [
-        "bull_flag"
-      ],
-      "price": 106.12,
-      "close_date": "2026-11-24",
-      "rsi": 67.4,
-      "volume": 3614733
-    },
-    {
-      "symbol": "DHI",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 152.17,
-      "close_date": "2026-11-24",
-      "rsi": 57.9,
-      "volume": 2500264
-    },
-    {
-      "symbol": "BIIB",
-      "setups": [
-        "breakout_20d"
-      ],
-      "price": 269.11,
-      "close_date": "2026-11-24",
-      "rsi": 68.9,
-      "volume": 1389261
-    },
-    {
-      "symbol": "ED",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 119.55,
-      "close_date": "2026-11-24",
-      "rsi": 59.6,
-      "volume": 3101536
-    },
-    {
-      "symbol": "NVO",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 40.31,
-      "close_date": "2026-11-24",
-      "rsi": 51.3,
-      "volume": 9168111
+      "price": 247.29,
+      "close_date": "2026-11-25",
+      "rsi": 66.1,
+      "volume": 1896427
     },
     {
       "symbol": "KHC",
       "setups": [
         "breakout_20d"
       ],
-      "price": 25.57,
-      "close_date": "2026-11-24",
-      "rsi": 59.8,
-      "volume": 14256930
+      "price": 26.51,
+      "close_date": "2026-11-25",
+      "rsi": 66.7,
+      "volume": 17660947
     },
     {
-      "symbol": "UTZ",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 14.29,
-      "close_date": "2026-11-19",
-      "rsi": 54.6,
-      "volume": 25284975
-    },
-    {
-      "symbol": "PFGC",
-      "setups": [
-        "bull_flag"
-      ],
-      "price": 109.53,
-      "close_date": "2026-11-24",
-      "rsi": 59.4,
-      "volume": 3258858
-    },
-    {
-      "symbol": "SHEL",
-      "setups": [
-        "oversold_bounce"
-      ],
-      "price": 93.42,
-      "close_date": "2026-11-24",
-      "rsi": 32.1,
-      "volume": 3787879
-    },
-    {
-      "symbol": "AZN",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 183.2,
-      "close_date": "2026-11-24",
-      "rsi": 57.6,
-      "volume": 1857488
-    },
-    {
-      "symbol": "VIK",
+      "symbol": "PGR",
       "setups": [
         "breakout_20d"
       ],
-      "price": 100.87,
-      "close_date": "2026-11-24",
-      "rsi": 66.7,
-      "volume": 3352271
+      "price": 238.7,
+      "close_date": "2026-11-25",
+      "rsi": 62.2,
+      "volume": 1946163
     },
     {
-      "symbol": "PBR.A",
+      "symbol": "PBR",
       "setups": [
-        "oversold"
+        "oversold",
+        "oversold_bounce"
       ],
-      "price": 13.73,
-      "close_date": "2026-11-24",
-      "rsi": 19.1,
-      "volume": 24576941
+      "price": 16.05,
+      "close_date": "2026-11-25",
+      "rsi": 25.3,
+      "volume": 28815474
     },
     {
-      "symbol": "SU",
+      "symbol": "VALE",
       "setups": [
         "oversold_bounce"
       ],
-      "price": 63.83,
-      "close_date": "2026-11-24",
+      "price": 9.81,
+      "close_date": "2026-11-25",
       "rsi": 32.4,
-      "volume": 5144133
+      "volume": 45533290
+    },
+    {
+      "symbol": "GD",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 360.27,
+      "close_date": "2026-11-25",
+      "rsi": 54.6,
+      "volume": 1225848
+    },
+    {
+      "symbol": "WTW",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 352.56,
+      "close_date": "2026-11-25",
+      "rsi": 69.9,
+      "volume": 1247116
+    },
+    {
+      "symbol": "BURL",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 250.06,
+      "close_date": "2026-11-25",
+      "rsi": 50.6,
+      "volume": 1747680
+    },
+    {
+      "symbol": "LNG",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 301.99,
+      "close_date": "2026-11-25",
+      "rsi": 54.7,
+      "volume": 1380341
+    },
+    {
+      "symbol": "PINS",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 19.71,
+      "close_date": "2026-11-25",
+      "rsi": 53.1,
+      "volume": 21081578
+    },
+    {
+      "symbol": "AON",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 347.49,
+      "close_date": "2026-11-25",
+      "rsi": 66.9,
+      "volume": 1154851
+    },
+    {
+      "symbol": "ALL",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 271.39,
+      "close_date": "2026-11-25",
+      "rsi": 63.4,
+      "volume": 1464966
+    },
+    {
+      "symbol": "KMI",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 31.69,
+      "close_date": "2026-11-25",
+      "rsi": 49.7,
+      "volume": 12236900
+    },
+    {
+      "symbol": "EXE",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 86.77,
+      "close_date": "2026-11-25",
+      "rsi": 50.1,
+      "volume": 4465376
+    },
+    {
+      "symbol": "ANF",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 176.96,
+      "close_date": "2026-11-25",
+      "rsi": 66.1,
+      "volume": 2174615
+    },
+    {
+      "symbol": "BILL",
+      "setups": [
+        "bull_flag"
+      ],
+      "price": 61.55,
+      "close_date": "2026-11-25",
+      "rsi": 68.0,
+      "volume": 6219010
+    },
+    {
+      "symbol": "BSP",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 46.29,
+      "close_date": "2026-11-25",
+      "rsi": 56.5,
+      "volume": 8184168
+    },
+    {
+      "symbol": "AWK",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 152.84,
+      "close_date": "2026-11-25",
+      "rsi": 63.0,
+      "volume": 2458274
+    },
+    {
+      "symbol": "SN",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 232.5,
+      "close_date": "2026-11-25",
+      "rsi": 62.7,
+      "volume": 1599806
+    },
+    {
+      "symbol": "HDB",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 28.35,
+      "close_date": "2026-11-25",
+      "rsi": 79.7,
+      "volume": 13089232
+    },
+    {
+      "symbol": "AEE",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 114.88,
+      "close_date": "2026-11-25",
+      "rsi": 65.1,
+      "volume": 3208269
+    },
+    {
+      "symbol": "SCCO",
+      "setups": [
+        "oversold_bounce"
+      ],
+      "price": 140.99,
+      "close_date": "2026-11-25",
+      "rsi": 33.1,
+      "volume": 2602934
+    },
+    {
+      "symbol": "LEN",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 86.79,
+      "close_date": "2026-11-25",
+      "rsi": 55.6,
+      "volume": 4182206
     },
     {
       "symbol": "SE",
       "setups": [
-        "oversold"
-      ],
-      "price": 64.97,
-      "close_date": "2026-11-24",
-      "rsi": 29.1,
-      "volume": 4990447
-    },
-    {
-      "symbol": "DKNG",
-      "setups": [
         "oversold_bounce"
       ],
-      "price": 16.11,
-      "close_date": "2026-11-24",
-      "rsi": 31.6,
-      "volume": 19992201
+      "price": 66.88,
+      "close_date": "2026-11-25",
+      "rsi": 34.1,
+      "volume": 5404306
     },
     {
-      "symbol": "CNQ",
-      "setups": [
-        "oversold_bounce"
-      ],
-      "price": 44.78,
-      "close_date": "2026-11-24",
-      "rsi": 32.5,
-      "volume": 7055097
-    },
-    {
-      "symbol": "BG",
-      "setups": [
-        "oversold"
-      ],
-      "price": 84.06,
-      "close_date": "2026-11-24",
-      "rsi": 24.5,
-      "volume": 3756303
-    },
-    {
-      "symbol": "ITW",
-      "setups": [
-        "reclaim_ma20"
-      ],
-      "price": 283.75,
-      "close_date": "2026-11-24",
-      "rsi": 53.5,
-      "volume": 1101015
-    },
-    {
-      "symbol": "RPRX",
+      "symbol": "CPRT",
       "setups": [
         "breakout_20d"
       ],
-      "price": 71.31,
-      "close_date": "2026-11-24",
-      "rsi": 72.5,
-      "volume": 4308830
+      "price": 33.17,
+      "close_date": "2026-11-25",
+      "rsi": 66.6,
+      "volume": 10895587
     },
     {
-      "symbol": "GMAB",
+      "symbol": "INFY",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 13.02,
+      "close_date": "2026-11-25",
+      "rsi": 63.0,
+      "volume": 27560648
+    },
+    {
+      "symbol": "BBIO",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 89.79,
+      "close_date": "2026-11-25",
+      "rsi": 76.7,
+      "volume": 3993250
+    },
+    {
+      "symbol": "ZTS",
       "setups": [
         "reclaim_ma20"
       ],
-      "price": 56.57,
-      "close_date": "2026-11-24",
-      "rsi": 68.3,
-      "volume": 5403488
+      "price": 82.6,
+      "close_date": "2026-11-25",
+      "rsi": 53.7,
+      "volume": 4261018
+    },
+    {
+      "symbol": "CTSH",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 63.32,
+      "close_date": "2026-11-25",
+      "rsi": 52.5,
+      "volume": 5400891
+    },
+    {
+      "symbol": "VRSN",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 319.47,
+      "close_date": "2026-11-25",
+      "rsi": 63.9,
+      "volume": 1066299
+    },
+    {
+      "symbol": "QXO",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 11.97,
+      "close_date": "2026-11-25",
+      "rsi": 52.3,
+      "volume": 28441961
+    },
+    {
+      "symbol": "CARR",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 53.9,
+      "close_date": "2026-11-25",
+      "rsi": 51.1,
+      "volume": 6146769
+    },
+    {
+      "symbol": "YUM",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 167.12,
+      "close_date": "2026-11-25",
+      "rsi": 69.5,
+      "volume": 1935445
+    },
+    {
+      "symbol": "BTI",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 60.43,
+      "close_date": "2026-11-25",
+      "rsi": 54.6,
+      "volume": 5339360
+    },
+    {
+      "symbol": "BBY",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 102.58,
+      "close_date": "2026-11-25",
+      "rsi": 57.0,
+      "volume": 3079824
+    },
+    {
+      "symbol": "UL",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 66.85,
+      "close_date": "2026-11-25",
+      "rsi": 57.6,
+      "volume": 4603886
+    },
+    {
+      "symbol": "BMRN",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 68.86,
+      "close_date": "2026-11-25",
+      "rsi": 76.6,
+      "volume": 4432231
+    },
+    {
+      "symbol": "ODFL",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 174.66,
+      "close_date": "2026-11-25",
+      "rsi": 49.7,
+      "volume": 1686909
+    },
+    {
+      "symbol": "BDX",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 221.24,
+      "close_date": "2026-11-25",
+      "rsi": 71.8,
+      "volume": 1331269
+    },
+    {
+      "symbol": "CNH",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 11.88,
+      "close_date": "2026-11-25",
+      "rsi": 52.8,
+      "volume": 24702492
+    },
+    {
+      "symbol": "TPL",
+      "setups": [
+        "oversold_bounce"
+      ],
+      "price": 261.37,
+      "close_date": "2026-11-25",
+      "rsi": 31.7,
+      "volume": 1122758
+    },
+    {
+      "symbol": "DRI",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 241.16,
+      "close_date": "2026-11-25",
+      "rsi": 65.3,
+      "volume": 1147981
+    },
+    {
+      "symbol": "BAX",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 27.26,
+      "close_date": "2026-11-25",
+      "rsi": 62.5,
+      "volume": 10036531
+    },
+    {
+      "symbol": "AWI",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 184.83,
+      "close_date": "2026-11-25",
+      "rsi": 64.5,
+      "volume": 1472264
+    },
+    {
+      "symbol": "ATO",
+      "setups": [
+        "reclaim_ma20"
+      ],
+      "price": 173.26,
+      "close_date": "2026-11-25",
+      "rsi": 55.7,
+      "volume": 1558879
+    },
+    {
+      "symbol": "CDW",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 174.97,
+      "close_date": "2026-11-25",
+      "rsi": 59.4,
+      "volume": 1542291
     },
     {
       "symbol": "PCG",
       "setups": [
         "breakout_20d"
       ],
-      "price": 14.22,
-      "close_date": "2026-11-24",
-      "rsi": 64.1,
-      "volume": 21433009
+      "price": 14.26,
+      "close_date": "2026-11-25",
+      "rsi": 64.5,
+      "volume": 18903462
     },
     {
-      "symbol": "BIP",
-      "setups": [
-        "breakout_20d"
-      ],
-      "price": 45.52,
-      "close_date": "2026-11-24",
-      "rsi": 80.5,
-      "volume": 6451830
-    },
-    {
-      "symbol": "KSS",
+      "symbol": "FISV",
       "setups": [
         "reclaim_ma20"
       ],
-      "price": 25.33,
-      "close_date": "2026-11-24",
-      "rsi": 58.9,
-      "volume": 11531246
+      "price": 59.78,
+      "close_date": "2026-11-25",
+      "rsi": 57.8,
+      "volume": 4494519
     },
     {
-      "symbol": "TPL",
+      "symbol": "D",
       "setups": [
-        "oversold"
+        "reclaim_ma20"
       ],
-      "price": 251.4,
-      "close_date": "2026-11-24",
-      "rsi": 23.9,
-      "volume": 1161330
+      "price": 67.99,
+      "close_date": "2026-11-25",
+      "rsi": 59.0,
+      "volume": 3820938
+    },
+    {
+      "symbol": "BRO",
+      "setups": [
+        "breakout_20d"
+      ],
+      "price": 78.43,
+      "close_date": "2026-11-25",
+      "rsi": 68.1,
+      "volume": 3292744
     },
     {
       "symbol": "IBN",
@@ -1045,197 +1052,175 @@ $ scan.py daily --json --out trader/watchlist.new.json  (Exit 0, 115 s)
         "breakout_20d",
         "bull_flag"
       ],
-      "price": 35.9,
-      "close_date": "2026-11-24",
-      "rsi": 81.9,
-      "volume": 8007232
+      "price": 36.5,
+      "close_date": "2026-11-25",
+      "rsi": 84.0,
+      "volume": 6927442
     },
     {
-      "symbol": "CBRE",
+      "symbol": "CLX",
       "setups": [
-        "reclaim_ma20"
+        "breakout_20d"
       ],
-      "price": 133.48,
-      "close_date": "2026-11-24",
-      "rsi": 52.1,
-      "volume": 2151950
+      "price": 110.94,
+      "close_date": "2026-11-25",
+      "rsi": 70.6,
+      "volume": 2273114
     },
     {
-      "symbol": "TEX",
+      "symbol": "PAAS",
       "setups": [
-        "breakout_20d",
-        "reclaim_ma20"
+        "oversold_bounce"
       ],
-      "price": 58.49,
-      "close_date": "2026-11-24",
-      "rsi": 57.7,
-      "volume": 4843555
+      "price": 32.56,
+      "close_date": "2026-11-25",
+      "rsi": 34.7,
+      "volume": 7631108
     },
     {
-      "symbol":
+     
 …gekürzt
 
-$ news.py --tickers INSM SNDK LLY WMT UNH MRNA KO JNJ MSTR ABBV --json --hours 24 --no-sec  (Exit 0, 3 s)
+$ news.py --tickers SNDK INSM V HD MSTR QCOM DIS PG MCD TJX --json --hours 24 --no-sec  (Exit 0, 3 s)
 {
-  "checked": "2026-11-25T12:32:15.767558+00:00",
+  "checked": "2026-11-27T12:32:42.964943+00:00",
   "moves": [
     {
-      "ticker": "ABBV",
-      "price": 300.28,
-      "prev_close": 288.45,
-      "pct": 4.1,
-      "time": "2026-11-24T21:02:39+00:00",
-      "moving": true
+      "ticker": "DIS",
+      "price": 125.6,
+      "prev_close": 122.51,
+      "pct": 2.52,
+      "time": "2026-11-25T21:02:01+00:00",
+      "moving": false
+    },
+    {
+      "ticker": "HD",
+      "price": 361.26,
+      "prev_close": 353.69,
+      "pct": 2.14,
+      "time": "2026-11-25T21:00:02+00:00",
+      "moving": false
     },
     {
       "ticker": "INSM",
-      "price": 170.15,
-      "prev_close": 149.09,
-      "pct": 14.13,
-      "time": "2026-11-24T21:00:00+00:00",
-      "moving": true
-    },
-    {
-      "ticker": "JNJ",
-      "price": 276.46,
-      "prev_close": 268.71,
-      "pct": 2.88,
-      "time": "2026-11-24T21:00:02+00:00",
+      "price": 170.31,
+      "prev_close": 170.15,
+      "pct": 0.09,
+      "time": "2026-11-25T21:00:02+00:00",
       "moving": false
     },
     {
-      "ticker": "KO",
-      "price": 97.62,
-      "prev_close": 95.88,
-      "pct": 1.81,
-      "time": "2026-11-24T21:00:02+00:00",
+      "ticker": "MCD",
+      "price": 283.5,
+      "prev_close": 280.7,
+      "pct": 1.0,
+      "time": "2026-11-25T21:00:02+00:00",
       "moving": false
-    },
-    {
-      "ticker": "LLY",
-      "price": 1407.59,
-      "prev_close": 1364.6,
-      "pct": 3.15,
-      "time": "2026-11-24T21:02:48+00:00",
-      "moving": true
-    },
-    {
-      "ticker": "MRNA",
-      "price": 227.38,
-      "prev_close": 212.08,
-      "pct": 7.21,
-      "time": "2026-11-24T21:00:01+00:00",
-      "moving": true
     },
     {
       "ticker": "MSTR",
-      "price": 77.55,
-      "prev_close": 84.4,
-      "pct": -8.12,
-      "time": "2026-11-24T21:00:00+00:00",
+      "price": 79.96,
+      "prev_close": 77.55,
+      "pct": 3.11,
+      "time": "2026-11-25T21:00:01+00:00",
       "moving": true
     },
     {
-      "ticker": "SNDK",
-      "price": 77.95,
-      "prev_close": 87.71,
-      "pct": -11.13,
-      "time": "2026-11-24T21:00:00+00:00",
-      "moving": true
-    },
-    {
-      "ticker": "UNH",
-      "price": 341.88,
-      "prev_close": 336.08,
-      "pct": 1.73,
-      "time": "2026-11-24T21:00:02+00:00",
+      "ticker": "PG",
+      "price": 173.23,
+      "prev_close": 172.47,
+      "pct": 0.44,
+      "time": "2026-11-25T21:03:03+00:00",
       "moving": false
     },
     {
-      "ticker": "WMT",
-      "price": 132.31,
-      "prev_close": 129.58,
-      "pct": 2.11,
-      "time": "2026-11-24T21:00:01+00:00",
+      "ticker": "QCOM",
+      "price": 168.66,
+      "prev_close": 164.96,
+      "pct": 2.24,
+      "time": "2026-11-25T21:00:02+00:00",
+      "moving": false
+    },
+    {
+      "ticker": "SNDK",
+      "price": 73.61,
+      "prev_close": 77.95,
+      "pct": -5.57,
+      "time": "2026-11-25T21:00:02+00:00",
+      "moving": true
+    },
+    {
+      "ticker": "TJX",
+      "price": 146.09,
+      "prev_close": 143.86,
+      "pct": 1.55,
+      "time": "2026-11-25T21:03:28+00:00",
+      "moving": false
+    },
+    {
+      "ticker": "V",
+      "price": 424.39,
+      "prev_close": 416.78,
+      "pct": 1.83,
+      "time": "2026-11-25T21:00:02+00:00",
       "moving": false
     }
   ],
   "items": [
     {
-      "id": "rss:d96603c1-fe7f-3bf3-8158-0728b464d469",
+      "id": "rss:0187a1b1-4a04-35a4-827e-ff4c25f95dac",
       "source": "Yahoo Finance",
       "kind": "headline",
-      "ticker": "SNDK",
-      "title": "Dow Jones Futures Fall, Techs Dive; Trump Says 'Not Too Late' For U.S. To Take Nvidia Stake",
-      "summary": "Futures fell after AI stocks tumbled but medicals, retailers and more rose. President Trump mused about an Nvidia stake. Fed inflation data looms.",
-      "link": "https://finance.yahoo.com/m/d96603c1-fe7f-3bf3-8158-0728b464d469/dow-jones-futures-fall%2C-techs.html?.tsrc=rss",
-      "time": "2026-11-25T12:18:09+00:00",
+      "ticker": "V",
+      "title": "What Is Visa (V) Doing With Stablecoin Payments In Europe And Asia?",
+      "summary": "Visa (NYSE: V) is expanding stablecoin-based payment options through new partnerships with Norwegian Block Exchange and Triple-A in 2026. The planned NBX Visa Flex Card will let customers settle payments in fiat or supported stablecoins across multiple European markets. Visa's collaboration with Triple-A aims to use stablecoins for cross-border Visa Direct payouts in Asia Pacific outside regular banking hours. These moves into stablecoin cards and cross-border payouts matter, but they are...",
+      "link": "https://finance.yahoo.com/markets/crypto/articles/visa-v-doing-stablecoin-payments-120939492.html?.tsrc=rss",
+      "time": "2026-11-27T12:09:39+00:00",
       "touches": [
-        "SNDK"
-      ],
-      "tags": [
-        "macro"
-      ],
-      "new": true
-    },
-    {
-      "id": "rss:0b23f42a-18a5-3987-8a80-1b3c720a94ab",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "SNDK",
-      "title": "Sandisk (SNDK) Shares Dropped, So What Is Driving Attention Now?",
-      "summary": "Sandisk (SNDK) just put an 8-for-1 forward stock split into effect alongside a large jump in authorized shares, a governance move that reshapes how the memory specialist can use its equity toolkit. That broader context around Sandisk is crucial right now. The share price has fallen sharply in the short term, with a 7-day share price return of down 21.78% and a 30-day share price return of down 49.63%. However, the year-to-date share price return remains up 126.57%, and the 1-year total...",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/sandisk-sndk-shares-dropped-driving-121239819.html?.tsrc=rss",
-      "time": "2026-11-25T12:12:39+00:00",
-      "touches": [
-        "SNDK"
-      ],
-      "tags": [
-        "capital"
-      ],
-      "new": true
-    },
-    {
-      "id": "rss:5fa6dfcd-d469-3ec4-88f2-f4d0ac329825",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "WMT",
-      "title": "Market Chatter: Walmart-Backed PhonePe Resumes IPO Process; Seeks Up to $15 Billion in Valuation",
-      "summary": "Walmart (WMT)-backed PhonePe has restarted preparations for an initial public offering, targeting a",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/market-chatter-walmart-backed-phonepe-121130205.html?.tsrc=rss",
-      "time": "2026-11-25T12:11:30+00:00",
-      "touches": [
-        "WMT"
-      ],
-      "tags": [
-        "capital"
-      ],
-      "new": true
-    },
-    {
-      "id": "rss:7f8dc71d-acdc-3301-a5b2-5089dbb4954c",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "ABBV",
-      "title": "What Could Still Lift AbbVie Stock?",
-      "summary": "Today's big story: Anthropic Below Its IPO Price: Do Giants Come Back.",
-      "link": "https://www.trefis.com/stock/abbv/articles/628894/what-could-still-lift-abbvie-stock/2026-11-25?.tsrc=rss",
-      "time": "2026-11-25T11:57:04+00:00",
-      "touches": [
-        "ABBV"
+        "V"
       ],
       "tags": [],
       "new": true
     },
     {
-      "id": "rss:ce86de0a-64b4-3136-9914-eda7b76946fc",
+      "id": "rss:539f5330-660b-39b3-a089-0c690cf5bcbe",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "MSTR",
+      "title": "Crypto Stocks Gain After Bitcoin Tops $61K In Tech Rebound, But Analysts Want A Move Above $62K",
+      "summary": "Hyperliquid led gains among the top 10 cryptocurrencies by market capitalization.",
+      "link": "https://stocktwits.com/news-articles/markets/cryptocurrency/crypto-stocks-gain-after-bitcoin-tops-61-k-in-tech-rebound-but-analysts-want-a-move-above-62-k/cNbCsYgR9Ns?.tsrc=rss",
+      "time": "2026-11-27T12:03:37+00:00",
+      "touches": [
+        "MSTR"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:0bd1e26f-3db3-3918-8c78-9a149bc5bc8d",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "PG",
+      "title": "The Dates That Matter Most For Procter & Gamble Stock",
+      "summary": "Today's big story: Anthropic Broke Its $83 IPO Price. What Did Facebook Do Next.",
+      "link": "https://www.trefis.com/stock/pg/articles/629330/the-dates-that-matter-most-for-procter-gamble-stock/2026-11-27?.tsrc=rss",
+      "time": "2026-11-27T12:03:26+00:00",
+      "touches": [
+        "PG"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:a7c229d2-e36e-4e94-83f9-cc86bb0a4577",
       "source": "Yahoo Finance",
       "kind": "headline",
       "ticker": "SNDK",
-      "title": "Tradr to Launch Six New Leveraged ETFs",
-      "summary": "Tradr ETFs, a provider of ETFs designed for sophisticated investors and professional traders, expects to launch six new leveraged ETFs on December 2, 2026, all to be listed on Cboe. The launches include three funds in Tradr's new Triple Threat series and three first-to-market single-stock ETFs.",
-      "link": "https://finance.yahoo.com/markets/options/articles/tradr-launch-six-leveraged-etfs-114600732.html?.tsrc=rss",
-      "time": "2026-11-25T11:46:00+00:00",
+      "title": "He was right about AI and still lost $35 billion",
+      "summary": "Leopold Aschenbrenner turned $225 million into a $45 billion fund in under two years by betting on everything AI would need. Then 4x leverage and a brutal July cost him $35 billion from the peak. Host Ejaaz Ahamadeen breaks down the essay, the bets, the margin calls and Citadel's block trade, and whether he can run it back.",
+      "link": "https://finance.yahoo.com/video/ai-still-lost-35-billion-120000023.html?.tsrc=rss",
+      "time": "2026-11-27T12:00:00+00:00",
       "touches": [
         "SNDK"
       ],
@@ -1243,282 +1228,343 @@ $ news.py --tickers INSM SNDK LLY WMT UNH MRNA KO JNJ MSTR ABBV --json --hours 2
       "new": true
     },
     {
-      "id": "rss:bb1c63a6-cc49-38d7-bfd6-a0748755ac3e",
+      "id": "rss:fd7b8658-4aad-36d6-bb52-daa355a711fc",
       "source": "Yahoo Finance",
       "kind": "headline",
-      "ticker": "UNH",
-      "title": "How Much Could You Lose In UNH Stock?",
-      "summary": "UnitedHealth Group closed at $341.88 on Tuesday, November 24. That is 21.2% below its highest close of the past year, on July 21, once that close is adjusted for dividends paid since. If the whole market turns, how far could the stock fall, and how long could you wait to get back.",
-      "link": "https://www.trefis.com/stock/unh/articles/628754/how-much-could-you-lose-in-unh-stock/2026-11-25?.tsrc=rss",
-      "time": "2026-11-25T11:21:10+00:00",
+      "ticker": "QCOM",
+      "title": "Why Is Qualcomm Stock Rallying Today?",
+      "summary": "Shares of Qualcomm (NASDAQ:QCOM) rose 3. 3% to $174.",
+      "link": "https://investorshub.advfn.com/market-news/article/40788/why-is-qualcomm-stock-rallying-today?.tsrc=rss",
+      "time": "2026-11-27T11:50:39+00:00",
       "touches": [
-        "UNH"
+        "QCOM"
       ],
       "tags": [],
       "new": true
     },
     {
-      "id": "rss:bc59b291-c0d4-34f4-a3bd-2e26f668b1cf",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "MRNA",
-      "title": "Invesco S&P 500 High Beta (SPHB) Buys $13.4 Million More Bloom Energy on Monday",
-      "summary": "The fund bought $13.4 million of Bloom Energy and $9.5 million of Everpure, while selling $18.0 million of Moderna.",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/invesco-p-500-high-beta-110539855.html?.tsrc=rss",
-      "time": "2026-11-25T11:05:39+00:00",
-      "touches": [
-        "MRNA"
-      ],
-      "tags": [],
-      "new": true
-    },
-    {
-      "id": "rss:327d0441-4b21-3fcb-92ab-d3fb9df5ba97",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "KO",
-      "title": "State Street Consumer Staples SPDR (XLP) Adds Walmart and Costco on Nov. 23",
-      "summary": "The fund bought $266.6 million of stock and sold nothing, lifting all 33 of its positions.",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/state-street-consumer-staples-spdr-110513471.html?.tsrc=rss",
-      "time": "2026-11-25T11:05:13+00:00",
-      "touches": [
-        "KO",
-        "WMT"
-      ],
-      "tags": [],
-      "new": true
-    },
-    {
-      "id": "rss:183c404b-135c-30fe-940e-0db08fc7bc59",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "MRNA",
-      "title": "What Invesco S&P 500 Equal Weight ETF (RSP) Sold: Moderna Leads on Nov. 23",
-      "summary": "The fund sold $550.0 million of stock on Monday, Nov. 23, trimming all 503 of its positions and buying nothing.",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/invesco-p-500-equal-weight-110443601.html?.tsrc=rss",
-      "time": "2026-11-25T11:04:43+00:00",
-      "touches": [
-        "MRNA"
-      ],
-      "tags": [],
-      "new": true
-    },
-    {
-      "id": "rss:7253fcf5-ceea-3479-8904-82e3add8b25b",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "SNDK",
-      "title": "What Direxion Daily Technology Bull 3X ETF (TECL) Sold: Apple Leads on Monday",
-      "summary": "The fund sold $99.4 million of Apple and $78.0 million of Nvidia, with net selling of $554.3 million against $577.0 million in gross trades.",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/direxion-daily-technology-bull-3x-110437163.html?.tsrc=rss",
-      "time": "2026-11-25T11:04:37+00:00",
-      "touches": [
-        "SNDK"
-      ],
-      "tags": [],
-      "new": true
-    },
-    {
-      "id": "rss:aa7339f6-21b7-304e-9c80-b047990f1640",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "ABBV",
-      "title": "Forget the P/E Ratio. DSTL Picks 100 Large Stocks by the Cash They Generate and the Debt They Don\u2019t Carry",
-      "summary": "DSTL uses free cash flow and low debt to pick large-cap U.S. stocks. See how its holdings differ from SPY\u2019s and where it could fit in a retirement portfolio.",
-      "link": "https://247wallst.com/investing/etf/2026/11/25/forget-the-p-e-ratio-dstl-picks-100-large-stocks-by-the-cash-they-generate-and-the-debt-they-dont-carry/?.tsrc=rss",
-      "time": "2026-11-25T11:03:37+00:00",
-      "touches": [
-        "ABBV"
-      ],
-      "tags": [],
-      "new": true
-    },
-    {
-      "id": "rss:64e846d5-ee47-3f9c-a149-5af5ad084275",
+      "id": "rss:ec49c082-a30a-3181-8477-05d91b18825e",
       "source": "Yahoo Finance",
       "kind": "headline",
       "ticker": "INSM",
-      "title": "International Biotechnology Trust: Sanofi deal highlights accelerating biotech M&A wave",
-      "summary": "International Biotechnology Trust Plc (LSE:IBT, OTC:IBITF) portfolio manager Ailsa Craig talked with Proactive's Stephen Gunnion about Sanofi\u2019s US$41 billion acquisition of Insmed, the implications for shareholders and the growing wave of mergers and acquisitions across biotechnology. Craig explained how the trust\u2019s actively managed strategy targets companies with characteristics attractive to major pharmaceutical groups. Insmed was its largest portfolio holding ahead of the deal, with Sanofi\u2019s US$175-per-share offer representing a 46% premium to the pre-announcement share price and potentially boosting the trust\u2019s net asset value (NAV). She also discussed the sustainability of the trust\u2019s dividend, explaining how acquisition proceeds support its capital-funded dividend policy. Craig said the M&A wave was gathering pace, with ten portfolio companies involved in deals this year, against nine last year and a historical annual average of four to five. She identified the pharmaceutical industry's approaching patent cliff, with around US$400 billion in drug sales facing patent expirations, as a major catalyst. More than 70% of new drugs last year originated in biotechnology, underlining the sector\u2019s growing importance to pharmaceutical innovation. Visit Proactive\u2019s YouTube channel for more biotechnology investment news, company interviews and market insights. Don\u2019t forget to like this video, subscribe to the channel and enable notifications for future content. https://www.proactiveinvestors.com/pages/editorialPolicy #InternationalBiotechnologyTrust #IBT #AilsaCraig #Insmed #Sanofi #Biotechnology #BiotechStocks #BiotechInvesting #MergersAndAcquisitions #Pharmaceuticals #PatentCliff #InvestmentTrust #DividendInvesting #HealthcareInvesting #StockMarket #Proactive",
-      "link": "https://finance.yahoo.com/video/international-biotechnology-trust-sanofi-deal-105025941.html?.tsrc=rss",
-      "time": "2026-11-25T10:50:25+00:00",
+      "title": "Sanofi Stock Surges 26% as $41 Billion Insmed Deal Boosts Confidence",
+      "summary": "CEO Belen Garijo began pursuing the acquisition immediately after taking office in May to strengthen Sanofi's drug pipeline.",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/sanofi-stock-surges-26-41-113324950.html?.tsrc=rss",
+      "time": "2026-11-27T11:33:24+00:00",
       "touches": [
         "INSM"
       ],
       "tags": [
         "deal",
+        "people"
+      ],
+      "new": true
+    },
+    {
+      "id": "rss:54a323bd-b258-3e97-bd39-8c1c5c76ca4d",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "SNDK",
+      "title": "Micron vs. SanDisk: Which Is the Better AI Stock to Buy for 2027?",
+      "summary": "SanDisk Is Growing Faster Than Micron. Here's Which AI Stock Looks Cheaper for 2027",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/micron-vs-sandisk-better-ai-111815853.html?.tsrc=rss",
+      "time": "2026-11-27T11:18:15+00:00",
+      "touches": [
+        "SNDK"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:0079fb54-3c3e-3d51-9741-bc832fdae594",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "MCD",
+      "title": "Can BROS' 100-Basis-Point SG&A Leverage Support 2026 Earnings Growth?",
+      "summary": "BROS targets 100 basis points of SG&A leverage in 2026 as strong sales growth supports profitability. Yet rising shop-level costs are a concern.",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/bros-100-basis-point-sg-110900892.html?.tsrc=rss",
+      "time": "2026-11-27T11:09:00+00:00",
+      "touches": [
+        "MCD"
+      ],
+      "tags": [
+        "earnings"
+      ],
+      "new": true
+    },
+    {
+      "id": "rss:eac9c281-033c-3c73-8b9a-a27703a8cdc9",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "SNDK",
+      "title": "The Anatomy of an AI Rally: Anthropic Stock Quickly Finds Its Place",
+      "summary": "By now, we\u2019re all familiar with how an artificial-intelligence rally works. Less so, when it comes to Anthropic's role in it all.",
+      "link": "https://finance.yahoo.com/m/eac9c281-033c-3c73-8b9a-a27703a8cdc9/the-anatomy-of-an-ai-rally%3A.html?.tsrc=rss",
+      "time": "2026-11-27T11:01:00+00:00",
+      "touches": [
+        "SNDK"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:feb61a0d-9a19-381e-9725-13c81ad77db9",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "SNDK",
+      "title": "Micron's Higher FY27 CapEx: Can Supply Security Boost Its Growth Further?",
+      "summary": "MU ramps up fiscal 2027 CapEx to expand memory production amid booming AI demand, but can tighter supply conditions and new fabs fuel long-term growth?",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/microns-higher-fy27-capex-supply-105500633.html?.tsrc=rss",
+      "time": "2026-11-27T10:55:00+00:00",
+      "touches": [
+        "SNDK"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:977de44c-fcf5-3369-bcdd-0c3ddc7cfec9",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "SNDK",
+      "title": "Sandisk, Bloom, Marvell, AMD, Nvidia, HP, and More Stocks That Explain Today\u2019s Market",
+      "summary": "AI stocks are flying on Black Friday, with memory-card supplier Sandisk and data-center power provider Bloom Energy leading the way.",
+      "link": "https://finance.yahoo.com/m/977de44c-fcf5-3369-bcdd-0c3ddc7cfec9/sandisk%2C-bloom%2C-marvell%2C-amd%2C.html?.tsrc=rss",
+      "time": "2026-11-27T10:22:00+00:00",
+      "touches": [
+        "SNDK"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:47c549e5-5090-3057-b796-25efd68a41b1",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "V",
+      "title": "Visa and NBX plan stablecoin-linked payment card",
+      "summary": "The NBX Visa Flex Card is expected to launch next year.",
+      "link": "https://www.electronicpaymentsinternational.com/news/visa-and-nbx-plan-stablecoin-linked-payment-card/?.tsrc=rss",
+      "time": "2026-11-27T06:45:57+00:00",
+      "touches": [
+        "V"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:ea62a630-f0a3-3cf3-abe7-45516dc17296",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "INSM",
+      "title": "The Zacks Analyst Blog Highlights Vera Therapeutics, BridgeBio Pharma, Revolution Medicines, Agios Pharmaceuticals and Stoke Therapeutics",
+      "summary": "Sanofi's $41B Insmed deal reignites biotech M&A hopes, putting five stocks with differentiated medicines and promising pipelines in the takeover spotlight.",
+      "link": "https://finance.yahoo.com/healthcare/articles/zacks-analyst-blog-highlights-vera-064400990.html?.tsrc=rss",
+      "time": "2026-11-27T06:44:00+00:00",
+      "touches": [
+        "INSM"
+      ],
+      "tags": [
+        "deal"
+      ],
+      "new": true
+    },
+    {
+      "id": "rss:3a18f659-f826-3a0f-96fa-33a87eb04fe5",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "QCOM",
+      "title": "SoftBank\u2019s \u201cWorst Sell-Off\u201d Since \u201908 Is Bad News for Arm. Here\u2019s the Number That Matters",
+      "summary": "Key TakeawaysSoftBank\u2019s credit-default swap topped 500 basis points, and CNBC\u2019s Carl Quintanilla called its slide the worst since 2008. A SoftBank affiliate supplied $704.",
+      "link": "https://www.tikr.com/blog/softbanks-worst-sell-off-since-08-is-bad-news-for-arm-heres-the-number-that-matters?ref=yahoofinance&tlnk=yf-261127-3ggwv4gr&.tsrc=rss",
+      "time": "2026-11-27T03:08:55+00:00",
+      "touches": [
+        "QCOM"
+      ],
+      "tags": [
+        "risk"
+      ],
+      "new": true
+    },
+    {
+      "id": "rss:ab04d21b-ec0a-311c-9c89-f5737b571a2f",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "HD",
+      "title": "Home Depot shoppers can now dodge a classic cart disaster",
+      "summary": "The retailer\u2019s AI tool now performs an action that shoppers could be thankful for.",
+      "link": "https://www.thestreet.com/investing/stocks/home-depot-shoppers-can-now-dodge-a-classic-cart-disaster?.tsrc=rss",
+      "time": "2026-11-27T00:00:00+00:00",
+      "touches": [
+        "HD"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:b8015776-ad4e-387c-a28e-6917260a75d0",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "PG",
+      "title": "2 Dividend Stocks to Buy in November and 1 to Leave on the Shelf",
+      "summary": "In a volatile market, you want stocks that have reliable businesses so you can sleep well at night.",
+      "link": "https://www.fool.com/investing/2026/11/26/2-dividend-stocks-to-buy-in-november-and-1-to-leave-on-the-shelf/?.tsrc=rss",
+      "time": "2026-11-26T23:45:02+00:00",
+      "touches": [
+        "PG"
+      ],
+      "tags": [
         "capital"
       ],
       "new": true
     },
     {
-      "id": "rss:c1d04c31-b843-30c4-831e-a30adc59f680",
+      "id": "rss:b0c318b9-07a1-38d5-9d99-fb8518e978a5",
       "source": "Yahoo Finance",
       "kind": "headline",
-      "ticker": "MSTR",
-      "title": "Michael Saylor Bought $100M In Bitcoin Before Strategy Did, Says The Man Who Convinced Him To Buy It \u2014 Now That Bet Is Around $589M",
-      "summary": "Weiss said Saylor predicted Apple's headset would fail while others in the room were eager to buy one.",
-      "link": "https://stocktwits.com/news-articles/markets/equity/michael-saylor-100m-bitcoin-purchase-589m-bet/cNbHOY3R9lH?.tsrc=rss",
-      "time": "2026-11-25T10:22:23+00:00",
+      "ticker": "V",
+      "title": "The Nasdaq Composite Is in a Correction, but These 3 Dividend Stocks Are Near 52-Week Highs. Here's Why They're Still Worth Buying Right Now.",
+      "summary": "Johnson & Johnson, Visa, and Coca-Cola have held up during the market's recent turbulence.",
+      "link": "https://www.fool.com/investing/2026/11/26/the-nasdaq-composite-is-in-a-correction-but-these-3-dividend-stocks-are-near-52-week-highs-here-s-why-they-re-still-worth-buying-right-now/?.tsrc=rss",
+      "time": "2026-11-26T21:33:02+00:00",
       "touches": [
-        "MSTR"
+        "V"
+      ],
+      "tags": [
+        "capital"
+      ],
+      "new": true
+    },
+    {
+      "id": "rss:3993bf5c-ff68-3ba0-b202-3758a5023af0",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "DIS",
+      "title": "Take-Two\u2019s (TTWO) GTA 6 Could Be a Cash Cow for the Next Decade",
+      "summary": "Take-Two (TTWO) could have a cash cow for the next decade with Grand Theft Auto 6 (GTA 6). The global video game publisher reported $3.79 billion in first-day retail sales for the title. Sam Houser, president of Take-Two\u2019s game developer Rockstar Games, called the release \u201ca new chapter of Rockstar Games.\u201d I think investors may still underestimate what that chapter could earn the company. The opening sales are extraordinary. An eventual PC release and online ecosystem could keep generating reven",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/two-ttwo-gta-6-could-213300568.html?.tsrc=rss",
+      "time": "2026-11-26T21:33:00+00:00",
+      "touches": [
+        "DIS"
       ],
       "tags": [],
       "new": true
     },
     {
-      "id": "rss:0c702384-d4bb-3b7d-8861-88954d53eef6",
+      "id": "rss:d7a7148e-fbdf-3088-8a0c-a36a3ce23bad",
       "source": "Yahoo Finance",
       "kind": "headline",
-      "ticker": "WMT",
-      "title": "A Walton Beat the IRS in Tax Court in 2000. The Trust She Won With Is How Billionaires Now Pass Stock Gains to Their Kids With No Gift Tax",
-      "summary": "The IRS said Audrey Walton owed millions in gift tax on a pair of Walmart trusts, and a unanimous Tax Court disagreed. Her two-year structure still shapes how wealthy families move stock upside to heirs, but a few traps can drag it all back.",
-      "link": "https://247wallst.com/personal-finance/2026/11/25/a-walton-beat-the-irs-in-tax-court-in-2000-the-trust-she-won-with-is-how-billionaires-now-pass-stock-gains-to-their-kids-with-no-gift-tax/?.tsrc=rss",
-      "time": "2026-11-25T09:43:54+00:00",
+      "ticker": "DIS",
+      "title": "Disney Stock Just Closed at Its Highest Level Since April 2022",
+      "summary": "Disney's rally has real profit growth behind it, but the stock now sits near the top of its own valuation range while analysts see little room left. One upcoming number could decide whether the rerating continues or stalls.",
+      "link": "https://247wallst.com/investing/2026/11/26/disney-stock-just-closed-at-its-highest-level-since-april-2022/?.tsrc=rss",
+      "time": "2026-11-26T21:22:24+00:00",
       "touches": [
-        "WMT"
+        "DIS"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:03862f03-99cb-354b-8077-c7cf30dfcbc9",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "SNDK",
+      "title": "Sandisk\u2019s 8-for-1 Split Is Done. Here\u2019s What Investors Should Do Next.",
+      "summary": "Sandisk's stock split is finished, so the only question left is whether its AI-fueled flash memory business can hold up as prices cool.",
+      "link": "https://www.fool.com/investing/2026/11/26/sandisks-8-for-1-split-is-done-heres-what-investors-should-do-next/?.tsrc=rss",
+      "time": "2026-11-26T21:20:02+00:00",
+      "touches": [
+        "SNDK"
       ],
       "tags": [
-        "legal"
+        "capital"
       ],
       "new": true
     },
     {
-      "id": "rss:a1dd9cf8-644f-3d76-a8d3-dfafa9f95fc5",
+      "id": "rss:57108e63-9769-3768-910a-29248795c343",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "TJX",
+      "title": "3 Dividend Stocks That Could Benefit From the Black Friday Shopping Rush",
+      "summary": "Three retail giants cover their payouts from operating profit and keep raising them, yet each hides a catch that could dent your returns. One carries a sky-high valuation, one leans on refunds that will not repeat, and one faces a margin squeeze.",
+      "link": "https://247wallst.com/investing/2026/11/26/3-dividend-stocks-that-could-benefit-from-the-black-friday-shopping-rush/?.tsrc=rss",
+      "time": "2026-11-26T21:07:19+00:00",
+      "touches": [
+        "TJX"
+      ],
+      "tags": [
+        "capital"
+      ],
+      "new": true
+    },
+    {
+      "id": "rss:7636a108-b1e6-370b-881d-818912b1d63b",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "V",
+      "title": "Billionaire Chris Hohn\u2019s TCI Has 30% of Its $49.6 Billion Stock Portfolio in GE Aerospace",
+      "summary": "One of the market's most concentrated funds just parked nearly a third of its money in a single industrial name, and the stock has barely moved this year. What does that bet reveal, and what should an ordinary retirement saver copy?",
+      "link": "https://247wallst.com/investing/2026/11/26/billionaire-chris-hohns-tci-has-30-of-its-49-6-billion-stock-portfolio-in-ge-aerospace/?.tsrc=rss",
+      "time": "2026-11-26T20:46:58+00:00",
+      "touches": [
+        "V"
+      ],
+      "tags": [],
+      "new": true
+    },
+    {
+      "id": "rss:9d956b47-ee33-309a-bbe5-98624ffbb207",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "PG",
+      "title": "Here\u2019s How Many Shares of Procter & Gamble You\u2019d Need to Own to Collect $1,000 in Annual Dividends",
+      "summary": "Shoppers are watching every dollar they spend, yet Procter & Gamble keeps growing its revenues and has raised its dividend for 70 straight years.",
+      "link": "https://www.fool.com/investing/2026/11/26/here-s-how-many-shares-of-procter-and-gamble-you-d-need-to-own-to-collect-usd1-000-in-annual-dividends/?.tsrc=rss",
+      "time": "2026-11-26T20:29:02+00:00",
+      "touches": [
+        "PG"
+      ],
+      "tags": [
+        "capital"
+      ],
+      "new": true
+    },
+    {
+      "id": "rss:cfa4ecab-fe04-3460-911f-af58f660acfc",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "ticker": "DIS",
+      "title": "Walt Disney (DIS) Lifts Dividend On Strong Earnings, Is The Stock Still Cheap?",
+      "summary": "Why Disney\u2019s latest earnings and dividend move matter Walt Disney (DIS) just paired a strong quarterly report with a higher dividend, and together those two signals reshaped how investors are thinking about the stock\u2019s income and cash generation profile. That mix of stronger results and a bigger payout has lined up with clear momentum in Walt Disney\u2019s shares, with a 30-day share price return of 13.77% and a 90-day move of 17.58% helping lift the stock to about $125.60. A 1-year total...",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/walt-disney-dis-lifts-dividend-200909244.html?.tsrc=rss",
+      "time": "2026-11-26T20:09:09+00:00",
+      "touches": [
+        "DIS"
+      ],
+      "tags": [
+        "earnings",
+        "capital"
+      ],
+      "new": true
+    },
+    {
+      "id": "rss:422b6494-1100-3673-a77c-7a7c1bdf26a1",
       "source": "Yahoo Finance",
       "kind": "headline",
       "ticker": "SNDK",
-      "title": "SanDisk Trades at 4.6x Earnings\u2014And Still Got Cut in Half",
-      "summary": "Investing.com and Yahoo Finance LLC may earn commission or revenue on some items through the links below.",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/sandisk-trades-4-6x-earnings-092502421.html?.tsrc=rss",
-      "time": "2026-11-25T09:25:02+00:00",
+      "title": "Sandisk Trades at Under 3x Earnings After an 8-for-1 Split and a 70% Crash. Why SNDK Stock Isn\u2019t Doomed Despite NAND Price Warnings.",
+      "summary": "Sandisk's stock has crashed about 70% from its high as NAND price warnings pile up, but its long-term contracts and rock-bottom valuation suggest it isn't doomed.",
+      "link": "https://www.barchart.com/story/news/9022920/sandisk-trades-at-under-3x-earnings-after-an-8-for-1-split-and-a-70-crash-why-sndk-stock-isnt-doomed-despite-nand-price-warnings?.tsrc=rss",
+      "time": "2026-11-26T19:30:03+00:00",
       "touches": [
         "SNDK"
       ],
       "tags": [
         "earnings"
       ],
-      "new": true
-    },
-    {
-      "id": "rss:be09b887-4b83-3330-b17a-8c2bd1bd62f2",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "UNH",
-      "title": "Skip insurance whiplash: How this surgical leader climbed 16%",
-      "summary": "Investing.com and Yahoo Finance LLC may earn commission or revenue on some items through the links below.",
-      "link": "https://finance.yahoo.com/healthcare/articles/skip-insurance-whiplash-surgical-leader-092408778.html?.tsrc=rss",
-      "time": "2026-11-25T09:24:08+00:00",
-      "touches": [
-        "UNH"
-      ],
-      "tags": [],
-      "new": true
-    },
-    {
-      "id": "rss:934d5d56-0dd7-39d7-8bf8-69186f20c6db",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "KO",
-      "title": "Up 41% at Just Over Half Costco\u2019s P/E: Inside Coca-Cola\u2019s Quiet Rally",
-      "summary": "Investing.com and Yahoo Finance LLC may earn commission or revenue on some items through the links below.",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/41-just-over-half-costco-092400539.html?.tsrc=rss",
-      "time": "2026-11-25T09:24:00+00:00",
-      "touches": [
-        "KO",
-        "WMT"
-      ],
-      "tags": [],
-      "new": true
-    },
-    {
-      "id": "rss:f030229e-43b4-3f18-aa9b-53d326df14f7",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "MRNA",
-      "title": "Is Moderna (MRNA) Stock Reasonable After Its Huge Run And Vaccine Data?",
-      "summary": "Moderna has seen its share price move sharply over the past year, which naturally raises a simple question for you as an investor. Do the company\u2019s underlying cash flows support where the stock trades today, or has sentiment moved faster than the money the business can realistically generate? Moderna\u2019s share price return over the past 1 year is 818.7%, which puts a lot of weight on the question of whether the current valuation is grounded in the earnings power that its cash flows can...",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/moderna-mrna-stock-reasonable-huge-090844311.html?.tsrc=rss",
-      "time": "2026-11-25T09:08:44+00:00",
-      "touches": [
-        "MRNA"
-      ],
-      "tags": [
-        "earnings"
-      ],
-      "new": true
-    },
-    {
-      "id": "rss:f139e5c6-13fb-3ec3-85d1-35341362d2fc",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "WMT",
-      "title": "Walmart\u2019s shopper base is shifting: High earners lead its gains as low-income shoppers turn to Amazon",
-      "summary": "Upper-income households led Walmart's market-share gains last quarter, while Numerator data shows lower-income shoppers shifting to Amazon and dollar stores.",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/walmart-shopper-shifting-high-earners-083200748.html?.tsrc=rss",
-      "time": "2026-11-25T08:32:00+00:00",
-      "touches": [
-        "WMT"
-      ],
-      "tags": [],
-      "new": true
-    },
-    {
-      "id": "rss:9b366703-9f68-3ae5-8a92-f8147f173da3",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "SNDK",
-      "title": "MU, SKHY, SNDK Stocks In Focus After TrendForce Lowers DRAM Pricing Forecast",
-      "summary": "Weak consumer electronics sales and a pullback in orders from Chinese cloud services providers are weighing on demand for certain memory products.",
-      "link": "https://stocktwits.com/news-articles/markets/equity/mu-skhy-sndk-stocks-in-focus-after-trend-force-lowers-dram-pricing-forecast/cNbH7VLR9l8?.tsrc=rss",
-      "time": "2026-11-25T08:27:10+00:00",
-      "touches": [
-        "SNDK"
-      ],
-      "tags": [
-        "earnings"
-      ],
-      "new": true
-    },
-    {
-      "id": "rss:5a3e211b-a3d1-3d41-8451-8b871ea60bc9",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "WMT",
-      "title": "Symbotic: 3 Key Takeaways for Long-Term Investors",
-      "summary": "Symbotic's modular systems extend automated picking into smaller stores and postal networks, widening the customer base beyond its largest retail partner.",
-      "link": "https://www.fool.com/earnings/takeaways/2026/11/24/symbotic-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
-      "time": "2026-11-25T05:12:30+00:00",
-      "touches": [
-        "WMT"
-      ],
-      "tags": [],
-      "new": true
-    },
-    {
-      "id": "rss:472d170f-1acb-389a-a5e0-0236af70e019",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "MSTR",
-      "title": "Dow, S&P 500, Nasdaq Futures Edge Lower Amid Tech Selloff Ahead Of Key Inflation Data: DELL, AMBA, SOXL, MSTR In Focus",
-      "summary": "U.S. stock markets closed another volatile session on Tuesday as technology stocks sold off amid declines in NVDA and ANT shares after a massive rally the day before.",
-      "link": "https://stocktwits.com/news-articles/markets/equity/dow-s-and-p-500-nasdaq-futures-edge-lower-amid-tech-selloff-ahead-of-key-inflation-data-dell-amba-soxl-mstr-in-focus/cNbHbLoR9lJ?.tsrc=rss",
-      "time": "2026-11-25T03:20:10+00:00",
-      "touches": [
-        "MSTR"
-      ],
-      "tags": [
-        "macro"
-      ],
-      "new": true
-    },
-    {
-      "id": "rss:0ca58aa3-174e-3981-ab85-ad239722dd2b",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "ticker": "KO",
-      "title": "Warren Buffett Finished Buying Coca-Cola in August 1994 and Never Bought Another Share. Under Greg Abel, Berkshire Now Collects $2.3 Million a Day From It",
-      "summary": "Berkshire Hathaway's 400 million Coca-Cola shares, bought for $1,299 million between 1988 and 1994 and never added to since, now pay $848 million a year, about $2.3 million a day. Computed from Coca-Cola's split-adjusted dividend history, the checks since 1994 add up to about $13 billion, ten times the cost, and the next $212 mil
+      "ne
 …gekürzt
 
 $ ptr.py new --json --state trader/state/pelosi.json --member pelosi  (Exit 1, 0 s)

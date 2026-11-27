@@ -1,24 +1,24 @@
 {
   "part": "morning",
   "ok": true,
-  "summary": "371 Treffer",
-  "ran_at": "2026-11-25T12:30:20Z",
-  "date_et": "2026-11-25",
+  "summary": "374 Treffer",
+  "ran_at": "2026-11-27T12:30:20Z",
+  "date_et": "2026-11-27",
   "steps": [
     {
       "name": "Aktienliste",
       "ok": true,
-      "detail": "vom Do 19.11.2026"
+      "detail": "neu geladen: 5.922 Aktien"
     },
     {
       "name": "Daily-Scan",
       "ok": true,
-      "detail": "5.927 von 5.927 Charts geladen, 1.466 gescannt, 371 Treffer"
+      "detail": "5.922 von 5.922 Charts geladen, 1.465 gescannt, 374 Treffer"
     },
     {
       "name": "News",
       "ok": true,
-      "detail": "127 neue Meldungen zu 10 Tickern"
+      "detail": "46 neue Meldungen zu 10 Tickern"
     },
     {
       "name": "Pelosi-Tracker",
@@ -27,112 +27,91 @@
     }
   ],
   "data": {
-    "universe_date": "2026-11-19",
+    "universe_date": "2026-11-27",
     "daily": {
-      "as_of": "2026-11-24 close",
-      "universe": 5927,
-      "fetched": 5927,
+      "as_of": "2026-11-25 close",
+      "universe": 5922,
+      "fetched": 5922,
       "liquid": 1467,
-      "scanned": 1466,
+      "scanned": 1465,
       "failed": 0,
-      "hits": 371,
+      "hits": 374,
       "per_setup": {
-        "breakout_20d": 115,
-        "bull_flag": 28,
-        "reclaim_ma20": 146,
-        "oversold": 70,
-        "oversold_bounce": 40
+        "breakout_20d": 158,
+        "bull_flag": 12,
+        "reclaim_ma20": 118,
+        "oversold": 45,
+        "oversold_bounce": 65
       }
     },
     "news": {
       "tickers": [
-        "INSM",
         "SNDK",
-        "LLY",
-        "WMT",
-        "UNH",
-        "MRNA",
-        "KO",
-        "JNJ",
+        "INSM",
+        "V",
+        "HD",
         "MSTR",
-        "ABBV"
+        "QCOM",
+        "DIS",
+        "PG",
+        "MCD",
+        "TJX"
       ],
       "items": [
         {
-          "id": "rss:d96603c1-fe7f-3bf3-8158-0728b464d469",
+          "id": "rss:0187a1b1-4a04-35a4-827e-ff4c25f95dac",
           "source": "Yahoo Finance",
           "kind": "headline",
-          "ticker": "SNDK",
-          "title": "Dow Jones Futures Fall, Techs Dive; Trump Says 'Not Too Late' For U.S. To Take Nvidia Stake",
-          "summary": "Futures fell after AI stocks tumbled but medicals, retailers and more rose. President Trump mused about an Nvidia stake. Fed inflation data looms.",
-          "link": "https://finance.yahoo.com/m/d96603c1-fe7f-3bf3-8158-0728b464d469/dow-jones-futures-fall%2C-techs.html?.tsrc=rss",
-          "time": "2026-11-25T12:18:09+00:00",
+          "ticker": "V",
+          "title": "What Is Visa (V) Doing With Stablecoin Payments In Europe And Asia?",
+          "summary": "Visa (NYSE: V) is expanding stablecoin-based payment options through new partnerships with Norwegian Block Exchange and Triple-A in 2026. The planned NBX Visa Flex Card will let customers settle payments in fiat or supported stablecoins across multiple European markets. Visa's collaboration with Triple-A aims to use stablecoins for cross-border Visa Direct payouts in Asia Pacific outside regular banking hours. These moves into stablecoin cards and cross-border payouts matter, but they are...",
+          "link": "https://finance.yahoo.com/markets/crypto/articles/visa-v-doing-stablecoin-payments-120939492.html?.tsrc=rss",
+          "time": "2026-11-27T12:09:39+00:00",
           "touches": [
-            "SNDK"
-          ],
-          "tags": [
-            "macro"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:0b23f42a-18a5-3987-8a80-1b3c720a94ab",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "SNDK",
-          "title": "Sandisk (SNDK) Shares Dropped, So What Is Driving Attention Now?",
-          "summary": "Sandisk (SNDK) just put an 8-for-1 forward stock split into effect alongside a large jump in authorized shares, a governance move that reshapes how the memory specialist can use its equity toolkit. That broader context around Sandisk is crucial right now. The share price has fallen sharply in the short term, with a 7-day share price return of down 21.78% and a 30-day share price return of down 49.63%. However, the year-to-date share price return remains up 126.57%, and the 1-year total...",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/sandisk-sndk-shares-dropped-driving-121239819.html?.tsrc=rss",
-          "time": "2026-11-25T12:12:39+00:00",
-          "touches": [
-            "SNDK"
-          ],
-          "tags": [
-            "capital"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:5fa6dfcd-d469-3ec4-88f2-f4d0ac329825",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "WMT",
-          "title": "Market Chatter: Walmart-Backed PhonePe Resumes IPO Process; Seeks Up to $15 Billion in Valuation",
-          "summary": "Walmart (WMT)-backed PhonePe has restarted preparations for an initial public offering, targeting a",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/market-chatter-walmart-backed-phonepe-121130205.html?.tsrc=rss",
-          "time": "2026-11-25T12:11:30+00:00",
-          "touches": [
-            "WMT"
-          ],
-          "tags": [
-            "capital"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:7f8dc71d-acdc-3301-a5b2-5089dbb4954c",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "ABBV",
-          "title": "What Could Still Lift AbbVie Stock?",
-          "summary": "Today's big story: Anthropic Below Its IPO Price: Do Giants Come Back.",
-          "link": "https://www.trefis.com/stock/abbv/articles/628894/what-could-still-lift-abbvie-stock/2026-11-25?.tsrc=rss",
-          "time": "2026-11-25T11:57:04+00:00",
-          "touches": [
-            "ABBV"
+            "V"
           ],
           "tags": [],
           "new": true
         },
         {
-          "id": "rss:ce86de0a-64b4-3136-9914-eda7b76946fc",
+          "id": "rss:539f5330-660b-39b3-a089-0c690cf5bcbe",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "MSTR",
+          "title": "Crypto Stocks Gain After Bitcoin Tops $61K In Tech Rebound, But Analysts Want A Move Above $62K",
+          "summary": "Hyperliquid led gains among the top 10 cryptocurrencies by market capitalization.",
+          "link": "https://stocktwits.com/news-articles/markets/cryptocurrency/crypto-stocks-gain-after-bitcoin-tops-61-k-in-tech-rebound-but-analysts-want-a-move-above-62-k/cNbCsYgR9Ns?.tsrc=rss",
+          "time": "2026-11-27T12:03:37+00:00",
+          "touches": [
+            "MSTR"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:0bd1e26f-3db3-3918-8c78-9a149bc5bc8d",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "PG",
+          "title": "The Dates That Matter Most For Procter & Gamble Stock",
+          "summary": "Today's big story: Anthropic Broke Its $83 IPO Price. What Did Facebook Do Next.",
+          "link": "https://www.trefis.com/stock/pg/articles/629330/the-dates-that-matter-most-for-procter-gamble-stock/2026-11-27?.tsrc=rss",
+          "time": "2026-11-27T12:03:26+00:00",
+          "touches": [
+            "PG"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:a7c229d2-e36e-4e94-83f9-cc86bb0a4577",
           "source": "Yahoo Finance",
           "kind": "headline",
           "ticker": "SNDK",
-          "title": "Tradr to Launch Six New Leveraged ETFs",
-          "summary": "Tradr ETFs, a provider of ETFs designed for sophisticated investors and professional traders, expects to launch six new leveraged ETFs on December 2, 2026, all to be listed on Cboe. The launches include three funds in Tradr's new Triple Threat series and three first-to-market single-stock ETFs.",
-          "link": "https://finance.yahoo.com/markets/options/articles/tradr-launch-six-leveraged-etfs-114600732.html?.tsrc=rss",
-          "time": "2026-11-25T11:46:00+00:00",
+          "title": "He was right about AI and still lost $35 billion",
+          "summary": "Leopold Aschenbrenner turned $225 million into a $45 billion fund in under two years by betting on everything AI would need. Then 4x leverage and a brutal July cost him $35 billion from the peak. Host Ejaaz Ahamadeen breaks down the essay, the bets, the margin calls and Citadel's block trade, and whether he can run it back.",
+          "link": "https://finance.yahoo.com/video/ai-still-lost-35-billion-120000023.html?.tsrc=rss",
+          "time": "2026-11-27T12:00:00+00:00",
           "touches": [
             "SNDK"
           ],
@@ -140,544 +119,139 @@
           "new": true
         },
         {
-          "id": "rss:bb1c63a6-cc49-38d7-bfd6-a0748755ac3e",
+          "id": "rss:fd7b8658-4aad-36d6-bb52-daa355a711fc",
           "source": "Yahoo Finance",
           "kind": "headline",
-          "ticker": "UNH",
-          "title": "How Much Could You Lose In UNH Stock?",
-          "summary": "UnitedHealth Group closed at $341.88 on Tuesday, November 24. That is 21.2% below its highest close of the past year, on July 21, once that close is adjusted for dividends paid since. If the whole market turns, how far could the stock fall, and how long could you wait to get back.",
-          "link": "https://www.trefis.com/stock/unh/articles/628754/how-much-could-you-lose-in-unh-stock/2026-11-25?.tsrc=rss",
-          "time": "2026-11-25T11:21:10+00:00",
+          "ticker": "QCOM",
+          "title": "Why Is Qualcomm Stock Rallying Today?",
+          "summary": "Shares of Qualcomm (NASDAQ:QCOM) rose 3. 3% to $174.",
+          "link": "https://investorshub.advfn.com/market-news/article/40788/why-is-qualcomm-stock-rallying-today?.tsrc=rss",
+          "time": "2026-11-27T11:50:39+00:00",
           "touches": [
-            "UNH"
+            "QCOM"
           ],
           "tags": [],
           "new": true
         },
         {
-          "id": "rss:bc59b291-c0d4-34f4-a3bd-2e26f668b1cf",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "MRNA",
-          "title": "Invesco S&P 500 High Beta (SPHB) Buys $13.4 Million More Bloom Energy on Monday",
-          "summary": "The fund bought $13.4 million of Bloom Energy and $9.5 million of Everpure, while selling $18.0 million of Moderna.",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/invesco-p-500-high-beta-110539855.html?.tsrc=rss",
-          "time": "2026-11-25T11:05:39+00:00",
-          "touches": [
-            "MRNA"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:327d0441-4b21-3fcb-92ab-d3fb9df5ba97",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "KO",
-          "title": "State Street Consumer Staples SPDR (XLP) Adds Walmart and Costco on Nov. 23",
-          "summary": "The fund bought $266.6 million of stock and sold nothing, lifting all 33 of its positions.",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/state-street-consumer-staples-spdr-110513471.html?.tsrc=rss",
-          "time": "2026-11-25T11:05:13+00:00",
-          "touches": [
-            "KO",
-            "WMT"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:183c404b-135c-30fe-940e-0db08fc7bc59",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "MRNA",
-          "title": "What Invesco S&P 500 Equal Weight ETF (RSP) Sold: Moderna Leads on Nov. 23",
-          "summary": "The fund sold $550.0 million of stock on Monday, Nov. 23, trimming all 503 of its positions and buying nothing.",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/invesco-p-500-equal-weight-110443601.html?.tsrc=rss",
-          "time": "2026-11-25T11:04:43+00:00",
-          "touches": [
-            "MRNA"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:7253fcf5-ceea-3479-8904-82e3add8b25b",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "SNDK",
-          "title": "What Direxion Daily Technology Bull 3X ETF (TECL) Sold: Apple Leads on Monday",
-          "summary": "The fund sold $99.4 million of Apple and $78.0 million of Nvidia, with net selling of $554.3 million against $577.0 million in gross trades.",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/direxion-daily-technology-bull-3x-110437163.html?.tsrc=rss",
-          "time": "2026-11-25T11:04:37+00:00",
-          "touches": [
-            "SNDK"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:aa7339f6-21b7-304e-9c80-b047990f1640",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "ABBV",
-          "title": "Forget the P/E Ratio. DSTL Picks 100 Large Stocks by the Cash They Generate and the Debt They Don’t Carry",
-          "summary": "DSTL uses free cash flow and low debt to pick large-cap U.S. stocks. See how its holdings differ from SPY’s and where it could fit in a retirement portfolio.",
-          "link": "https://247wallst.com/investing/etf/2026/11/25/forget-the-p-e-ratio-dstl-picks-100-large-stocks-by-the-cash-they-generate-and-the-debt-they-dont-carry/?.tsrc=rss",
-          "time": "2026-11-25T11:03:37+00:00",
-          "touches": [
-            "ABBV"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:64e846d5-ee47-3f9c-a149-5af5ad084275",
+          "id": "rss:ec49c082-a30a-3181-8477-05d91b18825e",
           "source": "Yahoo Finance",
           "kind": "headline",
           "ticker": "INSM",
-          "title": "International Biotechnology Trust: Sanofi deal highlights accelerating biotech M&A wave",
-          "summary": "International Biotechnology Trust Plc (LSE:IBT, OTC:IBITF) portfolio manager Ailsa Craig talked with Proactive's Stephen Gunnion about Sanofi’s US$41 billion acquisition of Insmed, the implications for shareholders and the growing wave of mergers and acquisitions across biotechnology. Craig explained how the trust’s actively managed strategy targets companies with characteristics attractive to major pharmaceutical groups. Insmed was its largest portfolio holding ahead of the deal, with Sanofi’s US$175-per-share offer representing a 46% premium to the pre-announcement share price and potentially boosting the trust’s net asset value (NAV). She also discussed the sustainability of the trust’s dividend, explaining how acquisition proceeds support its capital-funded dividend policy. Craig said the M&A wave was gathering pace, with ten portfolio companies involved in deals this year, against nine last year and a historical annual average of four to five. She identified the pharmaceutical industry's approaching patent cliff, with around US$400 billion in drug sales facing patent expirations, as a major catalyst. More than 70% of new drugs last year originated in biotechnology, underlining the sector’s growing importance to pharmaceutical innovation. Visit Proactive’s YouTube channel for more biotechnology investment news, company interviews and market insights. Don’t forget to like this video, subscribe to the channel and enable notifications for future content. https://www.proactiveinvestors.com/pages/editorialPolicy #InternationalBiotechnologyTrust #IBT #AilsaCraig #Insmed #Sanofi #Biotechnology #BiotechStocks #BiotechInvesting #MergersAndAcquisitions #Pharmaceuticals #PatentCliff #InvestmentTrust #DividendInvesting #HealthcareInvesting #StockMarket #Proactive",
-          "link": "https://finance.yahoo.com/video/international-biotechnology-trust-sanofi-deal-105025941.html?.tsrc=rss",
-          "time": "2026-11-25T10:50:25+00:00",
+          "title": "Sanofi Stock Surges 26% as $41 Billion Insmed Deal Boosts Confidence",
+          "summary": "CEO Belen Garijo began pursuing the acquisition immediately after taking office in May to strengthen Sanofi's drug pipeline.",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/sanofi-stock-surges-26-41-113324950.html?.tsrc=rss",
+          "time": "2026-11-27T11:33:24+00:00",
           "touches": [
             "INSM"
           ],
           "tags": [
             "deal",
-            "capital"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:c1d04c31-b843-30c4-831e-a30adc59f680",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "MSTR",
-          "title": "Michael Saylor Bought $100M In Bitcoin Before Strategy Did, Says The Man Who Convinced Him To Buy It — Now That Bet Is Around $589M",
-          "summary": "Weiss said Saylor predicted Apple's headset would fail while others in the room were eager to buy one.",
-          "link": "https://stocktwits.com/news-articles/markets/equity/michael-saylor-100m-bitcoin-purchase-589m-bet/cNbHOY3R9lH?.tsrc=rss",
-          "time": "2026-11-25T10:22:23+00:00",
-          "touches": [
-            "MSTR"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:0c702384-d4bb-3b7d-8861-88954d53eef6",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "WMT",
-          "title": "A Walton Beat the IRS in Tax Court in 2000. The Trust She Won With Is How Billionaires Now Pass Stock Gains to Their Kids With No Gift Tax",
-          "summary": "The IRS said Audrey Walton owed millions in gift tax on a pair of Walmart trusts, and a unanimous Tax Court disagreed. Her two-year structure still shapes how wealthy families move stock upside to heirs, but a few traps can drag it all back.",
-          "link": "https://247wallst.com/personal-finance/2026/11/25/a-walton-beat-the-irs-in-tax-court-in-2000-the-trust-she-won-with-is-how-billionaires-now-pass-stock-gains-to-their-kids-with-no-gift-tax/?.tsrc=rss",
-          "time": "2026-11-25T09:43:54+00:00",
-          "touches": [
-            "WMT"
-          ],
-          "tags": [
-            "legal"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:a1dd9cf8-644f-3d76-a8d3-dfafa9f95fc5",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "SNDK",
-          "title": "SanDisk Trades at 4.6x Earnings—And Still Got Cut in Half",
-          "summary": "Investing.com and Yahoo Finance LLC may earn commission or revenue on some items through the links below.",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/sandisk-trades-4-6x-earnings-092502421.html?.tsrc=rss",
-          "time": "2026-11-25T09:25:02+00:00",
-          "touches": [
-            "SNDK"
-          ],
-          "tags": [
-            "earnings"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:be09b887-4b83-3330-b17a-8c2bd1bd62f2",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "UNH",
-          "title": "Skip insurance whiplash: How this surgical leader climbed 16%",
-          "summary": "Investing.com and Yahoo Finance LLC may earn commission or revenue on some items through the links below.",
-          "link": "https://finance.yahoo.com/healthcare/articles/skip-insurance-whiplash-surgical-leader-092408778.html?.tsrc=rss",
-          "time": "2026-11-25T09:24:08+00:00",
-          "touches": [
-            "UNH"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:934d5d56-0dd7-39d7-8bf8-69186f20c6db",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "KO",
-          "title": "Up 41% at Just Over Half Costco’s P/E: Inside Coca-Cola’s Quiet Rally",
-          "summary": "Investing.com and Yahoo Finance LLC may earn commission or revenue on some items through the links below.",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/41-just-over-half-costco-092400539.html?.tsrc=rss",
-          "time": "2026-11-25T09:24:00+00:00",
-          "touches": [
-            "KO",
-            "WMT"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:f030229e-43b4-3f18-aa9b-53d326df14f7",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "MRNA",
-          "title": "Is Moderna (MRNA) Stock Reasonable After Its Huge Run And Vaccine Data?",
-          "summary": "Moderna has seen its share price move sharply over the past year, which naturally raises a simple question for you as an investor. Do the company’s underlying cash flows support where the stock trades today, or has sentiment moved faster than the money the business can realistically generate? Moderna’s share price return over the past 1 year is 818.7%, which puts a lot of weight on the question of whether the current valuation is grounded in the earnings power that its cash flows can...",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/moderna-mrna-stock-reasonable-huge-090844311.html?.tsrc=rss",
-          "time": "2026-11-25T09:08:44+00:00",
-          "touches": [
-            "MRNA"
-          ],
-          "tags": [
-            "earnings"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:f139e5c6-13fb-3ec3-85d1-35341362d2fc",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "WMT",
-          "title": "Walmart’s shopper base is shifting: High earners lead its gains as low-income shoppers turn to Amazon",
-          "summary": "Upper-income households led Walmart's market-share gains last quarter, while Numerator data shows lower-income shoppers shifting to Amazon and dollar stores.",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/walmart-shopper-shifting-high-earners-083200748.html?.tsrc=rss",
-          "time": "2026-11-25T08:32:00+00:00",
-          "touches": [
-            "WMT"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:9b366703-9f68-3ae5-8a92-f8147f173da3",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "SNDK",
-          "title": "MU, SKHY, SNDK Stocks In Focus After TrendForce Lowers DRAM Pricing Forecast",
-          "summary": "Weak consumer electronics sales and a pullback in orders from Chinese cloud services providers are weighing on demand for certain memory products.",
-          "link": "https://stocktwits.com/news-articles/markets/equity/mu-skhy-sndk-stocks-in-focus-after-trend-force-lowers-dram-pricing-forecast/cNbH7VLR9l8?.tsrc=rss",
-          "time": "2026-11-25T08:27:10+00:00",
-          "touches": [
-            "SNDK"
-          ],
-          "tags": [
-            "earnings"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:5a3e211b-a3d1-3d41-8451-8b871ea60bc9",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "WMT",
-          "title": "Symbotic: 3 Key Takeaways for Long-Term Investors",
-          "summary": "Symbotic's modular systems extend automated picking into smaller stores and postal networks, widening the customer base beyond its largest retail partner.",
-          "link": "https://www.fool.com/earnings/takeaways/2026/11/24/symbotic-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
-          "time": "2026-11-25T05:12:30+00:00",
-          "touches": [
-            "WMT"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:472d170f-1acb-389a-a5e0-0236af70e019",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "MSTR",
-          "title": "Dow, S&P 500, Nasdaq Futures Edge Lower Amid Tech Selloff Ahead Of Key Inflation Data: DELL, AMBA, SOXL, MSTR In Focus",
-          "summary": "U.S. stock markets closed another volatile session on Tuesday as technology stocks sold off amid declines in NVDA and ANT shares after a massive rally the day before.",
-          "link": "https://stocktwits.com/news-articles/markets/equity/dow-s-and-p-500-nasdaq-futures-edge-lower-amid-tech-selloff-ahead-of-key-inflation-data-dell-amba-soxl-mstr-in-focus/cNbHbLoR9lJ?.tsrc=rss",
-          "time": "2026-11-25T03:20:10+00:00",
-          "touches": [
-            "MSTR"
-          ],
-          "tags": [
-            "macro"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:0ca58aa3-174e-3981-ab85-ad239722dd2b",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "KO",
-          "title": "Warren Buffett Finished Buying Coca-Cola in August 1994 and Never Bought Another Share. Under Greg Abel, Berkshire Now Collects $2.3 Million a Day From It",
-          "summary": "Berkshire Hathaway's 400 million Coca-Cola shares, bought for $1,299 million between 1988 and 1994 and never added to since, now pay $848 million a year, about $2.3 million a day. Computed from Coca-Cola's split-adjusted dividend history, the checks since 1994 add up to about $13 billion, ten times the cost, and the next $212 million payment is due December 15.",
-          "link": "https://247wallst.com/investing/2026/11/24/warren-buffett-finished-buying-coca-cola-in-august-1994-and-never-bought-another-share-under-greg-abel-berkshire-now-collects-2-3-million-a-day-from-it/?.tsrc=rss",
-          "time": "2026-11-25T02:47:05+00:00",
-          "touches": [
-            "KO"
-          ],
-          "tags": [
-            "capital"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:b4537c1f-4b54-317e-a66c-6be81cfd49f1",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "WMT",
-          "title": "e.l.f. Beauty vs. Hershey: Which Consumer Goods Stock Is a Better Buy for 2027?",
-          "summary": "Fast-growing e.l.f. Beauty and century-old Hershey take very different paths to consumer staples gains, and only one trades at a lower forward multiple.",
-          "link": "https://www.fool.com/coverage/better-buy/2026/11/24/elf-beauty-vs-hershey-which-consumer-goods-stock-is-a-better-buy-for-2027/?.tsrc=rss",
-          "time": "2026-11-25T02:22:50+00:00",
-          "touches": [
-            "WMT"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:4d97d313-268e-3509-af82-e26273296559",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "MSTR",
-          "title": "Strategy (MSTR) Stock Trades At A Discount To Book Value",
-          "summary": "Strategy Inc has seen its ordinary shares fall sharply over the past year, while the business has been active in capital moves tied to its large Bitcoin holdings and preferred stock. With the stock now well below where it traded 12 months ago, investors are asking whether the current price still lines up with Strategy’s book value compared with the industry average. The share price has fallen 55.0% over the past year, which puts fresh focus on whether that decline now better reflects, or...",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/strategy-mstr-stock-trades-discount-020908385.html?.tsrc=rss",
-          "time": "2026-11-25T02:09:08+00:00",
-          "touches": [
-            "MSTR"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:6fb6fc19-8748-331e-8806-c69dd6e2cb53",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "INSM",
-          "title": "Insmed Inc. (INSM) Stages a Monster 14% Rally — Here’s What Sparked Buying",
-          "summary": "Insmed Inc. (NASDAQ:INSM) is one of the 10 Stocks With Easy Double-Digit Gains. Insmed rallied by 14.13 percent on Tuesday to finish at $170.15 apiece following confirmation of reports that it will be acquired by France-based Sanofi for $41 billion. In a statement, Insmed Inc. (NASDAQ:INSM) said that it has inked a definitive agreement with […]",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/insmed-inc-insm-stages-monster-020154811.html?.tsrc=rss",
-          "time": "2026-11-25T02:01:54+00:00",
-          "touches": [
-            "INSM"
-          ],
-          "tags": [
-            "deal"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:e5b99696-1ae8-3238-93fe-91926628e09c",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "INSM",
-          "title": "Sanofi (SNY) Just Hit New Heights. Investors Love This Billion-Dollar Move",
-          "summary": "Sanofi (NASDAQ:SNY) is one of the 10 Stocks With Easy Double-Digit Gains. French pharmaceutical giant Sanofi climbed to a new 52-week high on Tuesday, as investors gobbled up its shares after confirming its acquisition of US-based Insmed Inc. for $41 billion. The stock climbed to a record high of $51.95 in intraday trading before paring […]",
-          "link": "https://finance.yahoo.com/healthcare/articles/sanofi-sny-just-hit-heights-013741972.html?.tsrc=rss",
-          "time": "2026-11-25T01:37:41+00:00",
-          "touches": [
-            "INSM"
-          ],
-          "tags": [
-            "deal"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:dc63d2d7-de00-385c-9275-d1def80ac0af",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "INSM",
-          "title": "Review & Preview: Tech’s Rough Day",
-          "summary": "The jubilation over Jensen Huang’s return to Nvidia hit a wall on Tuesday.",
-          "link": "https://finance.yahoo.com/m/dc63d2d7-de00-385c-9275-d1def80ac0af/review-%26-preview%3A-tech%E2%80%99s.html?.tsrc=rss",
-          "time": "2026-11-25T00:55:00+00:00",
-          "touches": [
-            "INSM"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:7a4612f3-8dce-3266-81f9-444c906d20ef",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "WMT",
-          "title": "Kraft Heinz vs. On: Which Consumer Goods Stock Is a Better Buy for 2027?",
-          "summary": "Kraft Heinz trades at a lower forward multiple, while On's revenue is growing at a far faster clip, so the right pick depends on how much risk you're willing to carry.",
-          "link": "https://www.fool.com/coverage/better-buy/2026/11/24/kraft-heinz-vs-on-which-consumer-goods-stock-is-a-better-buy-for-2027/?.tsrc=rss",
-          "time": "2026-11-24T22:43:07+00:00",
-          "touches": [
-            "WMT"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:e8e0511b-38fd-3e04-85ba-ab74d32d848a",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "KO",
-          "title": "Prediction: Here's What $10,000 in Coca-Cola Could Pay You in Dividends by 2036",
-          "summary": "Coca-Cola's dividend could grow nearly 50% by 2036.",
-          "link": "https://www.fool.com/investing/2026/11/24/prediction-heres-what-10000-in-coca-cola-could-pay-you-in-dividends-by-2036/?.tsrc=rss",
-          "time": "2026-11-24T22:33:02+00:00",
-          "touches": [
-            "KO"
-          ],
-          "tags": [
-            "capital"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:712353cd-82ec-3957-ad84-c2419f3a86ea",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "WMT",
-          "title": "Retailers Sanguine for Black Friday",
-          "summary": "Forecasts for Black Friday and holiday sales gains hold up in the wake of healthy third-quarter financial reports by major retailers.",
-          "link": "https://wwd.com/business-news/retail/retail-outlook-mood-black-friday-1239462186/?.tsrc=rss",
-          "time": "2026-11-24T22:24:26+00:00",
-          "touches": [
-            "WMT"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:49464e08-c015-304d-a253-76b94d0cc50b",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "MSTR",
-          "title": "How Much Bitcoin Could Elon Musk Control if Tesla and SpaceX Merge?",
-          "summary": "Tesla and SpaceX have both formed special committees to weigh a merger, and both sit on Bitcoin bought at very different times. Combine the stashes and a single board could hold a decision that rattles a market already under pressure.",
-          "link": "https://247wallst.com/investing/cryptocurrency/2026/11/24/how-much-bitcoin-could-elon-musk-control-if-tesla-and-spacex-merge/?.tsrc=rss",
-          "time": "2026-11-24T22:12:39+00:00",
-          "touches": [
-            "MSTR"
-          ],
-          "tags": [
-            "deal"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:aa33adec-19b9-3cd7-8934-eebdd749e96a",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "MSTR",
-          "title": "Michael Saylor gets the regulator's nod he wanted, just not at full price",
-          "summary": "Michael Saylor has spent years calling Bitcoin “digital capital.” On Tuesday, he got to point at a U.S. regulator.",
-          "link": "https://www.thestreet.com/crypto/policy/michael-saylor-gets-the-regulators-nod-he-wanted-just-not-at-full-price?.tsrc=rss",
-          "time": "2026-11-24T22:10:18+00:00",
-          "touches": [
-            "MSTR"
-          ],
-          "tags": [],
-          "new": true
-        },
-        {
-          "id": "rss:df2a5e16-2baa-32fa-ae3b-7eda409ae284",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "INSM",
-          "title": "Morning Movers: Dick’s Sporting and Dollar Tree gain following quarterly reports",
-          "summary": "Stock futures are lower as investors take profits following Monday’s powerful technology-led rebound. The retreat follows a historic rally in which the S&P 500 gained 4.7%, the Nasdaq jumped 6.5% and the Dow advanced 3%, ending a seven-session losing streak for the S&P 500. Nvidia is back under pressure after surging 31% Monday, adding nearly $1T to its market capitalization. Shares are down approximately 4% pre-market, while Micron, AMD and Marvell are also declining. The sharp reversal highlig",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/morning-movers-dick-sporting-dollar-220046732.html?.tsrc=rss",
-          "time": "2026-11-24T22:00:46+00:00",
-          "touches": [
-            "INSM"
-          ],
-          "tags": [
-            "macro"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:4aa4ff31-269f-346e-80c4-e681510af7ae",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "WMT",
-          "title": "Stock Market Today: Nasdaq Dives As Jensen Huang Tells Nvidia Staff This; Walmart Tests Entry",
-          "summary": "Stock Market Today: The Dow Jones index rises but the Nasdaq falls Tuesday. Anthropic and Nvidia dive. New Trump tariffs are expected.",
-          "link": "https://finance.yahoo.com/m/4aa4ff31-269f-346e-80c4-e681510af7ae/stock-market-today%3A-nasdaq.html?.tsrc=rss",
-          "time": "2026-11-24T21:51:27+00:00",
-          "touches": [
-            "WMT"
-          ],
-          "tags": [
-            "macro"
-          ],
-          "new": true
-        },
-        {
-          "id": "rss:419028c5-6c57-40f0-b568-a48be75f0e15",
-          "source": "Yahoo Finance",
-          "kind": "headline",
-          "ticker": "KO",
-          "title": "Anthropic falls below IPO price as Nvidia gives back gains",
-          "summary": "In this edition of Sozzi Unleashed: At The Close, Brian Sozzi sorts through \"reality trading\" as Nvidia slides nearly 7% after Monday's 31% surge and Anthropic falls below its $83 IPO price less than a week after the biggest offering in history. GCG Advisory Partners' Bill Gunderson makes the case that Nvidia is the cheapest growth stock in the market at nine times forward earnings and names Nvidia and Eli Lilly as his top picks for 2027. Brian breaks down Dell's blowout quarter and $132 billion AI backlog, and HPE CEO Antonio Neri joins to explain the company's raised outlook, why it refuses to finance neoclouds, and whether server margins have peaked. Brian closes by arguing the AI trade is reaching consumers' wallets, pointing to Best Buy's strongest comparable sales growth in five years.",
-          "link": "https://finance.yahoo.com/video/anthropic-falls-below-ipo-price-as-nvidia-gives-back-gains-214558309.html?.tsrc=rss",
-          "time": "2026-11-24T21:45:58+00:00",
-          "touches": [
-            "KO",
-            "LLY"
-          ],
-          "tags": [
-            "earnings",
-            "capital",
             "people"
           ],
           "new": true
         },
         {
-          "id": "rss:72ac905f-e98b-384a-a5b3-8c7e79b4ec63",
+          "id": "rss:54a323bd-b258-3e97-bd39-8c1c5c76ca4d",
           "source": "Yahoo Finance",
           "kind": "headline",
-          "ticker": "MSTR",
-          "title": "Bowhead Specialty Holdings, Inc. (BOW) Received a $34 Cash Offer: What Investors Need to Know",
-          "summary": "Riverwater Partners, an investment management company, released its Q3 2026 investor letter, titled “Micro Opportunities Strategy”. A copy of the letter can be downloaded here. The Strategy outperformed the broader micro-cap market in the third quarter of 2026, declining less than its benchmark amid a sharp reversal in investor enthusiasm for artificial intelligence and data-center-related […]",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/bowhead-specialty-holdings-inc-bow-212706403.html?.tsrc=rss",
-          "time": "2026-11-24T21:27:06+00:00",
+          "ticker": "SNDK",
+          "title": "Micron vs. SanDisk: Which Is the Better AI Stock to Buy for 2027?",
+          "summary": "SanDisk Is Growing Faster Than Micron. Here's Which AI Stock Looks Cheaper for 2027",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/micron-vs-sandisk-better-ai-111815853.html?.tsrc=rss",
+          "time": "2026-11-27T11:18:15+00:00",
           "touches": [
-            "MSTR"
+            "SNDK"
           ],
           "tags": [],
           "new": true
         },
         {
-          "id": "rss:d110ac3d-b2ba-3c8d-8f15-274f2cd95b50",
+          "id": "rss:0079fb54-3c3e-3d51-9741-bc832fdae594",
           "source": "Yahoo Finance",
           "kind": "headline",
-          "ticker": "LLY",
-          "title": "Will 'Anti-Pharma' Democrats Chop Away At Biotech Stocks' Big Wins?",
-          "summary": "Biotech stocks have traded somewhat uneasily in the wake of the blue tsunami that swept Washington D.C. earlier this month.",
-          "link": "https://finance.yahoo.com/m/d110ac3d-b2ba-3c8d-8f15-274f2cd95b50/will-%27anti-pharma%27-democrats.html?.tsrc=rss",
-          "time": "2026-11-24T21:16:44+00:00",
+          "ticker": "MCD",
+          "title": "Can BROS' 100-Basis-Point SG&A Leverage Support 2026 Earnings Growth?",
+          "summary": "BROS targets 100 basis points of SG&A leverage in 2026 as strong sales growth supports profitability. Yet rising shop-level costs are a concern.",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/bros-100-basis-point-sg-110900892.html?.tsrc=rss",
+          "time": "2026-11-27T11:09:00+00:00",
           "touches": [
-            "LLY",
-            "MRNA"
+            "MCD"
+          ],
+          "tags": [
+            "earnings"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:eac9c281-033c-3c73-8b9a-a27703a8cdc9",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "SNDK",
+          "title": "The Anatomy of an AI Rally: Anthropic Stock Quickly Finds Its Place",
+          "summary": "By now, we’re all familiar with how an artificial-intelligence rally works. Less so, when it comes to Anthropic's role in it all.",
+          "link": "https://finance.yahoo.com/m/eac9c281-033c-3c73-8b9a-a27703a8cdc9/the-anatomy-of-an-ai-rally%3A.html?.tsrc=rss",
+          "time": "2026-11-27T11:01:00+00:00",
+          "touches": [
+            "SNDK"
           ],
           "tags": [],
           "new": true
         },
         {
-          "id": "rss:512db97e-0e42-388a-871d-acdb3ea67146",
+          "id": "rss:feb61a0d-9a19-381e-9725-13c81ad77db9",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "SNDK",
+          "title": "Micron's Higher FY27 CapEx: Can Supply Security Boost Its Growth Further?",
+          "summary": "MU ramps up fiscal 2027 CapEx to expand memory production amid booming AI demand, but can tighter supply conditions and new fabs fuel long-term growth?",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/microns-higher-fy27-capex-supply-105500633.html?.tsrc=rss",
+          "time": "2026-11-27T10:55:00+00:00",
+          "touches": [
+            "SNDK"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:977de44c-fcf5-3369-bcdd-0c3ddc7cfec9",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "SNDK",
+          "title": "Sandisk, Bloom, Marvell, AMD, Nvidia, HP, and More Stocks That Explain Today’s Market",
+          "summary": "AI stocks are flying on Black Friday, with memory-card supplier Sandisk and data-center power provider Bloom Energy leading the way.",
+          "link": "https://finance.yahoo.com/m/977de44c-fcf5-3369-bcdd-0c3ddc7cfec9/sandisk%2C-bloom%2C-marvell%2C-amd%2C.html?.tsrc=rss",
+          "time": "2026-11-27T10:22:00+00:00",
+          "touches": [
+            "SNDK"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:47c549e5-5090-3057-b796-25efd68a41b1",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "V",
+          "title": "Visa and NBX plan stablecoin-linked payment card",
+          "summary": "The NBX Visa Flex Card is expected to launch next year.",
+          "link": "https://www.electronicpaymentsinternational.com/news/visa-and-nbx-plan-stablecoin-linked-payment-card/?.tsrc=rss",
+          "time": "2026-11-27T06:45:57+00:00",
+          "touches": [
+            "V"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:ea62a630-f0a3-3cf3-abe7-45516dc17296",
           "source": "Yahoo Finance",
           "kind": "headline",
           "ticker": "INSM",
-          "title": "Insmed Snags A Whopping Price Tag As Sanofi Confirms Rumored Buyout",
-          "summary": "Sanofi said Tuesday it would spend $41 billion to acquire Insmed in the biggest biotech buyout since Pfizer bought Seagen for $43 billion.",
-          "link": "https://finance.yahoo.com/m/512db97e-0e42-388a-871d-acdb3ea67146/insmed-snags-a-whopping-price.html?.tsrc=rss",
-          "time": "2026-11-24T21:14:16+00:00",
+          "title": "The Zacks Analyst Blog Highlights Vera Therapeutics, BridgeBio Pharma, Revolution Medicines, Agios Pharmaceuticals and Stoke Therapeutics",
+          "summary": "Sanofi's $41B Insmed deal reignites biotech M&A hopes, putting five stocks with differentiated medicines and promising pipelines in the takeover spotlight.",
+          "link": "https://finance.yahoo.com/healthcare/articles/zacks-analyst-blog-highlights-vera-064400990.html?.tsrc=rss",
+          "time": "2026-11-27T06:44:00+00:00",
           "touches": [
             "INSM"
           ],
@@ -687,16 +261,435 @@
           "new": true
         },
         {
-          "id": "rss:6713e089-d2d6-3c64-830f-84610b56fd99",
+          "id": "rss:3a18f659-f826-3a0f-96fa-33a87eb04fe5",
           "source": "Yahoo Finance",
           "kind": "headline",
-          "ticker": "UNH",
-          "title": "How Much Could You Lose In UnitedHealth Stock?",
-          "summary": "Today's big story: Nvidia Added $954 Billion In A Day. Is Jensen Huang Too Big To Fire.",
-          "link": "https://www.trefis.com/stock/unh/articles/628281/how-much-could-you-lose-in-unitedhealth-stock/2026-11-24?.tsrc=rss",
-          "time": "2026-11-24T21:11:59+00:00",
+          "ticker": "QCOM",
+          "title": "SoftBank’s “Worst Sell-Off” Since ’08 Is Bad News for Arm. Here’s the Number That Matters",
+          "summary": "Key TakeawaysSoftBank’s credit-default swap topped 500 basis points, and CNBC’s Carl Quintanilla called its slide the worst since 2008. A SoftBank affiliate supplied $704.",
+          "link": "https://www.tikr.com/blog/softbanks-worst-sell-off-since-08-is-bad-news-for-arm-heres-the-number-that-matters?ref=yahoofinance&tlnk=yf-261127-3ggwv4gr&.tsrc=rss",
+          "time": "2026-11-27T03:08:55+00:00",
           "touches": [
-            "UNH"
+            "QCOM"
+          ],
+          "tags": [
+            "risk"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:ab04d21b-ec0a-311c-9c89-f5737b571a2f",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "HD",
+          "title": "Home Depot shoppers can now dodge a classic cart disaster",
+          "summary": "The retailer’s AI tool now performs an action that shoppers could be thankful for.",
+          "link": "https://www.thestreet.com/investing/stocks/home-depot-shoppers-can-now-dodge-a-classic-cart-disaster?.tsrc=rss",
+          "time": "2026-11-27T00:00:00+00:00",
+          "touches": [
+            "HD"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:b8015776-ad4e-387c-a28e-6917260a75d0",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "PG",
+          "title": "2 Dividend Stocks to Buy in November and 1 to Leave on the Shelf",
+          "summary": "In a volatile market, you want stocks that have reliable businesses so you can sleep well at night.",
+          "link": "https://www.fool.com/investing/2026/11/26/2-dividend-stocks-to-buy-in-november-and-1-to-leave-on-the-shelf/?.tsrc=rss",
+          "time": "2026-11-26T23:45:02+00:00",
+          "touches": [
+            "PG"
+          ],
+          "tags": [
+            "capital"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:b0c318b9-07a1-38d5-9d99-fb8518e978a5",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "V",
+          "title": "The Nasdaq Composite Is in a Correction, but These 3 Dividend Stocks Are Near 52-Week Highs. Here's Why They're Still Worth Buying Right Now.",
+          "summary": "Johnson & Johnson, Visa, and Coca-Cola have held up during the market's recent turbulence.",
+          "link": "https://www.fool.com/investing/2026/11/26/the-nasdaq-composite-is-in-a-correction-but-these-3-dividend-stocks-are-near-52-week-highs-here-s-why-they-re-still-worth-buying-right-now/?.tsrc=rss",
+          "time": "2026-11-26T21:33:02+00:00",
+          "touches": [
+            "V"
+          ],
+          "tags": [
+            "capital"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:3993bf5c-ff68-3ba0-b202-3758a5023af0",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "DIS",
+          "title": "Take-Two’s (TTWO) GTA 6 Could Be a Cash Cow for the Next Decade",
+          "summary": "Take-Two (TTWO) could have a cash cow for the next decade with Grand Theft Auto 6 (GTA 6). The global video game publisher reported $3.79 billion in first-day retail sales for the title. Sam Houser, president of Take-Two’s game developer Rockstar Games, called the release “a new chapter of Rockstar Games.” I think investors may still underestimate what that chapter could earn the company. The opening sales are extraordinary. An eventual PC release and online ecosystem could keep generating reven",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/two-ttwo-gta-6-could-213300568.html?.tsrc=rss",
+          "time": "2026-11-26T21:33:00+00:00",
+          "touches": [
+            "DIS"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:d7a7148e-fbdf-3088-8a0c-a36a3ce23bad",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "DIS",
+          "title": "Disney Stock Just Closed at Its Highest Level Since April 2022",
+          "summary": "Disney's rally has real profit growth behind it, but the stock now sits near the top of its own valuation range while analysts see little room left. One upcoming number could decide whether the rerating continues or stalls.",
+          "link": "https://247wallst.com/investing/2026/11/26/disney-stock-just-closed-at-its-highest-level-since-april-2022/?.tsrc=rss",
+          "time": "2026-11-26T21:22:24+00:00",
+          "touches": [
+            "DIS"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:03862f03-99cb-354b-8077-c7cf30dfcbc9",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "SNDK",
+          "title": "Sandisk’s 8-for-1 Split Is Done. Here’s What Investors Should Do Next.",
+          "summary": "Sandisk's stock split is finished, so the only question left is whether its AI-fueled flash memory business can hold up as prices cool.",
+          "link": "https://www.fool.com/investing/2026/11/26/sandisks-8-for-1-split-is-done-heres-what-investors-should-do-next/?.tsrc=rss",
+          "time": "2026-11-26T21:20:02+00:00",
+          "touches": [
+            "SNDK"
+          ],
+          "tags": [
+            "capital"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:57108e63-9769-3768-910a-29248795c343",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "TJX",
+          "title": "3 Dividend Stocks That Could Benefit From the Black Friday Shopping Rush",
+          "summary": "Three retail giants cover their payouts from operating profit and keep raising them, yet each hides a catch that could dent your returns. One carries a sky-high valuation, one leans on refunds that will not repeat, and one faces a margin squeeze.",
+          "link": "https://247wallst.com/investing/2026/11/26/3-dividend-stocks-that-could-benefit-from-the-black-friday-shopping-rush/?.tsrc=rss",
+          "time": "2026-11-26T21:07:19+00:00",
+          "touches": [
+            "TJX"
+          ],
+          "tags": [
+            "capital"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:7636a108-b1e6-370b-881d-818912b1d63b",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "V",
+          "title": "Billionaire Chris Hohn’s TCI Has 30% of Its $49.6 Billion Stock Portfolio in GE Aerospace",
+          "summary": "One of the market's most concentrated funds just parked nearly a third of its money in a single industrial name, and the stock has barely moved this year. What does that bet reveal, and what should an ordinary retirement saver copy?",
+          "link": "https://247wallst.com/investing/2026/11/26/billionaire-chris-hohns-tci-has-30-of-its-49-6-billion-stock-portfolio-in-ge-aerospace/?.tsrc=rss",
+          "time": "2026-11-26T20:46:58+00:00",
+          "touches": [
+            "V"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:9d956b47-ee33-309a-bbe5-98624ffbb207",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "PG",
+          "title": "Here’s How Many Shares of Procter & Gamble You’d Need to Own to Collect $1,000 in Annual Dividends",
+          "summary": "Shoppers are watching every dollar they spend, yet Procter & Gamble keeps growing its revenues and has raised its dividend for 70 straight years.",
+          "link": "https://www.fool.com/investing/2026/11/26/here-s-how-many-shares-of-procter-and-gamble-you-d-need-to-own-to-collect-usd1-000-in-annual-dividends/?.tsrc=rss",
+          "time": "2026-11-26T20:29:02+00:00",
+          "touches": [
+            "PG"
+          ],
+          "tags": [
+            "capital"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:cfa4ecab-fe04-3460-911f-af58f660acfc",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "DIS",
+          "title": "Walt Disney (DIS) Lifts Dividend On Strong Earnings, Is The Stock Still Cheap?",
+          "summary": "Why Disney’s latest earnings and dividend move matter Walt Disney (DIS) just paired a strong quarterly report with a higher dividend, and together those two signals reshaped how investors are thinking about the stock’s income and cash generation profile. That mix of stronger results and a bigger payout has lined up with clear momentum in Walt Disney’s shares, with a 30-day share price return of 13.77% and a 90-day move of 17.58% helping lift the stock to about $125.60. A 1-year total...",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/walt-disney-dis-lifts-dividend-200909244.html?.tsrc=rss",
+          "time": "2026-11-26T20:09:09+00:00",
+          "touches": [
+            "DIS"
+          ],
+          "tags": [
+            "earnings",
+            "capital"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:422b6494-1100-3673-a77c-7a7c1bdf26a1",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "SNDK",
+          "title": "Sandisk Trades at Under 3x Earnings After an 8-for-1 Split and a 70% Crash. Why SNDK Stock Isn’t Doomed Despite NAND Price Warnings.",
+          "summary": "Sandisk's stock has crashed about 70% from its high as NAND price warnings pile up, but its long-term contracts and rock-bottom valuation suggest it isn't doomed.",
+          "link": "https://www.barchart.com/story/news/9022920/sandisk-trades-at-under-3x-earnings-after-an-8-for-1-split-and-a-70-crash-why-sndk-stock-isnt-doomed-despite-nand-price-warnings?.tsrc=rss",
+          "time": "2026-11-26T19:30:03+00:00",
+          "touches": [
+            "SNDK"
+          ],
+          "tags": [
+            "earnings"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:016038c0-fb71-37a0-8b47-37b5410dd739",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "PG",
+          "title": "The Buffett Indicator Is Flashing Red. These 2 Dividend Stocks Could Be Safe Havens.",
+          "summary": "The Buffett indicator is well above its long-term average, so you may want to consider buying stocks of companies that sell things people don't want to live without.",
+          "link": "https://www.fool.com/investing/2026/11/26/the-buffett-indicator-is-flashing-red-these-2-dividend-stocks-could-be-safe-havens/?.tsrc=rss",
+          "time": "2026-11-26T19:25:02+00:00",
+          "touches": [
+            "PG"
+          ],
+          "tags": [
+            "capital"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:c44e38c1-4323-31ac-b017-701ac00317ff",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "MCD",
+          "title": "Costco sells something consumers want even if they don't need it",
+          "summary": "Seven in 10 Americans plan to spend less this holiday season, but one part of the warehouse just more than doubled its sales.",
+          "link": "https://www.thestreet.com/retail/costco-borrows-a-starbucks-trick-as-shoppers-cut-back?.tsrc=rss",
+          "time": "2026-11-26T18:47:00+00:00",
+          "touches": [
+            "MCD"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:5a516ebe-ce0b-3c06-bf1f-d6fd03d91ce6",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "V",
+          "title": "Mastercard Stocks Rise 1.94% as Payment Networks Gain in AI Selloff Rotation",
+          "summary": "Mastercard, Visa and American Express all rose while the Nasdaq fell, leaving Mastercard within 2% of its early November record.",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/mastercard-stocks-rise-1-94-183721566.html?.tsrc=rss",
+          "time": "2026-11-26T18:37:21+00:00",
+          "touches": [
+            "V"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:8a0b630b-4f4a-3d4b-9507-a507b0eec155",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "V",
+          "title": "Stanley Druckenmiller and 10 Other Big Funds Bought Newmont Last Quarter. Ken Fisher and 5 Others Sold. Who’s Right?",
+          "summary": "Key TakeawaysOf the 460 big funds that have filed 13Fs for the third quarter, 11 bought Newmont and 6 sold, with Stanley Druckenmiller’s Duquesne Family Office opening new stakes in Newmont, Agnico Eagle and Barrick. Most of the sellers trimmed.",
+          "link": "https://www.tikr.com/blog/stanley-druckenmiller-and-10-other-big-funds-bought-newmont-last-quarter-ken-fisher-and-5-others-sold-whos-right?ref=yahoofinance&tlnk=yf-261126-5xvcrmf7&.tsrc=rss",
+          "time": "2026-11-26T18:15:05+00:00",
+          "touches": [
+            "V"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:217143af-7fe2-32d8-b8b5-686ee28b2c22",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "MSTR",
+          "title": "Why Strategy Can Rebound to $175 in 2027 Even If Bitcoin Stays Below Peak",
+          "summary": "Strategy Inc. holds roughly 4% of all Bitcoin that will ever exist, yet its stock has fallen harder than the coin itself. Three levers, a hidden premium, and heavy dilution decide whether a rebound can happen without a new Bitcoin record.",
+          "link": "https://247wallst.com/investing/2026/11/26/why-strategy-can-rebound-to-175-in-2027-even-if-bitcoin-stays-below-peak/?.tsrc=rss",
+          "time": "2026-11-26T17:45:54+00:00",
+          "touches": [
+            "MSTR"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:7122e4c0-0072-37cd-8982-cb76cdad8bbd",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "DIS",
+          "title": "NFL's Thanksgiving Boom Raises Stakes for Disney, Netflix",
+          "summary": "America's favorite sport is becoming an increasingly expensive business.",
+          "link": "https://finance.yahoo.com/media-advertising/articles/nfls-thanksgiving-boom-raises-stakes-174228885.html?.tsrc=rss",
+          "time": "2026-11-26T17:42:28+00:00",
+          "touches": [
+            "DIS"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:47500f69-15c7-3ee2-af54-c23a5e622c02",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "QCOM",
+          "title": "What Is Qualcomm (QCOM) Worth Watching In Automotive AI Right Now?",
+          "summary": "Qualcomm (NasdaqGS:QCOM) is deepening its role in autonomous driving as carmakers push new AI-powered driver-assistance features into upcoming models. Automakers are signaling a greater willingness to pay premiums for higher performance automotive processors that can run more advanced AI workloads in vehicles. Rival chip and software suppliers are competing for the same driver-assistance design wins, sharpening the contest for future automotive AI contracts. The focus on Qualcomm's evolving...",
+          "link": "https://finance.yahoo.com/technology/ai/articles/qualcomm-qcom-worth-watching-automotive-171007378.html?.tsrc=rss",
+          "time": "2026-11-26T17:10:07+00:00",
+          "touches": [
+            "QCOM"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:9250429f-83cf-3432-b63e-26497f104784",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "SNDK",
+          "title": "This AI Investing Prodigy Lost 65% in a Single Quarter and Is Still Up 88.5% in 2026. Here’s the Lesson for Investors.",
+          "summary": "Leopold Aschenbrenner called the AI boom right, and the companies he bet on kept posting record results. His fund still nearly collapsed. What went wrong, and how can ordinary investors avoid the same trap?",
+          "link": "https://247wallst.com/investing/2026/11/26/this-ai-investing-prodigy-lost-65-in-a-single-quarter-and-is-still-up-88-5-in-2026-heres-the-lesson-for-investors/?.tsrc=rss",
+          "time": "2026-11-26T16:55:13+00:00",
+          "touches": [
+            "SNDK"
+          ],
+          "tags": [
+            "earnings"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:29cb05f6-6acd-3bcc-8142-7bc8199df699",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "DIS",
+          "title": "Netflix Stock Is Down 36% in 2026. Can Its Disney Partnership Make It a Buy Again?",
+          "summary": "Netflix just landed Disney's library, record margins, and a forward P/E of 15, yet the stock keeps sliding toward its 52-week low. One overlooked detail in the deal may explain why Wall Street's bulls and bears are both right.",
+          "link": "https://247wallst.com/investing/2026/11/26/netflix-stock-is-down-36-in-2026-can-its-disney-partnership-make-it-a-buy-again/?.tsrc=rss",
+          "time": "2026-11-26T16:38:57+00:00",
+          "touches": [
+            "DIS"
+          ],
+          "tags": [
+            "deal"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:3d110aca-8826-3a50-9960-62b69507753f",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "MCD",
+          "title": "‘I’d Be Having My Thanksgiving Dinner at McDonald’s’: Warren Buffett Credited ‘Uncle Sam’ for Saving His Holiday — And the U.S. Economy",
+          "summary": "Buffett credited the U.S. government’s 2008 bailout response with preventing a financial collapse that could have changed everything.",
+          "link": "https://www.barchart.com/story/news/9021069/id-be-having-my-thanksgiving-dinner-at-mcdonalds-warren-buffett-credited-uncle-sam-for-saving-his-holiday-and-the-u-s-economy?.tsrc=rss",
+          "time": "2026-11-26T16:00:02+00:00",
+          "touches": [
+            "MCD"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:85d63d6f-575a-3644-bb5e-9eb6c77cf352",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "V",
+          "title": "Visa (V) Up 5.9% Since Last Earnings Report: Can It Continue?",
+          "summary": "Visa (V) reported earnings 30 days ago. What's next for the stock? We take a look at earnings estimates for some clues.",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/visa-v-5-9-since-153019522.html?.tsrc=rss",
+          "time": "2026-11-26T15:30:19+00:00",
+          "touches": [
+            "V"
+          ],
+          "tags": [
+            "earnings"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:9ba41c8c-5024-3e5c-8c74-42367d45fa73",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "PG",
+          "title": "Why A Fixed Cheque Shrinks While P&G's Dividend Grew",
+          "summary": "Today's big story: Anthropic Broke Its $83 IPO Price. What Did Facebook Do Next.",
+          "link": "https://www.trefis.com/stock/pg/articles/629263/why-a-fixed-cheque-shrinks-while-p-g-s-dividend-grew/2026-11-26?.tsrc=rss",
+          "time": "2026-11-26T15:15:26+00:00",
+          "touches": [
+            "PG"
+          ],
+          "tags": [
+            "capital"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:0f2ae3bb-fc68-31d3-afb2-e0d6198086fc",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "MSTR",
+          "title": "Why Is Bitcoin Dropping So Much? 5 Reasons Behind Its Worst Month Since 2022",
+          "summary": "Bitcoin is on pace for its ugliest month in years, and no single villain explains it. Billions in fund money, a tightening Fed, and a headline-grabbing IPO are all pulling in the same direction. Which pressure bites hardest?",
+          "link": "https://247wallst.com/investing/cryptocurrency/2026/11/26/why-is-bitcoin-dropping-so-much-5-reasons-behind-its-worst-month-since-2022/?.tsrc=rss",
+          "time": "2026-11-26T14:43:12+00:00",
+          "touches": [
+            "MSTR"
+          ],
+          "tags": [
+            "macro"
+          ],
+          "new": true
+        },
+        {
+          "id": "rss:548b9080-bafe-370f-9c9a-57171fd301f0",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "MCD",
+          "title": "MCD's Entry-Level Value Push: A Key Catalyst for Its 2027 Outlook?",
+          "summary": "McDonald's is testing affordable entry-level bundles at more than 5,000 U.S. restaurants, aiming to boost traffic and strengthen its 2027 growth outlook.",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/mcds-entry-level-value-push-143800328.html?.tsrc=rss",
+          "time": "2026-11-26T14:38:00+00:00",
+          "touches": [
+            "MCD"
+          ],
+          "tags": [],
+          "new": true
+        },
+        {
+          "id": "rss:41f87cac-f752-329e-9db5-59435d75d92d",
+          "source": "Yahoo Finance",
+          "kind": "headline",
+          "ticker": "DIS",
+          "title": "Netflix Stock and Higher Content Spend: Can Margins Hold Firm in 2027?",
+          "summary": "Netflix ramps up content spending and live programming heading into 2027, raising questions about whether stronger engagement can sustain margin expansion.",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/netflix-stock-higher-content-spend-141100397.html?.tsrc=rss",
+          "time": "2026-11-26T14:11:00+00:00",
+          "touches": [
+            "DIS"
           ],
           "tags": [],
           "new": true
@@ -704,83 +697,83 @@
       ],
       "moves": [
         {
-          "ticker": "ABBV",
-          "price": 300.28,
-          "prev_close": 288.45,
-          "pct": 4.1,
-          "time": "2026-11-24T21:02:39+00:00",
-          "moving": true
+          "ticker": "DIS",
+          "price": 125.6,
+          "prev_close": 122.51,
+          "pct": 2.52,
+          "time": "2026-11-25T21:02:01+00:00",
+          "moving": false
+        },
+        {
+          "ticker": "HD",
+          "price": 361.26,
+          "prev_close": 353.69,
+          "pct": 2.14,
+          "time": "2026-11-25T21:00:02+00:00",
+          "moving": false
         },
         {
           "ticker": "INSM",
-          "price": 170.15,
-          "prev_close": 149.09,
-          "pct": 14.13,
-          "time": "2026-11-24T21:00:00+00:00",
-          "moving": true
-        },
-        {
-          "ticker": "JNJ",
-          "price": 276.46,
-          "prev_close": 268.71,
-          "pct": 2.88,
-          "time": "2026-11-24T21:00:02+00:00",
+          "price": 170.31,
+          "prev_close": 170.15,
+          "pct": 0.09,
+          "time": "2026-11-25T21:00:02+00:00",
           "moving": false
         },
         {
-          "ticker": "KO",
-          "price": 97.62,
-          "prev_close": 95.88,
-          "pct": 1.81,
-          "time": "2026-11-24T21:00:02+00:00",
+          "ticker": "MCD",
+          "price": 283.5,
+          "prev_close": 280.7,
+          "pct": 1.0,
+          "time": "2026-11-25T21:00:02+00:00",
           "moving": false
-        },
-        {
-          "ticker": "LLY",
-          "price": 1407.59,
-          "prev_close": 1364.6,
-          "pct": 3.15,
-          "time": "2026-11-24T21:02:48+00:00",
-          "moving": true
-        },
-        {
-          "ticker": "MRNA",
-          "price": 227.38,
-          "prev_close": 212.08,
-          "pct": 7.21,
-          "time": "2026-11-24T21:00:01+00:00",
-          "moving": true
         },
         {
           "ticker": "MSTR",
-          "price": 77.55,
-          "prev_close": 84.4,
-          "pct": -8.12,
-          "time": "2026-11-24T21:00:00+00:00",
+          "price": 79.96,
+          "prev_close": 77.55,
+          "pct": 3.11,
+          "time": "2026-11-25T21:00:01+00:00",
           "moving": true
         },
         {
-          "ticker": "SNDK",
-          "price": 77.95,
-          "prev_close": 87.71,
-          "pct": -11.13,
-          "time": "2026-11-24T21:00:00+00:00",
-          "moving": true
-        },
-        {
-          "ticker": "UNH",
-          "price": 341.88,
-          "prev_close": 336.08,
-          "pct": 1.73,
-          "time": "2026-11-24T21:00:02+00:00",
+          "ticker": "PG",
+          "price": 173.23,
+          "prev_close": 172.47,
+          "pct": 0.44,
+          "time": "2026-11-25T21:03:03+00:00",
           "moving": false
         },
         {
-          "ticker": "WMT",
-          "price": 132.31,
-          "prev_close": 129.58,
-          "pct": 2.11,
-          "time": "2026-11-24T21:00:01+00:00",
+          "ticker": "QCOM",
+          "price": 168.66,
+          "prev_close": 164.96,
+          "pct": 2.24,
+          "time": "2026-11-25T21:00:02+00:00",
+          "moving": false
+        },
+        {
+          "ticker": "SNDK",
+          "price": 73.61,
+          "prev_close": 77.95,
+          "pct": -5.57,
+          "time": "2026-11-25T21:00:02+00:00",
+          "moving": true
+        },
+        {
+          "ticker": "TJX",
+          "price": 146.09,
+          "prev_close": 143.86,
+          "pct": 1.55,
+          "time": "2026-11-25T21:03:28+00:00",
+          "moving": false
+        },
+        {
+          "ticker": "V",
+          "price": 424.39,
+          "prev_close": 416.78,
+          "pct": 1.83,
+          "time": "2026-11-25T21:00:02+00:00",
           "moving": false
         }
       ],
@@ -793,5 +786,5 @@
       "new": []
     }
   },
-  "run_url": "https://github.com/neidelbert/claude/actions/runs/45562375663"
+  "run_url": "https://github.com/neidelbert/claude/actions/runs/45935567529"
 }

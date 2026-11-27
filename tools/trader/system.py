@@ -792,6 +792,7 @@ def go_checks(cfg):
     res = read_json(p(T, "lab", "results.json"), {}) or {}
     rows = res.get("variants", [])
     wf = res.get("walkforward") or {}
+    luck = res.get("luck") or {}
     share = round(up / len(accs) * 100) if accs else 0
     return [
         {"name": "Mindestens 40 Live-Tage", "ok": len(days) >= 40, "detail": "%d von 40" % len(days)},
@@ -804,6 +805,9 @@ def go_checks(cfg):
          "detail": "ja" if rows and rows[0].get("passed") else "nein"},
         {"name": "Walk-Forward nach Gebühr im Plus (≥ 4 Wochen)", "ok": len(wf.get("weeks", [])) >= 4 and wf.get("eur_fee", 0) > 0,
          "detail": "%s € in %d Wochen" % (de_num(wf.get("eur_fee", 0)), len(wf.get("weeks", [])))},
+        {"name": "Glückstest über alle Regeln bestanden (p ≤ 5 %)", "ok": bool(luck.get("passed")),
+         "detail": ("p = %s %% (Zufallswert %s, nötig %s)" % (de_num(luck["p"] * 100, 1), de_num(luck["champ_t"], 1),
+                                                             de_num(luck["t_needed"], 1))) if luck else "noch nicht gerechnet"},
     ]
 
 

@@ -237,6 +237,8 @@ def build_data(cfg):
                       "wins": sum(1 for x in d["champ_pcts"] if x > 0)} for d in system.live_days(cfg)],
         "patterns": res.get("patterns", []),
         "walkforward": res.get("walkforward"),
+        "luck": res.get("luck"),
+        "timemachine": res.get("timemachine"),
         "ai": latest_ai(),
         "accounts": {k: v for k, v in (res.get("accounts") or {}).items() if k == res.get("champion")},
         "champion": res.get("champion"),

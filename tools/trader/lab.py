@@ -717,59 +717,51 @@ MONTH_DAYS = 21         # Handelstage in einem Simulator-Monat
 MONTH_REPS = 10000      # so viele Monate spielt die Zeitmaschine durch
 
 
-def _tval(n, s, q):
-    if n < 2:
-        return 0.0
-    m = s / n
-    var = (q - n * m * m) / (n - 1)
-    return m / math.sqrt(var / n) if var > 1e-12 else 0.0
-
-
 def luck_test(trades, test_days, champ_id, reps=LUCK_REPS, seed=7):
-    """Glückstest über alle Regeln (Bootstrap-Reality-Check nach White 2000, studentisiert):
-    Unter 80 Regeln sieht immer eine gut aus. Jede Regel wird auf Ø 0 gesetzt (= kann nichts), dann werden
-    die Prüftage neu gezogen (ganze Tage, damit gleichzeitige Trades zusammen bleiben). p = Anteil der Ziehungen,
-    in denen die beste dieser „wertlosen“ Regeln einen Zufallswert so hoch wie die echte Top-Regel erreicht."""
+    """Glückstest über alle Regeln (Bootstrap-Reality-Check nach White 2000, je Regel an der eigenen
+    Schwankung gemessen wie bei Hansen 2005): Unter 80 Regeln sieht immer eine gut aus. Die Prüftage werden
+    neu gezogen (ganze Tage, damit Trades vom selben Tag zusammen bleiben). Daraus ergibt sich je Regel, wie
+    stark ihr Ø von Ziehung zu Ziehung schwankt (sd). Zufallswert = Ø / sd. Für die Null-Welt wird jede Regel
+    auf Ø 0 gesetzt (= kann nichts). p = Anteil der Ziehungen, in denen die beste dieser „wertlosen“ Regeln
+    einen Zufallswert so hoch wie die echte Top-Regel erreicht."""
     import random
     days = sorted(test_days)
     if not days or champ_id not in trades:
         return None
-    per, real = {}, {}
+    per, mean_of = {}, {}
     for vid_, tr in trades.items():
         tt = [t["pct"] for t in tr if t.get("test")]
         if len(tt) < MIN_TEST_TRADES:
             continue
-        mean = sum(tt) / len(tt)
-        real[vid_] = _tval(len(tt), sum(tt), sum(x * x for x in tt))
+        mean_of[vid_] = sum(tt) / len(tt)
         cells = {}
         for t in tr:
             if t.get("test"):
-                x = t["pct"] - mean
-                c = cells.setdefault(t["date"], [0, 0.0, 0.0])
+                c = cells.setdefault(t["date"], [0, 0.0])
                 c[0] += 1
-                c[1] += x
-                c[2] += x * x
-        per[vid_] = [cells.get(d, (0, 0.0, 0.0)) for d in days]
-    if champ_id not in real:
+                c[1] += t["pct"]
+        per[vid_] = [cells.get(d, (0, 0.0)) for d in days]
+    if champ_id not in per:
         return None
-    rnd, nd, hits, maxima = random.Random(seed), len(days), 0, []
-    champ_t = real[champ_id]
+    rnd, nd = random.Random(seed), len(days)
+    boot = {v: [] for v in per}           # Ø je Ziehung (minus echter Ø = Null-Welt)
     for _ in range(reps):
         pick = [rnd.randrange(nd) for _ in range(nd)]
-        best = -1e9
-        for cells in per.values():
-            n = s = q = 0
+        for v, cells in per.items():
+            n = s_ = 0
             for i in pick:
-                c = cells[i]
-                n += c[0]
-                s += c[1]
-                q += c[2]
-            best = max(best, _tval(n, s, q))
-        maxima.append(best)
-        hits += best >= champ_t
-    maxima.sort()
+                n += cells[i][0]
+                s_ += cells[i][1]
+            boot[v].append((s_ / n if n else mean_of[v]) - mean_of[v])
+    sd = {v: math.sqrt(sum(x * x for x in xs) / (reps - 1)) for v, xs in boot.items()}
+    keep = [v for v in per if sd[v] > 1e-9]
+    if champ_id not in keep:
+        return None
+    champ_t = mean_of[champ_id] / sd[champ_id]
+    maxima = sorted(max(boot[v][r] / sd[v] for v in keep) for r in range(reps))
+    hits = sum(1 for m in maxima if m >= champ_t)
     return {"p": round(hits / reps, 3), "champ_t": round(champ_t, 2), "t_needed": round(maxima[int(0.95 * reps) - 1], 2),
-            "variants": len(per), "days": nd, "reps": reps, "passed": hits / reps <= LUCK_P}
+            "variants": len(keep), "days": nd, "reps": reps, "passed": hits / reps <= LUCK_P}
 
 
 def time_machine(days_pts, reps=MONTH_REPS, seed=11):
@@ -1234,7 +1226,11 @@ def cmd_selftest(a):
     ltr = {"echt": [{"date": d, "pct": 1.0 + g.gauss(0, 1), "test": True} for d in ldays for _ in range(2)]}
     for j in range(20):
         ltr["z%d" % j] = [{"date": d, "pct": g.gauss(0, 1), "test": True} for d in ldays for _ in range(2)]
+    for j in range(3):                     # viele Trades je Tag, die gemeinsam schwanken (wie „Stocks in Play“)
+        ltr["viel%d" % j] = [{"date": d, "pct": m + g.gauss(0, 0.2), "test": True}
+                             for d in ldays for m in [g.gauss(0, 1)] for _ in range(50)]
     lk = luck_test(ltr, set(ldays), "echt", reps=200)
+    assert 1.4 < lk["t_needed"] < 4.5, lk
     assert lk["passed"] and lk["p"] < 0.05, lk
     lk2 = luck_test(ltr, set(ldays), "z0", reps=200)
     assert not lk2["passed"], lk2

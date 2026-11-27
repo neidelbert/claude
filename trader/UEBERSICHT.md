@@ -1,6 +1,6 @@
 # Trader-Übersicht
 
-Stand: Fr 27.11. 10:51 Uhr ET (16:51 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
+Stand: Fr 27.11. 11:01 Uhr ET (17:01 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
 
 NYSE heute: offen (Handelszeit 09:30 bis 13:00 Uhr ET).
 
@@ -10,7 +10,7 @@ NYSE heute: offen (Handelszeit 09:30 bis 13:00 Uhr ET).
 |---|---|---|
 | Morgen-Scan | Fr 27.11. 07:30 Uhr ET (13:30 Uhr MEZ) | OK – 374 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/45935567529)) |
 | ORB-Scan | Fr 27.11. 10:10 Uhr ET (16:10 Uhr MEZ) | OK – 95 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/45967520442)) |
-| Labor live | Fr 27.11. 10:50 Uhr ET (16:50 Uhr MEZ) | OK – 2.666 Trades, 2.443 offen ([Lauf](https://github.com/neidelbert/claude/actions/runs/45967520442)) |
+| Labor live | Fr 27.11. 11:00 Uhr ET (17:00 Uhr MEZ) | OK – 2.757 Trades, 2.497 offen ([Lauf](https://github.com/neidelbert/claude/actions/runs/45967520442)) |
 | Labor | Mi 25.11. 16:20 Uhr ET (22:20 Uhr MEZ) | OK – 18 von 80 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/45606660043)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
@@ -148,35 +148,35 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 - 22.10. 16:11 Uhr ET · [Resideo Announces Expected Q1 Software Update to Honeywell Home Smart Thermostats for Compatibility with Apple HomeView](https://finance.yahoo.com/technology/articles/resideo-announces-expected-q1-software-201100727.html?.tsrc=rss)
 - 22.10. 15:51 Uhr ET · [How much Apple stock does CEO John Ternus actually own?](https://www.thestreet.com/personalities/how-much-apple-stock-does-john-ternus-own?.tsrc=rss)
 
-## Labor live – Fr 27.11.2026, Stand 10:50 Uhr ET
+## Labor live – Fr 27.11.2026, Stand 11:00 Uhr ET
 
-435 Aktien beobachtet · 2.666 Spielgeld-Trades aller Varianten · 2.443 offen
+435 Aktien beobachtet · 2.757 Spielgeld-Trades aller Varianten · 2.497 offen
 
 | Top-Variante | Trades | offen | € bei 100 €/Trade |
 |---|---|---|---|
-| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 1 | 1 | 0,24 € |
-| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R | 1 | 1 | 0,24 € |
-| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R | 1 | 1 | 0,24 € |
+| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 1 | 1 | 0,18 € |
+| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R | 1 | 1 | 0,18 € |
+| News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R | 1 | 1 | 0,18 € |
 | Stocks in Play (Studie): Top 20 nach Startvolumen · Stopp 10 % ATR · bis Schluss · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 2 | 0 | -1,56 € |
-| Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 4× normal | 1 | 1 | -0,74 € |
-| Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 2 | 1 | 0,23 € |
-| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 2 | 1 | 0,23 € |
+| Erholung: Lücke nach unten ≥ 3 % · Stopp Tagestief · Ziel 2R · nur bei Volumen über 4× normal | 1 | 1 | -0,19 € |
+| Ausbruch 30 Min · nur Top 20 nach Volumen · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 2 | 1 | 0,76 € |
+| Opening-Range-Ausbruch 30 Min · Stopp Tief der Spanne · Ziel 2R · nur bei Volumen über 4× normal | 2 | 1 | 0,76 € |
 | Ausbruch 30 Min · Volumen ≥ 1,5× · nur wenn der Gesamtmarkt (SPY) im Plus ist · Ziel 2R | 0 | 0 | 0,00 € |
-| Beste Signale (locker): News-Sprung ≥ 2 %, Volumen ≥ 2×, Schwankung ≥ 2 %, Einstieg bis 10:30 Uhr ET · nur der erste Kandidat des Tages · Ziel 3R | 1 | 1 | -0,46 € |
+| Beste Signale (locker): News-Sprung ≥ 2 %, Volumen ≥ 2×, Schwankung ≥ 2 %, Einstieg bis 10:30 Uhr ET · nur der erste Kandidat des Tages · Ziel 3R | 1 | 1 | -0,31 € |
 
 | Aktie | Regel | Einstieg | Stopp | Ziel | Stand | Ergebnis |
 |---|---|---|---|---|---|---|
 | ANF | Stocks in Play (Studie): Top 20 nach Startvolumen | 9:40 182,56 $ | 181,57 $ | – | Stopp 9:45 Uhr | -0,59 € |
-| AON | News-Sprung: Lücke ≥ 4 % | 9:50 348,28 $ | 343,48 $ | 355,49 $ | offen, Kurs 349,28 $ | 0,24 € |
-| AON | News-Sprung: Lücke ≥ 4 % | 9:50 348,28 $ | 343,48 $ | 357,89 $ | offen, Kurs 349,28 $ | 0,24 € |
-| AON | News-Sprung: Lücke ≥ 4 % | 9:50 348,28 $ | 343,48 $ | 362,70 $ | offen, Kurs 349,28 $ | 0,24 € |
-| INGM | Beste Signale (locker): News-Sprung ≥ 2 %, Volumen ≥ 2×, Schwankung ≥ 2 %, Einstieg bis 10:30 Uhr ET | 9:55 28,15 $ | 27,69 $ | 29,55 $ | offen, Kurs 28,04 $ | -0,46 € |
+| AON | News-Sprung: Lücke ≥ 4 % | 9:50 348,28 $ | 343,48 $ | 355,49 $ | offen, Kurs 349,08 $ | 0,18 € |
+| AON | News-Sprung: Lücke ≥ 4 % | 9:50 348,28 $ | 343,48 $ | 357,89 $ | offen, Kurs 349,08 $ | 0,18 € |
+| AON | News-Sprung: Lücke ≥ 4 % | 9:50 348,28 $ | 343,48 $ | 362,70 $ | offen, Kurs 349,08 $ | 0,18 € |
+| INGM | Beste Signale (locker): News-Sprung ≥ 2 %, Volumen ≥ 2×, Schwankung ≥ 2 %, Einstieg bis 10:30 Uhr ET | 9:55 28,15 $ | 27,69 $ | 29,55 $ | offen, Kurs 28,08 $ | -0,31 € |
 | SEDG | Stocks in Play (Studie): Top 20 nach Startvolumen | 10:00 21,11 $ | 20,92 $ | – | Stopp 10:05 Uhr | -0,97 € |
-| DV | Opening-Range-Ausbruch 30 Min | 10:20 13,62 $ | 13,60 $ | 13,67 $ | Stopp 10:50 Uhr | -0,21 € |
-| DV | Ausbruch 30 Min | 10:20 13,62 $ | 13,60 $ | 13,67 $ | Stopp 10:50 Uhr | -0,21 € |
-| VRTX | Opening-Range-Ausbruch 30 Min | 10:20 524,02 $ | 502,90 $ | 566,26 $ | offen, Kurs 526,60 $ | 0,44 € |
-| VRTX | Ausbruch 30 Min | 10:20 524,02 $ | 502,90 $ | 566,26 $ | offen, Kurs 526,60 $ | 0,44 € |
-| NTNX | Erholung: Lücke nach unten ≥ 3 % | 10:40 45,50 $ | 44,48 $ | 47,54 $ | offen, Kurs 45,19 $ | -0,74 € |
+| DV | Opening-Range-Ausbruch 30 Min | 10:20 13,62 $ | 13,60 $ | 13,67 $ | Stopp 10:45 Uhr | -0,21 € |
+| DV | Ausbruch 30 Min | 10:20 13,62 $ | 13,60 $ | 13,67 $ | Stopp 10:45 Uhr | -0,21 € |
+| VRTX | Opening-Range-Ausbruch 30 Min | 10:20 524,02 $ | 502,90 $ | 566,26 $ | offen, Kurs 529,39 $ | 0,97 € |
+| VRTX | Ausbruch 30 Min | 10:20 524,02 $ | 502,90 $ | 566,26 $ | offen, Kurs 529,39 $ | 0,97 € |
+| NTNX | Erholung: Lücke nach unten ≥ 3 % | 10:40 45,50 $ | 44,48 $ | 47,54 $ | offen, Kurs 45,44 $ | -0,19 € |
 
 ## Labor (Testphase, Spielgeld ohne Limit)
 

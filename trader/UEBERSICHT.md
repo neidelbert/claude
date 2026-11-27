@@ -1,6 +1,6 @@
 # Trader-Übersicht
 
-Stand: Fr 27.11. 13:01 Uhr ET (19:01 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
+Stand: Fr 27.11. 16:22 Uhr ET (22:22 Uhr MEZ) · wird bei jedem Lauf neu gebaut.
 
 NYSE heute: geschlossen (Handelszeit 09:30 bis 13:00 Uhr ET).
 
@@ -11,7 +11,7 @@ NYSE heute: geschlossen (Handelszeit 09:30 bis 13:00 Uhr ET).
 | Morgen-Scan | Fr 27.11. 07:30 Uhr ET (13:30 Uhr MEZ) | OK – 374 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/45935567529)) |
 | ORB-Scan | Fr 27.11. 10:10 Uhr ET (16:10 Uhr MEZ) | OK – 95 Treffer ([Lauf](https://github.com/neidelbert/claude/actions/runs/45967520442)) |
 | Labor live | Fr 27.11. 13:00 Uhr ET (19:00 Uhr MEZ) | OK – Tagesbilanz: 3.289 Trades ([Lauf](https://github.com/neidelbert/claude/actions/runs/45967520442)) |
-| Labor | Mi 25.11. 16:20 Uhr ET (22:20 Uhr MEZ) | OK – 18 von 80 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/45606660043)) |
+| Labor | Fr 27.11. 16:20 Uhr ET (22:20 Uhr MEZ) | OK – 16 von 80 bestanden ([Lauf](https://github.com/neidelbert/claude/actions/runs/46009167121)) |
 | Preisalarme | noch nie | – |
 | Ticker-Analyse | Do 22.10. 18:34 Uhr ET (00:34 Uhr MESZ) | OK – AAPL: abgelaufen ([Lauf](https://github.com/neidelbert/claude/actions/runs/39865972957)) |
 | Test-Push | Do 22.10. 19:24 Uhr ET (01:24 Uhr MESZ) | OK – Push gesendet ([Lauf](https://github.com/neidelbert/claude/actions/runs/39871573010)) |
@@ -182,22 +182,22 @@ Meldungen kommen Tage bis Wochen nach dem Handel und nennen nur Betragsspannen.
 
 ## Labor (Testphase, Spielgeld ohne Limit)
 
-1.044 Aktien · 84 Handelstage · Lerntage Do 30.07.2026 bis Fr 16.10.2026 · **Prüftage Mo 19.10.2026 bis Mi 25.11.2026** · 80 Varianten
+1.101 Aktien · 85 Handelstage · Lerntage Do 30.07.2026 bis Mo 19.10.2026 · **Prüftage Di 20.10.2026 bis Fr 27.11.2026** · 80 Varianten
 
 | # | Variante | Prüftage: Trades | Treffer | Ø je Trade | € bei 100 €/Trade | nach Gebühren | Zufall? | bestanden |
 |---|---|---|---|---|---|---|---|---|
-| 1 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 78 | 63 % | +0,90 % | 70,39 € | -85,61 € | möglich | **ja** |
-| 2 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R | 78 | 63 % | +0,90 % | 69,80 € | -86,20 € | möglich | **ja** |
-| 3 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R | 78 | 63 % | +0,78 % | 60,85 € | -95,15 € | möglich | **ja** |
-| 4 | News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 2R · nur bei Volumen über 4× normal | 129 | 57 % | +0,52 % | 67,24 € | -190,76 € | möglich | **ja** |
-| 5 | News-Sprung: Lücke ≥ 2 % · Volumen ≥ 3× · Ziel 2R | 135 | 56 % | +0,46 % | 62,28 € | -207,72 € | möglich | **ja** |
-| 6 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 3R | 129 | 55 % | +0,44 % | 56,53 € | -201,47 € | möglich | **ja** |
-| 7 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 2R | 129 | 55 % | +0,43 % | 55,61 € | -202,39 € | möglich | **ja** |
-| 8 | News-Sprung: Lücke ≥ 2 % · Volumen ≥ 3× · Ziel 3R | 135 | 56 % | +0,43 % | 57,64 € | -212,36 € | möglich | **ja** |
-| 9 | News-Sprung: Lücke ≥ 2 % · Volumen ≥ 3× · Ziel 1,5R | 135 | 56 % | +0,38 % | 51,73 € | -218,27 € | möglich | **ja** |
-| 10 | News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 2R · nur bei Volumen über 2× normal | 238 | 53 % | +0,37 % | 88,22 € | -387,78 € | möglich | **ja** |
-| 11 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 1,5R | 129 | 55 % | +0,35 % | 45,44 € | -212,56 € | möglich | **ja** |
-| 12 | News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 3R | 259 | 52 % | +0,34 % | 87,59 € | -430,40 € | möglich | **ja** |
+| 1 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 2R | 86 | 62 % | +0,67 % | 57,87 € | -114,13 € | möglich | **ja** |
+| 2 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 3R | 86 | 62 % | +0,67 % | 57,27 € | -114,72 € | möglich | **ja** |
+| 3 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 3× · Ziel 1,5R | 86 | 62 % | +0,56 % | 48,33 € | -123,67 € | möglich | **ja** |
+| 4 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 2R | 139 | 55 % | +0,37 % | 50,85 € | -227,15 € | möglich | **ja** |
+| 5 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 3R | 139 | 55 % | +0,36 % | 49,86 € | -228,14 € | möglich | **ja** |
+| 6 | News-Sprung: Lücke ≥ 4 % · Volumen ≥ 2× · Ziel 1,5R | 139 | 55 % | +0,28 % | 39,55 € | -238,45 € | möglich | **ja** |
+| 7 | News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 2R · nur bei Volumen über 4× normal | 139 | 55 % | +0,28 % | 39,45 € | -238,55 € | möglich | **ja** |
+| 8 | News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 2R · nur bei Volumen über 2× normal | 261 | 52 % | +0,27 % | 69,35 € | -452,65 € | möglich | **ja** |
+| 9 | News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 3R | 281 | 52 % | +0,24 % | 66,49 € | -495,51 € | möglich | **ja** |
+| 10 | News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 2R · nur bis 12 Uhr ET und Stopp mindestens 0,5 % entfernt | 281 | 52 % | +0,23 % | 65,33 € | -496,67 € | möglich | **ja** |
+| 11 | News-Sprung: Lücke ≥ 2 % · Volumen ≥ 2× · Ziel 2R | 281 | 52 % | +0,23 % | 65,33 € | -496,67 € | möglich | **ja** |
+| 12 | News-Sprung: Lücke ≥ 2 % · Volumen ≥ 3× · Ziel 2R | 148 | 53 % | +0,22 % | 32,27 € | -263,73 € | möglich | **ja** |
 
 So liest du das: Ein Trade ist ein Kauf und Verkauf am selben Tag. „Treffer“ ist der Anteil der Trades mit Plus. „€ bei 100 €/Trade“ ist die Summe, wenn jeder Trade mit 100 € gemacht worden wäre. „Zufall möglich“ heißt: zu wenige oder zu schwankende Trades, das Ergebnis kann Glück sein.
 

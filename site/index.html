@@ -730,6 +730,18 @@ function renderStart(){
       '<div class="row"><span class="small">ohne Gebühr</span><b class="num '+cls(wf.eur)+'">'+eur(wf.eur)+'</b></div>'+
       '<div class="row"><span class="small">Wochen im Plus</span><b>'+int(wf.weeks_up)+' von '+wf.weeks.length+'</b></div></div>';
   }
+  const tm=D.timemachine, lk=D.luck;
+  if(tm && tm.fee){
+    const r=(o)=>eur(o.p5)+' … '+eur(o.p95);
+    h += '<h2>Zeitmaschine: ein Monat</h2><div class="card"><div class="small">Die Top-Regel spielt '+int(tm.reps)+'-mal einen Monat ('+int(tm.month_days)+' Handelstage) durch, gezogen aus ihren '+int(tm.days)+' echten Labor-Tagen. Jeder Tag startet mit 100 € (20 € je Trade). Kein Versprechen, nur die bisherigen Tage neu gemischt.</div>'+
+      '<div class="row" style="margin-top:6px"><span class="small">Chance auf Plus, mit 1 € Gebühr</span><b class="num '+cls(tm.fee.up-50)+'">'+nf0.format(tm.fee.up)+' %</b></div>'+
+      '<div class="row"><span class="small">üblich (Mitte), mit Gebühr</span><b class="num '+cls(tm.fee.median)+'">'+eur(tm.fee.median)+'</b></div>'+
+      '<div class="row"><span class="small">Spanne (9 von 10), mit Gebühr</span><b class="num" style="white-space:nowrap">'+r(tm.fee)+'</b></div>'+
+      '<div class="row"><span class="small">Chance auf Plus, ohne Gebühr</span><b class="num '+cls(tm.no_fee.up-50)+'">'+nf0.format(tm.no_fee.up)+' %</b></div>'+
+      '<div class="row"><span class="small">üblich (Mitte), ohne Gebühr</span><b class="num '+cls(tm.no_fee.median)+'">'+eur(tm.no_fee.median)+'</b></div>'+
+      (lk?'<div class="row"><span class="small">Glückstest ('+int(lk.variants)+' Regeln)</span><span class="badge '+(lk.passed?"b-green":"b-orange")+'">'+(lk.passed?"kein Glück":"kann Glück sein")+' · p '+nf0.format(lk.p*100)+' %</span></div>':'')+
+      '</div>';
+  }
   // KI-Zweitmeinung (ab 23.11., nur mit API-Schlüssel)
   if(D.ai && (D.ai.ratings||[]).length){
     const col={positiv:"pos",negativ:"neg"};

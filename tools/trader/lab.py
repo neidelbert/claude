@@ -707,6 +707,90 @@ def weeks_up(trades):
     return {"up": sum(1 for x in per.values() if x > 0), "n": len(per)}
 
 
+# ---------------------------------------------------------------- Glückstest und Zeitmaschine
+# Idee aus dem Skill trader-timemachine (Jakeschincariol/day-trader-skill): vorhandene Tage neu
+# ziehen statt eine Zukunft zu erfinden. Zufall mit festem Startwert, damit jeder Lauf gleich rechnet.
+
+LUCK_REPS = 1000        # Wiederholungen des Glückstests
+LUCK_P = 0.05           # bestanden, wenn Glück die Top-Regel in höchstens 5 % der Fälle schlägt
+MONTH_DAYS = 21         # Handelstage in einem Simulator-Monat
+MONTH_REPS = 10000      # so viele Monate spielt die Zeitmaschine durch
+
+
+def _tval(n, s, q):
+    if n < 2:
+        return 0.0
+    m = s / n
+    var = (q - n * m * m) / (n - 1)
+    return m / math.sqrt(var / n) if var > 1e-12 else 0.0
+
+
+def luck_test(trades, test_days, champ_id, reps=LUCK_REPS, seed=7):
+    """Glückstest über alle Regeln (Bootstrap-Reality-Check nach White 2000, studentisiert):
+    Unter 80 Regeln sieht immer eine gut aus. Jede Regel wird auf Ø 0 gesetzt (= kann nichts), dann werden
+    die Prüftage neu gezogen (ganze Tage, damit gleichzeitige Trades zusammen bleiben). p = Anteil der Ziehungen,
+    in denen die beste dieser „wertlosen“ Regeln einen Zufallswert so hoch wie die echte Top-Regel erreicht."""
+    import random
+    days = sorted(test_days)
+    if not days or champ_id not in trades:
+        return None
+    per, real = {}, {}
+    for vid_, tr in trades.items():
+        tt = [t["pct"] for t in tr if t.get("test")]
+        if len(tt) < MIN_TEST_TRADES:
+            continue
+        mean = sum(tt) / len(tt)
+        real[vid_] = _tval(len(tt), sum(tt), sum(x * x for x in tt))
+        cells = {}
+        for t in tr:
+            if t.get("test"):
+                x = t["pct"] - mean
+                c = cells.setdefault(t["date"], [0, 0.0, 0.0])
+                c[0] += 1
+                c[1] += x
+                c[2] += x * x
+        per[vid_] = [cells.get(d, (0, 0.0, 0.0)) for d in days]
+    if champ_id not in real:
+        return None
+    rnd, nd, hits, maxima = random.Random(seed), len(days), 0, []
+    champ_t = real[champ_id]
+    for _ in range(reps):
+        pick = [rnd.randrange(nd) for _ in range(nd)]
+        best = -1e9
+        for cells in per.values():
+            n = s = q = 0
+            for i in pick:
+                c = cells[i]
+                n += c[0]
+                s += c[1]
+                q += c[2]
+            best = max(best, _tval(n, s, q))
+        maxima.append(best)
+        hits += best >= champ_t
+    maxima.sort()
+    return {"p": round(hits / reps, 3), "champ_t": round(champ_t, 2), "t_needed": round(maxima[int(0.95 * reps) - 1], 2),
+            "variants": len(per), "days": nd, "reps": reps, "passed": hits / reps <= LUCK_P}
+
+
+def time_machine(days_pts, reps=MONTH_REPS, seed=11):
+    """Zeitmaschine fürs Tageskonto: zieht 21 echte Tage der Top-Regel (mit Zurücklegen) und zählt
+    Gewinn/Verlust zusammen, 10.000-mal. Ergebnis: Chance auf einen Monat im Plus und die Spanne.
+    days_pts: [[Tag, Konto ohne Gebühr, Konto mit Gebühr, Trades], ...]"""
+    import random
+    pts = [p for p in days_pts if p[3]] or []
+    if len(pts) < 10:
+        return None
+    rnd, out = random.Random(seed), {}
+    trade_share = len(pts) / len(days_pts)
+    for key, col in (("no_fee", 1), ("fee", 2)):
+        vals = [p[col] - ACC_START for p in days_pts]
+        sums = sorted(sum(vals[rnd.randrange(len(vals))] for _ in range(MONTH_DAYS)) for _ in range(reps))
+        out[key] = {"up": round(sum(1 for x in sums if x > 0) / reps * 100, 1), "median": round(sums[reps // 2], 2),
+                    "p5": round(sums[int(0.05 * reps)], 2), "p95": round(sums[int(0.95 * reps) - 1], 2)}
+    out.update(days=len(days_pts), trade_days=len(pts), trade_share=round(trade_share * 100), month_days=MONTH_DAYS, reps=reps)
+    return out
+
+
 # ---------------------------------------------------------------- Auswertung
 
 def stats(trades):
@@ -818,6 +902,8 @@ def cmd_run(a):
         accounts[r["id"]] = {"days": pts, "test_up_share": round(sum(1 for p in tdays if p[1] > ACC_START) /
                                                                    len(tdays) * 100) if tdays else None}
     wf = walk_forward(trades, all_days)
+    luck = luck_test(trades, test_days, rows[0]["id"]) if rows else None
+    tm = time_machine(accounts[rows[0]["id"]]["days"]) if rows and rows[0]["id"] in accounts else None
     pool = [t for r in rows[:20] for t in trades[r["id"]]]
     patterns = find_patterns(pool, champ)
     best_per = {}
@@ -832,7 +918,8 @@ def cmd_run(a):
            "strategies": STRATEGY_DE, "best_per_strategy": best_per,
            "variants": rows, "curves": curves, "samples": samples,
            "champion": rows[0]["id"] if rows else None,
-           "accounts": accounts, "patterns": patterns, "walkforward": wf, "account_settings": {"start": ACC_START, "stake": ACC_STAKE,
+           "accounts": accounts, "patterns": patterns, "walkforward": wf, "luck": luck,
+           "timemachine": tm, "account_settings": {"start": ACC_START, "stake": ACC_STAKE,
                                                                              "fee": ACC_FEE},
            "champion_trades": [{k: t[k] for k in ("date", "symbol", "entry", "stop", "target", "exit", "why", "pct",
                                                   "in_k", "out_k", "test")} for t in champ], "seconds": round(time.time() - t0, 1)}
@@ -843,6 +930,7 @@ def cmd_run(a):
     print(json.dumps({"symbols": len(data), "days": len(all_days), "variants": len(rows),
                       "trades": sum(len(t) for t in trades.values()), "passed": sum(1 for r in rows if r["passed"]),
                       "patterns_hold": sum(1 for p in patterns if p["holds"]), "walkforward_eur": wf["eur"],
+                      "luck_p": (luck or {}).get("p"), "month_up_fee": ((tm or {}).get("fee") or {}).get("up"),
                       "best": rows[0]["id"], "seconds": doc["seconds"]}))
     return 0
 
@@ -1139,9 +1227,22 @@ def cmd_selftest(a):
     wtr = {"a": [{"date": d, "pct": 1.0} for d in wdays], "b": [{"date": d, "pct": -1.0} for d in wdays]}
     wf = walk_forward(wtr, wdays)
     assert wf["weeks"] and all(w["pick"] == "a" for w in wf["weeks"]) and wf["eur"] > 0, wf
+    # Glückstest: eine echte Regel (+1 % je Trade, leicht schwankend) gegen 20 wertlose
+    import random as _r
+    g = _r.Random(3)
+    ldays = ["d%02d" % i for i in range(40)]
+    ltr = {"echt": [{"date": d, "pct": 1.0 + g.gauss(0, 1), "test": True} for d in ldays for _ in range(2)]}
+    for j in range(20):
+        ltr["z%d" % j] = [{"date": d, "pct": g.gauss(0, 1), "test": True} for d in ldays for _ in range(2)]
+    lk = luck_test(ltr, set(ldays), "echt", reps=200)
+    assert lk["passed"] and lk["p"] < 0.05, lk
+    lk2 = luck_test(ltr, set(ldays), "z0", reps=200)
+    assert not lk2["passed"], lk2
+    tm = time_machine([["d", 101.0, 99.0, 1]] * 30, reps=500)
+    assert tm["no_fee"]["up"] == 100 and tm["fee"]["up"] == 0 and tm["no_fee"]["median"] == 21.0, tm
     n = len(variants())
     assert n == 80 and len({v["id"] for v in variants()}) == n, n
-    print("Selbsttest ok: Einstieg, Ziel, Stopp vor Ziel, Ausstieg zum Schluss, offener Live-Trade, Muster-Filter, Beste Signale, Walk-Forward, 80 Varianten (mit Stocks in Play, Volumen-Rangliste, Markt- und Muster-Filter).")
+    print("Selbsttest ok: Einstieg, Ziel, Stopp vor Ziel, Ausstieg zum Schluss, offener Live-Trade, Muster-Filter, Beste Signale, Walk-Forward, Glückstest, Zeitmaschine, 80 Varianten (mit Stocks in Play, Volumen-Rangliste, Markt- und Muster-Filter).")
     return 0
 
 

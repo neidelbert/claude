@@ -1,6 +1,6 @@
 # Übergabe – Trader-System (für jede neue Claude-Sitzung zuerst lesen)
 
-Stand: 23.10.2026, nachmittags. Repo: `neidelbert/claude` (öffentlich), Branch `main`.
+Stand: 27.11.2026. Repo: `neidelbert/claude` (öffentlich), Branch `main`.
 
 ## Worum es geht
 Lukas (Anfänger, programmiert nicht) baut mit Claude ein KI-gestütztes Daytrading-System für US-Aktien.
@@ -32,6 +32,7 @@ Den ganzen Plan enthält `docs/TRADER-PLAN.md`, das Interview mit Lukas ist dort
 
 | Beste Signale | Strategie `best` in `lab.py` (4 Varianten): News-Sprung-Kandidaten + gelernte Muster (`BEST_LEVELS`), je Tag nur der erste Kandidat (`first_per_day`) → höchstens 1 Trade/Tag | Labor + live |
 | Walk-Forward | `walk_forward` in `lab.py`: jede Woche die bis dahin beste Regel (nur alte Daten), Ergebnis der neuen Woche; `results.json` → `walkforward`; 7. Punkt der Go-Ampel; Karte auf der Übersicht | nach Börsenschluss |
+| Glückstest + Zeitmaschine | `luck_test` und `time_machine` in `lab.py` (Idee aus dem Skill `trader-timemachine`): Glückstest = Reality-Check über alle Regeln (1.000 Ziehungen der Prüftage), 8. Punkt der Go-Ampel; Zeitmaschine = 10.000 Monate (21 Tage) aus den echten Tageskonten der Top-Regel → Chance auf Plus mit/ohne Gebühr. `results.json` → `luck`, `timemachine`; Karte auf der Übersicht | nach Börsenschluss |
 | Broker | `docs/BROKER.md` (Stand 18.11.: IBKR günstigste Option mit API, Lukas will mit 100 € starten) | – |
 
 ## Adressen und Kanäle
@@ -74,7 +75,7 @@ Den ganzen Plan enthält `docs/TRADER-PLAN.md`, das Interview mit Lukas ist dort
   Push-Menge, SEC-Agent, KI-Zweitmeinung ab Monat 2, Datenschutz der Antworten.
 - **Nächste Ideen** in `docs/VERBESSERUNGEN.md` (Punkte-Tabelle).
 - **Pushes** auf Lukas' Wunsch nur zum Börsenstart (kurz) und Börsenschluss (Rückblick), nicht nachts.
-- **Go-Ampel (7 Punkte):** ≥ 40 Live-Tage; Tageskonto der Top-Regel an ≥ 60 % der Tage im Plus; Zufallswert ≥ 2; nach Gebühr im Plus; Top-Regel ≥ 10 Tage dieselbe; Top-Regel hat Prüftage bestanden; Walk-Forward nach Gebühr im Plus (≥ 4 Wochen). Grün heißt nur: Simulator starten (Lukas entscheidet), nie echtes Geld.
+- **Go-Ampel (8 Punkte):** ≥ 40 Live-Tage; Tageskonto der Top-Regel an ≥ 60 % der Tage im Plus; Zufallswert ≥ 2; nach Gebühr im Plus; Top-Regel ≥ 10 Tage dieselbe; Top-Regel hat Prüftage bestanden; Walk-Forward nach Gebühr im Plus (≥ 4 Wochen); Glückstest über alle Regeln p ≤ 5 %. Grün heißt nur: Simulator starten (Lukas entscheidet), nie echtes Geld.
 - **Geplante Erinnerung dieser Sitzung:** 23.10. 14:50 UTC (Kontrolle des ersten Zeitplan-Tags). Eine neue Sitzung sieht sie mit `list_triggers`.
 
 ## Wie eine neue Sitzung weitermacht
@@ -117,3 +118,4 @@ Den ganzen Plan enthält `docs/TRADER-PLAN.md`, das Interview mit Lukas ist dort
 | 18.11. | #33 | Reparatur: GitHub startete die Zeitplan-Läufe seit Ende Okt. erst gegen 20 Uhr UTC → Morgen-Scan seit 28.10. nicht gelaufen (Watchlist veraltet), 9.11. ganz ausgefallen, Live erst ab ca. 15 Uhr ET (Trades wurden aus den Tageskerzen nachgerechnet). Jetzt Kette mit selbst bestelltem Nachfolger; Morgen-Scan wird bis 15 Uhr ET nachgeholt |
 | 18.11. | #34 | Lukas: „langsam zu echtem Geld“ → Beste-Signale-Regel (80 Varianten), Walk-Forward-Prüfung (7. Go-Punkt), Broker-Vergleich `docs/BROKER.md`; Startgeld später 100 € (Gebühren-Fix fürs Tageskonto bewusst nicht gewählt) |
 | 20.11. | #35 | Fehler: Ein Lauf der Kette startete mit dem Stand von vor Stunden (beim Bestellen ausgecheckt) und wiederholte mittags den Morgen-Scan (Watchlist ersetzt, 19./20.11.). Jetzt holt die Schleife vor jedem Durchgang `origin/main` |
+| 27.11. | #36 | Abgleich mit `Jakeschincariol/day-trader-skill` (Stand 20.10.): unsere Skripte sind identisch, nichts nachzuziehen. Verbessert mit dessen Zeitmaschinen-Idee: Glückstest über alle 80 Regeln (Auswahl der besten aus vielen täuscht sonst Können vor) als 8. Go-Punkt, Zeitmaschine „ein Monat“ auf der Übersicht. Erster Stand: mit 1 € Gebühr 0 % Chance auf einen Monat im Plus (Mitte −54,86 €), ohne Gebühr 81 % (+5,12 €) |

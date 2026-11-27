@@ -25,6 +25,8 @@ Workflow-Protokolle, Browser-Tests.
 | Alle 7.000 Aktien live | 2 | 1 | 1 | 6 | nein: Datenlimit |
 | Leerverkauf / Hebel wie die Studie | 2 | 2 | 1 | 7 | nein: im Plan ausgeschlossen |
 | Bezahlte Echtzeitdaten | 2 | 2 | 2 | 8 | nein: 0-€-Budget |
+| Glückstest über alle Regeln (Reality-Check) | 3 | 3 | 3 | 12 | ✓ #36 |
+| Zeitmaschine: Chance auf einen Monat im Plus | 3 | 3 | 3 | 12 | ✓ #36 |
 
 ## Umgesetzt
 | Verbesserung | Warum | Wo |

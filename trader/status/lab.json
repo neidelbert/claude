@@ -1,8 +1,8 @@
 {
   "part": "lab",
   "ok": true,
-  "summary": "16 von 80 bestanden",
-  "ran_at": "2026-11-27T21:20:21Z",
+  "summary": "17 von 80 bestanden",
+  "ran_at": "2026-11-27T22:56:52Z",
   "date_et": "2026-11-27",
   "steps": [
     {
@@ -13,7 +13,7 @@
     {
       "name": "Testen",
       "ok": true,
-      "detail": "80 Varianten, 557.388 Trades, 16 bestanden"
+      "detail": "80 Varianten, 557.443 Trades, 17 bestanden"
     },
     {
       "name": "Wochen-Rückblick",
@@ -24,9 +24,9 @@
   "data": {
     "days": 85,
     "symbols": 1101,
-    "trades": 557388,
-    "passed": 16,
+    "trades": 557443,
+    "passed": 17,
     "best": "gap-4-v3-2R"
   },
-  "run_url": "https://github.com/neidelbert/claude/actions/runs/46009167121"
+  "run_url": "https://github.com/neidelbert/claude/actions/runs/46079621591"
 }

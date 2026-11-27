@@ -9,10 +9,18 @@
    [
     1,
     182.505
+   ],
+   [
+    2,
+    183.22
+   ],
+   [
+    3,
+    183.94
    ]
   ]
  },
- "as_of": "09:40 Uhr ET",
+ "as_of": "09:50 Uhr ET",
  "symbols": 435,
  "failed": 0,
  "focus": [
@@ -38,144 +46,460 @@
   "best-locker-3R": "Beste Signale (locker): News-Sprung ≥ 2 %, Volumen ≥ 2×, Schwankung ≥ 2 %, Einstieg bis 10:30 Uhr ET · nur der erste Kandidat des Tages · Ziel 3R"
  },
  "per_variant": {
+  "orb-15-mid-1R-v0": {
+   "n": 48,
+   "open": 48,
+   "eur": -4.8,
+   "wins": 0
+  },
+  "orb-15-mid-1.5R-v0": {
+   "n": 48,
+   "open": 48,
+   "eur": -4.8,
+   "wins": 0
+  },
+  "orb-15-mid-2R-v0": {
+   "n": 48,
+   "open": 48,
+   "eur": -4.8,
+   "wins": 0
+  },
+  "orb-15-low-1R-v0": {
+   "n": 48,
+   "open": 48,
+   "eur": -4.8,
+   "wins": 0
+  },
+  "orb-15-low-1.5R-v0": {
+   "n": 48,
+   "open": 48,
+   "eur": -4.8,
+   "wins": 0
+  },
+  "orb-15-low-2R-v0": {
+   "n": 48,
+   "open": 48,
+   "eur": -4.8,
+   "wins": 0
+  },
+  "orb-15-low-2R-v0-ffrueh": {
+   "n": 47,
+   "open": 47,
+   "eur": -4.7,
+   "wins": 0
+  },
   "sip-top20-atr0.1-eod": {
-   "n": 5,
-   "open": 5,
-   "eur": -0.13,
-   "wins": 2
+   "n": 9,
+   "open": 3,
+   "eur": -1.03,
+   "wins": 3
   },
   "sip-top20-atr0.1-2R": {
-   "n": 5,
-   "open": 5,
-   "eur": -0.13,
-   "wins": 2
+   "n": 9,
+   "open": 2,
+   "eur": -1.17,
+   "wins": 3
   },
   "sip-top20-atr0.2-eod": {
-   "n": 5,
+   "n": 9,
    "open": 5,
-   "eur": -0.13,
-   "wins": 2
+   "eur": -2.06,
+   "wins": 4
   },
   "sip-top20-atr0.2-2R": {
-   "n": 5,
+   "n": 9,
    "open": 5,
-   "eur": -0.13,
-   "wins": 2
+   "eur": -2.06,
+   "wins": 4
+  },
+  "orb-15-mid-1R-v1.5": {
+   "n": 6,
+   "open": 6,
+   "eur": -0.6,
+   "wins": 0
+  },
+  "orb-15-mid-1.5R-v1.5": {
+   "n": 6,
+   "open": 6,
+   "eur": -0.6,
+   "wins": 0
+  },
+  "orb-15-mid-2R-v1.5": {
+   "n": 6,
+   "open": 6,
+   "eur": -0.6,
+   "wins": 0
+  },
+  "orb-15-low-1R-v1.5": {
+   "n": 6,
+   "open": 6,
+   "eur": -0.6,
+   "wins": 0
+  },
+  "orb-15-low-1.5R-v1.5": {
+   "n": 6,
+   "open": 6,
+   "eur": -0.6,
+   "wins": 0
+  },
+  "orb-15-low-2R-v1.5": {
+   "n": 6,
+   "open": 6,
+   "eur": -0.6,
+   "wins": 0
   },
   "sip-top10-atr0.1-eod": {
-   "n": 1,
-   "open": 1,
-   "eur": -0.33,
+   "n": 2,
+   "open": 0,
+   "eur": -0.6,
    "wins": 0
   },
   "sip-top10-atr0.1-2R": {
-   "n": 1,
-   "open": 1,
-   "eur": -0.33,
+   "n": 2,
+   "open": 0,
+   "eur": -0.6,
    "wins": 0
   },
   "sip-top10-atr0.2-eod": {
-   "n": 1,
-   "open": 1,
-   "eur": -0.33,
+   "n": 2,
+   "open": 0,
+   "eur": -1.08,
    "wins": 0
   },
   "sip-top10-atr0.2-2R": {
-   "n": 1,
-   "open": 1,
-   "eur": -0.33,
+   "n": 2,
+   "open": 0,
+   "eur": -1.08,
+   "wins": 0
+  },
+  "orb-15-low-2R-v0-fv2": {
+   "n": 3,
+   "open": 3,
+   "eur": -0.3,
    "wins": 0
   },
   "sip-top20-atr0.1-eod-fv2": {
-   "n": 4,
-   "open": 4,
-   "eur": -0.47,
-   "wins": 1
+   "n": 3,
+   "open": 0,
+   "eur": -0.84,
+   "wins": 0
+  },
+  "gap-2-v2-1.5R": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
+  },
+  "gap-2-v2-2R": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
+  },
+  "gap-2-v2-3R": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
+  },
+  "gap-4-v2-1.5R": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
+  },
+  "gap-4-v2-2R": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
+  },
+  "gap-4-v2-3R": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
+  },
+  "gap-2-v2-2R-fv2": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
+  },
+  "gap-2-v2-2R-ffrueh": {
+   "n": 1,
+   "open": 1,
+   "eur": -0.1,
+   "wins": 0
   },
   "sip-top20-atr0.1-eod-ffrueh": {
    "n": 1,
-   "open": 1,
-   "eur": 0.05,
-   "wins": 1
+   "open": 0,
+   "eur": -0.59,
+   "wins": 0
   }
  },
- "n_trades": 29,
- "n_open": 29,
+ "n_trades": 430,
+ "n_open": 397,
  "lukas": [],
  "lukas_n": 0,
  "accounts": {
+  "orb-15-mid-1R-v0": [
+   99.9,
+   91.92
+  ],
+  "orb-15-mid-1.5R-v0": [
+   99.9,
+   91.92
+  ],
+  "orb-15-mid-2R-v0": [
+   99.9,
+   91.92
+  ],
+  "orb-15-low-1R-v0": [
+   99.9,
+   91.92
+  ],
+  "orb-15-low-1.5R-v0": [
+   99.9,
+   91.92
+  ],
+  "orb-15-low-2R-v0": [
+   99.9,
+   91.92
+  ],
+  "orb-15-low-2R-v0-ffrueh": [
+   99.9,
+   91.92
+  ],
   "sip-top20-atr0.1-eod": [
-   99.97,
-   92.0
+   99.86,
+   85.82
   ],
   "sip-top20-atr0.1-2R": [
-   99.97,
-   92.0
+   99.85,
+   83.81
   ],
   "sip-top20-atr0.2-eod": [
-   99.97,
-   92.0
+   99.78,
+   89.67
   ],
   "sip-top20-atr0.2-2R": [
-   99.97,
-   92.0
+   99.78,
+   89.67
+  ],
+  "orb-15-mid-1R-v1.5": [
+   99.9,
+   91.92
+  ],
+  "orb-15-mid-1.5R-v1.5": [
+   99.9,
+   91.92
+  ],
+  "orb-15-mid-2R-v1.5": [
+   99.9,
+   91.92
+  ],
+  "orb-15-low-1R-v1.5": [
+   99.9,
+   91.92
+  ],
+  "orb-15-low-1.5R-v1.5": [
+   99.9,
+   91.92
+  ],
+  "orb-15-low-2R-v1.5": [
+   99.9,
+   91.92
   ],
   "sip-top10-atr0.1-eod": [
-   99.93,
-   97.93
+   99.88,
+   95.88
   ],
   "sip-top10-atr0.1-2R": [
-   99.93,
-   97.93
+   99.88,
+   95.88
   ],
   "sip-top10-atr0.2-eod": [
-   99.93,
-   97.93
+   99.78,
+   95.78
   ],
   "sip-top10-atr0.2-2R": [
-   99.93,
-   97.93
+   99.78,
+   95.78
+  ],
+  "orb-15-low-2R-v0-fv2": [
+   99.94,
+   93.94
   ],
   "sip-top20-atr0.1-eod-fv2": [
-   99.91,
-   91.91
+   99.83,
+   93.83
+  ],
+  "gap-2-v2-1.5R": [
+   99.98,
+   97.98
+  ],
+  "gap-2-v2-2R": [
+   99.98,
+   97.98
+  ],
+  "gap-2-v2-3R": [
+   99.98,
+   97.98
+  ],
+  "gap-4-v2-1.5R": [
+   99.98,
+   97.98
+  ],
+  "gap-4-v2-2R": [
+   99.98,
+   97.98
+  ],
+  "gap-4-v2-3R": [
+   99.98,
+   97.98
+  ],
+  "gap-2-v2-2R-fv2": [
+   99.98,
+   97.98
+  ],
+  "gap-2-v2-2R-ffrueh": [
+   99.98,
+   97.98
   ],
   "sip-top20-atr0.1-eod-ffrueh": [
-   100.01,
-   98.01
+   99.88,
+   97.88
   ]
  },
  "trades": [
   {
-   "entry": 182.3211,
-   "stop": 181.328,
+   "entry": 182.5612,
+   "stop": 181.5681,
    "target": null,
-   "exit": 182.4138,
-   "why": "Schluss",
-   "r": 0.093,
-   "pct": 0.051,
+   "exit": 181.4773,
+   "why": "Stopp",
+   "r": -1.091,
+   "pct": -0.594,
    "in_k": 1,
-   "out_k": 1,
-   "open": true,
+   "out_k": 2,
+   "open": false,
    "variant": "sip-top20-atr0.1-eod-ffrueh",
    "strategy": "sip",
    "symbol": "ANF",
    "in_at": "9:40",
-   "out_at": null,
-   "last": 182.505,
-   "eur": 0.05,
+   "out_at": "9:45",
+   "last": 183.94,
+   "eur": -0.59,
    "key": "sip-top20-atr0.1-eod-ffrueh|ANF",
    "f": {
     "k": 1,
-    "gap": -0.01,
-    "rv": 2.01,
+    "gap": -1.2,
+    "rv": 1.97,
     "mkt": false,
-    "atrp": 5.45,
+    "atrp": 5.44,
     "risk": 0.54,
-    "price": 182.32,
+    "price": 182.56,
     "dow": 4
    },
    "told_in": true,
+   "told_out": true
+  },
+  {
+   "entry": 348.284,
+   "stop": 343.48,
+   "target": 357.8921,
+   "exit": 347.9359,
+   "why": "Schluss",
+   "r": -0.072,
+   "pct": -0.1,
+   "in_k": 3,
+   "out_k": 3,
+   "open": true,
+   "variant": "gap-2-v2-2R-fv2",
+   "strategy": "gap",
+   "symbol": "AON",
+   "in_at": "9:50",
+   "out_at": null,
+   "last": 348.11,
+   "eur": -0.1,
+   "key": "gap-2-v2-2R-fv2|AON",
+   "f": {
+    "k": 3,
+    "gap": 14.31,
+    "rv": 2.34,
+    "mkt": false,
+    "atrp": 1.87,
+    "risk": 1.38,
+    "price": 348.28,
+    "dow": 4
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 348.284,
+   "stop": 343.48,
+   "target": 357.8921,
+   "exit": 347.9359,
+   "why": "Schluss",
+   "r": -0.072,
+   "pct": -0.1,
+   "in_k": 3,
+   "out_k": 3,
+   "open": true,
+   "variant": "gap-4-v2-2R",
+   "strategy": "gap",
+   "symbol": "AON",
+   "in_at": "9:50",
+   "out_at": null,
+   "last": 348.11,
+   "eur": -0.1,
+   "key": "gap-4-v2-2R|AON",
+   "f": {
+    "k": 3,
+    "gap": 14.31,
+    "rv": 2.34,
+    "mkt": false,
+    "atrp": 1.87,
+    "risk": 1.38,
+    "price": 348.28,
+    "dow": 4
+   },
+   "told_in": false,
+   "told_out": false
+  },
+  {
+   "entry": 348.284,
+   "stop": 343.48,
+   "target": 362.6961,
+   "exit": 347.9359,
+   "why": "Schluss",
+   "r": -0.072,
+   "pct": -0.1,
+   "in_k": 3,
+   "out_k": 3,
+   "open": true,
+   "variant": "gap-4-v2-3R",
+   "strategy": "gap",
+   "symbol": "AON",
+   "in_at": "9:50",
+   "out_at": null,
+   "last": 348.11,
+   "eur": -0.1,
+   "key": "gap-4-v2-3R|AON",
+   "f": {
+    "k": 3,
+    "gap": 14.31,
+    "rv": 2.34,
+    "mkt": false,
+    "atrp": 1.87,
+    "risk": 1.38,
+    "price": 348.28,
+    "dow": 4
+   },
+   "told_in": false,
    "told_out": false
   }
  ]
